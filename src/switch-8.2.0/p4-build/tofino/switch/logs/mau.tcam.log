@@ -1,0 +1,726 @@
++---------------------------------------------------------------------+
+|  Log file: mau.tcam.log                                             |
+|  Compiler version: 5.8.0 (7069cde)                                  |
+|  Created on: Sun Nov 17 06:21:48 2019                               |
+|  Run ID: 5264f50f8fd548e5                                           |
++---------------------------------------------------------------------+
+
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table validate_outer_ethernet wants 3 tcams.
+=======================================================
+
+Requesting to use 3 TCAMs and have 24 available.
+
+========================================================
+  Run Placement on Request List of size 1
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 0 for table validate_outer_ethernet for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 0 for table validate_outer_ethernet for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 0 for table validate_outer_ethernet for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 0
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 0
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 0
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table validate_outer_ipv4_packet wants 2 tcams.
+=======================================================
+
+Requesting to use 2 TCAMs and have 21 available.
+
+========================================================
+  Run Placement on Request List of size 2
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 0 for table validate_outer_ethernet for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 0 for table validate_outer_ethernet for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 0 for table validate_outer_ethernet for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 0
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 0
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 0
+Allocating: TCAM: Row 7 Col 1 in stage 0 for table validate_outer_ipv4_packet for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 6 Col 1 in stage 0 for table validate_outer_ipv4_packet for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 7 left_and_right is 44 bits in stage 0
+Allocating: Ram Data Bus TcamMatchSearch2 6 left_and_right is 44 bits in stage 0
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table validate_outer_ipv6_packet wants 2 tcams.
+=======================================================
+
+Requesting to use 2 TCAMs and have 19 available.
+
+========================================================
+  Run Placement on Request List of size 3
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 0 for table validate_outer_ethernet for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 0 for table validate_outer_ethernet for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 0 for table validate_outer_ethernet for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 0
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 0
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 0
+Allocating: TCAM: Row 7 Col 1 in stage 0 for table validate_outer_ipv6_packet for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 6 Col 1 in stage 0 for table validate_outer_ipv6_packet for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 7 left_and_right is 44 bits in stage 0
+Allocating: Ram Data Bus TcamMatchSearch2 6 left_and_right is 44 bits in stage 0
+Allocating: TCAM: Row 5 Col 1 in stage 0 for table validate_outer_ipv4_packet for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 4 Col 1 in stage 0 for table validate_outer_ipv4_packet for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 5 left_and_right is 44 bits in stage 0
+Allocating: Ram Data Bus TcamMatchSearch2 4 left_and_right is 44 bits in stage 0
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table fabric_ingress_dst_lkp wants 1 tcams.
+=======================================================
+
+Requesting to use 1 TCAMs and have 24 available.
+
+========================================================
+  Run Placement on Request List of size 1
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 1 for table fabric_ingress_dst_lkp for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 1
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table outer_rmac wants 2 tcams.
+=======================================================
+
+Requesting to use 2 TCAMs and have 23 available.
+
+========================================================
+  Run Placement on Request List of size 2
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 1 for table outer_rmac for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 1 for table outer_rmac for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 1
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 1
+Allocating: TCAM: Row 9 Col 1 in stage 1 for table fabric_ingress_dst_lkp for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 1
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table tunnel_check wants 1 tcams.
+=======================================================
+
+Requesting to use 1 TCAMs and have 24 available.
+
+========================================================
+  Run Placement on Request List of size 1
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 2 for table tunnel_check for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 2
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table storm_control wants 1 tcams.
+=======================================================
+
+Requesting to use 1 TCAMs and have 23 available.
+
+========================================================
+  Run Placement on Request List of size 2
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 2 for table storm_control for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 2
+Allocating: TCAM: Row 10 Col 1 in stage 2 for table tunnel_check for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 2
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table validate_packet wants 4 tcams.
+=======================================================
+
+Requesting to use 4 TCAMs and have 24 available.
+
+========================================================
+  Run Placement on Request List of size 1
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 3 for table validate_packet for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 3 for table validate_packet for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 3 for table validate_packet for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 3 for table validate_packet for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 3
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table ingress_l4_src_port wants 3 tcams.
+=======================================================
+
+Requesting to use 3 TCAMs and have 20 available.
+
+========================================================
+  Run Placement on Request List of size 2
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 3 for table validate_packet for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 3 for table validate_packet for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 3 for table validate_packet for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 3 for table validate_packet for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 7 Col 1 in stage 3 for table ingress_l4_src_port for entries Entry bits [43:0] and word range Words 1024 to 1535.
+Allocating: Ram Data Bus TcamMatchSearch2 7 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 6 Col 1 in stage 3 for table ingress_l4_src_port for entries Entry bits [43:0] and word range Words 512 to 1023.
+Allocating: Ram Data Bus TcamMatchSearch2 6 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 5 Col 1 in stage 3 for table ingress_l4_src_port for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 5 left_and_right is 44 bits in stage 3
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table ingress_l4_dst_port wants 3 tcams.
+=======================================================
+
+Requesting to use 3 TCAMs and have 17 available.
+
+========================================================
+  Run Placement on Request List of size 3
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 3 for table validate_packet for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 3 for table validate_packet for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 3 for table validate_packet for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 3 for table validate_packet for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 7 Col 1 in stage 3 for table ingress_l4_dst_port for entries Entry bits [43:0] and word range Words 1024 to 1535.
+Allocating: Ram Data Bus TcamMatchSearch2 7 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 6 Col 1 in stage 3 for table ingress_l4_dst_port for entries Entry bits [43:0] and word range Words 512 to 1023.
+Allocating: Ram Data Bus TcamMatchSearch2 6 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 5 Col 1 in stage 3 for table ingress_l4_dst_port for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 5 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 4 Col 1 in stage 3 for table ingress_l4_src_port for entries Entry bits [43:0] and word range Words 1024 to 1535.
+Allocating: Ram Data Bus TcamMatchSearch2 4 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 3 Col 1 in stage 3 for table ingress_l4_src_port for entries Entry bits [43:0] and word range Words 512 to 1023.
+Allocating: Ram Data Bus TcamMatchSearch2 3 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 2 Col 1 in stage 3 for table ingress_l4_src_port for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 2 left_and_right is 44 bits in stage 3
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table mac_acl wants 4 tcams.
+=======================================================
+
+Requesting to use 4 TCAMs and have 14 available.
+
+========================================================
+  Run Placement on Request List of size 4
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 3 for table mac_acl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 3 for table mac_acl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 3 for table mac_acl for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 3 for table mac_acl for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 7 Col 1 in stage 3 for table validate_packet for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 6 Col 1 in stage 3 for table validate_packet for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 5 Col 1 in stage 3 for table validate_packet for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 4 Col 1 in stage 3 for table validate_packet for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 7 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 6 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 5 left_and_right is 44 bits in stage 3
+Allocating: Ram Data Bus TcamMatchSearch2 4 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 3 Col 1 in stage 3 for table ingress_l4_dst_port for entries Entry bits [43:0] and word range Words 1024 to 1535.
+Allocating: Ram Data Bus TcamMatchSearch2 3 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 2 Col 1 in stage 3 for table ingress_l4_dst_port for entries Entry bits [43:0] and word range Words 512 to 1023.
+Allocating: Ram Data Bus TcamMatchSearch2 2 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 1 Col 1 in stage 3 for table ingress_l4_dst_port for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 1 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 0 Col 1 in stage 3 for table ingress_l4_src_port for entries Entry bits [43:0] and word range Words 1024 to 1535.
+Allocating: Ram Data Bus TcamMatchSearch2 0 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 11 Col 0 in stage 3 for table ingress_l4_src_port for entries Entry bits [43:0] and word range Words 512 to 1023.
+Allocating: Ram Data Bus TcamMatchSearch1 11 left_and_right is 44 bits in stage 3
+Allocating: TCAM: Row 10 Col 0 in stage 3 for table ingress_l4_src_port for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch1 10 left_and_right is 44 bits in stage 3
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table ip_acl wants 4 tcams.
+=======================================================
+
+Requesting to use 4 TCAMs and have 24 available.
+
+========================================================
+  Run Placement on Request List of size 1
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 4 for table ip_acl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 4 for table ip_acl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 4 for table ip_acl for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 4 for table ip_acl for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 4
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table ipv6_acl wants 8 tcams.
+=======================================================
+
+Requesting to use 8 TCAMs and have 20 available.
+
+========================================================
+  Run Placement on Request List of size 2
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: TCAM: Row 7 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [219:176] and word range Words 0 to 511.
+Allocating: TCAM: Row 6 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [263:220] and word range Words 0 to 511.
+Allocating: TCAM: Row 5 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [307:264] and word range Words 0 to 511.
+Allocating: TCAM: Row 4 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [351:308] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 7 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 6 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 5 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 4 left_and_right is 44 bits in stage 4
+Allocating: TCAM: Row 3 Col 1 in stage 4 for table ip_acl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 2 Col 1 in stage 4 for table ip_acl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 1 Col 1 in stage 4 for table ip_acl for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 0 Col 1 in stage 4 for table ip_acl for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 3 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 2 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 1 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 0 left_and_right is 44 bits in stage 4
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table ipv4_racl wants 4 tcams.
+=======================================================
+
+Requesting to use 4 TCAMs and have 24 available.
+
+========================================================
+  Run Placement on Request List of size 1
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 5
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table ipv6_racl wants 8 tcams.
+=======================================================
+
+Requesting to use 8 TCAMs and have 20 available.
+
+========================================================
+  Run Placement on Request List of size 2
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: TCAM: Row 7 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [219:176] and word range Words 0 to 511.
+Allocating: TCAM: Row 6 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [263:220] and word range Words 0 to 511.
+Allocating: TCAM: Row 5 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [307:264] and word range Words 0 to 511.
+Allocating: TCAM: Row 4 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [351:308] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 7 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 6 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 5 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 4 left_and_right is 44 bits in stage 5
+Allocating: TCAM: Row 3 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 2 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 1 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 0 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 3 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 2 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 1 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 0 left_and_right is 44 bits in stage 5
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table ipv4_urpf_lpm wants 2 tcams.
+=======================================================
+
+Requesting to use 2 TCAMs and have 12 available.
+
+========================================================
+  Run Placement on Request List of size 3
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: TCAM: Row 7 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [219:176] and word range Words 0 to 511.
+Allocating: TCAM: Row 6 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [263:220] and word range Words 0 to 511.
+Allocating: TCAM: Row 5 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [307:264] and word range Words 0 to 511.
+Allocating: TCAM: Row 4 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [351:308] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 7 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 6 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 5 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 4 left_and_right is 44 bits in stage 5
+Allocating: TCAM: Row 3 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 2 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 1 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 0 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 3 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 2 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 1 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 0 left_and_right is 44 bits in stage 5
+Allocating: TCAM: Row 11 Col 0 in stage 5 for table ipv4_urpf_lpm for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 0 in stage 5 for table ipv4_urpf_lpm for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch1 11 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch1 10 left_and_right is 44 bits in stage 5
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table ipv4_fib_lpm wants 2 tcams.
+=======================================================
+
+Requesting to use 2 TCAMs and have 10 available.
+
+========================================================
+  Run Placement on Request List of size 4
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: TCAM: Row 7 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [219:176] and word range Words 0 to 511.
+Allocating: TCAM: Row 6 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [263:220] and word range Words 0 to 511.
+Allocating: TCAM: Row 5 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [307:264] and word range Words 0 to 511.
+Allocating: TCAM: Row 4 Col 1 in stage 5 for table ipv6_racl for entries Entry bits [351:308] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 7 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 6 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 5 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 4 left_and_right is 44 bits in stage 5
+Allocating: TCAM: Row 3 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 2 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 1 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 0 Col 1 in stage 5 for table ipv4_racl for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 3 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 2 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 1 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch2 0 left_and_right is 44 bits in stage 5
+Allocating: TCAM: Row 11 Col 0 in stage 5 for table ipv4_fib_lpm for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 0 in stage 5 for table ipv4_fib_lpm for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch1 11 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch1 10 left_and_right is 44 bits in stage 5
+Allocating: TCAM: Row 9 Col 0 in stage 5 for table ipv4_urpf_lpm for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 0 in stage 5 for table ipv4_urpf_lpm for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch1 9 left_and_right is 44 bits in stage 5
+Allocating: Ram Data Bus TcamMatchSearch1 8 left_and_right is 44 bits in stage 5
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table ipv6_urpf_lpm wants 4 tcams.
+=======================================================
+
+Requesting to use 4 TCAMs and have 24 available.
+
+========================================================
+  Run Placement on Request List of size 1
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 6 for table ipv6_urpf_lpm for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 6 for table ipv6_urpf_lpm for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 6 for table ipv6_urpf_lpm for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 6 for table ipv6_urpf_lpm for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 6
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 6
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 6
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 6
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table ipv6_fib_lpm wants 4 tcams.
+=======================================================
+
+Requesting to use 4 TCAMs and have 20 available.
+
+========================================================
+  Run Placement on Request List of size 2
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 6 for table ipv6_fib_lpm for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 6 for table ipv6_fib_lpm for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 6 for table ipv6_fib_lpm for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 6 for table ipv6_fib_lpm for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 6
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 6
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 6
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 6
+Allocating: TCAM: Row 7 Col 1 in stage 6 for table ipv6_urpf_lpm for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 6 Col 1 in stage 6 for table ipv6_urpf_lpm for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 5 Col 1 in stage 6 for table ipv6_urpf_lpm for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 4 Col 1 in stage 6 for table ipv6_urpf_lpm for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 7 left_and_right is 44 bits in stage 6
+Allocating: Ram Data Bus TcamMatchSearch2 6 left_and_right is 44 bits in stage 6
+Allocating: Ram Data Bus TcamMatchSearch2 5 left_and_right is 44 bits in stage 6
+Allocating: Ram Data Bus TcamMatchSearch2 4 left_and_right is 44 bits in stage 6
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table compute_other_hashes wants 1 tcams.
+=======================================================
+
+Requesting to use 1 TCAMs and have 24 available.
+
+========================================================
+  Run Placement on Request List of size 1
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 8 for table compute_other_hashes for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 8
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table storm_control_stats wants 2 tcams.
+=======================================================
+
+Requesting to use 2 TCAMs and have 23 available.
+
+========================================================
+  Run Placement on Request List of size 2
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 8 for table storm_control_stats for entries Entry bits [43:0] and word range Words 512 to 1023.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 8
+Allocating: TCAM: Row 10 Col 1 in stage 8 for table storm_control_stats for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 8
+Allocating: TCAM: Row 9 Col 1 in stage 8 for table compute_other_hashes for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 8
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table fwd_result wants 2 tcams.
+=======================================================
+
+Requesting to use 2 TCAMs and have 24 available.
+
+========================================================
+  Run Placement on Request List of size 1
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 9 for table fwd_result for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 9 for table fwd_result for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 9
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 9
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table learn_notify wants 1 tcams.
+=======================================================
+
+Requesting to use 1 TCAMs and have 24 available.
+
+========================================================
+  Run Placement on Request List of size 1
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 11 for table learn_notify for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 11
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table system_acl wants 7 tcams.
+=======================================================
+
+Requesting to use 7 TCAMs and have 23 available.
+
+========================================================
+  Run Placement on Request List of size 2
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 11 for table system_acl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 11 for table system_acl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 11 for table system_acl for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 11 for table system_acl for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: TCAM: Row 7 Col 1 in stage 11 for table system_acl for entries Entry bits [219:176] and word range Words 0 to 511.
+Allocating: TCAM: Row 6 Col 1 in stage 11 for table system_acl for entries Entry bits [263:220] and word range Words 0 to 511.
+Allocating: TCAM: Row 5 Col 1 in stage 11 for table system_acl for entries Entry bits [307:264] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 11
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 11
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 11
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 11
+Allocating: Ram Data Bus TcamMatchSearch2 7 left_and_right is 44 bits in stage 11
+Allocating: Ram Data Bus TcamMatchSearch2 6 left_and_right is 44 bits in stage 11
+Allocating: Ram Data Bus TcamMatchSearch2 5 left_and_right is 44 bits in stage 11
+Allocating: TCAM: Row 4 Col 1 in stage 11 for table learn_notify for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 4 left_and_right is 44 bits in stage 11
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table replica_type wants 1 tcams.
+=======================================================
+
+Requesting to use 1 TCAMs and have 22 available.
+
+========================================================
+  Run Placement on Request List of size 3
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 2 for table replica_type for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 2
+Allocating: TCAM: Row 10 Col 1 in stage 2 for table storm_control for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 2
+Allocating: TCAM: Row 9 Col 1 in stage 2 for table tunnel_check for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 2
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table l3_rewrite wants 1 tcams.
+=======================================================
+
+Requesting to use 1 TCAMs and have 12 available.
+
+========================================================
+  Run Placement on Request List of size 3
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 9 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: TCAM: Row 7 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [219:176] and word range Words 0 to 511.
+Allocating: TCAM: Row 6 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [263:220] and word range Words 0 to 511.
+Allocating: TCAM: Row 5 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [307:264] and word range Words 0 to 511.
+Allocating: TCAM: Row 4 Col 1 in stage 4 for table ipv6_acl for entries Entry bits [351:308] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 7 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 6 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 5 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 4 left_and_right is 44 bits in stage 4
+Allocating: TCAM: Row 3 Col 1 in stage 4 for table ip_acl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 2 Col 1 in stage 4 for table ip_acl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: TCAM: Row 1 Col 1 in stage 4 for table ip_acl for entries Entry bits [131:88] and word range Words 0 to 511.
+Allocating: TCAM: Row 0 Col 1 in stage 4 for table ip_acl for entries Entry bits [175:132] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 3 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 2 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 1 left_and_right is 44 bits in stage 4
+Allocating: Ram Data Bus TcamMatchSearch2 0 left_and_right is 44 bits in stage 4
+Allocating: TCAM: Row 11 Col 0 in stage 4 for table l3_rewrite for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch1 11 left_and_right is 44 bits in stage 4
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table tunnel_encap_process_outer wants 1 tcams.
+=======================================================
+
+Requesting to use 1 TCAMs and have 24 available.
+
+========================================================
+  Run Placement on Request List of size 1
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 7 for table tunnel_encap_process_outer for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 7
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table mtu wants 1 tcams.
+=======================================================
+
+Requesting to use 1 TCAMs and have 21 available.
+
+========================================================
+  Run Placement on Request List of size 3
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 8 for table storm_control_stats for entries Entry bits [43:0] and word range Words 512 to 1023.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 8
+Allocating: TCAM: Row 10 Col 1 in stage 8 for table storm_control_stats for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 8
+Allocating: TCAM: Row 9 Col 1 in stage 8 for table mtu for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 8
+Allocating: TCAM: Row 8 Col 1 in stage 8 for table compute_other_hashes for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 8
+
+
+=======================================================
+
+ calling allocate and add with TCAM Resource Request for table egress_system_acl wants 2 tcams.
+=======================================================
+
+Requesting to use 2 TCAMs and have 22 available.
+
+========================================================
+  Run Placement on Request List of size 2
+========================================================
+
+Allocating: TCAM: Row 11 Col 1 in stage 9 for table egress_system_acl for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 10 Col 1 in stage 9 for table egress_system_acl for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 11 left_and_right is 44 bits in stage 9
+Allocating: Ram Data Bus TcamMatchSearch2 10 left_and_right is 44 bits in stage 9
+Allocating: TCAM: Row 9 Col 1 in stage 9 for table fwd_result for entries Entry bits [43:0] and word range Words 0 to 511.
+Allocating: TCAM: Row 8 Col 1 in stage 9 for table fwd_result for entries Entry bits [87:44] and word range Words 0 to 511.
+Allocating: Ram Data Bus TcamMatchSearch2 9 left_and_right is 44 bits in stage 9
+Allocating: Ram Data Bus TcamMatchSearch2 8 left_and_right is 44 bits in stage 9

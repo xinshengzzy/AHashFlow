@@ -2,7 +2,7 @@ APP=basic_switching
 build:
 	cd $(BUILD) && \
 	./autogen.sh && \
-	./configure --prefix=$(SDE_INSTALL) --with-tofino P4_NAME=$(APP) P4_PATH=$(SRC)/$(APP)/$(APP).p4 --enable-thrift && \
+	./configure --prefix=$(SDE_INSTALL) --with-tofino P4_NAME=$(APP) P4_PATH=$(SRC)/$(APP)/$(APP).p4 --enable-thrift=1 && \
 	make clean && \
 	make && \
 	make install

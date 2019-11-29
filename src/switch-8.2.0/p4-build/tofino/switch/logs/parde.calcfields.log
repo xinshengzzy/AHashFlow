@@ -1,0 +1,325 @@
++---------------------------------------------------------------------+
+|  Log file: parde.calcfields.log                                     |
+|  Compiler version: 5.8.0 (7069cde)                                  |
+|  Created on: Sun Nov 17 06:21:48 2019                               |
+|  Run ID: 5264f50f8fd548e5                                           |
++---------------------------------------------------------------------+
+
+Reserving 0 16-bit ingress tphvs for residual checksums
+Reserving 0 16-bit egress tphvs for residual checksums
+Need 0 POV bits for checksum update control
+Number of reachable states from state loop_[p4_parse_state.parse_mpls]_oob : 1
+Number of reachable states from state parse_inner_icmp : 1
+Number of reachable states from state parse_inner_tcp//spilled : 1
+Number of reachable states from state parse_inner_tcp : 2
+Number of reachable states from state parse_inner_udp : 1
+Number of reachable states from state parse_inner_ipv4//spilled : 5
+Number of reachable states from state parse_inner_ipv4 : 6
+Number of reachable states from state parse_mpls_inner_ipv4 : 7
+Number of reachable states from state parse_inner_ipv6//split//spilled : 5
+Number of reachable states from state parse_inner_ipv6//split : 6
+Number of reachable states from state parse_inner_ipv6//spilled//spilled : 7
+Number of reachable states from state parse_inner_ipv6//spilled : 8
+Number of reachable states from state parse_inner_ipv6 : 9
+Number of reachable states from state parse_mpls_inner_ipv6 : 10
+Number of reachable states from state parse_inner_ethernet//spilled : 12
+Number of reachable states from state parse_inner_ethernet : 13
+Number of reachable states from state parse_eompls : 14
+Number of reachable states from state parse_mpls_bos : 17
+Number of reachable states from state parse_mpls__it2 : 19
+Number of reachable states from state parse_mpls__it1 : 20
+Number of reachable states from state parse_mpls__it0 : 21
+Number of reachable states from state parse_set_prio_med : 1
+Number of reachable states from state parse_icmp : 2
+Number of reachable states from state parse_tcp//spilled : 2
+Number of reachable states from state parse_tcp : 3
+Number of reachable states from state parse_vxlan : 14
+Number of reachable states from state parse_geneve : 14
+Number of reachable states from state parse_sflow : 1
+Number of reachable states from state parse_udp : 18
+Number of reachable states from state parse_nvgre : 14
+Number of reachable states from state parse_gre_ipv4 : 7
+Number of reachable states from state parse_gre_ipv6 : 10
+Number of reachable states from state parse_erspan_t3 : 14
+Number of reachable states from state parse_gre : 18
+Number of reachable states from state parse_ipv4_in_ip : 7
+Number of reachable states from state parse_ipv6_in_ip : 10
+Number of reachable states from state parse_igmp : 1
+Number of reachable states from state parse_ipv4_no_options : 30
+Number of reachable states from state parse_ipv4_option_32b//spilled : 30
+Number of reachable states from state parse_ipv4_option_32b : 31
+Number of reachable states from state parse_ipv4_other : 1
+Number of reachable states from state parse_ipv4 : 34
+Number of reachable states from state parse_ipv6//split : 29
+Number of reachable states from state parse_ipv6//spilled : 30
+Number of reachable states from state parse_ipv6 : 31
+Number of reachable states from state parse_arp_rarp_req : 2
+Number of reachable states from state parse_arp_rarp_res : 2
+Number of reachable states from state parse_arp_rarp : 4
+Number of reachable states from state parse_set_prio_high : 1
+Number of reachable states from state parse_vlan : 50
+Number of reachable states from state parse_qinq_vlan : 50
+Number of reachable states from state parse_qinq : 51
+Number of reachable states from state parse_snap_header : 53
+Number of reachable states from state parse_llc_header : 54
+Number of reachable states from state parse_fabric_payload_header : 55
+Number of reachable states from state parse_fabric_timestamp_header : 56
+Number of reachable states from state parse_fabric_header_cpu : 57
+Number of reachable states from state parse_fabric_header : 58
+Number of reachable states from state start_parse_ethernet : 59
+Number of reachable states from state <Phase 0> : 60
+Number of reachable states from state <POV initialization>_<Ingress intrinsic metadata> : 61
+Number of reachable states from state <Shim start state> : 62
+parser_state_calculations:[
+	loop_[p4_parse_state.parse_mpls]_oob_140071080556816
+	parse_inner_icmp_140071080441552
+	parse_inner_tcp_140070784711504
+	parse_inner_tcp_140071080441424
+	parse_inner_udp_140071080442896
+	parse_inner_ipv4_140070784712080
+	parse_inner_ipv4_140071080441680
+	parse_mpls_inner_ipv4_140071080441104
+	parse_inner_ipv6_140070793000912
+	parse_inner_ipv6_140070778761104
+	parse_inner_ipv6_140070784710672
+	parse_inner_ipv6_140070784711440
+	parse_inner_ipv6_140071112839568
+	parse_mpls_inner_ipv6_140071112839952
+	parse_inner_ethernet_140070784710864
+	parse_inner_ethernet_140071112840272
+	parse_eompls_140071112839440
+	parse_mpls_bos_140071080443088
+	parse_mpls__it2_140071080556176
+	parse_mpls__it1_140071080558544
+	parse_mpls__it0_140071080557776
+	parse_set_prio_med_140071112763536
+	parse_icmp_140071112763152
+	parse_tcp_140070784710736
+	parse_tcp_140071112764048
+	parse_vxlan_140071112778192
+	parse_geneve_140071112778960
+	parse_sflow_140071112780560
+	parse_udp_140071112765200
+	parse_nvgre_140071112630416
+	parse_gre_ipv4_140071112630992
+	parse_gre_ipv6_140071112631312
+	parse_erspan_t3_140071112631632
+	parse_gre_140071112780944
+	parse_ipv4_in_ip_140071112632592
+	parse_ipv6_in_ip_140071112632912
+	parse_igmp_140071112633232
+	parse_ipv4_no_options_140071112762320
+	parse_ipv4_option_32b_140070795486352
+	parse_ipv4_option_32b_140071112634064
+	parse_ipv4_other_140071112652304
+	parse_ipv4_140071112762128
+	parse_ipv6_140070793879184
+	parse_ipv6_140070792999504
+	parse_ipv6_140071112653200
+	parse_arp_rarp_req_140071112683920
+	parse_arp_rarp_res_140071112684240
+	parse_arp_rarp_140071112683728
+	parse_set_prio_high_140071112684688
+	parse_vlan_140071080556048
+	parse_qinq_vlan_140071112685520
+	parse_qinq_140071112685136
+	parse_snap_header_140071080557392
+	parse_llc_header_140071080556496
+	parse_fabric_payload_header_140071124837264
+	parse_fabric_timestamp_header_140071124836944
+	parse_fabric_header_cpu_140071124836816
+	parse_fabric_header_140071112687376
+	parse_ethernet_140071080558352
+	start_140071080558224
+	<Phase 0>_140071118021584
+	<Ingress intrinsic metadata>_140071117974160
+	<POV initialization>_140071118021968
+	<Shim start state>_140071118022288
+]
+parser_calculations: [
+	ipv4.hdrChecksum.ipv4_checksum
+	inner_ipv4.hdrChecksum.inner_ipv4_checksum
+]
+update_calculated_fields: [
+	ipv4.hdrChecksum
+	inner_ipv4.hdrChecksum
+]
+mask_think_need = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+swap_think_need = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Allocated parser checksum calculation address 0 for state parse_inner_ipv4_140070784712080.
+mask_think_need = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+swap_think_need = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Allocated parser checksum calculation address 1 for state parse_ipv4_no_options_140071112762320.
+mask_think_need = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0]
+swap_think_need = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Allocated parser checksum calculation address 2 for state parse_ipv4_option_32b_140070795486352.
+mask_think_need = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+swap_think_need = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+Allocated parser checksum calculation address 3 for state parse_ipv4_other_140071112652304.
+Checksum field list for ipv4.hdrChecksum
+payload_starts_swapped = False
+>>found PHV word 91 / 8 bits stores field bits [3:0] of ipv4.version in container bits [7:4] owned by egress
+>>found PHV word 91 / 8 bits stores field bits [3:0] of ipv4.ihl in container bits [3:0] owned by egress
+>>found PHV word 93 / 8 bits stores field bits [7:0] of ipv4.diffserv in container bits [7:0] owned by egress
+>>found PHV word 162 / 16 bits stores field bits [15:0] of ipv4.totalLen in container bits [15:0] owned by egress
+>>found PHV word 20 / 32 bits stores field bits [15:0] of ipv4.identification in container bits [31:16] owned by egress
+>>found PHV word 20 / 32 bits stores field bits [2:0] of ipv4.flags in container bits [15:13] owned by egress
+>>found PHV word 20 / 32 bits stores field bits [12:0] of ipv4.fragOffset in container bits [12:0] owned by egress
+>>found PHV word 96 / 8 bits stores field bits [7:0] of ipv4.ttl in container bits [7:0] owned by egress
+>>found PHV word 89 / 8 bits stores field bits [7:0] of ipv4.protocol in container bits [7:0] owned by egress
+>>found PHV word 22 / 32 bits stores field bits [31:0] of ipv4.srcAddr in container bits [31:0] owned by egress
+>>found PHV word 32 / 32 bits stores field bits [31:0] of ipv4.dstAddr in container bits [31:0] owned by egress
+>>found PHV word 257 / 32 bits stores field bits [31:0] of ipv4_option_32b.option_fields in container bits [31:0] owned by egress
+ordered_containers:
+  91
+     valid_bytes = [True]
+     swap_indication = [True]
+  93
+     valid_bytes = [True]
+     swap_indication = [False]
+  162
+     valid_bytes = [True, True]
+     swap_indication = [False, False]
+  20
+     valid_bytes = [True, True, True, True]
+     swap_indication = [False, False, False, False]
+  96
+     valid_bytes = [True]
+     swap_indication = [True]
+  89
+     valid_bytes = [True]
+     swap_indication = [False]
+  22
+     valid_bytes = [True, True, True, True]
+     swap_indication = [False, False, False, False]
+  32
+     valid_bytes = [True, True, True, True]
+     swap_indication = [False, False, False, False]
+  257
+     valid_bytes = [True, True, True, True]
+     swap_indication = [False, False, False, False]
+Checksum field list for inner_ipv4.hdrChecksum
+payload_starts_swapped = False
+>>found PHV word 92 / 8 bits stores field bits [3:0] of inner_ipv4.version in container bits [7:4] owned by egress
+>>found PHV word 92 / 8 bits stores field bits [3:0] of inner_ipv4.ihl in container bits [3:0] owned by egress
+>>found PHV word 94 / 8 bits stores field bits [7:0] of inner_ipv4.diffserv in container bits [7:0] owned by egress
+>>found PHV word 164 / 16 bits stores field bits [15:0] of inner_ipv4.totalLen in container bits [15:0] owned by egress
+>>found PHV word 21 / 32 bits stores field bits [15:0] of inner_ipv4.identification in container bits [31:16] owned by egress
+>>found PHV word 21 / 32 bits stores field bits [2:0] of inner_ipv4.flags in container bits [15:13] owned by egress
+>>found PHV word 21 / 32 bits stores field bits [12:0] of inner_ipv4.fragOffset in container bits [12:0] owned by egress
+>>found PHV word 97 / 8 bits stores field bits [7:0] of inner_ipv4.ttl in container bits [7:0] owned by egress
+>>found PHV word 90 / 8 bits stores field bits [7:0] of inner_ipv4.protocol in container bits [7:0] owned by egress
+>>found PHV word 23 / 32 bits stores field bits [31:0] of inner_ipv4.srcAddr in container bits [31:0] owned by egress
+>>found PHV word 33 / 32 bits stores field bits [31:0] of inner_ipv4.dstAddr in container bits [31:0] owned by egress
+ordered_containers:
+  92
+     valid_bytes = [True]
+     swap_indication = [True]
+  94
+     valid_bytes = [True]
+     swap_indication = [False]
+  164
+     valid_bytes = [True, True]
+     swap_indication = [False, False]
+  21
+     valid_bytes = [True, True, True, True]
+     swap_indication = [False, False, False, False]
+  97
+     valid_bytes = [True]
+     swap_indication = [True]
+  90
+     valid_bytes = [True]
+     swap_indication = [False]
+  23
+     valid_bytes = [True, True, True, True]
+     swap_indication = [False, False, False, False]
+  33
+     valid_bytes = [True, True, True, True]
+     swap_indication = [False, False, False, False]
+Checksum field list for ipv4.hdrChecksum
+payload_starts_swapped = False
+>>found PHV word 185 / 16 bits stores field bits [3:0] of ipv4.version in container bits [15:12] owned by ingress
+>>found PHV word 185 / 16 bits stores field bits [3:0] of ipv4.ihl in container bits [11:8] owned by ingress
+>>found PHV word 185 / 16 bits stores field bits [7:0] of ipv4.diffserv in container bits [7:0] owned by ingress
+>>found PHV word 340 / 16 bits stores field bits [15:0] of ipv4.totalLen in container bits [15:0] owned by ingress
+>>found PHV word 267 / 32 bits stores field bits [15:0] of ipv4.identification in container bits [31:16] owned by ingress
+>>found PHV word 267 / 32 bits stores field bits [2:0] of ipv4.flags in container bits [15:13] owned by ingress
+>>found PHV word 267 / 32 bits stores field bits [12:0] of ipv4.fragOffset in container bits [12:0] owned by ingress
+>>found PHV word 106 / 8 bits stores field bits [7:0] of ipv4.ttl in container bits [7:0] owned by ingress
+>>found PHV word 104 / 8 bits stores field bits [7:0] of ipv4.protocol in container bits [7:0] owned by ingress
+>>found PHV word 36 / 32 bits stores field bits [31:0] of ipv4.srcAddr in container bits [31:0] owned by ingress
+>>found PHV word 38 / 32 bits stores field bits [31:0] of ipv4.dstAddr in container bits [31:0] owned by ingress
+>>found PHV word 276 / 32 bits stores field bits [31:0] of ipv4_option_32b.option_fields in container bits [31:0] owned by ingress
+ordered_containers:
+  185
+     valid_bytes = [True, True]
+     swap_indication = [False, False]
+  340
+     valid_bytes = [True, True]
+     swap_indication = [False, False]
+  267
+     valid_bytes = [True, True, True, True]
+     swap_indication = [False, False, False, False]
+  106
+     valid_bytes = [True]
+     swap_indication = [True]
+  104
+     valid_bytes = [True]
+     swap_indication = [False]
+  36
+     valid_bytes = [True, True, True, True]
+     swap_indication = [False, False, False, False]
+  38
+     valid_bytes = [True, True, True, True]
+     swap_indication = [False, False, False, False]
+  276
+     valid_bytes = [True, True, True, True]
+     swap_indication = [False, False, False, False]
+Checksum field list for inner_ipv4.hdrChecksum
+payload_starts_swapped = False
+>>found PHV word 184 / 16 bits stores field bits [3:0] of inner_ipv4.version in container bits [15:12] owned by ingress
+>>found PHV word 184 / 16 bits stores field bits [3:0] of inner_ipv4.ihl in container bits [11:8] owned by ingress
+>>found PHV word 184 / 16 bits stores field bits [7:0] of inner_ipv4.diffserv in container bits [7:0] owned by ingress
+>>found PHV word 292 / 8 bits stores field bits [15:8] of inner_ipv4.totalLen in container bits [7:0] owned by ingress
+>>found PHV word 293 / 8 bits stores field bits [7:0] of inner_ipv4.totalLen in container bits [7:0] owned by ingress
+>>found PHV word 326 / 16 bits stores field bits [15:0] of inner_ipv4.identification in container bits [15:0] owned by ingress
+>>found PHV word 327 / 16 bits stores field bits [2:0] of inner_ipv4.flags in container bits [15:13] owned by ingress
+>>found PHV word 327 / 16 bits stores field bits [12:0] of inner_ipv4.fragOffset in container bits [12:0] owned by ingress
+>>found PHV word 328 / 16 bits stores field bits [7:0] of inner_ipv4.ttl in container bits [15:8] owned by ingress
+>>found PHV word 328 / 16 bits stores field bits [7:0] of inner_ipv4.protocol in container bits [7:0] owned by ingress
+>>found PHV word 260 / 32 bits stores field bits [31:16] of inner_ipv4.srcAddr in container bits [15:0] owned by ingress
+>>found PHV word 261 / 32 bits stores field bits [15:0] of inner_ipv4.srcAddr in container bits [31:16] owned by ingress
+>>found PHV word 261 / 32 bits stores field bits [31:16] of inner_ipv4.dstAddr in container bits [15:0] owned by ingress
+>>found PHV word 294 / 8 bits stores field bits [15:8] of inner_ipv4.dstAddr in container bits [7:0] owned by ingress
+>>found PHV word 295 / 8 bits stores field bits [7:0] of inner_ipv4.dstAddr in container bits [7:0] owned by ingress
+ordered_containers:
+  184
+     valid_bytes = [True, True]
+     swap_indication = [False, False]
+  292
+     valid_bytes = [True]
+     swap_indication = [True]
+  293
+     valid_bytes = [True]
+     swap_indication = [False]
+  326
+     valid_bytes = [True, True]
+     swap_indication = [False, False]
+  327
+     valid_bytes = [True, True]
+     swap_indication = [False, False]
+  328
+     valid_bytes = [True, True]
+     swap_indication = [False, False]
+  260
+     valid_bytes = [False, False, True, True]
+     swap_indication = [False, False, False, False]
+  261
+     valid_bytes = [True, True, True, True]
+     swap_indication = [False, False, False, False]
+  294
+     valid_bytes = [True]
+     swap_indication = [True]
+  295
+     valid_bytes = [True]
+     swap_indication = [False]

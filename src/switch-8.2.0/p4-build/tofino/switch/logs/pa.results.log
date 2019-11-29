@@ -1,0 +1,969 @@
++---------------------------------------------------------------------+
+|  Log file: pa.results.log                                           |
+|  Compiler version: 5.8.0 (7069cde)                                  |
+|  Created on: Sun Nov 17 06:21:48 2019                               |
+|  Run ID: 5264f50f8fd548e5                                           |
++---------------------------------------------------------------------+
+
+Program: switch
+
+Allocation state: Final Allocation
+------------------------------------------------------------------------------
+|       PHV Group        | Containers Used |   Bits Used   | Bits Available |
+| (container bit widths) |     (% used)    |    (% used)   |                |
+------------------------------------------------------------------------------
+|         0 (32)         |   16 (100.00%)  |  500 (97.66%) |      512       |
+|         1 (32)         |   16 (100.00%)  | 512 (100.00%) |      512       |
+|         2 (32)         |   16 (100.00%)  | 512 (100.00%) |      512       |
+|         3 (32)         |   16 (100.00%)  |  399 (77.93%) |      512       |
+|    Total for 32 bit    |   64 (100.00%)  | 1923 (93.90%) |      2048      |
+|                        |                 |               |                |
+|         4 (8)          |   14 (87.50%)   |  94 (73.44%)  |      128       |
+|         5 (8)          |   16 (100.00%)  | 128 (100.00%) |      128       |
+|         6 (8)          |   16 (100.00%)  | 128 (100.00%) |      128       |
+|         7 (8)          |   16 (100.00%)  |  115 (89.84%) |      128       |
+|    Total for 8 bit     |   62 (96.88%)   |  465 (90.82%) |      512       |
+|                        |                 |               |                |
+|         8 (16)         |   16 (100.00%)  |  252 (98.44%) |      256       |
+|         9 (16)         |   16 (100.00%)  |  253 (98.83%) |      256       |
+|        10 (16)         |   16 (100.00%)  | 256 (100.00%) |      256       |
+|        11 (16)         |   16 (100.00%)  | 256 (100.00%) |      256       |
+|        12 (16)         |   16 (100.00%)  |  254 (99.22%) |      256       |
+|        13 (16)         |   15 (93.75%)   |  210 (82.03%) |      256       |
+|    Total for 16 bit    |   95 (98.96%)   | 1481 (96.42%) |      1536      |
+|                        |                 |               |                |
+|       14 (32) T        |   14 (87.50%)   |  448 (87.50%) |      512       |
+|       15 (32) T        |    5 (31.25%)   |  160 (31.25%) |      512       |
+|    Total for 32 bit    |   19 (59.38%)   |  608 (59.38%) |      1024      |
+|                        |                 |               |                |
+|        16 (8) T        |   15 (93.75%)   |  120 (93.75%) |      128       |
+|        17 (8) T        |    8 (50.00%)   |  64 (50.00%)  |      128       |
+|    Total for 8 bit     |   23 (71.88%)   |  184 (71.88%) |      256       |
+|                        |                 |               |                |
+|       18 (16) T        |   15 (93.75%)   |  240 (93.75%) |      256       |
+|       19 (16) T        |    6 (37.50%)   |  96 (37.50%)  |      256       |
+|       20 (16) T        |    0 (0.00%)    |   0 (0.00%)   |      256       |
+|    Total for 16 bit    |   21 (43.75%)   |  336 (43.75%) |      768       |
+|                        |                 |               |                |
+|       MAU total        |   221 (98.66%)  | 3869 (94.46%) |      4096      |
+|     Tagalong total     |   63 (56.25%)   | 1128 (55.08%) |      2048      |
+|     Overall total      |   284 (84.52%)  | 4997 (81.33%) |      6144      |
+------------------------------------------------------------------------------
+
+--------------------------------------------
+PHV Allocation
+--------------------------------------------
+
+Allocations in Group 0 32 bits
+  32-bit PHV 0 (ingress): phv0[31:0] = i2e_metadata.ingress_tstamp[31:0] (deparsed)
+  32-bit PHV 1 (ingress): phv1[31:16] = tunnel_metadata.tunnel_dst_index[15:0] (deparsed)
+  32-bit PHV 1 (ingress): phv1[31:0] = ig_intr_md.ingress_mac_tstamp[31:0]
+  32-bit PHV 1 (ingress): phv1[31:16] = __md_ingress.__init_9[15:0]
+  32-bit PHV 1 (ingress): phv1[31:16] = __md_ingress.__init_10[15:0]
+  32-bit PHV 1 (ingress): phv1[15:0] = l3_metadata.nexthop_index[15:0] (deparsed)
+  32-bit PHV 1 (ingress): phv1[15:0] = __md_ingress.__init_0[15:0]
+  32-bit PHV 1 (ingress): phv1[15:0] = __md_ingress.__init_1[15:0]
+  32-bit PHV 1 (ingress): phv1[15:0] = __md_ingress.__init_6[15:0]
+  32-bit PHV 2 (ingress): phv2[31:16] = i2e_metadata.ingress_tstamp_hi[15:0] (deparsed)
+  32-bit PHV 2 (ingress): phv2[15:0] = i2e_metadata.mirror_session_id[15:0] (deparsed)
+  32-bit PHV 3 (ingress): phv3[31:0] = ipv6.dstAddr[63:32] (deparsed)
+  32-bit PHV 4 (ingress): phv4[31:0] = ipv6.dstAddr[31:0] (deparsed)
+  32-bit PHV 5 (ingress): phv5[31:0] = ethernet.dstAddr[31:0] (deparsed)
+  32-bit PHV 6 (ingress): phv6[31:0] = l2_metadata.lkp_mac_sa[31:0] (deparsed)
+  32-bit PHV 7 (ingress): phv7[31:0] = ipv6_metadata.lkp_ipv6_da[63:32]
+  32-bit PHV 8 (ingress): phv8[31:0] = ethernet.srcAddr[31:0] (deparsed)
+  32-bit PHV 9 (ingress): phv9[31:0] = ipv6_metadata.lkp_ipv6_da[31:0]
+  32-bit PHV 10 (ingress): phv10[31:16] = fabric_header_cpu.ingressBd[15:0] (deparsed)
+  32-bit PHV 10 (ingress): phv10[15:0] = fabric_header_cpu.reasonCode[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 11 (ingress): phv11[31:0] = l2_metadata.lkp_mac_da[31:0]
+  32-bit PHV 12 (ingress): phv12[31:16] = acl_metadata.bd_label[15:0]
+  32-bit PHV 12 (ingress): phv12[15:0] = l3_metadata.fib_nexthop[15:0]
+  32-bit PHV 13 (ingress): phv13[31:16] = acl_metadata.racl_nexthop[15:0]
+  32-bit PHV 13 (ingress): phv13[15:0] = l2_metadata.l2_nexthop[15:0]
+  32-bit PHV 14 (ingress): phv14[20:20] = acl_metadata.acl_redirect[0:0]
+  32-bit PHV 14 (ingress): phv14[19:19] = acl_metadata.acl_deny[0:0]
+  32-bit PHV 14 (ingress): phv14[18:18] = multicast_metadata.mld_snooping_enabled[0:0]
+  32-bit PHV 14 (ingress): phv14[17:17] = multicast_metadata.igmp_snooping_enabled[0:0]
+  32-bit PHV 14 (ingress): phv14[16:16] = multicast_metadata.ipv6_multicast_enabled[0:0]
+  32-bit PHV 14 (ingress): phv14[15:0] = acl_metadata.acl_nexthop[15:0]
+  32-bit PHV 15 (ingress): phv15[30:30] = --validity_check--mpls[2][0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[29:29] = --validity_check--mpls[1][0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[28:28] = --validity_check--mpls[0][0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[27:27] = --validity_check--vlan_tag_[1][0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[26:26] = --validity_check--vlan_tag_[0][0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[25:25] = --validity_check--metadata_bridge[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[24:24] = --validity_check--fabric_header_timestamp[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[23:23] = --validity_check--fabric_payload_header[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[22:22] = --validity_check--fabric_header_cpu[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[21:21] = --validity_check--fabric_header[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[20:20] = --validity_check--inner_udp[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[19:19] = --validity_check--inner_tcp[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[18:18] = --validity_check--inner_icmp[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[17:17] = --validity_check--genv[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[16:16] = --validity_check--vxlan[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[15:15] = --validity_check--erspan_t3_header[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[14:14] = --validity_check--inner_ipv6[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[13:13] = --validity_check--inner_ipv4[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[12:12] = --validity_check--inner_ethernet[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[11:11] = --validity_check--nvgre[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[10:10] = --validity_check--gre[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[9:9] = --validity_check--udp[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[8:8] = --validity_check--tcp[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[7:7] = --validity_check--igmp[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[6:6] = --validity_check--icmp[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[5:5] = --validity_check--ipv6[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[4:4] = --validity_check--ipv4_option_32b[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[3:3] = --validity_check--ipv4[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[2:2] = --validity_check--snap_header[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[1:1] = --validity_check--llc_header[0:0] (deparsed)
+  32-bit PHV 15 (ingress): phv15[0:0] = --validity_check--ethernet[0:0] (deparsed)
+  >> 16 in ingress and 0 in egress
+
+Allocations in Group 1 32 bits
+  32-bit PHV 16 (egress): phv16[31:0] = i2e_metadata.ingress_tstamp[31:0] (deparsed)
+  32-bit PHV 17 (egress): phv17[31:0] = fabric_header_timestamp.arrival_time[31:0] (deparsed)
+  32-bit PHV 18 (egress): phv18[31:24] = vxlan.flags[7:0] (deparsed)
+  32-bit PHV 18 (egress): phv18[31:30] = genv.ver[1:0] (deparsed)
+  32-bit PHV 18 (egress): phv18[31:0] = erspan_t3_header.timestamp[31:0] (deparsed)
+  32-bit PHV 18 (egress): phv18[29:24] = genv.optLen[5:0] (deparsed)
+  32-bit PHV 18 (egress): phv18[23:0] = vxlan.reserved[23:0] (deparsed)
+  32-bit PHV 18 (egress): phv18[23:23] = genv.oam[0:0] (deparsed)
+  32-bit PHV 18 (egress): phv18[22:22] = genv.critical[0:0] (deparsed)
+  32-bit PHV 18 (egress): phv18[21:16] = genv.reserved[5:0] (deparsed)
+  32-bit PHV 18 (egress): phv18[15:0] = genv.protoType[15:0] (deparsed)
+  32-bit PHV 19 (egress): phv19[31:16] = tunnel_metadata.tunnel_dst_index[15:0]
+  32-bit PHV 19 (egress): phv19[15:0] = l3_metadata.nexthop_index[15:0]
+  32-bit PHV 20 (egress): phv20[31:28] = ipv6.version[3:0] (deparsed)
+  32-bit PHV 20 (egress): phv20[31:16] = ipv4.identification[15:0] (deparsed)
+  32-bit PHV 20 (egress): phv20[27:20] = ipv6.trafficClass[7:0] (deparsed)
+  32-bit PHV 20 (egress): phv20[19:0] = ipv6.flowLabel[19:0] (deparsed)
+  32-bit PHV 20 (egress): phv20[15:13] = ipv4.flags[2:0] (deparsed)
+  32-bit PHV 20 (egress): phv20[12:0] = ipv4.fragOffset[12:0] (deparsed)
+  32-bit PHV 21 (egress): phv21[31:28] = inner_ipv6.version[3:0] (deparsed)
+  32-bit PHV 21 (egress): phv21[31:16] = inner_ipv4.identification[15:0] (deparsed)
+  32-bit PHV 21 (egress): phv21[27:20] = inner_ipv6.trafficClass[7:0] (deparsed)
+  32-bit PHV 21 (egress): phv21[19:0] = inner_ipv6.flowLabel[19:0] (deparsed)
+  32-bit PHV 21 (egress): phv21[15:13] = inner_ipv4.flags[2:0] (deparsed)
+  32-bit PHV 21 (egress): phv21[12:0] = inner_ipv4.fragOffset[12:0] (deparsed)
+  32-bit PHV 22 (egress): phv22[31:0] = ipv6.srcAddr[127:96] (deparsed)
+  32-bit PHV 22 (egress): phv22[31:0] = ipv4.srcAddr[31:0] (deparsed)
+  32-bit PHV 23 (egress): phv23[31:0] = inner_ipv6.srcAddr[127:96] (deparsed)
+  32-bit PHV 23 (egress): phv23[31:0] = inner_ipv4.srcAddr[31:0] (deparsed)
+  32-bit PHV 24 (egress): phv24[31:0] = ipv6.srcAddr[95:64] (deparsed)
+  32-bit PHV 24 (egress): phv24[31:16] = igmp.typeCode[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 24 (egress): phv24[15:0] = igmp.hdrChecksum[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 25 (egress): phv25[31:0] = inner_ipv6.srcAddr[95:64] (deparsed)
+  32-bit PHV 26 (egress): phv26[31:0] = ipv6.srcAddr[63:32] (deparsed)
+  32-bit PHV 27 (egress): phv27[31:0] = inner_ipv6.srcAddr[63:32] (deparsed)
+  32-bit PHV 28 (egress): phv28[31:0] = ipv6.srcAddr[31:0] (deparsed)
+  32-bit PHV 29 (egress): phv29[31:0] = inner_ipv6.srcAddr[31:0] (deparsed)
+  32-bit PHV 30 (egress): phv30[31:0] = ipv6.dstAddr[127:96] (deparsed)
+  32-bit PHV 31 (egress): phv31[31:0] = inner_ipv6.dstAddr[127:96] (deparsed)
+  >> 0 in ingress and 16 in egress
+
+Allocations in Group 2 32 bits
+  32-bit PHV 32 (egress): phv32[31:0] = ipv6.dstAddr[63:32] (deparsed)
+  32-bit PHV 32 (egress): phv32[31:0] = ipv4.dstAddr[31:0] (deparsed)
+  32-bit PHV 33 (egress): phv33[31:0] = inner_ipv6.dstAddr[63:32] (deparsed)
+  32-bit PHV 33 (egress): phv33[31:0] = inner_ipv4.dstAddr[31:0] (deparsed)
+  32-bit PHV 34 (egress): phv34[31:0] = ipv6.dstAddr[31:0] (deparsed)
+  32-bit PHV 35 (egress): phv35[31:0] = inner_ipv6.dstAddr[31:0] (deparsed)
+  32-bit PHV 36 (ingress): phv36[31:0] = ipv6.srcAddr[127:96] (deparsed)
+  32-bit PHV 36 (ingress): phv36[31:0] = ipv4.srcAddr[31:0] (deparsed)
+  32-bit PHV 36 (ingress): phv36[31:12] = mpls[0].label[19:0] (deparsed)
+  32-bit PHV 36 (ingress): phv36[11:9] = mpls[0].exp[2:0] (tagalong capable) (deparsed)
+  32-bit PHV 36 (ingress): phv36[8:8] = mpls[0].bos[0:0] (tagalong capable) (deparsed)
+  32-bit PHV 36 (ingress): phv36[7:0] = mpls[0].ttl[7:0] (tagalong capable) (deparsed)
+  32-bit PHV 37 (ingress): phv37[31:0] = ipv6_metadata.lkp_ipv6_sa[127:96]
+  32-bit PHV 38 (ingress): phv38[31:0] = ipv6.srcAddr[95:64] (deparsed)
+  32-bit PHV 38 (ingress): phv38[31:0] = ipv4.dstAddr[31:0] (deparsed)
+  32-bit PHV 39 (ingress): phv39[31:0] = ipv6_metadata.lkp_ipv6_sa[95:64]
+  32-bit PHV 39 (ingress): phv39[31:0] = ipv4_metadata.lkp_ipv4_sa[31:0]
+  32-bit PHV 40 (ingress): phv40[31:0] = ipv6.srcAddr[63:32] (deparsed)
+  32-bit PHV 41 (ingress): phv41[31:0] = ipv6_metadata.lkp_ipv6_sa[63:32]
+  32-bit PHV 42 (ingress): phv42[31:0] = ipv6.srcAddr[31:0] (deparsed)
+  32-bit PHV 43 (ingress): phv43[31:0] = ipv6_metadata.lkp_ipv6_sa[31:0]
+  32-bit PHV 44 (ingress): phv44[31:0] = ipv6.dstAddr[127:96] (deparsed)
+  32-bit PHV 45 (ingress): phv45[31:0] = ipv6_metadata.lkp_ipv6_da[127:96]
+  32-bit PHV 45 (ingress): phv45[31:0] = ipv4_metadata.lkp_ipv4_da[31:0]
+  32-bit PHV 46 (ingress): phv46[31:0] = ipv6.dstAddr[95:64] (deparsed)
+  32-bit PHV 47 (ingress): phv47[31:0] = ipv6_metadata.lkp_ipv6_da[95:64]
+  >> 12 in ingress and 4 in egress
+
+Allocations in Group 3 32 bits
+  32-bit PHV 48 (egress): phv48[31:0] = ethernet.dstAddr[31:0] (deparsed)
+  32-bit PHV 49 (egress): phv49[31:0] = inner_ethernet.dstAddr[31:0] (deparsed)
+  32-bit PHV 49 (egress): phv49[31:0] = tcp.ackNo[31:0] (deparsed)
+  32-bit PHV 49 (egress): phv49[31:16] = icmp.typeCode[15:0] (deparsed)
+  32-bit PHV 49 (egress): phv49[15:0] = icmp.hdrChecksum[15:0] (deparsed)
+  32-bit PHV 50 (egress): phv50[31:0] = ethernet.srcAddr[31:0] (deparsed)
+  32-bit PHV 51 (egress): phv51[31:0] = inner_ethernet.srcAddr[31:0] (deparsed)
+  32-bit PHV 51 (egress): phv51[31:28] = tcp.dataOffset[3:0] (deparsed)
+  32-bit PHV 51 (egress): phv51[27:24] = tcp.res[3:0] (deparsed)
+  32-bit PHV 51 (egress): phv51[23:16] = tcp.flags[7:0] (deparsed)
+  32-bit PHV 51 (egress): phv51[15:0] = tcp.window[15:0] (deparsed)
+  32-bit PHV 52 (egress): phv52[31:0] = inner_tcp.ackNo[31:0] (deparsed)
+  32-bit PHV 52 (egress): phv52[31:16] = tcp.checksum[15:0] (deparsed)
+  32-bit PHV 52 (egress): phv52[31:16] = inner_icmp.typeCode[15:0] (deparsed)
+  32-bit PHV 52 (egress): phv52[15:0] = tcp.urgentPtr[15:0] (deparsed)
+  32-bit PHV 52 (egress): phv52[15:0] = inner_icmp.hdrChecksum[15:0] (deparsed)
+  32-bit PHV 53 (egress): phv53[31:28] = inner_tcp.dataOffset[3:0] (deparsed)
+  32-bit PHV 53 (egress): phv53[27:24] = inner_tcp.res[3:0] (deparsed)
+  32-bit PHV 53 (egress): phv53[23:16] = inner_tcp.flags[7:0] (deparsed)
+  32-bit PHV 53 (egress): phv53[15:0] = inner_tcp.window[15:0] (deparsed)
+  32-bit PHV 54 (egress): phv54[31:16] = inner_tcp.checksum[15:0] (deparsed)
+  32-bit PHV 54 (egress): phv54[15:0] = inner_tcp.urgentPtr[15:0] (deparsed)
+  32-bit PHV 55 (egress): phv55[31:0] = egress_metadata.mac_da[31:0]
+  32-bit PHV 56 (ingress): phv56[31:29] = fabric_header.fabricColor[2:0] (tagalong capable) (deparsed)
+  32-bit PHV 56 (ingress): phv56[28:24] = fabric_header.fabricQos[4:0] (tagalong capable) (deparsed)
+  32-bit PHV 56 (ingress): phv56[23:16] = fabric_header.dstDevice[7:0] (deparsed)
+  32-bit PHV 56 (ingress): phv56[15:0] = fabric_header.dstPortOrGroup[15:0] (deparsed)
+  32-bit PHV 57 (ingress): phv57[8:0] = ig_intr_md_for_tm.ucast_egress_port[8:0] (deparsed)
+  32-bit PHV 58 (ingress): phv58[21:10] = acl_metadata.racl_stats_index[11:0]
+  32-bit PHV 58 (ingress): phv58[9:0] = ig_intr_md_for_mb.ingress_mirror_id[9:0] (deparsed)
+  32-bit PHV 59 (ingress): phv59[25:16] = ingress_metadata.egress_port_lag_index[9:0]
+  32-bit PHV 59 (ingress): phv59[15:0] = ig_intr_md_for_tm.level1_exclusion_id[15:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[16:16] = --validity_check--erspan_t3_header[0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[15:15] = --validity_check--nvgre[0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[14:14] = --validity_check--gre[0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[13:13] = --validity_check--igmp[0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[12:12] = --validity_check--ipv6[0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[11:11] = --validity_check--ipv4_option_32b[0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[10:10] = --validity_check--ipv4[0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[9:9] = --validity_check--snap_header[0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[8:8] = --validity_check--llc_header[0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[7:7] = --validity_check--ethernet[0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[6:6] = --validity_check--vlan_tag_[0][0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[5:5] = --validity_check--one0--mpls[0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[4:4] = --validity_check--one1--mpls[0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[3:3] = --validity_check--one2--mpls[0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[2:2] = --validity_check--mpls[0][0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[1:1] = --validity_check--mpls[1][0:0] (deparsed)
+  32-bit PHV 60 (egress): phv60[0:0] = --validity_check--mpls[2][0:0] (deparsed)
+  32-bit PHV 61 (egress): phv61[9:9] = --validity_check--inner_ethernet[0:0] (deparsed)
+  32-bit PHV 61 (egress): phv61[8:8] = --validity_check--inner_ipv6[0:0] (deparsed)
+  32-bit PHV 61 (egress): phv61[7:7] = --validity_check--inner_ipv4[0:0] (deparsed)
+  32-bit PHV 61 (egress): phv61[6:6] = --validity_check--genv[0:0] (deparsed)
+  32-bit PHV 61 (egress): phv61[5:5] = --validity_check--vxlan[0:0] (deparsed)
+  32-bit PHV 61 (egress): phv61[4:4] = --validity_check--fabric_payload_header[0:0] (deparsed)
+  32-bit PHV 61 (egress): phv61[3:3] = --validity_check--fabric_header_cpu[0:0] (deparsed)
+  32-bit PHV 61 (egress): phv61[2:2] = --validity_check--vlan_tag_[1][0:0] (deparsed)
+  32-bit PHV 61 (egress): phv61[1:1] = --validity_check--fabric_header_timestamp[0:0] (deparsed)
+  32-bit PHV 61 (egress): phv61[0:0] = --validity_check--fabric_header[0:0] (deparsed)
+  32-bit PHV 62 (ingress): phv62[9:9] = l3_metadata.fib_hit[0:0]
+  32-bit PHV 62 (ingress): phv62[8:0] = ig_intr_md_for_tm.level2_exclusion_id[8:0] (deparsed)
+  32-bit PHV 63 (ingress): phv63[16:16] = l3_metadata.urpf_check_fail[0:0]
+  32-bit PHV 63 (ingress): phv63[15:0] = ig_intr_md_for_tm.rid[15:0] (deparsed)
+  >> 6 in ingress and 10 in egress
+
+Allocations in Group 4 8 bits
+  8-bit PHV 64 (ingress): phv64[7:0] = --reserved--_0[7:0] (deparsed)
+  8-bit PHV 65 (ingress): phv65[7:0] = --reserved--_1[7:0] (deparsed)
+  8-bit PHV 66 (ingress): phv66[7:0] = --pov_reserved--_0[7:0] (deparsed)
+  8-bit PHV 67 (ingress): phv67[7:5] = -pad-2-[2:0] (tagalong capable)
+  8-bit PHV 67 (ingress): phv67[4:2] = l2_metadata.lkp_pkt_type[2:0] (deparsed)
+  8-bit PHV 67 (ingress): phv67[1:0] = ig_intr_md_for_tm.packet_color[1:0] (deparsed)
+  8-bit PHV 68 (ingress): phv68[7:5] = -pad-3-[2:0] (tagalong capable)
+  8-bit PHV 68 (ingress): phv68[4:0] = tunnel_metadata.ingress_tunnel_type[4:0] (deparsed)
+  8-bit PHV 69 (ingress): phv69[7:5] = ig_intr_md_for_tm.drop_ctl[2:0] (deparsed)
+  8-bit PHV 69 (ingress): phv69[4:2] = l2_metadata.stp_state[2:0]
+  8-bit PHV 69 (ingress): phv69[1:1] = l2_metadata.l2_dst_miss[0:0]
+  8-bit PHV 69 (ingress): phv69[0:0] = l2_metadata.l2_redirect[0:0]
+  8-bit PHV 70 (ingress): phv70[7:7] = acl_metadata.racl_deny[0:0]
+  8-bit PHV 70 (ingress): phv70[6:6] = l3_metadata.l3_copy[0:0]
+  8-bit PHV 70 (ingress): phv70[5:5] = l3_metadata.lkp_ip_mc[0:0]
+  8-bit PHV 70 (ingress): phv70[4:4] = l3_metadata.lkp_ip_llmc[0:0]
+  8-bit PHV 70 (ingress): phv70[3:2] = l3_metadata.lkp_ip_type[1:0]
+  8-bit PHV 70 (ingress): phv70[1:1] = l3_metadata.rmac_hit[0:0]
+  8-bit PHV 70 (ingress): phv70[0:0] = multicast_metadata.mcast_copy_to_cpu[0:0]
+  8-bit PHV 71 (ingress): phv71[7:0] = ingress_metadata.drop_reason[7:0]
+  8-bit PHV 72 (ingress): phv72[7:0] = acl_metadata.ingress_src_port_range_id[7:0]
+  8-bit PHV 72 (ingress): phv72[7:3] = ig_intr_md_for_tm.qid[4:0] (deparsed)
+  8-bit PHV 72 (ingress): phv72[7:3] = __md_ingress.__init_11[4:0]
+  8-bit PHV 72 (ingress): phv72[7:3] = __md_ingress.__init_12[4:0]
+  8-bit PHV 73 (ingress): phv73[7:0] = acl_metadata.ingress_dst_port_range_id[7:0]
+  8-bit PHV 73 (ingress): phv73[7:5] = ig_intr_md_for_tm.ingress_cos[2:0] (deparsed)
+  8-bit PHV 73 (ingress): phv73[7:5] = __md_ingress.__init_13[2:0]
+  8-bit PHV 73 (ingress): phv73[7:5] = __md_ingress.__init_14[2:0]
+  8-bit PHV 74 (ingress): phv74[6:5] = multicast_metadata.mcast_mode[1:0]
+  8-bit PHV 74 (ingress): phv74[4:4] = multicast_metadata.flood_to_mrouters[0:0]
+  8-bit PHV 74 (ingress): phv74[3:3] = multicast_metadata.mcast_rpf_fail[0:0]
+  8-bit PHV 74 (ingress): phv74[2:2] = acl_metadata.racl_redirect[0:0]
+  8-bit PHV 74 (ingress): phv74[1:1] = ipv6_metadata.ipv6_src_is_link_local[0:0]
+  8-bit PHV 74 (ingress): phv74[0:0] = ingress_metadata.drop_flag[0:0]
+  8-bit PHV 75 (ingress): phv75[2:2] = multicast_metadata.mcast_route_hit[0:0]
+  8-bit PHV 75 (ingress): phv75[1:1] = l2_metadata.port_learning_enabled[0:0]
+  8-bit PHV 75 (ingress): phv75[0:0] = l2_metadata.l2_src_miss[0:0]
+  8-bit PHV 76 (ingress): phv76[1:1] = multicast_metadata.mcast_route_s_g_hit[0:0]
+  8-bit PHV 76 (ingress): phv76[0:0] = l3_metadata.fib_hit_myip[0:0]
+  8-bit PHV 77 (ingress): phv77[1:0] = meter_metadata.storm_control_color[1:0]
+  >> 14 in ingress and 0 in egress
+
+Allocations in Group 5 8 bits
+  8-bit PHV 80 (egress): phv80[7:0] = --reserved--_2[7:0] (deparsed)
+  8-bit PHV 81 (egress): phv81[7:5] = -pad-2-[2:0] (tagalong capable)
+  8-bit PHV 81 (egress): phv81[4:2] = l2_metadata.lkp_pkt_type[2:0]
+  8-bit PHV 81 (egress): phv81[1:0] = ig_intr_md_for_tm.packet_color[1:0]
+  8-bit PHV 82 (egress): phv82[7:5] = -pad-3-[2:0] (tagalong capable)
+  8-bit PHV 82 (egress): phv82[7:5] = eg_intr_md_for_oport.drop_ctl[2:0] (deparsed)
+  8-bit PHV 82 (egress): phv82[4:0] = tunnel_metadata.ingress_tunnel_type[4:0]
+  8-bit PHV 83 (egress): phv83[7:0] = udp.srcPort[15:8] (deparsed)
+  8-bit PHV 83 (egress): phv83[7:0] = nvgre.flow_id[7:0] (deparsed)
+  8-bit PHV 83 (egress): phv83[7:4] = erspan_t3_header.version[3:0] (deparsed)
+  8-bit PHV 83 (egress): phv83[7:0] = mpls[2].ttl[7:0] (deparsed)
+  8-bit PHV 83 (egress): phv83[3:0] = erspan_t3_header.vlan[11:8] (deparsed)
+  8-bit PHV 84 (egress): phv84[7:0] = inner_tcp.srcPort[15:8] (deparsed)
+  8-bit PHV 84 (egress): phv84[7:0] = inner_udp.srcPort[15:8] (deparsed)
+  8-bit PHV 85 (egress): phv85[7:0] = hash_metadata.entropy_hash[15:8]
+  8-bit PHV 86 (egress): phv86[7:0] = udp.srcPort[7:0] (deparsed)
+  8-bit PHV 86 (egress): phv86[7:7] = gre.C[0:0] (deparsed)
+  8-bit PHV 86 (egress): phv86[6:6] = gre.R[0:0] (deparsed)
+  8-bit PHV 86 (egress): phv86[5:5] = gre.K[0:0] (deparsed)
+  8-bit PHV 86 (egress): phv86[4:4] = gre.S[0:0] (deparsed)
+  8-bit PHV 86 (egress): phv86[3:3] = gre.s[0:0] (deparsed)
+  8-bit PHV 86 (egress): phv86[2:0] = gre.recurse[2:0] (deparsed)
+  8-bit PHV 87 (egress): phv87[7:0] = inner_tcp.srcPort[7:0] (deparsed)
+  8-bit PHV 87 (egress): phv87[7:0] = inner_udp.srcPort[7:0] (deparsed)
+  8-bit PHV 88 (egress): phv88[7:0] = hash_metadata.entropy_hash[7:0]
+  8-bit PHV 89 (egress): phv89[7:0] = ipv6.nextHdr[7:0] (deparsed)
+  8-bit PHV 89 (egress): phv89[7:0] = ipv4.protocol[7:0] (deparsed)
+  8-bit PHV 89 (egress): phv89[7:0] = mpls[0].ttl[7:0] (deparsed)
+  8-bit PHV 90 (egress): phv90[7:0] = inner_ipv6.nextHdr[7:0] (deparsed)
+  8-bit PHV 90 (egress): phv90[7:0] = inner_ipv4.protocol[7:0] (deparsed)
+  8-bit PHV 90 (egress): phv90[7:0] = tcp.srcPort[15:8] (deparsed)
+  8-bit PHV 91 (egress): phv91[7:0] = ipv6.hopLimit[7:0] (deparsed)
+  8-bit PHV 91 (egress): phv91[7:4] = ipv4.version[3:0] (deparsed)
+  8-bit PHV 91 (egress): phv91[7:0] = mpls[1].ttl[7:0] (deparsed)
+  8-bit PHV 91 (egress): phv91[3:0] = ipv4.ihl[3:0] (deparsed)
+  8-bit PHV 92 (egress): phv92[7:0] = inner_ipv6.hopLimit[7:0] (deparsed)
+  8-bit PHV 92 (egress): phv92[7:4] = inner_ipv4.version[3:0] (deparsed)
+  8-bit PHV 92 (egress): phv92[7:0] = tcp.srcPort[7:0] (deparsed)
+  8-bit PHV 92 (egress): phv92[3:0] = inner_ipv4.ihl[3:0] (deparsed)
+  8-bit PHV 93 (egress): phv93[7:0] = ipv6.dstAddr[95:88] (deparsed)
+  8-bit PHV 93 (egress): phv93[7:0] = ipv4.diffserv[7:0] (deparsed)
+  8-bit PHV 94 (egress): phv94[7:0] = inner_ipv6.dstAddr[95:88] (deparsed)
+  8-bit PHV 94 (egress): phv94[7:0] = inner_ipv4.diffserv[7:0] (deparsed)
+  8-bit PHV 95 (egress): phv95[7:0] = eg_intr_md.egress_rid[15:8]
+  8-bit PHV 95 (egress): phv95[7:0] = tunnel_metadata.inner_ip_proto[7:0]
+  8-bit PHV 95 (egress): phv95[7:0] = __md_egress.__init_0[7:0]
+  8-bit PHV 95 (egress): phv95[7:0] = __md_egress.__init_1[7:0]
+  8-bit PHV 95 (egress): phv95[7:0] = __md_egress.__init_2[7:0]
+  >> 0 in ingress and 16 in egress
+
+Allocations in Group 6 8 bits
+  8-bit PHV 96 (egress): phv96[7:0] = ipv6.dstAddr[87:80] (deparsed)
+  8-bit PHV 96 (egress): phv96[7:0] = ipv4.ttl[7:0] (deparsed)
+  8-bit PHV 97 (egress): phv97[7:0] = inner_ipv6.dstAddr[87:80] (deparsed)
+  8-bit PHV 97 (egress): phv97[7:0] = inner_ipv4.ttl[7:0] (deparsed)
+  8-bit PHV 98 (egress): phv98[7:1] = eg_intr_md._pad8[6:0]
+  8-bit PHV 98 (egress): phv98[0:0] = eg_intr_md.deflection_flag[0:0]
+  8-bit PHV 99 (egress): phv99[7:0] = ethernet.dstAddr[47:40] (deparsed)
+  8-bit PHV 100 (egress): phv100[7:0] = inner_ethernet.dstAddr[47:40] (deparsed)
+  8-bit PHV 101 (egress): phv101[7:0] = vxlan.vni[23:16] (deparsed)
+  8-bit PHV 101 (egress): phv101[7:0] = genv.vni[23:16] (deparsed)
+  8-bit PHV 101 (egress): phv101[7:0] = nvgre.tni[23:16] (deparsed)
+  8-bit PHV 101 (egress): phv101[7:0] = erspan_t3_header.vlan[7:0] (deparsed)
+  8-bit PHV 102 (egress): phv102[7:0] = egress_metadata.mac_da[47:40]
+  8-bit PHV 102 (egress): phv102[7:0] = tunnel_metadata.tunnel_smac_index[7:0]
+  8-bit PHV 102 (egress): phv102[7:0] = __md_egress.__init_3[7:0]
+  8-bit PHV 102 (egress): phv102[7:0] = __md_egress.__init_4[7:0]
+  8-bit PHV 103 (egress): phv103[7:0] = tunnel_metadata.vnid[23:16]
+  8-bit PHV 104 (ingress): phv104[7:0] = ipv6.nextHdr[7:0] (deparsed)
+  8-bit PHV 104 (ingress): phv104[7:0] = ipv4.protocol[7:0] (deparsed)
+  8-bit PHV 105 (ingress): phv105[7:0] = l3_metadata.lkp_ip_proto[7:0]
+  8-bit PHV 105 (ingress): phv105[7:7] = ig_intr_md_for_tm.copy_to_cpu[0:0] (deparsed)
+  8-bit PHV 105 (ingress): phv105[7:7] = __md_ingress.__init_15[0:0]
+  8-bit PHV 105 (ingress): phv105[7:7] = __md_ingress.__init_16[0:0]
+  8-bit PHV 106 (ingress): phv106[7:0] = ipv6.hopLimit[7:0] (deparsed)
+  8-bit PHV 106 (ingress): phv106[7:0] = ipv4.ttl[7:0] (deparsed)
+  8-bit PHV 107 (ingress): phv107[7:0] = l3_metadata.lkp_ip_ttl[7:0]
+  8-bit PHV 108 (ingress): phv108[7:0] = ethernet.dstAddr[47:40] (deparsed)
+  8-bit PHV 109 (ingress): phv109[7:0] = l2_metadata.lkp_mac_da[47:40]
+  8-bit PHV 109 (ingress): phv109[7:7] = nexthop_metadata.nexthop_glean[0:0]
+  8-bit PHV 109 (ingress): phv109[7:7] = __md_ingress.__init_17[0:0]
+  8-bit PHV 109 (ingress): phv109[7:7] = __md_ingress.__init_18[0:0]
+  8-bit PHV 110 (ingress): phv110[7:0] = ethernet.dstAddr[39:32] (deparsed)
+  8-bit PHV 111 (ingress): phv111[7:0] = l2_metadata.lkp_mac_da[39:32]
+  >> 8 in ingress and 8 in egress
+
+Allocations in Group 7 8 bits
+  8-bit PHV 112 (egress): phv112[7:0] = ethernet.dstAddr[39:32] (deparsed)
+  8-bit PHV 113 (egress): phv113[7:0] = inner_ethernet.dstAddr[39:32] (deparsed)
+  8-bit PHV 114 (egress): phv114[7:0] = vxlan.reserved2[7:0] (deparsed)
+  8-bit PHV 114 (egress): phv114[7:3] = gre.flags[4:0] (deparsed)
+  8-bit PHV 114 (egress): phv114[7:0] = genv.reserved2[7:0] (deparsed)
+  8-bit PHV 114 (egress): phv114[7:0] = mpls[0].label[19:12] (deparsed)
+  8-bit PHV 114 (egress): phv114[2:0] = gre.ver[2:0] (deparsed)
+  8-bit PHV 115 (egress): phv115[7:5] = fabric_header.packetType[2:0] (deparsed)
+  8-bit PHV 115 (egress): phv115[4:3] = fabric_header.headerVersion[1:0] (deparsed)
+  8-bit PHV 115 (egress): phv115[2:1] = fabric_header.packetVersion[1:0] (deparsed)
+  8-bit PHV 115 (egress): phv115[0:0] = fabric_header.pad1[0:0] (deparsed)
+  8-bit PHV 116 (egress): phv116[7:0] = mpls[1].label[19:12] (deparsed)
+  8-bit PHV 117 (egress): phv117[7:4] = eg_intr_md_from_parser_aux.clone_digest_id[3:0]
+  8-bit PHV 117 (egress): phv117[3:0] = eg_intr_md_from_parser_aux.clone_src[3:0]
+  8-bit PHV 118 (egress): phv118[7:0] = mpls[2].label[19:12] (deparsed)
+  8-bit PHV 119 (egress): phv119[7:0] = egress_metadata.mac_da[39:32]
+  8-bit PHV 120 (ingress): phv120[7:0] = tcp.flags[7:0] (deparsed)
+  8-bit PHV 121 (ingress): phv121[7:0] = l3_metadata.lkp_tcp_flags[7:0]
+  8-bit PHV 121 (ingress): phv121[7:7] = ig_intr_md_for_tm.disable_ucast_cutthru[0:0] (deparsed)
+  8-bit PHV 121 (ingress): phv121[7:7] = __md_ingress.__init_19[0:0]
+  8-bit PHV 121 (ingress): phv121[7:7] = __md_ingress.__init_20[0:0]
+  8-bit PHV 122 (ingress): phv122[7:0] = l3_metadata.lkp_outer_tcp_flags[7:0]
+  8-bit PHV 123 (ingress): phv123[7:0] = ingress_metadata.bypass_lookups[7:0]
+  8-bit PHV 124 (ingress): phv124[7:0] = tunnel_metadata.tunnel_vni[23:16]
+  8-bit PHV 124 (ingress): phv124[7:7] = l3_metadata.urpf_hit[0:0]
+  8-bit PHV 124 (ingress): phv124[7:7] = __md_ingress.__init_23[0:0]
+  8-bit PHV 124 (ingress): phv124[7:7] = __md_ingress.__init_24[0:0]
+  8-bit PHV 124 (ingress): phv124[7:7] = __md_ingress.__init_27[0:0]
+  8-bit PHV 125 (ingress): phv125[7:2] = -pad-8-[5:0] (tagalong capable)
+  8-bit PHV 125 (ingress): phv125[1:0] = l2_metadata.arp_opcode[1:0]
+  8-bit PHV 126 (egress): phv126[1:0] = egress_metadata.port_type[1:0]
+  8-bit PHV 127 (ingress): phv127[7:7] = l2_metadata.non_ip_packet[0:0]
+  >> 7 in ingress and 9 in egress
+
+Allocations in Group 8 16 bits
+  16-bit PHV 128 (ingress): phv128[15:14] = -pad-0-[1:0] (tagalong capable)
+  16-bit PHV 128 (ingress): phv128[13:0] = ingress_metadata.bd[13:0] (deparsed)
+  16-bit PHV 129 (ingress): phv129[15:14] = -pad-1-[1:0] (tagalong capable)
+  16-bit PHV 129 (ingress): phv129[13:0] = ingress_metadata.ifindex[13:0] (deparsed)
+  16-bit PHV 130 (ingress): phv130[15:0] = fabric_metadata.reason_code[15:0] (deparsed)
+  16-bit PHV 130 (ingress): phv130[15:0] = ig_intr_md.ingress_mac_tstamp[47:32]
+  16-bit PHV 130 (ingress): phv130[15:0] = __md_ingress.__init_2[15:0]
+  16-bit PHV 130 (ingress): phv130[15:0] = __md_ingress.__init_3[15:0]
+  16-bit PHV 130 (ingress): phv130[15:0] = __md_ingress.__init_7[15:0]
+  16-bit PHV 131 (ingress): phv131[15:15] = tunnel_metadata.tunnel_terminate[0:0] (deparsed)
+  16-bit PHV 131 (ingress): phv131[14:14] = l3_metadata.routed[0:0] (deparsed)
+  16-bit PHV 131 (ingress): phv131[13:0] = l3_metadata.vrf[13:0] (deparsed)
+  16-bit PHV 132 (ingress): phv132[15:15] = egress_metadata.bypass[0:0] (deparsed)
+  16-bit PHV 132 (ingress): phv132[14:14] = egress_metadata.capture_tstamp_on_tx[0:0] (deparsed)
+  16-bit PHV 132 (ingress): phv132[13:0] = ingress_metadata.egress_ifindex[13:0] (deparsed)
+  16-bit PHV 133 (ingress): phv133[15:11] = fabric_header_cpu.egressQueue[4:0] (tagalong capable) (deparsed)
+  16-bit PHV 133 (ingress): phv133[10:10] = fabric_header_cpu.txBypass[0:0] (deparsed)
+  16-bit PHV 133 (ingress): phv133[9:9] = fabric_header_cpu.capture_tstamp_on_tx[0:0] (deparsed)
+  16-bit PHV 133 (ingress): phv133[8:8] = fabric_header_cpu.reserved[0:0] (tagalong capable) (deparsed)
+  16-bit PHV 133 (ingress): phv133[7:0] = fabric_header_cpu.ingressPort[15:8] (tagalong capable) (deparsed)
+  16-bit PHV 134 (ingress): phv134[15:9] = -pad-4-[6:0] (tagalong capable)
+  16-bit PHV 134 (ingress): phv134[8:0] = ingress_metadata.ingress_port[8:0] (deparsed)
+  16-bit PHV 135 (ingress): phv135[15:0] = hash_metadata.entropy_hash[15:0] (deparsed)
+  16-bit PHV 135 (ingress): phv135[15:0] = ig_intr_md_from_parser_aux.ingress_parser_err[15:0]
+  16-bit PHV 135 (ingress): phv135[15:0] = __md_ingress.__init_4[15:0]
+  16-bit PHV 135 (ingress): phv135[15:0] = __md_ingress.__init_5[15:0]
+  16-bit PHV 135 (ingress): phv135[15:0] = __md_ingress.__init_8[15:0]
+  16-bit PHV 136 (ingress): phv136[15:15] = multicast_metadata.ipv4_multicast_enabled[0:0]
+  16-bit PHV 136 (ingress): phv136[14:13] = ipv6_metadata.ipv6_urpf_mode[1:0]
+  16-bit PHV 136 (ingress): phv136[12:0] = ig_intr_md_for_tm.level2_mcast_hash[12:0] (deparsed)
+  16-bit PHV 137 (ingress): phv137[15:15] = ipv6_metadata.ipv6_unicast_enabled[0:0]
+  16-bit PHV 137 (ingress): phv137[14:13] = ipv4_metadata.ipv4_urpf_mode[1:0]
+  16-bit PHV 137 (ingress): phv137[12:0] = ig_intr_md_for_tm.level1_mcast_hash[12:0] (deparsed)
+  16-bit PHV 138 (ingress): phv138[13:0] = l3_metadata.same_bd_check[13:0]
+  16-bit PHV 139 (ingress): phv139[13:0] = l2_metadata.l2_src_move[13:0]
+  16-bit PHV 140 (ingress): phv140[15:15] = tunnel_metadata.tunnel_if_check[0:0]
+  16-bit PHV 140 (ingress): phv140[15:14] = l3_metadata.urpf_mode[1:0]
+  16-bit PHV 140 (ingress): phv140[15:15] = __md_ingress.__init_21[0:0]
+  16-bit PHV 140 (ingress): phv140[15:15] = __md_ingress.__init_22[0:0]
+  16-bit PHV 140 (ingress): phv140[13:0] = tunnel_metadata.vtep_ifindex[13:0]
+  16-bit PHV 141 (ingress): phv141[15:15] = ig_intr_md.resubmit_flag[0:0]
+  16-bit PHV 141 (ingress): phv141[14:14] = ig_intr_md._pad1[0:0]
+  16-bit PHV 141 (ingress): phv141[13:12] = ig_intr_md._pad2[1:0]
+  16-bit PHV 141 (ingress): phv141[11:9] = ig_intr_md._pad3[2:0]
+  16-bit PHV 141 (ingress): phv141[8:0] = ig_intr_md.ingress_port[8:0]
+  16-bit PHV 142 (ingress): phv142[15:0] = hash_metadata.hash1[15:0]
+  16-bit PHV 142 (ingress): phv142[15:6] = l3_metadata.rmac_group[9:0]
+  16-bit PHV 142 (ingress): phv142[15:0] = __md_ingress.__init_29[15:0]
+  16-bit PHV 142 (ingress): phv142[15:0] = __md_ingress.__init_30[15:0]
+  16-bit PHV 142 (ingress): phv142[15:0] = __md_ingress.__init_31[15:0]
+  16-bit PHV 143 (ingress): phv143[15:0] = hash_metadata.hash2[15:0]
+  >> 16 in ingress and 0 in egress
+
+Allocations in Group 9 16 bits
+  16-bit PHV 144 (egress): phv144[15:14] = -pad-0-[1:0] (tagalong capable)
+  16-bit PHV 144 (egress): phv144[13:0] = ingress_metadata.bd[13:0] (deparsed)
+  16-bit PHV 145 (egress): phv145[15:0] = fabric_header_cpu.ingressBd[15:0] (deparsed)
+  16-bit PHV 146 (egress): phv146[15:14] = -pad-1-[1:0] (tagalong capable)
+  16-bit PHV 146 (egress): phv146[13:0] = ingress_metadata.ifindex[13:0] (deparsed)
+  16-bit PHV 147 (egress): phv147[15:0] = fabric_header_cpu.ingressIfindex[15:0] (deparsed)
+  16-bit PHV 148 (egress): phv148[15:0] = fabric_metadata.reason_code[15:0] (deparsed)
+  16-bit PHV 149 (egress): phv149[15:0] = fabric_header_cpu.reasonCode[15:0] (deparsed)
+  16-bit PHV 150 (egress): phv150[15:9] = -pad-5-[6:0] (tagalong capable)
+  16-bit PHV 150 (egress): phv150[8:0] = ingress_metadata.ingress_port[8:0] (deparsed)
+  16-bit PHV 151 (egress): phv151[15:15] = tunnel_metadata.tunnel_terminate[0:0]
+  16-bit PHV 151 (egress): phv151[14:14] = l3_metadata.routed[0:0]
+  16-bit PHV 151 (egress): phv151[13:0] = l3_metadata.vrf[13:0]
+  16-bit PHV 151 (egress): phv151[7:7] = eg_intr_md_for_oport.capture_tstamp_on_tx[0:0] (deparsed)
+  16-bit PHV 152 (egress): phv152[15:0] = fabric_header_cpu.ingressPort[15:0] (deparsed)
+  16-bit PHV 153 (egress): phv153[15:0] = fabric_header_timestamp.arrival_time_hi[15:0] (deparsed)
+  16-bit PHV 154 (egress): phv154[14:14] = egress_metadata.routed[0:0]
+  16-bit PHV 154 (egress): phv154[13:0] = ingress_metadata.outer_bd[13:0]
+  16-bit PHV 155 (egress): phv155[15:15] = egress_metadata.bypass[0:0]
+  16-bit PHV 155 (egress): phv155[14:14] = egress_metadata.capture_tstamp_on_tx[0:0]
+  16-bit PHV 155 (egress): phv155[13:0] = ingress_metadata.egress_ifindex[13:0]
+  16-bit PHV 156 (egress): phv156[15:7] = egress_metadata.smac_idx[8:0]
+  16-bit PHV 156 (egress): phv156[15:7] = __md_egress.__init_5[8:0]
+  16-bit PHV 156 (egress): phv156[15:7] = __md_egress.__init_6[8:0]
+  16-bit PHV 156 (egress): phv156[13:0] = egress_metadata.same_bd_check[13:0]
+  16-bit PHV 157 (egress): phv157[13:0] = egress_metadata.bd[13:0]
+  16-bit PHV 158 (egress): phv158[15:15] = multicast_metadata.inner_replica[0:0]
+  16-bit PHV 158 (egress): phv158[14:14] = l3_metadata.outer_routed[0:0]
+  16-bit PHV 158 (egress): phv158[13:0] = egress_metadata.outer_bd[13:0]
+  16-bit PHV 159 (egress): phv159[15:0] = i2e_metadata.ingress_tstamp_hi[15:0]
+  >> 0 in ingress and 16 in egress
+
+Allocations in Group 10 16 bits
+  16-bit PHV 160 (egress): phv160[15:0] = i2e_metadata.mirror_session_id[15:0] (deparsed)
+  16-bit PHV 161 (egress): phv161[15:0] = udp.length_[15:0] (deparsed)
+  16-bit PHV 161 (egress): phv161[15:0] = erspan_t3_header.ft_d_other[15:0] (deparsed)
+  16-bit PHV 162 (egress): phv162[15:0] = ipv6.payloadLen[15:0] (deparsed)
+  16-bit PHV 162 (egress): phv162[15:0] = ipv4.totalLen[15:0] (deparsed)
+  16-bit PHV 163 (egress): phv163[15:0] = inner_udp.length_[15:0] (deparsed)
+  16-bit PHV 164 (egress): phv164[15:0] = inner_ipv6.payloadLen[15:0] (deparsed)
+  16-bit PHV 164 (egress): phv164[15:0] = inner_ipv4.totalLen[15:0] (deparsed)
+  16-bit PHV 165 (egress): phv165[15:0] = ipv6.dstAddr[79:64] (deparsed)
+  16-bit PHV 165 (egress): phv165[15:0] = ipv4.hdrChecksum[15:0] (deparsed)
+  16-bit PHV 166 (egress): phv166[15:0] = inner_ipv6.dstAddr[79:64] (deparsed)
+  16-bit PHV 166 (egress): phv166[15:0] = inner_ipv4.hdrChecksum[15:0] (deparsed)
+  16-bit PHV 167 (egress): phv167[15:9] = eg_intr_md._pad0[6:0]
+  16-bit PHV 167 (egress): phv167[8:0] = eg_intr_md.egress_port[8:0] (deparsed)
+  16-bit PHV 168 (ingress): phv168[15:12] = -pad-6-[3:0] (tagalong capable)
+  16-bit PHV 168 (ingress): phv168[11:10] = ingress_metadata.port_type[1:0]
+  16-bit PHV 168 (ingress): phv168[9:0] = ingress_metadata.port_lag_index[9:0]
+  16-bit PHV 169 (egress): phv169[15:8] = eg_intr_md.egress_rid[7:0]
+  16-bit PHV 169 (egress): phv169[7:3] = eg_intr_md._pad7[4:0]
+  16-bit PHV 169 (egress): phv169[2:0] = eg_intr_md.egress_cos[2:0] (deparsed)
+  16-bit PHV 170 (egress): phv170[15:0] = udp.dstPort[15:0] (deparsed)
+  16-bit PHV 170 (egress): phv170[15:0] = erspan_t3_header.priority_span_id[15:0] (deparsed)
+  16-bit PHV 171 (egress): phv171[15:0] = inner_udp.dstPort[15:0] (deparsed)
+  16-bit PHV 172 (egress): phv172[15:0] = eg_intr_md.pkt_length[15:0]
+  16-bit PHV 173 (egress): phv173[15:0] = l3_metadata.l3_mtu_check[15:0]
+  16-bit PHV 174 (egress): phv174[15:0] = egress_metadata.payload_length[15:0]
+  16-bit PHV 175 (ingress): phv175[15:0] = tunnel_metadata.tunnel_vni[15:0]
+  16-bit PHV 175 (ingress): phv175[15:2] = l3_metadata.urpf_bd_group[13:0]
+  16-bit PHV 175 (ingress): phv175[15:2] = __md_ingress.__init_25[13:0]
+  16-bit PHV 175 (ingress): phv175[15:2] = __md_ingress.__init_26[13:0]
+  16-bit PHV 175 (ingress): phv175[15:2] = __md_ingress.__init_28[13:0]
+  >> 2 in ingress and 14 in egress
+
+Allocations in Group 11 16 bits
+  16-bit PHV 176 (egress): phv176[15:0] = udp.checksum[15:0] (deparsed)
+  16-bit PHV 176 (egress): phv176[15:0] = erspan_t3_header.sgt[15:0] (deparsed)
+  16-bit PHV 176 (egress): phv176[15:0] = tcp.dstPort[15:0] (deparsed)
+  16-bit PHV 177 (egress): phv177[15:0] = inner_tcp.dstPort[15:0] (deparsed)
+  16-bit PHV 177 (egress): phv177[15:0] = inner_udp.checksum[15:0] (deparsed)
+  16-bit PHV 178 (egress): phv178[15:0] = ethernet.srcAddr[47:32] (deparsed)
+  16-bit PHV 179 (egress): phv179[15:0] = inner_ethernet.srcAddr[47:32] (deparsed)
+  16-bit PHV 179 (egress): phv179[15:0] = tcp.seqNo[31:16] (deparsed)
+  16-bit PHV 180 (egress): phv180[15:13] = vlan_tag_[0].pcp[2:0] (deparsed)
+  16-bit PHV 180 (egress): phv180[12:12] = vlan_tag_[0].cfi[0:0] (tagalong capable) (deparsed)
+  16-bit PHV 180 (egress): phv180[11:0] = vlan_tag_[0].vid[11:0] (deparsed)
+  16-bit PHV 181 (egress): phv181[15:0] = inner_tcp.seqNo[31:16] (deparsed)
+  16-bit PHV 182 (ingress): phv182[15:12] = l3_metadata.lkp_ip_version[3:0]
+  16-bit PHV 182 (ingress): phv182[11:0] = acl_metadata.acl_stats_index[11:0]
+  16-bit PHV 183 (ingress): phv183[15:0] = l2_metadata.lkp_mac_type[15:0]
+  16-bit PHV 184 (ingress): phv184[15:12] = inner_ipv6.version[3:0] (deparsed)
+  16-bit PHV 184 (ingress): phv184[15:12] = inner_ipv4.version[3:0] (deparsed)
+  16-bit PHV 184 (ingress): phv184[11:4] = inner_ipv6.trafficClass[7:0] (tagalong capable) (deparsed)
+  16-bit PHV 184 (ingress): phv184[11:8] = inner_ipv4.ihl[3:0] (deparsed)
+  16-bit PHV 184 (ingress): phv184[7:0] = inner_ipv4.diffserv[7:0] (tagalong capable) (deparsed)
+  16-bit PHV 184 (ingress): phv184[3:0] = inner_ipv6.flowLabel[19:16] (tagalong capable) (deparsed)
+  16-bit PHV 185 (ingress): phv185[15:12] = ipv6.version[3:0] (deparsed)
+  16-bit PHV 185 (ingress): phv185[15:12] = ipv4.version[3:0] (deparsed)
+  16-bit PHV 185 (ingress): phv185[11:4] = ipv6.trafficClass[7:0] (tagalong capable) (deparsed)
+  16-bit PHV 185 (ingress): phv185[11:8] = ipv4.ihl[3:0] (deparsed)
+  16-bit PHV 185 (ingress): phv185[7:0] = ipv4.diffserv[7:0] (tagalong capable) (deparsed)
+  16-bit PHV 185 (ingress): phv185[3:0] = ipv6.flowLabel[19:16] (tagalong capable) (deparsed)
+  16-bit PHV 186 (ingress): phv186[15:0] = inner_ethernet.etherType[15:0] (deparsed)
+  16-bit PHV 187 (ingress): phv187[15:0] = vlan_tag_[0].etherType[15:0] (deparsed)
+  16-bit PHV 188 (ingress): phv188[15:0] = ethernet.etherType[15:0] (deparsed)
+  16-bit PHV 189 (ingress): phv189[15:0] = fabric_payload_header.etherType[15:0] (deparsed)
+  16-bit PHV 190 (ingress): phv190[15:0] = l2_metadata.lkp_mac_sa[47:32] (deparsed)
+  16-bit PHV 191 (ingress): phv191[15:0] = ethernet.srcAddr[47:32] (deparsed)
+  >> 10 in ingress and 6 in egress
+
+Allocations in Group 12 16 bits
+  16-bit PHV 192 (egress): phv192[15:0] = ethernet.etherType[15:0] (deparsed)
+  16-bit PHV 193 (egress): phv193[15:0] = fabric_payload_header.etherType[15:0] (deparsed)
+  16-bit PHV 194 (egress): phv194[15:0] = vlan_tag_[0].etherType[15:0] (deparsed)
+  16-bit PHV 195 (egress): phv195[15:0] = inner_ethernet.etherType[15:0] (deparsed)
+  16-bit PHV 195 (egress): phv195[15:0] = tcp.seqNo[15:0] (deparsed)
+  16-bit PHV 196 (egress): phv196[15:0] = vxlan.vni[15:0] (deparsed)
+  16-bit PHV 196 (egress): phv196[15:0] = gre.proto[15:0] (deparsed)
+  16-bit PHV 196 (egress): phv196[15:0] = genv.vni[15:0] (deparsed)
+  16-bit PHV 197 (egress): phv197[15:0] = nvgre.tni[15:0] (deparsed)
+  16-bit PHV 198 (egress): phv198[15:0] = inner_tcp.seqNo[15:0] (deparsed)
+  16-bit PHV 199 (egress): phv199[15:10] = eg_intr_md_for_mb._pad1[5:0] (deparsed)
+  16-bit PHV 199 (egress): phv199[9:0] = eg_intr_md_for_mb.egress_mirror_id[9:0] (deparsed)
+  16-bit PHV 200 (ingress): phv200[15:13] = vlan_tag_[0].pcp[2:0] (tagalong capable) (deparsed)
+  16-bit PHV 200 (ingress): phv200[12:12] = vlan_tag_[0].cfi[0:0] (tagalong capable) (deparsed)
+  16-bit PHV 200 (ingress): phv200[11:0] = vlan_tag_[0].vid[11:0] (deparsed)
+  16-bit PHV 201 (ingress): phv201[15:0] = l3_metadata.lkp_l4_sport[15:0]
+  16-bit PHV 202 (ingress): phv202[15:0] = l3_metadata.lkp_outer_l4_sport[15:0]
+  16-bit PHV 203 (ingress): phv203[15:0] = l3_metadata.lkp_l4_dport[15:0]
+  16-bit PHV 204 (ingress): phv204[15:0] = l3_metadata.lkp_outer_l4_dport[15:0]
+  16-bit PHV 205 (egress): phv205[15:0] = tunnel_metadata.vnid[15:0]
+  16-bit PHV 206 (ingress): phv206[13:0] = l2_metadata.same_if_check[13:0]
+  16-bit PHV 207 (ingress): phv207[15:0] = acl_metadata.port_lag_label[15:0]
+  >> 7 in ingress and 9 in egress
+
+Allocations in Group 13 16 bits
+  16-bit PHV 208 (egress): phv208[15:4] = mpls[0].label[11:0] (deparsed)
+  16-bit PHV 208 (egress): phv208[3:1] = mpls[0].exp[2:0] (deparsed)
+  16-bit PHV 208 (egress): phv208[0:0] = mpls[0].bos[0:0] (deparsed)
+  16-bit PHV 209 (egress): phv209[15:4] = mpls[1].label[11:0] (deparsed)
+  16-bit PHV 209 (egress): phv209[3:1] = mpls[1].exp[2:0] (deparsed)
+  16-bit PHV 209 (egress): phv209[0:0] = mpls[1].bos[0:0] (deparsed)
+  16-bit PHV 210 (egress): phv210[15:4] = mpls[2].label[11:0] (deparsed)
+  16-bit PHV 210 (egress): phv210[3:1] = mpls[2].exp[2:0] (deparsed)
+  16-bit PHV 210 (egress): phv210[0:0] = mpls[2].bos[0:0] (deparsed)
+  16-bit PHV 211 (egress): phv211[5:5] = --validity_check--inner_udp[0:0] (deparsed)
+  16-bit PHV 211 (egress): phv211[4:4] = --validity_check--inner_tcp[0:0] (deparsed)
+  16-bit PHV 211 (egress): phv211[3:3] = --validity_check--inner_icmp[0:0] (deparsed)
+  16-bit PHV 211 (egress): phv211[2:2] = --validity_check--udp[0:0] (deparsed)
+  16-bit PHV 211 (egress): phv211[1:1] = --validity_check--tcp[0:0] (deparsed)
+  16-bit PHV 211 (egress): phv211[0:0] = --validity_check--icmp[0:0] (deparsed)
+  16-bit PHV 212 (egress): phv212[13:13] = multicast_metadata.replica[0:0]
+  16-bit PHV 212 (egress): phv212[12:8] = tunnel_metadata.egress_tunnel_type[4:0]
+  16-bit PHV 212 (egress): phv212[7:0] = l3_metadata.mtu_index[7:0]
+  16-bit PHV 213 (egress): phv213[13:0] = tunnel_metadata.tunnel_index[13:0]
+  16-bit PHV 214 (egress): phv214[15:12] = tunnel_metadata.egress_header_count[3:0]
+  16-bit PHV 214 (egress): phv214[11:0] = tunnel_metadata.tunnel_dmac_index[11:0]
+  16-bit PHV 216 (ingress): phv216[15:0] = ig_intr_md_for_tm.mcast_grp_b[15:0] (deparsed)
+  16-bit PHV 217 (ingress): phv217[15:0] = multicast_metadata.multicast_route_mc_index[15:0]
+  16-bit PHV 218 (ingress): phv218[15:0] = multicast_metadata.multicast_bridge_mc_index[15:0]
+  16-bit PHV 219 (ingress): phv219[13:0] = l2_metadata.bd_stats_idx[13:0]
+  16-bit PHV 220 (ingress): phv220[15:15] = acl_metadata.racl_nexthop_type[0:0]
+  16-bit PHV 220 (ingress): phv220[14:14] = l2_metadata.l2_nexthop_type[0:0]
+  16-bit PHV 220 (ingress): phv220[13:0] = multicast_metadata.bd_mrpf_group[13:0]
+  16-bit PHV 221 (ingress): phv221[13:0] = multicast_metadata.mcast_rpf_group[13:0]
+  16-bit PHV 222 (ingress): phv222[15:15] = ipv4_metadata.ipv4_unicast_enabled[0:0]
+  16-bit PHV 222 (ingress): phv222[14:14] = l2_metadata.port_vlan_mapping_miss[0:0]
+  16-bit PHV 222 (ingress): phv222[13:13] = l2_metadata.learning_enabled[0:0]
+  16-bit PHV 222 (ingress): phv222[12:12] = tunnel_metadata.src_vtep_hit[0:0]
+  16-bit PHV 222 (ingress): phv222[11:2] = l2_metadata.stp_group[9:0]
+  16-bit PHV 222 (ingress): phv222[1:1] = nexthop_metadata.nexthop_type[0:0]
+  16-bit PHV 222 (ingress): phv222[0:0] = acl_metadata.acl_nexthop_type[0:0]
+  16-bit PHV 223 (ingress): phv223[3:3] = multicast_metadata.mcast_bridge_hit[0:0]
+  16-bit PHV 223 (ingress): phv223[2:2] = tunnel_metadata.tunnel_lookup[0:0]
+  16-bit PHV 223 (ingress): phv223[1:1] = tunnel_metadata.tunnel_term_type[0:0]
+  16-bit PHV 223 (ingress): phv223[0:0] = l3_metadata.fib_nexthop_type[0:0]
+  >> 8 in ingress and 7 in egress
+
+Allocations in Group 14 32 bits (tagalong)
+  32-bit PHV 256 (egress): phv256[31:29] = fabric_header.fabricColor[2:0] (tagalong capable) (deparsed)
+  32-bit PHV 256 (egress): phv256[28:24] = fabric_header.fabricQos[4:0] (tagalong capable) (deparsed)
+  32-bit PHV 256 (egress): phv256[23:16] = fabric_header.dstDevice[7:0] (tagalong capable) (deparsed)
+  32-bit PHV 256 (egress): phv256[15:0] = fabric_header.dstPortOrGroup[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 257 (egress): phv257[31:0] = ipv4_option_32b.option_fields[31:0] (tagalong capable) (deparsed)
+  32-bit PHV 260 (ingress): phv260[31:16] = inner_ipv6.flowLabel[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 260 (ingress): phv260[31:16] = inner_ipv4.hdrChecksum[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 260 (ingress): phv260[15:0] = inner_ipv6.payloadLen[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 260 (ingress): phv260[15:0] = inner_ipv4.srcAddr[31:16] (tagalong capable) (deparsed)
+  32-bit PHV 261 (ingress): phv261[31:24] = inner_ipv6.nextHdr[7:0] (tagalong capable) (deparsed)
+  32-bit PHV 261 (ingress): phv261[31:16] = inner_ipv4.srcAddr[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 261 (ingress): phv261[23:16] = inner_ipv6.hopLimit[7:0] (tagalong capable) (deparsed)
+  32-bit PHV 261 (ingress): phv261[15:0] = inner_ipv6.srcAddr[127:112] (tagalong capable) (deparsed)
+  32-bit PHV 261 (ingress): phv261[15:0] = inner_ipv4.dstAddr[31:16] (tagalong capable) (deparsed)
+  32-bit PHV 262 (ingress): phv262[31:0] = inner_ipv6.srcAddr[87:56] (tagalong capable) (deparsed)
+  32-bit PHV 263 (ingress): phv263[31:0] = inner_ipv6.srcAddr[55:24] (tagalong capable) (deparsed)
+  32-bit PHV 264 (ingress): phv264[31:8] = inner_ipv6.srcAddr[23:0] (tagalong capable) (deparsed)
+  32-bit PHV 264 (ingress): phv264[7:0] = inner_ipv6.dstAddr[127:120] (tagalong capable) (deparsed)
+  32-bit PHV 265 (ingress): phv265[31:0] = inner_ipv6.dstAddr[63:32] (tagalong capable) (deparsed)
+  32-bit PHV 266 (ingress): phv266[31:0] = inner_ipv6.dstAddr[31:0] (tagalong capable) (deparsed)
+  32-bit PHV 267 (ingress): phv267[31:16] = ipv6.flowLabel[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 267 (ingress): phv267[31:16] = ipv4.identification[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 267 (ingress): phv267[15:0] = ipv6.payloadLen[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 267 (ingress): phv267[15:13] = ipv4.flags[2:0] (tagalong capable) (deparsed)
+  32-bit PHV 267 (ingress): phv267[12:0] = ipv4.fragOffset[12:0] (tagalong capable) (deparsed)
+  32-bit PHV 268 (ingress): phv268[31:0] = inner_ethernet.dstAddr[39:8] (tagalong capable) (deparsed)
+  32-bit PHV 269 (ingress): phv269[31:0] = inner_ethernet.srcAddr[31:0] (tagalong capable) (deparsed)
+  32-bit PHV 270 (ingress): phv270[31:0] = inner_tcp.seqNo[31:0] (tagalong capable) (deparsed)
+  32-bit PHV 271 (ingress): phv271[31:0] = inner_tcp.ackNo[31:0] (tagalong capable) (deparsed)
+  >> 12 in ingress and 2 in egress
+
+Allocations in Group 15 32 bits (tagalong)
+  32-bit PHV 272 (ingress): phv272[31:28] = inner_tcp.dataOffset[3:0] (tagalong capable) (deparsed)
+  32-bit PHV 272 (ingress): phv272[31:24] = tcp.srcPort[7:0] (tagalong capable) (deparsed)
+  32-bit PHV 272 (ingress): phv272[31:16] = inner_udp.length_[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 272 (ingress): phv272[31:16] = icmp.typeCode[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 272 (ingress): phv272[31:16] = igmp.typeCode[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 272 (ingress): phv272[31:16] = inner_icmp.typeCode[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 272 (ingress): phv272[27:24] = inner_tcp.res[3:0] (tagalong capable) (deparsed)
+  32-bit PHV 272 (ingress): phv272[23:16] = inner_tcp.flags[7:0] (tagalong capable) (deparsed)
+  32-bit PHV 272 (ingress): phv272[23:8] = tcp.dstPort[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 272 (ingress): phv272[15:0] = inner_tcp.window[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 272 (ingress): phv272[15:0] = inner_udp.checksum[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 272 (ingress): phv272[15:0] = icmp.hdrChecksum[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 272 (ingress): phv272[15:0] = igmp.hdrChecksum[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 272 (ingress): phv272[15:0] = inner_icmp.hdrChecksum[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 272 (ingress): phv272[7:0] = tcp.seqNo[31:24] (tagalong capable) (deparsed)
+  32-bit PHV 273 (ingress): phv273[31:16] = inner_tcp.checksum[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 273 (ingress): phv273[31:8] = tcp.seqNo[23:0] (tagalong capable) (deparsed)
+  32-bit PHV 273 (ingress): phv273[15:0] = inner_tcp.urgentPtr[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 273 (ingress): phv273[7:0] = tcp.ackNo[31:24] (tagalong capable) (deparsed)
+  32-bit PHV 274 (ingress): phv274[31:16] = udp.length_[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 274 (ingress): phv274[31:8] = tcp.ackNo[23:0] (tagalong capable) (deparsed)
+  32-bit PHV 274 (ingress): phv274[31:0] = erspan_t3_header.timestamp[31:0] (tagalong capable)
+  32-bit PHV 274 (ingress): phv274[31:8] = nvgre.tni[23:0] (tagalong capable) (deparsed)
+  32-bit PHV 274 (ingress): phv274[31:12] = mpls[1].label[19:0] (tagalong capable) (deparsed)
+  32-bit PHV 274 (ingress): phv274[15:0] = udp.checksum[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 274 (ingress): phv274[11:9] = mpls[1].exp[2:0] (tagalong capable) (deparsed)
+  32-bit PHV 274 (ingress): phv274[8:8] = mpls[1].bos[0:0] (tagalong capable) (deparsed)
+  32-bit PHV 274 (ingress): phv274[7:4] = tcp.dataOffset[3:0] (tagalong capable) (deparsed)
+  32-bit PHV 274 (ingress): phv274[7:0] = nvgre.flow_id[7:0] (tagalong capable) (deparsed)
+  32-bit PHV 274 (ingress): phv274[7:0] = mpls[1].ttl[7:0] (tagalong capable) (deparsed)
+  32-bit PHV 274 (ingress): phv274[3:0] = tcp.res[3:0] (tagalong capable) (deparsed)
+  32-bit PHV 275 (ingress): phv275[31:8] = vxlan.vni[23:0] (tagalong capable) (deparsed)
+  32-bit PHV 275 (ingress): phv275[31:16] = tcp.checksum[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 275 (ingress): phv275[31:16] = erspan_t3_header.sgt[15:0] (tagalong capable)
+  32-bit PHV 275 (ingress): phv275[31:8] = genv.vni[23:0] (tagalong capable) (deparsed)
+  32-bit PHV 275 (ingress): phv275[31:12] = mpls[2].label[19:0] (tagalong capable) (deparsed)
+  32-bit PHV 275 (ingress): phv275[15:0] = tcp.urgentPtr[15:0] (tagalong capable) (deparsed)
+  32-bit PHV 275 (ingress): phv275[15:0] = erspan_t3_header.ft_d_other[15:0] (tagalong capable)
+  32-bit PHV 275 (ingress): phv275[11:9] = mpls[2].exp[2:0] (tagalong capable) (deparsed)
+  32-bit PHV 275 (ingress): phv275[8:8] = mpls[2].bos[0:0] (tagalong capable) (deparsed)
+  32-bit PHV 275 (ingress): phv275[7:0] = vxlan.reserved2[7:0] (tagalong capable) (deparsed)
+  32-bit PHV 275 (ingress): phv275[7:0] = genv.reserved2[7:0] (tagalong capable) (deparsed)
+  32-bit PHV 275 (ingress): phv275[7:0] = mpls[2].ttl[7:0] (tagalong capable) (deparsed)
+  32-bit PHV 276 (ingress): phv276[31:0] = ipv4_option_32b.option_fields[31:0] (tagalong capable) (deparsed)
+  >> 5 in ingress and 0 in egress
+
+Allocations in Group 16 8 bits (tagalong)
+  8-bit PHV 288 (egress): phv288[7:3] = fabric_header_cpu.egressQueue[4:0] (tagalong capable) (deparsed)
+  8-bit PHV 288 (egress): phv288[2:2] = fabric_header_cpu.txBypass[0:0] (tagalong capable) (deparsed)
+  8-bit PHV 288 (egress): phv288[1:1] = fabric_header_cpu.capture_tstamp_on_tx[0:0] (tagalong capable) (deparsed)
+  8-bit PHV 288 (egress): phv288[0:0] = fabric_header_cpu.reserved[0:0] (tagalong capable) (deparsed)
+  8-bit PHV 289 (egress): phv289[7:0] = snap_header.oui[23:16] (tagalong capable) (deparsed)
+  8-bit PHV 290 (egress): phv290[7:0] = llc_header.dsap[7:0] (tagalong capable) (deparsed)
+  8-bit PHV 292 (ingress): phv292[7:0] = inner_ipv6.srcAddr[111:104] (tagalong capable) (deparsed)
+  8-bit PHV 292 (ingress): phv292[7:0] = inner_ipv4.totalLen[15:8] (tagalong capable) (deparsed)
+  8-bit PHV 293 (ingress): phv293[7:0] = inner_ipv6.dstAddr[119:112] (tagalong capable) (deparsed)
+  8-bit PHV 293 (ingress): phv293[7:0] = inner_ipv4.totalLen[7:0] (tagalong capable) (deparsed)
+  8-bit PHV 294 (ingress): phv294[7:0] = inner_ipv6.dstAddr[111:104] (tagalong capable) (deparsed)
+  8-bit PHV 294 (ingress): phv294[7:0] = inner_ipv4.dstAddr[15:8] (tagalong capable) (deparsed)
+  8-bit PHV 295 (ingress): phv295[7:0] = inner_ipv6.dstAddr[103:96] (tagalong capable) (deparsed)
+  8-bit PHV 295 (ingress): phv295[7:0] = inner_ipv4.dstAddr[7:0] (tagalong capable) (deparsed)
+  8-bit PHV 296 (ingress): phv296[7:0] = inner_ethernet.dstAddr[47:40] (tagalong capable) (deparsed)
+  8-bit PHV 297 (ingress): phv297[7:0] = inner_ethernet.srcAddr[39:32] (tagalong capable) (deparsed)
+  8-bit PHV 298 (ingress): phv298[7:0] = inner_tcp.srcPort[15:8] (tagalong capable) (deparsed)
+  8-bit PHV 298 (ingress): phv298[7:0] = inner_udp.srcPort[15:8] (tagalong capable) (deparsed)
+  8-bit PHV 299 (ingress): phv299[7:0] = inner_tcp.srcPort[7:0] (tagalong capable) (deparsed)
+  8-bit PHV 299 (ingress): phv299[7:0] = inner_udp.srcPort[7:0] (tagalong capable) (deparsed)
+  8-bit PHV 300 (ingress): phv300[7:0] = udp.srcPort[15:8] (tagalong capable) (deparsed)
+  8-bit PHV 300 (ingress): phv300[7:7] = gre.C[0:0] (tagalong capable) (deparsed)
+  8-bit PHV 300 (ingress): phv300[6:6] = gre.R[0:0] (tagalong capable) (deparsed)
+  8-bit PHV 300 (ingress): phv300[5:5] = gre.K[0:0] (tagalong capable) (deparsed)
+  8-bit PHV 300 (ingress): phv300[4:4] = gre.S[0:0] (tagalong capable) (deparsed)
+  8-bit PHV 300 (ingress): phv300[3:3] = gre.s[0:0] (tagalong capable) (deparsed)
+  8-bit PHV 300 (ingress): phv300[2:0] = gre.recurse[2:0] (tagalong capable) (deparsed)
+  8-bit PHV 301 (ingress): phv301[7:0] = udp.srcPort[7:0] (tagalong capable) (deparsed)
+  8-bit PHV 301 (ingress): phv301[7:3] = gre.flags[4:0] (tagalong capable) (deparsed)
+  8-bit PHV 301 (ingress): phv301[2:0] = gre.ver[2:0] (tagalong capable) (deparsed)
+  8-bit PHV 302 (ingress): phv302[7:0] = fabric_header_cpu.ingressPort[7:0] (tagalong capable) (deparsed)
+  8-bit PHV 303 (ingress): phv303[7:5] = fabric_header.packetType[2:0] (tagalong capable) (deparsed)
+  8-bit PHV 303 (ingress): phv303[4:3] = fabric_header.headerVersion[1:0] (tagalong capable) (deparsed)
+  8-bit PHV 303 (ingress): phv303[2:1] = fabric_header.packetVersion[1:0] (tagalong capable) (deparsed)
+  8-bit PHV 303 (ingress): phv303[0:0] = fabric_header.pad1[0:0] (tagalong capable) (deparsed)
+  >> 12 in ingress and 3 in egress
+
+Allocations in Group 17 8 bits (tagalong)
+  8-bit PHV 304 (ingress): phv304[7:0] = vxlan.flags[7:0] (tagalong capable) (deparsed)
+  8-bit PHV 304 (ingress): phv304[7:0] = tcp.srcPort[15:8] (tagalong capable) (deparsed)
+  8-bit PHV 304 (ingress): phv304[7:4] = erspan_t3_header.version[3:0] (tagalong capable)
+  8-bit PHV 304 (ingress): phv304[7:6] = genv.ver[1:0] (tagalong capable) (deparsed)
+  8-bit PHV 304 (ingress): phv304[5:0] = genv.optLen[5:0] (tagalong capable) (deparsed)
+  8-bit PHV 304 (ingress): phv304[3:0] = erspan_t3_header.vlan[11:8] (tagalong capable)
+  8-bit PHV 305 (ingress): phv305[7:0] = vxlan.reserved[23:16] (tagalong capable) (deparsed)
+  8-bit PHV 305 (ingress): phv305[7:0] = erspan_t3_header.vlan[7:0] (tagalong capable)
+  8-bit PHV 305 (ingress): phv305[7:7] = genv.oam[0:0] (tagalong capable) (deparsed)
+  8-bit PHV 305 (ingress): phv305[6:6] = genv.critical[0:0] (tagalong capable) (deparsed)
+  8-bit PHV 305 (ingress): phv305[5:0] = genv.reserved[5:0] (tagalong capable) (deparsed)
+  8-bit PHV 306 (ingress): phv306[7:0] = fabric_header_timestamp.arrival_time_hi[15:8] (tagalong capable) (deparsed)
+  8-bit PHV 307 (ingress): phv307[7:0] = fabric_header_timestamp.arrival_time_hi[7:0] (tagalong capable) (deparsed)
+  8-bit PHV 308 (ingress): phv308[7:0] = snap_header.oui[23:16] (tagalong capable) (deparsed)
+  8-bit PHV 309 (ingress): phv309[7:5] = vlan_tag_[1].pcp[2:0] (tagalong capable) (deparsed)
+  8-bit PHV 309 (ingress): phv309[4:4] = vlan_tag_[1].cfi[0:0] (tagalong capable) (deparsed)
+  8-bit PHV 309 (ingress): phv309[3:0] = vlan_tag_[1].vid[11:8] (tagalong capable) (deparsed)
+  8-bit PHV 310 (ingress): phv310[7:0] = vlan_tag_[1].vid[7:0] (tagalong capable) (deparsed)
+  8-bit PHV 311 (ingress): phv311[7:0] = llc_header.dsap[7:0] (tagalong capable) (deparsed)
+  >> 8 in ingress and 0 in egress
+
+Allocations in Group 18 16 bits (tagalong)
+  16-bit PHV 320 (egress): phv320[15:0] = snap_header.oui[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 321 (egress): phv321[15:0] = snap_header.type_[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 322 (egress): phv322[15:13] = vlan_tag_[1].pcp[2:0] (tagalong capable) (deparsed)
+  16-bit PHV 322 (egress): phv322[12:12] = vlan_tag_[1].cfi[0:0] (tagalong capable) (deparsed)
+  16-bit PHV 322 (egress): phv322[11:0] = vlan_tag_[1].vid[11:0] (tagalong capable) (deparsed)
+  16-bit PHV 323 (egress): phv323[15:0] = vlan_tag_[1].etherType[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 324 (egress): phv324[15:8] = llc_header.ssap[7:0] (tagalong capable) (deparsed)
+  16-bit PHV 324 (egress): phv324[7:0] = llc_header.control_[7:0] (tagalong capable) (deparsed)
+  16-bit PHV 326 (ingress): phv326[15:0] = inner_ipv6.srcAddr[103:88] (tagalong capable) (deparsed)
+  16-bit PHV 326 (ingress): phv326[15:0] = inner_ipv4.identification[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 326 (ingress): phv326[15:0] = tcp.window[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 327 (ingress): phv327[15:0] = inner_ipv6.dstAddr[95:80] (tagalong capable) (deparsed)
+  16-bit PHV 327 (ingress): phv327[15:13] = inner_ipv4.flags[2:0] (tagalong capable) (deparsed)
+  16-bit PHV 327 (ingress): phv327[12:0] = inner_ipv4.fragOffset[12:0] (tagalong capable) (deparsed)
+  16-bit PHV 328 (ingress): phv328[15:0] = inner_ipv6.dstAddr[79:64] (tagalong capable) (deparsed)
+  16-bit PHV 328 (ingress): phv328[15:8] = inner_ipv4.ttl[7:0] (tagalong capable) (deparsed)
+  16-bit PHV 328 (ingress): phv328[7:0] = inner_ipv4.protocol[7:0] (tagalong capable) (deparsed)
+  16-bit PHV 329 (ingress): phv329[15:8] = inner_ethernet.dstAddr[7:0] (tagalong capable) (deparsed)
+  16-bit PHV 329 (ingress): phv329[7:0] = inner_ethernet.srcAddr[47:40] (tagalong capable) (deparsed)
+  16-bit PHV 330 (ingress): phv330[15:0] = inner_tcp.dstPort[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 330 (ingress): phv330[15:0] = inner_udp.dstPort[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 331 (ingress): phv331[15:0] = udp.dstPort[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 331 (ingress): phv331[15:0] = erspan_t3_header.priority_span_id[15:0] (tagalong capable)
+  16-bit PHV 332 (ingress): phv332[15:0] = fabric_header_cpu.ingressIfindex[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 333 (ingress): phv333[15:0] = vxlan.reserved[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 333 (ingress): phv333[15:0] = genv.protoType[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 333 (ingress): phv333[15:0] = gre.proto[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 334 (ingress): phv334[15:0] = fabric_header_timestamp.arrival_time[31:16] (tagalong capable) (deparsed)
+  16-bit PHV 335 (ingress): phv335[15:0] = fabric_header_timestamp.arrival_time[15:0] (tagalong capable) (deparsed)
+  >> 10 in ingress and 5 in egress
+
+Allocations in Group 19 16 bits (tagalong)
+  16-bit PHV 336 (ingress): phv336[15:0] = snap_header.oui[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 337 (ingress): phv337[15:0] = snap_header.type_[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 338 (ingress): phv338[15:0] = vlan_tag_[1].etherType[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 339 (ingress): phv339[15:8] = llc_header.ssap[7:0] (tagalong capable) (deparsed)
+  16-bit PHV 339 (ingress): phv339[7:0] = llc_header.control_[7:0] (tagalong capable) (deparsed)
+  16-bit PHV 340 (ingress): phv340[15:0] = ipv4.totalLen[15:0] (tagalong capable) (deparsed)
+  16-bit PHV 341 (ingress): phv341[15:0] = ipv4.hdrChecksum[15:0] (tagalong capable) (deparsed)
+  >> 6 in ingress and 0 in egress
+
+
+Final POV layout (ingress):
+  8: --validity_check--ethernet (ingress) in container 15
+  9: --validity_check--llc_header (ingress) in container 15
+ 10: --validity_check--snap_header (ingress) in container 15
+ 11: --validity_check--ipv4 (ingress) in container 15
+ 12: --validity_check--ipv4_option_32b (ingress) in container 15
+ 13: --validity_check--ipv6 (ingress) in container 15
+ 14: --validity_check--icmp (ingress) in container 15
+ 15: --validity_check--igmp (ingress) in container 15
+ 16: --validity_check--tcp (ingress) in container 15
+ 17: --validity_check--udp (ingress) in container 15
+ 18: --validity_check--gre (ingress) in container 15
+ 19: --validity_check--nvgre (ingress) in container 15
+ 20: --validity_check--inner_ethernet (ingress) in container 15
+ 21: --validity_check--inner_ipv4 (ingress) in container 15
+ 22: --validity_check--inner_ipv6 (ingress) in container 15
+ 23: --validity_check--erspan_t3_header (ingress) in container 15
+ 24: --validity_check--vxlan (ingress) in container 15
+ 25: --validity_check--genv (ingress) in container 15
+ 26: --validity_check--inner_icmp (ingress) in container 15
+ 27: --validity_check--inner_tcp (ingress) in container 15
+ 28: --validity_check--inner_udp (ingress) in container 15
+ 29: --validity_check--fabric_header (ingress) in container 15
+ 30: --validity_check--fabric_header_cpu (ingress) in container 15
+ 31: --validity_check--fabric_payload_header (ingress) in container 15
+ 32: --validity_check--fabric_header_timestamp (ingress) in container 15
+ 33: --validity_check--metadata_bridge (ingress) in container 15
+ 34: --validity_check--vlan_tag_[0] (ingress) in container 15
+ 35: --validity_check--vlan_tag_[1] (ingress) in container 15
+ 36: --validity_check--mpls[0] (ingress) in container 15
+ 37: --validity_check--mpls[1] (ingress) in container 15
+ 38: --validity_check--mpls[2] (ingress) in container 15
+
+Final POV layout (egress):
+  0: --validity_check--mpls[2] (egress) in container 60
+  1: --validity_check--mpls[1] (egress) in container 60
+  2: --validity_check--mpls[0] (egress) in container 60
+  3: --validity_check--one2--mpls (egress) in container 60
+  4: --validity_check--one1--mpls (egress) in container 60
+  5: --validity_check--one0--mpls (egress) in container 60
+  6: --validity_check--vlan_tag_[0] (egress) in container 60
+  7: --validity_check--ethernet (egress) in container 60
+  8: --validity_check--llc_header (egress) in container 60
+  9: --validity_check--snap_header (egress) in container 60
+ 10: --validity_check--ipv4 (egress) in container 60
+ 11: --validity_check--ipv4_option_32b (egress) in container 60
+ 12: --validity_check--ipv6 (egress) in container 60
+ 13: --validity_check--igmp (egress) in container 60
+ 14: --validity_check--gre (egress) in container 60
+ 15: --validity_check--nvgre (egress) in container 60
+ 16: --validity_check--erspan_t3_header (egress) in container 60
+ 32: --validity_check--fabric_header (egress) in container 61
+ 33: --validity_check--fabric_header_timestamp (egress) in container 61
+ 34: --validity_check--vlan_tag_[1] (egress) in container 61
+ 35: --validity_check--fabric_header_cpu (egress) in container 61
+ 36: --validity_check--fabric_payload_header (egress) in container 61
+ 37: --validity_check--vxlan (egress) in container 61
+ 38: --validity_check--genv (egress) in container 61
+ 39: --validity_check--inner_ipv4 (egress) in container 61
+ 40: --validity_check--inner_ipv6 (egress) in container 61
+ 41: --validity_check--inner_ethernet (egress) in container 61
+ 64: --validity_check--icmp (egress) in container 211
+ 65: --validity_check--tcp (egress) in container 211
+ 66: --validity_check--udp (egress) in container 211
+ 67: --validity_check--inner_icmp (egress) in container 211
+ 68: --validity_check--inner_tcp (egress) in container 211
+ 69: --validity_check--inner_udp (egress) in container 211
+
+--------------------------------------------
+   Bridged metadata layout (29 bytes)
+--------------------------------------------
+Final ingress layout:
+  -pad-0-[1:0]
+  ingress_metadata.bd[13:0]
+  -pad-1-[1:0]
+  ingress_metadata.ifindex[13:0]
+  fabric_metadata.reason_code[15:0]
+  tunnel_metadata.tunnel_terminate[0:0]
+  l3_metadata.routed[0:0]
+  l3_metadata.vrf[13:0]
+  -pad-2-[2:0]
+  l2_metadata.lkp_pkt_type[2:0]
+  ig_intr_md_for_tm.packet_color[1:0]
+  egress_metadata.bypass[0:0]
+  egress_metadata.capture_tstamp_on_tx[0:0]
+  ingress_metadata.egress_ifindex[13:0]
+  -pad-3-[2:0]
+  tunnel_metadata.ingress_tunnel_type[4:0]
+  -pad-4-[6:0]
+  ingress_metadata.ingress_port[8:0]
+  hash_metadata.entropy_hash[15:0]
+  i2e_metadata.ingress_tstamp[31:0]
+  tunnel_metadata.tunnel_dst_index[15:0]
+  l3_metadata.nexthop_index[15:0]
+  i2e_metadata.ingress_tstamp_hi[15:0]
+  i2e_metadata.mirror_session_id[15:0]
+
+Final egress layout:
+  -pad-0-[1:0]
+  ingress_metadata.bd[13:0]
+  -pad-1-[1:0]
+  ingress_metadata.ifindex[13:0]
+  fabric_metadata.reason_code[15:0]
+  tunnel_metadata.tunnel_terminate[0:0]
+  l3_metadata.routed[0:0]
+  l3_metadata.vrf[13:0]
+  -pad-2-[2:0]
+  l2_metadata.lkp_pkt_type[2:0]
+  ig_intr_md_for_tm.packet_color[1:0]
+  egress_metadata.bypass[0:0]
+  egress_metadata.capture_tstamp_on_tx[0:0]
+  ingress_metadata.egress_ifindex[13:0]
+  -pad-3-[2:0]
+  tunnel_metadata.ingress_tunnel_type[4:0]
+  -pad-5-[6:0]
+  ingress_metadata.ingress_port[8:0]
+  hash_metadata.entropy_hash[15:0]
+  i2e_metadata.ingress_tstamp[31:0]
+  tunnel_metadata.tunnel_dst_index[15:0]
+  l3_metadata.nexthop_index[15:0]
+  i2e_metadata.ingress_tstamp_hi[15:0]
+  i2e_metadata.mirror_session_id[15:0]
+
+--------------------------------------------
+   Phase 0 metadata layout (2 bytes)
+--------------------------------------------
+  -pad-6-[3:0]
+  ingress_metadata.port_type[1:0]
+  ingress_metadata.port_lag_index[9:0]
+
+--------------------------------------------
+   Mirror field list sizes
+--------------------------------------------
+Ingress to Egress Mirrors:
+  i2e_mirror_info : 9 bytes + 4 bytes for CRC
+Egress to Egress Mirrors:
+  cpu_info : 9 bytes + 4 bytes for CRC
+  e2e_mirror_info : 7 bytes + 4 bytes for CRC
+

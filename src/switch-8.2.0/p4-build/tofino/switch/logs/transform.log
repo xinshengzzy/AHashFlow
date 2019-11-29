@@ -1,0 +1,109 @@
++---------------------------------------------------------------------+
+|  Log file: transform.log                                            |
+|  Compiler version: 5.8.0 (7069cde)                                  |
+|  Created on: Sun Nov 17 06:21:48 2019                               |
+|  Run ID: 5264f50f8fd548e5                                           |
++---------------------------------------------------------------------+
+
+-------------------------------
+Transform pass 0
+-------------------------------
+Eliminating primitive p4_action.modify_field (global_config_metadata.switch_id, sig(1)) from action set_config_parameters in table switch_config_params, because this write of field global_config_metadata.switch_id is never used.
+Eliminating primitive p4_action.modify_field (l2_metadata.lkp_pcp, vlan_tag_[0].pcp) from action set_valid_outer_unicast_packet_single_tagged in table validate_outer_ethernet, because this write of field l2_metadata.lkp_pcp is never used.
+Eliminating primitive p4_action.modify_field (l2_metadata.lkp_pcp, vlan_tag_[0].pcp) from action set_valid_outer_unicast_packet_qinq_tagged in table validate_outer_ethernet, because this write of field l2_metadata.lkp_pcp is never used.
+Eliminating primitive p4_action.modify_field (l2_metadata.lkp_pcp, vlan_tag_[0].pcp) from action set_valid_outer_multicast_packet_single_tagged in table validate_outer_ethernet, because this write of field l2_metadata.lkp_pcp is never used.
+Eliminating primitive p4_action.modify_field (l2_metadata.lkp_pcp, vlan_tag_[0].pcp) from action set_valid_outer_multicast_packet_qinq_tagged in table validate_outer_ethernet, because this write of field l2_metadata.lkp_pcp is never used.
+Eliminating primitive p4_action.modify_field (l2_metadata.lkp_pcp, vlan_tag_[0].pcp) from action set_valid_outer_broadcast_packet_single_tagged in table validate_outer_ethernet, because this write of field l2_metadata.lkp_pcp is never used.
+Eliminating primitive p4_action.modify_field (l2_metadata.lkp_pcp, vlan_tag_[0].pcp) from action set_valid_outer_broadcast_packet_qinq_tagged in table validate_outer_ethernet, because this write of field l2_metadata.lkp_pcp is never used.
+Eliminating primitive p4_action.modify_field (l3_metadata.lkp_dscp, ipv4.diffserv) from action set_valid_outer_ipv4_packet in table validate_outer_ipv4_packet, because this write of field l3_metadata.lkp_dscp is never used.
+Eliminating primitive p4_action.modify_field (l3_metadata.lkp_dscp, ipv4.diffserv) from action set_valid_outer_ipv4_llmc_packet in table validate_outer_ipv4_packet, because this write of field l3_metadata.lkp_dscp is never used.
+Eliminating primitive p4_action.modify_field (l3_metadata.lkp_dscp, ipv4.diffserv) from action set_valid_outer_ipv4_mc_packet in table validate_outer_ipv4_packet, because this write of field l3_metadata.lkp_dscp is never used.
+Eliminating primitive p4_action.modify_field (l3_metadata.lkp_dscp, ipv6.trafficClass) from action set_valid_outer_ipv6_packet in table validate_outer_ipv6_packet, because this write of field l3_metadata.lkp_dscp is never used.
+Eliminating primitive p4_action.modify_field (l3_metadata.lkp_dscp, ipv6.trafficClass) from action set_valid_outer_ipv6_llmc_packet in table validate_outer_ipv6_packet, because this write of field l3_metadata.lkp_dscp is never used.
+Eliminating primitive p4_action.modify_field (l3_metadata.lkp_dscp, ipv6.trafficClass) from action set_valid_outer_ipv6_mc_packet in table validate_outer_ipv6_packet, because this write of field l3_metadata.lkp_dscp is never used.
+Eliminating primitive p4_action.modify_field (tunnel_metadata.mpls_exp, mpls[0].exp) from action set_valid_mpls_label in table validate_mpls_packet, because this write of field tunnel_metadata.mpls_exp is never used.
+Eliminating primitive p4_action.modify_field (acl_metadata.copp_meter_id, sig(1)) from action redirect_to_cpu in table system_acl, because this write of field acl_metadata.copp_meter_id is never used.
+Eliminating primitive p4_action.modify_field (acl_metadata.copp_meter_id, sig(2)) from action redirect_to_cpu_with_reason in table system_acl, because this write of field acl_metadata.copp_meter_id is never used.
+Eliminating primitive p4_action.modify_field (acl_metadata.copp_meter_id, sig(1)) from action copy_to_cpu in table system_acl, because this write of field acl_metadata.copp_meter_id is never used.
+Eliminating primitive p4_action.modify_field (acl_metadata.copp_meter_id, sig(2)) from action copy_to_cpu_with_reason in table system_acl, because this write of field acl_metadata.copp_meter_id is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(3)) from action acl_deny in table mac_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(3)) from action acl_permit in table mac_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(4)) from action acl_redirect_nexthop in table mac_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(4)) from action acl_redirect_ecmp in table mac_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(3)) from action acl_mirror in table mac_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(3)) from action acl_deny in table ip_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(3)) from action acl_permit in table ip_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(4)) from action acl_redirect_nexthop in table ip_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(4)) from action acl_redirect_ecmp in table ip_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(3)) from action acl_mirror in table ip_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(3)) from action acl_deny in table ipv6_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(3)) from action acl_permit in table ipv6_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(4)) from action acl_redirect_nexthop in table ipv6_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(4)) from action acl_redirect_ecmp in table ipv6_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.ingress_nat_mode, sig(3)) from action acl_mirror in table ipv6_acl, because this write of field nat_metadata.ingress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (meter_metadata.packet_color, sig(5)) from action set_ingress_port_properties in table ingress_port_properties, because this write of field meter_metadata.packet_color is never used.
+Eliminating primitive p4_action.modify_field (qos_metadata.ingress_qos_group, sig(2)) from action set_ingress_port_properties in table ingress_port_properties, because this write of field qos_metadata.ingress_qos_group is never used.
+Eliminating primitive p4_action.modify_field (qos_metadata.lkp_tc, sig(4)) from action set_ingress_port_properties in table ingress_port_properties, because this write of field qos_metadata.lkp_tc is never used.
+Eliminating primitive p4_action.modify_field (qos_metadata.trust_dscp, sig(7)) from action set_ingress_port_properties in table ingress_port_properties, because this write of field qos_metadata.trust_dscp is never used.
+Eliminating primitive p4_action.modify_field (qos_metadata.trust_pcp, sig(8)) from action set_ingress_port_properties in table ingress_port_properties, because this write of field qos_metadata.trust_pcp is never used.
+Eliminating primitive p4_action.modify_field (qos_metadata.egress_qos_group, sig(0)) from action egress_port_type_normal in table egress_port_mapping, because this write of field qos_metadata.egress_qos_group is never used.
+Eliminating primitive p4_action.modify_field (acl_metadata.egress_port_lag_label, sig(1)) from action egress_port_type_normal in table egress_port_mapping, because this write of field acl_metadata.egress_port_lag_label is never used.
+Eliminating primitive p4_action.modify_field (nat_metadata.egress_nat_mode, sig(2)) from action set_egress_bd_properties in table egress_bd_map, because this write of field nat_metadata.egress_nat_mode is never used.
+Eliminating primitive p4_action.modify_field (acl_metadata.egress_bd_label, sig(3)) from action set_egress_bd_properties in table egress_bd_map, because this write of field acl_metadata.egress_bd_label is never used.
+Eliminating primitive p4_action.modify_field (tunnel_metadata.tunnel_src_index, sig(1)) from action set_egress_outer_bd_properties in table egress_outer_bd_map, because this write of field tunnel_metadata.tunnel_src_index is never used.
+Eliminating primitive p4_action.modify_field (l3_metadata.egress_l4_sport, hash_metadata.entropy_hash) from action ipv4_vxlan_rewrite in table tunnel_encap_process_outer, because this write of field l3_metadata.egress_l4_sport is never used.
+Eliminating primitive p4_action.modify_field (l3_metadata.egress_l4_sport, hash_metadata.entropy_hash) from action ipv4_genv_rewrite in table tunnel_encap_process_outer, because this write of field l3_metadata.egress_l4_sport is never used.
+Eliminating primitive p4_action.modify_field (l3_metadata.egress_l4_sport, hash_metadata.entropy_hash) from action ipv6_vxlan_rewrite in table tunnel_encap_process_outer, because this write of field l3_metadata.egress_l4_sport is never used.
+Eliminating primitive p4_action.modify_field (l3_metadata.egress_l4_sport, hash_metadata.entropy_hash) from action ipv6_genv_rewrite in table tunnel_encap_process_outer, because this write of field l3_metadata.egress_l4_sport is never used.
+Eliminating primitive p4_action.modify_field (l3_metadata.egress_l4_dport, 4789) from action ipv4_vxlan_rewrite in table tunnel_encap_process_outer, because this write of field l3_metadata.egress_l4_dport is never used.
+Eliminating primitive p4_action.modify_field (l3_metadata.egress_l4_dport, 6081) from action ipv4_genv_rewrite in table tunnel_encap_process_outer, because this write of field l3_metadata.egress_l4_dport is never used.
+Eliminating primitive p4_action.modify_field (l3_metadata.egress_l4_dport, 4789) from action ipv6_vxlan_rewrite in table tunnel_encap_process_outer, because this write of field l3_metadata.egress_l4_dport is never used.
+Eliminating primitive p4_action.modify_field (l3_metadata.egress_l4_dport, 6081) from action ipv6_genv_rewrite in table tunnel_encap_process_outer, because this write of field l3_metadata.egress_l4_dport is never used.
+Replacing __egress_pkt_length_update__ next table for p4_action.__egress_bridged_adjust__ to be p4_conditional_node._condition_49.
+Replacing __egress_pkt_length_update__ base_default_next to be p4_conditional_node._condition_49.
+Removing reference to table '_condition_48'.
+-------------------------------
+Transform pass 1
+-------------------------------
+-------------------------------
+Metadata initialization transformations
+-------------------------------
+Added primitive modify_field(__md_ingress.__init_0, 0, 0xffff) to action p4_action.set_ingress_interface_properties in table port_vlan_to_ifindex_mapping.
+Added primitive modify_field(__md_ingress.__init_1, 0, 0xffff) to action p4_action.__meta_init_miss_action_port_vlan_to_ifindex_mapping__ in table port_vlan_to_ifindex_mapping.
+Added primitive modify_field(__md_ingress.__init_2, 0, 0xffff) to action p4_action.set_ingress_interface_properties in table port_vlan_to_ifindex_mapping.
+Added primitive modify_field(__md_ingress.__init_3, 0, 0xffff) to action p4_action.__meta_init_miss_action_port_vlan_to_ifindex_mapping__ in table port_vlan_to_ifindex_mapping.
+Added primitive modify_field(__md_ingress.__init_4, 0, 0xffff) to action p4_action.set_ingress_interface_properties in table port_vlan_to_ifindex_mapping.
+Added primitive modify_field(__md_ingress.__init_5, 0, 0xffff) to action p4_action.__meta_init_miss_action_port_vlan_to_ifindex_mapping__ in table port_vlan_to_ifindex_mapping.
+Added primitive modify_field(__md_ingress.__init_6, 0, 0xffff) to action p4_action.nop in table port_vlan_to_ifindex_mapping.
+Added primitive modify_field(__md_ingress.__init_7, 0, 0xffff) to action p4_action.nop in table port_vlan_to_ifindex_mapping.
+Added primitive modify_field(__md_ingress.__init_8, 0, 0xffff) to action p4_action.nop in table port_vlan_to_ifindex_mapping.
+Added primitive modify_field(__md_ingress.__init_9, 0, 0xffff) to action p4_action.nop in table storm_control_stats.
+Added primitive modify_field(__md_ingress.__init_10, 0, 0xffff) to action p4_action.__meta_init_miss_action_storm_control_stats__ in table storm_control_stats.
+Added primitive modify_field(__md_ingress.__init_11, 0, 0x1f) to action p4_action.nop in table storm_control_stats.
+Added primitive modify_field(__md_ingress.__init_12, 0, 0x1f) to action p4_action.__meta_init_miss_action_storm_control_stats__ in table storm_control_stats.
+Added primitive modify_field(__md_ingress.__init_13, 0, 0x7) to action p4_action.nop in table storm_control_stats.
+Added primitive modify_field(__md_ingress.__init_14, 0, 0x7) to action p4_action.__meta_init_miss_action_storm_control_stats__ in table storm_control_stats.
+Added primitive modify_field(__md_ingress.__init_15, 0, 0x1) to action p4_action.nop in table storm_control_stats.
+Added primitive modify_field(__md_ingress.__init_16, 0, 0x1) to action p4_action.__meta_init_miss_action_storm_control_stats__ in table storm_control_stats.
+Added primitive modify_field(__md_ingress.__init_17, 0, 0x1) to action p4_action.nop in table storm_control_stats.
+Added primitive modify_field(__md_ingress.__init_18, 0, 0x1) to action p4_action.__meta_init_miss_action_storm_control_stats__ in table storm_control_stats.
+Added primitive modify_field(__md_ingress.__init_19, 0, 0x1) to action p4_action.nop in table storm_control_stats.
+Added primitive modify_field(__md_ingress.__init_20, 0, 0x1) to action p4_action.__meta_init_miss_action_storm_control_stats__ in table storm_control_stats.
+Added primitive modify_field(__md_ingress.__init_21, 0, 0x1) to action p4_action.nop in table storm_control_stats.
+Added primitive modify_field(__md_ingress.__init_22, 0, 0x1) to action p4_action.__meta_init_miss_action_storm_control_stats__ in table storm_control_stats.
+Added primitive modify_field(__md_egress.__init_0, 0, 0xff) to action p4_action.egress_port_type_cpu in table egress_port_mapping.
+Added primitive modify_field(__md_egress.__init_1, 0, 0xff) to action p4_action.__meta_init_miss_action_egress_port_mapping__ in table egress_port_mapping.
+Added primitive modify_field(__md_egress.__init_2, 0, 0xff) to action p4_action.egress_port_type_normal in table egress_port_mapping.
+Added primitive modify_field(__md_egress.__init_3, 0, 0xff) to action p4_action.nop in table egress_outer_bd_map.
+Added primitive modify_field(__md_egress.__init_4, 0, 0xff) to action p4_action.__meta_init_miss_action_egress_outer_bd_map__ in table egress_outer_bd_map.
+Added primitive modify_field(__md_ingress.__init_23, 0, 0x1) to action p4_action.rmac_hit in table rmac.
+Added primitive modify_field(__md_ingress.__init_24, 0, 0x1) to action p4_action.__meta_init_miss_action_rmac__ in table rmac.
+Added primitive modify_field(__md_ingress.__init_25, 0, 0x3fff) to action p4_action.rmac_hit in table rmac.
+Added primitive modify_field(__md_ingress.__init_26, 0, 0x3fff) to action p4_action.__meta_init_miss_action_rmac__ in table rmac.
+Added primitive modify_field(__md_ingress.__init_27, 0, 0x1) to action p4_action.rmac_miss in table rmac.
+Added primitive modify_field(__md_ingress.__init_28, 0, 0x3fff) to action p4_action.rmac_miss in table rmac.
+Added primitive modify_field(__md_ingress.__init_29, 0, 0xffff) to action p4_action.__meta_init_miss_action_compute_ipv4_hashes__ in table compute_ipv4_hashes.
+Added primitive modify_field(__md_ingress.__init_30, 0, 0xffff) to action p4_action.__meta_init_miss_action_compute_non_ip_hashes__ in table compute_non_ip_hashes.
+Added primitive modify_field(__md_ingress.__init_31, 0, 0xffff) to action p4_action.__meta_init_miss_action_compute_ipv6_hashes__ in table compute_ipv6_hashes.
+Added primitive modify_field(__md_egress.__init_5, 0, 0x1ff) to action p4_action.nop in table egress_bd_map.
+Added primitive modify_field(__md_egress.__init_6, 0, 0x1ff) to action p4_action.__meta_init_miss_action_egress_bd_map__ in table egress_bd_map.
