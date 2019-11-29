@@ -1,0 +1,1548 @@
+2019-11-28 12:53:20.852684 DEBUG BF_PLTFM Platform-mgr started 
+
+2019-11-28 12:53:20.852874 DEBUG BF_PLTFM cdc_ethernet port is usb0
+
+2019-11-28 12:53:21.392993 DEBUG BF_PLTFM EEPROM DATA FROM BMC 
+ {"Information": {"Location on Fabric": "Montara", "Product Sub-Version": "3", "Facebook PCB Part Number": "035-000003-02", "CRC8": "0xed", "System Assembly Part Number": "015-000003-02", "Product Serial Number": "AI23025784", "System Manufacturing Date": "06-11-18", "Local MAC": "3C:2C:99:D5:74:A5", "Assembled At": "Joytech", "ODM PCBA Serial Number": "AI23025126", "Product Asset Tag": "000000001", "Product Name": "Montara", "ODM PCBA Part Number": "NP3ZZ7632023A", "Product Production State": "1", "Product Part Number": "20-000003", "PCB Manufacturer": "ISU", "System Manufacturer": "Joytech", "Extended MAC Address Size": "140", "Facebook PCBA Part Number": "025-000003-02", "Version": "1", "Extended MAC Base": "3C:2C:99:D5:74:9D", "Product Version": "1"}, "Resources": [], "Actions": []}
+2019-11-28 12:53:21.393043 DEBUG BF_PLTFM Assembled at: Joytech 
+
+2019-11-28 12:53:21.393055 DEBUG BF_PLTFM CRC8: 14 
+
+2019-11-28 12:53:21.393062 DEBUG BF_PLTFM Extended MAC Address Size: 0 
+
+2019-11-28 12:53:21.393072 DEBUG BF_PLTFM Extended MAC Base 3c:2c:99:d5:74:9d
+
+2019-11-28 12:53:21.393079 DEBUG BF_PLTFM Unable to parse BFN PCB Part Number, Ignoring.
+
+2019-11-28 12:53:21.393094 DEBUG BF_PLTFM Unable to parse BFN PCBA Part Number, Ignoring.
+
+2019-11-28 12:53:21.393102 DEBUG BF_PLTFM Local MAC 3c:2c:99:d5:74:a5
+
+2019-11-28 12:53:21.393109 DEBUG BF_PLTFM Location on Fabric: Montara
+
+2019-11-28 12:53:21.393116 DEBUG BF_PLTFM ODM PCBA Part Number NP3ZZ7632023A 
+
+2019-11-28 12:53:21.393123 DEBUG BF_PLTFM ODM PCBA Serial Number AI23025126 
+
+2019-11-28 12:53:21.393130 DEBUG BF_PLTFM PCB Manufacturer: ISU
+
+2019-11-28 12:53:21.393137 DEBUG BF_PLTFM Product Asset Tag: 000000001
+
+2019-11-28 12:53:21.393144 DEBUG BF_PLTFM Product Name: Montara 
+
+2019-11-28 12:53:21.393151 DEBUG BF_PLTFM Product Number: 20-000003 
+
+2019-11-28 12:53:21.393158 DEBUG BF_PLTFM Product Production State: 0 
+
+2019-11-28 12:53:21.393165 DEBUG BF_PLTFM Product Serial Number: AI23025784 
+
+2019-11-28 12:53:21.393172 DEBUG BF_PLTFM Product Sub-Version: 0 
+
+2019-11-28 12:53:21.393179 DEBUG BF_PLTFM Product Version: 0 
+
+2019-11-28 12:53:21.393189 DEBUG BF_PLTFM EEPROM SUCCESS: Board type : 003234
+
+2019-11-28 12:53:21.393197 DEBUG BF_PLTFM System Manufacturer: Joytech 
+
+2019-11-28 12:53:21.393203 DEBUG BF_PLTFM System Manufacturing Date: 06-11-18 
+
+2019-11-28 12:53:21.393210 DEBUG BF_PLTFM Version: 0 
+
+2019-11-28 12:53:21.394568 DEBUG BF_PLTFM USB Initialized at bf_pltfm_cp2112_open:907
+
+2019-11-28 12:53:21.394596 DEBUG BF_PLTFM No Devices found are 6
+
+2019-11-28 12:53:21.394606 DEBUG BF_PLTFM USB devices found at bf_pltfm_cp2112_open:920
+
+2019-11-28 12:53:21.394639 DEBUG BF_PLTFM USB handle found at bf_pltfm_cp2112_open:935
+
+2019-11-28 12:53:21.394647 DEBUG BF_PLTFM The USB dev is 0x300c320
+
+2019-11-28 12:53:21.394654 DEBUG BF_PLTFM The USB dev handle is 0x2582760
+
+2019-11-28 12:53:21.394662 DEBUG BF_PLTFM Kernel driver auto detach set at bf_pltfm_cp2112_open:957
+
+2019-11-28 12:53:21.394688 DEBUG BF_PLTFM Interface Claimed at bf_pltfm_cp2112_open:969
+
+2019-11-28 12:53:21.395017 DEBUG BF_PLTFM Sm bus initialized bf_pltfm_cp2112_open:982
+
+2019-11-28 12:53:21.399696 DEBUG BF_PLTFM Error waiting for interrupt response with error code Operation timed out at usb_intr_transfer_in;342
+
+2019-11-28 12:53:21.399715 DEBUG BF_PLTFM Number of bytes transferred are 0
+
+2019-11-28 12:53:21.399722 DEBUG BF_PLTFM Ongoing transfers flushed at bf_pltfm_cp2112_open:987
+
+2019-11-28 12:53:21.402854 DEBUG BF_PLTFM Outstanding transfers cancelled bf_pltfm_cp2112_open:992
+
+2019-11-28 12:53:21.402873 DEBUG BF_PLTFM Upper and Lower Devices Differentiated bf_pltfm_cp2112_open:1003
+
+2019-11-28 12:53:21.480904 DEBUG BF_PLTFM pltfm_mgr: health monitor initialized
+
+2019-11-28 12:53:21.481180 DEBUG BF_PLTFM num_ports=33
+2019-11-28 12:53:21.481198 DEBUG BF_PLTFM QSFP: Assert RESETL on all QSFPs
+2019-11-28 12:53:21.481207 DEBUG BF_PLTFM QSFP:  1 : RESETL = true
+2019-11-28 12:53:21.489845 DEBUG BF_PLTFM QSFP:  2 : RESETL = true
+2019-11-28 12:53:21.498853 DEBUG BF_PLTFM QSFP:  3 : RESETL = true
+2019-11-28 12:53:21.507854 DEBUG BF_PLTFM QSFP:  4 : RESETL = true
+2019-11-28 12:53:21.516860 DEBUG BF_PLTFM QSFP:  5 : RESETL = true
+2019-11-28 12:53:21.525853 DEBUG BF_PLTFM QSFP:  6 : RESETL = true
+2019-11-28 12:53:21.534855 DEBUG BF_PLTFM QSFP:  7 : RESETL = true
+2019-11-28 12:53:21.543870 DEBUG BF_PLTFM QSFP:  8 : RESETL = true
+2019-11-28 12:53:21.552861 DEBUG BF_PLTFM QSFP:  9 : RESETL = true
+2019-11-28 12:53:21.561854 DEBUG BF_PLTFM QSFP: 10 : RESETL = true
+2019-11-28 12:53:21.570853 DEBUG BF_PLTFM QSFP: 11 : RESETL = true
+2019-11-28 12:53:21.579854 DEBUG BF_PLTFM QSFP: 12 : RESETL = true
+2019-11-28 12:53:21.588867 DEBUG BF_PLTFM QSFP: 13 : RESETL = true
+2019-11-28 12:53:21.597852 DEBUG BF_PLTFM QSFP: 14 : RESETL = true
+2019-11-28 12:53:21.606844 DEBUG BF_PLTFM QSFP: 15 : RESETL = true
+2019-11-28 12:53:21.615865 DEBUG BF_PLTFM QSFP: 16 : RESETL = true
+2019-11-28 12:53:21.624844 DEBUG BF_PLTFM QSFP: 17 : RESETL = true
+2019-11-28 12:53:21.633852 DEBUG BF_PLTFM QSFP: 18 : RESETL = true
+2019-11-28 12:53:21.642852 DEBUG BF_PLTFM QSFP: 19 : RESETL = true
+2019-11-28 12:53:21.651862 DEBUG BF_PLTFM QSFP: 20 : RESETL = true
+2019-11-28 12:53:21.660854 DEBUG BF_PLTFM QSFP: 21 : RESETL = true
+2019-11-28 12:53:21.669844 DEBUG BF_PLTFM QSFP: 22 : RESETL = true
+2019-11-28 12:53:21.678853 DEBUG BF_PLTFM QSFP: 23 : RESETL = true
+2019-11-28 12:53:21.687866 DEBUG BF_PLTFM QSFP: 24 : RESETL = true
+2019-11-28 12:53:21.696853 DEBUG BF_PLTFM QSFP: 25 : RESETL = true
+2019-11-28 12:53:21.705853 DEBUG BF_PLTFM QSFP: 26 : RESETL = true
+2019-11-28 12:53:21.714853 DEBUG BF_PLTFM QSFP: 27 : RESETL = true
+2019-11-28 12:53:21.723852 DEBUG BF_PLTFM QSFP: 28 : RESETL = true
+2019-11-28 12:53:21.732853 DEBUG BF_PLTFM QSFP: 29 : RESETL = true
+2019-11-28 12:53:21.741844 DEBUG BF_PLTFM QSFP: 30 : RESETL = true
+2019-11-28 12:53:21.750853 DEBUG BF_PLTFM QSFP: 31 : RESETL = true
+2019-11-28 12:53:21.759853 DEBUG BF_PLTFM QSFP: 32 : RESETL = true
+2019-11-28 12:53:21.768844 DEBUG BF_PLTFM QSFP: 33 : RESETL = true
+2019-11-28 12:53:21.796918 DEBUG BF_PLTFM QSFP: Assert LPMODE and De-assert RESETL on all QSFPs
+2019-11-28 12:53:21.796939 DEBUG BF_PLTFM QSFP:  1 : LPMODE = true
+2019-11-28 12:53:21.817855 DEBUG BF_PLTFM QSFP:  1 : RESETL = false
+2019-11-28 12:53:21.826853 DEBUG BF_PLTFM QSFP:  2 : LPMODE = true
+2019-11-28 12:53:21.847846 DEBUG BF_PLTFM QSFP:  2 : RESETL = false
+2019-11-28 12:53:21.856860 DEBUG BF_PLTFM QSFP:  3 : LPMODE = true
+2019-11-28 12:53:21.877853 DEBUG BF_PLTFM QSFP:  3 : RESETL = false
+2019-11-28 12:53:21.886853 DEBUG BF_PLTFM QSFP:  4 : LPMODE = true
+2019-11-28 12:53:21.907855 DEBUG BF_PLTFM QSFP:  4 : RESETL = false
+2019-11-28 12:53:21.916861 DEBUG BF_PLTFM QSFP:  5 : LPMODE = true
+2019-11-28 12:53:21.937854 DEBUG BF_PLTFM QSFP:  5 : RESETL = false
+2019-11-28 12:53:21.946854 DEBUG BF_PLTFM QSFP:  6 : LPMODE = true
+2019-11-28 12:53:21.967854 DEBUG BF_PLTFM QSFP:  6 : RESETL = false
+2019-11-28 12:53:21.976860 DEBUG BF_PLTFM QSFP:  7 : LPMODE = true
+2019-11-28 12:53:21.997854 DEBUG BF_PLTFM QSFP:  7 : RESETL = false
+2019-11-28 12:53:22.006845 DEBUG BF_PLTFM QSFP:  8 : LPMODE = true
+2019-11-28 12:53:22.027855 DEBUG BF_PLTFM QSFP:  8 : RESETL = false
+2019-11-28 12:53:22.036862 DEBUG BF_PLTFM QSFP:  9 : LPMODE = true
+2019-11-28 12:53:22.057845 DEBUG BF_PLTFM QSFP:  9 : RESETL = false
+2019-11-28 12:53:22.066853 DEBUG BF_PLTFM QSFP: 10 : LPMODE = true
+2019-11-28 12:53:22.087846 DEBUG BF_PLTFM QSFP: 10 : RESETL = false
+2019-11-28 12:53:22.096853 DEBUG BF_PLTFM QSFP: 11 : LPMODE = true
+2019-11-28 12:53:22.117846 DEBUG BF_PLTFM QSFP: 11 : RESETL = false
+2019-11-28 12:53:22.126845 DEBUG BF_PLTFM QSFP: 12 : LPMODE = true
+2019-11-28 12:53:22.147845 DEBUG BF_PLTFM QSFP: 12 : RESETL = false
+2019-11-28 12:53:22.156867 DEBUG BF_PLTFM QSFP: 13 : LPMODE = true
+2019-11-28 12:53:22.177855 DEBUG BF_PLTFM QSFP: 13 : RESETL = false
+2019-11-28 12:53:22.186855 DEBUG BF_PLTFM QSFP: 14 : LPMODE = true
+2019-11-28 12:53:22.207857 DEBUG BF_PLTFM QSFP: 14 : RESETL = false
+2019-11-28 12:53:22.216861 DEBUG BF_PLTFM QSFP: 15 : LPMODE = true
+2019-11-28 12:53:22.237854 DEBUG BF_PLTFM QSFP: 15 : RESETL = false
+2019-11-28 12:53:22.246853 DEBUG BF_PLTFM QSFP: 16 : LPMODE = true
+2019-11-28 12:53:22.267854 DEBUG BF_PLTFM QSFP: 16 : RESETL = false
+2019-11-28 12:53:22.276860 DEBUG BF_PLTFM QSFP: 17 : LPMODE = true
+2019-11-28 12:53:22.297854 DEBUG BF_PLTFM QSFP: 17 : RESETL = false
+2019-11-28 12:53:22.306846 DEBUG BF_PLTFM QSFP: 18 : LPMODE = true
+2019-11-28 12:53:22.327854 DEBUG BF_PLTFM QSFP: 18 : RESETL = false
+2019-11-28 12:53:22.336846 DEBUG BF_PLTFM QSFP: 19 : LPMODE = true
+2019-11-28 12:53:22.357847 DEBUG BF_PLTFM QSFP: 19 : RESETL = false
+2019-11-28 12:53:22.366854 DEBUG BF_PLTFM QSFP: 20 : LPMODE = true
+2019-11-28 12:53:22.387855 DEBUG BF_PLTFM QSFP: 20 : RESETL = false
+2019-11-28 12:53:22.396845 DEBUG BF_PLTFM QSFP: 21 : LPMODE = true
+2019-11-28 12:53:22.417856 DEBUG BF_PLTFM QSFP: 21 : RESETL = false
+2019-11-28 12:53:22.426854 DEBUG BF_PLTFM QSFP: 22 : LPMODE = true
+2019-11-28 12:53:22.447855 DEBUG BF_PLTFM QSFP: 22 : RESETL = false
+2019-11-28 12:53:22.456861 DEBUG BF_PLTFM QSFP: 23 : LPMODE = true
+2019-11-28 12:53:22.477855 DEBUG BF_PLTFM QSFP: 23 : RESETL = false
+2019-11-28 12:53:22.486846 DEBUG BF_PLTFM QSFP: 24 : LPMODE = true
+2019-11-28 12:53:22.507855 DEBUG BF_PLTFM QSFP: 24 : RESETL = false
+2019-11-28 12:53:22.516874 DEBUG BF_PLTFM QSFP: 25 : LPMODE = true
+2019-11-28 12:53:22.537854 DEBUG BF_PLTFM QSFP: 25 : RESETL = false
+2019-11-28 12:53:22.546854 DEBUG BF_PLTFM QSFP: 26 : LPMODE = true
+2019-11-28 12:53:22.567855 DEBUG BF_PLTFM QSFP: 26 : RESETL = false
+2019-11-28 12:53:22.576861 DEBUG BF_PLTFM QSFP: 27 : LPMODE = true
+2019-11-28 12:53:22.597855 DEBUG BF_PLTFM QSFP: 27 : RESETL = false
+2019-11-28 12:53:22.606845 DEBUG BF_PLTFM QSFP: 28 : LPMODE = true
+2019-11-28 12:53:22.627846 DEBUG BF_PLTFM QSFP: 28 : RESETL = false
+2019-11-28 12:53:22.636854 DEBUG BF_PLTFM QSFP: 29 : LPMODE = true
+2019-11-28 12:53:22.657855 DEBUG BF_PLTFM QSFP: 29 : RESETL = false
+2019-11-28 12:53:22.666878 DEBUG BF_PLTFM QSFP: 30 : LPMODE = true
+2019-11-28 12:53:22.687856 DEBUG BF_PLTFM QSFP: 30 : RESETL = false
+2019-11-28 12:53:22.696854 DEBUG BF_PLTFM QSFP: 31 : LPMODE = true
+2019-11-28 12:53:22.717855 DEBUG BF_PLTFM QSFP: 31 : RESETL = false
+2019-11-28 12:53:22.726863 DEBUG BF_PLTFM QSFP: 32 : LPMODE = true
+2019-11-28 12:53:22.747856 DEBUG BF_PLTFM QSFP: 32 : RESETL = false
+2019-11-28 12:53:22.756851 DEBUG BF_PLTFM QSFP: 33 : LPMODE = true
+2019-11-28 12:53:22.783865 DEBUG BF_PLTFM QSFP: 33 : RESETL = false
+2019-11-28 12:53:22.810860 DEBUG BF_PLTFM QSFP: Wait 2 sec (t_reset) for QSFPs to initialize..
+2019-11-28 12:53:24.901311 INFO  BF_TM TM: Registered for device and port discovery
+2019-11-28 12:53:24.923159 INFO  BF_DVM bf_pktmgr_device_add dev id 0, is_sw_model 0
+2019-11-28 12:53:24.923373 DEBUG BF_LLD  Efuse settings:
+2019-11-28 12:53:24.923384 DEBUG BF_LLD                0 : resubmit_disable
+2019-11-28 12:53:24.923390 DEBUG BF_LLD                0 : mau_tcam_reduction
+2019-11-28 12:53:24.923397 DEBUG BF_LLD                0 : mau_sram_reduction
+2019-11-28 12:53:24.923403 DEBUG BF_LLD                0 : packet_generator_disable
+2019-11-28 12:53:24.923410 DEBUG BF_LLD                9 : pipe_disable
+2019-11-28 12:53:24.923417 DEBUG BF_LLD                0 : mau_stage_disable
+2019-11-28 12:53:24.923424 DEBUG BF_LLD 0000000000000000 : port_disable (hi)
+2019-11-28 12:53:24.923430 DEBUG BF_LLD 5555555555555555 : port_disable (lo)
+2019-11-28 12:53:24.923437 DEBUG BF_LLD 0000000600000000 : tm_memory_disable
+2019-11-28 12:53:24.923443 DEBUG BF_LLD                0 : port_speed_reduction
+2019-11-28 12:53:24.923450 DEBUG BF_LLD                0 : cpu_port_speed_reduction
+2019-11-28 12:53:24.923456 DEBUG BF_LLD                0 : pcie_lane_reduction
+2019-11-28 12:53:24.923462 DEBUG BF_LLD                0 : baresync_disable
+2019-11-28 12:53:24.923468 DEBUG BF_LLD                0 : frequency_reduction
+2019-11-28 12:53:24.923475 DEBUG BF_LLD                0 : frequency_check_disable
+2019-11-28 12:53:24.923494 DEBUG BF_LLD                0 : versioning
+2019-11-28 12:53:24.923501 DEBUG BF_LLD                8 : chip_part_number
+2019-11-28 12:53:24.923508 DEBUG BF_LLD                1 : part_revision_number
+2019-11-28 12:53:24.923514 DEBUG BF_LLD                0 : package_id
+2019-11-28 12:53:24.923520 DEBUG BF_LLD                0 : silent_spin
+2019-11-28 12:53:24.923526 DEBUG BF_LLD 086078b06d227885 : chip_id
+2019-11-28 12:53:24.923533 DEBUG BF_LLD              e42 : pmro_and_skew
+2019-11-28 12:53:24.923539 DEBUG BF_LLD                1 : voltage_scaling
+2019-11-28 12:53:24.923547 DEBUG BF_LLD Wafer-id: PGHK04-W15-X3-Y8
+2019-11-28 12:53:24.923557 DEBUG BF_LLD TCU: 0 : Memory repair already done <bfdddddd>
+2019-11-28 12:53:24.923568 DEBUG BF_LLD EFUSE: Set core clk to 1.271Ghz, dev=0
+2019-11-28 12:53:25.031448 DEBUG BF_LLD Core PLL has not locked even after 100 ms; PLL Lock chip 0 dbg_rst 1fc
+2019-11-28 12:53:25.031503 DEBUG BF_LLD [Unreset] Done after 1 polls
+2019-11-28 12:53:25.033748 INFO  BF_DVM bf_device_add dev id 0, is_sw_model 0
+2019-11-28 12:53:25.033768 INFO  BF_PORT set chip part revision number, dev 0, part rev 1
+2019-11-28 12:53:25.033805 DEBUG BF_PORT 0:-:-: sbus master fw: 101d_2001
+2019-11-28 12:53:25.033813 DEBUG BF_PORT 0:-:-: PCIe serdes fw: 1066_2147
+2019-11-28 12:53:25.033819 DEBUG BF_PORT 0:-:-:      serdes fw: 1087_244d
+2019-11-28 12:53:25.036313 DEBUG BF_PORT SDS: SBMs disabled. No FW upload
+2019-11-28 12:53:25.036428 DEBUG BF_PORT SDS: SBus CLK divider set to 5 (x32 mode)
+2019-11-28 12:53:25.036442 DEBUG BF_PORT 0:0:3 : PCIe access : addr=3h : reg=fdh : cmd=Read
+2019-11-28 12:53:25.036506 DEBUG BF_PORT 0:0:3 : PCIe access : addr=3h : reg=fdh : cmd=write
+2019-11-28 12:53:25.036565 DEBUG BF_PORT 0:0:5 : PCIe access : addr=5h : reg=fdh : cmd=Read
+2019-11-28 12:53:25.036627 DEBUG BF_PORT 0:0:5 : PCIe access : addr=5h : reg=fdh : cmd=write
+2019-11-28 12:53:25.036686 DEBUG BF_PORT 0:0:7 : PCIe access : addr=7h : reg=fdh : cmd=Read
+2019-11-28 12:53:25.036748 DEBUG BF_PORT 0:0:7 : PCIe access : addr=7h : reg=fdh : cmd=write
+2019-11-28 12:53:25.036807 DEBUG BF_PORT 0:0:9 : PCIe access : addr=9h : reg=fdh : cmd=Read
+2019-11-28 12:53:25.036870 DEBUG BF_PORT 0:0:9 : PCIe access : addr=9h : reg=fdh : cmd=write
+2019-11-28 12:53:25.036928 DEBUG BF_PORT SDS: 0:0:255: FW load: broadcast
+2019-11-28 12:53:25.036935 DEBUG BF_PORT SDS:         : FW path: /root/bf-sde-8.2.0/install/share/tofino_sds_fw/avago/firmware/serdes.0x1087_244D.rom
+2019-11-28 12:53:25.036942 DEBUG BF_PORT SDS:         : FW ver : 1087
+2019-11-28 12:53:25.039073 DEBUG BF_PORT 0:0:1 : PCIe access : addr=1h : reg=ffh : cmd=Read
+2019-11-28 12:53:25.039140 DEBUG BF_PORT 0:0:2 : PCIe access : addr=2h : reg=ffh : cmd=Read
+2019-11-28 12:53:25.039203 DEBUG BF_PORT 0:0:3 : PCIe access : addr=3h : reg=ffh : cmd=Read
+2019-11-28 12:53:25.039268 DEBUG BF_PORT 0:0:3 : Errant PCIe access : addr=3h : reg=0h : cmd=Read
+2019-11-28 12:53:25.039278 DEBUG BF_PORT 0:0:3 : Errant PCIe access : addr=3h : reg=1h : cmd=write
+2019-11-28 12:53:25.039287 DEBUG BF_PORT 0:0:3 : PCIe access : addr=3h : reg=fdh : cmd=Read
+2019-11-28 12:53:25.039355 DEBUG BF_PORT 0:0:4 : PCIe access : addr=4h : reg=ffh : cmd=Read
+2019-11-28 12:53:25.039417 DEBUG BF_PORT 0:0:5 : PCIe access : addr=5h : reg=ffh : cmd=Read
+2019-11-28 12:53:25.039480 DEBUG BF_PORT 0:0:5 : Errant PCIe access : addr=5h : reg=0h : cmd=Read
+2019-11-28 12:53:25.039490 DEBUG BF_PORT 0:0:5 : Errant PCIe access : addr=5h : reg=1h : cmd=write
+2019-11-28 12:53:25.039498 DEBUG BF_PORT 0:0:5 : PCIe access : addr=5h : reg=fdh : cmd=Read
+2019-11-28 12:53:25.039561 DEBUG BF_PORT 0:0:6 : PCIe access : addr=6h : reg=ffh : cmd=Read
+2019-11-28 12:53:25.039623 DEBUG BF_PORT 0:0:7 : PCIe access : addr=7h : reg=ffh : cmd=Read
+2019-11-28 12:53:25.039686 DEBUG BF_PORT 0:0:7 : Errant PCIe access : addr=7h : reg=0h : cmd=Read
+2019-11-28 12:53:25.039697 DEBUG BF_PORT 0:0:7 : Errant PCIe access : addr=7h : reg=1h : cmd=write
+2019-11-28 12:53:25.039705 DEBUG BF_PORT 0:0:7 : PCIe access : addr=7h : reg=fdh : cmd=Read
+2019-11-28 12:53:25.039779 DEBUG BF_PORT 0:0:8 : PCIe access : addr=8h : reg=ffh : cmd=Read
+2019-11-28 12:53:25.039842 DEBUG BF_PORT 0:0:9 : PCIe access : addr=9h : reg=ffh : cmd=Read
+2019-11-28 12:53:25.039904 DEBUG BF_PORT 0:0:9 : Errant PCIe access : addr=9h : reg=0h : cmd=Read
+2019-11-28 12:53:25.039913 DEBUG BF_PORT 0:0:9 : Errant PCIe access : addr=9h : reg=1h : cmd=write
+2019-11-28 12:53:25.039921 DEBUG BF_PORT 0:0:9 : PCIe access : addr=9h : reg=fdh : cmd=Read
+2019-11-28 12:53:25.039984 DEBUG BF_PORT 0:0:10 : PCIe access : addr=ah : reg=ffh : cmd=Read
+2019-11-28 12:53:25.614531 DEBUG BF_PORT 0:0:3 : PCIe access : addr=3h : reg=fdh : cmd=Read
+2019-11-28 12:53:25.614603 DEBUG BF_PORT 0:0:5 : PCIe access : addr=5h : reg=fdh : cmd=Read
+2019-11-28 12:53:25.614666 DEBUG BF_PORT 0:0:7 : PCIe access : addr=7h : reg=fdh : cmd=Read
+2019-11-28 12:53:25.614729 DEBUG BF_PORT 0:0:9 : PCIe access : addr=9h : reg=fdh : cmd=Read
+2019-11-28 12:53:26.568214 DEBUG BF_PORT SDS: 0:1:255: FW load: broadcast
+2019-11-28 12:53:26.568240 DEBUG BF_PORT SDS:         : FW path: /root/bf-sde-8.2.0/install/share/tofino_sds_fw/avago/firmware/serdes.0x1087_244D.rom
+2019-11-28 12:53:26.568247 DEBUG BF_PORT SDS:         : FW ver : 1087
+2019-11-28 12:53:31.780666 INFO  BF_TM New device discovered... start TM init
+2019-11-28 12:53:31.780744 INFO  BF_TM PPG Structures initialized
+2019-11-28 12:53:31.780903 INFO  BF_TM TM on device 0 is ready for hw configurations
+2019-11-28 12:53:31.780914 INFO  BF_TM TM: set clock speed to 1271000000 for dev 0
+2019-11-28 12:53:31.780921 INFO  BF_TM TM: set chip part revision number, dev 0, part rev 1
+2019-11-28 12:53:31.780927 INFO  BF_TM TM: Configuring Tofino TM with default setting
+2019-11-28 12:53:31.780934 INFO  BF_TM TM: Cells for 2 pkts - 40
+2019-11-28 12:53:31.780940 INFO  BF_TM TM: Ingress Default PPG GMin limit - 40
+2019-11-28 12:53:31.780947 INFO  BF_TM TM: Ingress PPG base limit in pool0 - 305
+2019-11-28 12:53:31.780953 INFO  BF_TM TM: Ingress PPG GMin pool size - 11680
+2019-11-28 12:53:31.780959 INFO  BF_TM TM: Ingress AP pool0 size - 89260
+2019-11-28 12:53:31.780966 INFO  BF_TM TM: Ingress Skid pool size - 0
+2019-11-28 12:53:31.780972 INFO  BF_TM TM: Ingress Mirror pool size - 1460
+2019-11-28 12:53:31.780978 INFO  BF_TM TM: Egress Q GMin limit - 20
+2019-11-28 12:53:31.780984 INFO  BF_TM TM: Egress Q base limit in AP pool0 - 13
+2019-11-28 12:53:31.780990 INFO  BF_TM TM: Egress Q GMin pool size - 46080
+2019-11-28 12:53:31.780996 INFO  BF_TM TM: Egress AP pool0 size - 30284
+2019-11-28 12:53:31.781003 INFO  BF_TM TM: Egress AP pool3 size reserved for MC PRE FIFO - 12288
+2019-11-28 12:53:31.781009 INFO  BF_TM TM: Egress Mirror pool size - 1460
+2019-11-28 12:53:31.781015 INFO  BF_TM TM: Egress UC CT size  - 4096
+2019-11-28 12:53:31.781021 INFO  BF_TM TM: Egress MC CT size  - 8192
+2019-11-28 12:53:31.781034 INFO  BF_TM CAA block Ready Status = 0x3ffffff
+2019-11-28 12:53:31.781040 INFO  BF_TM CAA block Ready
+2019-11-28 12:53:31.781048 INFO  BF_TM CLC.CLM block Ready Status = 0xfffffff
+2019-11-28 12:53:31.781054 INFO  BF_TM CLC.CLM block Ready
+2019-11-28 12:53:31.781062 INFO  BF_TM QLC block[0] Ready Status = 0xffffffff
+2019-11-28 12:53:31.781069 INFO  BF_TM QLC block[1] Ready Status = 0xf
+2019-11-28 12:53:31.781075 INFO  BF_TM QLC block Ready
+2019-11-28 12:53:31.781083 INFO  BF_TM PSC block Ready Status = 0xffffffff
+2019-11-28 12:53:31.781089 INFO  BF_TM PSC block Ready
+2019-11-28 12:53:31.781101 INFO  BF_TM Wac Mem init Done Status = 0x1
+2019-11-28 12:53:31.781107 INFO  BF_TM Wac Mem init Complete 
+2019-11-28 12:53:31.781114 INFO  BF_TM Qac Mem init Done Status = 0x1
+2019-11-28 12:53:31.781120 INFO  BF_TM Qac Mem init Complete 
+2019-11-28 12:53:31.781125 INFO  BF_TM SCH Mem init Complete 
+2019-11-28 12:53:31.781132 INFO  BF_TM PRC Map Mem init done status = 0x1
+2019-11-28 12:53:31.781138 INFO  BF_TM PRC Map Mem init Complete 
+2019-11-28 12:53:31.781187 INFO  BF_TM TM: bf_tm_tofino_set_default_for_ig_pool: Set default values for Ingress Pools
+2019-11-28 12:53:31.781199 WARN  BF_TM Traffic Manager buffer pool 0 pfc limit is higher or equal to pool size. PFC might not trigger based on pool usage
+2019-11-28 12:53:31.781221 WARN  BF_TM Traffic Manager buffer pool 0 pfc limit is higher or equal to pool size. PFC might not trigger based on pool usage
+2019-11-28 12:53:31.781228 WARN  BF_TM Traffic Manager buffer pool 0 pfc limit is higher or equal to pool size. PFC might not trigger based on pool usage
+2019-11-28 12:53:31.781234 WARN  BF_TM Traffic Manager buffer pool 0 pfc limit is higher or equal to pool size. PFC might not trigger based on pool usage
+2019-11-28 12:53:31.781240 WARN  BF_TM Traffic Manager buffer pool 0 pfc limit is higher or equal to pool size. PFC might not trigger based on pool usage
+2019-11-28 12:53:31.781247 WARN  BF_TM Traffic Manager buffer pool 0 pfc limit is higher or equal to pool size. PFC might not trigger based on pool usage
+2019-11-28 12:53:31.781253 WARN  BF_TM Traffic Manager buffer pool 0 pfc limit is higher or equal to pool size. PFC might not trigger based on pool usage
+2019-11-28 12:53:31.781260 WARN  BF_TM Traffic Manager buffer pool 0 pfc limit is higher or equal to pool size. PFC might not trigger based on pool usage
+2019-11-28 12:53:31.781267 INFO  BF_TM TM: bf_tm_tofino_set_default_for_ppg: Set default values for PPGs
+2019-11-28 12:53:31.781723 INFO  BF_TM TM: bf_tm_tofino_set_egress_tm_default: Set default values for egress TM
+2019-11-28 12:53:31.781734 INFO  BF_TM TM: bf_tm_tofino_set_default_for_eg_pool: Set default values for egress Pools
+2019-11-28 12:53:31.781743 INFO  BF_TM TM: bf_tm_tofino_set_default_for_q: Set default values for egress queues
+2019-11-28 12:53:31.785099 INFO  BF_TM TM: bf_tm_tofino_set_default_for_port: Set default values for egress ports
+2019-11-28 12:53:31.785264 INFO  BF_TM TM on device 0 start interrupt processing
+2019-11-28 12:53:31.785272 INFO  BF_TM TM: device 0, device type set to ASIC
+2019-11-28 12:53:31.785279 INFO  BF_TM TM on device 0 successfully initialized and configured
+2019-11-28 12:53:31.785731 DEBUG BF_PORT SDS : 24/ 0 : 0: 38:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.785763 DEBUG BF_PORT SDS : 23/ 0 : 0: 30:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.785786 DEBUG BF_PORT SDS : 22/ 0 : 0: 28:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.785809 DEBUG BF_PORT SDS : 21/ 0 : 0: 20:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.785830 DEBUG BF_PORT SDS : 20/ 0 : 0: 18:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.785852 DEBUG BF_PORT SDS : 19/ 0 : 0: 10:-: Lane map: Rx: <3, 1, 2, 0> : Tx: <3, 1, 2, 0>
+2019-11-28 12:53:31.785873 DEBUG BF_PORT SDS : 18/ 0 : 0:  8:-: Lane map: Rx: <3, 2, 0, 1> : Tx: <3, 2, 0, 1>
+2019-11-28 12:53:31.785894 DEBUG BF_PORT SDS : 17/ 0 : 0:  0:-: Lane map: Rx: <3, 2, 1, 0> : Tx: <3, 2, 1, 0>
+2019-11-28 12:53:31.785915 DEBUG BF_PORT SDS : 16/ 0 : 0:  4:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.785935 DEBUG BF_PORT SDS : 15/ 0 : 0:  c:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.785954 DEBUG BF_PORT SDS : 14/ 0 : 0: 14:-: Lane map: Rx: <0, 2, 1, 3> : Tx: <0, 2, 1, 3>
+2019-11-28 12:53:31.785974 DEBUG BF_PORT SDS : 13/ 0 : 0: 1c:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.785992 DEBUG BF_PORT SDS : 12/ 0 : 0: 24:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786011 DEBUG BF_PORT SDS : 11/ 0 : 0: 2c:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786029 DEBUG BF_PORT SDS : 10/ 0 : 0: 34:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786048 DEBUG BF_PORT SDS : 9/ 0 : 0: 3c:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786065 DEBUG BF_PORT SDS : 8/ 0 : 0: b8:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786083 DEBUG BF_PORT SDS : 7/ 0 : 0: b0:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786100 DEBUG BF_PORT SDS : 6/ 0 : 0: a8:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786123 DEBUG BF_PORT SDS : 5/ 0 : 0: a0:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786140 DEBUG BF_PORT SDS : 4/ 0 : 0: 98:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786156 DEBUG BF_PORT SDS : 3/ 0 : 0: 90:-: Lane map: Rx: <3, 2, 1, 0> : Tx: <3, 2, 1, 0>
+2019-11-28 12:53:31.786172 DEBUG BF_PORT SDS : 2/ 0 : 0: 88:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786187 DEBUG BF_PORT SDS : 1/ 0 : 0: 80:-: Lane map: Rx: <2, 0, 3, 1> : Tx: <2, 0, 3, 1>
+2019-11-28 12:53:31.786213 DEBUG BF_PORT SDS : 31/ 0 : 0: 84:-: Lane map: Rx: <0, 3, 2, 1> : Tx: <0, 3, 2, 1>
+2019-11-28 12:53:31.786241 DEBUG BF_PORT SDS : 32/ 0 : 0: 8c:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786266 DEBUG BF_PORT SDS : 29/ 0 : 0: 94:-: Lane map: Rx: <3, 2, 1, 0> : Tx: <3, 2, 1, 0>
+2019-11-28 12:53:31.786292 DEBUG BF_PORT SDS : 30/ 0 : 0: 9c:-: Lane map: Rx: <3, 2, 1, 0> : Tx: <3, 2, 1, 0>
+2019-11-28 12:53:31.786317 DEBUG BF_PORT SDS : 28/ 0 : 0: a4:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786341 DEBUG BF_PORT SDS : 27/ 0 : 0: ac:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786366 DEBUG BF_PORT SDS : 26/ 0 : 0: b4:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786390 DEBUG BF_PORT SDS : 25/ 0 : 0: bc:-: Lane map: Rx: <2, 3, 0, 1> : Tx: <2, 3, 0, 1>
+2019-11-28 12:53:31.786416 DEBUG BF_PORT SDS : 33/ 0 : 0: 40:-: Lane map: Rx: <1, 2, 0, 3> : Tx: <1, 2, 0, 3>
+2019-11-28 12:53:31.825675 DEBUG BF_PM WARN: 0 : Failed to set RR lane count : rc=3
+2019-11-28 12:53:32.308875 DEBUG BF_PLTFM QSFP:  5 : PRESENT
+2019-11-28 12:53:32.386912 DEBUG BF_PLTFM QSFP:  5 : QSFP_FSM_ST_IDLE             -> QSFP_FSM_ST_INSERTED
+2019-11-28 12:53:32.401874 DEBUG BF_PLTFM QSFP:  9 : PRESENT
+2019-11-28 12:53:32.479888 DEBUG BF_PLTFM QSFP:  9 : QSFP_FSM_ST_IDLE             -> QSFP_FSM_ST_INSERTED
+2019-11-28 12:53:32.479920 DEBUG BF_PLTFM Bind QSFP Mgmt callback..
+2019-11-28 12:53:32.490471 INFO  BF_MC Allocated RDM addresses 0x1 - 0x1
+2019-11-28 12:53:32.490510 INFO  BF_MC Allocated RDM addresses 0x11ff - 0x11ff
+2019-11-28 12:53:32.490517 INFO  BF_MC Allocated RDM addresses 0x21ff - 0x21ff
+2019-11-28 12:53:32.490524 INFO  BF_MC Allocated RDM addresses 0x31ff - 0x31ff
+2019-11-28 12:53:32.490534 INFO  BF_MC Write L1End node at addr 0x1, rid 0xdead, l2 0
+2019-11-28 12:53:32.490542 INFO  BF_MC Write L1End node at addr 0x11ff, rid 0xdead, l2 0
+2019-11-28 12:53:32.490549 INFO  BF_MC Write L1End node at addr 0x21ff, rid 0xdead, l2 0
+2019-11-28 12:53:32.490556 INFO  BF_MC Write L1End node at addr 0x31ff, rid 0xdead, l2 0
+2019-11-28 12:53:32.490564 INFO  BF_MC Allocated RDM addresses 0x4000 - 0x4103
+2019-11-28 12:53:32.490574 INFO  BF_MC Write LAG node at addr 0x4000 with id 255 and next node 0x4001 0x0000_00000000ff04001c
+2019-11-28 12:53:32.490583 INFO  BF_MC Write LAG node at addr 0x4001 with id 255 and next node 0x4002 0x00ff_04002c00ff04001c
+2019-11-28 12:53:32.490590 INFO  BF_MC Write LAG node at addr 0x4002 with id 255 and next node 0x4003 0x0000_00000000ff04003c
+2019-11-28 12:53:32.490598 INFO  BF_MC Write LAG node at addr 0x4003 with id 255 and next node 0x4004 0x00ff_04004c00ff04003c
+2019-11-28 12:53:32.490605 INFO  BF_MC Write LAG node at addr 0x4004 with id 255 and next node 0x4005 0x0000_00000000ff04005c
+2019-11-28 12:53:32.490613 INFO  BF_MC Write LAG node at addr 0x4005 with id 255 and next node 0x4006 0x00ff_04006c00ff04005c
+2019-11-28 12:53:32.490620 INFO  BF_MC Write LAG node at addr 0x4006 with id 255 and next node 0x4007 0x0000_00000000ff04007c
+2019-11-28 12:53:32.490628 INFO  BF_MC Write LAG node at addr 0x4007 with id 255 and next node 0x4008 0x00ff_04008c00ff04007c
+2019-11-28 12:53:32.490635 INFO  BF_MC Write LAG node at addr 0x4008 with id 255 and next node 0x4009 0x0000_00000000ff04009c
+2019-11-28 12:53:32.490643 INFO  BF_MC Write LAG node at addr 0x4009 with id 255 and next node 0x400a 0x00ff_0400ac00ff04009c
+2019-11-28 12:53:32.490650 INFO  BF_MC Write LAG node at addr 0x400a with id 255 and next node 0x400b 0x0000_00000000ff0400bc
+2019-11-28 12:53:32.490675 INFO  BF_MC Write LAG node at addr 0x400b with id 255 and next node 0x400c 0x00ff_0400cc00ff0400bc
+2019-11-28 12:53:32.490683 INFO  BF_MC Write LAG node at addr 0x400c with id 255 and next node 0x400d 0x0000_00000000ff0400dc
+2019-11-28 12:53:32.490694 INFO  BF_MC Write LAG node at addr 0x400d with id 255 and next node 0x400e 0x00ff_0400ec00ff0400dc
+2019-11-28 12:53:32.490704 INFO  BF_MC Write LAG node at addr 0x400e with id 255 and next node 0x400f 0x0000_00000000ff0400fc
+2019-11-28 12:53:32.490711 INFO  BF_MC Write LAG node at addr 0x400f with id 255 and next node 0x4010 0x00ff_04010c00ff0400fc
+2019-11-28 12:53:32.490719 INFO  BF_MC Write LAG node at addr 0x4010 with id 255 and next node 0x4011 0x0000_00000000ff04011c
+2019-11-28 12:53:32.490726 INFO  BF_MC Write LAG node at addr 0x4011 with id 255 and next node 0x4012 0x00ff_04012c00ff04011c
+2019-11-28 12:53:32.490733 INFO  BF_MC Write LAG node at addr 0x4012 with id 255 and next node 0x4013 0x0000_00000000ff04013c
+2019-11-28 12:53:32.490740 INFO  BF_MC Write LAG node at addr 0x4013 with id 255 and next node 0x4014 0x00ff_04014c00ff04013c
+2019-11-28 12:53:32.490749 INFO  BF_MC Write LAG node at addr 0x4014 with id 255 and next node 0x4015 0x0000_00000000ff04015c
+2019-11-28 12:53:32.490757 INFO  BF_MC Write LAG node at addr 0x4015 with id 255 and next node 0x4016 0x00ff_04016c00ff04015c
+2019-11-28 12:53:32.490764 INFO  BF_MC Write LAG node at addr 0x4016 with id 255 and next node 0x4017 0x0000_00000000ff04017c
+2019-11-28 12:53:32.490771 INFO  BF_MC Write LAG node at addr 0x4017 with id 255 and next node 0x4018 0x00ff_04018c00ff04017c
+2019-11-28 12:53:32.490778 INFO  BF_MC Write LAG node at addr 0x4018 with id 255 and next node 0x4019 0x0000_00000000ff04019c
+2019-11-28 12:53:32.490785 INFO  BF_MC Write LAG node at addr 0x4019 with id 255 and next node 0x401a 0x00ff_0401ac00ff04019c
+2019-11-28 12:53:32.490793 INFO  BF_MC Write LAG node at addr 0x401a with id 255 and next node 0x401b 0x0000_00000000ff0401bc
+2019-11-28 12:53:32.490800 INFO  BF_MC Write LAG node at addr 0x401b with id 255 and next node 0x401c 0x00ff_0401cc00ff0401bc
+2019-11-28 12:53:32.490807 INFO  BF_MC Write LAG node at addr 0x401c with id 255 and next node 0x401d 0x0000_00000000ff0401dc
+2019-11-28 12:53:32.490815 INFO  BF_MC Write LAG node at addr 0x401d with id 255 and next node 0x401e 0x00ff_0401ec00ff0401dc
+2019-11-28 12:53:32.490822 INFO  BF_MC Write LAG node at addr 0x401e with id 255 and next node 0x401f 0x0000_00000000ff0401fc
+2019-11-28 12:53:32.490829 INFO  BF_MC Write LAG node at addr 0x401f with id 255 and next node 0x4020 0x00ff_04020c00ff0401fc
+2019-11-28 12:53:32.490836 INFO  BF_MC Write LAG node at addr 0x4020 with id 255 and next node 0x4021 0x0000_00000000ff04021c
+2019-11-28 12:53:32.490843 INFO  BF_MC Write LAG node at addr 0x4021 with id 255 and next node 0x4022 0x00ff_04022c00ff04021c
+2019-11-28 12:53:32.490851 INFO  BF_MC Write LAG node at addr 0x4022 with id 255 and next node 0x4023 0x0000_00000000ff04023c
+2019-11-28 12:53:32.490858 INFO  BF_MC Write LAG node at addr 0x4023 with id 255 and next node 0x4024 0x00ff_04024c00ff04023c
+2019-11-28 12:53:32.490865 INFO  BF_MC Write LAG node at addr 0x4024 with id 255 and next node 0x4025 0x0000_00000000ff04025c
+2019-11-28 12:53:32.490872 INFO  BF_MC Write LAG node at addr 0x4025 with id 255 and next node 0x4026 0x00ff_04026c00ff04025c
+2019-11-28 12:53:32.490880 INFO  BF_MC Write LAG node at addr 0x4026 with id 255 and next node 0x4027 0x0000_00000000ff04027c
+2019-11-28 12:53:32.490887 INFO  BF_MC Write LAG node at addr 0x4027 with id 255 and next node 0x4028 0x00ff_04028c00ff04027c
+2019-11-28 12:53:32.490894 INFO  BF_MC Write LAG node at addr 0x4028 with id 255 and next node 0x4029 0x0000_00000000ff04029c
+2019-11-28 12:53:32.490901 INFO  BF_MC Write LAG node at addr 0x4029 with id 255 and next node 0x402a 0x00ff_0402ac00ff04029c
+2019-11-28 12:53:32.490909 INFO  BF_MC Write LAG node at addr 0x402a with id 255 and next node 0x402b 0x0000_00000000ff0402bc
+2019-11-28 12:53:32.490916 INFO  BF_MC Write LAG node at addr 0x402b with id 255 and next node 0x402c 0x00ff_0402cc00ff0402bc
+2019-11-28 12:53:32.490928 INFO  BF_MC Write LAG node at addr 0x402c with id 255 and next node 0x402d 0x0000_00000000ff0402dc
+2019-11-28 12:53:32.490936 INFO  BF_MC Write LAG node at addr 0x402d with id 255 and next node 0x402e 0x00ff_0402ec00ff0402dc
+2019-11-28 12:53:32.490943 INFO  BF_MC Write LAG node at addr 0x402e with id 255 and next node 0x402f 0x0000_00000000ff0402fc
+2019-11-28 12:53:32.490951 INFO  BF_MC Write LAG node at addr 0x402f with id 255 and next node 0x4030 0x00ff_04030c00ff0402fc
+2019-11-28 12:53:32.490958 INFO  BF_MC Write LAG node at addr 0x4030 with id 255 and next node 0x4031 0x0000_00000000ff04031c
+2019-11-28 12:53:32.490965 INFO  BF_MC Write LAG node at addr 0x4031 with id 255 and next node 0x4032 0x00ff_04032c00ff04031c
+2019-11-28 12:53:32.490972 INFO  BF_MC Write LAG node at addr 0x4032 with id 255 and next node 0x4033 0x0000_00000000ff04033c
+2019-11-28 12:53:32.490980 INFO  BF_MC Write LAG node at addr 0x4033 with id 255 and next node 0x4034 0x00ff_04034c00ff04033c
+2019-11-28 12:53:32.490987 INFO  BF_MC Write LAG node at addr 0x4034 with id 255 and next node 0x4035 0x0000_00000000ff04035c
+2019-11-28 12:53:32.490995 INFO  BF_MC Write LAG node at addr 0x4035 with id 255 and next node 0x4036 0x00ff_04036c00ff04035c
+2019-11-28 12:53:32.491002 INFO  BF_MC Write LAG node at addr 0x4036 with id 255 and next node 0x4037 0x0000_00000000ff04037c
+2019-11-28 12:53:32.491009 INFO  BF_MC Write LAG node at addr 0x4037 with id 255 and next node 0x4038 0x00ff_04038c00ff04037c
+2019-11-28 12:53:32.491018 INFO  BF_MC Write LAG node at addr 0x4038 with id 255 and next node 0x4039 0x0000_00000000ff04039c
+2019-11-28 12:53:32.491025 INFO  BF_MC Write LAG node at addr 0x4039 with id 255 and next node 0x403a 0x00ff_0403ac00ff04039c
+2019-11-28 12:53:32.491032 INFO  BF_MC Write LAG node at addr 0x403a with id 255 and next node 0x403b 0x0000_00000000ff0403bc
+2019-11-28 12:53:32.491040 INFO  BF_MC Write LAG node at addr 0x403b with id 255 and next node 0x403c 0x00ff_0403cc00ff0403bc
+2019-11-28 12:53:32.491048 INFO  BF_MC Write LAG node at addr 0x403c with id 255 and next node 0x403d 0x0000_00000000ff0403dc
+2019-11-28 12:53:32.491059 INFO  BF_MC Write LAG node at addr 0x403d with id 255 and next node 0x403e 0x00ff_0403ec00ff0403dc
+2019-11-28 12:53:32.491067 INFO  BF_MC Write LAG node at addr 0x403e with id 255 and next node 0x403f 0x0000_00000000ff0403fc
+2019-11-28 12:53:32.491074 INFO  BF_MC Write LAG node at addr 0x403f with id 255 and next node 0x4040 0x00ff_04040c00ff0403fc
+2019-11-28 12:53:32.491081 INFO  BF_MC Write LAG node at addr 0x4040 with id 255 and next node 0x4041 0x0000_00000000ff04041c
+2019-11-28 12:53:32.491089 INFO  BF_MC Write LAG node at addr 0x4041 with id 255 and next node 0x4042 0x00ff_04042c00ff04041c
+2019-11-28 12:53:32.491097 INFO  BF_MC Write LAG node at addr 0x4042 with id 255 and next node 0x4043 0x0000_00000000ff04043c
+2019-11-28 12:53:32.491104 INFO  BF_MC Write LAG node at addr 0x4043 with id 255 and next node 0x4044 0x00ff_04044c00ff04043c
+2019-11-28 12:53:32.491111 INFO  BF_MC Write LAG node at addr 0x4044 with id 255 and next node 0x4045 0x0000_00000000ff04045c
+2019-11-28 12:53:32.491119 INFO  BF_MC Write LAG node at addr 0x4045 with id 255 and next node 0x4046 0x00ff_04046c00ff04045c
+2019-11-28 12:53:32.491126 INFO  BF_MC Write LAG node at addr 0x4046 with id 255 and next node 0x4047 0x0000_00000000ff04047c
+2019-11-28 12:53:32.491133 INFO  BF_MC Write LAG node at addr 0x4047 with id 255 and next node 0x4048 0x00ff_04048c00ff04047c
+2019-11-28 12:53:32.491140 INFO  BF_MC Write LAG node at addr 0x4048 with id 255 and next node 0x4049 0x0000_00000000ff04049c
+2019-11-28 12:53:32.491147 INFO  BF_MC Write LAG node at addr 0x4049 with id 255 and next node 0x404a 0x00ff_0404ac00ff04049c
+2019-11-28 12:53:32.491155 INFO  BF_MC Write LAG node at addr 0x404a with id 255 and next node 0x404b 0x0000_00000000ff0404bc
+2019-11-28 12:53:32.491162 INFO  BF_MC Write LAG node at addr 0x404b with id 255 and next node 0x404c 0x00ff_0404cc00ff0404bc
+2019-11-28 12:53:32.491174 INFO  BF_MC Write LAG node at addr 0x404c with id 255 and next node 0x404d 0x0000_00000000ff0404dc
+2019-11-28 12:53:32.491181 INFO  BF_MC Write LAG node at addr 0x404d with id 255 and next node 0x404e 0x00ff_0404ec00ff0404dc
+2019-11-28 12:53:32.491189 INFO  BF_MC Write LAG node at addr 0x404e with id 255 and next node 0x404f 0x0000_00000000ff0404fc
+2019-11-28 12:53:32.491196 INFO  BF_MC Write LAG node at addr 0x404f with id 255 and next node 0x4050 0x00ff_04050c00ff0404fc
+2019-11-28 12:53:32.491203 INFO  BF_MC Write LAG node at addr 0x4050 with id 255 and next node 0x4051 0x0000_00000000ff04051c
+2019-11-28 12:53:32.491211 INFO  BF_MC Write LAG node at addr 0x4051 with id 255 and next node 0x4052 0x00ff_04052c00ff04051c
+2019-11-28 12:53:32.491218 INFO  BF_MC Write LAG node at addr 0x4052 with id 255 and next node 0x4053 0x0000_00000000ff04053c
+2019-11-28 12:53:32.491226 INFO  BF_MC Write LAG node at addr 0x4053 with id 255 and next node 0x4054 0x00ff_04054c00ff04053c
+2019-11-28 12:53:32.491233 INFO  BF_MC Write LAG node at addr 0x4054 with id 255 and next node 0x4055 0x0000_00000000ff04055c
+2019-11-28 12:53:32.491240 INFO  BF_MC Write LAG node at addr 0x4055 with id 255 and next node 0x4056 0x00ff_04056c00ff04055c
+2019-11-28 12:53:32.491247 INFO  BF_MC Write LAG node at addr 0x4056 with id 255 and next node 0x4057 0x0000_00000000ff04057c
+2019-11-28 12:53:32.491255 INFO  BF_MC Write LAG node at addr 0x4057 with id 255 and next node 0x4058 0x00ff_04058c00ff04057c
+2019-11-28 12:53:32.491262 INFO  BF_MC Write LAG node at addr 0x4058 with id 255 and next node 0x4059 0x0000_00000000ff04059c
+2019-11-28 12:53:32.491269 INFO  BF_MC Write LAG node at addr 0x4059 with id 255 and next node 0x405a 0x00ff_0405ac00ff04059c
+2019-11-28 12:53:32.491276 INFO  BF_MC Write LAG node at addr 0x405a with id 255 and next node 0x405b 0x0000_00000000ff0405bc
+2019-11-28 12:53:32.491284 INFO  BF_MC Write LAG node at addr 0x405b with id 255 and next node 0x405c 0x00ff_0405cc00ff0405bc
+2019-11-28 12:53:32.491291 INFO  BF_MC Write LAG node at addr 0x405c with id 255 and next node 0x405d 0x0000_00000000ff0405dc
+2019-11-28 12:53:32.491299 INFO  BF_MC Write LAG node at addr 0x405d with id 255 and next node 0x405e 0x00ff_0405ec00ff0405dc
+2019-11-28 12:53:32.491306 INFO  BF_MC Write LAG node at addr 0x405e with id 255 and next node 0x405f 0x0000_00000000ff0405fc
+2019-11-28 12:53:32.491314 INFO  BF_MC Write LAG node at addr 0x405f with id 255 and next node 0x4060 0x00ff_04060c00ff0405fc
+2019-11-28 12:53:32.491321 INFO  BF_MC Write LAG node at addr 0x4060 with id 255 and next node 0x4061 0x0000_00000000ff04061c
+2019-11-28 12:53:32.491328 INFO  BF_MC Write LAG node at addr 0x4061 with id 255 and next node 0x4062 0x00ff_04062c00ff04061c
+2019-11-28 12:53:32.491335 INFO  BF_MC Write LAG node at addr 0x4062 with id 255 and next node 0x4063 0x0000_00000000ff04063c
+2019-11-28 12:53:32.491342 INFO  BF_MC Write LAG node at addr 0x4063 with id 255 and next node 0x4064 0x00ff_04064c00ff04063c
+2019-11-28 12:53:32.491349 INFO  BF_MC Write LAG node at addr 0x4064 with id 255 and next node 0x4065 0x0000_00000000ff04065c
+2019-11-28 12:53:32.491357 INFO  BF_MC Write LAG node at addr 0x4065 with id 255 and next node 0x4066 0x00ff_04066c00ff04065c
+2019-11-28 12:53:32.491364 INFO  BF_MC Write LAG node at addr 0x4066 with id 255 and next node 0x4067 0x0000_00000000ff04067c
+2019-11-28 12:53:32.491371 INFO  BF_MC Write LAG node at addr 0x4067 with id 255 and next node 0x4068 0x00ff_04068c00ff04067c
+2019-11-28 12:53:32.491379 INFO  BF_MC Write LAG node at addr 0x4068 with id 255 and next node 0x4069 0x0000_00000000ff04069c
+2019-11-28 12:53:32.491386 INFO  BF_MC Write LAG node at addr 0x4069 with id 255 and next node 0x406a 0x00ff_0406ac00ff04069c
+2019-11-28 12:53:32.491393 INFO  BF_MC Write LAG node at addr 0x406a with id 255 and next node 0x406b 0x0000_00000000ff0406bc
+2019-11-28 12:53:32.491420 INFO  BF_MC Write LAG node at addr 0x406b with id 255 and next node 0x406c 0x00ff_0406cc00ff0406bc
+2019-11-28 12:53:32.491430 INFO  BF_MC Write LAG node at addr 0x406c with id 255 and next node 0x406d 0x0000_00000000ff0406dc
+2019-11-28 12:53:32.491442 INFO  BF_MC Write LAG node at addr 0x406d with id 255 and next node 0x406e 0x00ff_0406ec00ff0406dc
+2019-11-28 12:53:32.491449 INFO  BF_MC Write LAG node at addr 0x406e with id 255 and next node 0x406f 0x0000_00000000ff0406fc
+2019-11-28 12:53:32.491456 INFO  BF_MC Write LAG node at addr 0x406f with id 255 and next node 0x4070 0x00ff_04070c00ff0406fc
+2019-11-28 12:53:32.491464 INFO  BF_MC Write LAG node at addr 0x4070 with id 255 and next node 0x4071 0x0000_00000000ff04071c
+2019-11-28 12:53:32.491471 INFO  BF_MC Write LAG node at addr 0x4071 with id 255 and next node 0x4072 0x00ff_04072c00ff04071c
+2019-11-28 12:53:32.491478 INFO  BF_MC Write LAG node at addr 0x4072 with id 255 and next node 0x4073 0x0000_00000000ff04073c
+2019-11-28 12:53:32.491485 INFO  BF_MC Write LAG node at addr 0x4073 with id 255 and next node 0x4074 0x00ff_04074c00ff04073c
+2019-11-28 12:53:32.491492 INFO  BF_MC Write LAG node at addr 0x4074 with id 255 and next node 0x4075 0x0000_00000000ff04075c
+2019-11-28 12:53:32.491500 INFO  BF_MC Write LAG node at addr 0x4075 with id 255 and next node 0x4076 0x00ff_04076c00ff04075c
+2019-11-28 12:53:32.491507 INFO  BF_MC Write LAG node at addr 0x4076 with id 255 and next node 0x4077 0x0000_00000000ff04077c
+2019-11-28 12:53:32.491514 INFO  BF_MC Write LAG node at addr 0x4077 with id 255 and next node 0x4078 0x00ff_04078c00ff04077c
+2019-11-28 12:53:32.491522 INFO  BF_MC Write LAG node at addr 0x4078 with id 255 and next node 0x4079 0x0000_00000000ff04079c
+2019-11-28 12:53:32.491529 INFO  BF_MC Write LAG node at addr 0x4079 with id 255 and next node 0x407a 0x00ff_0407ac00ff04079c
+2019-11-28 12:53:32.491536 INFO  BF_MC Write LAG node at addr 0x407a with id 255 and next node 0x407b 0x0000_00000000ff0407bc
+2019-11-28 12:53:32.491543 INFO  BF_MC Write LAG node at addr 0x407b with id 255 and next node 0x407c 0x00ff_0407cc00ff0407bc
+2019-11-28 12:53:32.491550 INFO  BF_MC Write LAG node at addr 0x407c with id 255 and next node 0x407d 0x0000_00000000ff0407dc
+2019-11-28 12:53:32.491558 INFO  BF_MC Write LAG node at addr 0x407d with id 255 and next node 0x407e 0x00ff_0407ec00ff0407dc
+2019-11-28 12:53:32.491567 INFO  BF_MC Write LAG node at addr 0x407e with id 255 and next node 0x407f 0x0000_00000000ff0407fc
+2019-11-28 12:53:32.491574 INFO  BF_MC Write LAG node at addr 0x407f with id 255 and next node 0x4080 0x00ff_04080c00ff0407fc
+2019-11-28 12:53:32.491581 INFO  BF_MC Write LAG node at addr 0x4080 with id 255 and next node 0x4081 0x0000_00000000ff04081c
+2019-11-28 12:53:32.491589 INFO  BF_MC Write LAG node at addr 0x4081 with id 255 and next node 0x4082 0x00ff_04082c00ff04081c
+2019-11-28 12:53:32.491596 INFO  BF_MC Write LAG node at addr 0x4082 with id 255 and next node 0x4083 0x0000_00000000ff04083c
+2019-11-28 12:53:32.491603 INFO  BF_MC Write LAG node at addr 0x4083 with id 255 and next node 0x4084 0x00ff_04084c00ff04083c
+2019-11-28 12:53:32.491610 INFO  BF_MC Write LAG node at addr 0x4084 with id 255 and next node 0x4085 0x0000_00000000ff04085c
+2019-11-28 12:53:32.491617 INFO  BF_MC Write LAG node at addr 0x4085 with id 255 and next node 0x4086 0x00ff_04086c00ff04085c
+2019-11-28 12:53:32.491624 INFO  BF_MC Write LAG node at addr 0x4086 with id 255 and next node 0x4087 0x0000_00000000ff04087c
+2019-11-28 12:53:32.491632 INFO  BF_MC Write LAG node at addr 0x4087 with id 255 and next node 0x4088 0x00ff_04088c00ff04087c
+2019-11-28 12:53:32.491639 INFO  BF_MC Write LAG node at addr 0x4088 with id 255 and next node 0x4089 0x0000_00000000ff04089c
+2019-11-28 12:53:32.491646 INFO  BF_MC Write LAG node at addr 0x4089 with id 255 and next node 0x408a 0x00ff_0408ac00ff04089c
+2019-11-28 12:53:32.491654 INFO  BF_MC Write LAG node at addr 0x408a with id 255 and next node 0x408b 0x0000_00000000ff0408bc
+2019-11-28 12:53:32.491668 INFO  BF_MC Write LAG node at addr 0x408b with id 255 and next node 0x408c 0x00ff_0408cc00ff0408bc
+2019-11-28 12:53:32.491677 INFO  BF_MC Write LAG node at addr 0x408c with id 255 and next node 0x408d 0x0000_00000000ff0408dc
+2019-11-28 12:53:32.491690 INFO  BF_MC Write LAG node at addr 0x408d with id 255 and next node 0x408e 0x00ff_0408ec00ff0408dc
+2019-11-28 12:53:32.491698 INFO  BF_MC Write LAG node at addr 0x408e with id 255 and next node 0x408f 0x0000_00000000ff0408fc
+2019-11-28 12:53:32.491705 INFO  BF_MC Write LAG node at addr 0x408f with id 255 and next node 0x4090 0x00ff_04090c00ff0408fc
+2019-11-28 12:53:32.491713 INFO  BF_MC Write LAG node at addr 0x4090 with id 255 and next node 0x4091 0x0000_00000000ff04091c
+2019-11-28 12:53:32.491720 INFO  BF_MC Write LAG node at addr 0x4091 with id 255 and next node 0x4092 0x00ff_04092c00ff04091c
+2019-11-28 12:53:32.491727 INFO  BF_MC Write LAG node at addr 0x4092 with id 255 and next node 0x4093 0x0000_00000000ff04093c
+2019-11-28 12:53:32.491734 INFO  BF_MC Write LAG node at addr 0x4093 with id 255 and next node 0x4094 0x00ff_04094c00ff04093c
+2019-11-28 12:53:32.491742 INFO  BF_MC Write LAG node at addr 0x4094 with id 255 and next node 0x4095 0x0000_00000000ff04095c
+2019-11-28 12:53:32.491749 INFO  BF_MC Write LAG node at addr 0x4095 with id 255 and next node 0x4096 0x00ff_04096c00ff04095c
+2019-11-28 12:53:32.491756 INFO  BF_MC Write LAG node at addr 0x4096 with id 255 and next node 0x4097 0x0000_00000000ff04097c
+2019-11-28 12:53:32.491764 INFO  BF_MC Write LAG node at addr 0x4097 with id 255 and next node 0x4098 0x00ff_04098c00ff04097c
+2019-11-28 12:53:32.491771 INFO  BF_MC Write LAG node at addr 0x4098 with id 255 and next node 0x4099 0x0000_00000000ff04099c
+2019-11-28 12:53:32.491782 INFO  BF_MC Write LAG node at addr 0x4099 with id 255 and next node 0x409a 0x00ff_0409ac00ff04099c
+2019-11-28 12:53:32.491790 INFO  BF_MC Write LAG node at addr 0x409a with id 255 and next node 0x409b 0x0000_00000000ff0409bc
+2019-11-28 12:53:32.491798 INFO  BF_MC Write LAG node at addr 0x409b with id 255 and next node 0x409c 0x00ff_0409cc00ff0409bc
+2019-11-28 12:53:32.491805 INFO  BF_MC Write LAG node at addr 0x409c with id 255 and next node 0x409d 0x0000_00000000ff0409dc
+2019-11-28 12:53:32.491812 INFO  BF_MC Write LAG node at addr 0x409d with id 255 and next node 0x409e 0x00ff_0409ec00ff0409dc
+2019-11-28 12:53:32.491819 INFO  BF_MC Write LAG node at addr 0x409e with id 255 and next node 0x409f 0x0000_00000000ff0409fc
+2019-11-28 12:53:32.491827 INFO  BF_MC Write LAG node at addr 0x409f with id 255 and next node 0x40a0 0x00ff_040a0c00ff0409fc
+2019-11-28 12:53:32.491834 INFO  BF_MC Write LAG node at addr 0x40a0 with id 255 and next node 0x40a1 0x0000_00000000ff040a1c
+2019-11-28 12:53:32.491842 INFO  BF_MC Write LAG node at addr 0x40a1 with id 255 and next node 0x40a2 0x00ff_040a2c00ff040a1c
+2019-11-28 12:53:32.491849 INFO  BF_MC Write LAG node at addr 0x40a2 with id 255 and next node 0x40a3 0x0000_00000000ff040a3c
+2019-11-28 12:53:32.491856 INFO  BF_MC Write LAG node at addr 0x40a3 with id 255 and next node 0x40a4 0x00ff_040a4c00ff040a3c
+2019-11-28 12:53:32.491864 INFO  BF_MC Write LAG node at addr 0x40a4 with id 255 and next node 0x40a5 0x0000_00000000ff040a5c
+2019-11-28 12:53:32.491871 INFO  BF_MC Write LAG node at addr 0x40a5 with id 255 and next node 0x40a6 0x00ff_040a6c00ff040a5c
+2019-11-28 12:53:32.491878 INFO  BF_MC Write LAG node at addr 0x40a6 with id 255 and next node 0x40a7 0x0000_00000000ff040a7c
+2019-11-28 12:53:32.491885 INFO  BF_MC Write LAG node at addr 0x40a7 with id 255 and next node 0x40a8 0x00ff_040a8c00ff040a7c
+2019-11-28 12:53:32.491892 INFO  BF_MC Write LAG node at addr 0x40a8 with id 255 and next node 0x40a9 0x0000_00000000ff040a9c
+2019-11-28 12:53:32.491900 INFO  BF_MC Write LAG node at addr 0x40a9 with id 255 and next node 0x40aa 0x00ff_040aac00ff040a9c
+2019-11-28 12:53:32.491907 INFO  BF_MC Write LAG node at addr 0x40aa with id 255 and next node 0x40ab 0x0000_00000000ff040abc
+2019-11-28 12:53:32.491914 INFO  BF_MC Write LAG node at addr 0x40ab with id 255 and next node 0x40ac 0x00ff_040acc00ff040abc
+2019-11-28 12:53:32.491921 INFO  BF_MC Write LAG node at addr 0x40ac with id 255 and next node 0x40ad 0x0000_00000000ff040adc
+2019-11-28 12:53:32.491929 INFO  BF_MC Write LAG node at addr 0x40ad with id 255 and next node 0x40ae 0x00ff_040aec00ff040adc
+2019-11-28 12:53:32.491941 INFO  BF_MC Write LAG node at addr 0x40ae with id 255 and next node 0x40af 0x0000_00000000ff040afc
+2019-11-28 12:53:32.491948 INFO  BF_MC Write LAG node at addr 0x40af with id 255 and next node 0x40b0 0x00ff_040b0c00ff040afc
+2019-11-28 12:53:32.491955 INFO  BF_MC Write LAG node at addr 0x40b0 with id 255 and next node 0x40b1 0x0000_00000000ff040b1c
+2019-11-28 12:53:32.491963 INFO  BF_MC Write LAG node at addr 0x40b1 with id 255 and next node 0x40b2 0x00ff_040b2c00ff040b1c
+2019-11-28 12:53:32.491970 INFO  BF_MC Write LAG node at addr 0x40b2 with id 255 and next node 0x40b3 0x0000_00000000ff040b3c
+2019-11-28 12:53:32.491977 INFO  BF_MC Write LAG node at addr 0x40b3 with id 255 and next node 0x40b4 0x00ff_040b4c00ff040b3c
+2019-11-28 12:53:32.491984 INFO  BF_MC Write LAG node at addr 0x40b4 with id 255 and next node 0x40b5 0x0000_00000000ff040b5c
+2019-11-28 12:53:32.491991 INFO  BF_MC Write LAG node at addr 0x40b5 with id 255 and next node 0x40b6 0x00ff_040b6c00ff040b5c
+2019-11-28 12:53:32.491999 INFO  BF_MC Write LAG node at addr 0x40b6 with id 255 and next node 0x40b7 0x0000_00000000ff040b7c
+2019-11-28 12:53:32.492006 INFO  BF_MC Write LAG node at addr 0x40b7 with id 255 and next node 0x40b8 0x00ff_040b8c00ff040b7c
+2019-11-28 12:53:32.492013 INFO  BF_MC Write LAG node at addr 0x40b8 with id 255 and next node 0x40b9 0x0000_00000000ff040b9c
+2019-11-28 12:53:32.492020 INFO  BF_MC Write LAG node at addr 0x40b9 with id 255 and next node 0x40ba 0x00ff_040bac00ff040b9c
+2019-11-28 12:53:32.492029 INFO  BF_MC Write LAG node at addr 0x40ba with id 255 and next node 0x40bb 0x0000_00000000ff040bbc
+2019-11-28 12:53:32.492036 INFO  BF_MC Write LAG node at addr 0x40bb with id 255 and next node 0x40bc 0x00ff_040bcc00ff040bbc
+2019-11-28 12:53:32.492044 INFO  BF_MC Write LAG node at addr 0x40bc with id 255 and next node 0x40bd 0x0000_00000000ff040bdc
+2019-11-28 12:53:32.492051 INFO  BF_MC Write LAG node at addr 0x40bd with id 255 and next node 0x40be 0x00ff_040bec00ff040bdc
+2019-11-28 12:53:32.492058 INFO  BF_MC Write LAG node at addr 0x40be with id 255 and next node 0x40bf 0x0000_00000000ff040bfc
+2019-11-28 12:53:32.492066 INFO  BF_MC Write LAG node at addr 0x40bf with id 255 and next node 0x40c0 0x00ff_040c0c00ff040bfc
+2019-11-28 12:53:32.492073 INFO  BF_MC Write LAG node at addr 0x40c0 with id 255 and next node 0x40c1 0x0000_00000000ff040c1c
+2019-11-28 12:53:32.492080 INFO  BF_MC Write LAG node at addr 0x40c1 with id 255 and next node 0x40c2 0x00ff_040c2c00ff040c1c
+2019-11-28 12:53:32.492087 INFO  BF_MC Write LAG node at addr 0x40c2 with id 255 and next node 0x40c3 0x0000_00000000ff040c3c
+2019-11-28 12:53:32.492094 INFO  BF_MC Write LAG node at addr 0x40c3 with id 255 and next node 0x40c4 0x00ff_040c4c00ff040c3c
+2019-11-28 12:53:32.492102 INFO  BF_MC Write LAG node at addr 0x40c4 with id 255 and next node 0x40c5 0x0000_00000000ff040c5c
+2019-11-28 12:53:32.492109 INFO  BF_MC Write LAG node at addr 0x40c5 with id 255 and next node 0x40c6 0x00ff_040c6c00ff040c5c
+2019-11-28 12:53:32.492116 INFO  BF_MC Write LAG node at addr 0x40c6 with id 255 and next node 0x40c7 0x0000_00000000ff040c7c
+2019-11-28 12:53:32.492123 INFO  BF_MC Write LAG node at addr 0x40c7 with id 255 and next node 0x40c8 0x00ff_040c8c00ff040c7c
+2019-11-28 12:53:32.492132 INFO  BF_MC Write LAG node at addr 0x40c8 with id 255 and next node 0x40c9 0x0000_00000000ff040c9c
+2019-11-28 12:53:32.492143 INFO  BF_MC Write LAG node at addr 0x40c9 with id 255 and next node 0x40ca 0x00ff_040cac00ff040c9c
+2019-11-28 12:53:32.492150 INFO  BF_MC Write LAG node at addr 0x40ca with id 255 and next node 0x40cb 0x0000_00000000ff040cbc
+2019-11-28 12:53:32.492157 INFO  BF_MC Write LAG node at addr 0x40cb with id 255 and next node 0x40cc 0x00ff_040ccc00ff040cbc
+2019-11-28 12:53:32.492165 INFO  BF_MC Write LAG node at addr 0x40cc with id 255 and next node 0x40cd 0x0000_00000000ff040cdc
+2019-11-28 12:53:32.492172 INFO  BF_MC Write LAG node at addr 0x40cd with id 255 and next node 0x40ce 0x00ff_040cec00ff040cdc
+2019-11-28 12:53:32.492183 INFO  BF_MC Write LAG node at addr 0x40ce with id 255 and next node 0x40cf 0x0000_00000000ff040cfc
+2019-11-28 12:53:32.492191 INFO  BF_MC Write LAG node at addr 0x40cf with id 255 and next node 0x40d0 0x00ff_040d0c00ff040cfc
+2019-11-28 12:53:32.492198 INFO  BF_MC Write LAG node at addr 0x40d0 with id 255 and next node 0x40d1 0x0000_00000000ff040d1c
+2019-11-28 12:53:32.492205 INFO  BF_MC Write LAG node at addr 0x40d1 with id 255 and next node 0x40d2 0x00ff_040d2c00ff040d1c
+2019-11-28 12:53:32.492213 INFO  BF_MC Write LAG node at addr 0x40d2 with id 255 and next node 0x40d3 0x0000_00000000ff040d3c
+2019-11-28 12:53:32.492220 INFO  BF_MC Write LAG node at addr 0x40d3 with id 255 and next node 0x40d4 0x00ff_040d4c00ff040d3c
+2019-11-28 12:53:32.492227 INFO  BF_MC Write LAG node at addr 0x40d4 with id 255 and next node 0x40d5 0x0000_00000000ff040d5c
+2019-11-28 12:53:32.492234 INFO  BF_MC Write LAG node at addr 0x40d5 with id 255 and next node 0x40d6 0x00ff_040d6c00ff040d5c
+2019-11-28 12:53:32.492242 INFO  BF_MC Write LAG node at addr 0x40d6 with id 255 and next node 0x40d7 0x0000_00000000ff040d7c
+2019-11-28 12:53:32.492249 INFO  BF_MC Write LAG node at addr 0x40d7 with id 255 and next node 0x40d8 0x00ff_040d8c00ff040d7c
+2019-11-28 12:53:32.492256 INFO  BF_MC Write LAG node at addr 0x40d8 with id 255 and next node 0x40d9 0x0000_00000000ff040d9c
+2019-11-28 12:53:32.492263 INFO  BF_MC Write LAG node at addr 0x40d9 with id 255 and next node 0x40da 0x00ff_040dac00ff040d9c
+2019-11-28 12:53:32.492271 INFO  BF_MC Write LAG node at addr 0x40da with id 255 and next node 0x40db 0x0000_00000000ff040dbc
+2019-11-28 12:53:32.492278 INFO  BF_MC Write LAG node at addr 0x40db with id 255 and next node 0x40dc 0x00ff_040dcc00ff040dbc
+2019-11-28 12:53:32.492285 INFO  BF_MC Write LAG node at addr 0x40dc with id 255 and next node 0x40dd 0x0000_00000000ff040ddc
+2019-11-28 12:53:32.492292 INFO  BF_MC Write LAG node at addr 0x40dd with id 255 and next node 0x40de 0x00ff_040dec00ff040ddc
+2019-11-28 12:53:32.492300 INFO  BF_MC Write LAG node at addr 0x40de with id 255 and next node 0x40df 0x0000_00000000ff040dfc
+2019-11-28 12:53:32.492307 INFO  BF_MC Write LAG node at addr 0x40df with id 255 and next node 0x40e0 0x00ff_040e0c00ff040dfc
+2019-11-28 12:53:32.492314 INFO  BF_MC Write LAG node at addr 0x40e0 with id 255 and next node 0x40e1 0x0000_00000000ff040e1c
+2019-11-28 12:53:32.492321 INFO  BF_MC Write LAG node at addr 0x40e1 with id 255 and next node 0x40e2 0x00ff_040e2c00ff040e1c
+2019-11-28 12:53:32.492328 INFO  BF_MC Write LAG node at addr 0x40e2 with id 255 and next node 0x40e3 0x0000_00000000ff040e3c
+2019-11-28 12:53:32.492335 INFO  BF_MC Write LAG node at addr 0x40e3 with id 255 and next node 0x40e4 0x00ff_040e4c00ff040e3c
+2019-11-28 12:53:32.492343 INFO  BF_MC Write LAG node at addr 0x40e4 with id 255 and next node 0x40e5 0x0000_00000000ff040e5c
+2019-11-28 12:53:32.492350 INFO  BF_MC Write LAG node at addr 0x40e5 with id 255 and next node 0x40e6 0x00ff_040e6c00ff040e5c
+2019-11-28 12:53:32.492357 INFO  BF_MC Write LAG node at addr 0x40e6 with id 255 and next node 0x40e7 0x0000_00000000ff040e7c
+2019-11-28 12:53:32.492365 INFO  BF_MC Write LAG node at addr 0x40e7 with id 255 and next node 0x40e8 0x00ff_040e8c00ff040e7c
+2019-11-28 12:53:32.492372 INFO  BF_MC Write LAG node at addr 0x40e8 with id 255 and next node 0x40e9 0x0000_00000000ff040e9c
+2019-11-28 12:53:32.492379 INFO  BF_MC Write LAG node at addr 0x40e9 with id 255 and next node 0x40ea 0x00ff_040eac00ff040e9c
+2019-11-28 12:53:32.492386 INFO  BF_MC Write LAG node at addr 0x40ea with id 255 and next node 0x40eb 0x0000_00000000ff040ebc
+2019-11-28 12:53:32.492393 INFO  BF_MC Write LAG node at addr 0x40eb with id 255 and next node 0x40ec 0x00ff_040ecc00ff040ebc
+2019-11-28 12:53:32.492400 INFO  BF_MC Write LAG node at addr 0x40ec with id 255 and next node 0x40ed 0x0000_00000000ff040edc
+2019-11-28 12:53:32.492407 INFO  BF_MC Write LAG node at addr 0x40ed with id 255 and next node 0x40ee 0x00ff_040eec00ff040edc
+2019-11-28 12:53:32.492415 INFO  BF_MC Write LAG node at addr 0x40ee with id 255 and next node 0x40ef 0x0000_00000000ff040efc
+2019-11-28 12:53:32.492426 INFO  BF_MC Write LAG node at addr 0x40ef with id 255 and next node 0x40f0 0x00ff_040f0c00ff040efc
+2019-11-28 12:53:32.492433 INFO  BF_MC Write LAG node at addr 0x40f0 with id 255 and next node 0x40f1 0x0000_00000000ff040f1c
+2019-11-28 12:53:32.492440 INFO  BF_MC Write LAG node at addr 0x40f1 with id 255 and next node 0x40f2 0x00ff_040f2c00ff040f1c
+2019-11-28 12:53:32.492448 INFO  BF_MC Write LAG node at addr 0x40f2 with id 255 and next node 0x40f3 0x0000_00000000ff040f3c
+2019-11-28 12:53:32.492455 INFO  BF_MC Write LAG node at addr 0x40f3 with id 255 and next node 0x40f4 0x00ff_040f4c00ff040f3c
+2019-11-28 12:53:32.492462 INFO  BF_MC Write LAG node at addr 0x40f4 with id 255 and next node 0x40f5 0x0000_00000000ff040f5c
+2019-11-28 12:53:32.492469 INFO  BF_MC Write LAG node at addr 0x40f5 with id 255 and next node 0x40f6 0x00ff_040f6c00ff040f5c
+2019-11-28 12:53:32.492478 INFO  BF_MC Write LAG node at addr 0x40f6 with id 255 and next node 0x40f7 0x0000_00000000ff040f7c
+2019-11-28 12:53:32.492485 INFO  BF_MC Write LAG node at addr 0x40f7 with id 255 and next node 0x40f8 0x00ff_040f8c00ff040f7c
+2019-11-28 12:53:32.492496 INFO  BF_MC Write LAG node at addr 0x40f8 with id 255 and next node 0x40f9 0x0000_00000000ff040f9c
+2019-11-28 12:53:32.492504 INFO  BF_MC Write LAG node at addr 0x40f9 with id 255 and next node 0x40fa 0x00ff_040fac00ff040f9c
+2019-11-28 12:53:32.492511 INFO  BF_MC Write LAG node at addr 0x40fa with id 255 and next node 0x40fb 0x0000_00000000ff040fbc
+2019-11-28 12:53:32.492518 INFO  BF_MC Write LAG node at addr 0x40fb with id 255 and next node 0x40fc 0x00ff_040fcc00ff040fbc
+2019-11-28 12:53:32.492526 INFO  BF_MC Write LAG node at addr 0x40fc with id 255 and next node 0x40fd 0x0000_00000000ff040fdc
+2019-11-28 12:53:32.492533 INFO  BF_MC Write LAG node at addr 0x40fd with id 255 and next node 0x40fe 0x00ff_040fec00ff040fdc
+2019-11-28 12:53:32.492540 INFO  BF_MC Write LAG node at addr 0x40fe with id 255 and next node 0x40ff 0x0000_00000000ff040ffc
+2019-11-28 12:53:32.492548 INFO  BF_MC Write LAG node at addr 0x40ff with id 255 and next node 0x4100 0x00ff_04100c00ff040ffc
+2019-11-28 12:53:32.492555 INFO  BF_MC Write LAG node at addr 0x4100 with id 255 and next node 0x4101 0x0000_00000000ff04101c
+2019-11-28 12:53:32.492562 INFO  BF_MC Write LAG node at addr 0x4101 with id 255 and next node 0x4102 0x00ff_04102c00ff04101c
+2019-11-28 12:53:32.492569 INFO  BF_MC Write LAG node at addr 0x4102 with id 255 and next node 0x4103 0x0000_00000000ff04103c
+2019-11-28 12:53:32.492577 INFO  BF_MC Write LAG node at addr 0x4103 with id 255 and next node 0 0x00ff_00000c00ff04103c
+2019-11-28 12:53:32.492585 INFO  BF_MC Allocated RDM addresses 0x20 - 0x3f
+2019-11-28 12:53:32.492592 INFO  BF_MC Write L1End node at addr 0x20, rid 0, l2 0x4101
+2019-11-28 12:53:32.492599 INFO  BF_MC Write L1End node at addr 0x21, rid 0, l2 0x4100
+2019-11-28 12:53:32.492606 INFO  BF_MC Write L1End node at addr 0x22, rid 0, l2 0x40ff
+2019-11-28 12:53:32.492613 INFO  BF_MC Write L1End node at addr 0x23, rid 0, l2 0x40fe
+2019-11-28 12:53:32.492619 INFO  BF_MC Write L1End node at addr 0x24, rid 0, l2 0x40fd
+2019-11-28 12:53:32.492626 INFO  BF_MC Write L1End node at addr 0x25, rid 0, l2 0x40fc
+2019-11-28 12:53:32.492633 INFO  BF_MC Write L1End node at addr 0x26, rid 0, l2 0x40fb
+2019-11-28 12:53:32.492639 INFO  BF_MC Write L1End node at addr 0x27, rid 0, l2 0x40fa
+2019-11-28 12:53:32.492646 INFO  BF_MC Write L1End node at addr 0x28, rid 0, l2 0x40f8
+2019-11-28 12:53:32.492653 INFO  BF_MC Write L1End node at addr 0x29, rid 0, l2 0x40f6
+2019-11-28 12:53:32.492659 INFO  BF_MC Write L1End node at addr 0x2a, rid 0, l2 0x40f4
+2019-11-28 12:53:32.492666 INFO  BF_MC Write L1End node at addr 0x2b, rid 0, l2 0x40f2
+2019-11-28 12:53:32.492672 INFO  BF_MC Write L1End node at addr 0x2c, rid 0, l2 0x40f0
+2019-11-28 12:53:32.492679 INFO  BF_MC Write L1End node at addr 0x2d, rid 0, l2 0x40ee
+2019-11-28 12:53:32.492686 INFO  BF_MC Write L1End node at addr 0x2e, rid 0, l2 0x40ec
+2019-11-28 12:53:32.492697 INFO  BF_MC Write L1End node at addr 0x2f, rid 0, l2 0x40ea
+2019-11-28 12:53:32.492703 INFO  BF_MC Write L1End node at addr 0x30, rid 0, l2 0x40e8
+2019-11-28 12:53:32.492710 INFO  BF_MC Write L1End node at addr 0x31, rid 0, l2 0x40e6
+2019-11-28 12:53:32.492717 INFO  BF_MC Write L1End node at addr 0x32, rid 0, l2 0x40e4
+2019-11-28 12:53:32.492724 INFO  BF_MC Write L1End node at addr 0x33, rid 0, l2 0x40e0
+2019-11-28 12:53:32.492730 INFO  BF_MC Write L1End node at addr 0x34, rid 0, l2 0x40dc
+2019-11-28 12:53:32.492737 INFO  BF_MC Write L1End node at addr 0x35, rid 0, l2 0x40d8
+2019-11-28 12:53:32.492744 INFO  BF_MC Write L1End node at addr 0x36, rid 0, l2 0x40d4
+2019-11-28 12:53:32.492750 INFO  BF_MC Write L1End node at addr 0x37, rid 0, l2 0x40cc
+2019-11-28 12:53:32.492757 INFO  BF_MC Write L1End node at addr 0x38, rid 0, l2 0x40c4
+2019-11-28 12:53:32.492764 INFO  BF_MC Write L1End node at addr 0x39, rid 0, l2 0x40bc
+2019-11-28 12:53:32.492771 INFO  BF_MC Write L1End node at addr 0x3a, rid 0, l2 0x40a0
+2019-11-28 12:53:32.492777 INFO  BF_MC Write L1End node at addr 0x3b, rid 0, l2 0x4087
+2019-11-28 12:53:32.492784 INFO  BF_MC Write L1End node at addr 0x3c, rid 0, l2 0x406e
+2019-11-28 12:53:32.492790 INFO  BF_MC Write L1End node at addr 0x3d, rid 0, l2 0x4055
+2019-11-28 12:53:32.492797 INFO  BF_MC Write L1End node at addr 0x3e, rid 0, l2 0x403c
+2019-11-28 12:53:32.492803 INFO  BF_MC Write L1End node at addr 0x3f, rid 0, l2 0x4000
+2019-11-28 12:53:32.492811 INFO  BF_MC Allocated RDM addresses 0x5000 - 0x5103
+2019-11-28 12:53:32.492818 INFO  BF_MC Write LAG node at addr 0x5000 with id 255 and next node 0x5001 0x0000_00000000ff05001c
+2019-11-28 12:53:32.492826 INFO  BF_MC Write LAG node at addr 0x5001 with id 255 and next node 0x5002 0x00ff_05002c00ff05001c
+2019-11-28 12:53:32.492833 INFO  BF_MC Write LAG node at addr 0x5002 with id 255 and next node 0x5003 0x0000_00000000ff05003c
+2019-11-28 12:53:32.492841 INFO  BF_MC Write LAG node at addr 0x5003 with id 255 and next node 0x5004 0x00ff_05004c00ff05003c
+2019-11-28 12:53:32.492851 INFO  BF_MC Write LAG node at addr 0x5004 with id 255 and next node 0x5005 0x0000_00000000ff05005c
+2019-11-28 12:53:32.492860 INFO  BF_MC Write LAG node at addr 0x5005 with id 255 and next node 0x5006 0x00ff_05006c00ff05005c
+2019-11-28 12:53:32.492867 INFO  BF_MC Write LAG node at addr 0x5006 with id 255 and next node 0x5007 0x0000_00000000ff05007c
+2019-11-28 12:53:32.492875 INFO  BF_MC Write LAG node at addr 0x5007 with id 255 and next node 0x5008 0x00ff_05008c00ff05007c
+2019-11-28 12:53:32.492882 INFO  BF_MC Write LAG node at addr 0x5008 with id 255 and next node 0x5009 0x0000_00000000ff05009c
+2019-11-28 12:53:32.492889 INFO  BF_MC Write LAG node at addr 0x5009 with id 255 and next node 0x500a 0x00ff_0500ac00ff05009c
+2019-11-28 12:53:32.492896 INFO  BF_MC Write LAG node at addr 0x500a with id 255 and next node 0x500b 0x0000_00000000ff0500bc
+2019-11-28 12:53:32.492903 INFO  BF_MC Write LAG node at addr 0x500b with id 255 and next node 0x500c 0x00ff_0500cc00ff0500bc
+2019-11-28 12:53:32.492913 INFO  BF_MC Write LAG node at addr 0x500c with id 255 and next node 0x500d 0x0000_00000000ff0500dc
+2019-11-28 12:53:32.492920 INFO  BF_MC Write LAG node at addr 0x500d with id 255 and next node 0x500e 0x00ff_0500ec00ff0500dc
+2019-11-28 12:53:32.492927 INFO  BF_MC Write LAG node at addr 0x500e with id 255 and next node 0x500f 0x0000_00000000ff0500fc
+2019-11-28 12:53:32.492934 INFO  BF_MC Write LAG node at addr 0x500f with id 255 and next node 0x5010 0x00ff_05010c00ff0500fc
+2019-11-28 12:53:32.492941 INFO  BF_MC Write LAG node at addr 0x5010 with id 255 and next node 0x5011 0x0000_00000000ff05011c
+2019-11-28 12:53:32.492948 INFO  BF_MC Write LAG node at addr 0x5011 with id 255 and next node 0x5012 0x00ff_05012c00ff05011c
+2019-11-28 12:53:32.492956 INFO  BF_MC Write LAG node at addr 0x5012 with id 255 and next node 0x5013 0x0000_00000000ff05013c
+2019-11-28 12:53:32.492963 INFO  BF_MC Write LAG node at addr 0x5013 with id 255 and next node 0x5014 0x00ff_05014c00ff05013c
+2019-11-28 12:53:32.492974 INFO  BF_MC Write LAG node at addr 0x5014 with id 255 and next node 0x5015 0x0000_00000000ff05015c
+2019-11-28 12:53:32.492982 INFO  BF_MC Write LAG node at addr 0x5015 with id 255 and next node 0x5016 0x00ff_05016c00ff05015c
+2019-11-28 12:53:32.492989 INFO  BF_MC Write LAG node at addr 0x5016 with id 255 and next node 0x5017 0x0000_00000000ff05017c
+2019-11-28 12:53:32.492996 INFO  BF_MC Write LAG node at addr 0x5017 with id 255 and next node 0x5018 0x00ff_05018c00ff05017c
+2019-11-28 12:53:32.493003 INFO  BF_MC Write LAG node at addr 0x5018 with id 255 and next node 0x5019 0x0000_00000000ff05019c
+2019-11-28 12:53:32.493011 INFO  BF_MC Write LAG node at addr 0x5019 with id 255 and next node 0x501a 0x00ff_0501ac00ff05019c
+2019-11-28 12:53:32.493018 INFO  BF_MC Write LAG node at addr 0x501a with id 255 and next node 0x501b 0x0000_00000000ff0501bc
+2019-11-28 12:53:32.493025 INFO  BF_MC Write LAG node at addr 0x501b with id 255 and next node 0x501c 0x00ff_0501cc00ff0501bc
+2019-11-28 12:53:32.493032 INFO  BF_MC Write LAG node at addr 0x501c with id 255 and next node 0x501d 0x0000_00000000ff0501dc
+2019-11-28 12:53:32.493039 INFO  BF_MC Write LAG node at addr 0x501d with id 255 and next node 0x501e 0x00ff_0501ec00ff0501dc
+2019-11-28 12:53:32.493047 INFO  BF_MC Write LAG node at addr 0x501e with id 255 and next node 0x501f 0x0000_00000000ff0501fc
+2019-11-28 12:53:32.493054 INFO  BF_MC Write LAG node at addr 0x501f with id 255 and next node 0x5020 0x00ff_05020c00ff0501fc
+2019-11-28 12:53:32.493061 INFO  BF_MC Write LAG node at addr 0x5020 with id 255 and next node 0x5021 0x0000_00000000ff05021c
+2019-11-28 12:53:32.493068 INFO  BF_MC Write LAG node at addr 0x5021 with id 255 and next node 0x5022 0x00ff_05022c00ff05021c
+2019-11-28 12:53:32.493075 INFO  BF_MC Write LAG node at addr 0x5022 with id 255 and next node 0x5023 0x0000_00000000ff05023c
+2019-11-28 12:53:32.493083 INFO  BF_MC Write LAG node at addr 0x5023 with id 255 and next node 0x5024 0x00ff_05024c00ff05023c
+2019-11-28 12:53:32.493090 INFO  BF_MC Write LAG node at addr 0x5024 with id 255 and next node 0x5025 0x0000_00000000ff05025c
+2019-11-28 12:53:32.493097 INFO  BF_MC Write LAG node at addr 0x5025 with id 255 and next node 0x5026 0x00ff_05026c00ff05025c
+2019-11-28 12:53:32.493105 INFO  BF_MC Write LAG node at addr 0x5026 with id 255 and next node 0x5027 0x0000_00000000ff05027c
+2019-11-28 12:53:32.493112 INFO  BF_MC Write LAG node at addr 0x5027 with id 255 and next node 0x5028 0x00ff_05028c00ff05027c
+2019-11-28 12:53:32.493119 INFO  BF_MC Write LAG node at addr 0x5028 with id 255 and next node 0x5029 0x0000_00000000ff05029c
+2019-11-28 12:53:32.493127 INFO  BF_MC Write LAG node at addr 0x5029 with id 255 and next node 0x502a 0x00ff_0502ac00ff05029c
+2019-11-28 12:53:32.493134 INFO  BF_MC Write LAG node at addr 0x502a with id 255 and next node 0x502b 0x0000_00000000ff0502bc
+2019-11-28 12:53:32.493141 INFO  BF_MC Write LAG node at addr 0x502b with id 255 and next node 0x502c 0x00ff_0502cc00ff0502bc
+2019-11-28 12:53:32.493148 INFO  BF_MC Write LAG node at addr 0x502c with id 255 and next node 0x502d 0x0000_00000000ff0502dc
+2019-11-28 12:53:32.493156 INFO  BF_MC Write LAG node at addr 0x502d with id 255 and next node 0x502e 0x00ff_0502ec00ff0502dc
+2019-11-28 12:53:32.493163 INFO  BF_MC Write LAG node at addr 0x502e with id 255 and next node 0x502f 0x0000_00000000ff0502fc
+2019-11-28 12:53:32.493170 INFO  BF_MC Write LAG node at addr 0x502f with id 255 and next node 0x5030 0x00ff_05030c00ff0502fc
+2019-11-28 12:53:32.493177 INFO  BF_MC Write LAG node at addr 0x5030 with id 255 and next node 0x5031 0x0000_00000000ff05031c
+2019-11-28 12:53:32.493184 INFO  BF_MC Write LAG node at addr 0x5031 with id 255 and next node 0x5032 0x00ff_05032c00ff05031c
+2019-11-28 12:53:32.493191 INFO  BF_MC Write LAG node at addr 0x5032 with id 255 and next node 0x5033 0x0000_00000000ff05033c
+2019-11-28 12:53:32.493199 INFO  BF_MC Write LAG node at addr 0x5033 with id 255 and next node 0x5034 0x00ff_05034c00ff05033c
+2019-11-28 12:53:32.493210 INFO  BF_MC Write LAG node at addr 0x5034 with id 255 and next node 0x5035 0x0000_00000000ff05035c
+2019-11-28 12:53:32.493222 INFO  BF_MC Write LAG node at addr 0x5035 with id 255 and next node 0x5036 0x00ff_05036c00ff05035c
+2019-11-28 12:53:32.493229 INFO  BF_MC Write LAG node at addr 0x5036 with id 255 and next node 0x5037 0x0000_00000000ff05037c
+2019-11-28 12:53:32.493237 INFO  BF_MC Write LAG node at addr 0x5037 with id 255 and next node 0x5038 0x00ff_05038c00ff05037c
+2019-11-28 12:53:32.493244 INFO  BF_MC Write LAG node at addr 0x5038 with id 255 and next node 0x5039 0x0000_00000000ff05039c
+2019-11-28 12:53:32.493251 INFO  BF_MC Write LAG node at addr 0x5039 with id 255 and next node 0x503a 0x00ff_0503ac00ff05039c
+2019-11-28 12:53:32.493258 INFO  BF_MC Write LAG node at addr 0x503a with id 255 and next node 0x503b 0x0000_00000000ff0503bc
+2019-11-28 12:53:32.493265 INFO  BF_MC Write LAG node at addr 0x503b with id 255 and next node 0x503c 0x00ff_0503cc00ff0503bc
+2019-11-28 12:53:32.493273 INFO  BF_MC Write LAG node at addr 0x503c with id 255 and next node 0x503d 0x0000_00000000ff0503dc
+2019-11-28 12:53:32.493280 INFO  BF_MC Write LAG node at addr 0x503d with id 255 and next node 0x503e 0x00ff_0503ec00ff0503dc
+2019-11-28 12:53:32.493287 INFO  BF_MC Write LAG node at addr 0x503e with id 255 and next node 0x503f 0x0000_00000000ff0503fc
+2019-11-28 12:53:32.493294 INFO  BF_MC Write LAG node at addr 0x503f with id 255 and next node 0x5040 0x00ff_05040c00ff0503fc
+2019-11-28 12:53:32.493301 INFO  BF_MC Write LAG node at addr 0x5040 with id 255 and next node 0x5041 0x0000_00000000ff05041c
+2019-11-28 12:53:32.493308 INFO  BF_MC Write LAG node at addr 0x5041 with id 255 and next node 0x5042 0x00ff_05042c00ff05041c
+2019-11-28 12:53:32.493316 INFO  BF_MC Write LAG node at addr 0x5042 with id 255 and next node 0x5043 0x0000_00000000ff05043c
+2019-11-28 12:53:32.493323 INFO  BF_MC Write LAG node at addr 0x5043 with id 255 and next node 0x5044 0x00ff_05044c00ff05043c
+2019-11-28 12:53:32.493330 INFO  BF_MC Write LAG node at addr 0x5044 with id 255 and next node 0x5045 0x0000_00000000ff05045c
+2019-11-28 12:53:32.493337 INFO  BF_MC Write LAG node at addr 0x5045 with id 255 and next node 0x5046 0x00ff_05046c00ff05045c
+2019-11-28 12:53:32.493344 INFO  BF_MC Write LAG node at addr 0x5046 with id 255 and next node 0x5047 0x0000_00000000ff05047c
+2019-11-28 12:53:32.493352 INFO  BF_MC Write LAG node at addr 0x5047 with id 255 and next node 0x5048 0x00ff_05048c00ff05047c
+2019-11-28 12:53:32.493360 INFO  BF_MC Write LAG node at addr 0x5048 with id 255 and next node 0x5049 0x0000_00000000ff05049c
+2019-11-28 12:53:32.493368 INFO  BF_MC Write LAG node at addr 0x5049 with id 255 and next node 0x504a 0x00ff_0504ac00ff05049c
+2019-11-28 12:53:32.493375 INFO  BF_MC Write LAG node at addr 0x504a with id 255 and next node 0x504b 0x0000_00000000ff0504bc
+2019-11-28 12:53:32.493382 INFO  BF_MC Write LAG node at addr 0x504b with id 255 and next node 0x504c 0x00ff_0504cc00ff0504bc
+2019-11-28 12:53:32.493389 INFO  BF_MC Write LAG node at addr 0x504c with id 255 and next node 0x504d 0x0000_00000000ff0504dc
+2019-11-28 12:53:32.493397 INFO  BF_MC Write LAG node at addr 0x504d with id 255 and next node 0x504e 0x00ff_0504ec00ff0504dc
+2019-11-28 12:53:32.493404 INFO  BF_MC Write LAG node at addr 0x504e with id 255 and next node 0x504f 0x0000_00000000ff0504fc
+2019-11-28 12:53:32.493411 INFO  BF_MC Write LAG node at addr 0x504f with id 255 and next node 0x5050 0x00ff_05050c00ff0504fc
+2019-11-28 12:53:32.493418 INFO  BF_MC Write LAG node at addr 0x5050 with id 255 and next node 0x5051 0x0000_00000000ff05051c
+2019-11-28 12:53:32.493425 INFO  BF_MC Write LAG node at addr 0x5051 with id 255 and next node 0x5052 0x00ff_05052c00ff05051c
+2019-11-28 12:53:32.493432 INFO  BF_MC Write LAG node at addr 0x5052 with id 255 and next node 0x5053 0x0000_00000000ff05053c
+2019-11-28 12:53:32.493440 INFO  BF_MC Write LAG node at addr 0x5053 with id 255 and next node 0x5054 0x00ff_05054c00ff05053c
+2019-11-28 12:53:32.493447 INFO  BF_MC Write LAG node at addr 0x5054 with id 255 and next node 0x5055 0x0000_00000000ff05055c
+2019-11-28 12:53:32.493458 INFO  BF_MC Write LAG node at addr 0x5055 with id 255 and next node 0x5056 0x00ff_05056c00ff05055c
+2019-11-28 12:53:32.493466 INFO  BF_MC Write LAG node at addr 0x5056 with id 255 and next node 0x5057 0x0000_00000000ff05057c
+2019-11-28 12:53:32.493473 INFO  BF_MC Write LAG node at addr 0x5057 with id 255 and next node 0x5058 0x00ff_05058c00ff05057c
+2019-11-28 12:53:32.493481 INFO  BF_MC Write LAG node at addr 0x5058 with id 255 and next node 0x5059 0x0000_00000000ff05059c
+2019-11-28 12:53:32.493488 INFO  BF_MC Write LAG node at addr 0x5059 with id 255 and next node 0x505a 0x00ff_0505ac00ff05059c
+2019-11-28 12:53:32.493495 INFO  BF_MC Write LAG node at addr 0x505a with id 255 and next node 0x505b 0x0000_00000000ff0505bc
+2019-11-28 12:53:32.493502 INFO  BF_MC Write LAG node at addr 0x505b with id 255 and next node 0x505c 0x00ff_0505cc00ff0505bc
+2019-11-28 12:53:32.493509 INFO  BF_MC Write LAG node at addr 0x505c with id 255 and next node 0x505d 0x0000_00000000ff0505dc
+2019-11-28 12:53:32.493516 INFO  BF_MC Write LAG node at addr 0x505d with id 255 and next node 0x505e 0x00ff_0505ec00ff0505dc
+2019-11-28 12:53:32.493524 INFO  BF_MC Write LAG node at addr 0x505e with id 255 and next node 0x505f 0x0000_00000000ff0505fc
+2019-11-28 12:53:32.493531 INFO  BF_MC Write LAG node at addr 0x505f with id 255 and next node 0x5060 0x00ff_05060c00ff0505fc
+2019-11-28 12:53:32.493538 INFO  BF_MC Write LAG node at addr 0x5060 with id 255 and next node 0x5061 0x0000_00000000ff05061c
+2019-11-28 12:53:32.493546 INFO  BF_MC Write LAG node at addr 0x5061 with id 255 and next node 0x5062 0x00ff_05062c00ff05061c
+2019-11-28 12:53:32.493553 INFO  BF_MC Write LAG node at addr 0x5062 with id 255 and next node 0x5063 0x0000_00000000ff05063c
+2019-11-28 12:53:32.493563 INFO  BF_MC Write LAG node at addr 0x5063 with id 255 and next node 0x5064 0x00ff_05064c00ff05063c
+2019-11-28 12:53:32.493572 INFO  BF_MC Write LAG node at addr 0x5064 with id 255 and next node 0x5065 0x0000_00000000ff05065c
+2019-11-28 12:53:32.493579 INFO  BF_MC Write LAG node at addr 0x5065 with id 255 and next node 0x5066 0x00ff_05066c00ff05065c
+2019-11-28 12:53:32.493587 INFO  BF_MC Write LAG node at addr 0x5066 with id 255 and next node 0x5067 0x0000_00000000ff05067c
+2019-11-28 12:53:32.493594 INFO  BF_MC Write LAG node at addr 0x5067 with id 255 and next node 0x5068 0x00ff_05068c00ff05067c
+2019-11-28 12:53:32.493601 INFO  BF_MC Write LAG node at addr 0x5068 with id 255 and next node 0x5069 0x0000_00000000ff05069c
+2019-11-28 12:53:32.493608 INFO  BF_MC Write LAG node at addr 0x5069 with id 255 and next node 0x506a 0x00ff_0506ac00ff05069c
+2019-11-28 12:53:32.493615 INFO  BF_MC Write LAG node at addr 0x506a with id 255 and next node 0x506b 0x0000_00000000ff0506bc
+2019-11-28 12:53:32.493623 INFO  BF_MC Write LAG node at addr 0x506b with id 255 and next node 0x506c 0x00ff_0506cc00ff0506bc
+2019-11-28 12:53:32.493630 INFO  BF_MC Write LAG node at addr 0x506c with id 255 and next node 0x506d 0x0000_00000000ff0506dc
+2019-11-28 12:53:32.493637 INFO  BF_MC Write LAG node at addr 0x506d with id 255 and next node 0x506e 0x00ff_0506ec00ff0506dc
+2019-11-28 12:53:32.493644 INFO  BF_MC Write LAG node at addr 0x506e with id 255 and next node 0x506f 0x0000_00000000ff0506fc
+2019-11-28 12:53:32.493652 INFO  BF_MC Write LAG node at addr 0x506f with id 255 and next node 0x5070 0x00ff_05070c00ff0506fc
+2019-11-28 12:53:32.493659 INFO  BF_MC Write LAG node at addr 0x5070 with id 255 and next node 0x5071 0x0000_00000000ff05071c
+2019-11-28 12:53:32.493666 INFO  BF_MC Write LAG node at addr 0x5071 with id 255 and next node 0x5072 0x00ff_05072c00ff05071c
+2019-11-28 12:53:32.493673 INFO  BF_MC Write LAG node at addr 0x5072 with id 255 and next node 0x5073 0x0000_00000000ff05073c
+2019-11-28 12:53:32.493681 INFO  BF_MC Write LAG node at addr 0x5073 with id 255 and next node 0x5074 0x00ff_05074c00ff05073c
+2019-11-28 12:53:32.493688 INFO  BF_MC Write LAG node at addr 0x5074 with id 255 and next node 0x5075 0x0000_00000000ff05075c
+2019-11-28 12:53:32.493695 INFO  BF_MC Write LAG node at addr 0x5075 with id 255 and next node 0x5076 0x00ff_05076c00ff05075c
+2019-11-28 12:53:32.493706 INFO  BF_MC Write LAG node at addr 0x5076 with id 255 and next node 0x5077 0x0000_00000000ff05077c
+2019-11-28 12:53:32.493714 INFO  BF_MC Write LAG node at addr 0x5077 with id 255 and next node 0x5078 0x00ff_05078c00ff05077c
+2019-11-28 12:53:32.493721 INFO  BF_MC Write LAG node at addr 0x5078 with id 255 and next node 0x5079 0x0000_00000000ff05079c
+2019-11-28 12:53:32.493728 INFO  BF_MC Write LAG node at addr 0x5079 with id 255 and next node 0x507a 0x00ff_0507ac00ff05079c
+2019-11-28 12:53:32.493736 INFO  BF_MC Write LAG node at addr 0x507a with id 255 and next node 0x507b 0x0000_00000000ff0507bc
+2019-11-28 12:53:32.493743 INFO  BF_MC Write LAG node at addr 0x507b with id 255 and next node 0x507c 0x00ff_0507cc00ff0507bc
+2019-11-28 12:53:32.493750 INFO  BF_MC Write LAG node at addr 0x507c with id 255 and next node 0x507d 0x0000_00000000ff0507dc
+2019-11-28 12:53:32.493757 INFO  BF_MC Write LAG node at addr 0x507d with id 255 and next node 0x507e 0x00ff_0507ec00ff0507dc
+2019-11-28 12:53:32.493764 INFO  BF_MC Write LAG node at addr 0x507e with id 255 and next node 0x507f 0x0000_00000000ff0507fc
+2019-11-28 12:53:32.493771 INFO  BF_MC Write LAG node at addr 0x507f with id 255 and next node 0x5080 0x00ff_05080c00ff0507fc
+2019-11-28 12:53:32.493778 INFO  BF_MC Write LAG node at addr 0x5080 with id 255 and next node 0x5081 0x0000_00000000ff05081c
+2019-11-28 12:53:32.493786 INFO  BF_MC Write LAG node at addr 0x5081 with id 255 and next node 0x5082 0x00ff_05082c00ff05081c
+2019-11-28 12:53:32.493793 INFO  BF_MC Write LAG node at addr 0x5082 with id 255 and next node 0x5083 0x0000_00000000ff05083c
+2019-11-28 12:53:32.493800 INFO  BF_MC Write LAG node at addr 0x5083 with id 255 and next node 0x5084 0x00ff_05084c00ff05083c
+2019-11-28 12:53:32.493808 INFO  BF_MC Write LAG node at addr 0x5084 with id 255 and next node 0x5085 0x0000_00000000ff05085c
+2019-11-28 12:53:32.493816 INFO  BF_MC Write LAG node at addr 0x5085 with id 255 and next node 0x5086 0x00ff_05086c00ff05085c
+2019-11-28 12:53:32.493823 INFO  BF_MC Write LAG node at addr 0x5086 with id 255 and next node 0x5087 0x0000_00000000ff05087c
+2019-11-28 12:53:32.493830 INFO  BF_MC Write LAG node at addr 0x5087 with id 255 and next node 0x5088 0x00ff_05088c00ff05087c
+2019-11-28 12:53:32.493838 INFO  BF_MC Write LAG node at addr 0x5088 with id 255 and next node 0x5089 0x0000_00000000ff05089c
+2019-11-28 12:53:32.493845 INFO  BF_MC Write LAG node at addr 0x5089 with id 255 and next node 0x508a 0x00ff_0508ac00ff05089c
+2019-11-28 12:53:32.493852 INFO  BF_MC Write LAG node at addr 0x508a with id 255 and next node 0x508b 0x0000_00000000ff0508bc
+2019-11-28 12:53:32.493860 INFO  BF_MC Write LAG node at addr 0x508b with id 255 and next node 0x508c 0x00ff_0508cc00ff0508bc
+2019-11-28 12:53:32.493867 INFO  BF_MC Write LAG node at addr 0x508c with id 255 and next node 0x508d 0x0000_00000000ff0508dc
+2019-11-28 12:53:32.493874 INFO  BF_MC Write LAG node at addr 0x508d with id 255 and next node 0x508e 0x00ff_0508ec00ff0508dc
+2019-11-28 12:53:32.493881 INFO  BF_MC Write LAG node at addr 0x508e with id 255 and next node 0x508f 0x0000_00000000ff0508fc
+2019-11-28 12:53:32.493888 INFO  BF_MC Write LAG node at addr 0x508f with id 255 and next node 0x5090 0x00ff_05090c00ff0508fc
+2019-11-28 12:53:32.493896 INFO  BF_MC Write LAG node at addr 0x5090 with id 255 and next node 0x5091 0x0000_00000000ff05091c
+2019-11-28 12:53:32.493903 INFO  BF_MC Write LAG node at addr 0x5091 with id 255 and next node 0x5092 0x00ff_05092c00ff05091c
+2019-11-28 12:53:32.493910 INFO  BF_MC Write LAG node at addr 0x5092 with id 255 and next node 0x5093 0x0000_00000000ff05093c
+2019-11-28 12:53:32.493921 INFO  BF_MC Write LAG node at addr 0x5093 with id 255 and next node 0x5094 0x00ff_05094c00ff05093c
+2019-11-28 12:53:32.493929 INFO  BF_MC Write LAG node at addr 0x5094 with id 255 and next node 0x5095 0x0000_00000000ff05095c
+2019-11-28 12:53:32.493936 INFO  BF_MC Write LAG node at addr 0x5095 with id 255 and next node 0x5096 0x00ff_05096c00ff05095c
+2019-11-28 12:53:32.493948 INFO  BF_MC Write LAG node at addr 0x5096 with id 255 and next node 0x5097 0x0000_00000000ff05097c
+2019-11-28 12:53:32.493955 INFO  BF_MC Write LAG node at addr 0x5097 with id 255 and next node 0x5098 0x00ff_05098c00ff05097c
+2019-11-28 12:53:32.493962 INFO  BF_MC Write LAG node at addr 0x5098 with id 255 and next node 0x5099 0x0000_00000000ff05099c
+2019-11-28 12:53:32.493970 INFO  BF_MC Write LAG node at addr 0x5099 with id 255 and next node 0x509a 0x00ff_0509ac00ff05099c
+2019-11-28 12:53:32.493977 INFO  BF_MC Write LAG node at addr 0x509a with id 255 and next node 0x509b 0x0000_00000000ff0509bc
+2019-11-28 12:53:32.493984 INFO  BF_MC Write LAG node at addr 0x509b with id 255 and next node 0x509c 0x00ff_0509cc00ff0509bc
+2019-11-28 12:53:32.493991 INFO  BF_MC Write LAG node at addr 0x509c with id 255 and next node 0x509d 0x0000_00000000ff0509dc
+2019-11-28 12:53:32.493998 INFO  BF_MC Write LAG node at addr 0x509d with id 255 and next node 0x509e 0x00ff_0509ec00ff0509dc
+2019-11-28 12:53:32.494006 INFO  BF_MC Write LAG node at addr 0x509e with id 255 and next node 0x509f 0x0000_00000000ff0509fc
+2019-11-28 12:53:32.494013 INFO  BF_MC Write LAG node at addr 0x509f with id 255 and next node 0x50a0 0x00ff_050a0c00ff0509fc
+2019-11-28 12:53:32.494020 INFO  BF_MC Write LAG node at addr 0x50a0 with id 255 and next node 0x50a1 0x0000_00000000ff050a1c
+2019-11-28 12:53:32.494027 INFO  BF_MC Write LAG node at addr 0x50a1 with id 255 and next node 0x50a2 0x00ff_050a2c00ff050a1c
+2019-11-28 12:53:32.494034 INFO  BF_MC Write LAG node at addr 0x50a2 with id 255 and next node 0x50a3 0x0000_00000000ff050a3c
+2019-11-28 12:53:32.494042 INFO  BF_MC Write LAG node at addr 0x50a3 with id 255 and next node 0x50a4 0x00ff_050a4c00ff050a3c
+2019-11-28 12:53:32.494049 INFO  BF_MC Write LAG node at addr 0x50a4 with id 255 and next node 0x50a5 0x0000_00000000ff050a5c
+2019-11-28 12:53:32.494056 INFO  BF_MC Write LAG node at addr 0x50a5 with id 255 and next node 0x50a6 0x00ff_050a6c00ff050a5c
+2019-11-28 12:53:32.494063 INFO  BF_MC Write LAG node at addr 0x50a6 with id 255 and next node 0x50a7 0x0000_00000000ff050a7c
+2019-11-28 12:53:32.494070 INFO  BF_MC Write LAG node at addr 0x50a7 with id 255 and next node 0x50a8 0x00ff_050a8c00ff050a7c
+2019-11-28 12:53:32.494078 INFO  BF_MC Write LAG node at addr 0x50a8 with id 255 and next node 0x50a9 0x0000_00000000ff050a9c
+2019-11-28 12:53:32.494085 INFO  BF_MC Write LAG node at addr 0x50a9 with id 255 and next node 0x50aa 0x00ff_050aac00ff050a9c
+2019-11-28 12:53:32.494092 INFO  BF_MC Write LAG node at addr 0x50aa with id 255 and next node 0x50ab 0x0000_00000000ff050abc
+2019-11-28 12:53:32.494099 INFO  BF_MC Write LAG node at addr 0x50ab with id 255 and next node 0x50ac 0x00ff_050acc00ff050abc
+2019-11-28 12:53:32.494106 INFO  BF_MC Write LAG node at addr 0x50ac with id 255 and next node 0x50ad 0x0000_00000000ff050adc
+2019-11-28 12:53:32.494113 INFO  BF_MC Write LAG node at addr 0x50ad with id 255 and next node 0x50ae 0x00ff_050aec00ff050adc
+2019-11-28 12:53:32.494120 INFO  BF_MC Write LAG node at addr 0x50ae with id 255 and next node 0x50af 0x0000_00000000ff050afc
+2019-11-28 12:53:32.494127 INFO  BF_MC Write LAG node at addr 0x50af with id 255 and next node 0x50b0 0x00ff_050b0c00ff050afc
+2019-11-28 12:53:32.494135 INFO  BF_MC Write LAG node at addr 0x50b0 with id 255 and next node 0x50b1 0x0000_00000000ff050b1c
+2019-11-28 12:53:32.494142 INFO  BF_MC Write LAG node at addr 0x50b1 with id 255 and next node 0x50b2 0x00ff_050b2c00ff050b1c
+2019-11-28 12:53:32.494149 INFO  BF_MC Write LAG node at addr 0x50b2 with id 255 and next node 0x50b3 0x0000_00000000ff050b3c
+2019-11-28 12:53:32.494156 INFO  BF_MC Write LAG node at addr 0x50b3 with id 255 and next node 0x50b4 0x00ff_050b4c00ff050b3c
+2019-11-28 12:53:32.494163 INFO  BF_MC Write LAG node at addr 0x50b4 with id 255 and next node 0x50b5 0x0000_00000000ff050b5c
+2019-11-28 12:53:32.494170 INFO  BF_MC Write LAG node at addr 0x50b5 with id 255 and next node 0x50b6 0x00ff_050b6c00ff050b5c
+2019-11-28 12:53:32.494178 INFO  BF_MC Write LAG node at addr 0x50b6 with id 255 and next node 0x50b7 0x0000_00000000ff050b7c
+2019-11-28 12:53:32.494189 INFO  BF_MC Write LAG node at addr 0x50b7 with id 255 and next node 0x50b8 0x00ff_050b8c00ff050b7c
+2019-11-28 12:53:32.494196 INFO  BF_MC Write LAG node at addr 0x50b8 with id 255 and next node 0x50b9 0x0000_00000000ff050b9c
+2019-11-28 12:53:32.494203 INFO  BF_MC Write LAG node at addr 0x50b9 with id 255 and next node 0x50ba 0x00ff_050bac00ff050b9c
+2019-11-28 12:53:32.494210 INFO  BF_MC Write LAG node at addr 0x50ba with id 255 and next node 0x50bb 0x0000_00000000ff050bbc
+2019-11-28 12:53:32.494217 INFO  BF_MC Write LAG node at addr 0x50bb with id 255 and next node 0x50bc 0x00ff_050bcc00ff050bbc
+2019-11-28 12:53:32.494224 INFO  BF_MC Write LAG node at addr 0x50bc with id 255 and next node 0x50bd 0x0000_00000000ff050bdc
+2019-11-28 12:53:32.494232 INFO  BF_MC Write LAG node at addr 0x50bd with id 255 and next node 0x50be 0x00ff_050bec00ff050bdc
+2019-11-28 12:53:32.494239 INFO  BF_MC Write LAG node at addr 0x50be with id 255 and next node 0x50bf 0x0000_00000000ff050bfc
+2019-11-28 12:53:32.494246 INFO  BF_MC Write LAG node at addr 0x50bf with id 255 and next node 0x50c0 0x00ff_050c0c00ff050bfc
+2019-11-28 12:53:32.494255 INFO  BF_MC Write LAG node at addr 0x50c0 with id 255 and next node 0x50c1 0x0000_00000000ff050c1c
+2019-11-28 12:53:32.494262 INFO  BF_MC Write LAG node at addr 0x50c1 with id 255 and next node 0x50c2 0x00ff_050c2c00ff050c1c
+2019-11-28 12:53:32.494271 INFO  BF_MC Write LAG node at addr 0x50c2 with id 255 and next node 0x50c3 0x0000_00000000ff050c3c
+2019-11-28 12:53:32.494281 INFO  BF_MC Write LAG node at addr 0x50c3 with id 255 and next node 0x50c4 0x00ff_050c4c00ff050c3c
+2019-11-28 12:53:32.494289 INFO  BF_MC Write LAG node at addr 0x50c4 with id 255 and next node 0x50c5 0x0000_00000000ff050c5c
+2019-11-28 12:53:32.500896 INFO  BF_MC Write LAG node at addr 0x50c5 with id 255 and next node 0x50c6 0x00ff_050c6c00ff050c5c
+2019-11-28 12:53:32.500929 INFO  BF_MC Write LAG node at addr 0x50c6 with id 255 and next node 0x50c7 0x0000_00000000ff050c7c
+2019-11-28 12:53:32.500945 INFO  BF_MC Write LAG node at addr 0x50c7 with id 255 and next node 0x50c8 0x00ff_050c8c00ff050c7c
+2019-11-28 12:53:32.500960 INFO  BF_MC Write LAG node at addr 0x50c8 with id 255 and next node 0x50c9 0x0000_00000000ff050c9c
+2019-11-28 12:53:32.500976 INFO  BF_MC Write LAG node at addr 0x50c9 with id 255 and next node 0x50ca 0x00ff_050cac00ff050c9c
+2019-11-28 12:53:32.500991 INFO  BF_MC Write LAG node at addr 0x50ca with id 255 and next node 0x50cb 0x0000_00000000ff050cbc
+2019-11-28 12:53:32.501006 INFO  BF_MC Write LAG node at addr 0x50cb with id 255 and next node 0x50cc 0x00ff_050ccc00ff050cbc
+2019-11-28 12:53:32.501022 INFO  BF_MC Write LAG node at addr 0x50cc with id 255 and next node 0x50cd 0x0000_00000000ff050cdc
+2019-11-28 12:53:32.501042 INFO  BF_MC Write LAG node at addr 0x50cd with id 255 and next node 0x50ce 0x00ff_050cec00ff050cdc
+2019-11-28 12:53:32.501061 INFO  BF_MC Write LAG node at addr 0x50ce with id 255 and next node 0x50cf 0x0000_00000000ff050cfc
+2019-11-28 12:53:32.501077 INFO  BF_MC Write LAG node at addr 0x50cf with id 255 and next node 0x50d0 0x00ff_050d0c00ff050cfc
+2019-11-28 12:53:32.501093 INFO  BF_MC Write LAG node at addr 0x50d0 with id 255 and next node 0x50d1 0x0000_00000000ff050d1c
+2019-11-28 12:53:32.501118 INFO  BF_MC Write LAG node at addr 0x50d1 with id 255 and next node 0x50d2 0x00ff_050d2c00ff050d1c
+2019-11-28 12:53:32.501126 INFO  BF_MC Write LAG node at addr 0x50d2 with id 255 and next node 0x50d3 0x0000_00000000ff050d3c
+2019-11-28 12:53:32.501133 INFO  BF_MC Write LAG node at addr 0x50d3 with id 255 and next node 0x50d4 0x00ff_050d4c00ff050d3c
+2019-11-28 12:53:32.501141 INFO  BF_MC Write LAG node at addr 0x50d4 with id 255 and next node 0x50d5 0x0000_00000000ff050d5c
+2019-11-28 12:53:32.501149 INFO  BF_MC Write LAG node at addr 0x50d5 with id 255 and next node 0x50d6 0x00ff_050d6c00ff050d5c
+2019-11-28 12:53:32.501157 INFO  BF_MC Write LAG node at addr 0x50d6 with id 255 and next node 0x50d7 0x0000_00000000ff050d7c
+2019-11-28 12:53:32.501172 INFO  BF_MC Write LAG node at addr 0x50d7 with id 255 and next node 0x50d8 0x00ff_050d8c00ff050d7c
+2019-11-28 12:53:32.501180 INFO  BF_MC Write LAG node at addr 0x50d8 with id 255 and next node 0x50d9 0x0000_00000000ff050d9c
+2019-11-28 12:53:32.501187 INFO  BF_MC Write LAG node at addr 0x50d9 with id 255 and next node 0x50da 0x00ff_050dac00ff050d9c
+2019-11-28 12:53:32.501194 INFO  BF_MC Write LAG node at addr 0x50da with id 255 and next node 0x50db 0x0000_00000000ff050dbc
+2019-11-28 12:53:32.501201 INFO  BF_MC Write LAG node at addr 0x50db with id 255 and next node 0x50dc 0x00ff_050dcc00ff050dbc
+2019-11-28 12:53:32.501208 INFO  BF_MC Write LAG node at addr 0x50dc with id 255 and next node 0x50dd 0x0000_00000000ff050ddc
+2019-11-28 12:53:32.501216 INFO  BF_MC Write LAG node at addr 0x50dd with id 255 and next node 0x50de 0x00ff_050dec00ff050ddc
+2019-11-28 12:53:32.501223 INFO  BF_MC Write LAG node at addr 0x50de with id 255 and next node 0x50df 0x0000_00000000ff050dfc
+2019-11-28 12:53:32.501230 INFO  BF_MC Write LAG node at addr 0x50df with id 255 and next node 0x50e0 0x00ff_050e0c00ff050dfc
+2019-11-28 12:53:32.501237 INFO  BF_MC Write LAG node at addr 0x50e0 with id 255 and next node 0x50e1 0x0000_00000000ff050e1c
+2019-11-28 12:53:32.501244 INFO  BF_MC Write LAG node at addr 0x50e1 with id 255 and next node 0x50e2 0x00ff_050e2c00ff050e1c
+2019-11-28 12:53:32.501251 INFO  BF_MC Write LAG node at addr 0x50e2 with id 255 and next node 0x50e3 0x0000_00000000ff050e3c
+2019-11-28 12:53:32.501258 INFO  BF_MC Write LAG node at addr 0x50e3 with id 255 and next node 0x50e4 0x00ff_050e4c00ff050e3c
+2019-11-28 12:53:32.501265 INFO  BF_MC Write LAG node at addr 0x50e4 with id 255 and next node 0x50e5 0x0000_00000000ff050e5c
+2019-11-28 12:53:32.501273 INFO  BF_MC Write LAG node at addr 0x50e5 with id 255 and next node 0x50e6 0x00ff_050e6c00ff050e5c
+2019-11-28 12:53:32.501280 INFO  BF_MC Write LAG node at addr 0x50e6 with id 255 and next node 0x50e7 0x0000_00000000ff050e7c
+2019-11-28 12:53:32.501287 INFO  BF_MC Write LAG node at addr 0x50e7 with id 255 and next node 0x50e8 0x00ff_050e8c00ff050e7c
+2019-11-28 12:53:32.501294 INFO  BF_MC Write LAG node at addr 0x50e8 with id 255 and next node 0x50e9 0x0000_00000000ff050e9c
+2019-11-28 12:53:32.501301 INFO  BF_MC Write LAG node at addr 0x50e9 with id 255 and next node 0x50ea 0x00ff_050eac00ff050e9c
+2019-11-28 12:53:32.501308 INFO  BF_MC Write LAG node at addr 0x50ea with id 255 and next node 0x50eb 0x0000_00000000ff050ebc
+2019-11-28 12:53:32.501315 INFO  BF_MC Write LAG node at addr 0x50eb with id 255 and next node 0x50ec 0x00ff_050ecc00ff050ebc
+2019-11-28 12:53:32.501322 INFO  BF_MC Write LAG node at addr 0x50ec with id 255 and next node 0x50ed 0x0000_00000000ff050edc
+2019-11-28 12:53:32.501329 INFO  BF_MC Write LAG node at addr 0x50ed with id 255 and next node 0x50ee 0x00ff_050eec00ff050edc
+2019-11-28 12:53:32.501336 INFO  BF_MC Write LAG node at addr 0x50ee with id 255 and next node 0x50ef 0x0000_00000000ff050efc
+2019-11-28 12:53:32.501343 INFO  BF_MC Write LAG node at addr 0x50ef with id 255 and next node 0x50f0 0x00ff_050f0c00ff050efc
+2019-11-28 12:53:32.501350 INFO  BF_MC Write LAG node at addr 0x50f0 with id 255 and next node 0x50f1 0x0000_00000000ff050f1c
+2019-11-28 12:53:32.501357 INFO  BF_MC Write LAG node at addr 0x50f1 with id 255 and next node 0x50f2 0x00ff_050f2c00ff050f1c
+2019-11-28 12:53:32.501364 INFO  BF_MC Write LAG node at addr 0x50f2 with id 255 and next node 0x50f3 0x0000_00000000ff050f3c
+2019-11-28 12:53:32.501372 INFO  BF_MC Write LAG node at addr 0x50f3 with id 255 and next node 0x50f4 0x00ff_050f4c00ff050f3c
+2019-11-28 12:53:32.501379 INFO  BF_MC Write LAG node at addr 0x50f4 with id 255 and next node 0x50f5 0x0000_00000000ff050f5c
+2019-11-28 12:53:32.501386 INFO  BF_MC Write LAG node at addr 0x50f5 with id 255 and next node 0x50f6 0x00ff_050f6c00ff050f5c
+2019-11-28 12:53:32.501394 INFO  BF_MC Write LAG node at addr 0x50f6 with id 255 and next node 0x50f7 0x0000_00000000ff050f7c
+2019-11-28 12:53:32.501405 INFO  BF_MC Write LAG node at addr 0x50f7 with id 255 and next node 0x50f8 0x00ff_050f8c00ff050f7c
+2019-11-28 12:53:32.501419 INFO  BF_MC Write LAG node at addr 0x50f8 with id 255 and next node 0x50f9 0x0000_00000000ff050f9c
+2019-11-28 12:53:32.501426 INFO  BF_MC Write LAG node at addr 0x50f9 with id 255 and next node 0x50fa 0x00ff_050fac00ff050f9c
+2019-11-28 12:53:32.501433 INFO  BF_MC Write LAG node at addr 0x50fa with id 255 and next node 0x50fb 0x0000_00000000ff050fbc
+2019-11-28 12:53:32.501440 INFO  BF_MC Write LAG node at addr 0x50fb with id 255 and next node 0x50fc 0x00ff_050fcc00ff050fbc
+2019-11-28 12:53:32.501448 INFO  BF_MC Write LAG node at addr 0x50fc with id 255 and next node 0x50fd 0x0000_00000000ff050fdc
+2019-11-28 12:53:32.501455 INFO  BF_MC Write LAG node at addr 0x50fd with id 255 and next node 0x50fe 0x00ff_050fec00ff050fdc
+2019-11-28 12:53:32.501462 INFO  BF_MC Write LAG node at addr 0x50fe with id 255 and next node 0x50ff 0x0000_00000000ff050ffc
+2019-11-28 12:53:32.501469 INFO  BF_MC Write LAG node at addr 0x50ff with id 255 and next node 0x5100 0x00ff_05100c00ff050ffc
+2019-11-28 12:53:32.501476 INFO  BF_MC Write LAG node at addr 0x5100 with id 255 and next node 0x5101 0x0000_00000000ff05101c
+2019-11-28 12:53:32.501483 INFO  BF_MC Write LAG node at addr 0x5101 with id 255 and next node 0x5102 0x00ff_05102c00ff05101c
+2019-11-28 12:53:32.501490 INFO  BF_MC Write LAG node at addr 0x5102 with id 255 and next node 0x5103 0x0000_00000000ff05103c
+2019-11-28 12:53:32.501498 INFO  BF_MC Write LAG node at addr 0x5103 with id 255 and next node 0 0x00ff_00000c00ff05103c
+2019-11-28 12:53:32.501507 INFO  BF_MC Allocated RDM addresses 0x11c0 - 0x11df
+2019-11-28 12:53:32.501514 INFO  BF_MC Write L1End node at addr 0x11c0, rid 0, l2 0x5101
+2019-11-28 12:53:32.501521 INFO  BF_MC Write L1End node at addr 0x11c1, rid 0, l2 0x5100
+2019-11-28 12:53:32.501528 INFO  BF_MC Write L1End node at addr 0x11c2, rid 0, l2 0x50ff
+2019-11-28 12:53:32.501534 INFO  BF_MC Write L1End node at addr 0x11c3, rid 0, l2 0x50fe
+2019-11-28 12:53:32.501541 INFO  BF_MC Write L1End node at addr 0x11c4, rid 0, l2 0x50fd
+2019-11-28 12:53:32.501547 INFO  BF_MC Write L1End node at addr 0x11c5, rid 0, l2 0x50fc
+2019-11-28 12:53:32.501554 INFO  BF_MC Write L1End node at addr 0x11c6, rid 0, l2 0x50fb
+2019-11-28 12:53:32.501560 INFO  BF_MC Write L1End node at addr 0x11c7, rid 0, l2 0x50fa
+2019-11-28 12:53:32.501566 INFO  BF_MC Write L1End node at addr 0x11c8, rid 0, l2 0x50f8
+2019-11-28 12:53:32.501573 INFO  BF_MC Write L1End node at addr 0x11c9, rid 0, l2 0x50f6
+2019-11-28 12:53:32.501579 INFO  BF_MC Write L1End node at addr 0x11ca, rid 0, l2 0x50f4
+2019-11-28 12:53:32.501586 INFO  BF_MC Write L1End node at addr 0x11cb, rid 0, l2 0x50f2
+2019-11-28 12:53:32.501592 INFO  BF_MC Write L1End node at addr 0x11cc, rid 0, l2 0x50f0
+2019-11-28 12:53:32.501599 INFO  BF_MC Write L1End node at addr 0x11cd, rid 0, l2 0x50ee
+2019-11-28 12:53:32.501605 INFO  BF_MC Write L1End node at addr 0x11ce, rid 0, l2 0x50ec
+2019-11-28 12:53:32.501612 INFO  BF_MC Write L1End node at addr 0x11cf, rid 0, l2 0x50ea
+2019-11-28 12:53:32.501618 INFO  BF_MC Write L1End node at addr 0x11d0, rid 0, l2 0x50e8
+2019-11-28 12:53:32.501625 INFO  BF_MC Write L1End node at addr 0x11d1, rid 0, l2 0x50e6
+2019-11-28 12:53:32.501631 INFO  BF_MC Write L1End node at addr 0x11d2, rid 0, l2 0x50e4
+2019-11-28 12:53:32.501638 INFO  BF_MC Write L1End node at addr 0x11d3, rid 0, l2 0x50e0
+2019-11-28 12:53:32.501644 INFO  BF_MC Write L1End node at addr 0x11d4, rid 0, l2 0x50dc
+2019-11-28 12:53:32.501651 INFO  BF_MC Write L1End node at addr 0x11d5, rid 0, l2 0x50d8
+2019-11-28 12:53:32.501657 INFO  BF_MC Write L1End node at addr 0x11d6, rid 0, l2 0x50d4
+2019-11-28 12:53:32.501664 INFO  BF_MC Write L1End node at addr 0x11d7, rid 0, l2 0x50cc
+2019-11-28 12:53:32.501670 INFO  BF_MC Write L1End node at addr 0x11d8, rid 0, l2 0x50c4
+2019-11-28 12:53:32.501677 INFO  BF_MC Write L1End node at addr 0x11d9, rid 0, l2 0x50bc
+2019-11-28 12:53:32.501683 INFO  BF_MC Write L1End node at addr 0x11da, rid 0, l2 0x50a0
+2019-11-28 12:53:32.501690 INFO  BF_MC Write L1End node at addr 0x11db, rid 0, l2 0x5087
+2019-11-28 12:53:32.501700 INFO  BF_MC Write L1End node at addr 0x11dc, rid 0, l2 0x506e
+2019-11-28 12:53:32.501707 INFO  BF_MC Write L1End node at addr 0x11dd, rid 0, l2 0x5055
+2019-11-28 12:53:32.501714 INFO  BF_MC Write L1End node at addr 0x11de, rid 0, l2 0x503c
+2019-11-28 12:53:32.501720 INFO  BF_MC Write L1End node at addr 0x11df, rid 0, l2 0x5000
+2019-11-28 12:53:32.501728 INFO  BF_MC Allocated RDM addresses 0x6000 - 0x6103
+2019-11-28 12:53:32.501735 INFO  BF_MC Write LAG node at addr 0x6000 with id 255 and next node 0x6001 0x0000_00000000ff06001c
+2019-11-28 12:53:32.501742 INFO  BF_MC Write LAG node at addr 0x6001 with id 255 and next node 0x6002 0x00ff_06002c00ff06001c
+2019-11-28 12:53:32.501751 INFO  BF_MC Write LAG node at addr 0x6002 with id 255 and next node 0x6003 0x0000_00000000ff06003c
+2019-11-28 12:53:32.501761 INFO  BF_MC Write LAG node at addr 0x6003 with id 255 and next node 0x6004 0x00ff_06004c00ff06003c
+2019-11-28 12:53:32.501769 INFO  BF_MC Write LAG node at addr 0x6004 with id 255 and next node 0x6005 0x0000_00000000ff06005c
+2019-11-28 12:53:32.501776 INFO  BF_MC Write LAG node at addr 0x6005 with id 255 and next node 0x6006 0x00ff_06006c00ff06005c
+2019-11-28 12:53:32.501783 INFO  BF_MC Write LAG node at addr 0x6006 with id 255 and next node 0x6007 0x0000_00000000ff06007c
+2019-11-28 12:53:32.501790 INFO  BF_MC Write LAG node at addr 0x6007 with id 255 and next node 0x6008 0x00ff_06008c00ff06007c
+2019-11-28 12:53:32.501797 INFO  BF_MC Write LAG node at addr 0x6008 with id 255 and next node 0x6009 0x0000_00000000ff06009c
+2019-11-28 12:53:32.501804 INFO  BF_MC Write LAG node at addr 0x6009 with id 255 and next node 0x600a 0x00ff_0600ac00ff06009c
+2019-11-28 12:53:32.501811 INFO  BF_MC Write LAG node at addr 0x600a with id 255 and next node 0x600b 0x0000_00000000ff0600bc
+2019-11-28 12:53:32.501818 INFO  BF_MC Write LAG node at addr 0x600b with id 255 and next node 0x600c 0x00ff_0600cc00ff0600bc
+2019-11-28 12:53:32.501825 INFO  BF_MC Write LAG node at addr 0x600c with id 255 and next node 0x600d 0x0000_00000000ff0600dc
+2019-11-28 12:53:32.501832 INFO  BF_MC Write LAG node at addr 0x600d with id 255 and next node 0x600e 0x00ff_0600ec00ff0600dc
+2019-11-28 12:53:32.501839 INFO  BF_MC Write LAG node at addr 0x600e with id 255 and next node 0x600f 0x0000_00000000ff0600fc
+2019-11-28 12:53:32.501846 INFO  BF_MC Write LAG node at addr 0x600f with id 255 and next node 0x6010 0x00ff_06010c00ff0600fc
+2019-11-28 12:53:32.501853 INFO  BF_MC Write LAG node at addr 0x6010 with id 255 and next node 0x6011 0x0000_00000000ff06011c
+2019-11-28 12:53:32.501861 INFO  BF_MC Write LAG node at addr 0x6011 with id 255 and next node 0x6012 0x00ff_06012c00ff06011c
+2019-11-28 12:53:32.501868 INFO  BF_MC Write LAG node at addr 0x6012 with id 255 and next node 0x6013 0x0000_00000000ff06013c
+2019-11-28 12:53:32.501875 INFO  BF_MC Write LAG node at addr 0x6013 with id 255 and next node 0x6014 0x00ff_06014c00ff06013c
+2019-11-28 12:53:32.501882 INFO  BF_MC Write LAG node at addr 0x6014 with id 255 and next node 0x6015 0x0000_00000000ff06015c
+2019-11-28 12:53:32.501889 INFO  BF_MC Write LAG node at addr 0x6015 with id 255 and next node 0x6016 0x00ff_06016c00ff06015c
+2019-11-28 12:53:32.501896 INFO  BF_MC Write LAG node at addr 0x6016 with id 255 and next node 0x6017 0x0000_00000000ff06017c
+2019-11-28 12:53:32.501903 INFO  BF_MC Write LAG node at addr 0x6017 with id 255 and next node 0x6018 0x00ff_06018c00ff06017c
+2019-11-28 12:53:32.501910 INFO  BF_MC Write LAG node at addr 0x6018 with id 255 and next node 0x6019 0x0000_00000000ff06019c
+2019-11-28 12:53:32.501917 INFO  BF_MC Write LAG node at addr 0x6019 with id 255 and next node 0x601a 0x00ff_0601ac00ff06019c
+2019-11-28 12:53:32.501924 INFO  BF_MC Write LAG node at addr 0x601a with id 255 and next node 0x601b 0x0000_00000000ff0601bc
+2019-11-28 12:53:32.501931 INFO  BF_MC Write LAG node at addr 0x601b with id 255 and next node 0x601c 0x00ff_0601cc00ff0601bc
+2019-11-28 12:53:32.501938 INFO  BF_MC Write LAG node at addr 0x601c with id 255 and next node 0x601d 0x0000_00000000ff0601dc
+2019-11-28 12:53:32.501950 INFO  BF_MC Write LAG node at addr 0x601d with id 255 and next node 0x601e 0x00ff_0601ec00ff0601dc
+2019-11-28 12:53:32.501957 INFO  BF_MC Write LAG node at addr 0x601e with id 255 and next node 0x601f 0x0000_00000000ff0601fc
+2019-11-28 12:53:32.501964 INFO  BF_MC Write LAG node at addr 0x601f with id 255 and next node 0x6020 0x00ff_06020c00ff0601fc
+2019-11-28 12:53:32.501971 INFO  BF_MC Write LAG node at addr 0x6020 with id 255 and next node 0x6021 0x0000_00000000ff06021c
+2019-11-28 12:53:32.501978 INFO  BF_MC Write LAG node at addr 0x6021 with id 255 and next node 0x6022 0x00ff_06022c00ff06021c
+2019-11-28 12:53:32.501985 INFO  BF_MC Write LAG node at addr 0x6022 with id 255 and next node 0x6023 0x0000_00000000ff06023c
+2019-11-28 12:53:32.501992 INFO  BF_MC Write LAG node at addr 0x6023 with id 255 and next node 0x6024 0x00ff_06024c00ff06023c
+2019-11-28 12:53:32.501999 INFO  BF_MC Write LAG node at addr 0x6024 with id 255 and next node 0x6025 0x0000_00000000ff06025c
+2019-11-28 12:53:32.502006 INFO  BF_MC Write LAG node at addr 0x6025 with id 255 and next node 0x6026 0x00ff_06026c00ff06025c
+2019-11-28 12:53:32.502014 INFO  BF_MC Write LAG node at addr 0x6026 with id 255 and next node 0x6027 0x0000_00000000ff06027c
+2019-11-28 12:53:32.502021 INFO  BF_MC Write LAG node at addr 0x6027 with id 255 and next node 0x6028 0x00ff_06028c00ff06027c
+2019-11-28 12:53:32.502028 INFO  BF_MC Write LAG node at addr 0x6028 with id 255 and next node 0x6029 0x0000_00000000ff06029c
+2019-11-28 12:53:32.502035 INFO  BF_MC Write LAG node at addr 0x6029 with id 255 and next node 0x602a 0x00ff_0602ac00ff06029c
+2019-11-28 12:53:32.502042 INFO  BF_MC Write LAG node at addr 0x602a with id 255 and next node 0x602b 0x0000_00000000ff0602bc
+2019-11-28 12:53:32.502049 INFO  BF_MC Write LAG node at addr 0x602b with id 255 and next node 0x602c 0x00ff_0602cc00ff0602bc
+2019-11-28 12:53:32.502056 INFO  BF_MC Write LAG node at addr 0x602c with id 255 and next node 0x602d 0x0000_00000000ff0602dc
+2019-11-28 12:53:32.502063 INFO  BF_MC Write LAG node at addr 0x602d with id 255 and next node 0x602e 0x00ff_0602ec00ff0602dc
+2019-11-28 12:53:32.502070 INFO  BF_MC Write LAG node at addr 0x602e with id 255 and next node 0x602f 0x0000_00000000ff0602fc
+2019-11-28 12:53:32.502077 INFO  BF_MC Write LAG node at addr 0x602f with id 255 and next node 0x6030 0x00ff_06030c00ff0602fc
+2019-11-28 12:53:32.502084 INFO  BF_MC Write LAG node at addr 0x6030 with id 255 and next node 0x6031 0x0000_00000000ff06031c
+2019-11-28 12:53:32.502092 INFO  BF_MC Write LAG node at addr 0x6031 with id 255 and next node 0x6032 0x00ff_06032c00ff06031c
+2019-11-28 12:53:32.502099 INFO  BF_MC Write LAG node at addr 0x6032 with id 255 and next node 0x6033 0x0000_00000000ff06033c
+2019-11-28 12:53:32.502108 INFO  BF_MC Write LAG node at addr 0x6033 with id 255 and next node 0x6034 0x00ff_06034c00ff06033c
+2019-11-28 12:53:32.502118 INFO  BF_MC Write LAG node at addr 0x6034 with id 255 and next node 0x6035 0x0000_00000000ff06035c
+2019-11-28 12:53:32.502125 INFO  BF_MC Write LAG node at addr 0x6035 with id 255 and next node 0x6036 0x00ff_06036c00ff06035c
+2019-11-28 12:53:32.502132 INFO  BF_MC Write LAG node at addr 0x6036 with id 255 and next node 0x6037 0x0000_00000000ff06037c
+2019-11-28 12:53:32.502139 INFO  BF_MC Write LAG node at addr 0x6037 with id 255 and next node 0x6038 0x00ff_06038c00ff06037c
+2019-11-28 12:53:32.502147 INFO  BF_MC Write LAG node at addr 0x6038 with id 255 and next node 0x6039 0x0000_00000000ff06039c
+2019-11-28 12:53:32.502154 INFO  BF_MC Write LAG node at addr 0x6039 with id 255 and next node 0x603a 0x00ff_0603ac00ff06039c
+2019-11-28 12:53:32.502161 INFO  BF_MC Write LAG node at addr 0x603a with id 255 and next node 0x603b 0x0000_00000000ff0603bc
+2019-11-28 12:53:32.502169 INFO  BF_MC Write LAG node at addr 0x603b with id 255 and next node 0x603c 0x00ff_0603cc00ff0603bc
+2019-11-28 12:53:32.502176 INFO  BF_MC Write LAG node at addr 0x603c with id 255 and next node 0x603d 0x0000_00000000ff0603dc
+2019-11-28 12:53:32.502183 INFO  BF_MC Write LAG node at addr 0x603d with id 255 and next node 0x603e 0x00ff_0603ec00ff0603dc
+2019-11-28 12:53:32.502194 INFO  BF_MC Write LAG node at addr 0x603e with id 255 and next node 0x603f 0x0000_00000000ff0603fc
+2019-11-28 12:53:32.502202 INFO  BF_MC Write LAG node at addr 0x603f with id 255 and next node 0x6040 0x00ff_06040c00ff0603fc
+2019-11-28 12:53:32.502209 INFO  BF_MC Write LAG node at addr 0x6040 with id 255 and next node 0x6041 0x0000_00000000ff06041c
+2019-11-28 12:53:32.502217 INFO  BF_MC Write LAG node at addr 0x6041 with id 255 and next node 0x6042 0x00ff_06042c00ff06041c
+2019-11-28 12:53:32.502224 INFO  BF_MC Write LAG node at addr 0x6042 with id 255 and next node 0x6043 0x0000_00000000ff06043c
+2019-11-28 12:53:32.502231 INFO  BF_MC Write LAG node at addr 0x6043 with id 255 and next node 0x6044 0x00ff_06044c00ff06043c
+2019-11-28 12:53:32.502238 INFO  BF_MC Write LAG node at addr 0x6044 with id 255 and next node 0x6045 0x0000_00000000ff06045c
+2019-11-28 12:53:32.502246 INFO  BF_MC Write LAG node at addr 0x6045 with id 255 and next node 0x6046 0x00ff_06046c00ff06045c
+2019-11-28 12:53:32.502253 INFO  BF_MC Write LAG node at addr 0x6046 with id 255 and next node 0x6047 0x0000_00000000ff06047c
+2019-11-28 12:53:32.502260 INFO  BF_MC Write LAG node at addr 0x6047 with id 255 and next node 0x6048 0x00ff_06048c00ff06047c
+2019-11-28 12:53:32.502267 INFO  BF_MC Write LAG node at addr 0x6048 with id 255 and next node 0x6049 0x0000_00000000ff06049c
+2019-11-28 12:53:32.502275 INFO  BF_MC Write LAG node at addr 0x6049 with id 255 and next node 0x604a 0x00ff_0604ac00ff06049c
+2019-11-28 12:53:32.502282 INFO  BF_MC Write LAG node at addr 0x604a with id 255 and next node 0x604b 0x0000_00000000ff0604bc
+2019-11-28 12:53:32.502289 INFO  BF_MC Write LAG node at addr 0x604b with id 255 and next node 0x604c 0x00ff_0604cc00ff0604bc
+2019-11-28 12:53:32.502296 INFO  BF_MC Write LAG node at addr 0x604c with id 255 and next node 0x604d 0x0000_00000000ff0604dc
+2019-11-28 12:53:32.502304 INFO  BF_MC Write LAG node at addr 0x604d with id 255 and next node 0x604e 0x00ff_0604ec00ff0604dc
+2019-11-28 12:53:32.502311 INFO  BF_MC Write LAG node at addr 0x604e with id 255 and next node 0x604f 0x0000_00000000ff0604fc
+2019-11-28 12:53:32.502318 INFO  BF_MC Write LAG node at addr 0x604f with id 255 and next node 0x6050 0x00ff_06050c00ff0604fc
+2019-11-28 12:53:32.502325 INFO  BF_MC Write LAG node at addr 0x6050 with id 255 and next node 0x6051 0x0000_00000000ff06051c
+2019-11-28 12:53:32.502333 INFO  BF_MC Write LAG node at addr 0x6051 with id 255 and next node 0x6052 0x00ff_06052c00ff06051c
+2019-11-28 12:53:32.502340 INFO  BF_MC Write LAG node at addr 0x6052 with id 255 and next node 0x6053 0x0000_00000000ff06053c
+2019-11-28 12:53:32.502347 INFO  BF_MC Write LAG node at addr 0x6053 with id 255 and next node 0x6054 0x00ff_06054c00ff06053c
+2019-11-28 12:53:32.502354 INFO  BF_MC Write LAG node at addr 0x6054 with id 255 and next node 0x6055 0x0000_00000000ff06055c
+2019-11-28 12:53:32.502362 INFO  BF_MC Write LAG node at addr 0x6055 with id 255 and next node 0x6056 0x00ff_06056c00ff06055c
+2019-11-28 12:53:32.502369 INFO  BF_MC Write LAG node at addr 0x6056 with id 255 and next node 0x6057 0x0000_00000000ff06057c
+2019-11-28 12:53:32.502377 INFO  BF_MC Write LAG node at addr 0x6057 with id 255 and next node 0x6058 0x00ff_06058c00ff06057c
+2019-11-28 12:53:32.502384 INFO  BF_MC Write LAG node at addr 0x6058 with id 255 and next node 0x6059 0x0000_00000000ff06059c
+2019-11-28 12:53:32.502391 INFO  BF_MC Write LAG node at addr 0x6059 with id 255 and next node 0x605a 0x00ff_0605ac00ff06059c
+2019-11-28 12:53:32.502398 INFO  BF_MC Write LAG node at addr 0x605a with id 255 and next node 0x605b 0x0000_00000000ff0605bc
+2019-11-28 12:53:32.502405 INFO  BF_MC Write LAG node at addr 0x605b with id 255 and next node 0x605c 0x00ff_0605cc00ff0605bc
+2019-11-28 12:53:32.502412 INFO  BF_MC Write LAG node at addr 0x605c with id 255 and next node 0x605d 0x0000_00000000ff0605dc
+2019-11-28 12:53:32.502420 INFO  BF_MC Write LAG node at addr 0x605d with id 255 and next node 0x605e 0x00ff_0605ec00ff0605dc
+2019-11-28 12:53:32.502431 INFO  BF_MC Write LAG node at addr 0x605e with id 255 and next node 0x605f 0x0000_00000000ff0605fc
+2019-11-28 12:53:32.502439 INFO  BF_MC Write LAG node at addr 0x605f with id 255 and next node 0x6060 0x00ff_06060c00ff0605fc
+2019-11-28 12:53:32.502446 INFO  BF_MC Write LAG node at addr 0x6060 with id 255 and next node 0x6061 0x0000_00000000ff06061c
+2019-11-28 12:53:32.502453 INFO  BF_MC Write LAG node at addr 0x6061 with id 255 and next node 0x6062 0x00ff_06062c00ff06061c
+2019-11-28 12:53:32.502461 INFO  BF_MC Write LAG node at addr 0x6062 with id 255 and next node 0x6063 0x0000_00000000ff06063c
+2019-11-28 12:53:32.502471 INFO  BF_MC Write LAG node at addr 0x6063 with id 255 and next node 0x6064 0x00ff_06064c00ff06063c
+2019-11-28 12:53:32.502479 INFO  BF_MC Write LAG node at addr 0x6064 with id 255 and next node 0x6065 0x0000_00000000ff06065c
+2019-11-28 12:53:32.502486 INFO  BF_MC Write LAG node at addr 0x6065 with id 255 and next node 0x6066 0x00ff_06066c00ff06065c
+2019-11-28 12:53:32.502494 INFO  BF_MC Write LAG node at addr 0x6066 with id 255 and next node 0x6067 0x0000_00000000ff06067c
+2019-11-28 12:53:32.502501 INFO  BF_MC Write LAG node at addr 0x6067 with id 255 and next node 0x6068 0x00ff_06068c00ff06067c
+2019-11-28 12:53:32.502508 INFO  BF_MC Write LAG node at addr 0x6068 with id 255 and next node 0x6069 0x0000_00000000ff06069c
+2019-11-28 12:53:32.502516 INFO  BF_MC Write LAG node at addr 0x6069 with id 255 and next node 0x606a 0x00ff_0606ac00ff06069c
+2019-11-28 12:53:32.502523 INFO  BF_MC Write LAG node at addr 0x606a with id 255 and next node 0x606b 0x0000_00000000ff0606bc
+2019-11-28 12:53:32.502530 INFO  BF_MC Write LAG node at addr 0x606b with id 255 and next node 0x606c 0x00ff_0606cc00ff0606bc
+2019-11-28 12:53:32.502539 INFO  BF_MC Write LAG node at addr 0x606c with id 255 and next node 0x606d 0x0000_00000000ff0606dc
+2019-11-28 12:53:32.502546 INFO  BF_MC Write LAG node at addr 0x606d with id 255 and next node 0x606e 0x00ff_0606ec00ff0606dc
+2019-11-28 12:53:32.502553 INFO  BF_MC Write LAG node at addr 0x606e with id 255 and next node 0x606f 0x0000_00000000ff0606fc
+2019-11-28 12:53:32.502560 INFO  BF_MC Write LAG node at addr 0x606f with id 255 and next node 0x6070 0x00ff_06070c00ff0606fc
+2019-11-28 12:53:32.502568 INFO  BF_MC Write LAG node at addr 0x6070 with id 255 and next node 0x6071 0x0000_00000000ff06071c
+2019-11-28 12:53:32.502575 INFO  BF_MC Write LAG node at addr 0x6071 with id 255 and next node 0x6072 0x00ff_06072c00ff06071c
+2019-11-28 12:53:32.502582 INFO  BF_MC Write LAG node at addr 0x6072 with id 255 and next node 0x6073 0x0000_00000000ff06073c
+2019-11-28 12:53:32.502589 INFO  BF_MC Write LAG node at addr 0x6073 with id 255 and next node 0x6074 0x00ff_06074c00ff06073c
+2019-11-28 12:53:32.502596 INFO  BF_MC Write LAG node at addr 0x6074 with id 255 and next node 0x6075 0x0000_00000000ff06075c
+2019-11-28 12:53:32.502604 INFO  BF_MC Write LAG node at addr 0x6075 with id 255 and next node 0x6076 0x00ff_06076c00ff06075c
+2019-11-28 12:53:32.502611 INFO  BF_MC Write LAG node at addr 0x6076 with id 255 and next node 0x6077 0x0000_00000000ff06077c
+2019-11-28 12:53:32.502618 INFO  BF_MC Write LAG node at addr 0x6077 with id 255 and next node 0x6078 0x00ff_06078c00ff06077c
+2019-11-28 12:53:32.502625 INFO  BF_MC Write LAG node at addr 0x6078 with id 255 and next node 0x6079 0x0000_00000000ff06079c
+2019-11-28 12:53:32.502632 INFO  BF_MC Write LAG node at addr 0x6079 with id 255 and next node 0x607a 0x00ff_0607ac00ff06079c
+2019-11-28 12:53:32.502639 INFO  BF_MC Write LAG node at addr 0x607a with id 255 and next node 0x607b 0x0000_00000000ff0607bc
+2019-11-28 12:53:32.502647 INFO  BF_MC Write LAG node at addr 0x607b with id 255 and next node 0x607c 0x00ff_0607cc00ff0607bc
+2019-11-28 12:53:32.502654 INFO  BF_MC Write LAG node at addr 0x607c with id 255 and next node 0x607d 0x0000_00000000ff0607dc
+2019-11-28 12:53:32.502661 INFO  BF_MC Write LAG node at addr 0x607d with id 255 and next node 0x607e 0x00ff_0607ec00ff0607dc
+2019-11-28 12:53:32.502669 INFO  BF_MC Write LAG node at addr 0x607e with id 255 and next node 0x607f 0x0000_00000000ff0607fc
+2019-11-28 12:53:32.502680 INFO  BF_MC Write LAG node at addr 0x607f with id 255 and next node 0x6080 0x00ff_06080c00ff0607fc
+2019-11-28 12:53:32.502688 INFO  BF_MC Write LAG node at addr 0x6080 with id 255 and next node 0x6081 0x0000_00000000ff06081c
+2019-11-28 12:53:32.502695 INFO  BF_MC Write LAG node at addr 0x6081 with id 255 and next node 0x6082 0x00ff_06082c00ff06081c
+2019-11-28 12:53:32.502702 INFO  BF_MC Write LAG node at addr 0x6082 with id 255 and next node 0x6083 0x0000_00000000ff06083c
+2019-11-28 12:53:32.502709 INFO  BF_MC Write LAG node at addr 0x6083 with id 255 and next node 0x6084 0x00ff_06084c00ff06083c
+2019-11-28 12:53:32.502717 INFO  BF_MC Write LAG node at addr 0x6084 with id 255 and next node 0x6085 0x0000_00000000ff06085c
+2019-11-28 12:53:32.502724 INFO  BF_MC Write LAG node at addr 0x6085 with id 255 and next node 0x6086 0x00ff_06086c00ff06085c
+2019-11-28 12:53:32.502731 INFO  BF_MC Write LAG node at addr 0x6086 with id 255 and next node 0x6087 0x0000_00000000ff06087c
+2019-11-28 12:53:32.502738 INFO  BF_MC Write LAG node at addr 0x6087 with id 255 and next node 0x6088 0x00ff_06088c00ff06087c
+2019-11-28 12:53:32.502745 INFO  BF_MC Write LAG node at addr 0x6088 with id 255 and next node 0x6089 0x0000_00000000ff06089c
+2019-11-28 12:53:32.502752 INFO  BF_MC Write LAG node at addr 0x6089 with id 255 and next node 0x608a 0x00ff_0608ac00ff06089c
+2019-11-28 12:53:32.502760 INFO  BF_MC Write LAG node at addr 0x608a with id 255 and next node 0x608b 0x0000_00000000ff0608bc
+2019-11-28 12:53:32.502767 INFO  BF_MC Write LAG node at addr 0x608b with id 255 and next node 0x608c 0x00ff_0608cc00ff0608bc
+2019-11-28 12:53:32.502774 INFO  BF_MC Write LAG node at addr 0x608c with id 255 and next node 0x608d 0x0000_00000000ff0608dc
+2019-11-28 12:53:32.502782 INFO  BF_MC Write LAG node at addr 0x608d with id 255 and next node 0x608e 0x00ff_0608ec00ff0608dc
+2019-11-28 12:53:32.502789 INFO  BF_MC Write LAG node at addr 0x608e with id 255 and next node 0x608f 0x0000_00000000ff0608fc
+2019-11-28 12:53:32.502796 INFO  BF_MC Write LAG node at addr 0x608f with id 255 and next node 0x6090 0x00ff_06090c00ff0608fc
+2019-11-28 12:53:32.502803 INFO  BF_MC Write LAG node at addr 0x6090 with id 255 and next node 0x6091 0x0000_00000000ff06091c
+2019-11-28 12:53:32.502810 INFO  BF_MC Write LAG node at addr 0x6091 with id 255 and next node 0x6092 0x00ff_06092c00ff06091c
+2019-11-28 12:53:32.502819 INFO  BF_MC Write LAG node at addr 0x6092 with id 255 and next node 0x6093 0x0000_00000000ff06093c
+2019-11-28 12:53:32.502830 INFO  BF_MC Write LAG node at addr 0x6093 with id 255 and next node 0x6094 0x00ff_06094c00ff06093c
+2019-11-28 12:53:32.502837 INFO  BF_MC Write LAG node at addr 0x6094 with id 255 and next node 0x6095 0x0000_00000000ff06095c
+2019-11-28 12:53:32.502845 INFO  BF_MC Write LAG node at addr 0x6095 with id 255 and next node 0x6096 0x00ff_06096c00ff06095c
+2019-11-28 12:53:32.502852 INFO  BF_MC Write LAG node at addr 0x6096 with id 255 and next node 0x6097 0x0000_00000000ff06097c
+2019-11-28 12:53:32.502859 INFO  BF_MC Write LAG node at addr 0x6097 with id 255 and next node 0x6098 0x00ff_06098c00ff06097c
+2019-11-28 12:53:32.502866 INFO  BF_MC Write LAG node at addr 0x6098 with id 255 and next node 0x6099 0x0000_00000000ff06099c
+2019-11-28 12:53:32.502874 INFO  BF_MC Write LAG node at addr 0x6099 with id 255 and next node 0x609a 0x00ff_0609ac00ff06099c
+2019-11-28 12:53:32.502881 INFO  BF_MC Write LAG node at addr 0x609a with id 255 and next node 0x609b 0x0000_00000000ff0609bc
+2019-11-28 12:53:32.502888 INFO  BF_MC Write LAG node at addr 0x609b with id 255 and next node 0x609c 0x00ff_0609cc00ff0609bc
+2019-11-28 12:53:32.502895 INFO  BF_MC Write LAG node at addr 0x609c with id 255 and next node 0x609d 0x0000_00000000ff0609dc
+2019-11-28 12:53:32.502903 INFO  BF_MC Write LAG node at addr 0x609d with id 255 and next node 0x609e 0x00ff_0609ec00ff0609dc
+2019-11-28 12:53:32.502910 INFO  BF_MC Write LAG node at addr 0x609e with id 255 and next node 0x609f 0x0000_00000000ff0609fc
+2019-11-28 12:53:32.502922 INFO  BF_MC Write LAG node at addr 0x609f with id 255 and next node 0x60a0 0x00ff_060a0c00ff0609fc
+2019-11-28 12:53:32.502929 INFO  BF_MC Write LAG node at addr 0x60a0 with id 255 and next node 0x60a1 0x0000_00000000ff060a1c
+2019-11-28 12:53:32.502937 INFO  BF_MC Write LAG node at addr 0x60a1 with id 255 and next node 0x60a2 0x00ff_060a2c00ff060a1c
+2019-11-28 12:53:32.502944 INFO  BF_MC Write LAG node at addr 0x60a2 with id 255 and next node 0x60a3 0x0000_00000000ff060a3c
+2019-11-28 12:53:32.502951 INFO  BF_MC Write LAG node at addr 0x60a3 with id 255 and next node 0x60a4 0x00ff_060a4c00ff060a3c
+2019-11-28 12:53:32.502958 INFO  BF_MC Write LAG node at addr 0x60a4 with id 255 and next node 0x60a5 0x0000_00000000ff060a5c
+2019-11-28 12:53:32.502966 INFO  BF_MC Write LAG node at addr 0x60a5 with id 255 and next node 0x60a6 0x00ff_060a6c00ff060a5c
+2019-11-28 12:53:32.502973 INFO  BF_MC Write LAG node at addr 0x60a6 with id 255 and next node 0x60a7 0x0000_00000000ff060a7c
+2019-11-28 12:53:32.502980 INFO  BF_MC Write LAG node at addr 0x60a7 with id 255 and next node 0x60a8 0x00ff_060a8c00ff060a7c
+2019-11-28 12:53:32.502989 INFO  BF_MC Write LAG node at addr 0x60a8 with id 255 and next node 0x60a9 0x0000_00000000ff060a9c
+2019-11-28 12:53:32.502996 INFO  BF_MC Write LAG node at addr 0x60a9 with id 255 and next node 0x60aa 0x00ff_060aac00ff060a9c
+2019-11-28 12:53:32.503003 INFO  BF_MC Write LAG node at addr 0x60aa with id 255 and next node 0x60ab 0x0000_00000000ff060abc
+2019-11-28 12:53:32.503010 INFO  BF_MC Write LAG node at addr 0x60ab with id 255 and next node 0x60ac 0x00ff_060acc00ff060abc
+2019-11-28 12:53:32.503017 INFO  BF_MC Write LAG node at addr 0x60ac with id 255 and next node 0x60ad 0x0000_00000000ff060adc
+2019-11-28 12:53:32.503024 INFO  BF_MC Write LAG node at addr 0x60ad with id 255 and next node 0x60ae 0x00ff_060aec00ff060adc
+2019-11-28 12:53:32.503032 INFO  BF_MC Write LAG node at addr 0x60ae with id 255 and next node 0x60af 0x0000_00000000ff060afc
+2019-11-28 12:53:32.503039 INFO  BF_MC Write LAG node at addr 0x60af with id 255 and next node 0x60b0 0x00ff_060b0c00ff060afc
+2019-11-28 12:53:32.503046 INFO  BF_MC Write LAG node at addr 0x60b0 with id 255 and next node 0x60b1 0x0000_00000000ff060b1c
+2019-11-28 12:53:32.503053 INFO  BF_MC Write LAG node at addr 0x60b1 with id 255 and next node 0x60b2 0x00ff_060b2c00ff060b1c
+2019-11-28 12:53:32.503061 INFO  BF_MC Write LAG node at addr 0x60b2 with id 255 and next node 0x60b3 0x0000_00000000ff060b3c
+2019-11-28 12:53:32.503068 INFO  BF_MC Write LAG node at addr 0x60b3 with id 255 and next node 0x60b4 0x00ff_060b4c00ff060b3c
+2019-11-28 12:53:32.503075 INFO  BF_MC Write LAG node at addr 0x60b4 with id 255 and next node 0x60b5 0x0000_00000000ff060b5c
+2019-11-28 12:53:32.503082 INFO  BF_MC Write LAG node at addr 0x60b5 with id 255 and next node 0x60b6 0x00ff_060b6c00ff060b5c
+2019-11-28 12:53:32.503089 INFO  BF_MC Write LAG node at addr 0x60b6 with id 255 and next node 0x60b7 0x0000_00000000ff060b7c
+2019-11-28 12:53:32.503096 INFO  BF_MC Write LAG node at addr 0x60b7 with id 255 and next node 0x60b8 0x00ff_060b8c00ff060b7c
+2019-11-28 12:53:32.503103 INFO  BF_MC Write LAG node at addr 0x60b8 with id 255 and next node 0x60b9 0x0000_00000000ff060b9c
+2019-11-28 12:53:32.503111 INFO  BF_MC Write LAG node at addr 0x60b9 with id 255 and next node 0x60ba 0x00ff_060bac00ff060b9c
+2019-11-28 12:53:32.503118 INFO  BF_MC Write LAG node at addr 0x60ba with id 255 and next node 0x60bb 0x0000_00000000ff060bbc
+2019-11-28 12:53:32.503125 INFO  BF_MC Write LAG node at addr 0x60bb with id 255 and next node 0x60bc 0x00ff_060bcc00ff060bbc
+2019-11-28 12:53:32.503132 INFO  BF_MC Write LAG node at addr 0x60bc with id 255 and next node 0x60bd 0x0000_00000000ff060bdc
+2019-11-28 12:53:32.503140 INFO  BF_MC Write LAG node at addr 0x60bd with id 255 and next node 0x60be 0x00ff_060bec00ff060bdc
+2019-11-28 12:53:32.503147 INFO  BF_MC Write LAG node at addr 0x60be with id 255 and next node 0x60bf 0x0000_00000000ff060bfc
+2019-11-28 12:53:32.503154 INFO  BF_MC Write LAG node at addr 0x60bf with id 255 and next node 0x60c0 0x00ff_060c0c00ff060bfc
+2019-11-28 12:53:32.503166 INFO  BF_MC Write LAG node at addr 0x60c0 with id 255 and next node 0x60c1 0x0000_00000000ff060c1c
+2019-11-28 12:53:32.503174 INFO  BF_MC Write LAG node at addr 0x60c1 with id 255 and next node 0x60c2 0x00ff_060c2c00ff060c1c
+2019-11-28 12:53:32.503185 INFO  BF_MC Write LAG node at addr 0x60c2 with id 255 and next node 0x60c3 0x0000_00000000ff060c3c
+2019-11-28 12:53:32.503193 INFO  BF_MC Write LAG node at addr 0x60c3 with id 255 and next node 0x60c4 0x00ff_060c4c00ff060c3c
+2019-11-28 12:53:32.503200 INFO  BF_MC Write LAG node at addr 0x60c4 with id 255 and next node 0x60c5 0x0000_00000000ff060c5c
+2019-11-28 12:53:32.503207 INFO  BF_MC Write LAG node at addr 0x60c5 with id 255 and next node 0x60c6 0x00ff_060c6c00ff060c5c
+2019-11-28 12:53:32.503215 INFO  BF_MC Write LAG node at addr 0x60c6 with id 255 and next node 0x60c7 0x0000_00000000ff060c7c
+2019-11-28 12:53:32.503222 INFO  BF_MC Write LAG node at addr 0x60c7 with id 255 and next node 0x60c8 0x00ff_060c8c00ff060c7c
+2019-11-28 12:53:32.503229 INFO  BF_MC Write LAG node at addr 0x60c8 with id 255 and next node 0x60c9 0x0000_00000000ff060c9c
+2019-11-28 12:53:32.503237 INFO  BF_MC Write LAG node at addr 0x60c9 with id 255 and next node 0x60ca 0x00ff_060cac00ff060c9c
+2019-11-28 12:53:32.503244 INFO  BF_MC Write LAG node at addr 0x60ca with id 255 and next node 0x60cb 0x0000_00000000ff060cbc
+2019-11-28 12:53:32.503251 INFO  BF_MC Write LAG node at addr 0x60cb with id 255 and next node 0x60cc 0x00ff_060ccc00ff060cbc
+2019-11-28 12:53:32.503258 INFO  BF_MC Write LAG node at addr 0x60cc with id 255 and next node 0x60cd 0x0000_00000000ff060cdc
+2019-11-28 12:53:32.503266 INFO  BF_MC Write LAG node at addr 0x60cd with id 255 and next node 0x60ce 0x00ff_060cec00ff060cdc
+2019-11-28 12:53:32.503273 INFO  BF_MC Write LAG node at addr 0x60ce with id 255 and next node 0x60cf 0x0000_00000000ff060cfc
+2019-11-28 12:53:32.503280 INFO  BF_MC Write LAG node at addr 0x60cf with id 255 and next node 0x60d0 0x00ff_060d0c00ff060cfc
+2019-11-28 12:53:32.503287 INFO  BF_MC Write LAG node at addr 0x60d0 with id 255 and next node 0x60d1 0x0000_00000000ff060d1c
+2019-11-28 12:53:32.503294 INFO  BF_MC Write LAG node at addr 0x60d1 with id 255 and next node 0x60d2 0x00ff_060d2c00ff060d1c
+2019-11-28 12:53:32.503301 INFO  BF_MC Write LAG node at addr 0x60d2 with id 255 and next node 0x60d3 0x0000_00000000ff060d3c
+2019-11-28 12:53:32.503309 INFO  BF_MC Write LAG node at addr 0x60d3 with id 255 and next node 0x60d4 0x00ff_060d4c00ff060d3c
+2019-11-28 12:53:32.503316 INFO  BF_MC Write LAG node at addr 0x60d4 with id 255 and next node 0x60d5 0x0000_00000000ff060d5c
+2019-11-28 12:53:32.503323 INFO  BF_MC Write LAG node at addr 0x60d5 with id 255 and next node 0x60d6 0x00ff_060d6c00ff060d5c
+2019-11-28 12:53:32.503330 INFO  BF_MC Write LAG node at addr 0x60d6 with id 255 and next node 0x60d7 0x0000_00000000ff060d7c
+2019-11-28 12:53:32.503337 INFO  BF_MC Write LAG node at addr 0x60d7 with id 255 and next node 0x60d8 0x00ff_060d8c00ff060d7c
+2019-11-28 12:53:32.503345 INFO  BF_MC Write LAG node at addr 0x60d8 with id 255 and next node 0x60d9 0x0000_00000000ff060d9c
+2019-11-28 12:53:32.503352 INFO  BF_MC Write LAG node at addr 0x60d9 with id 255 and next node 0x60da 0x00ff_060dac00ff060d9c
+2019-11-28 12:53:32.503359 INFO  BF_MC Write LAG node at addr 0x60da with id 255 and next node 0x60db 0x0000_00000000ff060dbc
+2019-11-28 12:53:32.503366 INFO  BF_MC Write LAG node at addr 0x60db with id 255 and next node 0x60dc 0x00ff_060dcc00ff060dbc
+2019-11-28 12:53:32.503373 INFO  BF_MC Write LAG node at addr 0x60dc with id 255 and next node 0x60dd 0x0000_00000000ff060ddc
+2019-11-28 12:53:32.503381 INFO  BF_MC Write LAG node at addr 0x60dd with id 255 and next node 0x60de 0x00ff_060dec00ff060ddc
+2019-11-28 12:53:32.503388 INFO  BF_MC Write LAG node at addr 0x60de with id 255 and next node 0x60df 0x0000_00000000ff060dfc
+2019-11-28 12:53:32.503395 INFO  BF_MC Write LAG node at addr 0x60df with id 255 and next node 0x60e0 0x00ff_060e0c00ff060dfc
+2019-11-28 12:53:32.503407 INFO  BF_MC Write LAG node at addr 0x60e0 with id 255 and next node 0x60e1 0x0000_00000000ff060e1c
+2019-11-28 12:53:32.503414 INFO  BF_MC Write LAG node at addr 0x60e1 with id 255 and next node 0x60e2 0x00ff_060e2c00ff060e1c
+2019-11-28 12:53:32.503421 INFO  BF_MC Write LAG node at addr 0x60e2 with id 255 and next node 0x60e3 0x0000_00000000ff060e3c
+2019-11-28 12:53:32.503428 INFO  BF_MC Write LAG node at addr 0x60e3 with id 255 and next node 0x60e4 0x00ff_060e4c00ff060e3c
+2019-11-28 12:53:32.503437 INFO  BF_MC Write LAG node at addr 0x60e4 with id 255 and next node 0x60e5 0x0000_00000000ff060e5c
+2019-11-28 12:53:32.503444 INFO  BF_MC Write LAG node at addr 0x60e5 with id 255 and next node 0x60e6 0x00ff_060e6c00ff060e5c
+2019-11-28 12:53:32.503451 INFO  BF_MC Write LAG node at addr 0x60e6 with id 255 and next node 0x60e7 0x0000_00000000ff060e7c
+2019-11-28 12:53:32.503459 INFO  BF_MC Write LAG node at addr 0x60e7 with id 255 and next node 0x60e8 0x00ff_060e8c00ff060e7c
+2019-11-28 12:53:32.503466 INFO  BF_MC Write LAG node at addr 0x60e8 with id 255 and next node 0x60e9 0x0000_00000000ff060e9c
+2019-11-28 12:53:32.503473 INFO  BF_MC Write LAG node at addr 0x60e9 with id 255 and next node 0x60ea 0x00ff_060eac00ff060e9c
+2019-11-28 12:53:32.503480 INFO  BF_MC Write LAG node at addr 0x60ea with id 255 and next node 0x60eb 0x0000_00000000ff060ebc
+2019-11-28 12:53:32.503488 INFO  BF_MC Write LAG node at addr 0x60eb with id 255 and next node 0x60ec 0x00ff_060ecc00ff060ebc
+2019-11-28 12:53:32.503495 INFO  BF_MC Write LAG node at addr 0x60ec with id 255 and next node 0x60ed 0x0000_00000000ff060edc
+2019-11-28 12:53:32.503502 INFO  BF_MC Write LAG node at addr 0x60ed with id 255 and next node 0x60ee 0x00ff_060eec00ff060edc
+2019-11-28 12:53:32.503509 INFO  BF_MC Write LAG node at addr 0x60ee with id 255 and next node 0x60ef 0x0000_00000000ff060efc
+2019-11-28 12:53:32.503516 INFO  BF_MC Write LAG node at addr 0x60ef with id 255 and next node 0x60f0 0x00ff_060f0c00ff060efc
+2019-11-28 12:53:32.503523 INFO  BF_MC Write LAG node at addr 0x60f0 with id 255 and next node 0x60f1 0x0000_00000000ff060f1c
+2019-11-28 12:53:32.503532 INFO  BF_MC Write LAG node at addr 0x60f1 with id 255 and next node 0x60f2 0x00ff_060f2c00ff060f1c
+2019-11-28 12:53:32.503542 INFO  BF_MC Write LAG node at addr 0x60f2 with id 255 and next node 0x60f3 0x0000_00000000ff060f3c
+2019-11-28 12:53:32.503550 INFO  BF_MC Write LAG node at addr 0x60f3 with id 255 and next node 0x60f4 0x00ff_060f4c00ff060f3c
+2019-11-28 12:53:32.503557 INFO  BF_MC Write LAG node at addr 0x60f4 with id 255 and next node 0x60f5 0x0000_00000000ff060f5c
+2019-11-28 12:53:32.503564 INFO  BF_MC Write LAG node at addr 0x60f5 with id 255 and next node 0x60f6 0x00ff_060f6c00ff060f5c
+2019-11-28 12:53:32.503571 INFO  BF_MC Write LAG node at addr 0x60f6 with id 255 and next node 0x60f7 0x0000_00000000ff060f7c
+2019-11-28 12:53:32.503578 INFO  BF_MC Write LAG node at addr 0x60f7 with id 255 and next node 0x60f8 0x00ff_060f8c00ff060f7c
+2019-11-28 12:53:32.503586 INFO  BF_MC Write LAG node at addr 0x60f8 with id 255 and next node 0x60f9 0x0000_00000000ff060f9c
+2019-11-28 12:53:32.503593 INFO  BF_MC Write LAG node at addr 0x60f9 with id 255 and next node 0x60fa 0x00ff_060fac00ff060f9c
+2019-11-28 12:53:32.503600 INFO  BF_MC Write LAG node at addr 0x60fa with id 255 and next node 0x60fb 0x0000_00000000ff060fbc
+2019-11-28 12:53:32.503607 INFO  BF_MC Write LAG node at addr 0x60fb with id 255 and next node 0x60fc 0x00ff_060fcc00ff060fbc
+2019-11-28 12:53:32.503614 INFO  BF_MC Write LAG node at addr 0x60fc with id 255 and next node 0x60fd 0x0000_00000000ff060fdc
+2019-11-28 12:53:32.503621 INFO  BF_MC Write LAG node at addr 0x60fd with id 255 and next node 0x60fe 0x00ff_060fec00ff060fdc
+2019-11-28 12:53:32.503629 INFO  BF_MC Write LAG node at addr 0x60fe with id 255 and next node 0x60ff 0x0000_00000000ff060ffc
+2019-11-28 12:53:32.503636 INFO  BF_MC Write LAG node at addr 0x60ff with id 255 and next node 0x6100 0x00ff_06100c00ff060ffc
+2019-11-28 12:53:32.503644 INFO  BF_MC Write LAG node at addr 0x6100 with id 255 and next node 0x6101 0x0000_00000000ff06101c
+2019-11-28 12:53:32.503655 INFO  BF_MC Write LAG node at addr 0x6101 with id 255 and next node 0x6102 0x00ff_06102c00ff06101c
+2019-11-28 12:53:32.503668 INFO  BF_MC Write LAG node at addr 0x6102 with id 255 and next node 0x6103 0x0000_00000000ff06103c
+2019-11-28 12:53:32.503677 INFO  BF_MC Write LAG node at addr 0x6103 with id 255 and next node 0 0x00ff_00000c00ff06103c
+2019-11-28 12:53:32.503685 INFO  BF_MC Allocated RDM addresses 0x21c0 - 0x21df
+2019-11-28 12:53:32.503692 INFO  BF_MC Write L1End node at addr 0x21c0, rid 0, l2 0x6101
+2019-11-28 12:53:32.503699 INFO  BF_MC Write L1End node at addr 0x21c1, rid 0, l2 0x6100
+2019-11-28 12:53:32.503706 INFO  BF_MC Write L1End node at addr 0x21c2, rid 0, l2 0x60ff
+2019-11-28 12:53:32.503712 INFO  BF_MC Write L1End node at addr 0x21c3, rid 0, l2 0x60fe
+2019-11-28 12:53:32.503719 INFO  BF_MC Write L1End node at addr 0x21c4, rid 0, l2 0x60fd
+2019-11-28 12:53:32.503725 INFO  BF_MC Write L1End node at addr 0x21c5, rid 0, l2 0x60fc
+2019-11-28 12:53:32.503732 INFO  BF_MC Write L1End node at addr 0x21c6, rid 0, l2 0x60fb
+2019-11-28 12:53:32.503738 INFO  BF_MC Write L1End node at addr 0x21c7, rid 0, l2 0x60fa
+2019-11-28 12:53:32.503745 INFO  BF_MC Write L1End node at addr 0x21c8, rid 0, l2 0x60f8
+2019-11-28 12:53:32.503752 INFO  BF_MC Write L1End node at addr 0x21c9, rid 0, l2 0x60f6
+2019-11-28 12:53:32.503758 INFO  BF_MC Write L1End node at addr 0x21ca, rid 0, l2 0x60f4
+2019-11-28 12:53:32.503765 INFO  BF_MC Write L1End node at addr 0x21cb, rid 0, l2 0x60f2
+2019-11-28 12:53:32.503771 INFO  BF_MC Write L1End node at addr 0x21cc, rid 0, l2 0x60f0
+2019-11-28 12:53:32.503778 INFO  BF_MC Write L1End node at addr 0x21cd, rid 0, l2 0x60ee
+2019-11-28 12:53:32.503785 INFO  BF_MC Write L1End node at addr 0x21ce, rid 0, l2 0x60ec
+2019-11-28 12:53:32.503791 INFO  BF_MC Write L1End node at addr 0x21cf, rid 0, l2 0x60ea
+2019-11-28 12:53:32.503798 INFO  BF_MC Write L1End node at addr 0x21d0, rid 0, l2 0x60e8
+2019-11-28 12:53:32.503804 INFO  BF_MC Write L1End node at addr 0x21d1, rid 0, l2 0x60e6
+2019-11-28 12:53:32.503811 INFO  BF_MC Write L1End node at addr 0x21d2, rid 0, l2 0x60e4
+2019-11-28 12:53:32.503817 INFO  BF_MC Write L1End node at addr 0x21d3, rid 0, l2 0x60e0
+2019-11-28 12:53:32.503824 INFO  BF_MC Write L1End node at addr 0x21d4, rid 0, l2 0x60dc
+2019-11-28 12:53:32.503831 INFO  BF_MC Write L1End node at addr 0x21d5, rid 0, l2 0x60d8
+2019-11-28 12:53:32.503837 INFO  BF_MC Write L1End node at addr 0x21d6, rid 0, l2 0x60d4
+2019-11-28 12:53:32.503844 INFO  BF_MC Write L1End node at addr 0x21d7, rid 0, l2 0x60cc
+2019-11-28 12:53:32.503850 INFO  BF_MC Write L1End node at addr 0x21d8, rid 0, l2 0x60c4
+2019-11-28 12:53:32.503857 INFO  BF_MC Write L1End node at addr 0x21d9, rid 0, l2 0x60bc
+2019-11-28 12:53:32.503863 INFO  BF_MC Write L1End node at addr 0x21da, rid 0, l2 0x60a0
+2019-11-28 12:53:32.503871 INFO  BF_MC Write L1End node at addr 0x21db, rid 0, l2 0x6087
+2019-11-28 12:53:32.503878 INFO  BF_MC Write L1End node at addr 0x21dc, rid 0, l2 0x606e
+2019-11-28 12:53:32.503885 INFO  BF_MC Write L1End node at addr 0x21dd, rid 0, l2 0x6055
+2019-11-28 12:53:32.503895 INFO  BF_MC Write L1End node at addr 0x21de, rid 0, l2 0x603c
+2019-11-28 12:53:32.503902 INFO  BF_MC Write L1End node at addr 0x21df, rid 0, l2 0x6000
+2019-11-28 12:53:32.503910 INFO  BF_MC Allocated RDM addresses 0x7000 - 0x7103
+2019-11-28 12:53:32.503917 INFO  BF_MC Write LAG node at addr 0x7000 with id 255 and next node 0x7001 0x0000_00000000ff07001c
+2019-11-28 12:53:32.503924 INFO  BF_MC Write LAG node at addr 0x7001 with id 255 and next node 0x7002 0x00ff_07002c00ff07001c
+2019-11-28 12:53:32.503931 INFO  BF_MC Write LAG node at addr 0x7002 with id 255 and next node 0x7003 0x0000_00000000ff07003c
+2019-11-28 12:53:32.503939 INFO  BF_MC Write LAG node at addr 0x7003 with id 255 and next node 0x7004 0x00ff_07004c00ff07003c
+2019-11-28 12:53:32.503946 INFO  BF_MC Write LAG node at addr 0x7004 with id 255 and next node 0x7005 0x0000_00000000ff07005c
+2019-11-28 12:53:32.503958 INFO  BF_MC Write LAG node at addr 0x7005 with id 255 and next node 0x7006 0x00ff_07006c00ff07005c
+2019-11-28 12:53:32.503965 INFO  BF_MC Write LAG node at addr 0x7006 with id 255 and next node 0x7007 0x0000_00000000ff07007c
+2019-11-28 12:53:32.503972 INFO  BF_MC Write LAG node at addr 0x7007 with id 255 and next node 0x7008 0x00ff_07008c00ff07007c
+2019-11-28 12:53:32.503980 INFO  BF_MC Write LAG node at addr 0x7008 with id 255 and next node 0x7009 0x0000_00000000ff07009c
+2019-11-28 12:53:32.503987 INFO  BF_MC Write LAG node at addr 0x7009 with id 255 and next node 0x700a 0x00ff_0700ac00ff07009c
+2019-11-28 12:53:32.503995 INFO  BF_MC Write LAG node at addr 0x700a with id 255 and next node 0x700b 0x0000_00000000ff0700bc
+2019-11-28 12:53:32.504002 INFO  BF_MC Write LAG node at addr 0x700b with id 255 and next node 0x700c 0x00ff_0700cc00ff0700bc
+2019-11-28 12:53:32.504009 INFO  BF_MC Write LAG node at addr 0x700c with id 255 and next node 0x700d 0x0000_00000000ff0700dc
+2019-11-28 12:53:32.504016 INFO  BF_MC Write LAG node at addr 0x700d with id 255 and next node 0x700e 0x00ff_0700ec00ff0700dc
+2019-11-28 12:53:32.504023 INFO  BF_MC Write LAG node at addr 0x700e with id 255 and next node 0x700f 0x0000_00000000ff0700fc
+2019-11-28 12:53:32.504031 INFO  BF_MC Write LAG node at addr 0x700f with id 255 and next node 0x7010 0x00ff_07010c00ff0700fc
+2019-11-28 12:53:32.504038 INFO  BF_MC Write LAG node at addr 0x7010 with id 255 and next node 0x7011 0x0000_00000000ff07011c
+2019-11-28 12:53:32.504045 INFO  BF_MC Write LAG node at addr 0x7011 with id 255 and next node 0x7012 0x00ff_07012c00ff07011c
+2019-11-28 12:53:32.504052 INFO  BF_MC Write LAG node at addr 0x7012 with id 255 and next node 0x7013 0x0000_00000000ff07013c
+2019-11-28 12:53:32.504060 INFO  BF_MC Write LAG node at addr 0x7013 with id 255 and next node 0x7014 0x00ff_07014c00ff07013c
+2019-11-28 12:53:32.504067 INFO  BF_MC Write LAG node at addr 0x7014 with id 255 and next node 0x7015 0x0000_00000000ff07015c
+2019-11-28 12:53:32.504074 INFO  BF_MC Write LAG node at addr 0x7015 with id 255 and next node 0x7016 0x00ff_07016c00ff07015c
+2019-11-28 12:53:32.504081 INFO  BF_MC Write LAG node at addr 0x7016 with id 255 and next node 0x7017 0x0000_00000000ff07017c
+2019-11-28 12:53:32.504088 INFO  BF_MC Write LAG node at addr 0x7017 with id 255 and next node 0x7018 0x00ff_07018c00ff07017c
+2019-11-28 12:53:32.504095 INFO  BF_MC Write LAG node at addr 0x7018 with id 255 and next node 0x7019 0x0000_00000000ff07019c
+2019-11-28 12:53:32.504102 INFO  BF_MC Write LAG node at addr 0x7019 with id 255 and next node 0x701a 0x00ff_0701ac00ff07019c
+2019-11-28 12:53:32.504109 INFO  BF_MC Write LAG node at addr 0x701a with id 255 and next node 0x701b 0x0000_00000000ff0701bc
+2019-11-28 12:53:32.504116 INFO  BF_MC Write LAG node at addr 0x701b with id 255 and next node 0x701c 0x00ff_0701cc00ff0701bc
+2019-11-28 12:53:32.504124 INFO  BF_MC Write LAG node at addr 0x701c with id 255 and next node 0x701d 0x0000_00000000ff0701dc
+2019-11-28 12:53:32.504131 INFO  BF_MC Write LAG node at addr 0x701d with id 255 and next node 0x701e 0x00ff_0701ec00ff0701dc
+2019-11-28 12:53:32.504138 INFO  BF_MC Write LAG node at addr 0x701e with id 255 and next node 0x701f 0x0000_00000000ff0701fc
+2019-11-28 12:53:32.504145 INFO  BF_MC Write LAG node at addr 0x701f with id 255 and next node 0x7020 0x00ff_07020c00ff0701fc
+2019-11-28 12:53:32.504152 INFO  BF_MC Write LAG node at addr 0x7020 with id 255 and next node 0x7021 0x0000_00000000ff07021c
+2019-11-28 12:53:32.504159 INFO  BF_MC Write LAG node at addr 0x7021 with id 255 and next node 0x7022 0x00ff_07022c00ff07021c
+2019-11-28 12:53:32.504167 INFO  BF_MC Write LAG node at addr 0x7022 with id 255 and next node 0x7023 0x0000_00000000ff07023c
+2019-11-28 12:53:32.504174 INFO  BF_MC Write LAG node at addr 0x7023 with id 255 and next node 0x7024 0x00ff_07024c00ff07023c
+2019-11-28 12:53:32.504181 INFO  BF_MC Write LAG node at addr 0x7024 with id 255 and next node 0x7025 0x0000_00000000ff07025c
+2019-11-28 12:53:32.504188 INFO  BF_MC Write LAG node at addr 0x7025 with id 255 and next node 0x7026 0x00ff_07026c00ff07025c
+2019-11-28 12:53:32.504199 INFO  BF_MC Write LAG node at addr 0x7026 with id 255 and next node 0x7027 0x0000_00000000ff07027c
+2019-11-28 12:53:32.504207 INFO  BF_MC Write LAG node at addr 0x7027 with id 255 and next node 0x7028 0x00ff_07028c00ff07027c
+2019-11-28 12:53:32.504214 INFO  BF_MC Write LAG node at addr 0x7028 with id 255 and next node 0x7029 0x0000_00000000ff07029c
+2019-11-28 12:53:32.504221 INFO  BF_MC Write LAG node at addr 0x7029 with id 255 and next node 0x702a 0x00ff_0702ac00ff07029c
+2019-11-28 12:53:32.504228 INFO  BF_MC Write LAG node at addr 0x702a with id 255 and next node 0x702b 0x0000_00000000ff0702bc
+2019-11-28 12:53:32.504235 INFO  BF_MC Write LAG node at addr 0x702b with id 255 and next node 0x702c 0x00ff_0702cc00ff0702bc
+2019-11-28 12:53:32.504243 INFO  BF_MC Write LAG node at addr 0x702c with id 255 and next node 0x702d 0x0000_00000000ff0702dc
+2019-11-28 12:53:32.504254 INFO  BF_MC Write LAG node at addr 0x702d with id 255 and next node 0x702e 0x00ff_0702ec00ff0702dc
+2019-11-28 12:53:32.504262 INFO  BF_MC Write LAG node at addr 0x702e with id 255 and next node 0x702f 0x0000_00000000ff0702fc
+2019-11-28 12:53:32.504269 INFO  BF_MC Write LAG node at addr 0x702f with id 255 and next node 0x7030 0x00ff_07030c00ff0702fc
+2019-11-28 12:53:32.504276 INFO  BF_MC Write LAG node at addr 0x7030 with id 255 and next node 0x7031 0x0000_00000000ff07031c
+2019-11-28 12:53:32.504284 INFO  BF_MC Write LAG node at addr 0x7031 with id 255 and next node 0x7032 0x00ff_07032c00ff07031c
+2019-11-28 12:53:32.504291 INFO  BF_MC Write LAG node at addr 0x7032 with id 255 and next node 0x7033 0x0000_00000000ff07033c
+2019-11-28 12:53:32.504298 INFO  BF_MC Write LAG node at addr 0x7033 with id 255 and next node 0x7034 0x00ff_07034c00ff07033c
+2019-11-28 12:53:32.504306 INFO  BF_MC Write LAG node at addr 0x7034 with id 255 and next node 0x7035 0x0000_00000000ff07035c
+2019-11-28 12:53:32.504313 INFO  BF_MC Write LAG node at addr 0x7035 with id 255 and next node 0x7036 0x00ff_07036c00ff07035c
+2019-11-28 12:53:32.504322 INFO  BF_MC Write LAG node at addr 0x7036 with id 255 and next node 0x7037 0x0000_00000000ff07037c
+2019-11-28 12:53:32.504329 INFO  BF_MC Write LAG node at addr 0x7037 with id 255 and next node 0x7038 0x00ff_07038c00ff07037c
+2019-11-28 12:53:32.504336 INFO  BF_MC Write LAG node at addr 0x7038 with id 255 and next node 0x7039 0x0000_00000000ff07039c
+2019-11-28 12:53:32.504343 INFO  BF_MC Write LAG node at addr 0x7039 with id 255 and next node 0x703a 0x00ff_0703ac00ff07039c
+2019-11-28 12:53:32.504351 INFO  BF_MC Write LAG node at addr 0x703a with id 255 and next node 0x703b 0x0000_00000000ff0703bc
+2019-11-28 12:53:32.504358 INFO  BF_MC Write LAG node at addr 0x703b with id 255 and next node 0x703c 0x00ff_0703cc00ff0703bc
+2019-11-28 12:53:32.504365 INFO  BF_MC Write LAG node at addr 0x703c with id 255 and next node 0x703d 0x0000_00000000ff0703dc
+2019-11-28 12:53:32.504373 INFO  BF_MC Write LAG node at addr 0x703d with id 255 and next node 0x703e 0x00ff_0703ec00ff0703dc
+2019-11-28 12:53:32.504360 DEBUG BF_PLTFM QSFP:  5 : QSFP_FSM_ST_INSERTED         --> QSFP_FSM_ST_DETECTED         (0ms)
+2019-11-28 12:53:32.504381 INFO  BF_MC Write LAG node at addr 0x703e with id 255 and next node 0x703f 0x0000_00000000ff0703fc
+2019-11-28 12:53:32.504394 INFO  BF_MC Write LAG node at addr 0x703f with id 255 and next node 0x7040 0x00ff_07040c00ff0703fc
+2019-11-28 12:53:32.504402 INFO  BF_MC Write LAG node at addr 0x7040 with id 255 and next node 0x7041 0x0000_00000000ff07041c
+2019-11-28 12:53:32.504409 INFO  BF_MC Write LAG node at addr 0x7041 with id 255 and next node 0x7042 0x00ff_07042c00ff07041c
+2019-11-28 12:53:32.504416 INFO  BF_MC Write LAG node at addr 0x7042 with id 255 and next node 0x7043 0x0000_00000000ff07043c
+2019-11-28 12:53:32.504424 INFO  BF_MC Write LAG node at addr 0x7043 with id 255 and next node 0x7044 0x00ff_07044c00ff07043c
+2019-11-28 12:53:32.504431 INFO  BF_MC Write LAG node at addr 0x7044 with id 255 and next node 0x7045 0x0000_00000000ff07045c
+2019-11-28 12:53:32.504443 INFO  BF_MC Write LAG node at addr 0x7045 with id 255 and next node 0x7046 0x00ff_07046c00ff07045c
+2019-11-28 12:53:32.504450 INFO  BF_MC Write LAG node at addr 0x7046 with id 255 and next node 0x7047 0x0000_00000000ff07047c
+2019-11-28 12:53:32.504458 INFO  BF_MC Write LAG node at addr 0x7047 with id 255 and next node 0x7048 0x00ff_07048c00ff07047c
+2019-11-28 12:53:32.504465 INFO  BF_MC Write LAG node at addr 0x7048 with id 255 and next node 0x7049 0x0000_00000000ff07049c
+2019-11-28 12:53:32.504472 INFO  BF_MC Write LAG node at addr 0x7049 with id 255 and next node 0x704a 0x00ff_0704ac00ff07049c
+2019-11-28 12:53:32.504479 INFO  BF_MC Write LAG node at addr 0x704a with id 255 and next node 0x704b 0x0000_00000000ff0704bc
+2019-11-28 12:53:32.504487 INFO  BF_MC Write LAG node at addr 0x704b with id 255 and next node 0x704c 0x00ff_0704cc00ff0704bc
+2019-11-28 12:53:32.504494 INFO  BF_MC Write LAG node at addr 0x704c with id 255 and next node 0x704d 0x0000_00000000ff0704dc
+2019-11-28 12:53:32.504501 INFO  BF_MC Write LAG node at addr 0x704d with id 255 and next node 0x704e 0x00ff_0704ec00ff0704dc
+2019-11-28 12:53:32.504508 INFO  BF_MC Write LAG node at addr 0x704e with id 255 and next node 0x704f 0x0000_00000000ff0704fc
+2019-11-28 12:53:32.504515 INFO  BF_MC Write LAG node at addr 0x704f with id 255 and next node 0x7050 0x00ff_07050c00ff0704fc
+2019-11-28 12:53:32.504522 INFO  BF_MC Write LAG node at addr 0x7050 with id 255 and next node 0x7051 0x0000_00000000ff07051c
+2019-11-28 12:53:32.504530 INFO  BF_MC Write LAG node at addr 0x7051 with id 255 and next node 0x7052 0x00ff_07052c00ff07051c
+2019-11-28 12:53:32.504537 INFO  BF_MC Write LAG node at addr 0x7052 with id 255 and next node 0x7053 0x0000_00000000ff07053c
+2019-11-28 12:53:32.504544 INFO  BF_MC Write LAG node at addr 0x7053 with id 255 and next node 0x7054 0x00ff_07054c00ff07053c
+2019-11-28 12:53:32.504552 INFO  BF_MC Write LAG node at addr 0x7054 with id 255 and next node 0x7055 0x0000_00000000ff07055c
+2019-11-28 12:53:32.504559 INFO  BF_MC Write LAG node at addr 0x7055 with id 255 and next node 0x7056 0x00ff_07056c00ff07055c
+2019-11-28 12:53:32.504566 INFO  BF_MC Write LAG node at addr 0x7056 with id 255 and next node 0x7057 0x0000_00000000ff07057c
+2019-11-28 12:53:32.504573 INFO  BF_MC Write LAG node at addr 0x7057 with id 255 and next node 0x7058 0x00ff_07058c00ff07057c
+2019-11-28 12:53:32.504580 INFO  BF_MC Write LAG node at addr 0x7058 with id 255 and next node 0x7059 0x0000_00000000ff07059c
+2019-11-28 12:53:32.504587 INFO  BF_MC Write LAG node at addr 0x7059 with id 255 and next node 0x705a 0x00ff_0705ac00ff07059c
+2019-11-28 12:53:32.504595 INFO  BF_MC Write LAG node at addr 0x705a with id 255 and next node 0x705b 0x0000_00000000ff0705bc
+2019-11-28 12:53:32.504604 INFO  BF_MC Write LAG node at addr 0x705b with id 255 and next node 0x705c 0x00ff_0705cc00ff0705bc
+2019-11-28 12:53:32.504614 INFO  BF_MC Write LAG node at addr 0x705c with id 255 and next node 0x705d 0x0000_00000000ff0705dc
+2019-11-28 12:53:32.504621 INFO  BF_MC Write LAG node at addr 0x705d with id 255 and next node 0x705e 0x00ff_0705ec00ff0705dc
+2019-11-28 12:53:32.504628 INFO  BF_MC Write LAG node at addr 0x705e with id 255 and next node 0x705f 0x0000_00000000ff0705fc
+2019-11-28 12:53:32.504636 INFO  BF_MC Write LAG node at addr 0x705f with id 255 and next node 0x7060 0x00ff_07060c00ff0705fc
+2019-11-28 12:53:32.504643 INFO  BF_MC Write LAG node at addr 0x7060 with id 255 and next node 0x7061 0x0000_00000000ff07061c
+2019-11-28 12:53:32.504650 INFO  BF_MC Write LAG node at addr 0x7061 with id 255 and next node 0x7062 0x00ff_07062c00ff07061c
+2019-11-28 12:53:32.504658 INFO  BF_MC Write LAG node at addr 0x7062 with id 255 and next node 0x7063 0x0000_00000000ff07063c
+2019-11-28 12:53:32.504665 INFO  BF_MC Write LAG node at addr 0x7063 with id 255 and next node 0x7064 0x00ff_07064c00ff07063c
+2019-11-28 12:53:32.504672 INFO  BF_MC Write LAG node at addr 0x7064 with id 255 and next node 0x7065 0x0000_00000000ff07065c
+2019-11-28 12:53:32.504679 INFO  BF_MC Write LAG node at addr 0x7065 with id 255 and next node 0x7066 0x00ff_07066c00ff07065c
+2019-11-28 12:53:32.504693 INFO  BF_MC Write LAG node at addr 0x7066 with id 255 and next node 0x7067 0x0000_00000000ff07067c
+2019-11-28 12:53:32.504700 INFO  BF_MC Write LAG node at addr 0x7067 with id 255 and next node 0x7068 0x00ff_07068c00ff07067c
+2019-11-28 12:53:32.504707 INFO  BF_MC Write LAG node at addr 0x7068 with id 255 and next node 0x7069 0x0000_00000000ff07069c
+2019-11-28 12:53:32.504714 INFO  BF_MC Write LAG node at addr 0x7069 with id 255 and next node 0x706a 0x00ff_0706ac00ff07069c
+2019-11-28 12:53:32.504722 INFO  BF_MC Write LAG node at addr 0x706a with id 255 and next node 0x706b 0x0000_00000000ff0706bc
+2019-11-28 12:53:32.504729 INFO  BF_MC Write LAG node at addr 0x706b with id 255 and next node 0x706c 0x00ff_0706cc00ff0706bc
+2019-11-28 12:53:32.504736 INFO  BF_MC Write LAG node at addr 0x706c with id 255 and next node 0x706d 0x0000_00000000ff0706dc
+2019-11-28 12:53:32.510422 INFO  BF_MC Write LAG node at addr 0x706d with id 255 and next node 0x706e 0x00ff_0706ec00ff0706dc
+2019-11-28 12:53:32.510475 INFO  BF_MC Write LAG node at addr 0x706e with id 255 and next node 0x706f 0x0000_00000000ff0706fc
+2019-11-28 12:53:32.510492 INFO  BF_MC Write LAG node at addr 0x706f with id 255 and next node 0x7070 0x00ff_07070c00ff0706fc
+2019-11-28 12:53:32.510508 INFO  BF_MC Write LAG node at addr 0x7070 with id 255 and next node 0x7071 0x0000_00000000ff07071c
+2019-11-28 12:53:32.510524 INFO  BF_MC Write LAG node at addr 0x7071 with id 255 and next node 0x7072 0x00ff_07072c00ff07071c
+2019-11-28 12:53:32.510540 INFO  BF_MC Write LAG node at addr 0x7072 with id 255 and next node 0x7073 0x0000_00000000ff07073c
+2019-11-28 12:53:32.510556 INFO  BF_MC Write LAG node at addr 0x7073 with id 255 and next node 0x7074 0x00ff_07074c00ff07073c
+2019-11-28 12:53:32.510571 INFO  BF_MC Write LAG node at addr 0x7074 with id 255 and next node 0x7075 0x0000_00000000ff07075c
+2019-11-28 12:53:32.510587 INFO  BF_MC Write LAG node at addr 0x7075 with id 255 and next node 0x7076 0x00ff_07076c00ff07075c
+2019-11-28 12:53:32.510603 INFO  BF_MC Write LAG node at addr 0x7076 with id 255 and next node 0x7077 0x0000_00000000ff07077c
+2019-11-28 12:53:32.510618 INFO  BF_MC Write LAG node at addr 0x7077 with id 255 and next node 0x7078 0x00ff_07078c00ff07077c
+2019-11-28 12:53:32.510634 INFO  BF_MC Write LAG node at addr 0x7078 with id 255 and next node 0x7079 0x0000_00000000ff07079c
+2019-11-28 12:53:32.510650 INFO  BF_MC Write LAG node at addr 0x7079 with id 255 and next node 0x707a 0x00ff_0707ac00ff07079c
+2019-11-28 12:53:32.510665 INFO  BF_MC Write LAG node at addr 0x707a with id 255 and next node 0x707b 0x0000_00000000ff0707bc
+2019-11-28 12:53:32.510694 INFO  BF_MC Write LAG node at addr 0x707b with id 255 and next node 0x707c 0x00ff_0707cc00ff0707bc
+2019-11-28 12:53:32.510701 INFO  BF_MC Write LAG node at addr 0x707c with id 255 and next node 0x707d 0x0000_00000000ff0707dc
+2019-11-28 12:53:32.510709 INFO  BF_MC Write LAG node at addr 0x707d with id 255 and next node 0x707e 0x00ff_0707ec00ff0707dc
+2019-11-28 12:53:32.510717 INFO  BF_MC Write LAG node at addr 0x707e with id 255 and next node 0x707f 0x0000_00000000ff0707fc
+2019-11-28 12:53:32.510725 INFO  BF_MC Write LAG node at addr 0x707f with id 255 and next node 0x7080 0x00ff_07080c00ff0707fc
+2019-11-28 12:53:32.510733 INFO  BF_MC Write LAG node at addr 0x7080 with id 255 and next node 0x7081 0x0000_00000000ff07081c
+2019-11-28 12:53:32.510741 INFO  BF_MC Write LAG node at addr 0x7081 with id 255 and next node 0x7082 0x00ff_07082c00ff07081c
+2019-11-28 12:53:32.510749 INFO  BF_MC Write LAG node at addr 0x7082 with id 255 and next node 0x7083 0x0000_00000000ff07083c
+2019-11-28 12:53:32.510757 INFO  BF_MC Write LAG node at addr 0x7083 with id 255 and next node 0x7084 0x00ff_07084c00ff07083c
+2019-11-28 12:53:32.510766 INFO  BF_MC Write LAG node at addr 0x7084 with id 255 and next node 0x7085 0x0000_00000000ff07085c
+2019-11-28 12:53:32.510774 INFO  BF_MC Write LAG node at addr 0x7085 with id 255 and next node 0x7086 0x00ff_07086c00ff07085c
+2019-11-28 12:53:32.510790 INFO  BF_MC Write LAG node at addr 0x7086 with id 255 and next node 0x7087 0x0000_00000000ff07087c
+2019-11-28 12:53:32.510798 INFO  BF_MC Write LAG node at addr 0x7087 with id 255 and next node 0x7088 0x00ff_07088c00ff07087c
+2019-11-28 12:53:32.510805 INFO  BF_MC Write LAG node at addr 0x7088 with id 255 and next node 0x7089 0x0000_00000000ff07089c
+2019-11-28 12:53:32.510812 INFO  BF_MC Write LAG node at addr 0x7089 with id 255 and next node 0x708a 0x00ff_0708ac00ff07089c
+2019-11-28 12:53:32.510819 INFO  BF_MC Write LAG node at addr 0x708a with id 255 and next node 0x708b 0x0000_00000000ff0708bc
+2019-11-28 12:53:32.510827 INFO  BF_MC Write LAG node at addr 0x708b with id 255 and next node 0x708c 0x00ff_0708cc00ff0708bc
+2019-11-28 12:53:32.510834 INFO  BF_MC Write LAG node at addr 0x708c with id 255 and next node 0x708d 0x0000_00000000ff0708dc
+2019-11-28 12:53:32.510841 INFO  BF_MC Write LAG node at addr 0x708d with id 255 and next node 0x708e 0x00ff_0708ec00ff0708dc
+2019-11-28 12:53:32.510848 INFO  BF_MC Write LAG node at addr 0x708e with id 255 and next node 0x708f 0x0000_00000000ff0708fc
+2019-11-28 12:53:32.510855 INFO  BF_MC Write LAG node at addr 0x708f with id 255 and next node 0x7090 0x00ff_07090c00ff0708fc
+2019-11-28 12:53:32.510863 INFO  BF_MC Write LAG node at addr 0x7090 with id 255 and next node 0x7091 0x0000_00000000ff07091c
+2019-11-28 12:53:32.510870 INFO  BF_MC Write LAG node at addr 0x7091 with id 255 and next node 0x7092 0x00ff_07092c00ff07091c
+2019-11-28 12:53:32.510878 INFO  BF_MC Write LAG node at addr 0x7092 with id 255 and next node 0x7093 0x0000_00000000ff07093c
+2019-11-28 12:53:32.510885 INFO  BF_MC Write LAG node at addr 0x7093 with id 255 and next node 0x7094 0x00ff_07094c00ff07093c
+2019-11-28 12:53:32.510892 INFO  BF_MC Write LAG node at addr 0x7094 with id 255 and next node 0x7095 0x0000_00000000ff07095c
+2019-11-28 12:53:32.510900 INFO  BF_MC Write LAG node at addr 0x7095 with id 255 and next node 0x7096 0x00ff_07096c00ff07095c
+2019-11-28 12:53:32.510907 INFO  BF_MC Write LAG node at addr 0x7096 with id 255 and next node 0x7097 0x0000_00000000ff07097c
+2019-11-28 12:53:32.510914 INFO  BF_MC Write LAG node at addr 0x7097 with id 255 and next node 0x7098 0x00ff_07098c00ff07097c
+2019-11-28 12:53:32.510922 INFO  BF_MC Write LAG node at addr 0x7098 with id 255 and next node 0x7099 0x0000_00000000ff07099c
+2019-11-28 12:53:32.510929 INFO  BF_MC Write LAG node at addr 0x7099 with id 255 and next node 0x709a 0x00ff_0709ac00ff07099c
+2019-11-28 12:53:32.510936 INFO  BF_MC Write LAG node at addr 0x709a with id 255 and next node 0x709b 0x0000_00000000ff0709bc
+2019-11-28 12:53:32.510943 INFO  BF_MC Write LAG node at addr 0x709b with id 255 and next node 0x709c 0x00ff_0709cc00ff0709bc
+2019-11-28 12:53:32.510951 INFO  BF_MC Write LAG node at addr 0x709c with id 255 and next node 0x709d 0x0000_00000000ff0709dc
+2019-11-28 12:53:32.510958 INFO  BF_MC Write LAG node at addr 0x709d with id 255 and next node 0x709e 0x00ff_0709ec00ff0709dc
+2019-11-28 12:53:32.510965 INFO  BF_MC Write LAG node at addr 0x709e with id 255 and next node 0x709f 0x0000_00000000ff0709fc
+2019-11-28 12:53:32.510972 INFO  BF_MC Write LAG node at addr 0x709f with id 255 and next node 0x70a0 0x00ff_070a0c00ff0709fc
+2019-11-28 12:53:32.510980 INFO  BF_MC Write LAG node at addr 0x70a0 with id 255 and next node 0x70a1 0x0000_00000000ff070a1c
+2019-11-28 12:53:32.510987 INFO  BF_MC Write LAG node at addr 0x70a1 with id 255 and next node 0x70a2 0x00ff_070a2c00ff070a1c
+2019-11-28 12:53:32.510994 INFO  BF_MC Write LAG node at addr 0x70a2 with id 255 and next node 0x70a3 0x0000_00000000ff070a3c
+2019-11-28 12:53:32.511001 INFO  BF_MC Write LAG node at addr 0x70a3 with id 255 and next node 0x70a4 0x00ff_070a4c00ff070a3c
+2019-11-28 12:53:32.511008 INFO  BF_MC Write LAG node at addr 0x70a4 with id 255 and next node 0x70a5 0x0000_00000000ff070a5c
+2019-11-28 12:53:32.511016 INFO  BF_MC Write LAG node at addr 0x70a5 with id 255 and next node 0x70a6 0x00ff_070a6c00ff070a5c
+2019-11-28 12:53:32.511023 INFO  BF_MC Write LAG node at addr 0x70a6 with id 255 and next node 0x70a7 0x0000_00000000ff070a7c
+2019-11-28 12:53:32.511035 INFO  BF_MC Write LAG node at addr 0x70a7 with id 255 and next node 0x70a8 0x00ff_070a8c00ff070a7c
+2019-11-28 12:53:32.511042 INFO  BF_MC Write LAG node at addr 0x70a8 with id 255 and next node 0x70a9 0x0000_00000000ff070a9c
+2019-11-28 12:53:32.511049 INFO  BF_MC Write LAG node at addr 0x70a9 with id 255 and next node 0x70aa 0x00ff_070aac00ff070a9c
+2019-11-28 12:53:32.511057 INFO  BF_MC Write LAG node at addr 0x70aa with id 255 and next node 0x70ab 0x0000_00000000ff070abc
+2019-11-28 12:53:32.511064 INFO  BF_MC Write LAG node at addr 0x70ab with id 255 and next node 0x70ac 0x00ff_070acc00ff070abc
+2019-11-28 12:53:32.511071 INFO  BF_MC Write LAG node at addr 0x70ac with id 255 and next node 0x70ad 0x0000_00000000ff070adc
+2019-11-28 12:53:32.511078 INFO  BF_MC Write LAG node at addr 0x70ad with id 255 and next node 0x70ae 0x00ff_070aec00ff070adc
+2019-11-28 12:53:32.511085 INFO  BF_MC Write LAG node at addr 0x70ae with id 255 and next node 0x70af 0x0000_00000000ff070afc
+2019-11-28 12:53:32.511093 INFO  BF_MC Write LAG node at addr 0x70af with id 255 and next node 0x70b0 0x00ff_070b0c00ff070afc
+2019-11-28 12:53:32.511100 INFO  BF_MC Write LAG node at addr 0x70b0 with id 255 and next node 0x70b1 0x0000_00000000ff070b1c
+2019-11-28 12:53:32.511107 INFO  BF_MC Write LAG node at addr 0x70b1 with id 255 and next node 0x70b2 0x00ff_070b2c00ff070b1c
+2019-11-28 12:53:32.511114 INFO  BF_MC Write LAG node at addr 0x70b2 with id 255 and next node 0x70b3 0x0000_00000000ff070b3c
+2019-11-28 12:53:32.511122 INFO  BF_MC Write LAG node at addr 0x70b3 with id 255 and next node 0x70b4 0x00ff_070b4c00ff070b3c
+2019-11-28 12:53:32.511129 INFO  BF_MC Write LAG node at addr 0x70b4 with id 255 and next node 0x70b5 0x0000_00000000ff070b5c
+2019-11-28 12:53:32.511136 INFO  BF_MC Write LAG node at addr 0x70b5 with id 255 and next node 0x70b6 0x00ff_070b6c00ff070b5c
+2019-11-28 12:53:32.511143 INFO  BF_MC Write LAG node at addr 0x70b6 with id 255 and next node 0x70b7 0x0000_00000000ff070b7c
+2019-11-28 12:53:32.511150 INFO  BF_MC Write LAG node at addr 0x70b7 with id 255 and next node 0x70b8 0x00ff_070b8c00ff070b7c
+2019-11-28 12:53:32.511157 INFO  BF_MC Write LAG node at addr 0x70b8 with id 255 and next node 0x70b9 0x0000_00000000ff070b9c
+2019-11-28 12:53:32.511165 INFO  BF_MC Write LAG node at addr 0x70b9 with id 255 and next node 0x70ba 0x00ff_070bac00ff070b9c
+2019-11-28 12:53:32.511172 INFO  BF_MC Write LAG node at addr 0x70ba with id 255 and next node 0x70bb 0x0000_00000000ff070bbc
+2019-11-28 12:53:32.511179 INFO  BF_MC Write LAG node at addr 0x70bb with id 255 and next node 0x70bc 0x00ff_070bcc00ff070bbc
+2019-11-28 12:53:32.511187 INFO  BF_MC Write LAG node at addr 0x70bc with id 255 and next node 0x70bd 0x0000_00000000ff070bdc
+2019-11-28 12:53:32.511194 INFO  BF_MC Write LAG node at addr 0x70bd with id 255 and next node 0x70be 0x00ff_070bec00ff070bdc
+2019-11-28 12:53:32.511201 INFO  BF_MC Write LAG node at addr 0x70be with id 255 and next node 0x70bf 0x0000_00000000ff070bfc
+2019-11-28 12:53:32.511208 INFO  BF_MC Write LAG node at addr 0x70bf with id 255 and next node 0x70c0 0x00ff_070c0c00ff070bfc
+2019-11-28 12:53:32.511215 INFO  BF_MC Write LAG node at addr 0x70c0 with id 255 and next node 0x70c1 0x0000_00000000ff070c1c
+2019-11-28 12:53:32.511222 INFO  BF_MC Write LAG node at addr 0x70c1 with id 255 and next node 0x70c2 0x00ff_070c2c00ff070c1c
+2019-11-28 12:53:32.511230 INFO  BF_MC Write LAG node at addr 0x70c2 with id 255 and next node 0x70c3 0x0000_00000000ff070c3c
+2019-11-28 12:53:32.511237 INFO  BF_MC Write LAG node at addr 0x70c3 with id 255 and next node 0x70c4 0x00ff_070c4c00ff070c3c
+2019-11-28 12:53:32.511244 INFO  BF_MC Write LAG node at addr 0x70c4 with id 255 and next node 0x70c5 0x0000_00000000ff070c5c
+2019-11-28 12:53:32.511251 INFO  BF_MC Write LAG node at addr 0x70c5 with id 255 and next node 0x70c6 0x00ff_070c6c00ff070c5c
+2019-11-28 12:53:32.511258 INFO  BF_MC Write LAG node at addr 0x70c6 with id 255 and next node 0x70c7 0x0000_00000000ff070c7c
+2019-11-28 12:53:32.511270 INFO  BF_MC Write LAG node at addr 0x70c7 with id 255 and next node 0x70c8 0x00ff_070c8c00ff070c7c
+2019-11-28 12:53:32.511277 INFO  BF_MC Write LAG node at addr 0x70c8 with id 255 and next node 0x70c9 0x0000_00000000ff070c9c
+2019-11-28 12:53:32.511285 INFO  BF_MC Write LAG node at addr 0x70c9 with id 255 and next node 0x70ca 0x00ff_070cac00ff070c9c
+2019-11-28 12:53:32.511292 INFO  BF_MC Write LAG node at addr 0x70ca with id 255 and next node 0x70cb 0x0000_00000000ff070cbc
+2019-11-28 12:53:32.511300 INFO  BF_MC Write LAG node at addr 0x70cb with id 255 and next node 0x70cc 0x00ff_070ccc00ff070cbc
+2019-11-28 12:53:32.511307 INFO  BF_MC Write LAG node at addr 0x70cc with id 255 and next node 0x70cd 0x0000_00000000ff070cdc
+2019-11-28 12:53:32.511314 INFO  BF_MC Write LAG node at addr 0x70cd with id 255 and next node 0x70ce 0x00ff_070cec00ff070cdc
+2019-11-28 12:53:32.511321 INFO  BF_MC Write LAG node at addr 0x70ce with id 255 and next node 0x70cf 0x0000_00000000ff070cfc
+2019-11-28 12:53:32.511329 INFO  BF_MC Write LAG node at addr 0x70cf with id 255 and next node 0x70d0 0x00ff_070d0c00ff070cfc
+2019-11-28 12:53:32.511336 INFO  BF_MC Write LAG node at addr 0x70d0 with id 255 and next node 0x70d1 0x0000_00000000ff070d1c
+2019-11-28 12:53:32.511343 INFO  BF_MC Write LAG node at addr 0x70d1 with id 255 and next node 0x70d2 0x00ff_070d2c00ff070d1c
+2019-11-28 12:53:32.511350 INFO  BF_MC Write LAG node at addr 0x70d2 with id 255 and next node 0x70d3 0x0000_00000000ff070d3c
+2019-11-28 12:53:32.511357 INFO  BF_MC Write LAG node at addr 0x70d3 with id 255 and next node 0x70d4 0x00ff_070d4c00ff070d3c
+2019-11-28 12:53:32.511364 INFO  BF_MC Write LAG node at addr 0x70d4 with id 255 and next node 0x70d5 0x0000_00000000ff070d5c
+2019-11-28 12:53:32.511372 INFO  BF_MC Write LAG node at addr 0x70d5 with id 255 and next node 0x70d6 0x00ff_070d6c00ff070d5c
+2019-11-28 12:53:32.511383 INFO  BF_MC Write LAG node at addr 0x70d6 with id 255 and next node 0x70d7 0x0000_00000000ff070d7c
+2019-11-28 12:53:32.511390 INFO  BF_MC Write LAG node at addr 0x70d7 with id 255 and next node 0x70d8 0x00ff_070d8c00ff070d7c
+2019-11-28 12:53:32.511397 INFO  BF_MC Write LAG node at addr 0x70d8 with id 255 and next node 0x70d9 0x0000_00000000ff070d9c
+2019-11-28 12:53:32.511404 INFO  BF_MC Write LAG node at addr 0x70d9 with id 255 and next node 0x70da 0x00ff_070dac00ff070d9c
+2019-11-28 12:53:32.511412 INFO  BF_MC Write LAG node at addr 0x70da with id 255 and next node 0x70db 0x0000_00000000ff070dbc
+2019-11-28 12:53:32.511419 INFO  BF_MC Write LAG node at addr 0x70db with id 255 and next node 0x70dc 0x00ff_070dcc00ff070dbc
+2019-11-28 12:53:32.511426 INFO  BF_MC Write LAG node at addr 0x70dc with id 255 and next node 0x70dd 0x0000_00000000ff070ddc
+2019-11-28 12:53:32.511434 INFO  BF_MC Write LAG node at addr 0x70dd with id 255 and next node 0x70de 0x00ff_070dec00ff070ddc
+2019-11-28 12:53:32.511441 INFO  BF_MC Write LAG node at addr 0x70de with id 255 and next node 0x70df 0x0000_00000000ff070dfc
+2019-11-28 12:53:32.511448 INFO  BF_MC Write LAG node at addr 0x70df with id 255 and next node 0x70e0 0x00ff_070e0c00ff070dfc
+2019-11-28 12:53:32.511456 INFO  BF_MC Write LAG node at addr 0x70e0 with id 255 and next node 0x70e1 0x0000_00000000ff070e1c
+2019-11-28 12:53:32.511463 INFO  BF_MC Write LAG node at addr 0x70e1 with id 255 and next node 0x70e2 0x00ff_070e2c00ff070e1c
+2019-11-28 12:53:32.511470 INFO  BF_MC Write LAG node at addr 0x70e2 with id 255 and next node 0x70e3 0x0000_00000000ff070e3c
+2019-11-28 12:53:32.511477 INFO  BF_MC Write LAG node at addr 0x70e3 with id 255 and next node 0x70e4 0x00ff_070e4c00ff070e3c
+2019-11-28 12:53:32.511485 INFO  BF_MC Write LAG node at addr 0x70e4 with id 255 and next node 0x70e5 0x0000_00000000ff070e5c
+2019-11-28 12:53:32.511492 INFO  BF_MC Write LAG node at addr 0x70e5 with id 255 and next node 0x70e6 0x00ff_070e6c00ff070e5c
+2019-11-28 12:53:32.511499 INFO  BF_MC Write LAG node at addr 0x70e6 with id 255 and next node 0x70e7 0x0000_00000000ff070e7c
+2019-11-28 12:53:32.511507 INFO  BF_MC Write LAG node at addr 0x70e7 with id 255 and next node 0x70e8 0x00ff_070e8c00ff070e7c
+2019-11-28 12:53:32.511518 INFO  BF_MC Write LAG node at addr 0x70e8 with id 255 and next node 0x70e9 0x0000_00000000ff070e9c
+2019-11-28 12:53:32.511526 INFO  BF_MC Write LAG node at addr 0x70e9 with id 255 and next node 0x70ea 0x00ff_070eac00ff070e9c
+2019-11-28 12:53:32.511533 INFO  BF_MC Write LAG node at addr 0x70ea with id 255 and next node 0x70eb 0x0000_00000000ff070ebc
+2019-11-28 12:53:32.511540 INFO  BF_MC Write LAG node at addr 0x70eb with id 255 and next node 0x70ec 0x00ff_070ecc00ff070ebc
+2019-11-28 12:53:32.511548 INFO  BF_MC Write LAG node at addr 0x70ec with id 255 and next node 0x70ed 0x0000_00000000ff070edc
+2019-11-28 12:53:32.511555 INFO  BF_MC Write LAG node at addr 0x70ed with id 255 and next node 0x70ee 0x00ff_070eec00ff070edc
+2019-11-28 12:53:32.511562 INFO  BF_MC Write LAG node at addr 0x70ee with id 255 and next node 0x70ef 0x0000_00000000ff070efc
+2019-11-28 12:53:32.511569 INFO  BF_MC Write LAG node at addr 0x70ef with id 255 and next node 0x70f0 0x00ff_070f0c00ff070efc
+2019-11-28 12:53:32.511576 INFO  BF_MC Write LAG node at addr 0x70f0 with id 255 and next node 0x70f1 0x0000_00000000ff070f1c
+2019-11-28 12:53:32.511583 INFO  BF_MC Write LAG node at addr 0x70f1 with id 255 and next node 0x70f2 0x00ff_070f2c00ff070f1c
+2019-11-28 12:53:32.511590 INFO  BF_MC Write LAG node at addr 0x70f2 with id 255 and next node 0x70f3 0x0000_00000000ff070f3c
+2019-11-28 12:53:32.511598 INFO  BF_MC Write LAG node at addr 0x70f3 with id 255 and next node 0x70f4 0x00ff_070f4c00ff070f3c
+2019-11-28 12:53:32.511605 INFO  BF_MC Write LAG node at addr 0x70f4 with id 255 and next node 0x70f5 0x0000_00000000ff070f5c
+2019-11-28 12:53:32.511612 INFO  BF_MC Write LAG node at addr 0x70f5 with id 255 and next node 0x70f6 0x00ff_070f6c00ff070f5c
+2019-11-28 12:53:32.511619 INFO  BF_MC Write LAG node at addr 0x70f6 with id 255 and next node 0x70f7 0x0000_00000000ff070f7c
+2019-11-28 12:53:32.511627 INFO  BF_MC Write LAG node at addr 0x70f7 with id 255 and next node 0x70f8 0x00ff_070f8c00ff070f7c
+2019-11-28 12:53:32.511634 INFO  BF_MC Write LAG node at addr 0x70f8 with id 255 and next node 0x70f9 0x0000_00000000ff070f9c
+2019-11-28 12:53:32.511641 INFO  BF_MC Write LAG node at addr 0x70f9 with id 255 and next node 0x70fa 0x00ff_070fac00ff070f9c
+2019-11-28 12:53:32.511648 INFO  BF_MC Write LAG node at addr 0x70fa with id 255 and next node 0x70fb 0x0000_00000000ff070fbc
+2019-11-28 12:53:32.511655 INFO  BF_MC Write LAG node at addr 0x70fb with id 255 and next node 0x70fc 0x00ff_070fcc00ff070fbc
+2019-11-28 12:53:32.511669 INFO  BF_MC Write LAG node at addr 0x70fc with id 255 and next node 0x70fd 0x0000_00000000ff070fdc
+2019-11-28 12:53:32.511678 INFO  BF_MC Write LAG node at addr 0x70fd with id 255 and next node 0x70fe 0x00ff_070fec00ff070fdc
+2019-11-28 12:53:32.511685 INFO  BF_MC Write LAG node at addr 0x70fe with id 255 and next node 0x70ff 0x0000_00000000ff070ffc
+2019-11-28 12:53:32.511692 INFO  BF_MC Write LAG node at addr 0x70ff with id 255 and next node 0x7100 0x00ff_07100c00ff070ffc
+2019-11-28 12:53:32.511700 INFO  BF_MC Write LAG node at addr 0x7100 with id 255 and next node 0x7101 0x0000_00000000ff07101c
+2019-11-28 12:53:32.511707 INFO  BF_MC Write LAG node at addr 0x7101 with id 255 and next node 0x7102 0x00ff_07102c00ff07101c
+2019-11-28 12:53:32.511714 INFO  BF_MC Write LAG node at addr 0x7102 with id 255 and next node 0x7103 0x0000_00000000ff07103c
+2019-11-28 12:53:32.511721 INFO  BF_MC Write LAG node at addr 0x7103 with id 255 and next node 0 0x00ff_00000c00ff07103c
+2019-11-28 12:53:32.511733 INFO  BF_MC Allocated RDM addresses 0x31c0 - 0x31df
+2019-11-28 12:53:32.511740 INFO  BF_MC Write L1End node at addr 0x31c0, rid 0, l2 0x7101
+2019-11-28 12:53:32.511748 INFO  BF_MC Write L1End node at addr 0x31c1, rid 0, l2 0x7100
+2019-11-28 12:53:32.511755 INFO  BF_MC Write L1End node at addr 0x31c2, rid 0, l2 0x70ff
+2019-11-28 12:53:32.511761 INFO  BF_MC Write L1End node at addr 0x31c3, rid 0, l2 0x70fe
+2019-11-28 12:53:32.511768 INFO  BF_MC Write L1End node at addr 0x31c4, rid 0, l2 0x70fd
+2019-11-28 12:53:32.511779 INFO  BF_MC Write L1End node at addr 0x31c5, rid 0, l2 0x70fc
+2019-11-28 12:53:32.511786 INFO  BF_MC Write L1End node at addr 0x31c6, rid 0, l2 0x70fb
+2019-11-28 12:53:32.511793 INFO  BF_MC Write L1End node at addr 0x31c7, rid 0, l2 0x70fa
+2019-11-28 12:53:32.511800 INFO  BF_MC Write L1End node at addr 0x31c8, rid 0, l2 0x70f8
+2019-11-28 12:53:32.511806 INFO  BF_MC Write L1End node at addr 0x31c9, rid 0, l2 0x70f6
+2019-11-28 12:53:32.511813 INFO  BF_MC Write L1End node at addr 0x31ca, rid 0, l2 0x70f4
+2019-11-28 12:53:32.511819 INFO  BF_MC Write L1End node at addr 0x31cb, rid 0, l2 0x70f2
+2019-11-28 12:53:32.511826 INFO  BF_MC Write L1End node at addr 0x31cc, rid 0, l2 0x70f0
+2019-11-28 12:53:32.511833 INFO  BF_MC Write L1End node at addr 0x31cd, rid 0, l2 0x70ee
+2019-11-28 12:53:32.511840 INFO  BF_MC Write L1End node at addr 0x31ce, rid 0, l2 0x70ec
+2019-11-28 12:53:32.511846 INFO  BF_MC Write L1End node at addr 0x31cf, rid 0, l2 0x70ea
+2019-11-28 12:53:32.511853 INFO  BF_MC Write L1End node at addr 0x31d0, rid 0, l2 0x70e8
+2019-11-28 12:53:32.511860 INFO  BF_MC Write L1End node at addr 0x31d1, rid 0, l2 0x70e6
+2019-11-28 12:53:32.511866 INFO  BF_MC Write L1End node at addr 0x31d2, rid 0, l2 0x70e4
+2019-11-28 12:53:32.511873 INFO  BF_MC Write L1End node at addr 0x31d3, rid 0, l2 0x70e0
+2019-11-28 12:53:32.511879 INFO  BF_MC Write L1End node at addr 0x31d4, rid 0, l2 0x70dc
+2019-11-28 12:53:32.511886 INFO  BF_MC Write L1End node at addr 0x31d5, rid 0, l2 0x70d8
+2019-11-28 12:53:32.511892 INFO  BF_MC Write L1End node at addr 0x31d6, rid 0, l2 0x70d4
+2019-11-28 12:53:32.511899 INFO  BF_MC Write L1End node at addr 0x31d7, rid 0, l2 0x70cc
+2019-11-28 12:53:32.511905 INFO  BF_MC Write L1End node at addr 0x31d8, rid 0, l2 0x70c4
+2019-11-28 12:53:32.511912 INFO  BF_MC Write L1End node at addr 0x31d9, rid 0, l2 0x70bc
+2019-11-28 12:53:32.511919 INFO  BF_MC Write L1End node at addr 0x31da, rid 0, l2 0x70a0
+2019-11-28 12:53:32.511925 INFO  BF_MC Write L1End node at addr 0x31db, rid 0, l2 0x7087
+2019-11-28 12:53:32.511932 INFO  BF_MC Write L1End node at addr 0x31dc, rid 0, l2 0x706e
+2019-11-28 12:53:32.511938 INFO  BF_MC Write L1End node at addr 0x31dd, rid 0, l2 0x7055
+2019-11-28 12:53:32.511945 INFO  BF_MC Write L1End node at addr 0x31de, rid 0, l2 0x703c
+2019-11-28 12:53:32.511951 INFO  BF_MC Write L1End node at addr 0x31df, rid 0, l2 0x7000
+2019-11-28 12:53:32.522553 INFO  BF_MC mc_mgr_add_device: Device 0 add successful.
+2019-11-28 12:53:32.522926 INFO  BF_TM Enabling QAC rx during port-add for dev 0, dev_port 68
+2019-11-28 12:53:32.523641 INFO  BF_DVM Dev 0 port 68 added sts Success (0)
+2019-11-28 12:53:32.524060 INFO  BF_TM Enabling QAC rx during port-add for dev 0, dev_port 192
+2019-11-28 12:53:32.524756 INFO  BF_DVM Dev 0 port 192 added sts Success (0)
+2019-11-28 12:53:32.525136 INFO  BF_TM Enabling QAC rx during port-add for dev 0, dev_port 196
+2019-11-28 12:53:32.525809 INFO  BF_DVM Dev 0 port 196 added sts Success (0)
+2019-11-28 12:53:32.529334 DEBUG BF_PLTFM QSFP:  9 : QSFP_FSM_ST_INSERTED         --> QSFP_FSM_ST_DETECTED         (0ms)
+2019-11-28 12:53:33.826774 DEBUG BF_PLTFM QSFP Scan started..

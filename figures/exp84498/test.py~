@@ -1,0 +1,9 @@
+def func():
+    s = {"type": None, "cnt": 0, "FIN": 0, "RST": 0, "SYN": 0}
+    print s["type"]
+    print s["SYN"]
+    print "Hello, world."
+    with open("./test.txt", "w") as f:
+        f.write("hello, world.")
+
+func()

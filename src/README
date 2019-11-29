@@ -1,0 +1,298 @@
+Barefoot Networks SDE Packages
+==============================
+The Barefoot Networks Software Development Environment (BF-SDE) is made
+available in the form of tarball packages. Each package is versioned as
+<major_version>.<medium_version>.<minor_version>. For e.g. x.y.z
+
+The following is the list of tarball packages that BF-SDE is comprised of
+
+    1) bf-sde-<maj>.<med>.<min>.tgz:
+        A tarball of all component tarball packages
+    2) bf-drivers-<maj>.<med>.<min>.tgz:
+        The tarball package for Barefoot Networks hardware device drivers
+    3) bf-syslibs-<maj>.<med>.<min>.tgz:
+        The tarball package for system abstraction libraries
+    4) bf-utils-<maj>.<med>.<min>.tgz:
+        The tarball package for utility modules used by Barefoot Networks' code
+    5) switch-<maj>.<med>.<min>.tgz:
+        The tarball package for switching P4 programs and libraries
+    6) p4-compilers-<maj>.<med>.<min>.tgz:
+        The tarball package for P4 compilers
+    7) p4-hlir-<maj>.<med>.<min>.tgz:
+        The tarball package for P4-High-Level-Intermediate-Representation (HLIR)
+    8) p4-build-<maj>.<med>.<min>.tgz:
+        The tarball package for building P4 programs
+    9) tofino-model-<maj>.<med>.<min>.tgz:
+        The tarball package for software models of the Tofino P4 device
+    10) bmv2-<maj>.<med>.<min>.tgz:
+        The tarball package for Standard P4 Switch Behavioral Model (bmv2)
+    11) p4c-bmv2-<maj>.<med>.<min>.tgz:
+        The tarball package for P4 compiler for bmv2
+    12) tofinobm-<maj>.<med>.<min>.tgz:
+        The tarball package for Standard P4 Switch Behavioral Model for Tofino
+    13) p4-examples-<maj>.<med>.<min>.tgz:
+        The tarball package with example P4 programs and PTF tests for them
+    14) ptf-modules-<maj>.<med>.<min>.tgz:
+        The tarball package that contains Packet Test Framework (PTF) modules
+    15) bf-diags-<maj>.<med>.<min>.tgz:
+        The tarball package for Barefoot diags
+
+
+Extracting the BF-SDE Packages
+==============================
+1) Unpack the <bf-sde> tarball
+
+    tar xzvf bf-sde-<maj>.<med>.<min>.tgz
+
+2) From here on the root directory directory of the extracted BF-SDE is
+referred to as $SDE. Set the SDE environment variable
+
+    export SDE=<bf-sde>
+
+3) Extract all the packages of <bf-sde>
+    cd $SDE
+    ./extract_all.sh
+
+Here's the directory structure of <bf-sde> after it has been extracted
+
+    bf-sde-x.y.z\
+        README
+        bf-syslibs-x.y.z\
+        bf-utils-x.y.z\
+        bf-drivers-x.y.z\
+        bf-diags-x.y.z\
+        switch-x.y.z\
+        p4-compilers-x.y.z\
+        p4-hlir-x.y.z\
+        p4-build-x.y.z\
+        tofino-model-x.y.z\
+        bmv2-x.y.z\
+        p4c-bmv2-x.y.z\
+        tofinobm-x.y.z\
+        p4-examples-x.y.z\
+        ptf-modules-x.y.z\
+        packages/<tar files for each of the SDE package modules>
+        <shell scripts used with SDE>
+
+Each of the packaged modules includes a README file that lists the contents
+of the package, steps to build the and install it's artifacts
+(header files, libraries, binaries, data files)
+
+Minimum requirements for building BF-SDE packages
+=================================================
+Autotools are used to build the BF-SDE packages. Here's the minimum list of
+tools that need to be installed before proceeding with building the
+BF-SDE packages
+
+    1) autoconf (OPTIONAL)
+    2) libtool
+    3) make
+    4) g++
+    5) glibc dev
+    6) python-setuptools
+
+The the following script that can be used to install the above listed tools
+    $SDE/install_min_deps.sh
+
+In addition to the above each package may have additional
+requirements depending on the options used with building the package
+
+Install directory for installing package artifacts
+==================================================
+After a BF-SDE package is built it's artifacts (header files, libraries,
+binaries, data files) need to be installed. It is recommended the install
+directory be set as '$SDE/install'. This way all the artifacts of
+BF-SDE packages will be installed to a location within the $SDE
+
+    export SDE_INSTALL=$SDE/install
+
+Binary packages contain executables that need to be copied over to
+$SDE_INSTALL/bin for completeness. Setting PATH as below ensures the
+required executables needed for further building of packages will be picked up
+from the SDE's install directory
+
+    export PATH=$SDE_INSTALL/bin:$PATH
+
+Order of building packages
+==========================
+Each of the packages needs to be individually built. Each package contains
+a README file that describes the steps to build and install it's artifacts.
+Some packages produce header files that are needed to build other packages.
+This introduces ordering requirements on building the packages. The build and
+install order priorities for packages are listed below as P1, P2, etc.
+
+    # Building for Barefoot HW targets
+    #
+    P1: Install binary package executables to $SDE_INSTALL/bin
+        $SDE/install_bin_pkgs.sh
+    P2: Build and install <bf-syslibs>
+    P3: Build and install <bf-utils>
+    P4: Build and install <bf-drivers>
+    P5: Build and install <switch>
+    P5: Build and install P4 programs using <p4-build>
+    P6: Build and install <p4-examples>
+    P6: Build and install <ptf-modules>
+
+    # Building for tofinobm target
+    #
+    P1: Build and install <bmv2>
+    P1: Build and install <p4c-bmv2>
+    P1: Build and install <tofinobm>
+    P2: Build and install <bf-syslibs>
+    P3: Build and install <bf-utils>
+    P3: Build and install P4 programs using <p4-build>
+    P4: Build and install <switch>
+    P5: Build and install <p4-examples>
+    P5: Build and install <ptf-modules>
+
+    # Build P4 HLIR tools
+    #
+    P1: Build and install <p4-hlir>
+
+=======================================
+Installing p4-compilers OS dependencies
+=======================================
+The dependencies are installed by default. The SDE provides two compilers,
+p4c-tofino (v5.x) and p4c (v8.2.0-alpha). If you wish to skip the installation
+of the p4c alpha compiler, please run install_bin_pkgs.sh with the --skip-p4c
+option.
+
+To install the OS dependencies for the p4c compiler, you can manually invoke
+$SDE/install_p4c_deps.sh.
+
+
+================================================
+Exercising PTF Tests using the package artifacts
+================================================
+Once all the packages have been built and their artifacts installed, they can
+be exercised using PTF tests.
+
+The following setup is pre-requisite for exercising PTF tests
+
+    1) Install packages needed for PTF testing
+        $SDE/install_ptf_deps.sh
+
+    2) Set up veth interfaces required for packet RX/TX into SW model
+        sudo $SDE_INSTALL/bin/veth_setup.sh
+
+===========================================================================
+Exercising PTF Tests using the package artifacts against Barefoot HW targets
+============================================================================
+Once all the packages have been built and their artifacts installed, they can
+be exercised using PTF tests.
+
+The following additional setup is pre-requisite for exercising PTF tests
+against the tofino-model and the driver stack linked to the bf_switchd
+application
+
+    1) Set up linux kernel for buffers for (simulated) DMA required by drivers
+        sudo $SDE_INSTALL/bin/dma_setup.sh
+
+There are three parts to exercising PTF test against Barefoot P4 HW targets
+
+    1) Starting the SW model
+    2) Start the 'bf_switchd' application
+    3) Running the PTF tests associated with the P4 program
+
+Ensure the PATH variables are set to include $SDE_INSTALL directory
+    export PATH=$SDE_INSTALL/bin:$PATH
+    export LD_LIBRARY_PATH=/usr/local/lib:$SDE_INSTALL/lib:$LD_LIBRARY_PATH
+
+Launch tests from $SDE
+    cd $SDE
+
+1) Starting the SW device model program
+    sudo env "PATH=$PATH" tofino-model
+        [-f $SDE/<p4-examples/ptf-tests/<p4_program_name>/ports.json]
+
+    # A convenience script that does the same as above
+    $SDE/run_tofino_model.sh -p <p4_program_name>
+        e.g. ./run_tofino_model.sh -p basic_ipv4
+        e.g. ./run_tofino_model.sh -p switch
+
+2) Start the 'bf_switchd' application program
+    sudo env "PATH=$PATH" "LD_LIBRARY_PATH=$LD_LIBRARY_PATH" bf_switchd --conf-file $SDE_INSTALL/share/p4/targets/<p4_program_name>.conf
+
+    # A convenience script that does the same as above
+    $SDE/run_switchd.sh -p <p4_program_name>
+      e.g. ./run_switchd.sh -p basic_ipv4
+      e.g. ./run_switchd.sh -c $SDE_INSTALL/share/p4/targets/switch.conf
+
+3) Running the PTF tests associated with P4 programs
+
+    # Run tests for an arbitraty P4 program in SDE/p4-examples
+    sudo env "PATH=$PATH" python $SDE_INSTALL/lib/python2.7/site-packages/p4testutils/run_ptf_tests.py --test-dir $SDE/p4-examples/ptf-tests/<p4_program_name>
+
+    # A convenience script that does the same as above
+    $SDE/run_p4_tests.sh -p <p4_program_name>
+        e.g. ./run_p4_tests.sh -p basic_ipv4
+        e.g. ./run_p4_tests.sh -p basic_ipv4 -s test.TestAddRoute
+
+    # Running switch.p4 tests from <switch> package
+    sudo env "PATH=$PATH" python $SDE_INSTALL/lib/python2.7/site-packages/p4testutils/run_ptf_tests.py --test-dir $SDE/<switch>/ptf-tests/base/api-tests --arch Tofino --target asic-model
+
+    # A convenience script that does the same as above
+    $SDE/run_p4_tests.sh -t $SDE/<switch>/ptf-tests/<test_dir>
+        e.g. ./run_p4_tests.sh -t $SDE/<switch>/ptf-tests/base/api-tests
+        e.g. ./run_p4_tests.sh -t <switch>/ptf-tests/base/sai-ocp-tests/ -p switch --arch Tofino --target asic-model -s l2-ocp -f <switch>/ptf-tests/base/ports.json --test-params "port_map_file='<switch>/ptf-tests/base/sai-ocp-tests/default_interface_to_front_map.ini'"
+        e.g. ./run_p4_tests.sh -t <switch>/ptf-tests/base/sai-ocp-tests/ -p switch --arch Tofino --target asic-model -s l3-ocp -f <switch>/ptf-tests/base/ports.json --test-params "port_map_file='<switch>/ptf-tests/base/sai-ocp-tests/default_interface_to_front_map.ini'"
+
+
+===========================================================================
+Exercising PTF Tests using the package artifacts against TofinoBm Switch
+===========================================================================
+Once all the packages have been built and their artifacts installed, they can
+be exercised using PTF tests.
+
+The following setup is pre-requisite for exercising PTF tests against the
+the tofinobm-model and the driver stack linked to the switchd application
+
+    1) Install packages needed for PTF testing
+        $SDE/install_ptf_deps.sh
+
+    2) Set up veth interfaces required for packet RX/TX into SW model
+        sudo $SDE_INSTALL/bin/veth_setup.sh
+
+There are three parts to exercising PTF test against TofinoBM targets
+
+    1) Starting the TofinoBM model
+    2) Starting the TofinoBM driver
+    3) Running the PTF tests associated with the P4 program
+
+Ensure the PATH variables are set to include $SDE_INSTALL directory
+    export PATH=$SDE_INSTALL/bin:$PATH
+    export LD_LIBRARY_PATH=/usr/local/lib:$SDE_INSTALL/lib:$LD_LIBRARY_PATH
+
+Launch tests from $SDE
+    cd $SDE
+
+1) Starting the TofinoBM model
+    $SDE_INSTALL/bin/tofinobmv2 --log-console -i 0@veth0 -i 1@veth2 -i 2@veth4 -i 3@veth6 -i 4@veth8 -i 5@veth10 -i 6@veth12 -i 7@veth14 -i 8@veth16 -i 64@veth250 --thrift-port 10001 --pcap $SDE_INSTALL/share/tofinobmpd/<$P4_NAME>/<$P4_NAME>.json
+
+    # A convenience script that does the same as above
+    $SDE/run_bmv2.sh -p <P4_NAME> --arch <ARCH> -f <PORTS_JSON>
+        e.g. ./run_bmv2.sh -p switch --arch Tofino
+        e.g. ./run_bmv2.sh -p switch --arch Tofino -f <switch>/ptf-tests/base/ports.json
+
+2) Start the 'tofinoBM-drivers'
+
+    $SDE/run_bmv2_drivers.sh -p <P4_NAME> --arch <ARCH>
+      e.g. ./run_bmv2_drivers.sh -p switch --arch Tofino
+
+3) Running the PTF tests associated with P4 programs
+
+    # Run tests for any P4 program
+    sudo env "PATH=$PATH" python $SDE_INSTALL/lib/python2.7/site-packages/p4testutils/run_ptf_tests.py --test-dir $SDE/p4-examples/ptf-tests/<P4_NAME> --arch Tofino --target bmv2
+
+    # A convenience script that does the same as above
+    $SDE/run_p4_tests.sh -p <P4_NAME> --arch <ARCH> --target <TARGET>
+        e.g. ./run_p4_tests.sh -p basic_switching --arch Tofino --target bmv2
+
+    # Run PTF tests associated with switch.p4
+    Note: See <switch>/README for build options that need to be used to exercise PTF
+          tests of various kinds
+    $SDE/run_p4_tests.sh -t <test-dir> -p <P4_NAME> --arch <ARCH> --target <TARGET>
+	e.g. ./run_p4_tests.sh -t <switch>/ptf-tests/base/pd-tests/ -p switch --arch Tofino --target bmv2
+	e.g. ./run_p4_tests.sh -t <switch>/ptf-tests/base/api-tests/ -p switch --arch Tofino --target bmv2
+	e.g. ./run_p4_tests.sh -t <switch>/ptf-tests/base/sai-ocp-tests/ -p switch --arch Tofino --target bmv2 -s l2-ocp -f <switch>/ptf-tests/base/ports.json --test-params "port_map_file='<switch>/ptf-tests/base/sai-ocp-tests/default_interface_to_front_map.ini'"
+	e.g. ./run_p4_tests.sh -t <switch>/ptf-tests/base/sai-ocp-tests/ -p switch --arch Tofino --target bmv2 -s l3-ocp -f <switch>/ptf-tests/base/ports.json --test-params "port_map_file='<switch>/ptf-tests/base/sai-ocp-tests/default_interface_to_front_map.ini'"

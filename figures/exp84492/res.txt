@@ -1,0 +1,6 @@
+Algorithm	n_flows	max_size	average_size
+CAIDA	181280	92389	13.5687941306
+HGC	327587	33003	7.50413783209
+Algorithm	n_flows	max_size	average_size
+CAIDA	189255	33108	13.0286597448
+HGC	323596	33081	7.60896611825

@@ -1,0 +1,40 @@
+filename: example1
+ave_mem_accesses: 2.709460
+ave_mem_accesses_basic: 2.703857
+throughput: 657.056803892 Kpps
+filename: example2
+ave_mem_accesses: 2.663006
+ave_mem_accesses_basic: 2.658781
+throughput: 674.290544406 Kpps
+filename: example3
+ave_mem_accesses: 2.706960
+ave_mem_accesses_basic: 2.703311
+throughput: 662.130616769 Kpps
+filename: example4
+ave_mem_accesses: 2.766966
+ave_mem_accesses_basic: 2.763005
+throughput: 643.843493945 Kpps
+filename: example5
+ave_mem_accesses: 2.710117
+ave_mem_accesses_basic: 2.705977
+throughput: 661.375594465 Kpps
+filename: example6
+ave_mem_accesses: 2.603727
+ave_mem_accesses_basic: 2.601221
+throughput: 703.671798536 Kpps
+filename: example7
+ave_mem_accesses: 2.544582
+ave_mem_accesses_basic: 2.541632
+throughput: 728.15745934 Kpps
+filename: example8
+ave_mem_accesses: 2.611845
+ave_mem_accesses_basic: 2.609560
+throughput: 709.770105753 Kpps
+filename: example9
+ave_mem_accesses: 2.716691
+ave_mem_accesses_basic: 2.712369
+throughput: 655.260198973 Kpps
+filename: example10
+ave_mem_accesses: 2.653274
+ave_mem_accesses_basic: 2.649242
+throughput: 681.903579306 Kpps

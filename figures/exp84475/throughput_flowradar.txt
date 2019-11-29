@@ -1,0 +1,20 @@
+filename: example1
+throughput: 136.536632058 Kpps
+filename: example2
+throughput: 152.174719951 Kpps
+filename: example3
+throughput: 154.470943439 Kpps
+filename: example4
+throughput: 153.414298227 Kpps
+filename: example5
+throughput: 152.113558783 Kpps
+filename: example6
+throughput: 160.113826129 Kpps
+filename: example7
+throughput: 152.28115857 Kpps
+filename: example8
+throughput: 159.818294716 Kpps
+filename: example9
+throughput: 154.740376656 Kpps
+filename: example10
+throughput: 153.155630882 Kpps

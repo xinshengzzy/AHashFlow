@@ -1,0 +1,4 @@
+main:
+	python collectFlows.py
+test:
+	python test.py

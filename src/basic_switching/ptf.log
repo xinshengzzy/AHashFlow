@@ -1,0 +1,34 @@
+05:57:18.978  root      : INFO    : ++++++++ Fri Nov 29 05:57:18 2019 ++++++++
+05:57:19.036  scapy.runtime: WARNING : No route found for IPv6 destination :: (no default route?)
+05:57:19.082  root      : INFO    : VXLAN support found in Scapy
+05:57:19.083  root      : INFO    : ERSPAN support found in Scapy
+05:57:19.084  root      : INFO    : GENEVE support found in Scapy
+05:57:19.084  root      : INFO    : MPLS support found in Scapy
+05:57:19.085  root      : INFO    : NVGRE support found in Scapy
+05:57:19.339  root      : INFO    : Importing platform: eth
+05:57:19.339  root      : DEBUG   : Configuration: {'xunit_dir': 'xunit', 'disable_ipv6': False, 'minsize': 0, 'list_test_names': False, 'test_file': None, 'test_spec': '', 'allow_user': False, 'test_order_seed': 2746, 'default_negative_timeout': 0.1, 'platform': 'eth', 'log_dir': None, 'xunit': False, 'disable_erspan': False, 'device_sockets': [], 'disable_geneve': False, 'socket_recv_size': 10240, 'profile': False, 'default_timeout': 2.0, 'platform_args': None, 'relax': False, 'random_seed': None, 'interfaces': [(0, 0, 'veth1'), (0, 1, 'veth3'), (0, 2, 'veth5'), (0, 3, 'veth7'), (0, 4, 'veth9'), (0, 5, 'veth11'), (0, 6, 'veth13'), (0, 7, 'veth15'), (0, 8, 'veth17'), (0, 64, 'veth251')], 'test_case_timeout': None, 'port_map': {(0, 1): 'veth3', (0, 0): 'veth1', (0, 7): 'veth15', (0, 6): 'veth13', (0, 64): 'veth251', (0, 5): 'veth11', (0, 4): 'veth9', (0, 3): 'veth7', (0, 8): 'veth17', (0, 2): 'veth5'}, 'disable_vxlan': False, 'disable_nvgre': False, 'qlen': 100, 'test_order': 'default', 'profile_file': 'profile.out', 'fail_skipped': False, 'test_params': "arch='Tofino';target='asic-model';use_pi='False';traffic_gen='None';config_file='filename';drivers_test_info='None';test_seed='None';num_pipes='4';port_mode='100G';counter_byte_adjust='0';setup=False;cleanup=False;p4c='';thrift_server='localhost';grpc_server='localhost'", 'test_dir': '/root/bf-sde-8.2.0/', 'list': False, 'platform_dir': '/root/bf-sde-8.2.0/install/lib/python2.7/site-packages/ptf/platforms', 'disable_mpls': False, 'debug': 'verbose', 'log_file': 'ptf.log', 'failfast': False}
+05:57:19.339  root      : INFO    : port map: {(0, 1): 'veth3', (0, 0): 'veth1', (0, 7): 'veth15', (0, 6): 'veth13', (0, 64): 'veth251', (0, 5): 'veth11', (0, 4): 'veth9', (0, 3): 'veth7', (0, 8): 'veth17', (0, 2): 'veth5'}
+05:57:19.339  root      : INFO    : Autogen random seed: 50746786
+05:57:19.411  root      : INFO    : *** TEST RUN START: Fri Nov 29 05:57:19 2019
+05:57:19.411  dataplane : DEBUG   : Sending 40 bytes to device 0, port 1
+05:57:19.412  root      : DEBUG   : Checking for pkt on device 1, port [3, 1]
+05:57:19.412  dataplane : DEBUG   : Grabbing packet
+05:57:19.412  dataplane : DEBUG   : Out of packets on all ports
+05:57:19.412  dataplane : DEBUG   : Did not find packet
+05:57:20.412  dataplane : DEBUG   : Poll timeout, no packet from device 1, port None
+05:57:20.412  root      : DEBUG   : Checking for unexpected packets on all ports of device 1
+05:57:20.412  dataplane : DEBUG   : Grabbing packet
+05:57:20.412  dataplane : DEBUG   : Out of packets on all ports
+05:57:20.412  dataplane : DEBUG   : Did not find packet
+05:57:20.512  dataplane : DEBUG   : Poll timeout, no packet from device 1, port None
+05:57:20.513  dataplane : DEBUG   : Sending 40 bytes to device 0, port 1
+05:57:20.513  root      : DEBUG   : Checking for pkt on device 1, port 1
+05:57:20.514  dataplane : DEBUG   : Grabbing packet
+05:57:20.514  dataplane : DEBUG   : Sending 40 bytes to device 0, port 1
+05:57:20.514  root      : DEBUG   : Checking for pkt on device 1, port 1
+05:57:20.514  dataplane : DEBUG   : Grabbing packet
+05:57:20.515  dataplane : DEBUG   : Sending 40 bytes to device 0, port 1
+05:57:20.515  root      : DEBUG   : Checking for pkt on device 1, port 1
+05:57:20.515  dataplane : DEBUG   : Grabbing packet
+05:57:20.515  root      : INFO    : *** TEST RUN END  : Fri Nov 29 05:57:20 2019
+05:57:20.516  dataplane : INFO    : Thread exit

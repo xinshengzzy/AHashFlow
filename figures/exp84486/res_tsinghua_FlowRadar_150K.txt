@@ -1,0 +1,352 @@
+Obtaining JSON from switch...
+Done
+thresh0: 1
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000186718947972
+are_of_heavy_hitters: 0.999906631809
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh1: 1
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000186718947972
+are_of_heavy_hitters: 0.999906631809
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh2: 1
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000186718947972
+are_of_heavy_hitters: 0.999906631809
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh3: 1
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000186718947972
+are_of_heavy_hitters: 0.999906631809
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh4: 1
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000186718947972
+are_of_heavy_hitters: 0.999906631809
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh5: 1
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000186718947972
+are_of_heavy_hitters: 0.999906631809
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh6: 1
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000186718947972
+are_of_heavy_hitters: 0.999906631809
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh7: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh8: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh9: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh10: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh11: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh12: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh13: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh14: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh15: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh16: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh17: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh18: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh19: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh20: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh21: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh22: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh23: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh24: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh25: 2
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000185577532747
+are_of_heavy_hitters: 0.999907202623
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh26: 3
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 5.37894680222e-05
+are_of_heavy_hitters: 0.999973104543
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh27: 3
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 5.37894680222e-05
+are_of_heavy_hitters: 0.999973104543
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh28: 3
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 5.37894680222e-05
+are_of_heavy_hitters: 0.999973104543
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh29: 3
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 5.37894680222e-05
+are_of_heavy_hitters: 0.999973104543
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh30: 3
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 5.37894680222e-05
+are_of_heavy_hitters: 0.999973104543
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh31: 3
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 5.37894680222e-05
+are_of_heavy_hitters: 0.999973104543
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh32: 4
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 7.36078907659e-05
+are_of_heavy_hitters: 0.9999631947
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh33: 4
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 7.36078907659e-05
+are_of_heavy_hitters: 0.9999631947
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh34: 4
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 7.36078907659e-05
+are_of_heavy_hitters: 0.9999631947
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh35: 4
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 7.36078907659e-05
+are_of_heavy_hitters: 0.9999631947
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh36: 4
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 7.36078907659e-05
+are_of_heavy_hitters: 0.9999631947
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh37: 5
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000100522718134
+are_of_heavy_hitters: 0.999949736115
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh38: 5
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000100522718134
+are_of_heavy_hitters: 0.999949736115
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh39: 5
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000100522718134
+are_of_heavy_hitters: 0.999949736115
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh40: 5
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000100522718134
+are_of_heavy_hitters: 0.999949736115
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh41: 6
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000139606310205
+are_of_heavy_hitters: 0.999930191972
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh42: 6
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000139606310205
+are_of_heavy_hitters: 0.999930191972
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh43: 7
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000187090739008
+are_of_heavy_hitters: 0.999906445879
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh44: 7
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000187090739008
+are_of_heavy_hitters: 0.999906445879
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh45: 9
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000261472087855
+are_of_heavy_hitters: 0.999869246862
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh46: 11
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.000327922610264
+are_of_heavy_hitters: 0.999836011807
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh47: 15
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.0
+are_of_heavy_hitters: 1.0
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh48: 26
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.0
+are_of_heavy_hitters: 1.0
+are_of_flow_size_estimation: 0.999906631809
+----------
+thresh49: 74
+re_of_cardinality: 0.0013871845489
+fsc_of_flow_monitoring: 9.33681907912e-05
+f1_score_of_heavy_hitter_detection: 0.0
+are_of_heavy_hitters: 1.0
+are_of_flow_size_estimation: 0.999906631809
+----------

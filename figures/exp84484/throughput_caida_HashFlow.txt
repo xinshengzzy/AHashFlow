@@ -1,0 +1,1450 @@
+/home/zongyi/workspace/P4/HashFlow
+
+WARNING:gen_json:Your P4 program uses the modify_field() action primitive with 3 arguments (aka masked modify), bmv2 does not support it anymore and this compiler will replace your modify_field(a, b, c) with modify_field(a, (a & ~c) | (b & c))
+WARNING:gen_json:The P4 program defines a checksum verification on field 'ipv4.hdrChecksum'; as of now bmv2 ignores all checksum verifications; checksum updates are processed correctly.
+parsing successful
+Semantic warning: header instance 'temp_meta' is not reachable and will be removed
+Semantic warning: table 'm_table' is not reachable and will be removed
+Semantic warning: table 'ipv4_lpm' is not reachable and will be removed
+Semantic warning: table 'forward' is not reachable and will be removed
+Semantic warning: table 'send_frame' is not reachable and will be removed
+Semantic warning: header type 'temp_meta_t' is not reachable and will be removed
+Semantic warning: action 'm_action' is not reachable and will be removed
+Semantic warning: action '_drop' is not reachable and will be removed
+Semantic warning: action 'set_nhop' is not reachable and will be removed
+Semantic warning: action 'set_dmac' is not reachable and will be removed
+Semantic warning: action 'rewrite_mac' is not reachable and will be removed
+Semantic warning: header instance 'routing_metadata' is not reachable and will be removed
+Semantic warning: header type 'routing_metadata_t' is not reachable and will be removed
+semantic checking successful
+Header type standard_metadata_t not byte-aligned, adding padding
+Header type measurement_metadata_t not byte-aligned, adding padding
+Generating json output to /home/zongyi/workspace/P4/HashFlow/main.json
+Thrift port was not specified, will use 9090
+Calling target program-options parser
+Adding interface veth0 as port 0
+Adding interface veth2 as port 1
+Adding interface veth4 as port 2
+Adding interface veth6 as port 3
+Adding interface veth8 as port 4
+Using JSON input main.json
+No Thrift port specified, using CLI default
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of main_idx_calc_a_t
+action:              main_idx_calc_a
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_b_t
+action:              main_idx_calc_b
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_c_t
+action:              main_idx_calc_c
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_idx_calc_t
+action:              ancillary_idx_calc
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_a_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_b_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_c_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of compare_for_empty_a_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_a_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_b_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_b_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_c_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_c_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_a_t
+action:              min_update_digest_calc
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_a_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_b_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_b_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_c_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_c_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of read_ancillary_data_t
+action:              read_ancillary_table
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_compare_for_empty_t
+action:              subtract_digest_min_value
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_empty_t
+match key:           EXACT-00	EXACT-00
+action:              update_ancillary_empty
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of ancillary_compare_for_match_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_match_t
+match key:           EXACT-00	EXACT-00	EXACT-00:00:00:00
+action:              update_backward
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of update_ancillary_data_t
+action:              update_ancillary_collision
+runtime data:        
+RuntimeCmd: Adding entry to exact match table update_ancillary_data_t
+match key:           EXACT-00	EXACT-00
+action:              update_temp_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_b_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_c_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: 
+READY!!!
+sudo $SWITCH_PATH main.json -i 0@veth0 -i 1@veth2 -i 2@veth4 -i 3@veth6 -i 4@veth8 --nanolog ipc:///tmp/bm-0-log.ipc
+Begin sending packets.
+pktcnt: 392812
+Complete sending packets.
+throughput: 6.043262 Kpps
+/home/zongyi/workspace/P4/HashFlow
+
+WARNING:gen_json:Your P4 program uses the modify_field() action primitive with 3 arguments (aka masked modify), bmv2 does not support it anymore and this compiler will replace your modify_field(a, b, c) with modify_field(a, (a & ~c) | (b & c))
+WARNING:gen_json:The P4 program defines a checksum verification on field 'ipv4.hdrChecksum'; as of now bmv2 ignores all checksum verifications; checksum updates are processed correctly.
+parsing successful
+Semantic warning: header instance 'temp_meta' is not reachable and will be removed
+Semantic warning: table 'm_table' is not reachable and will be removed
+Semantic warning: table 'ipv4_lpm' is not reachable and will be removed
+Semantic warning: table 'forward' is not reachable and will be removed
+Semantic warning: table 'send_frame' is not reachable and will be removed
+Semantic warning: header type 'temp_meta_t' is not reachable and will be removed
+Semantic warning: action 'm_action' is not reachable and will be removed
+Semantic warning: action '_drop' is not reachable and will be removed
+Semantic warning: action 'set_nhop' is not reachable and will be removed
+Semantic warning: action 'set_dmac' is not reachable and will be removed
+Semantic warning: action 'rewrite_mac' is not reachable and will be removed
+Semantic warning: header instance 'routing_metadata' is not reachable and will be removed
+Semantic warning: header type 'routing_metadata_t' is not reachable and will be removed
+semantic checking successful
+Header type standard_metadata_t not byte-aligned, adding padding
+Header type measurement_metadata_t not byte-aligned, adding padding
+Generating json output to /home/zongyi/workspace/P4/HashFlow/main.json
+Thrift port was not specified, will use 9090
+Calling target program-options parser
+Adding interface veth0 as port 0
+Adding interface veth2 as port 1
+Adding interface veth4 as port 2
+Adding interface veth6 as port 3
+Adding interface veth8 as port 4
+Using JSON input main.json
+No Thrift port specified, using CLI default
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of main_idx_calc_a_t
+action:              main_idx_calc_a
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_b_t
+action:              main_idx_calc_b
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_c_t
+action:              main_idx_calc_c
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_idx_calc_t
+action:              ancillary_idx_calc
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_a_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_b_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_c_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of compare_for_empty_a_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_a_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_b_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_b_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_c_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_c_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_a_t
+action:              min_update_digest_calc
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_a_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_b_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_b_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_c_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_c_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of read_ancillary_data_t
+action:              read_ancillary_table
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_compare_for_empty_t
+action:              subtract_digest_min_value
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_empty_t
+match key:           EXACT-00	EXACT-00
+action:              update_ancillary_empty
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of ancillary_compare_for_match_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_match_t
+match key:           EXACT-00	EXACT-00	EXACT-00:00:00:00
+action:              update_backward
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of update_ancillary_data_t
+action:              update_ancillary_collision
+runtime data:        
+RuntimeCmd: Adding entry to exact match table update_ancillary_data_t
+match key:           EXACT-00	EXACT-00
+action:              update_temp_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_b_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_c_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: 
+READY!!!
+sudo $SWITCH_PATH main.json -i 0@veth0 -i 1@veth2 -i 2@veth4 -i 3@veth6 -i 4@veth8 --nanolog ipc:///tmp/bm-0-log.ipc
+Begin sending packets.
+pktcnt: 392812
+Complete sending packets.
+throughput: 6.137688 Kpps
+/home/zongyi/workspace/P4/HashFlow
+
+WARNING:gen_json:Your P4 program uses the modify_field() action primitive with 3 arguments (aka masked modify), bmv2 does not support it anymore and this compiler will replace your modify_field(a, b, c) with modify_field(a, (a & ~c) | (b & c))
+WARNING:gen_json:The P4 program defines a checksum verification on field 'ipv4.hdrChecksum'; as of now bmv2 ignores all checksum verifications; checksum updates are processed correctly.
+parsing successful
+Semantic warning: header instance 'temp_meta' is not reachable and will be removed
+Semantic warning: table 'm_table' is not reachable and will be removed
+Semantic warning: table 'ipv4_lpm' is not reachable and will be removed
+Semantic warning: table 'forward' is not reachable and will be removed
+Semantic warning: table 'send_frame' is not reachable and will be removed
+Semantic warning: header type 'temp_meta_t' is not reachable and will be removed
+Semantic warning: action 'm_action' is not reachable and will be removed
+Semantic warning: action '_drop' is not reachable and will be removed
+Semantic warning: action 'set_nhop' is not reachable and will be removed
+Semantic warning: action 'set_dmac' is not reachable and will be removed
+Semantic warning: action 'rewrite_mac' is not reachable and will be removed
+Semantic warning: header instance 'routing_metadata' is not reachable and will be removed
+Semantic warning: header type 'routing_metadata_t' is not reachable and will be removed
+semantic checking successful
+Header type standard_metadata_t not byte-aligned, adding padding
+Header type measurement_metadata_t not byte-aligned, adding padding
+Generating json output to /home/zongyi/workspace/P4/HashFlow/main.json
+Thrift port was not specified, will use 9090
+Calling target program-options parser
+Adding interface veth0 as port 0
+Adding interface veth2 as port 1
+Adding interface veth4 as port 2
+Adding interface veth6 as port 3
+Adding interface veth8 as port 4
+Using JSON input main.json
+No Thrift port specified, using CLI default
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of main_idx_calc_a_t
+action:              main_idx_calc_a
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_b_t
+action:              main_idx_calc_b
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_c_t
+action:              main_idx_calc_c
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_idx_calc_t
+action:              ancillary_idx_calc
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_a_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_b_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_c_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of compare_for_empty_a_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_a_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_b_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_b_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_c_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_c_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_a_t
+action:              min_update_digest_calc
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_a_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_b_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_b_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_c_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_c_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of read_ancillary_data_t
+action:              read_ancillary_table
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_compare_for_empty_t
+action:              subtract_digest_min_value
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_empty_t
+match key:           EXACT-00	EXACT-00
+action:              update_ancillary_empty
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of ancillary_compare_for_match_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_match_t
+match key:           EXACT-00	EXACT-00	EXACT-00:00:00:00
+action:              update_backward
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of update_ancillary_data_t
+action:              update_ancillary_collision
+runtime data:        
+RuntimeCmd: Adding entry to exact match table update_ancillary_data_t
+match key:           EXACT-00	EXACT-00
+action:              update_temp_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_b_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_c_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: 
+READY!!!
+sudo $SWITCH_PATH main.json -i 0@veth0 -i 1@veth2 -i 2@veth4 -i 3@veth6 -i 4@veth8 --nanolog ipc:///tmp/bm-0-log.ipc
+Begin sending packets.
+pktcnt: 392812
+Complete sending packets.
+throughput: 6.043262 Kpps
+/home/zongyi/workspace/P4/HashFlow
+
+WARNING:gen_json:Your P4 program uses the modify_field() action primitive with 3 arguments (aka masked modify), bmv2 does not support it anymore and this compiler will replace your modify_field(a, b, c) with modify_field(a, (a & ~c) | (b & c))
+WARNING:gen_json:The P4 program defines a checksum verification on field 'ipv4.hdrChecksum'; as of now bmv2 ignores all checksum verifications; checksum updates are processed correctly.
+parsing successful
+Semantic warning: header instance 'temp_meta' is not reachable and will be removed
+Semantic warning: table 'm_table' is not reachable and will be removed
+Semantic warning: table 'ipv4_lpm' is not reachable and will be removed
+Semantic warning: table 'forward' is not reachable and will be removed
+Semantic warning: table 'send_frame' is not reachable and will be removed
+Semantic warning: header type 'temp_meta_t' is not reachable and will be removed
+Semantic warning: action 'm_action' is not reachable and will be removed
+Semantic warning: action '_drop' is not reachable and will be removed
+Semantic warning: action 'set_nhop' is not reachable and will be removed
+Semantic warning: action 'set_dmac' is not reachable and will be removed
+Semantic warning: action 'rewrite_mac' is not reachable and will be removed
+Semantic warning: header instance 'routing_metadata' is not reachable and will be removed
+Semantic warning: header type 'routing_metadata_t' is not reachable and will be removed
+semantic checking successful
+Header type standard_metadata_t not byte-aligned, adding padding
+Header type measurement_metadata_t not byte-aligned, adding padding
+Generating json output to /home/zongyi/workspace/P4/HashFlow/main.json
+Thrift port was not specified, will use 9090
+Calling target program-options parser
+Adding interface veth0 as port 0
+Adding interface veth2 as port 1
+Adding interface veth4 as port 2
+Adding interface veth6 as port 3
+Adding interface veth8 as port 4
+Using JSON input main.json
+No Thrift port specified, using CLI default
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of main_idx_calc_a_t
+action:              main_idx_calc_a
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_b_t
+action:              main_idx_calc_b
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_c_t
+action:              main_idx_calc_c
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_idx_calc_t
+action:              ancillary_idx_calc
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_a_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_b_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_c_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of compare_for_empty_a_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_a_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_b_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_b_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_c_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_c_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_a_t
+action:              min_update_digest_calc
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_a_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_b_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_b_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_c_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_c_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of read_ancillary_data_t
+action:              read_ancillary_table
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_compare_for_empty_t
+action:              subtract_digest_min_value
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_empty_t
+match key:           EXACT-00	EXACT-00
+action:              update_ancillary_empty
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of ancillary_compare_for_match_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_match_t
+match key:           EXACT-00	EXACT-00	EXACT-00:00:00:00
+action:              update_backward
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of update_ancillary_data_t
+action:              update_ancillary_collision
+runtime data:        
+RuntimeCmd: Adding entry to exact match table update_ancillary_data_t
+match key:           EXACT-00	EXACT-00
+action:              update_temp_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_b_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_c_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: 
+READY!!!
+sudo $SWITCH_PATH main.json -i 0@veth0 -i 1@veth2 -i 2@veth4 -i 3@veth6 -i 4@veth8 --nanolog ipc:///tmp/bm-0-log.ipc
+Begin sending packets.
+pktcnt: 392812
+Complete sending packets.
+throughput: 5.951697 Kpps
+/home/zongyi/workspace/P4/HashFlow
+
+WARNING:gen_json:Your P4 program uses the modify_field() action primitive with 3 arguments (aka masked modify), bmv2 does not support it anymore and this compiler will replace your modify_field(a, b, c) with modify_field(a, (a & ~c) | (b & c))
+WARNING:gen_json:The P4 program defines a checksum verification on field 'ipv4.hdrChecksum'; as of now bmv2 ignores all checksum verifications; checksum updates are processed correctly.
+parsing successful
+Semantic warning: header instance 'temp_meta' is not reachable and will be removed
+Semantic warning: table 'm_table' is not reachable and will be removed
+Semantic warning: table 'ipv4_lpm' is not reachable and will be removed
+Semantic warning: table 'forward' is not reachable and will be removed
+Semantic warning: table 'send_frame' is not reachable and will be removed
+Semantic warning: header type 'temp_meta_t' is not reachable and will be removed
+Semantic warning: action 'm_action' is not reachable and will be removed
+Semantic warning: action '_drop' is not reachable and will be removed
+Semantic warning: action 'set_nhop' is not reachable and will be removed
+Semantic warning: action 'set_dmac' is not reachable and will be removed
+Semantic warning: action 'rewrite_mac' is not reachable and will be removed
+Semantic warning: header instance 'routing_metadata' is not reachable and will be removed
+Semantic warning: header type 'routing_metadata_t' is not reachable and will be removed
+semantic checking successful
+Header type standard_metadata_t not byte-aligned, adding padding
+Header type measurement_metadata_t not byte-aligned, adding padding
+Generating json output to /home/zongyi/workspace/P4/HashFlow/main.json
+Thrift port was not specified, will use 9090
+Calling target program-options parser
+Adding interface veth0 as port 0
+Adding interface veth2 as port 1
+Adding interface veth4 as port 2
+Adding interface veth6 as port 3
+Adding interface veth8 as port 4
+Using JSON input main.json
+No Thrift port specified, using CLI default
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of main_idx_calc_a_t
+action:              main_idx_calc_a
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_b_t
+action:              main_idx_calc_b
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_c_t
+action:              main_idx_calc_c
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_idx_calc_t
+action:              ancillary_idx_calc
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_a_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_b_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_c_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of compare_for_empty_a_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_a_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_b_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_b_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_c_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_c_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_a_t
+action:              min_update_digest_calc
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_a_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_b_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_b_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_c_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_c_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of read_ancillary_data_t
+action:              read_ancillary_table
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_compare_for_empty_t
+action:              subtract_digest_min_value
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_empty_t
+match key:           EXACT-00	EXACT-00
+action:              update_ancillary_empty
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of ancillary_compare_for_match_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_match_t
+match key:           EXACT-00	EXACT-00	EXACT-00:00:00:00
+action:              update_backward
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of update_ancillary_data_t
+action:              update_ancillary_collision
+runtime data:        
+RuntimeCmd: Adding entry to exact match table update_ancillary_data_t
+match key:           EXACT-00	EXACT-00
+action:              update_temp_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_b_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_c_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: 
+READY!!!
+sudo $SWITCH_PATH main.json -i 0@veth0 -i 1@veth2 -i 2@veth4 -i 3@veth6 -i 4@veth8 --nanolog ipc:///tmp/bm-0-log.ipc
+Begin sending packets.
+pktcnt: 392812
+Complete sending packets.
+throughput: 6.137688 Kpps
+/home/zongyi/workspace/P4/HashFlow
+
+WARNING:gen_json:Your P4 program uses the modify_field() action primitive with 3 arguments (aka masked modify), bmv2 does not support it anymore and this compiler will replace your modify_field(a, b, c) with modify_field(a, (a & ~c) | (b & c))
+WARNING:gen_json:The P4 program defines a checksum verification on field 'ipv4.hdrChecksum'; as of now bmv2 ignores all checksum verifications; checksum updates are processed correctly.
+parsing successful
+Semantic warning: header instance 'temp_meta' is not reachable and will be removed
+Semantic warning: table 'm_table' is not reachable and will be removed
+Semantic warning: table 'ipv4_lpm' is not reachable and will be removed
+Semantic warning: table 'forward' is not reachable and will be removed
+Semantic warning: table 'send_frame' is not reachable and will be removed
+Semantic warning: header type 'temp_meta_t' is not reachable and will be removed
+Semantic warning: action 'm_action' is not reachable and will be removed
+Semantic warning: action '_drop' is not reachable and will be removed
+Semantic warning: action 'set_nhop' is not reachable and will be removed
+Semantic warning: action 'set_dmac' is not reachable and will be removed
+Semantic warning: action 'rewrite_mac' is not reachable and will be removed
+Semantic warning: header instance 'routing_metadata' is not reachable and will be removed
+Semantic warning: header type 'routing_metadata_t' is not reachable and will be removed
+semantic checking successful
+Header type standard_metadata_t not byte-aligned, adding padding
+Header type measurement_metadata_t not byte-aligned, adding padding
+Generating json output to /home/zongyi/workspace/P4/HashFlow/main.json
+Thrift port was not specified, will use 9090
+Calling target program-options parser
+Adding interface veth0 as port 0
+Adding interface veth2 as port 1
+Adding interface veth4 as port 2
+Adding interface veth6 as port 3
+Adding interface veth8 as port 4
+Using JSON input main.json
+No Thrift port specified, using CLI default
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of main_idx_calc_a_t
+action:              main_idx_calc_a
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_b_t
+action:              main_idx_calc_b
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_c_t
+action:              main_idx_calc_c
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_idx_calc_t
+action:              ancillary_idx_calc
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_a_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_b_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_c_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of compare_for_empty_a_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_a_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_b_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_b_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_c_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_c_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_a_t
+action:              min_update_digest_calc
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_a_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_b_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_b_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_c_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_c_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of read_ancillary_data_t
+action:              read_ancillary_table
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_compare_for_empty_t
+action:              subtract_digest_min_value
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_empty_t
+match key:           EXACT-00	EXACT-00
+action:              update_ancillary_empty
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of ancillary_compare_for_match_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_match_t
+match key:           EXACT-00	EXACT-00	EXACT-00:00:00:00
+action:              update_backward
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of update_ancillary_data_t
+action:              update_ancillary_collision
+runtime data:        
+RuntimeCmd: Adding entry to exact match table update_ancillary_data_t
+match key:           EXACT-00	EXACT-00
+action:              update_temp_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_b_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_c_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: 
+READY!!!
+sudo $SWITCH_PATH main.json -i 0@veth0 -i 1@veth2 -i 2@veth4 -i 3@veth6 -i 4@veth8 --nanolog ipc:///tmp/bm-0-log.ipc
+Begin sending packets.
+pktcnt: 392812
+Complete sending packets.
+throughput: 5.951697 Kpps
+/home/zongyi/workspace/P4/HashFlow
+
+WARNING:gen_json:Your P4 program uses the modify_field() action primitive with 3 arguments (aka masked modify), bmv2 does not support it anymore and this compiler will replace your modify_field(a, b, c) with modify_field(a, (a & ~c) | (b & c))
+WARNING:gen_json:The P4 program defines a checksum verification on field 'ipv4.hdrChecksum'; as of now bmv2 ignores all checksum verifications; checksum updates are processed correctly.
+parsing successful
+Semantic warning: header instance 'temp_meta' is not reachable and will be removed
+Semantic warning: table 'm_table' is not reachable and will be removed
+Semantic warning: table 'ipv4_lpm' is not reachable and will be removed
+Semantic warning: table 'forward' is not reachable and will be removed
+Semantic warning: table 'send_frame' is not reachable and will be removed
+Semantic warning: header type 'temp_meta_t' is not reachable and will be removed
+Semantic warning: action 'm_action' is not reachable and will be removed
+Semantic warning: action '_drop' is not reachable and will be removed
+Semantic warning: action 'set_nhop' is not reachable and will be removed
+Semantic warning: action 'set_dmac' is not reachable and will be removed
+Semantic warning: action 'rewrite_mac' is not reachable and will be removed
+Semantic warning: header instance 'routing_metadata' is not reachable and will be removed
+Semantic warning: header type 'routing_metadata_t' is not reachable and will be removed
+semantic checking successful
+Header type standard_metadata_t not byte-aligned, adding padding
+Header type measurement_metadata_t not byte-aligned, adding padding
+Generating json output to /home/zongyi/workspace/P4/HashFlow/main.json
+Thrift port was not specified, will use 9090
+Calling target program-options parser
+Adding interface veth0 as port 0
+Adding interface veth2 as port 1
+Adding interface veth4 as port 2
+Adding interface veth6 as port 3
+Adding interface veth8 as port 4
+Using JSON input main.json
+No Thrift port specified, using CLI default
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of main_idx_calc_a_t
+action:              main_idx_calc_a
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_b_t
+action:              main_idx_calc_b
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_c_t
+action:              main_idx_calc_c
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_idx_calc_t
+action:              ancillary_idx_calc
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_a_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_b_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_c_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of compare_for_empty_a_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_a_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_b_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_b_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_c_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_c_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_a_t
+action:              min_update_digest_calc
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_a_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_b_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_b_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_c_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_c_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of read_ancillary_data_t
+action:              read_ancillary_table
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_compare_for_empty_t
+action:              subtract_digest_min_value
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_empty_t
+match key:           EXACT-00	EXACT-00
+action:              update_ancillary_empty
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of ancillary_compare_for_match_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_match_t
+match key:           EXACT-00	EXACT-00	EXACT-00:00:00:00
+action:              update_backward
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of update_ancillary_data_t
+action:              update_ancillary_collision
+runtime data:        
+RuntimeCmd: Adding entry to exact match table update_ancillary_data_t
+match key:           EXACT-00	EXACT-00
+action:              update_temp_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_b_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_c_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: 
+READY!!!
+sudo $SWITCH_PATH main.json -i 0@veth0 -i 1@veth2 -i 2@veth4 -i 3@veth6 -i 4@veth8 --nanolog ipc:///tmp/bm-0-log.ipc
+Begin sending packets.
+pktcnt: 392812
+Complete sending packets.
+throughput: 5.951697 Kpps
+/home/zongyi/workspace/P4/HashFlow
+
+WARNING:gen_json:Your P4 program uses the modify_field() action primitive with 3 arguments (aka masked modify), bmv2 does not support it anymore and this compiler will replace your modify_field(a, b, c) with modify_field(a, (a & ~c) | (b & c))
+WARNING:gen_json:The P4 program defines a checksum verification on field 'ipv4.hdrChecksum'; as of now bmv2 ignores all checksum verifications; checksum updates are processed correctly.
+parsing successful
+Semantic warning: header instance 'temp_meta' is not reachable and will be removed
+Semantic warning: table 'm_table' is not reachable and will be removed
+Semantic warning: table 'ipv4_lpm' is not reachable and will be removed
+Semantic warning: table 'forward' is not reachable and will be removed
+Semantic warning: table 'send_frame' is not reachable and will be removed
+Semantic warning: header type 'temp_meta_t' is not reachable and will be removed
+Semantic warning: action 'm_action' is not reachable and will be removed
+Semantic warning: action '_drop' is not reachable and will be removed
+Semantic warning: action 'set_nhop' is not reachable and will be removed
+Semantic warning: action 'set_dmac' is not reachable and will be removed
+Semantic warning: action 'rewrite_mac' is not reachable and will be removed
+Semantic warning: header instance 'routing_metadata' is not reachable and will be removed
+Semantic warning: header type 'routing_metadata_t' is not reachable and will be removed
+semantic checking successful
+Header type standard_metadata_t not byte-aligned, adding padding
+Header type measurement_metadata_t not byte-aligned, adding padding
+Generating json output to /home/zongyi/workspace/P4/HashFlow/main.json
+Thrift port was not specified, will use 9090
+Calling target program-options parser
+Adding interface veth0 as port 0
+Adding interface veth2 as port 1
+Adding interface veth4 as port 2
+Adding interface veth6 as port 3
+Adding interface veth8 as port 4
+Using JSON input main.json
+No Thrift port specified, using CLI default
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of main_idx_calc_a_t
+action:              main_idx_calc_a
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_b_t
+action:              main_idx_calc_b
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_c_t
+action:              main_idx_calc_c
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_idx_calc_t
+action:              ancillary_idx_calc
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_a_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_b_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_c_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of compare_for_empty_a_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_a_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_b_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_b_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_c_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_c_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_a_t
+action:              min_update_digest_calc
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_a_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_b_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_b_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_c_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_c_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of read_ancillary_data_t
+action:              read_ancillary_table
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_compare_for_empty_t
+action:              subtract_digest_min_value
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_empty_t
+match key:           EXACT-00	EXACT-00
+action:              update_ancillary_empty
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of ancillary_compare_for_match_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_match_t
+match key:           EXACT-00	EXACT-00	EXACT-00:00:00:00
+action:              update_backward
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of update_ancillary_data_t
+action:              update_ancillary_collision
+runtime data:        
+RuntimeCmd: Adding entry to exact match table update_ancillary_data_t
+match key:           EXACT-00	EXACT-00
+action:              update_temp_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_b_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_c_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: 
+READY!!!
+sudo $SWITCH_PATH main.json -i 0@veth0 -i 1@veth2 -i 2@veth4 -i 3@veth6 -i 4@veth8 --nanolog ipc:///tmp/bm-0-log.ipc
+Begin sending packets.
+pktcnt: 392812
+Complete sending packets.
+throughput: 5.776647 Kpps
+/home/zongyi/workspace/P4/HashFlow
+
+WARNING:gen_json:Your P4 program uses the modify_field() action primitive with 3 arguments (aka masked modify), bmv2 does not support it anymore and this compiler will replace your modify_field(a, b, c) with modify_field(a, (a & ~c) | (b & c))
+WARNING:gen_json:The P4 program defines a checksum verification on field 'ipv4.hdrChecksum'; as of now bmv2 ignores all checksum verifications; checksum updates are processed correctly.
+parsing successful
+Semantic warning: header instance 'temp_meta' is not reachable and will be removed
+Semantic warning: table 'm_table' is not reachable and will be removed
+Semantic warning: table 'ipv4_lpm' is not reachable and will be removed
+Semantic warning: table 'forward' is not reachable and will be removed
+Semantic warning: table 'send_frame' is not reachable and will be removed
+Semantic warning: header type 'temp_meta_t' is not reachable and will be removed
+Semantic warning: action 'm_action' is not reachable and will be removed
+Semantic warning: action '_drop' is not reachable and will be removed
+Semantic warning: action 'set_nhop' is not reachable and will be removed
+Semantic warning: action 'set_dmac' is not reachable and will be removed
+Semantic warning: action 'rewrite_mac' is not reachable and will be removed
+Semantic warning: header instance 'routing_metadata' is not reachable and will be removed
+Semantic warning: header type 'routing_metadata_t' is not reachable and will be removed
+semantic checking successful
+Header type standard_metadata_t not byte-aligned, adding padding
+Header type measurement_metadata_t not byte-aligned, adding padding
+Generating json output to /home/zongyi/workspace/P4/HashFlow/main.json
+Thrift port was not specified, will use 9090
+Calling target program-options parser
+Adding interface veth0 as port 0
+Adding interface veth2 as port 1
+Adding interface veth4 as port 2
+Adding interface veth6 as port 3
+Adding interface veth8 as port 4
+Using JSON input main.json
+No Thrift port specified, using CLI default
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of main_idx_calc_a_t
+action:              main_idx_calc_a
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_b_t
+action:              main_idx_calc_b
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_c_t
+action:              main_idx_calc_c
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_idx_calc_t
+action:              ancillary_idx_calc
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_a_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_b_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_c_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of compare_for_empty_a_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_a_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_b_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_b_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_c_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_c_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_a_t
+action:              min_update_digest_calc
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_a_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_b_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_b_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_c_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_c_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of read_ancillary_data_t
+action:              read_ancillary_table
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_compare_for_empty_t
+action:              subtract_digest_min_value
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_empty_t
+match key:           EXACT-00	EXACT-00
+action:              update_ancillary_empty
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of ancillary_compare_for_match_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_match_t
+match key:           EXACT-00	EXACT-00	EXACT-00:00:00:00
+action:              update_backward
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of update_ancillary_data_t
+action:              update_ancillary_collision
+runtime data:        
+RuntimeCmd: Adding entry to exact match table update_ancillary_data_t
+match key:           EXACT-00	EXACT-00
+action:              update_temp_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_b_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_c_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: 
+READY!!!
+sudo $SWITCH_PATH main.json -i 0@veth0 -i 1@veth2 -i 2@veth4 -i 3@veth6 -i 4@veth8 --nanolog ipc:///tmp/bm-0-log.ipc
+Begin sending packets.
+pktcnt: 392812
+Complete sending packets.
+throughput: 6.043262 Kpps
+/home/zongyi/workspace/P4/HashFlow
+
+WARNING:gen_json:Your P4 program uses the modify_field() action primitive with 3 arguments (aka masked modify), bmv2 does not support it anymore and this compiler will replace your modify_field(a, b, c) with modify_field(a, (a & ~c) | (b & c))
+WARNING:gen_json:The P4 program defines a checksum verification on field 'ipv4.hdrChecksum'; as of now bmv2 ignores all checksum verifications; checksum updates are processed correctly.
+parsing successful
+Semantic warning: header instance 'temp_meta' is not reachable and will be removed
+Semantic warning: table 'm_table' is not reachable and will be removed
+Semantic warning: table 'ipv4_lpm' is not reachable and will be removed
+Semantic warning: table 'forward' is not reachable and will be removed
+Semantic warning: table 'send_frame' is not reachable and will be removed
+Semantic warning: header type 'temp_meta_t' is not reachable and will be removed
+Semantic warning: action 'm_action' is not reachable and will be removed
+Semantic warning: action '_drop' is not reachable and will be removed
+Semantic warning: action 'set_nhop' is not reachable and will be removed
+Semantic warning: action 'set_dmac' is not reachable and will be removed
+Semantic warning: action 'rewrite_mac' is not reachable and will be removed
+Semantic warning: header instance 'routing_metadata' is not reachable and will be removed
+Semantic warning: header type 'routing_metadata_t' is not reachable and will be removed
+semantic checking successful
+Header type standard_metadata_t not byte-aligned, adding padding
+Header type measurement_metadata_t not byte-aligned, adding padding
+Generating json output to /home/zongyi/workspace/P4/HashFlow/main.json
+Thrift port was not specified, will use 9090
+Calling target program-options parser
+Adding interface veth0 as port 0
+Adding interface veth2 as port 1
+Adding interface veth4 as port 2
+Adding interface veth6 as port 3
+Adding interface veth8 as port 4
+Using JSON input main.json
+No Thrift port specified, using CLI default
+Control utility for runtime P4 table manipulation
+RuntimeCmd: Setting default action of main_idx_calc_a_t
+action:              main_idx_calc_a
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_b_t
+action:              main_idx_calc_b
+runtime data:        
+RuntimeCmd: Setting default action of main_idx_calc_c_t
+action:              main_idx_calc_c
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_idx_calc_t
+action:              ancillary_idx_calc
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_a_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_b_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of read_main_data_c_t
+action:              read_main_table
+runtime data:        
+RuntimeCmd: Setting default action of compare_for_empty_a_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_a_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_b_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_b_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_empty_c_t
+action:              pkt_xor_temp
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_empty_c_t
+match key:           EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_main_data
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_a_t
+action:              min_update_digest_calc
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_a_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_b_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_b_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of compare_for_match_c_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table compare_for_match_c_t
+match key:           EXACT-00	EXACT-00:00:00:00	EXACT-00:00:00:00	EXACT-00:00	EXACT-00:00	EXACT-00
+action:              update_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of read_ancillary_data_t
+action:              read_ancillary_table
+runtime data:        
+RuntimeCmd: Setting default action of ancillary_compare_for_empty_t
+action:              subtract_digest_min_value
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_empty_t
+match key:           EXACT-00	EXACT-00
+action:              update_ancillary_empty
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of ancillary_compare_for_match_t
+action:              _nop
+runtime data:        
+RuntimeCmd: Adding entry to exact match table ancillary_compare_for_match_t
+match key:           EXACT-00	EXACT-00	EXACT-00:00:00:00
+action:              update_backward
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Setting default action of update_ancillary_data_t
+action:              update_ancillary_collision
+runtime data:        
+RuntimeCmd: Adding entry to exact match table update_ancillary_data_t
+match key:           EXACT-00	EXACT-00
+action:              update_temp_packet_count
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_b_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: Adding entry to exact match table update_min_value_c_t
+match key:           EXACT-00
+action:              update_min_value
+runtime data:        
+Entry has been added with handle 0
+RuntimeCmd: 
+READY!!!
+sudo $SWITCH_PATH main.json -i 0@veth0 -i 1@veth2 -i 2@veth4 -i 3@veth6 -i 4@veth8 --nanolog ipc:///tmp/bm-0-log.ipc
+Begin sending packets.
+pktcnt: 392812
+Complete sending packets.
+throughput: 6.043262 Kpps
