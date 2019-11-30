@@ -82,7 +82,8 @@ DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure $(am__configure_deps) \
 	$(srcdir)/config.h.in $(top_srcdir)/tools/produce_deps.py.in \
 	$(top_srcdir)/tools/produce_deps_tofino.sh.in README compile \
-	config.guess config.sub install-sh missing ltmain.sh
+	config.guess config.sub depcomp install-sh missing py-compile \
+	ltmain.sh
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ab_find_header_path.m4 \
 	$(top_srcdir)/m4/ac_p4c.m4 \

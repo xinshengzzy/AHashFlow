@@ -79,9 +79,9 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-unknown-linux-gnu
 host_triplet = x86_64-unknown-linux-gnu
-#am__append_1 = src/switch_sai_rpc_server.cpp
+am__append_1 = src/switch_sai_rpc_server.cpp
 #am__append_2 = librpcserver.la libbmswitchsai.la
-am__append_3 = librpcserver.la libswitchsai.la
+#am__append_3 = librpcserver.la libswitchsai.la
 #am__append_4 = librpcserver.la \
 #	libtofinobmswitchsai.la
 subdir = switchsai
@@ -148,7 +148,7 @@ am__libbmswitchsai_la_SOURCES_DIST = src/sai.c src/sai_bflib.c \
 	src/saitunnel.c src/saidtel.c src/saiudf.c src/saiutils.c \
 	src/saivlan.c src/saiwred.c src/switch_sai_rpc_server.cpp
 am__dirstamp = $(am__leading_dot)dirstamp
-#am__objects_1 = src/libbmswitchsai_la-switch_sai_rpc_server.lo
+am__objects_1 = src/libbmswitchsai_la-switch_sai_rpc_server.lo
 am__objects_2 = src/libbmswitchsai_la-sai.lo \
 	src/libbmswitchsai_la-sai_bflib.lo \
 	src/libbmswitchsai_la-saiacl.lo \
@@ -197,20 +197,20 @@ am__librpcserver_la_SOURCES_DIST =  \
 	./src/gen-cpp/switch_sai_rpc.h \
 	./src/gen-cpp/switch_sai_types.cpp \
 	./src/gen-cpp/switch_sai_types.h
-#am__objects_3 = ./src/gen-cpp/switch_sai_constants.lo \
-#	./src/gen-cpp/switch_sai_rpc.lo \
-#	./src/gen-cpp/switch_sai_types.lo
-#am__objects_4 = $(am__objects_3)
-am_librpcserver_la_OBJECTS = $(am__objects_4)
+am__objects_3 = ./src/gen-cpp/switch_sai_constants.lo \
+	./src/gen-cpp/switch_sai_rpc.lo \
+	./src/gen-cpp/switch_sai_types.lo
+am__objects_4 = $(am__objects_3)
+#am_librpcserver_la_OBJECTS = $(am__objects_4)
 #am_librpcserver_la_OBJECTS =  \
 #	$(am__objects_4)
 #am_librpcserver_la_OBJECTS = $(am__objects_4)
 librpcserver_la_OBJECTS = $(am_librpcserver_la_OBJECTS)
 #am_librpcserver_la_rpath = -rpath $(libdir)
 #am_librpcserver_la_rpath = -rpath $(libdir)
-am_librpcserver_la_rpath = -rpath $(libdir)
-libswitchsai_la_DEPENDENCIES =  \
-	$(am__DEPENDENCIES_1) librpcserver.la
+#am_librpcserver_la_rpath = -rpath $(libdir)
+#libswitchsai_la_DEPENDENCIES =  \
+#	$(am__DEPENDENCIES_1) librpcserver.la
 am__libswitchsai_la_SOURCES_DIST = src/sai.c src/sai_bflib.c \
 	src/saiacl.c src/saiapi.h src/saibridge.c src/saibuffer.c \
 	src/saifdb.c src/saihash.c src/saihostif.c src/saiinternal.h \
@@ -222,7 +222,7 @@ am__libswitchsai_la_SOURCES_DIST = src/sai.c src/sai_bflib.c \
 	src/saischedulergroup.c src/saistp.c src/saiswitch.c \
 	src/saitunnel.c src/saidtel.c src/saiudf.c src/saiutils.c \
 	src/saivlan.c src/saiwred.c src/switch_sai_rpc_server.cpp
-#am__objects_5 = src/libswitchsai_la-switch_sai_rpc_server.lo
+am__objects_5 = src/libswitchsai_la-switch_sai_rpc_server.lo
 am__objects_6 = src/libswitchsai_la-sai.lo \
 	src/libswitchsai_la-sai_bflib.lo src/libswitchsai_la-saiacl.lo \
 	src/libswitchsai_la-saibridge.lo \
@@ -249,9 +249,9 @@ am__objects_6 = src/libswitchsai_la-sai.lo \
 	src/libswitchsai_la-saidtel.lo src/libswitchsai_la-saiudf.lo \
 	src/libswitchsai_la-saiutils.lo src/libswitchsai_la-saivlan.lo \
 	src/libswitchsai_la-saiwred.lo $(am__objects_5)
-am_libswitchsai_la_OBJECTS = $(am__objects_6)
+#am_libswitchsai_la_OBJECTS = $(am__objects_6)
 libswitchsai_la_OBJECTS = $(am_libswitchsai_la_OBJECTS)
-am_libswitchsai_la_rpath = -rpath $(libdir)
+#am_libswitchsai_la_rpath = -rpath $(libdir)
 #libtofinobmswitchsai_la_DEPENDENCIES =  \
 #	$(am__DEPENDENCIES_1) librpcserver.la
 am__libtofinobmswitchsai_la_SOURCES_DIST = src/sai.c src/sai_bflib.c \
@@ -265,7 +265,7 @@ am__libtofinobmswitchsai_la_SOURCES_DIST = src/sai.c src/sai_bflib.c \
 	src/saischedulergroup.c src/saistp.c src/saiswitch.c \
 	src/saitunnel.c src/saidtel.c src/saiudf.c src/saiutils.c \
 	src/saivlan.c src/saiwred.c src/switch_sai_rpc_server.cpp
-#am__objects_7 = src/libtofinobmswitchsai_la-switch_sai_rpc_server.lo
+am__objects_7 = src/libtofinobmswitchsai_la-switch_sai_rpc_server.lo
 am__objects_8 = src/libtofinobmswitchsai_la-sai.lo \
 	src/libtofinobmswitchsai_la-sai_bflib.lo \
 	src/libtofinobmswitchsai_la-saiacl.lo \
@@ -400,7 +400,7 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/missing aclocal-1.14
+ACLOCAL = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_CFLAGS =  -DJU_64BIT  $(SWITCH_CFLAGS)
 AM_CPPFLAGS = -I$(includedir)  -I$(srcdir)/submodules/SAI/inc \
@@ -410,9 +410,9 @@ AM_CXXFLAGS =
 AM_DEFAULT_VERBOSITY = 0
 AM_LDFLAGS =  -L/root/bf-sde-8.2.0/install/lib
 AR = ar
-AUTOCONF = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/missing autoconf
-AUTOHEADER = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/missing autoheader
-AUTOMAKE = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/missing automake-1.14
+AUTOCONF = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/missing autoconf
+AUTOHEADER = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/missing autoheader
+AUTOMAKE = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/missing automake-1.14
 AWK = mawk
 BIN_DIR = /root/bf-sde-8.2.0/install/bin
 BMV2TOFINO_CPPFLAGS = 
@@ -451,13 +451,13 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
 LIBOBJS = 
-LIBS = 
+LIBS = -lthrift 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIB_DIR = /root/bf-sde-8.2.0/install/lib
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/missing makeinfo
+MAKEINFO = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 MY_PYTHONPATH = /root/bf-sde-8.2.0/install/lib/python2.7/site-packages
@@ -480,7 +480,7 @@ PACKAGE_TARNAME = switch
 PACKAGE_URL = 
 PACKAGE_VERSION = 0.1
 PATH_SEPARATOR = :
-PTF = /root/bf-sde-8.2.0/install/bin/ptf
+PTF = /root/bf-sde-8.2.0/pkgsrc/p4-examples/ptf-tests
 PYTHON = /usr/bin/python
 PYTHON_EXEC_PREFIX = ${exec_prefix}
 PYTHON_PLATFORM = linux2
@@ -492,14 +492,14 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = strip
 SWITCH_CFLAGS = -g -Wall -Wextra -Wno-unused-parameter -Werror -Wno-error=unused -Wno-error=unused-variable -Wno-error=unused-label -Wno-error=unused-but-set-variable
-THRIFT = 
-THRIFT_LIB = 
-TOFINO_CPPFLAGS = -D__TARGET_TOFINO__
+THRIFT = /usr/local/bin/thrift
+THRIFT_LIB = -lthrift
+TOFINO_CPPFLAGS = 
 VERSION = 0.1
-abs_builddir = /root/bf-sde-8.2.0/switch-8.2.0/switchsai
-abs_srcdir = /root/bf-sde-8.2.0/switch-8.2.0/switchsai
-abs_top_builddir = /root/bf-sde-8.2.0/switch-8.2.0
-abs_top_srcdir = /root/bf-sde-8.2.0/switch-8.2.0
+abs_builddir = /root/workspace/AHashFlow/src/switch-8.2.0/switchsai
+abs_srcdir = /root/workspace/AHashFlow/src/switch-8.2.0/switchsai
+abs_top_builddir = /root/workspace/AHashFlow/src/switch-8.2.0
+abs_top_srcdir = /root/workspace/AHashFlow/src/switch-8.2.0
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -516,7 +516,7 @@ build_cpu = x86_64
 build_os = linux-gnu
 build_vendor = unknown
 builddir = .
-conf_tgts = tofino
+conf_tgts = 
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
@@ -530,7 +530,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/install-sh
+install_sh = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -556,26 +556,26 @@ top_build_prefix = ../
 top_builddir = ..
 top_srcdir = ..
 ACLOCAL_AMFLAGS = ${ACLOCAL_FLAGS} -I m4
-#thrift_cpp_sources = \
-#./src/gen-cpp/switch_sai_constants.cpp \
-#./src/gen-cpp/switch_sai_constants.h \
-#./src/gen-cpp/switch_sai_rpc.cpp \
-#./src/gen-cpp/switch_sai_rpc.h \
-#./src/gen-cpp/switch_sai_types.cpp \
-#./src/gen-cpp/switch_sai_types.h
+thrift_cpp_sources = \
+./src/gen-cpp/switch_sai_constants.cpp \
+./src/gen-cpp/switch_sai_constants.h \
+./src/gen-cpp/switch_sai_rpc.cpp \
+./src/gen-cpp/switch_sai_rpc.h \
+./src/gen-cpp/switch_sai_types.cpp \
+./src/gen-cpp/switch_sai_types.h
 
-#thrift_py_sources = \
-#./src/gen-py/switch_sai/constants.py \
-#./src/gen-py/switch_sai/__init__.py \
-#./src/gen-py/switch_sai/switch_sai_rpc.py \
-#./src/gen-py/switch_sai/switch_sai_rpc-remote \
-#./src/gen-py/switch_sai/ttypes.py
+thrift_py_sources = \
+./src/gen-py/switch_sai/constants.py \
+./src/gen-py/switch_sai/__init__.py \
+./src/gen-py/switch_sai/switch_sai_rpc.py \
+./src/gen-py/switch_sai/switch_sai_rpc-remote \
+./src/gen-py/switch_sai/ttypes.py
 
-#sai_ctypesgen = ./src/gen-py/switch_sai/sai_headers.py
-#switchsaidir = $(pythondir)/switchsai_thrift
-#switchsai_PYTHON = \
-#$(thrift_py_sources) \
-#$(sai_ctypesgen)
+sai_ctypesgen = ./src/gen-py/switch_sai/sai_headers.py
+switchsaidir = $(pythondir)/switchsai_thrift
+switchsai_PYTHON = \
+$(thrift_py_sources) \
+$(sai_ctypesgen)
 
 switchsai_sources = src/sai.c src/sai_bflib.c src/saiacl.c \
 	src/saiapi.h src/saibridge.c src/saibuffer.c src/saifdb.c \
@@ -633,28 +633,28 @@ submodules/SAI/inc/saiipmcgroup.h       \
 submodules/SAI/inc/saimcastfdb.h        \
 submodules/SAI/inc/saidtel.h
 
-#rpcserver_sources = $(thrift_cpp_sources)
-#BUILT_SOURCES = \
-#$(thrift_cpp_sources) \
-#$(thrift_py_sources) \
-#$(sai_ctypesgen)
+rpcserver_sources = $(thrift_cpp_sources)
+BUILT_SOURCES = \
+$(thrift_cpp_sources) \
+$(thrift_py_sources) \
+$(sai_ctypesgen)
 
 CTYPESGEN = $(top_srcdir)/third-party/ctypesgen/ctypesgen.py
-#CLEANFILES = $(BUILT_SOURCES) switchsai.ts
+CLEANFILES = $(BUILT_SOURCES) switchsai.ts
 lib_LTLIBRARIES = $(am__append_2) $(am__append_3) $(am__append_4)
 #librpcserver_la_SOURCES = $(rpcserver_sources)
 #librpcserver_la_SOURCES = $(rpcserver_sources)
-librpcserver_la_SOURCES = $(rpcserver_sources)
+#librpcserver_la_SOURCES = $(rpcserver_sources)
 #libbmswitchsai_la_CPPFLAGS = $(BMV2_CPPFLAGS) \
 #	-I$(top_builddir)/p4-build $(AM_CPPFLAGS)
 #libbmswitchsai_la_SOURCES = $(switchsai_sources)
 #libbmswitchsai_la_LIBADD = $(THRIFT_LIB) \
 #	librpcserver.la
-libswitchsai_la_CPPFLAGS = $(TOFINO_CPPFLAGS) \
-	-I$(top_builddir)/p4-build $(AM_CPPFLAGS)
-libswitchsai_la_SOURCES = $(switchsai_sources)
-libswitchsai_la_LIBADD = $(THRIFT_LIB) \
-	librpcserver.la
+#libswitchsai_la_CPPFLAGS = $(TOFINO_CPPFLAGS) \
+#	-I$(top_builddir)/p4-build $(AM_CPPFLAGS)
+#libswitchsai_la_SOURCES = $(switchsai_sources)
+#libswitchsai_la_LIBADD = $(THRIFT_LIB) \
+#	librpcserver.la
 #libtofinobmswitchsai_la_CPPFLAGS =  \
 #	$(BMV2TOFINO_CPPFLAGS) \
 #	-I$(top_builddir)/p4-build \
@@ -2143,33 +2143,33 @@ uninstall-am: uninstall-libLTLIBRARIES uninstall-switchsaiPYTHON \
 	uninstall-switchsaiPYTHON uninstall-switchsaiincHEADERS
 
 
-#$(sai_ctypesgen) : $(thrift_py_sources)
-#	@$(CTYPESGEN) -I/usr/include \
-#	-I$(srcdir)/submodules/SAI/inc \
-#	$(srcdir)/submodules/SAI/inc/*.h -o $@ \
-#	> /dev/null 2>&1
+$(sai_ctypesgen) : $(thrift_py_sources)
+	@$(CTYPESGEN) -I/usr/include \
+	-I$(srcdir)/submodules/SAI/inc \
+	$(srcdir)/submodules/SAI/inc/*.h -o $@ \
+	> /dev/null 2>&1
 
 # The recipe to invoke the thrift compiler is copied from:
 # http://www.gnu.org/software/automake/manual/html_node/Multiple-Outputs.html
-#switchsai.ts : ./src/switch_sai.thrift
-#	@rm -f switchsai.tmp
-#	@touch switchsai.tmp
-#	$(THRIFT) -o ./src/ --gen cpp -r ./src/switch_sai.thrift
-#	$(THRIFT) -o ./src/ --gen py -r ./src/switch_sai.thrift
-#	@mv -f switchsai.tmp $@
+switchsai.ts : ./src/switch_sai.thrift
+	@rm -f switchsai.tmp
+	@touch switchsai.tmp
+	$(THRIFT) -o ./src/ --gen cpp -r ./src/switch_sai.thrift
+	$(THRIFT) -o ./src/ --gen py -r ./src/switch_sai.thrift
+	@mv -f switchsai.tmp $@
 
-#$(thrift_cpp_sources) $(thrift_py_sources) : switchsai.ts
-#	@if test -f $@; then :; else \
-#	  trap 'rm -rf switchsai.lock switchsai.ts' 1 2 13 15; \
-#	if mkdir switchsai.lock 2>/dev/null; then \
-#	  rm -f switchsai.ts; \
-#	  $(MAKE) $(AM_MAKEFLAGS) switchsai.ts; \
-#	  result=$$?; rm -rf switchsai.lock; exit $$result; \
-#	else \
-#	  while test -d switchsai.lock; do sleep 1; done; \
-#	    test -f switchsai.ts; \
-#	  fi; \
-#	fi
+$(thrift_cpp_sources) $(thrift_py_sources) : switchsai.ts
+	@if test -f $@; then :; else \
+	  trap 'rm -rf switchsai.lock switchsai.ts' 1 2 13 15; \
+	if mkdir switchsai.lock 2>/dev/null; then \
+	  rm -f switchsai.ts; \
+	  $(MAKE) $(AM_MAKEFLAGS) switchsai.ts; \
+	  result=$$?; rm -rf switchsai.lock; exit $$result; \
+	else \
+	  while test -d switchsai.lock; do sleep 1; done; \
+	    test -f switchsai.ts; \
+	  fi; \
+	fi
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

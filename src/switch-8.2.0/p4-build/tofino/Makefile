@@ -89,12 +89,12 @@ host_triplet = x86_64-unknown-linux-gnu
 #am__append_3 = switch/cli/xml/pd_switch.xml
 ##am__append_4 = switch/bf-rt.json
 #am__append_5 = ./switch/bf-rt.json
-#am__append_6 = libpdthrift.la
+am__append_6 = libpdthrift.la
 am__append_7 = $(libpd_la_SOURCES) \
 	$(libpdcli_la_SOURCES)
-#am__append_8 = $(builddir)/$(P4_NAME)/thrift/p4_pd_rpc.thrift \
-#	$(libpdthrift_la_SOURCES) \
-#	$(pd_python_sources)
+am__append_8 = $(builddir)/$(P4_NAME)/thrift/p4_pd_rpc.thrift \
+	$(libpdthrift_la_SOURCES) \
+	$(pd_python_sources)
 subdir = tofino
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/depcomp $(am__extrapython_PYTHON_DIST) \
@@ -193,26 +193,26 @@ am__libpdthrift_la_SOURCES_DIST = switch/gen-cpp/p4_prefix.h \
 	switch/thrift-src/bfn_pd_rpc_server.h \
 	switch/thrift-src/p4_pd_rpc_server.ipp
 am__objects_1 = switch/thrift-src/libpdthrift_la-bfn_pd_rpc_server.lo
-#am_libpdthrift_la_OBJECTS = switch/gen-cpp/libpdthrift_la-p4_prefix0.lo \
-#	switch/gen-cpp/libpdthrift_la-p4_prefix1.lo \
-#	switch/gen-cpp/libpdthrift_la-p4_prefix2.lo \
-#	switch/gen-cpp/libpdthrift_la-p4_prefix3.lo \
-#	switch/gen-cpp/libpdthrift_la-p4_prefix4.lo \
-#	switch/gen-cpp/libpdthrift_la-p4_prefix5.lo \
-#	switch/gen-cpp/libpdthrift_la-p4_prefix6.lo \
-#	switch/gen-cpp/libpdthrift_la-p4_prefix7.lo \
-#	switch/gen-cpp/libpdthrift_la-p4_pd_rpc_constants.lo \
-#	switch/gen-cpp/libpdthrift_la-p4_pd_rpc_types.lo \
-#	switch/gen-cpp/libpdthrift_la-res_constants.lo \
-#	switch/gen-cpp/libpdthrift_la-res_types.lo \
-#	$(am__objects_1)
+am_libpdthrift_la_OBJECTS = switch/gen-cpp/libpdthrift_la-p4_prefix0.lo \
+	switch/gen-cpp/libpdthrift_la-p4_prefix1.lo \
+	switch/gen-cpp/libpdthrift_la-p4_prefix2.lo \
+	switch/gen-cpp/libpdthrift_la-p4_prefix3.lo \
+	switch/gen-cpp/libpdthrift_la-p4_prefix4.lo \
+	switch/gen-cpp/libpdthrift_la-p4_prefix5.lo \
+	switch/gen-cpp/libpdthrift_la-p4_prefix6.lo \
+	switch/gen-cpp/libpdthrift_la-p4_prefix7.lo \
+	switch/gen-cpp/libpdthrift_la-p4_pd_rpc_constants.lo \
+	switch/gen-cpp/libpdthrift_la-p4_pd_rpc_types.lo \
+	switch/gen-cpp/libpdthrift_la-res_constants.lo \
+	switch/gen-cpp/libpdthrift_la-res_types.lo \
+	$(am__objects_1)
 libpdthrift_la_OBJECTS = $(am_libpdthrift_la_OBJECTS)
 libpdthrift_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(libpdthrift_la_CXXFLAGS) $(CXXFLAGS) $(AM_LDFLAGS) \
 	$(LDFLAGS) -o $@
-#am_libpdthrift_la_rpath =  \
-#	-rpath $(pdlibdir)
+am_libpdthrift_la_rpath =  \
+	-rpath $(pdlibdir)
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -308,17 +308,17 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing aclocal-1.14
+ACLOCAL = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AM_LDFLAGS = -L/root/bf-sde-8.2.0/install/lib
 AR = ar
-AUTOCONF = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing autoconf
-AUTOHEADER = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing autoheader
-AUTOMAKE = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing automake-1.14
+AUTOCONF = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing autoconf
+AUTOHEADER = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing autoheader
+AUTOMAKE = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing automake-1.14
 AWK = mawk
 BMV2TOFINO_HEADER_INCLUDE = 
-BM_P4FLAGS = --field-aliases /root/bf-sde-8.2.0/switch-8.2.0/bmv2/field-aliases.bmv2
+BM_P4FLAGS = --field-aliases /root/workspace/AHashFlow/src/switch-8.2.0/bmv2/field-aliases.bmv2
 BM_THRIFT_INCLUDE = 
 CC = gcc -std=gnu99
 CCDEPMODE = depmode=gcc3
@@ -352,12 +352,12 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
 LIBOBJS = 
-LIBS = 
+LIBS = -lpthread -lthrift 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing makeinfo
+MAKEINFO = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 MY_PYTHONPATH = /root/bf-sde-8.2.0/install/lib/python2.7/site-packages
@@ -378,7 +378,7 @@ P4PPFLAGS =
 P4_ARCHITECTURE = v1model
 P4_BUILD_ASSUME_PDFIXED = 
 P4_NAME = switch
-P4_PATH = /root/bf-sde-8.2.0/switch-8.2.0/p4src/switch.p4
+P4_PATH = /root/workspace/AHashFlow/src/switch-8.2.0/p4src/switch.p4
 P4_PREFIX = dc
 P4_VERSION = p4-14
 PACKAGE = p4-build
@@ -389,9 +389,9 @@ PACKAGE_TARNAME = p4-build
 PACKAGE_URL = 
 PACKAGE_VERSION = 0.1
 PATH_SEPARATOR = :
-PDCLI = /root/bf-sde-8.2.0/install/bin/gencli
+PDCLI = 
 PDFLAGS = 
-PDGEN = /root/bf-sde-8.2.0/install/bin/generate_tofino_pd
+PDGEN = 
 PI_GEN_DEFS = 
 PI_GEN_NATIVE_JSON = 
 PI_GEN_PD = 
@@ -405,13 +405,13 @@ SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
 STRIP = strip
-THRIFT = 
-THRIFT_LIB = 
+THRIFT = /usr/local/bin/thrift
+THRIFT_LIB = -lthrift
 VERSION = 0.1
-abs_builddir = /root/bf-sde-8.2.0/switch-8.2.0/p4-build/tofino
-abs_srcdir = /root/bf-sde-8.2.0/switch-8.2.0/p4-build/tofino
-abs_top_builddir = /root/bf-sde-8.2.0/switch-8.2.0/p4-build
-abs_top_srcdir = /root/bf-sde-8.2.0/switch-8.2.0/p4-build
+abs_builddir = /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/tofino
+abs_srcdir = /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/tofino
+abs_top_builddir = /root/workspace/AHashFlow/src/switch-8.2.0/p4-build
+abs_top_srcdir = /root/workspace/AHashFlow/src/switch-8.2.0/p4-build
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -441,7 +441,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/install-sh
+install_sh = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -472,7 +472,7 @@ AM_CPPFLAGS = -I$(FULL_INC_DIR) $(am__append_1)
 # this is not portable (GNU make extension), but this is the only think I can
 # think of right now to keep track of dependencies
 # anyone with a better solution is welcome to change this
-refdeps := $(shell ../tools/produce_deps_tofino.sh /root/bf-sde-8.2.0/switch-8.2.0/p4src/switch.p4)
+refdeps := $(shell ../tools/produce_deps_tofino.sh /root/workspace/AHashFlow/src/switch-8.2.0/p4src/switch.p4)
 #AM_P4FLAGS = --std $(P4_VERSION) --target \
 #	tofino --arch $(P4_ARCHITECTURE) -o \
 #	$(builddir)/$(P4_NAME) $(am__append_2) \
@@ -531,41 +531,41 @@ switch/thrift-src/bfn_pd_rpc_server.cpp \
 switch/thrift-src/bfn_pd_rpc_server.h \
 switch/thrift-src/p4_pd_rpc_server.ipp
 
-#libpdthrift_la_CPPFLAGS = -I$(builddir)/$(P4_NAME) \
-#	-I$(builddir)/$(P4_NAME)/gen-cpp \
-#	$(AM_CPPFLAGS)
-#libpdthrift_la_CXXFLAGS = -fno-var-tracking-assignments $(AM_CXXFLAGS) $(ASAN_FLAGS)
-#libpdthrift_la_SOURCES = \
-#switch/gen-cpp/p4_prefix.h \
-#switch/gen-cpp/p4_prefix0.cpp \
-#switch/gen-cpp/p4_prefix1.cpp \
-#switch/gen-cpp/p4_prefix2.cpp \
-#switch/gen-cpp/p4_prefix3.cpp \
-#switch/gen-cpp/p4_prefix4.cpp \
-#switch/gen-cpp/p4_prefix5.cpp \
-#switch/gen-cpp/p4_prefix6.cpp \
-#switch/gen-cpp/p4_prefix7.cpp \
-#switch/gen-cpp/p4_pd_rpc_constants.h \
-#switch/gen-cpp/p4_pd_rpc_types.h \
-#switch/gen-cpp/res_constants.h \
-#switch/gen-cpp/res_types.h\
-#switch/gen-cpp/p4_pd_rpc_constants.cpp \
-#switch/gen-cpp/p4_pd_rpc_types.cpp \
-#switch/gen-cpp/res_constants.cpp \
-#switch/gen-cpp/res_types.cpp \
-#$(pdthrift_server_sources)
+libpdthrift_la_CPPFLAGS = -I$(builddir)/$(P4_NAME) \
+	-I$(builddir)/$(P4_NAME)/gen-cpp \
+	$(AM_CPPFLAGS)
+libpdthrift_la_CXXFLAGS = -fno-var-tracking-assignments $(AM_CXXFLAGS) $(ASAN_FLAGS)
+libpdthrift_la_SOURCES = \
+switch/gen-cpp/p4_prefix.h \
+switch/gen-cpp/p4_prefix0.cpp \
+switch/gen-cpp/p4_prefix1.cpp \
+switch/gen-cpp/p4_prefix2.cpp \
+switch/gen-cpp/p4_prefix3.cpp \
+switch/gen-cpp/p4_prefix4.cpp \
+switch/gen-cpp/p4_prefix5.cpp \
+switch/gen-cpp/p4_prefix6.cpp \
+switch/gen-cpp/p4_prefix7.cpp \
+switch/gen-cpp/p4_pd_rpc_constants.h \
+switch/gen-cpp/p4_pd_rpc_types.h \
+switch/gen-cpp/res_constants.h \
+switch/gen-cpp/res_types.h\
+switch/gen-cpp/p4_pd_rpc_constants.cpp \
+switch/gen-cpp/p4_pd_rpc_types.cpp \
+switch/gen-cpp/res_constants.cpp \
+switch/gen-cpp/res_types.cpp \
+$(pdthrift_server_sources)
 
-#pd_python_sources = \
-#./switch/gen-py/p4_pd_rpc/constants.py \
-#./switch/gen-py/p4_pd_rpc/ttypes.py \
-#./switch/gen-py/p4_pd_rpc/__init__.py
+pd_python_sources = \
+./switch/gen-py/p4_pd_rpc/constants.py \
+./switch/gen-py/p4_pd_rpc/ttypes.py \
+./switch/gen-py/p4_pd_rpc/__init__.py
 
-#pdthriftpythondir = ${prefix}/lib/python2.7/site-packages/tofinopd/switch/p4_pd_rpc
-#pdthriftpython_PYTHON = $(pd_python_sources) \
-#./switch/gen-py/p4_pd_rpc/$(P4_PREFIX).py
+pdthriftpythondir = ${prefix}/lib/python2.7/site-packages/tofinopd/switch/p4_pd_rpc
+pdthriftpython_PYTHON = $(pd_python_sources) \
+./switch/gen-py/p4_pd_rpc/$(P4_PREFIX).py
 
-#extrapythondir = ${prefix}/lib/python2.7/site-packages/tofinopd/switch
-#extrapython_PYTHON = ./switch/gen-py/__init__.py
+extrapythondir = ${prefix}/lib/python2.7/site-packages/tofinopd/switch
+extrapython_PYTHON = ./switch/gen-py/__init__.py
 
 # Adding all compiler output files here so that they are cleaned up with make
 # clean.
@@ -1299,11 +1299,11 @@ p4c.ts : $(P4_PATH) $(refdeps)
 	PYTHONPATH=$(MY_PYTHONPATH):$$PYTHONPATH $(PDGEN) $(builddir)/$(COMPILER_CONTEXT) $(AM_PDFLAGS) -o $(builddir)/$(P4_NAME)
 	PYTHONPATH=$(MY_PYTHONPATH):$$PYTHONPATH $(PDCLI) $(builddir)/$(P4_NAME)/cli/pd.json -po $(builddir)/$(P4_NAME)/src -xo $(builddir)/$(P4_NAME)/cli/xml -xd $(datadir)/cli/xml -ll $(pdlibdir)
 
-#	thrift -r --gen cpp -o $(builddir)/$(P4_NAME) $(builddir)/$(P4_NAME)/thrift/p4_pd_rpc.thrift
-#	mv -f $(builddir)/$(P4_NAME)/gen-cpp/$(P4_PREFIX).h $(builddir)/$(P4_NAME)/gen-cpp/p4_prefix.h
-#	sed --in-place 's/include "$(P4_PREFIX).h"/include "p4_prefix.h"/' $(builddir)/$(P4_NAME)/gen-cpp/$(P4_PREFIX).cpp
-#	python $(top_srcdir)/tools/split_pd_thrift.py $(builddir)/$(P4_NAME)/gen-cpp/$(P4_PREFIX).cpp $(builddir)/$(P4_NAME)/gen-cpp/ 8
-#	thrift -r --gen py -o $(builddir)/$(P4_NAME) $(builddir)/$(P4_NAME)/thrift/p4_pd_rpc.thrift
+	thrift -r --gen cpp -o $(builddir)/$(P4_NAME) $(builddir)/$(P4_NAME)/thrift/p4_pd_rpc.thrift
+	mv -f $(builddir)/$(P4_NAME)/gen-cpp/$(P4_PREFIX).h $(builddir)/$(P4_NAME)/gen-cpp/p4_prefix.h
+	sed --in-place 's/include "$(P4_PREFIX).h"/include "p4_prefix.h"/' $(builddir)/$(P4_NAME)/gen-cpp/$(P4_PREFIX).cpp
+	python $(top_srcdir)/tools/split_pd_thrift.py $(builddir)/$(P4_NAME)/gen-cpp/$(P4_PREFIX).cpp $(builddir)/$(P4_NAME)/gen-cpp/ 8
+	thrift -r --gen py -o $(builddir)/$(P4_NAME) $(builddir)/$(P4_NAME)/thrift/p4_pd_rpc.thrift
 	@mv -f p4c.tmp $@
 
 $(BUILT_SOURCES) : p4c.ts

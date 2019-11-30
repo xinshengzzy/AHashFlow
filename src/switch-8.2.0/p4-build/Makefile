@@ -82,7 +82,8 @@ DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/configure $(am__configure_deps) \
 	$(srcdir)/config.h.in $(top_srcdir)/tools/produce_deps.py.in \
 	$(top_srcdir)/tools/produce_deps_tofino.sh.in README compile \
-	config.guess config.sub install-sh missing ltmain.sh
+	config.guess config.sub depcomp install-sh missing py-compile \
+	ltmain.sh
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/ab_find_header_path.m4 \
 	$(top_srcdir)/m4/ac_p4c.m4 \
@@ -201,17 +202,17 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing aclocal-1.14
+ACLOCAL = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AM_LDFLAGS = -L/root/bf-sde-8.2.0/install/lib
 AR = ar
-AUTOCONF = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing autoconf
-AUTOHEADER = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing autoheader
-AUTOMAKE = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing automake-1.14
+AUTOCONF = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing autoconf
+AUTOHEADER = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing autoheader
+AUTOMAKE = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing automake-1.14
 AWK = mawk
 BMV2TOFINO_HEADER_INCLUDE = 
-BM_P4FLAGS = --field-aliases /root/bf-sde-8.2.0/switch-8.2.0/bmv2/field-aliases.bmv2
+BM_P4FLAGS = --field-aliases /root/workspace/AHashFlow/src/switch-8.2.0/bmv2/field-aliases.bmv2
 BM_THRIFT_INCLUDE = 
 CC = gcc -std=gnu99
 CCDEPMODE = depmode=gcc3
@@ -245,12 +246,12 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
 LIBOBJS = 
-LIBS = 
+LIBS = -lpthread -lthrift 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing makeinfo
+MAKEINFO = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 MY_PYTHONPATH = /root/bf-sde-8.2.0/install/lib/python2.7/site-packages
@@ -271,7 +272,7 @@ P4PPFLAGS =
 P4_ARCHITECTURE = v1model
 P4_BUILD_ASSUME_PDFIXED = 
 P4_NAME = switch
-P4_PATH = /root/bf-sde-8.2.0/switch-8.2.0/p4src/switch.p4
+P4_PATH = /root/workspace/AHashFlow/src/switch-8.2.0/p4src/switch.p4
 P4_PREFIX = dc
 P4_VERSION = p4-14
 PACKAGE = p4-build
@@ -282,9 +283,9 @@ PACKAGE_TARNAME = p4-build
 PACKAGE_URL = 
 PACKAGE_VERSION = 0.1
 PATH_SEPARATOR = :
-PDCLI = /root/bf-sde-8.2.0/install/bin/gencli
+PDCLI = 
 PDFLAGS = 
-PDGEN = /root/bf-sde-8.2.0/install/bin/generate_tofino_pd
+PDGEN = 
 PI_GEN_DEFS = 
 PI_GEN_NATIVE_JSON = 
 PI_GEN_PD = 
@@ -298,13 +299,13 @@ SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
 STRIP = strip
-THRIFT = 
-THRIFT_LIB = 
+THRIFT = /usr/local/bin/thrift
+THRIFT_LIB = -lthrift
 VERSION = 0.1
-abs_builddir = /root/bf-sde-8.2.0/switch-8.2.0/p4-build
-abs_srcdir = /root/bf-sde-8.2.0/switch-8.2.0/p4-build
-abs_top_builddir = /root/bf-sde-8.2.0/switch-8.2.0/p4-build
-abs_top_srcdir = /root/bf-sde-8.2.0/switch-8.2.0/p4-build
+abs_builddir = /root/workspace/AHashFlow/src/switch-8.2.0/p4-build
+abs_srcdir = /root/workspace/AHashFlow/src/switch-8.2.0/p4-build
+abs_top_builddir = /root/workspace/AHashFlow/src/switch-8.2.0/p4-build
+abs_top_srcdir = /root/workspace/AHashFlow/src/switch-8.2.0/p4-build
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -334,7 +335,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/install-sh
+install_sh = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -360,7 +361,7 @@ top_builddir = .
 top_srcdir = .
 ACLOCAL_AMFLAGS = ${ACLOCAL_FLAGS} -I m4
 #MAYBE_BMV2 = bmv2
-MAYBE_TOFINO = tofino
+#MAYBE_TOFINO = tofino
 #MAYBE_BMV2TOFINO = bmv2-tofino
 #MAYBE_PI = pi
 SUBDIRS = $(MAYBE_BMV2) $(MAYBE_TOFINO) $(MAYBE_BMV2TOFINO) $(MAYBE_PI)

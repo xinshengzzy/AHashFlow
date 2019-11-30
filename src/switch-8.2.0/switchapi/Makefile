@@ -82,9 +82,9 @@ build_triplet = x86_64-unknown-linux-gnu
 host_triplet = x86_64-unknown-linux-gnu
 #am__append_1 = -D__p4c__=1 -D__p4c_major__="$(P4C_VERSION_MAJOR)"
 #am__append_2 = -lgcov
-#am__append_3 = $(thrift_cpp) src/switch_api_rpc_server.cpp
+am__append_3 = $(thrift_cpp) src/switch_api_rpc_server.cpp
 #am__append_4 = libbmswitchapi.la
-am__append_5 = libswitchapi.la
+#am__append_5 = libswitchapi.la
 #am__append_6 = libtofinobmswitchapi.la
 subdir = switchapi
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
@@ -265,11 +265,11 @@ am__libbmswitchapi_la_SOURCES_DIST = src/switch_acl.c \
 	include/switchapi/switch_utils.h \
 	include/switchapi/switch_vlan.h include/switchapi/switch_vrf.h \
 	include/switchapi/switch_wred.h include/switchapi/switch.x
-#am__objects_1 = ./src/gen-cpp/libbmswitchapi_la-switch_api_constants.lo \
-#	./src/gen-cpp/libbmswitchapi_la-switch_api_rpc.lo \
-#	./src/gen-cpp/libbmswitchapi_la-switch_api_types.lo
-#am__objects_2 = $(am__objects_1) \
-#	src/libbmswitchapi_la-switch_api_rpc_server.lo
+am__objects_1 = ./src/gen-cpp/libbmswitchapi_la-switch_api_constants.lo \
+	./src/gen-cpp/libbmswitchapi_la-switch_api_rpc.lo \
+	./src/gen-cpp/libbmswitchapi_la-switch_api_types.lo
+am__objects_2 = $(am__objects_1) \
+	src/libbmswitchapi_la-switch_api_rpc_server.lo
 am__objects_3 = src/libbmswitchapi_la-switch_acl.lo \
 	src/libbmswitchapi_la-switch_acl_dump.lo \
 	src/libbmswitchapi_la-switch_buffer.lo \
@@ -387,8 +387,8 @@ am__objects_4 =
 #	$(am__objects_4)
 libbmswitchapi_la_OBJECTS = $(am_libbmswitchapi_la_OBJECTS)
 #am_libbmswitchapi_la_rpath = -rpath $(libdir)
-libswitchapi_la_DEPENDENCIES =  \
-	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
+#libswitchapi_la_DEPENDENCIES =  \
+#	$(am__DEPENDENCIES_1) $(am__DEPENDENCIES_1)
 am__libswitchapi_la_SOURCES_DIST = src/switch_acl.c \
 	src/switch_acl_dump.c src/switch_acl_int.h \
 	src/switch_api.thrift src/switch_buffer.c \
@@ -502,11 +502,11 @@ am__libswitchapi_la_SOURCES_DIST = src/switch_acl.c \
 	include/switchapi/switch_utils.h \
 	include/switchapi/switch_vlan.h include/switchapi/switch_vrf.h \
 	include/switchapi/switch_wred.h include/switchapi/switch.x
-#am__objects_5 = ./src/gen-cpp/libswitchapi_la-switch_api_constants.lo \
-#	./src/gen-cpp/libswitchapi_la-switch_api_rpc.lo \
-#	./src/gen-cpp/libswitchapi_la-switch_api_types.lo
-#am__objects_6 = $(am__objects_5) \
-#	src/libswitchapi_la-switch_api_rpc_server.lo
+am__objects_5 = ./src/gen-cpp/libswitchapi_la-switch_api_constants.lo \
+	./src/gen-cpp/libswitchapi_la-switch_api_rpc.lo \
+	./src/gen-cpp/libswitchapi_la-switch_api_types.lo
+am__objects_6 = $(am__objects_5) \
+	src/libswitchapi_la-switch_api_rpc_server.lo
 am__objects_7 = src/libswitchapi_la-switch_acl.lo \
 	src/libswitchapi_la-switch_acl_dump.lo \
 	src/libswitchapi_la-switch_buffer.lo \
@@ -619,10 +619,10 @@ am__objects_7 = src/libswitchapi_la-switch_acl.lo \
 	src/libswitchapi_la-switch_pd_bfd.lo \
 	src/libswitchapi_la-switch_pd_pktgen.lo \
 	src/libswitchapi_la-switch_wred.lo $(am__objects_6)
-am_libswitchapi_la_OBJECTS = $(am__objects_7) \
-	$(am__objects_4)
+#am_libswitchapi_la_OBJECTS = $(am__objects_7) \
+#	$(am__objects_4)
 libswitchapi_la_OBJECTS = $(am_libswitchapi_la_OBJECTS)
-am_libswitchapi_la_rpath = -rpath $(libdir)
+#am_libswitchapi_la_rpath = -rpath $(libdir)
 libswitchapitest_la_LIBADD =
 am__objects_8 = tests/libswitchapitest_la-switch_interface_test.lo \
 	tests/libswitchapitest_la-switch_l2_test.lo \
@@ -755,11 +755,11 @@ am__libtofinobmswitchapi_la_SOURCES_DIST = src/switch_acl.c \
 	include/switchapi/switch_utils.h \
 	include/switchapi/switch_vlan.h include/switchapi/switch_vrf.h \
 	include/switchapi/switch_wred.h include/switchapi/switch.x
-#am__objects_9 = ./src/gen-cpp/libtofinobmswitchapi_la-switch_api_constants.lo \
-#	./src/gen-cpp/libtofinobmswitchapi_la-switch_api_rpc.lo \
-#	./src/gen-cpp/libtofinobmswitchapi_la-switch_api_types.lo
-#am__objects_10 = $(am__objects_9) \
-#	src/libtofinobmswitchapi_la-switch_api_rpc_server.lo
+am__objects_9 = ./src/gen-cpp/libtofinobmswitchapi_la-switch_api_constants.lo \
+	./src/gen-cpp/libtofinobmswitchapi_la-switch_api_rpc.lo \
+	./src/gen-cpp/libtofinobmswitchapi_la-switch_api_types.lo
+am__objects_10 = $(am__objects_9) \
+	src/libtofinobmswitchapi_la-switch_api_rpc_server.lo
 am__objects_11 = src/libtofinobmswitchapi_la-switch_acl.lo \
 	src/libtofinobmswitchapi_la-switch_acl_dump.lo \
 	src/libtofinobmswitchapi_la-switch_buffer.lo \
@@ -976,7 +976,7 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/missing aclocal-1.14
+ACLOCAL = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 
 # TODO(antonin): check if belongs in CFLAGS or CPPFLAGS
@@ -988,9 +988,9 @@ AM_CXXFLAGS =
 AM_DEFAULT_VERBOSITY = 0
 AM_LDFLAGS =  -L/root/bf-sde-8.2.0/install/lib
 AR = ar
-AUTOCONF = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/missing autoconf
-AUTOHEADER = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/missing autoheader
-AUTOMAKE = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/missing automake-1.14
+AUTOCONF = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/missing autoconf
+AUTOHEADER = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/missing autoheader
+AUTOMAKE = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/missing automake-1.14
 AWK = mawk
 BIN_DIR = /root/bf-sde-8.2.0/install/bin
 BMV2TOFINO_CPPFLAGS = 
@@ -1029,13 +1029,13 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS =  $(am__append_2)
 LIBOBJS = 
-LIBS = 
+LIBS = -lthrift 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIB_DIR = /root/bf-sde-8.2.0/install/lib
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/missing makeinfo
+MAKEINFO = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 MY_PYTHONPATH = /root/bf-sde-8.2.0/install/lib/python2.7/site-packages
@@ -1058,7 +1058,7 @@ PACKAGE_TARNAME = switch
 PACKAGE_URL = 
 PACKAGE_VERSION = 0.1
 PATH_SEPARATOR = :
-PTF = /root/bf-sde-8.2.0/install/bin/ptf
+PTF = /root/bf-sde-8.2.0/pkgsrc/p4-examples/ptf-tests
 PYTHON = /usr/bin/python
 PYTHON_EXEC_PREFIX = ${exec_prefix}
 PYTHON_PLATFORM = linux2
@@ -1070,14 +1070,14 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = strip
 SWITCH_CFLAGS = -g -Wall -Wextra -Wno-unused-parameter -Werror -Wno-error=unused -Wno-error=unused-variable -Wno-error=unused-label -Wno-error=unused-but-set-variable
-THRIFT = 
-THRIFT_LIB = 
-TOFINO_CPPFLAGS = -D__TARGET_TOFINO__
+THRIFT = /usr/local/bin/thrift
+THRIFT_LIB = -lthrift
+TOFINO_CPPFLAGS = 
 VERSION = 0.1
-abs_builddir = /root/bf-sde-8.2.0/switch-8.2.0/switchapi
-abs_srcdir = /root/bf-sde-8.2.0/switch-8.2.0/switchapi
-abs_top_builddir = /root/bf-sde-8.2.0/switch-8.2.0
-abs_top_srcdir = /root/bf-sde-8.2.0/switch-8.2.0
+abs_builddir = /root/workspace/AHashFlow/src/switch-8.2.0/switchapi
+abs_srcdir = /root/workspace/AHashFlow/src/switch-8.2.0/switchapi
+abs_top_builddir = /root/workspace/AHashFlow/src/switch-8.2.0
+abs_top_srcdir = /root/workspace/AHashFlow/src/switch-8.2.0
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -1094,7 +1094,7 @@ build_cpu = x86_64
 build_os = linux-gnu
 build_vendor = unknown
 builddir = .
-conf_tgts = tofino
+conf_tgts = 
 datadir = ${datarootdir}
 datarootdir = ${prefix}/share
 docdir = ${datarootdir}/doc/${PACKAGE_TARNAME}
@@ -1108,7 +1108,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/install-sh
+install_sh = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -1135,26 +1135,26 @@ top_builddir = ..
 top_srcdir = ..
 ACLOCAL_AMFLAGS = ${ACLOCAL_FLAGS} -I m4
 AM_P4PPFLAGS = $(P4PPFLAGS)
-#thrift_cpp = \
-#./src/gen-cpp/switch_api_constants.cpp \
-#./src/gen-cpp/switch_api_constants.h \
-#./src/gen-cpp/switch_api_rpc.cpp \
-#./src/gen-cpp/switch_api_rpc.h \
-#./src/gen-cpp/switch_api_types.cpp \
-#./src/gen-cpp/switch_api_types.h
+thrift_cpp = \
+./src/gen-cpp/switch_api_constants.cpp \
+./src/gen-cpp/switch_api_constants.h \
+./src/gen-cpp/switch_api_rpc.cpp \
+./src/gen-cpp/switch_api_rpc.h \
+./src/gen-cpp/switch_api_types.cpp \
+./src/gen-cpp/switch_api_types.h
 
-#thrift_py = \
-#./gen-py/switch_api/constants.py \
-#./gen-py/switch_api/__init__.py \
-#./gen-py/switch_api/switch_api_rpc.py \
-#./gen-py/switch_api/switch_api_rpc-remote \
-#./gen-py/switch_api/ttypes.py
+thrift_py = \
+./gen-py/switch_api/constants.py \
+./gen-py/switch_api/__init__.py \
+./gen-py/switch_api/switch_api_rpc.py \
+./gen-py/switch_api/switch_api_rpc-remote \
+./gen-py/switch_api/ttypes.py
 
-#switchapi_ctypesgen = ./gen-py/switch_api/switch_api_headers.py
-#switchapidir = $(pythondir)/switchapi_thrift
-#switchapi_PYTHON = \
-#$(thrift_py) \
-#$(switchapi_ctypesgen)
+switchapi_ctypesgen = ./gen-py/switch_api/switch_api_headers.py
+switchapidir = $(pythondir)/switchapi_thrift
+switchapi_PYTHON = \
+$(thrift_py) \
+$(switchapi_ctypesgen)
 
 BUILT_SOURCES = \
 $(thrift_cpp) \
@@ -1293,23 +1293,23 @@ tests/switch_meter_test.c \
 tests/switch_test.h \
 tests/switch_test.c
 
-#CLEANFILES = $(BUILT_SOURCES) switchapi.ts
+CLEANFILES = $(BUILT_SOURCES) switchapi.ts
 lib_LTLIBRARIES = $(am__append_4) $(am__append_5) $(am__append_6) \
 	bfshell_plugin_switchapi.la libswitchapitest.la
 cpp_flags = 
 #cpp_flags = $(libtofinobmswitchapi_la_CPPFLAGS)
 #cpp_flags = $(libbmswitchapi_la_CPPFLAGS)
-cpp_flags = $(libswitchapi_la_CPPFLAGS)
+#cpp_flags = $(libswitchapi_la_CPPFLAGS)
 #libbmswitchapi_la_CPPFLAGS = $(BMV2_CPPFLAGS) \
 #	-I$(top_builddir)/p4-build $(AM_CPPFLAGS)
 #libbmswitchapi_la_SOURCES = $(switchapi_sources) $(switchapiinc_HEADERS)
 #libbmswitchapi_la_LIBADD = -lbfutils $(THRIFT_LIB) \
 #	$(NETLINK_LIBS)
-libswitchapi_la_CPPFLAGS = $(TOFINO_CPPFLAGS) \
-	-I$(top_builddir)/p4-build $(AM_CPPFLAGS)
-libswitchapi_la_SOURCES = $(switchapi_sources) $(switchapiinc_HEADERS)
-libswitchapi_la_LIBADD = -lbfutils $(THRIFT_LIB) \
-	$(NETLINK_LIBS)
+#libswitchapi_la_CPPFLAGS = $(TOFINO_CPPFLAGS) \
+#	-I$(top_builddir)/p4-build $(AM_CPPFLAGS)
+#libswitchapi_la_SOURCES = $(switchapi_sources) $(switchapiinc_HEADERS)
+#libswitchapi_la_LIBADD = -lbfutils $(THRIFT_LIB) \
+#	$(NETLINK_LIBS)
 #libtofinobmswitchapi_la_CPPFLAGS =  \
 #	$(BMV2TOFINO_CPPFLAGS) \
 #	-I$(top_builddir)/p4-build \
@@ -5417,18 +5417,18 @@ switchapi.ts : ./src/switch_api.thrift
 	$(THRIFT) -o ./ --gen py -r ./src/switch_api.thrift
 	@mv -f switchapi.tmp $@
 
-#$(thrift_cpp) $(thrift_py) : switchapi.ts
-#	@if test -f $@; then :; else \
-#	  trap 'rm -rf switchapi.lock switchapi.ts' 1 2 13 15; \
-#	if mkdir switchapi.lock 2>/dev/null; then \
-#	  rm -f switchapi.ts; \
-#	  $(MAKE) $(AM_MAKEFLAGS) switchapi.ts; \
-#	  result=$$?; rm -rf switchapi.lock; exit $$result; \
-#	else \
-#	  while test -d switchapi.lock; do sleep 1; done; \
-#	    test -f switchapi.ts; \
-#	  fi; \
-#	fi
+$(thrift_cpp) $(thrift_py) : switchapi.ts
+	@if test -f $@; then :; else \
+	  trap 'rm -rf switchapi.lock switchapi.ts' 1 2 13 15; \
+	if mkdir switchapi.lock 2>/dev/null; then \
+	  rm -f switchapi.ts; \
+	  $(MAKE) $(AM_MAKEFLAGS) switchapi.ts; \
+	  result=$$?; rm -rf switchapi.lock; exit $$result; \
+	else \
+	  while test -d switchapi.lock; do sleep 1; done; \
+	    test -f switchapi.ts; \
+	  fi; \
+	fi
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

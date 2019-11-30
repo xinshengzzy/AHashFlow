@@ -80,8 +80,8 @@ PRE_UNINSTALL = :
 POST_UNINSTALL = :
 build_triplet = x86_64-unknown-linux-gnu
 host_triplet = x86_64-unknown-linux-gnu
-#am__append_1 = $(pd_thrift_files)
-#am__append_2 = libpdthrift.la
+am__append_1 = $(pd_thrift_files)
+am__append_2 = libpdthrift.la
 subdir = pi
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
 	$(top_srcdir)/depcomp $(am__extrapython_PYTHON_DIST) \
@@ -162,19 +162,19 @@ am__libpdthrift_la_SOURCES_DIST =  \
 	pd_thrift_gen/gen-py/p4_pd_rpc/dc.py \
 	pd_thrift_gen/gen-py/p4_pd_rpc/dc-remote \
 	switch/thrift-src/pd_rpc_server.cpp
-#am__objects_2 =  \
-#	pd_thrift_gen/gen-cpp/p4_prefix0.lo \
-#	pd_thrift_gen/gen-cpp/p4_prefix1.lo \
-#	pd_thrift_gen/gen-cpp/p4_prefix2.lo \
-#	pd_thrift_gen/gen-cpp/p4_pd_rpc_constants.lo \
-#	pd_thrift_gen/gen-cpp/p4_pd_rpc_types.lo
+am__objects_2 =  \
+	pd_thrift_gen/gen-cpp/p4_prefix0.lo \
+	pd_thrift_gen/gen-cpp/p4_prefix1.lo \
+	pd_thrift_gen/gen-cpp/p4_prefix2.lo \
+	pd_thrift_gen/gen-cpp/p4_pd_rpc_constants.lo \
+	pd_thrift_gen/gen-cpp/p4_pd_rpc_types.lo
 am__objects_3 =
-#am__objects_4 = $(am__objects_2) \
-#	$(am__objects_3)
-#am_libpdthrift_la_OBJECTS = $(am__objects_4) \
-#	switch/thrift-src/pd_rpc_server.lo
+am__objects_4 = $(am__objects_2) \
+	$(am__objects_3)
+am_libpdthrift_la_OBJECTS = $(am__objects_4) \
+	switch/thrift-src/pd_rpc_server.lo
 libpdthrift_la_OBJECTS = $(am_libpdthrift_la_OBJECTS)
-#am_libpdthrift_la_rpath = -rpath $(pdlibdir)
+am_libpdthrift_la_rpath = -rpath $(pdlibdir)
 AM_V_P = $(am__v_P_$(V))
 am__v_P_ = $(am__v_P_$(AM_DEFAULT_VERBOSITY))
 am__v_P_0 = false
@@ -269,17 +269,17 @@ am__define_uniq_tagged_files = \
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing aclocal-1.14
+ACLOCAL = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing aclocal-1.14
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AM_LDFLAGS = -L/root/bf-sde-8.2.0/install/lib
 AR = ar
-AUTOCONF = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing autoconf
-AUTOHEADER = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing autoheader
-AUTOMAKE = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing automake-1.14
+AUTOCONF = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing autoconf
+AUTOHEADER = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing autoheader
+AUTOMAKE = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing automake-1.14
 AWK = mawk
 BMV2TOFINO_HEADER_INCLUDE = 
-BM_P4FLAGS = --field-aliases /root/bf-sde-8.2.0/switch-8.2.0/bmv2/field-aliases.bmv2
+BM_P4FLAGS = --field-aliases /root/workspace/AHashFlow/src/switch-8.2.0/bmv2/field-aliases.bmv2
 BM_THRIFT_INCLUDE = 
 CC = gcc -std=gnu99
 CCDEPMODE = depmode=gcc3
@@ -313,12 +313,12 @@ INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
 LIBOBJS = 
-LIBS = 
+LIBS = -lpthread -lthrift 
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/missing makeinfo
+MAKEINFO = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 MY_PYTHONPATH = /root/bf-sde-8.2.0/install/lib/python2.7/site-packages
@@ -339,7 +339,7 @@ P4PPFLAGS =
 P4_ARCHITECTURE = v1model
 P4_BUILD_ASSUME_PDFIXED = 
 P4_NAME = switch
-P4_PATH = /root/bf-sde-8.2.0/switch-8.2.0/p4src/switch.p4
+P4_PATH = /root/workspace/AHashFlow/src/switch-8.2.0/p4src/switch.p4
 P4_PREFIX = dc
 P4_VERSION = p4-14
 PACKAGE = p4-build
@@ -350,9 +350,9 @@ PACKAGE_TARNAME = p4-build
 PACKAGE_URL = 
 PACKAGE_VERSION = 0.1
 PATH_SEPARATOR = :
-PDCLI = /root/bf-sde-8.2.0/install/bin/gencli
+PDCLI = 
 PDFLAGS = 
-PDGEN = /root/bf-sde-8.2.0/install/bin/generate_tofino_pd
+PDGEN = 
 PI_GEN_DEFS = 
 PI_GEN_NATIVE_JSON = 
 PI_GEN_PD = 
@@ -366,13 +366,13 @@ SED = /bin/sed
 SET_MAKE = 
 SHELL = /bin/bash
 STRIP = strip
-THRIFT = 
-THRIFT_LIB = 
+THRIFT = /usr/local/bin/thrift
+THRIFT_LIB = -lthrift
 VERSION = 0.1
-abs_builddir = /root/bf-sde-8.2.0/switch-8.2.0/p4-build/pi
-abs_srcdir = /root/bf-sde-8.2.0/switch-8.2.0/p4-build/pi
-abs_top_builddir = /root/bf-sde-8.2.0/switch-8.2.0/p4-build
-abs_top_srcdir = /root/bf-sde-8.2.0/switch-8.2.0/p4-build
+abs_builddir = /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/pi
+abs_srcdir = /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/pi
+abs_top_builddir = /root/workspace/AHashFlow/src/switch-8.2.0/p4-build
+abs_top_srcdir = /root/workspace/AHashFlow/src/switch-8.2.0/p4-build
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -402,7 +402,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /root/bf-sde-8.2.0/switch-8.2.0/p4-build/install-sh
+install_sh = ${SHELL} /root/workspace/AHashFlow/src/switch-8.2.0/p4-build/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -455,31 +455,31 @@ P4_PI_NATIVE_JSON_OUTPUT = pi_native_$(P4_NAME).json
 # this is not portable (GNU make extension), but this is the only think I can
 # think of right now to keep track of dependencies
 # anyone with a better solution is welcome to change this
-refdeps := $(shell ../tools/produce_deps.py /root/bf-sde-8.2.0/switch-8.2.0/p4src/switch.p4)
+refdeps := $(shell ../tools/produce_deps.py /root/workspace/AHashFlow/src/switch-8.2.0/p4src/switch.p4)
 AM_P4PPFLAGS = $(P4PPFLAGS)
 BUILT_SOURCES = $(pd_files) $(am__append_1)
-#pd_p4_thrift_cxx = \
-#pd_thrift_gen/gen-cpp/p4_prefix0.cpp \
-#pd_thrift_gen/gen-cpp/p4_prefix1.cpp \
-#pd_thrift_gen/gen-cpp/p4_prefix2.cpp \
-#pd_thrift_gen/gen-cpp/p4_prefix.h \
-#pd_thrift_gen/gen-cpp/p4_pd_rpc_constants.cpp \
-#pd_thrift_gen/gen-cpp/p4_pd_rpc_constants.h \
-#pd_thrift_gen/gen-cpp/p4_pd_rpc_types.cpp \
-#pd_thrift_gen/gen-cpp/p4_pd_rpc_types.h
+pd_p4_thrift_cxx = \
+pd_thrift_gen/gen-cpp/p4_prefix0.cpp \
+pd_thrift_gen/gen-cpp/p4_prefix1.cpp \
+pd_thrift_gen/gen-cpp/p4_prefix2.cpp \
+pd_thrift_gen/gen-cpp/p4_prefix.h \
+pd_thrift_gen/gen-cpp/p4_pd_rpc_constants.cpp \
+pd_thrift_gen/gen-cpp/p4_pd_rpc_constants.h \
+pd_thrift_gen/gen-cpp/p4_pd_rpc_types.cpp \
+pd_thrift_gen/gen-cpp/p4_pd_rpc_types.h
 
-#pd_p4_thrift_py = \
-#pd_thrift_gen/gen-py/p4_pd_rpc/constants.py \
-#pd_thrift_gen/gen-py/p4_pd_rpc/__init__.py \
-#pd_thrift_gen/gen-py/p4_pd_rpc/ttypes.py \
-#pd_thrift_gen/gen-py/p4_pd_rpc/dc.py \
-#pd_thrift_gen/gen-py/p4_pd_rpc/dc-remote
+pd_p4_thrift_py = \
+pd_thrift_gen/gen-py/p4_pd_rpc/constants.py \
+pd_thrift_gen/gen-py/p4_pd_rpc/__init__.py \
+pd_thrift_gen/gen-py/p4_pd_rpc/ttypes.py \
+pd_thrift_gen/gen-py/p4_pd_rpc/dc.py \
+pd_thrift_gen/gen-py/p4_pd_rpc/dc-remote
 
-#p4pythondir = ${prefix}/lib/python2.7/site-packages/pipd/switch/p4_pd_rpc
-#p4python_PYTHON = $(pd_p4_thrift_py)
-#extrapythondir = ${prefix}/lib/python2.7/site-packages/pipd/switch
-#extrapython_PYTHON = pd_thrift_gen/gen-py/__init__.py
-#pd_thrift_files = $(pd_p4_thrift_cxx) $(pd_p4_thrift_py)
+p4pythondir = ${prefix}/lib/python2.7/site-packages/pipd/switch/p4_pd_rpc
+p4python_PYTHON = $(pd_p4_thrift_py)
+extrapythondir = ${prefix}/lib/python2.7/site-packages/pipd/switch
+extrapython_PYTHON = pd_thrift_gen/gen-py/__init__.py
+pd_thrift_files = $(pd_p4_thrift_cxx) $(pd_p4_thrift_py)
 AM_CPPFLAGS = -I$(includedir) -I$(builddir)/switch/ \
 	-I$(builddir)/pd_thrift_gen/gen-cpp/
 pdlibdir = $(libdir)/pipd/switch
@@ -489,11 +489,11 @@ pdinclude_HEADERS = $(pd_headers)
 libpd_la_SOURCES = \
 $(pd_files)
 
-#pdthriftsrcincludedir = $(includedir)/pipd/switch/thrift-src
-#pdthriftsrcinclude_HEADERS = switch/thrift-src/pd_rpc_server.h
-#libpdthrift_la_SOURCES = \
-#$(pd_thrift_files) \
-#switch/thrift-src/pd_rpc_server.cpp
+pdthriftsrcincludedir = $(includedir)/pipd/switch/thrift-src
+pdthriftsrcinclude_HEADERS = switch/thrift-src/pd_rpc_server.h
+libpdthrift_la_SOURCES = \
+$(pd_thrift_files) \
+switch/thrift-src/pd_rpc_server.cpp
 
 pddatadir = $(datadir)/pipd/switch
 pddata_DATA = $(P4_PI_NATIVE_JSON_OUTPUT)
@@ -1112,28 +1112,28 @@ $(pd_files) $(pd_p4_IDL) $(pd_p4_src) : pd_files.ts
 	  fi; \
 	fi
 
-#pd_thrift_files.ts: $(pd_files) $(pd_p4_IDL)
-#	@rm -f pd_thrift_files.tmp
-#	@touch pd_thrift_files.tmp
-#	@mkdir -p $(builddir)/pd_thrift_gen
-#	$(THRIFT) -o $(builddir)/pd_thrift_gen/ -I $(srcdir) --gen cpp -r $(pd_p4_IDL)
-#	$(THRIFT) -o $(builddir)/pd_thrift_gen/ -I $(srcdir) --gen py -r $(pd_p4_IDL)
-#	mv -f pd_thrift_gen/gen-cpp/$(P4_PREFIX).h pd_thrift_gen/gen-cpp/p4_prefix.h
-#	sed --in-place 's/include "$(P4_PREFIX).h"/include "p4_prefix.h"/' pd_thrift_gen/gen-cpp/$(P4_PREFIX).cpp
-#	$(PYTHON) $(top_srcdir)/tools/split_pd_thrift.py pd_thrift_gen/gen-cpp/$(P4_PREFIX).cpp pd_thrift_gen/gen-cpp/ 3
-#	@mv -f pd_thrift_files.tmp $@
-#$(pd_thrift_files): pd_thrift_files.ts
-#	@if test -f $@; then :; else \
-#	  trap 'rm -rf pd_thrift_files.lock pd_thrift_files.ts' 1 2 13 15; \
-#	if mkdir pd_thrift_files.lock 2>/dev/null; then \
-#	  rm -f pd_thrift_files.ts; \
-#	  $(MAKE) $(AM_MAKEFLAGS) pd_thrift_files.ts; \
-#	  result=$$?; rm -rf pd_thrift_files.lock; exit $$result; \
-#	else \
-#	  while test -d pd_thrift_files.lock; do sleep 1; done; \
-#	    test -f pd_thrift_files.ts; \
-#	  fi; \
-#	fi
+pd_thrift_files.ts: $(pd_files) $(pd_p4_IDL)
+	@rm -f pd_thrift_files.tmp
+	@touch pd_thrift_files.tmp
+	@mkdir -p $(builddir)/pd_thrift_gen
+	$(THRIFT) -o $(builddir)/pd_thrift_gen/ -I $(srcdir) --gen cpp -r $(pd_p4_IDL)
+	$(THRIFT) -o $(builddir)/pd_thrift_gen/ -I $(srcdir) --gen py -r $(pd_p4_IDL)
+	mv -f pd_thrift_gen/gen-cpp/$(P4_PREFIX).h pd_thrift_gen/gen-cpp/p4_prefix.h
+	sed --in-place 's/include "$(P4_PREFIX).h"/include "p4_prefix.h"/' pd_thrift_gen/gen-cpp/$(P4_PREFIX).cpp
+	$(PYTHON) $(top_srcdir)/tools/split_pd_thrift.py pd_thrift_gen/gen-cpp/$(P4_PREFIX).cpp pd_thrift_gen/gen-cpp/ 3
+	@mv -f pd_thrift_files.tmp $@
+$(pd_thrift_files): pd_thrift_files.ts
+	@if test -f $@; then :; else \
+	  trap 'rm -rf pd_thrift_files.lock pd_thrift_files.ts' 1 2 13 15; \
+	if mkdir pd_thrift_files.lock 2>/dev/null; then \
+	  rm -f pd_thrift_files.ts; \
+	  $(MAKE) $(AM_MAKEFLAGS) pd_thrift_files.ts; \
+	  result=$$?; rm -rf pd_thrift_files.lock; exit $$result; \
+	else \
+	  while test -d pd_thrift_files.lock; do sleep 1; done; \
+	    test -f pd_thrift_files.ts; \
+	  fi; \
+	fi
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

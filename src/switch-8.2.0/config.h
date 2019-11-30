@@ -8,7 +8,7 @@
 /* #undef COVERAGE */
 
 /* "Build with thrift." */
-/* #undef ENABLE_THRIFT */
+#define ENABLE_THRIFT /**/
 
 /* Define to 1 if you have the <arpa/inet.h> header file. */
 #define HAVE_ARPA_INET_H 1
@@ -32,7 +32,7 @@
 /* #undef HAVE_LIBGCOV */
 
 /* Define to 1 if you have the `thrift' library (-lthrift). */
-/* #undef HAVE_LIBTHRIFT */
+#define HAVE_LIBTHRIFT 1
 
 /* Define to 1 if your system has a GNU libc compatible `malloc' function, and
    to 0 otherwise. */

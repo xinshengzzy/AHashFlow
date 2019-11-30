@@ -2,7 +2,7 @@
 /* config.h.in.  Generated from configure.ac by autoheader.  */
 
 /* "Build with thrift." */
-/* #undef ENABLE_THRIFT */
+#define ENABLE_THRIFT /**/
 
 /* Define to 1 if you have the <algorithm> header file. */
 #define HAVE_ALGORITHM 1
@@ -38,10 +38,10 @@
 /* #undef HAVE_LIBNANOMSG */
 
 /* Define to 1 if you have the `pthread' library (-lpthread). */
-/* #undef HAVE_LIBPTHREAD */
+#define HAVE_LIBPTHREAD 1
 
 /* Define to 1 if you have the `thrift' library (-lthrift). */
-/* #undef HAVE_LIBTHRIFT */
+#define HAVE_LIBTHRIFT 1
 
 /* Define to 1 if you have the <memory.h> header file. */
 #define HAVE_MEMORY_H 1
