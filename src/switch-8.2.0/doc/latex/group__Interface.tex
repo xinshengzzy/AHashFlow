@@ -1,0 +1,158 @@
+\hypertarget{group__Interface}{\section{Interface configuration A\+P\+I}
+\label{group__Interface}\index{Interface configuration A\+P\+I@{Interface configuration A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions listed to configure the interfaces Interface A\+P\+I Interfaces are the basic element for provisioning services on the device. Interfaces can be any of physical, link aggregation group, or tunnels. \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__api__interface__info__s}{switch\+\_\+api\+\_\+interface\+\_\+info\+\_\+s}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \\*
+\hyperlink{group__Interface_ga641df0985dd7cb34a4f81a6939475b32}{switch\+\_\+interface\+\_\+type\+\_\+s} \hyperlink{group__Interface_ga6052d8868148cccd877ca7b8dc42e778}{switch\+\_\+interface\+\_\+type\+\_\+t}
+\item 
+typedef enum \\*
+\hyperlink{group__Interface_ga6fbf969f945ba342e8203504371e92c2}{switch\+\_\+interface\+\_\+attr\+\_\+s} \hyperlink{group__Interface_gae3f7852efe077668aac3bd04e29d7e4a}{switch\+\_\+interface\+\_\+attr\+\_\+t}
+\item 
+\hypertarget{group__Interface_gab8dd60af634c603f758cc9ad329ab037}{typedef enum \\*
+switch\+\_\+interface\+\_\+counter\+\_\+id\+\_\+s {\bfseries switch\+\_\+interface\+\_\+counter\+\_\+id\+\_\+t}}\label{group__Interface_gab8dd60af634c603f758cc9ad329ab037}
+
+\item 
+typedef struct \\*
+\hyperlink{structswitch__api__interface__info__s}{switch\+\_\+api\+\_\+interface\+\_\+info\+\_\+s} \hyperlink{group__Interface_gac12fe27937cc35580197d25bf616c5d3}{switch\+\_\+api\+\_\+interface\+\_\+info\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__Interface_ga641df0985dd7cb34a4f81a6939475b32}{switch\+\_\+interface\+\_\+type\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+C\+C\+E\+S\+S} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+R\+T} = S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+C\+C\+E\+S\+S, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+U\+N\+K} = 3, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+R\+T\+\_\+\+V\+L\+A\+N} = 4, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+U\+N\+N\+E\+L} = 5, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+X}
+ \}
+\item 
+enum \hyperlink{group__Interface_ga6fbf969f945ba342e8203504371e92c2}{switch\+\_\+interface\+\_\+attr\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+F\+\_\+\+A\+T\+T\+R\+\_\+\+T\+Y\+P\+E} = 1 $<$$<$ 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+F\+\_\+\+A\+T\+T\+R\+\_\+\+R\+I\+F\+\_\+\+H\+A\+N\+D\+L\+E} = 1 $<$$<$ 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+F\+\_\+\+A\+T\+T\+R\+\_\+\+V\+L\+A\+N} = 1 $<$$<$ 3, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+F\+\_\+\+A\+T\+T\+R\+\_\+\+P\+O\+R\+T} = 1 $<$$<$ 4
+ \}
+\item 
+\hypertarget{group__Interface_gac11d649809f617ee7a37093e82533b79}{enum {\bfseries switch\+\_\+interface\+\_\+counter\+\_\+id\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+I\+N\+\_\+\+P\+A\+C\+K\+E\+T\+S} = 0x0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+I\+N\+\_\+\+B\+Y\+T\+E\+S} = 0x1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+O\+U\+T\+\_\+\+P\+A\+C\+K\+E\+T\+S} = 0x2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+O\+U\+T\+\_\+\+B\+Y\+T\+E\+S} = 0x3, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+M\+A\+X}
+ \}}\label{group__Interface_gac11d649809f617ee7a37093e82533b79}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Interface_ga856cb62c1d6c160c981157dabec846f9}{switch\+\_\+api\+\_\+interface\+\_\+create} (switch\+\_\+device\+\_\+t device, \hyperlink{group__Interface_gac12fe27937cc35580197d25bf616c5d3}{switch\+\_\+api\+\_\+interface\+\_\+info\+\_\+t} $\ast$intf\+\_\+info, switch\+\_\+handle\+\_\+t $\ast$intf\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Interface_ga214963b57668bb3ac31e97ce2ec1288c}{switch\+\_\+api\+\_\+interface\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t interface\+\_\+handle)
+\item 
+\hypertarget{group__Interface_ga2121467f012ae86588ffb5fae8ad08c1}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+handle\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t intf\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$port\+\_\+handle)}\label{group__Interface_ga2121467f012ae86588ffb5fae8ad08c1}
+
+\item 
+\hypertarget{group__Interface_ga746e7a34b8977035828368cd39f38e14}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+by\+\_\+type\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t handle, \hyperlink{group__Interface_ga6052d8868148cccd877ca7b8dc42e778}{switch\+\_\+interface\+\_\+type\+\_\+t} intf\+\_\+type, switch\+\_\+handle\+\_\+t $\ast$intf\+\_\+handle)}\label{group__Interface_ga746e7a34b8977035828368cd39f38e14}
+
+\item 
+\hypertarget{group__Interface_ga6d6e3dff8f7e4de45744449ba90613d7}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+native\+\_\+vlan\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t intf\+\_\+handle, switch\+\_\+handle\+\_\+t vlan\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$member\+\_\+handle)}\label{group__Interface_ga6d6e3dff8f7e4de45744449ba90613d7}
+
+\item 
+\hypertarget{group__Interface_ga26f73ee9b6b649bbfad8b53ea0783516}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+native\+\_\+vlan\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t intf\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$vlan\+\_\+handle)}\label{group__Interface_ga26f73ee9b6b649bbfad8b53ea0783516}
+
+\item 
+\hypertarget{group__Interface_gabe2f50407ee46c4f7a8118e7f9250585}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+native\+\_\+vlan\+\_\+id\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t intf\+\_\+handle, switch\+\_\+vlan\+\_\+t vlan\+\_\+id, switch\+\_\+handle\+\_\+t $\ast$member\+\_\+handle)}\label{group__Interface_gabe2f50407ee46c4f7a8118e7f9250585}
+
+\item 
+\hypertarget{group__Interface_ga1e7f76e2e2eef0b909b7e838fd4be16e}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+native\+\_\+vlan\+\_\+id\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t intf\+\_\+handle, switch\+\_\+vlan\+\_\+t $\ast$vlan\+\_\+id)}\label{group__Interface_ga1e7f76e2e2eef0b909b7e838fd4be16e}
+
+\item 
+\hypertarget{group__Interface_ga7499047afdee8766b5d8f1c99dbc6458}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+attribute\+\_\+set} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t intf\+\_\+handle, const switch\+\_\+uint64\+\_\+t intf\+\_\+flags, const \hyperlink{group__Interface_gac12fe27937cc35580197d25bf616c5d3}{switch\+\_\+api\+\_\+interface\+\_\+info\+\_\+t} $\ast$api\+\_\+intf\+\_\+info)}\label{group__Interface_ga7499047afdee8766b5d8f1c99dbc6458}
+
+\item 
+\hypertarget{group__Interface_ga799a116eb20d058b07cbf890cc392d65}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+attribute\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t intf\+\_\+handle, const switch\+\_\+uint64\+\_\+t intf\+\_\+flags, \hyperlink{group__Interface_gac12fe27937cc35580197d25bf616c5d3}{switch\+\_\+api\+\_\+interface\+\_\+info\+\_\+t} $\ast$api\+\_\+intf\+\_\+info)}\label{group__Interface_ga799a116eb20d058b07cbf890cc392d65}
+
+\item 
+\hypertarget{group__Interface_gabcf442909062c22602d132d3c7c0582a}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+handle\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t intf\+\_\+handle, const void $\ast$cli\+\_\+ctx)}\label{group__Interface_gabcf442909062c22602d132d3c7c0582a}
+
+\item 
+\hypertarget{group__Interface_gad935b5ca8779e8c07481077726475f7d}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+ifindex\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t interface\+\_\+handle, switch\+\_\+ifindex\+\_\+t $\ast$ifindex)}\label{group__Interface_gad935b5ca8779e8c07481077726475f7d}
+
+\item 
+\hypertarget{group__Interface_ga4a20d9b2a350a3bbbc49edfcb25b6898}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+handle\+\_\+from\+\_\+handle\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t handle, switch\+\_\+handle\+\_\+t $\ast$intf\+\_\+handle)}\label{group__Interface_ga4a20d9b2a350a3bbbc49edfcb25b6898}
+
+\item 
+\hypertarget{group__Interface_gade0fb13f1521a0a10638755533ca9304}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+ln\+\_\+handle\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t intf\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$ln\+\_\+handle)}\label{group__Interface_gade0fb13f1521a0a10638755533ca9304}
+
+\item 
+\hypertarget{group__Interface_ga3fb1c21c04e13a7212ffe89a34df53d5}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+stats\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t intf\+\_\+handle, switch\+\_\+uint16\+\_\+t num\+\_\+entries, switch\+\_\+interface\+\_\+counter\+\_\+id\+\_\+t $\ast$counter\+\_\+id, \hyperlink{structswitch__counter__s}{switch\+\_\+counter\+\_\+t} $\ast$counters)}\label{group__Interface_ga3fb1c21c04e13a7212ffe89a34df53d5}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__Interface_gac12fe27937cc35580197d25bf616c5d3}{\index{Interface configuration A\+P\+I@{Interface configuration A\+P\+I}!switch\+\_\+api\+\_\+interface\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+interface\+\_\+info\+\_\+t}}
+\index{switch\+\_\+api\+\_\+interface\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+interface\+\_\+info\+\_\+t}!Interface configuration A\+P\+I@{Interface configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+interface\+\_\+info\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+api\+\_\+interface\+\_\+info\+\_\+s}  {\bf switch\+\_\+api\+\_\+interface\+\_\+info\+\_\+t}}}\label{group__Interface_gac12fe27937cc35580197d25bf616c5d3}
+interface information \hypertarget{group__Interface_gae3f7852efe077668aac3bd04e29d7e4a}{\index{Interface configuration A\+P\+I@{Interface configuration A\+P\+I}!switch\+\_\+interface\+\_\+attr\+\_\+t@{switch\+\_\+interface\+\_\+attr\+\_\+t}}
+\index{switch\+\_\+interface\+\_\+attr\+\_\+t@{switch\+\_\+interface\+\_\+attr\+\_\+t}!Interface configuration A\+P\+I@{Interface configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+interface\+\_\+attr\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+interface\+\_\+attr\+\_\+s}  {\bf switch\+\_\+interface\+\_\+attr\+\_\+t}}}\label{group__Interface_gae3f7852efe077668aac3bd04e29d7e4a}
+interface attributes \hypertarget{group__Interface_ga6052d8868148cccd877ca7b8dc42e778}{\index{Interface configuration A\+P\+I@{Interface configuration A\+P\+I}!switch\+\_\+interface\+\_\+type\+\_\+t@{switch\+\_\+interface\+\_\+type\+\_\+t}}
+\index{switch\+\_\+interface\+\_\+type\+\_\+t@{switch\+\_\+interface\+\_\+type\+\_\+t}!Interface configuration A\+P\+I@{Interface configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+interface\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+interface\+\_\+type\+\_\+s}  {\bf switch\+\_\+interface\+\_\+type\+\_\+t}}}\label{group__Interface_ga6052d8868148cccd877ca7b8dc42e778}
+Interface Types 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__Interface_ga6fbf969f945ba342e8203504371e92c2}{\index{Interface configuration A\+P\+I@{Interface configuration A\+P\+I}!switch\+\_\+interface\+\_\+attr\+\_\+s@{switch\+\_\+interface\+\_\+attr\+\_\+s}}
+\index{switch\+\_\+interface\+\_\+attr\+\_\+s@{switch\+\_\+interface\+\_\+attr\+\_\+s}!Interface configuration A\+P\+I@{Interface configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+interface\+\_\+attr\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+interface\+\_\+attr\+\_\+s}}}\label{group__Interface_ga6fbf969f945ba342e8203504371e92c2}
+interface attributes \hypertarget{group__Interface_ga641df0985dd7cb34a4f81a6939475b32}{\index{Interface configuration A\+P\+I@{Interface configuration A\+P\+I}!switch\+\_\+interface\+\_\+type\+\_\+s@{switch\+\_\+interface\+\_\+type\+\_\+s}}
+\index{switch\+\_\+interface\+\_\+type\+\_\+s@{switch\+\_\+interface\+\_\+type\+\_\+s}!Interface configuration A\+P\+I@{Interface configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+interface\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+interface\+\_\+type\+\_\+s}}}\label{group__Interface_ga641df0985dd7cb34a4f81a6939475b32}
+Interface Types 
+
+\subsection{Function Documentation}
+\hypertarget{group__Interface_ga856cb62c1d6c160c981157dabec846f9}{\index{Interface configuration A\+P\+I@{Interface configuration A\+P\+I}!switch\+\_\+api\+\_\+interface\+\_\+create@{switch\+\_\+api\+\_\+interface\+\_\+create}}
+\index{switch\+\_\+api\+\_\+interface\+\_\+create@{switch\+\_\+api\+\_\+interface\+\_\+create}!Interface configuration A\+P\+I@{Interface configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+interface\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+interface\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+interface\+\_\+info\+\_\+t} $\ast$}]{intf\+\_\+info, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{intf\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Interface_ga856cb62c1d6c160c981157dabec846f9}
+Interface create 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device on which interface is created \\
+\hline
+{\em intf\+\_\+info} & -\/ interface information specific to type \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Interface_ga214963b57668bb3ac31e97ce2ec1288c}{\index{Interface configuration A\+P\+I@{Interface configuration A\+P\+I}!switch\+\_\+api\+\_\+interface\+\_\+delete@{switch\+\_\+api\+\_\+interface\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+interface\+\_\+delete@{switch\+\_\+api\+\_\+interface\+\_\+delete}!Interface configuration A\+P\+I@{Interface configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+interface\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+interface\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{interface\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Interface_ga214963b57668bb3ac31e97ce2ec1288c}
+Interface delete 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device on which interface is created \\
+\hline
+{\em interface\+\_\+handle} & handle returned by interface creation \\
+\hline
+\end{DoxyParams}

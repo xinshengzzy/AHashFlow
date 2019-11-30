@@ -1,0 +1,979 @@
+\hypertarget{group__DTel}{\section{D\+Tel A\+P\+I}
+\label{group__DTel}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions define and manipulate advanced D\+Tel \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionswitch__dtel__watchlist__value__}{switch\+\_\+dtel\+\_\+watchlist\+\_\+value\+\_\+}
+\item 
+struct \hyperlink{structswitch__dtel__watchlist__key__value__pair__}{switch\+\_\+dtel\+\_\+watchlist\+\_\+key\+\_\+value\+\_\+pair\+\_\+}
+\item 
+struct \hyperlink{structswitch__dtel__watchlist__match__info__}{switch\+\_\+dtel\+\_\+watchlist\+\_\+match\+\_\+info\+\_\+}
+\item 
+union \hyperlink{unionswitch__dtel__watchlist__action__params__}{switch\+\_\+dtel\+\_\+watchlist\+\_\+action\+\_\+params\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \\*
+\hyperlink{group__DTel_ga2aef2de534e989fcfd03b3afede795f7}{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+} \hyperlink{group__DTel_ga4ab4177e5628351a6074dfbaee9c5857}{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t}
+\item 
+typedef enum \\*
+\hyperlink{group__DTel_gac1ac564283da72d8f9315c73246d73a7}{switch\+\_\+dtel\+\_\+watchlist\+\_\+field\+\_\+} \hyperlink{group__DTel_gabf1727b3b95e347527f21edc4d190da3}{switch\+\_\+twl\+\_\+field\+\_\+t}
+\item 
+typedef union \\*
+\hyperlink{unionswitch__dtel__watchlist__value__}{switch\+\_\+dtel\+\_\+watchlist\+\_\+value\+\_\+} \hyperlink{group__DTel_ga7a0ef1d328d3dff99e1d4ad961691b78}{switch\+\_\+twl\+\_\+value\+\_\+t}
+\item 
+typedef uint32\+\_\+t \hyperlink{group__DTel_ga2d24f83795fcb9f29c85153777c47d8f}{switch\+\_\+twl\+\_\+mask\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__dtel__watchlist__key__value__pair__}{switch\+\_\+dtel\+\_\+watchlist\+\_\+key\+\_\+value\+\_\+pair\+\_\+} \hyperlink{group__DTel_ga32b4f5a66b9bce81be295a7388eadb04}{switch\+\_\+twl\+\_\+key\+\_\+value\+\_\+pair\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__dtel__watchlist__match__info__}{switch\+\_\+dtel\+\_\+watchlist\+\_\+match\+\_\+info\+\_\+} \hyperlink{group__DTel_gaf669663e566583a08f1b606876efa9e6}{switch\+\_\+twl\+\_\+match\+\_\+info\+\_\+t}
+\item 
+typedef union \\*
+\hyperlink{unionswitch__dtel__watchlist__action__params__}{switch\+\_\+dtel\+\_\+watchlist\+\_\+action\+\_\+params\+\_\+} \hyperlink{group__DTel_ga8cce873b25ed2712f3fca9f1c43ca52a}{switch\+\_\+twl\+\_\+action\+\_\+params\+\_\+t}
+\item 
+typedef enum \\*
+\hyperlink{group__DTel_gad4cfb745b37be86549050bcd8c3166c0}{switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+} \hyperlink{group__DTel_ga093c7c7db287f39a58d5b3ec66bf15ec}{switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__DTel_ga2aef2de534e989fcfd03b3afede795f7}{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+} \{ \hyperlink{group__DTel_gga2aef2de534e989fcfd03b3afede795f7a9cf4bb618ff153d5539e1341e6e83ee1}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T}, 
+\hyperlink{group__DTel_gga2aef2de534e989fcfd03b3afede795f7aaa108535bdcf2aad6f39cd7cdf715f6b}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+S\+T\+C\+A\+R\+D}, 
+\hyperlink{group__DTel_gga2aef2de534e989fcfd03b3afede795f7adbd8994e047d9751c146555766c1e833}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+R\+O\+P}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+X}
+ \}
+\item 
+enum \hyperlink{group__DTel_gac1ac564283da72d8f9315c73246d73a7}{switch\+\_\+dtel\+\_\+watchlist\+\_\+field\+\_\+} \{ \\*
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a606e2f6107c154302a6754612bbaa8b6}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+E\+T\+H\+E\+R\+\_\+\+T\+Y\+P\+E}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a5e589a3556656cb39edda7cd14b269be}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+V4\+\_\+\+S\+R\+C}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a9c9e0e056991ff7a68ada1c7a41169eb}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+V4\+\_\+\+D\+S\+T}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a925e7de38d242d15a9a93300f4fd70e7}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+\_\+\+P\+R\+O\+T\+O}, 
+\\*
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a1c15eb59371af377cbaa2f1fd66ddfbf}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+S\+C\+P}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7aa61f2c65ab9c5016a10a00cb08ddb02c}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a0bb9551e4c578ed08af163ad06251dcf}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+R\+T}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a1b1b19e6ddef5e26eb44586eb76581a5}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+E\+N\+D}, 
+\\*
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a6a6c78ca2aa0e240cbd9becf124f8c04}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a3032f541373e70d72fa1f0445f9301b6}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+S\+T\+A\+R\+T}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7ac88b48efebcd2c1c5c8c53129cbf1e96}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+E\+N\+D}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7ab82d56a119020e1d74293acd345dc18b}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+V\+N\+I}, 
+\\*
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7af81da4b4d0cf7502ae2fcbfbe883b9d8}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+E\+T\+H\+E\+R\+\_\+\+T\+Y\+P\+E}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a9ffdfd7da5d6fed50bbf091579c01920}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+V4\+\_\+\+S\+R\+C}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a1182882e4ec8a62bf4ced01f39c4163d}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+V4\+\_\+\+D\+S\+T}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7af85b8398f5adb8a2921164841befac88}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+\_\+\+P\+R\+O\+T\+O}, 
+\\*
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7ac8cbbf823ca24dd73b7dbc65e13343a9}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7aa5d2fb9f80938e17e2a730e310820628}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+R\+T}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a717dfa22a4388fc1b956951d6a1d3e67}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+E\+N\+D}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a69ec5d8adda2ef639f7b3e3092635bcf}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T}, 
+\\*
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a16af72bbbe0773d7a87f1c0a1919b576}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+S\+T\+A\+R\+T}, 
+\hyperlink{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a748a2b18c4ca2a26b4f7a1bea0f67212}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+E\+N\+D}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+M\+A\+X}
+ \}
+\item 
+enum \hyperlink{group__DTel_gad4cfb745b37be86549050bcd8c3166c0}{switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+} \{ \\*
+\hyperlink{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0a509e6be9e2e1e20c1b9ae6a1fbfa0fba}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+G\+E} = 0, 
+\hyperlink{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0a37f45d54613eaa449571741c4b35beed}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+A\+L\+L\+\_\+\+P\+A\+C\+K\+E\+T\+S} = 1, 
+\hyperlink{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0afa8d1ab7a59d4847cd114c1772868b95}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+T\+C\+P\+F\+L\+A\+G} = 2, 
+\hyperlink{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0aec90ab109fc04ebf0744ab830f08ea91}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+B\+R\+E\+A\+C\+H} = 3, 
+\\*
+\hyperlink{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0a925b3d754028ed35efaef875296167b1}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+A\+I\+L\+\_\+\+D\+R\+O\+P} = 4, 
+\hyperlink{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0ad256ebc5cd56e6009f7751c011349e6a}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+R\+O\+P\+\_\+\+R\+E\+P\+O\+R\+T} = 5, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+X}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga339b280b1b001a48469fba6f5c1e4f6b}{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+create} (switch\+\_\+device\+\_\+t device, \hyperlink{group__DTel_ga4ab4177e5628351a6074dfbaee9c5857}{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t} type, \hyperlink{group__DTel_gaf669663e566583a08f1b606876efa9e6}{switch\+\_\+twl\+\_\+match\+\_\+info\+\_\+t} $\ast$match\+\_\+info, switch\+\_\+uint16\+\_\+t priority, bool watch, \hyperlink{group__DTel_ga8cce873b25ed2712f3fca9f1c43ca52a}{switch\+\_\+twl\+\_\+action\+\_\+params\+\_\+t} $\ast$action\+\_\+params)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga94499a29e2afa0b6b0b4ff81b4144d1a}{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+update} (switch\+\_\+device\+\_\+t device, \hyperlink{group__DTel_ga4ab4177e5628351a6074dfbaee9c5857}{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t} type, \hyperlink{group__DTel_gaf669663e566583a08f1b606876efa9e6}{switch\+\_\+twl\+\_\+match\+\_\+info\+\_\+t} $\ast$match\+\_\+info, switch\+\_\+uint16\+\_\+t priority, bool watch, \hyperlink{group__DTel_ga8cce873b25ed2712f3fca9f1c43ca52a}{switch\+\_\+twl\+\_\+action\+\_\+params\+\_\+t} $\ast$action\+\_\+params)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gadaaf9f7b7f42b1f46fe1f62a61251c0e}{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+delete} (switch\+\_\+device\+\_\+t device, \hyperlink{group__DTel_ga4ab4177e5628351a6074dfbaee9c5857}{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t} type, \hyperlink{group__DTel_gaf669663e566583a08f1b606876efa9e6}{switch\+\_\+twl\+\_\+match\+\_\+info\+\_\+t} $\ast$match\+\_\+info)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga99dbea1a71251d19e36e7f3bdee8279b}{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+clear} (switch\+\_\+device\+\_\+t device, \hyperlink{group__DTel_ga4ab4177e5628351a6074dfbaee9c5857}{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t} type)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gaf49bb83226a1c6f02ec0d2d24b8803e4}{switch\+\_\+api\+\_\+dtel\+\_\+flow\+\_\+state\+\_\+clear\+\_\+cycle} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint16\+\_\+t cycle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gab67fdd50397d7da569d087a2f36947a2}{switch\+\_\+api\+\_\+dtel\+\_\+latency\+\_\+quantization\+\_\+shift} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint8\+\_\+t quant\+\_\+shift)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gaea3f067680a5e2eaa864a7f3855993b1}{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+create} (switch\+\_\+device\+\_\+t device, switch\+\_\+port\+\_\+t port, switch\+\_\+uint16\+\_\+t queue, switch\+\_\+uint32\+\_\+t depth\+\_\+threshold, switch\+\_\+uint32\+\_\+t latency\+\_\+threshold, switch\+\_\+uint16\+\_\+t report\+\_\+quota\+\_\+during\+\_\+breach, bool report\+\_\+tail\+\_\+drops)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga60f7d20cfc0d4141e5f9b93df6998883}{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+update} (switch\+\_\+device\+\_\+t device, switch\+\_\+port\+\_\+t port, switch\+\_\+uint16\+\_\+t queue, switch\+\_\+uint32\+\_\+t depth\+\_\+threshold, switch\+\_\+uint32\+\_\+t latency\+\_\+threshold, switch\+\_\+uint16\+\_\+t report\+\_\+quota\+\_\+during\+\_\+breach, bool report\+\_\+tail\+\_\+drops)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gae703dbd21d7d4655873ddc275d19fc4b}{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+port\+\_\+t port, switch\+\_\+int16\+\_\+t queue)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga21909ab2c423513c01daf3047975a24e}{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+remaining\+\_\+report\+\_\+quota\+\_\+during\+\_\+breach\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+port\+\_\+t port, switch\+\_\+uint16\+\_\+t queue, switch\+\_\+uint16\+\_\+t $\ast$quota)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga8a40e59037f4fb16f60680f7b93f3514}{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+session\+\_\+add} (switch\+\_\+device\+\_\+t device, \hyperlink{group__Mirror_gaf5ec4a656bd46aede10f08c5dfd3a09c}{switch\+\_\+mirror\+\_\+id\+\_\+t} mirror\+\_\+id)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga0840716c1d09971cbbfe7e9607710154}{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+session\+\_\+delete} (switch\+\_\+device\+\_\+t device, \hyperlink{group__Mirror_gaf5ec4a656bd46aede10f08c5dfd3a09c}{switch\+\_\+mirror\+\_\+id\+\_\+t} mirror\+\_\+id)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gab071727a1336771333f6f0ffdcf63058}{switch\+\_\+api\+\_\+dtel\+\_\+switch\+\_\+id\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint32\+\_\+t switch\+\_\+id)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga7eb5f6766fe9555fd9d7e42bdc98ec21}{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+udp\+\_\+dstport\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint16\+\_\+t dest\+\_\+udp\+\_\+port)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga9b383400b30a59f4ada6d0dcb0ba9b34}{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+sequence\+\_\+number\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint16\+\_\+t mirror\+\_\+session\+\_\+id, switch\+\_\+uint32\+\_\+t value)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga40792edbc6206de06eb8089e604224bf}{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+sequence\+\_\+number\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint16\+\_\+t mirror\+\_\+session\+\_\+id, switch\+\_\+uint32\+\_\+t $\ast$values, switch\+\_\+uint8\+\_\+t $\ast$max\+\_\+num)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gaa332281ec741e44eda445578649a36aa}{switch\+\_\+api\+\_\+dtel\+\_\+event\+\_\+get\+\_\+dscp} (switch\+\_\+device\+\_\+t device, \hyperlink{group__DTel_ga093c7c7db287f39a58d5b3ec66bf15ec}{switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+t} event\+\_\+type, switch\+\_\+uint8\+\_\+t $\ast$dscp)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga57417a7e8365882a587d2faf0190b473}{switch\+\_\+api\+\_\+dtel\+\_\+event\+\_\+set\+\_\+dscp} (switch\+\_\+device\+\_\+t device, \hyperlink{group__DTel_ga093c7c7db287f39a58d5b3ec66bf15ec}{switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+t} event\+\_\+type, switch\+\_\+uint8\+\_\+t dscp)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga7eafffa397636f0658b5f39ed734d120}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+enable} (switch\+\_\+device\+\_\+t device)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga6f402e2442f1aee6dbac4a33d04c370d}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+disable} (switch\+\_\+device\+\_\+t device)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga72d9510f25fa9cfc022a472bd276a0e8}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+transit\+\_\+enable} (switch\+\_\+device\+\_\+t device)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga88df300edb4681741703b0d25a88565b}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+transit\+\_\+disable} (switch\+\_\+device\+\_\+t device)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gad48747c6970899f535cfd33fa6080daa}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+endpoint\+\_\+enable} (switch\+\_\+device\+\_\+t device)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga34595b6ebecb406575b4b7cae67d0b81}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+endpoint\+\_\+disable} (switch\+\_\+device\+\_\+t device)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gaa839fa9023c0d216bf8f5a34dd56e944}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+create} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint16\+\_\+t session\+\_\+id, switch\+\_\+uint16\+\_\+t instruction, switch\+\_\+uint8\+\_\+t max\+\_\+hop)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga118ca42d32fde8d105a7f584d7aa9c33}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+update} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint16\+\_\+t session\+\_\+id, switch\+\_\+uint16\+\_\+t instruction, switch\+\_\+uint8\+\_\+t max\+\_\+hop)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga822c8e14729e0629fc29c6543a4804d3}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint16\+\_\+t session\+\_\+id)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga317e2d2c923118e7d3ff6eb8132d9142}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+edge\+\_\+ports\+\_\+add} (switch\+\_\+device\+\_\+t device, switch\+\_\+port\+\_\+t port)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gaca72fbe934b2cd6b2ddf37727628b427}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+edge\+\_\+ports\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+port\+\_\+t port)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gad370f6d65b929b53ee9dd7345459237f}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+dscp\+\_\+value\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint8\+\_\+t value, switch\+\_\+uint8\+\_\+t mask)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gaf3ae2403716d88828eb96fbbf581d612}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint8\+\_\+t proto, switch\+\_\+uint64\+\_\+t marker)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga2947c5cf7a73a40eb503e3bee76a44fd}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint8\+\_\+t proto)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga4c141012f4cde531fbee0499297cea9e}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint8\+\_\+t proto, switch\+\_\+uint64\+\_\+t $\ast$marker)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gadfc2dcce67fd0a25f276d5197e5ecc17}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+add} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint8\+\_\+t proto, switch\+\_\+uint16\+\_\+t value, switch\+\_\+uint16\+\_\+t mask)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gaf407b78480c5c69687ba6b828858f3e6}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint8\+\_\+t proto, switch\+\_\+uint16\+\_\+t value, switch\+\_\+uint16\+\_\+t mask)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_gaa1485b2329ef4cc1ffaefce22b98822b}{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+clear} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint8\+\_\+t proto)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga0ecf24d7f98e6f97000bee1043fbcdea}{switch\+\_\+api\+\_\+dtel\+\_\+postcard\+\_\+enable} (switch\+\_\+device\+\_\+t device)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga64461c782a669144886b5a30ba4cc570}{switch\+\_\+api\+\_\+dtel\+\_\+postcard\+\_\+disable} (switch\+\_\+device\+\_\+t device)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga944993224c7844e080f9ecefff597a04}{switch\+\_\+api\+\_\+dtel\+\_\+drop\+\_\+report\+\_\+enable} (switch\+\_\+device\+\_\+t device)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__DTel_ga775b747a27c971db8dcfb3779d53dc94}{switch\+\_\+api\+\_\+dtel\+\_\+drop\+\_\+report\+\_\+disable} (switch\+\_\+device\+\_\+t device)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__DTel_ga093c7c7db287f39a58d5b3ec66bf15ec}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+t@{switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+t}}
+\index{switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+t@{switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+t}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+}  {\bf switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+t}}}\label{group__DTel_ga093c7c7db287f39a58d5b3ec66bf15ec}
+D\+Tel event Types \hypertarget{group__DTel_ga4ab4177e5628351a6074dfbaee9c5857}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t@{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t}}
+\index{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t@{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+}  {\bf switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t}}}\label{group__DTel_ga4ab4177e5628351a6074dfbaee9c5857}
+D\+Tel Types \hypertarget{group__DTel_ga8cce873b25ed2712f3fca9f1c43ca52a}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+twl\+\_\+action\+\_\+params\+\_\+t@{switch\+\_\+twl\+\_\+action\+\_\+params\+\_\+t}}
+\index{switch\+\_\+twl\+\_\+action\+\_\+params\+\_\+t@{switch\+\_\+twl\+\_\+action\+\_\+params\+\_\+t}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+twl\+\_\+action\+\_\+params\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf switch\+\_\+dtel\+\_\+watchlist\+\_\+action\+\_\+params\+\_\+}  {\bf switch\+\_\+twl\+\_\+action\+\_\+params\+\_\+t}}}\label{group__DTel_ga8cce873b25ed2712f3fca9f1c43ca52a}
+D\+Tel watchlist action parameters \hypertarget{group__DTel_gabf1727b3b95e347527f21edc4d190da3}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+twl\+\_\+field\+\_\+t@{switch\+\_\+twl\+\_\+field\+\_\+t}}
+\index{switch\+\_\+twl\+\_\+field\+\_\+t@{switch\+\_\+twl\+\_\+field\+\_\+t}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+twl\+\_\+field\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+dtel\+\_\+watchlist\+\_\+field\+\_\+}  {\bf switch\+\_\+twl\+\_\+field\+\_\+t}}}\label{group__DTel_gabf1727b3b95e347527f21edc4d190da3}
+D\+Tel watchlist match field enum \hypertarget{group__DTel_ga32b4f5a66b9bce81be295a7388eadb04}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+twl\+\_\+key\+\_\+value\+\_\+pair\+\_\+t@{switch\+\_\+twl\+\_\+key\+\_\+value\+\_\+pair\+\_\+t}}
+\index{switch\+\_\+twl\+\_\+key\+\_\+value\+\_\+pair\+\_\+t@{switch\+\_\+twl\+\_\+key\+\_\+value\+\_\+pair\+\_\+t}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+twl\+\_\+key\+\_\+value\+\_\+pair\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+dtel\+\_\+watchlist\+\_\+key\+\_\+value\+\_\+pair\+\_\+}  {\bf switch\+\_\+twl\+\_\+key\+\_\+value\+\_\+pair\+\_\+t}}}\label{group__DTel_ga32b4f5a66b9bce81be295a7388eadb04}
+D\+Tel watchlist match field key value pair \hypertarget{group__DTel_ga2d24f83795fcb9f29c85153777c47d8f}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+twl\+\_\+mask\+\_\+t@{switch\+\_\+twl\+\_\+mask\+\_\+t}}
+\index{switch\+\_\+twl\+\_\+mask\+\_\+t@{switch\+\_\+twl\+\_\+mask\+\_\+t}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+twl\+\_\+mask\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint32\+\_\+t {\bf switch\+\_\+twl\+\_\+mask\+\_\+t}}}\label{group__DTel_ga2d24f83795fcb9f29c85153777c47d8f}
+D\+Tel watchlist mask \hypertarget{group__DTel_gaf669663e566583a08f1b606876efa9e6}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+twl\+\_\+match\+\_\+info\+\_\+t@{switch\+\_\+twl\+\_\+match\+\_\+info\+\_\+t}}
+\index{switch\+\_\+twl\+\_\+match\+\_\+info\+\_\+t@{switch\+\_\+twl\+\_\+match\+\_\+info\+\_\+t}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+twl\+\_\+match\+\_\+info\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+dtel\+\_\+watchlist\+\_\+match\+\_\+info\+\_\+}  {\bf switch\+\_\+twl\+\_\+match\+\_\+info\+\_\+t}}}\label{group__DTel_gaf669663e566583a08f1b606876efa9e6}
+D\+Tel watchlist match information \hypertarget{group__DTel_ga7a0ef1d328d3dff99e1d4ad961691b78}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+twl\+\_\+value\+\_\+t@{switch\+\_\+twl\+\_\+value\+\_\+t}}
+\index{switch\+\_\+twl\+\_\+value\+\_\+t@{switch\+\_\+twl\+\_\+value\+\_\+t}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+twl\+\_\+value\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef union {\bf switch\+\_\+dtel\+\_\+watchlist\+\_\+value\+\_\+}  {\bf switch\+\_\+twl\+\_\+value\+\_\+t}}}\label{group__DTel_ga7a0ef1d328d3dff99e1d4ad961691b78}
+D\+Tel watchlist match field list 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__DTel_gad4cfb745b37be86549050bcd8c3166c0}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+@{switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+}}
+\index{switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+@{switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+}}}\label{group__DTel_gad4cfb745b37be86549050bcd8c3166c0}
+D\+Tel event Types \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+G\+E@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+G\+E}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+G\+E@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+G\+E}}\item[{\em 
+\hypertarget{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0a509e6be9e2e1e20c1b9ae6a1fbfa0fba}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+S\+T\+A\+T\+E\+\_\+\+C\+H\+A\+N\+G\+E}\label{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0a509e6be9e2e1e20c1b9ae6a1fbfa0fba}
+}]Report triggered by new flow or flow state (e.\+g., path, latency) change \index{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+A\+L\+L\+\_\+\+P\+A\+C\+K\+E\+T\+S@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+A\+L\+L\+\_\+\+P\+A\+C\+K\+E\+T\+S}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+A\+L\+L\+\_\+\+P\+A\+C\+K\+E\+T\+S@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+A\+L\+L\+\_\+\+P\+A\+C\+K\+E\+T\+S}}\item[{\em 
+\hypertarget{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0a37f45d54613eaa449571741c4b35beed}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+A\+L\+L\+\_\+\+P\+A\+C\+K\+E\+T\+S}\label{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0a37f45d54613eaa449571741c4b35beed}
+}]Report triggered by every packet of the flow without filtering \index{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+T\+C\+P\+F\+L\+A\+G@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+T\+C\+P\+F\+L\+A\+G}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+T\+C\+P\+F\+L\+A\+G@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+T\+C\+P\+F\+L\+A\+G}}\item[{\em 
+\hypertarget{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0afa8d1ab7a59d4847cd114c1772868b95}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+F\+L\+O\+W\+\_\+\+T\+C\+P\+F\+L\+A\+G}\label{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0afa8d1ab7a59d4847cd114c1772868b95}
+}]Report triggered by T\+C\+P flags \index{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+B\+R\+E\+A\+C\+H@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+B\+R\+E\+A\+C\+H}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+B\+R\+E\+A\+C\+H@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+B\+R\+E\+A\+C\+H}}\item[{\em 
+\hypertarget{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0aec90ab109fc04ebf0744ab830f08ea91}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+H\+R\+E\+S\+H\+O\+L\+D\+\_\+\+B\+R\+E\+A\+C\+H}\label{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0aec90ab109fc04ebf0744ab830f08ea91}
+}]Report triggered by queue depth or latency threshold breach \index{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+A\+I\+L\+\_\+\+D\+R\+O\+P@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+A\+I\+L\+\_\+\+D\+R\+O\+P}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+A\+I\+L\+\_\+\+D\+R\+O\+P@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+A\+I\+L\+\_\+\+D\+R\+O\+P}}\item[{\em 
+\hypertarget{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0a925b3d754028ed35efaef875296167b1}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+\_\+\+R\+E\+P\+O\+R\+T\+\_\+\+T\+A\+I\+L\+\_\+\+D\+R\+O\+P}\label{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0a925b3d754028ed35efaef875296167b1}
+}]Report triggered by queue deflect on drop \index{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+R\+O\+P\+\_\+\+R\+E\+P\+O\+R\+T@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+R\+O\+P\+\_\+\+R\+E\+P\+O\+R\+T}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+R\+O\+P\+\_\+\+R\+E\+P\+O\+R\+T@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+R\+O\+P\+\_\+\+R\+E\+P\+O\+R\+T}}\item[{\em 
+\hypertarget{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0ad256ebc5cd56e6009f7751c011349e6a}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+E\+V\+E\+N\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+R\+O\+P\+\_\+\+R\+E\+P\+O\+R\+T}\label{group__DTel_ggad4cfb745b37be86549050bcd8c3166c0ad256ebc5cd56e6009f7751c011349e6a}
+}]Report triggered by packet drop \end{description}
+\end{Desc}
+\hypertarget{group__DTel_gac1ac564283da72d8f9315c73246d73a7}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+dtel\+\_\+watchlist\+\_\+field\+\_\+@{switch\+\_\+dtel\+\_\+watchlist\+\_\+field\+\_\+}}
+\index{switch\+\_\+dtel\+\_\+watchlist\+\_\+field\+\_\+@{switch\+\_\+dtel\+\_\+watchlist\+\_\+field\+\_\+}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+dtel\+\_\+watchlist\+\_\+field\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+dtel\+\_\+watchlist\+\_\+field\+\_\+}}}\label{group__DTel_gac1ac564283da72d8f9315c73246d73a7}
+D\+Tel watchlist match field enum \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+E\+T\+H\+E\+R\+\_\+\+T\+Y\+P\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+E\+T\+H\+E\+R\+\_\+\+T\+Y\+P\+E}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+E\+T\+H\+E\+R\+\_\+\+T\+Y\+P\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+E\+T\+H\+E\+R\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a606e2f6107c154302a6754612bbaa8b6}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+E\+T\+H\+E\+R\+\_\+\+T\+Y\+P\+E}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a606e2f6107c154302a6754612bbaa8b6}
+}]Ethernet type \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+V4\+\_\+\+S\+R\+C@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+V4\+\_\+\+S\+R\+C}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+V4\+\_\+\+S\+R\+C@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+V4\+\_\+\+S\+R\+C}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a5e589a3556656cb39edda7cd14b269be}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+V4\+\_\+\+S\+R\+C}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a5e589a3556656cb39edda7cd14b269be}
+}]I\+Pv4 source address \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+V4\+\_\+\+D\+S\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+V4\+\_\+\+D\+S\+T}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+V4\+\_\+\+D\+S\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+V4\+\_\+\+D\+S\+T}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a9c9e0e056991ff7a68ada1c7a41169eb}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+V4\+\_\+\+D\+S\+T}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a9c9e0e056991ff7a68ada1c7a41169eb}
+}]I\+Pv4 destination address \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+\_\+\+P\+R\+O\+T\+O@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+\_\+\+P\+R\+O\+T\+O}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+\_\+\+P\+R\+O\+T\+O@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+\_\+\+P\+R\+O\+T\+O}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a925e7de38d242d15a9a93300f4fd70e7}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+P\+\_\+\+P\+R\+O\+T\+O}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a925e7de38d242d15a9a93300f4fd70e7}
+}]I\+P protocol \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+S\+C\+P@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+S\+C\+P}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+S\+C\+P@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+S\+C\+P}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a1c15eb59371af377cbaa2f1fd66ddfbf}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+D\+S\+C\+P}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a1c15eb59371af377cbaa2f1fd66ddfbf}
+}]I\+P Diffserv \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7aa61f2c65ab9c5016a10a00cb08ddb02c}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7aa61f2c65ab9c5016a10a00cb08ddb02c}
+}]L4 source port \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+R\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+R\+T}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+R\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+R\+T}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a0bb9551e4c578ed08af163ad06251dcf}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+R\+T}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a0bb9551e4c578ed08af163ad06251dcf}
+}]L4 source port range start \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+E\+N\+D@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+E\+N\+D}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+E\+N\+D@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+E\+N\+D}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a1b1b19e6ddef5e26eb44586eb76581a5}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+E\+N\+D}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a1b1b19e6ddef5e26eb44586eb76581a5}
+}]L4 source port range end \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a6a6c78ca2aa0e240cbd9becf124f8c04}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a6a6c78ca2aa0e240cbd9becf124f8c04}
+}]L4 destination port \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+S\+T\+A\+R\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+S\+T\+A\+R\+T}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+S\+T\+A\+R\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+S\+T\+A\+R\+T}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a3032f541373e70d72fa1f0445f9301b6}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+S\+T\+A\+R\+T}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a3032f541373e70d72fa1f0445f9301b6}
+}]L4 destination port range start \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+E\+N\+D@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+E\+N\+D}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+E\+N\+D@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+E\+N\+D}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7ac88b48efebcd2c1c5c8c53129cbf1e96}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+E\+N\+D}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7ac88b48efebcd2c1c5c8c53129cbf1e96}
+}]L4 destination port range end \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+V\+N\+I@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+V\+N\+I}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+V\+N\+I@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+V\+N\+I}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7ab82d56a119020e1d74293acd345dc18b}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+V\+N\+I}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7ab82d56a119020e1d74293acd345dc18b}
+}]Tunnel V\+N\+I \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+E\+T\+H\+E\+R\+\_\+\+T\+Y\+P\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+E\+T\+H\+E\+R\+\_\+\+T\+Y\+P\+E}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+E\+T\+H\+E\+R\+\_\+\+T\+Y\+P\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+E\+T\+H\+E\+R\+\_\+\+T\+Y\+P\+E}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7af81da4b4d0cf7502ae2fcbfbe883b9d8}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+E\+T\+H\+E\+R\+\_\+\+T\+Y\+P\+E}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7af81da4b4d0cf7502ae2fcbfbe883b9d8}
+}]Ethernet type \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+V4\+\_\+\+S\+R\+C@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+V4\+\_\+\+S\+R\+C}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+V4\+\_\+\+S\+R\+C@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+V4\+\_\+\+S\+R\+C}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a9ffdfd7da5d6fed50bbf091579c01920}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+V4\+\_\+\+S\+R\+C}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a9ffdfd7da5d6fed50bbf091579c01920}
+}]Inner I\+Pv4 Source address \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+V4\+\_\+\+D\+S\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+V4\+\_\+\+D\+S\+T}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+V4\+\_\+\+D\+S\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+V4\+\_\+\+D\+S\+T}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a1182882e4ec8a62bf4ced01f39c4163d}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+V4\+\_\+\+D\+S\+T}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a1182882e4ec8a62bf4ced01f39c4163d}
+}]Inner I\+Pv4 Destination address \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+\_\+\+P\+R\+O\+T\+O@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+\_\+\+P\+R\+O\+T\+O}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+\_\+\+P\+R\+O\+T\+O@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+\_\+\+P\+R\+O\+T\+O}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7af85b8398f5adb8a2921164841befac88}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+I\+P\+\_\+\+P\+R\+O\+T\+O}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7af85b8398f5adb8a2921164841befac88}
+}]Inner I\+P Protocol \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7ac8cbbf823ca24dd73b7dbc65e13343a9}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7ac8cbbf823ca24dd73b7dbc65e13343a9}
+}]Inner L4 source port \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+R\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+R\+T}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+R\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+R\+T}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7aa5d2fb9f80938e17e2a730e310820628}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+S\+T\+A\+R\+T}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7aa5d2fb9f80938e17e2a730e310820628}
+}]Inner L4 source port range start \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+E\+N\+D@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+E\+N\+D}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+E\+N\+D@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+E\+N\+D}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a717dfa22a4388fc1b956951d6a1d3e67}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+S\+R\+C\+\_\+\+E\+N\+D}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a717dfa22a4388fc1b956951d6a1d3e67}
+}]Inner L4 source port range end \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a69ec5d8adda2ef639f7b3e3092635bcf}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a69ec5d8adda2ef639f7b3e3092635bcf}
+}]Inner L4 destination port \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+S\+T\+A\+R\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+S\+T\+A\+R\+T}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+S\+T\+A\+R\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+S\+T\+A\+R\+T}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a16af72bbbe0773d7a87f1c0a1919b576}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+S\+T\+A\+R\+T}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a16af72bbbe0773d7a87f1c0a1919b576}
+}]Inner L4 destination port range start \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+E\+N\+D@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+E\+N\+D}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+E\+N\+D@{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+E\+N\+D}}\item[{\em 
+\hypertarget{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a748a2b18c4ca2a26b4f7a1bea0f67212}{S\+W\+I\+T\+C\+H\+\_\+\+T\+W\+L\+\_\+\+F\+I\+E\+L\+D\+\_\+\+I\+N\+N\+E\+R\+\_\+\+L4\+\_\+\+P\+O\+R\+T\+\_\+\+D\+S\+T\+\_\+\+E\+N\+D}\label{group__DTel_ggac1ac564283da72d8f9315c73246d73a7a748a2b18c4ca2a26b4f7a1bea0f67212}
+}]Inner L4 destination port range end \end{description}
+\end{Desc}
+\hypertarget{group__DTel_ga2aef2de534e989fcfd03b3afede795f7}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+@{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+}}
+\index{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+@{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+}}}\label{group__DTel_ga2aef2de534e989fcfd03b3afede795f7}
+D\+Tel Types \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T}}\item[{\em 
+\hypertarget{group__DTel_gga2aef2de534e989fcfd03b3afede795f7a9cf4bb618ff153d5539e1341e6e83ee1}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T}\label{group__DTel_gga2aef2de534e989fcfd03b3afede795f7a9cf4bb618ff153d5539e1341e6e83ee1}
+}]Inband Network Telemetry (I\+N\+T) \index{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+S\+T\+C\+A\+R\+D@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+S\+T\+C\+A\+R\+D}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+S\+T\+C\+A\+R\+D@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+S\+T\+C\+A\+R\+D}}\item[{\em 
+\hypertarget{group__DTel_gga2aef2de534e989fcfd03b3afede795f7aaa108535bdcf2aad6f39cd7cdf715f6b}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+S\+T\+C\+A\+R\+D}\label{group__DTel_gga2aef2de534e989fcfd03b3afede795f7aaa108535bdcf2aad6f39cd7cdf715f6b}
+}]Postcard \index{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+R\+O\+P@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+R\+O\+P}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+R\+O\+P@{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+R\+O\+P}}\item[{\em 
+\hypertarget{group__DTel_gga2aef2de534e989fcfd03b3afede795f7adbd8994e047d9751c146555766c1e833}{S\+W\+I\+T\+C\+H\+\_\+\+D\+T\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+R\+O\+P}\label{group__DTel_gga2aef2de534e989fcfd03b3afede795f7adbd8994e047d9751c146555766c1e833}
+}]Drop \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__DTel_ga775b747a27c971db8dcfb3779d53dc94}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+drop\+\_\+report\+\_\+disable@{switch\+\_\+api\+\_\+dtel\+\_\+drop\+\_\+report\+\_\+disable}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+drop\+\_\+report\+\_\+disable@{switch\+\_\+api\+\_\+dtel\+\_\+drop\+\_\+report\+\_\+disable}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+drop\+\_\+report\+\_\+disable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+drop\+\_\+report\+\_\+disable (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga775b747a27c971db8dcfb3779d53dc94}
+Disable Mirror on Drop 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga944993224c7844e080f9ecefff597a04}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+drop\+\_\+report\+\_\+enable@{switch\+\_\+api\+\_\+dtel\+\_\+drop\+\_\+report\+\_\+enable}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+drop\+\_\+report\+\_\+enable@{switch\+\_\+api\+\_\+dtel\+\_\+drop\+\_\+report\+\_\+enable}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+drop\+\_\+report\+\_\+enable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+drop\+\_\+report\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga944993224c7844e080f9ecefff597a04}
+Enable Mirror on Drop 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gaa332281ec741e44eda445578649a36aa}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+event\+\_\+get\+\_\+dscp@{switch\+\_\+api\+\_\+dtel\+\_\+event\+\_\+get\+\_\+dscp}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+event\+\_\+get\+\_\+dscp@{switch\+\_\+api\+\_\+dtel\+\_\+event\+\_\+get\+\_\+dscp}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+event\+\_\+get\+\_\+dscp}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+event\+\_\+get\+\_\+dscp (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+t}}]{event\+\_\+type, }
+\item[{switch\+\_\+uint8\+\_\+t $\ast$}]{dscp}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gaa332281ec741e44eda445578649a36aa}
+Get D\+S\+C\+P code for report packets of the specified type 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em event\+\_\+type} & type of the event that generated the report \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+dscp 6-\/bit value for dscp in I\+Pv4 header 
+\end{DoxyReturn}
+\hypertarget{group__DTel_ga57417a7e8365882a587d2faf0190b473}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+event\+\_\+set\+\_\+dscp@{switch\+\_\+api\+\_\+dtel\+\_\+event\+\_\+set\+\_\+dscp}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+event\+\_\+set\+\_\+dscp@{switch\+\_\+api\+\_\+dtel\+\_\+event\+\_\+set\+\_\+dscp}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+event\+\_\+set\+\_\+dscp}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+event\+\_\+set\+\_\+dscp (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+dtel\+\_\+event\+\_\+type\+\_\+t}}]{event\+\_\+type, }
+\item[{switch\+\_\+uint8\+\_\+t}]{dscp}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga57417a7e8365882a587d2faf0190b473}
+Set D\+S\+C\+P code for report packets of the specified type 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em event\+\_\+type} & type of the event that generated the report \\
+\hline
+{\em dscp} & 6-\/bit value for dscp in I\+Pv4 header \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gaf49bb83226a1c6f02ec0d2d24b8803e4}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+flow\+\_\+state\+\_\+clear\+\_\+cycle@{switch\+\_\+api\+\_\+dtel\+\_\+flow\+\_\+state\+\_\+clear\+\_\+cycle}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+flow\+\_\+state\+\_\+clear\+\_\+cycle@{switch\+\_\+api\+\_\+dtel\+\_\+flow\+\_\+state\+\_\+clear\+\_\+cycle}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+flow\+\_\+state\+\_\+clear\+\_\+cycle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+flow\+\_\+state\+\_\+clear\+\_\+cycle (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint16\+\_\+t}]{cycle}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gaf49bb83226a1c6f02ec0d2d24b8803e4}
+Set flow state clear cycle 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em cycle} & -\/ clear cycle in seconds \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga6f402e2442f1aee6dbac4a33d04c370d}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+disable@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+disable}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+disable@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+disable}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+disable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+disable (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga6f402e2442f1aee6dbac4a33d04c370d}
+Enable I\+N\+T 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gad370f6d65b929b53ee9dd7345459237f}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+dscp\+\_\+value\+\_\+set@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+dscp\+\_\+value\+\_\+set}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+dscp\+\_\+value\+\_\+set@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+dscp\+\_\+value\+\_\+set}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+dscp\+\_\+value\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+dscp\+\_\+value\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint8\+\_\+t}]{value, }
+\item[{switch\+\_\+uint8\+\_\+t}]{mask}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gad370f6d65b929b53ee9dd7345459237f}
+Set reserved dscp value for I\+N\+T over L4 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em value} & -\/ reserved dscp value (6 bits) \\
+\hline
+{\em mask} & -\/ reserved dscp value mask (6 bits) \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga317e2d2c923118e7d3ff6eb8132d9142}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+edge\+\_\+ports\+\_\+add@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+edge\+\_\+ports\+\_\+add}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+edge\+\_\+ports\+\_\+add@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+edge\+\_\+ports\+\_\+add}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+edge\+\_\+ports\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+edge\+\_\+ports\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+port\+\_\+t}]{port}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga317e2d2c923118e7d3ff6eb8132d9142}
+Add I\+N\+T sink downstream ports 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em port} & -\/ egress port to apply I\+N\+T sink \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gaca72fbe934b2cd6b2ddf37727628b427}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+edge\+\_\+ports\+\_\+delete@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+edge\+\_\+ports\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+edge\+\_\+ports\+\_\+delete@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+edge\+\_\+ports\+\_\+delete}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+edge\+\_\+ports\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+edge\+\_\+ports\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+port\+\_\+t}]{port}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gaca72fbe934b2cd6b2ddf37727628b427}
+Delete I\+N\+T sink downstream ports 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em port} & -\/ egress port to apply I\+N\+T sink \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga7eafffa397636f0658b5f39ed734d120}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+enable@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+enable}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+enable@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+enable}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+enable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga7eafffa397636f0658b5f39ed734d120}
+Enable I\+N\+T 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga34595b6ebecb406575b4b7cae67d0b81}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+endpoint\+\_\+disable@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+endpoint\+\_\+disable}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+endpoint\+\_\+disable@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+endpoint\+\_\+disable}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+endpoint\+\_\+disable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+endpoint\+\_\+disable (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga34595b6ebecb406575b4b7cae67d0b81}
+Disable I\+N\+T endpoint 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gad48747c6970899f535cfd33fa6080daa}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+endpoint\+\_\+enable@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+endpoint\+\_\+enable}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+endpoint\+\_\+enable@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+endpoint\+\_\+enable}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+endpoint\+\_\+enable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+endpoint\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gad48747c6970899f535cfd33fa6080daa}
+Enable I\+N\+T endpoint 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga2947c5cf7a73a40eb503e3bee76a44fd}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+delete@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+delete@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+delete}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint8\+\_\+t}]{proto}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga2947c5cf7a73a40eb503e3bee76a44fd}
+Disable marker value for I\+N\+T over L4 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em proto} & -\/ l4 protocol \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga4c141012f4cde531fbee0499297cea9e}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+get@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+get}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+get@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+get}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint8\+\_\+t}]{proto, }
+\item[{switch\+\_\+uint64\+\_\+t $\ast$}]{marker}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga4c141012f4cde531fbee0499297cea9e}
+get marker value for I\+N\+T over L4 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em proto} & -\/ l4 protocol \\
+\hline
+{\em marker} & -\/ reserved marker value (64 bits) \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gadfc2dcce67fd0a25f276d5197e5ecc17}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+add@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+add}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+add@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+add}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint8\+\_\+t}]{proto, }
+\item[{switch\+\_\+uint16\+\_\+t}]{value, }
+\item[{switch\+\_\+uint16\+\_\+t}]{mask}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gadfc2dcce67fd0a25f276d5197e5ecc17}
+Add l4 dst port used besides the marker 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em proto} & -\/ l4 protocol \\
+\hline
+{\em value} & -\/ port value \\
+\hline
+{\em mask} & -\/ port mask \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gaa1485b2329ef4cc1ffaefce22b98822b}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+clear@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+clear}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+clear@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+clear}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+clear}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint8\+\_\+t}]{proto}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gaa1485b2329ef4cc1ffaefce22b98822b}
+Cleans l4 dst ports used besides the marker 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em proto} & -\/ l4 protocol \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gaf407b78480c5c69687ba6b828858f3e6}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+delete@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+delete@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+delete}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+port\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint8\+\_\+t}]{proto, }
+\item[{switch\+\_\+uint16\+\_\+t}]{value, }
+\item[{switch\+\_\+uint16\+\_\+t}]{mask}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gaf407b78480c5c69687ba6b828858f3e6}
+Del l4 dst port used besides the marker 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em proto} & -\/ l4 protocol \\
+\hline
+{\em value} & -\/ port value \\
+\hline
+{\em mask} & -\/ port mask \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gaf3ae2403716d88828eb96fbbf581d612}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+set@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+set}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+set@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+set}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+marker\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint8\+\_\+t}]{proto, }
+\item[{switch\+\_\+uint64\+\_\+t}]{marker}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gaf3ae2403716d88828eb96fbbf581d612}
+Set marker value for I\+N\+T over L4 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em proto} & -\/ l4 protocol \\
+\hline
+{\em marker} & -\/ reserved marker value (64 bits) \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gaa839fa9023c0d216bf8f5a34dd56e944}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+create@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+create}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+create@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+create}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint16\+\_\+t}]{session\+\_\+id, }
+\item[{switch\+\_\+uint16\+\_\+t}]{instruction, }
+\item[{switch\+\_\+uint8\+\_\+t}]{max\+\_\+hop}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gaa839fa9023c0d216bf8f5a34dd56e944}
+Create I\+N\+T sessions 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em session\+\_\+id} & -\/ I\+N\+T session I\+D \\
+\hline
+{\em instruction} & -\/ I\+N\+T instruction bitmap \\
+\hline
+{\em max\+\_\+hop} & -\/ I\+N\+T max hop \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga822c8e14729e0629fc29c6543a4804d3}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+delete@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+delete@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+delete}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint16\+\_\+t}]{session\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga822c8e14729e0629fc29c6543a4804d3}
+Delete I\+N\+T sessions 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em session\+\_\+id} & -\/ I\+N\+T session I\+D \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga118ca42d32fde8d105a7f584d7aa9c33}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+update@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+update}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+update@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+update}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+update}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+session\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint16\+\_\+t}]{session\+\_\+id, }
+\item[{switch\+\_\+uint16\+\_\+t}]{instruction, }
+\item[{switch\+\_\+uint8\+\_\+t}]{max\+\_\+hop}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga118ca42d32fde8d105a7f584d7aa9c33}
+Update I\+N\+T sessions, session\+\_\+id is the update key 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em session\+\_\+id} & -\/ I\+N\+T session I\+D \\
+\hline
+{\em instruction} & -\/ I\+N\+T instruction bitmap \\
+\hline
+{\em max\+\_\+hop} & -\/ I\+N\+T max hop \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga88df300edb4681741703b0d25a88565b}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+transit\+\_\+disable@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+transit\+\_\+disable}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+transit\+\_\+disable@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+transit\+\_\+disable}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+transit\+\_\+disable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+transit\+\_\+disable (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga88df300edb4681741703b0d25a88565b}
+Disable I\+N\+T transit 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga72d9510f25fa9cfc022a472bd276a0e8}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+transit\+\_\+enable@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+transit\+\_\+enable}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+transit\+\_\+enable@{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+transit\+\_\+enable}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+transit\+\_\+enable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+int\+\_\+transit\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga72d9510f25fa9cfc022a472bd276a0e8}
+Enable I\+N\+T transit 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gab67fdd50397d7da569d087a2f36947a2}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+latency\+\_\+quantization\+\_\+shift@{switch\+\_\+api\+\_\+dtel\+\_\+latency\+\_\+quantization\+\_\+shift}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+latency\+\_\+quantization\+\_\+shift@{switch\+\_\+api\+\_\+dtel\+\_\+latency\+\_\+quantization\+\_\+shift}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+latency\+\_\+quantization\+\_\+shift}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+latency\+\_\+quantization\+\_\+shift (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint8\+\_\+t}]{quant\+\_\+shift}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gab67fdd50397d7da569d087a2f36947a2}
+Set latency quantization shift for flow state change detection 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em quant\+\_\+shift} & -\/ quantization shift \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga64461c782a669144886b5a30ba4cc570}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+postcard\+\_\+disable@{switch\+\_\+api\+\_\+dtel\+\_\+postcard\+\_\+disable}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+postcard\+\_\+disable@{switch\+\_\+api\+\_\+dtel\+\_\+postcard\+\_\+disable}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+postcard\+\_\+disable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+postcard\+\_\+disable (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga64461c782a669144886b5a30ba4cc570}
+Disable Postcard 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga0ecf24d7f98e6f97000bee1043fbcdea}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+postcard\+\_\+enable@{switch\+\_\+api\+\_\+dtel\+\_\+postcard\+\_\+enable}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+postcard\+\_\+enable@{switch\+\_\+api\+\_\+dtel\+\_\+postcard\+\_\+enable}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+postcard\+\_\+enable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+postcard\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga0ecf24d7f98e6f97000bee1043fbcdea}
+Enable Postcard 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga21909ab2c423513c01daf3047975a24e}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+remaining\+\_\+report\+\_\+quota\+\_\+during\+\_\+breach\+\_\+get@{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+remaining\+\_\+report\+\_\+quota\+\_\+during\+\_\+breach\+\_\+get}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+remaining\+\_\+report\+\_\+quota\+\_\+during\+\_\+breach\+\_\+get@{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+remaining\+\_\+report\+\_\+quota\+\_\+during\+\_\+breach\+\_\+get}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+remaining\+\_\+report\+\_\+quota\+\_\+during\+\_\+breach\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+remaining\+\_\+report\+\_\+quota\+\_\+during\+\_\+breach\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+port\+\_\+t}]{port, }
+\item[{switch\+\_\+uint16\+\_\+t}]{queue, }
+\item[{switch\+\_\+uint16\+\_\+t $\ast$}]{quota}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga21909ab2c423513c01daf3047975a24e}
+Get the remaining quota per port and queue 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em port} & -\/ egress port \\
+\hline
+{\em queue} & -\/ queue id \\
+\hline
+{\em quota} & -\/ returning quota values \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gaea3f067680a5e2eaa864a7f3855993b1}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+create@{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+create}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+create@{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+create}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+port\+\_\+t}]{port, }
+\item[{switch\+\_\+uint16\+\_\+t}]{queue, }
+\item[{switch\+\_\+uint32\+\_\+t}]{depth\+\_\+threshold, }
+\item[{switch\+\_\+uint32\+\_\+t}]{latency\+\_\+threshold, }
+\item[{switch\+\_\+uint16\+\_\+t}]{report\+\_\+quota\+\_\+during\+\_\+breach, }
+\item[{bool}]{report\+\_\+tail\+\_\+drops}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gaea3f067680a5e2eaa864a7f3855993b1}
+Set queue alerts 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em port} & -\/ egress port \\
+\hline
+{\em queue} & -\/ queue id \\
+\hline
+{\em depth} & -\/ queue depth threshold \\
+\hline
+{\em latency} & -\/ queue latency threshold \\
+\hline
+{\em quota} & -\/ \# queue report packets \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gae703dbd21d7d4655873ddc275d19fc4b}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+delete@{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+delete@{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+delete}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+port\+\_\+t}]{port, }
+\item[{switch\+\_\+int16\+\_\+t}]{queue}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gae703dbd21d7d4655873ddc275d19fc4b}
+Delete queue alerts 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em port} & -\/ egress port \\
+\hline
+{\em queue} & -\/ queue id \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga60f7d20cfc0d4141e5f9b93df6998883}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+update@{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+update}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+update@{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+update}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+update}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+queue\+\_\+report\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+port\+\_\+t}]{port, }
+\item[{switch\+\_\+uint16\+\_\+t}]{queue, }
+\item[{switch\+\_\+uint32\+\_\+t}]{depth\+\_\+threshold, }
+\item[{switch\+\_\+uint32\+\_\+t}]{latency\+\_\+threshold, }
+\item[{switch\+\_\+uint16\+\_\+t}]{report\+\_\+quota\+\_\+during\+\_\+breach, }
+\item[{bool}]{report\+\_\+tail\+\_\+drops}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga60f7d20cfc0d4141e5f9b93df6998883}
+Update queue alerts, $<$port, queue$>$ tuple is the update key 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em port} & -\/ egress port \\
+\hline
+{\em queue} & -\/ queue id \\
+\hline
+{\em depth} & -\/ queue depth threshold \\
+\hline
+{\em latency} & -\/ queue latency threshold \\
+\hline
+{\em quota} & -\/ \# queue report packets \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga40792edbc6206de06eb8089e604224bf}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+sequence\+\_\+number\+\_\+get@{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+sequence\+\_\+number\+\_\+get}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+sequence\+\_\+number\+\_\+get@{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+sequence\+\_\+number\+\_\+get}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+sequence\+\_\+number\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+sequence\+\_\+number\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint16\+\_\+t}]{mirror\+\_\+session\+\_\+id, }
+\item[{switch\+\_\+uint32\+\_\+t $\ast$}]{values, }
+\item[{switch\+\_\+uint8\+\_\+t $\ast$}]{max\+\_\+num}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga40792edbc6206de06eb8089e604224bf}
+Returns the sequence number of that mirror session. returns one value per pipe 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em mirror\+\_\+session\+\_\+id} & = mirror session id \\
+\hline
+{\em values} & -\/ sequence number values \\
+\hline
+{\em max\+\_\+num} & -\/ maximum number to read. will be updated to the number read \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga9b383400b30a59f4ada6d0dcb0ba9b34}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+sequence\+\_\+number\+\_\+set@{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+sequence\+\_\+number\+\_\+set}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+sequence\+\_\+number\+\_\+set@{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+sequence\+\_\+number\+\_\+set}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+sequence\+\_\+number\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+sequence\+\_\+number\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint16\+\_\+t}]{mirror\+\_\+session\+\_\+id, }
+\item[{switch\+\_\+uint32\+\_\+t}]{value}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga9b383400b30a59f4ada6d0dcb0ba9b34}
+Set sequence number value 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em mirror\+\_\+session\+\_\+id} & = mirror session id \\
+\hline
+{\em value} & -\/ sequence number value \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga8a40e59037f4fb16f60680f7b93f3514}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+session\+\_\+add@{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+session\+\_\+add}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+session\+\_\+add@{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+session\+\_\+add}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+session\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+session\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+mirror\+\_\+id\+\_\+t}}]{mirror\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga8a40e59037f4fb16f60680f7b93f3514}
+Add D\+Tel E\+R\+S\+P\+A\+N mirror sessions 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em mirror\+\_\+id} & -\/ mirror session I\+D \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga0840716c1d09971cbbfe7e9607710154}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+session\+\_\+delete@{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+session\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+session\+\_\+delete@{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+session\+\_\+delete}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+session\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+session\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+mirror\+\_\+id\+\_\+t}}]{mirror\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga0840716c1d09971cbbfe7e9607710154}
+Delete D\+Tel E\+R\+S\+P\+A\+N mirror sessions 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em mirror\+\_\+id} & -\/ mirror session I\+D \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga7eb5f6766fe9555fd9d7e42bdc98ec21}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+udp\+\_\+dstport\+\_\+set@{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+udp\+\_\+dstport\+\_\+set}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+udp\+\_\+dstport\+\_\+set@{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+udp\+\_\+dstport\+\_\+set}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+udp\+\_\+dstport\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+report\+\_\+udp\+\_\+dstport\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint16\+\_\+t}]{dest\+\_\+udp\+\_\+port}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga7eb5f6766fe9555fd9d7e42bdc98ec21}
+Set destination U\+D\+P port for D\+Tel reports 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em dest\+\_\+udp\+\_\+port} & -\/ destination udp port to be used in encap packets \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gab071727a1336771333f6f0ffdcf63058}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+switch\+\_\+id\+\_\+set@{switch\+\_\+api\+\_\+dtel\+\_\+switch\+\_\+id\+\_\+set}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+switch\+\_\+id\+\_\+set@{switch\+\_\+api\+\_\+dtel\+\_\+switch\+\_\+id\+\_\+set}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+switch\+\_\+id\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+switch\+\_\+id\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint32\+\_\+t}]{switch\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gab071727a1336771333f6f0ffdcf63058}
+Set D\+Tel switch I\+D 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em switch\+\_\+id} & -\/ network-\/wide unique switch I\+D \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga99dbea1a71251d19e36e7f3bdee8279b}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+clear@{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+clear}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+clear@{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+clear}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+clear}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t}}]{type}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga99dbea1a71251d19e36e7f3bdee8279b}
+Clear all watchlist entries 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em type} & -\/ D\+Tel type \\
+\hline
+{\em match\+\_\+info} & -\/ watchlist match fields \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga339b280b1b001a48469fba6f5c1e4f6b}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+create@{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+create}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+create@{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+create}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t}}]{type, }
+\item[{{\bf switch\+\_\+twl\+\_\+match\+\_\+info\+\_\+t} $\ast$}]{match\+\_\+info, }
+\item[{switch\+\_\+uint16\+\_\+t}]{priority, }
+\item[{bool}]{watch, }
+\item[{{\bf switch\+\_\+twl\+\_\+action\+\_\+params\+\_\+t} $\ast$}]{action\+\_\+params}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga339b280b1b001a48469fba6f5c1e4f6b}
+Add watchlist entries 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em type} & -\/ D\+Tel type \\
+\hline
+{\em match\+\_\+info} & -\/ watchlist match fields \\
+\hline
+{\em priority} & -\/ priority for the watchlist entry \\
+\hline
+{\em watch} & -\/ apply D\+Tel to matched packets or not \\
+\hline
+{\em action\+\_\+params} & -\/ watchlist action parameters \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_gadaaf9f7b7f42b1f46fe1f62a61251c0e}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+delete@{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+delete@{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+delete}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t}}]{type, }
+\item[{{\bf switch\+\_\+twl\+\_\+match\+\_\+info\+\_\+t} $\ast$}]{match\+\_\+info}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_gadaaf9f7b7f42b1f46fe1f62a61251c0e}
+Delete watchlist entries 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em type} & -\/ D\+Tel type \\
+\hline
+{\em match\+\_\+info} & -\/ watchlist match fields \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__DTel_ga94499a29e2afa0b6b0b4ff81b4144d1a}{\index{D\+Tel A\+P\+I@{D\+Tel A\+P\+I}!switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+update@{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+update}}
+\index{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+update@{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+update}!D\+Tel A\+P\+I@{D\+Tel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+update}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+dtel\+\_\+watchlist\+\_\+entry\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+dtel\+\_\+watchlist\+\_\+type\+\_\+t}}]{type, }
+\item[{{\bf switch\+\_\+twl\+\_\+match\+\_\+info\+\_\+t} $\ast$}]{match\+\_\+info, }
+\item[{switch\+\_\+uint16\+\_\+t}]{priority, }
+\item[{bool}]{watch, }
+\item[{{\bf switch\+\_\+twl\+\_\+action\+\_\+params\+\_\+t} $\ast$}]{action\+\_\+params}
+\end{DoxyParamCaption}
+)}}\label{group__DTel_ga94499a29e2afa0b6b0b4ff81b4144d1a}
+Update watchlist entries, match\+\_\+info is the update key 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em type} & -\/ D\+Tel type \\
+\hline
+{\em match\+\_\+info} & -\/ watchlist match fields \\
+\hline
+{\em priority} & -\/ priority for the watchlist entry \\
+\hline
+{\em watch} & -\/ apply D\+Tel to matched packets or not \\
+\hline
+{\em action\+\_\+params} & -\/ watchlist action parameters \\
+\hline
+\end{DoxyParams}

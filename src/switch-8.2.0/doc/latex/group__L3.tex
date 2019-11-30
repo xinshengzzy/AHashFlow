@@ -1,0 +1,434 @@
+\hypertarget{group__L3}{\section{L3 Routing A\+P\+I}
+\label{group__L3}\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions to configure Routing tables \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__api__route__entry__s}{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+s}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{group__L3_gaffd4b461af9b6cc9fcfca75ce2fd634f}{switch\+\_\+route\+\_\+event\+\_\+s} \hyperlink{group__L3_ga6c2b46748457866367ca6ac1e1da4667}{switch\+\_\+route\+\_\+event\+\_\+t}
+\item 
+typedef enum \\*
+\hyperlink{group__L3_ga629e27822edfaf923655db4dfb6f2c51}{switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+s} \hyperlink{group__L3_ga5c0e408e2f48ba11ba7e824290d62547}{switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+t}
+\item 
+typedef enum \hyperlink{group__L3_gae176e30748b79e1948c668298b13f675}{switch\+\_\+mtu\+\_\+type\+\_\+s} \hyperlink{group__L3_gab24f93cedfd57f17218e312ce245638c}{switch\+\_\+mtu\+\_\+type\+\_\+t}
+\item 
+typedef enum \hyperlink{group__L3_ga27765604c6e2ee42f80f5f5fcb98ec89}{switch\+\_\+route\+\_\+type\+\_\+s} \hyperlink{group__L3_gabfc821b0610bd242ad0a4aba5f152280}{switch\+\_\+route\+\_\+type\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__api__route__entry__s}{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+s} \hyperlink{group__L3_ga969f26e2a3436107bc9b6e9f749c79b8}{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t}
+\item 
+typedef switch\+\_\+status\+\_\+t($\ast$ \hyperlink{group__L3_ga0aea3e3c894c8de43078d00eaa9c263d}{switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn} )(const \hyperlink{group__L3_ga969f26e2a3436107bc9b6e9f749c79b8}{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$api\+\_\+route\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em routing table iterator function pointer \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__L3_gaffd4b461af9b6cc9fcfca75ce2fd634f}{switch\+\_\+route\+\_\+event\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+R\+O\+U\+T\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+R\+O\+U\+T\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+U\+P\+D\+A\+T\+E} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+R\+O\+U\+T\+E\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+E\+L\+E\+T\+E} = (1 $<$$<$ 2)
+ \}
+\item 
+enum \hyperlink{group__L3_ga629e27822edfaf923655db4dfb6f2c51}{switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+R\+O\+U\+T\+E\+\_\+\+F\+L\+U\+S\+H\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+V4} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+R\+O\+U\+T\+E\+\_\+\+F\+L\+U\+S\+H\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+V6} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+R\+O\+U\+T\+E\+\_\+\+F\+L\+U\+S\+H\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+R\+F} = (1 $<$$<$ 2)
+ \}
+\item 
+enum \hyperlink{group__L3_gae176e30748b79e1948c668298b13f675}{switch\+\_\+mtu\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+T\+U\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+V4} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+T\+U\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+V6} = (1 $<$$<$ 1)
+ \}
+\item 
+enum \hyperlink{group__L3_ga27765604c6e2ee42f80f5f5fcb98ec89}{switch\+\_\+route\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+R\+O\+U\+T\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+H\+O\+S\+T} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+R\+O\+U\+T\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+Y\+I\+P} = 1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L3_ga52ec8a9873b62d593070e13e90f8f676}{switch\+\_\+api\+\_\+l3\+\_\+interface\+\_\+address\+\_\+add} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L3_ga969f26e2a3436107bc9b6e9f749c79b8}{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$api\+\_\+route\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em address add -\/ add an entry to host or lpm table to match based on the prefix length on a router interface \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L3_gac217b56ef6aea0e2e4a111461803cfbe}{switch\+\_\+api\+\_\+l3\+\_\+interface\+\_\+address\+\_\+delete} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L3_ga969f26e2a3436107bc9b6e9f749c79b8}{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$api\+\_\+route\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em address delete -\/ delete an entry to host or lpm table to match based on the prefix length on a router interface \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L3_ga3e886527cbb4d94e02d21422bc42eed0}{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+nhop\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t vrf\+\_\+handle, \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$ip\+\_\+addr, switch\+\_\+handle\+\_\+t $\ast$intf\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L3_ga87de10e3d458dad5ed0c629ad16fbec3}{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+add} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L3_ga969f26e2a3436107bc9b6e9f749c79b8}{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$api\+\_\+route\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em route add -\/ add an entry to host or lpm table to match based on the prefix length \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L3_ga2e42f84e2a0b7bf610a4565a9ea64120}{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+update} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L3_ga969f26e2a3436107bc9b6e9f749c79b8}{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$api\+\_\+route\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em route update -\/ update an entry to host or lpm table to match based on the prefix length \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L3_gada6257e4684ba0a0c7dd6ad95a86419c}{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+delete} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L3_ga969f26e2a3436107bc9b6e9f749c79b8}{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$route\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em route delete -\/ delete an entry to host or lpm table to match based on the prefix length \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L3_ga2e4def1cfd9fddeb6f037c94e019b6ee}{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+lookup} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L3_ga969f26e2a3436107bc9b6e9f749c79b8}{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$api\+\_\+route\+\_\+entry, switch\+\_\+handle\+\_\+t $\ast$nhop\+\_\+handle)
+\item 
+\hypertarget{group__L3_ga46c5a903f2d4879384d1b68cdd4c625a}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+rif\+\_\+ipv4\+\_\+unicast\+\_\+enabled\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t intf\+\_\+handle, bool set)}\label{group__L3_ga46c5a903f2d4879384d1b68cdd4c625a}
+
+\item 
+\hypertarget{group__L3_ga13f401deae20bbf01e05901733352699}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+rif\+\_\+ipv6\+\_\+unicast\+\_\+enabled\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t intf\+\_\+handle, bool set)}\label{group__L3_ga13f401deae20bbf01e05901733352699}
+
+\item 
+\hypertarget{group__L3_ga8e718e7d15fae61f7755649ddc87104b}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+rif\+\_\+ipv4\+\_\+urpf\+\_\+mode\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t intf\+\_\+handle, switch\+\_\+urpf\+\_\+mode\+\_\+t urpf\+\_\+mode)}\label{group__L3_ga8e718e7d15fae61f7755649ddc87104b}
+
+\item 
+\hypertarget{group__L3_gab40cea9a80acc5f4afa7f24eda030b1e}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+rif\+\_\+ipv6\+\_\+urpf\+\_\+mode\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t intf\+\_\+handle, switch\+\_\+urpf\+\_\+mode\+\_\+t urpf\+\_\+mode)}\label{group__L3_gab40cea9a80acc5f4afa7f24eda030b1e}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L3_gac14a16e14d6d73f584fb29ef3fee5780}{switch\+\_\+api\+\_\+l3\+\_\+mtu\+\_\+create} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint64\+\_\+t flags, switch\+\_\+mtu\+\_\+t mtu, switch\+\_\+handle\+\_\+t $\ast$mtu\+\_\+handle)
+\item 
+\hypertarget{group__L3_gaab1b2e6640963653e307984a7ba5fdfe}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+l3\+\_\+mtu\+\_\+update} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t mtu\+\_\+handle, switch\+\_\+mtu\+\_\+t mtu)}\label{group__L3_gaab1b2e6640963653e307984a7ba5fdfe}
+
+\item 
+\hypertarget{group__L3_ga64a69681053bc2ca262668c4b24755cd}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+l3\+\_\+mtu\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t mtu\+\_\+handle)}\label{group__L3_ga64a69681053bc2ca262668c4b24755cd}
+
+\item 
+\hypertarget{group__L3_ga6e7731c9deef8c6be42f1a2919cea858}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+l3\+\_\+mtu\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t mtu\+\_\+handle, switch\+\_\+mtu\+\_\+t $\ast$mtu)}\label{group__L3_ga6e7731c9deef8c6be42f1a2919cea858}
+
+\item 
+\hypertarget{group__L3_ga83af909891c412bbd40e377b7d704b50}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+handle\+\_\+lookup} (const switch\+\_\+device\+\_\+t device, const \hyperlink{group__L3_ga969f26e2a3436107bc9b6e9f749c79b8}{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$api\+\_\+route\+\_\+entry, switch\+\_\+handle\+\_\+t $\ast$route\+\_\+handle)}\label{group__L3_ga83af909891c412bbd40e377b7d704b50}
+
+\item 
+\hypertarget{group__L3_ga129f195ddb5a18c30b712f9c0c1f9812}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+handle\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t route\+\_\+handle, void $\ast$cli\+\_\+ctx)}\label{group__L3_ga129f195ddb5a18c30b712f9c0c1f9812}
+
+\item 
+\hypertarget{group__L3_gafd31b4919c10fb9b149af2767e98fadc}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const \hyperlink{group__L3_ga969f26e2a3436107bc9b6e9f749c79b8}{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$route\+\_\+entry, void $\ast$cli\+\_\+ctx)}\label{group__L3_gafd31b4919c10fb9b149af2767e98fadc}
+
+\item 
+\hypertarget{group__L3_ga1b4e3ff5e8e018a73a46b7552be1d4b8}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+route\+\_\+table\+\_\+size\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+size\+\_\+t $\ast$tbl\+\_\+size)}\label{group__L3_ga1b4e3ff5e8e018a73a46b7552be1d4b8}
+
+\item 
+\hypertarget{group__L3_gab05e3a149cd1abdf76e2f55a4190afbc}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+l3\+\_\+mtu\+\_\+size\+\_\+create} (switch\+\_\+device\+\_\+t device, switch\+\_\+mtu\+\_\+t mtu, switch\+\_\+handle\+\_\+t $\ast$mtu\+\_\+handle)}\label{group__L3_gab05e3a149cd1abdf76e2f55a4190afbc}
+
+\item 
+\hypertarget{group__L3_ga80e2ad82b10405ede999eecb38373528}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+l3\+\_\+mtu\+\_\+size\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+mtu\+\_\+t mtu)}\label{group__L3_ga80e2ad82b10405ede999eecb38373528}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L3_ga65f0364574c605a8ea536d7363691044}{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+entries\+\_\+get} (const switch\+\_\+device\+\_\+t device, \hyperlink{group__L3_ga0aea3e3c894c8de43078d00eaa9c263d}{switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn} iterator\+\_\+fn)
+\begin{DoxyCompactList}\small\item\em routing table iterator \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L3_ga3de4e6734c008c903b0565088b564a69}{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vrf\+\_\+handle, \hyperlink{group__L3_ga0aea3e3c894c8de43078d00eaa9c263d}{switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn} iterator\+\_\+fn)
+\begin{DoxyCompactList}\small\item\em routing table iterator \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L3_ga083855ef78bebef8a14270981945476b}{switch\+\_\+api\+\_\+l3\+\_\+v4\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vrf\+\_\+handle, \hyperlink{group__L3_ga0aea3e3c894c8de43078d00eaa9c263d}{switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn} iterator\+\_\+fn)
+\begin{DoxyCompactList}\small\item\em v4 routing table iterator \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L3_gaa5ccd0b07a6b9b4eb5aa20936be9d81f}{switch\+\_\+api\+\_\+l3\+\_\+v6\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vrf\+\_\+handle, \hyperlink{group__L3_ga0aea3e3c894c8de43078d00eaa9c263d}{switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn} iterator\+\_\+fn)
+\begin{DoxyCompactList}\small\item\em v6 routing table iterator \end{DoxyCompactList}\item 
+\hypertarget{group__L3_gaeefb3032d9af5cf67af7d0baa2cce5c0}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+l3\+\_\+mtu\+\_\+handle\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mtu\+\_\+handle, void $\ast$cli\+\_\+ctx)}\label{group__L3_gaeefb3032d9af5cf67af7d0baa2cce5c0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__L3_ga969f26e2a3436107bc9b6e9f749c79b8}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t@{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t}}
+\index{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t@{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+s}  {\bf switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t}}}\label{group__L3_ga969f26e2a3436107bc9b6e9f749c79b8}
+route entry \hypertarget{group__L3_ga0aea3e3c894c8de43078d00eaa9c263d}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn@{switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn}}
+\index{switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn@{switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn}]{\setlength{\rightskip}{0pt plus 5cm}typedef switch\+\_\+status\+\_\+t($\ast$ switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn)(const {\bf switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$api\+\_\+route\+\_\+entry)}}\label{group__L3_ga0aea3e3c894c8de43078d00eaa9c263d}
+
+
+routing table iterator function pointer 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em api\+\_\+route\+\_\+entry} & route entry\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L3_gab24f93cedfd57f17218e312ce245638c}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+mtu\+\_\+type\+\_\+t@{switch\+\_\+mtu\+\_\+type\+\_\+t}}
+\index{switch\+\_\+mtu\+\_\+type\+\_\+t@{switch\+\_\+mtu\+\_\+type\+\_\+t}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+mtu\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+mtu\+\_\+type\+\_\+s}  {\bf switch\+\_\+mtu\+\_\+type\+\_\+t}}}\label{group__L3_gab24f93cedfd57f17218e312ce245638c}
+mtu type \hypertarget{group__L3_ga6c2b46748457866367ca6ac1e1da4667}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+route\+\_\+event\+\_\+t@{switch\+\_\+route\+\_\+event\+\_\+t}}
+\index{switch\+\_\+route\+\_\+event\+\_\+t@{switch\+\_\+route\+\_\+event\+\_\+t}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+route\+\_\+event\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+route\+\_\+event\+\_\+s}  {\bf switch\+\_\+route\+\_\+event\+\_\+t}}}\label{group__L3_ga6c2b46748457866367ca6ac1e1da4667}
+route events \hypertarget{group__L3_ga5c0e408e2f48ba11ba7e824290d62547}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+t@{switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+t}}
+\index{switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+t@{switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+t}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+s}  {\bf switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+t}}}\label{group__L3_ga5c0e408e2f48ba11ba7e824290d62547}
+route flush events \hypertarget{group__L3_gabfc821b0610bd242ad0a4aba5f152280}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+route\+\_\+type\+\_\+t@{switch\+\_\+route\+\_\+type\+\_\+t}}
+\index{switch\+\_\+route\+\_\+type\+\_\+t@{switch\+\_\+route\+\_\+type\+\_\+t}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+route\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+route\+\_\+type\+\_\+s}  {\bf switch\+\_\+route\+\_\+type\+\_\+t}}}\label{group__L3_gabfc821b0610bd242ad0a4aba5f152280}
+route type 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__L3_gae176e30748b79e1948c668298b13f675}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+mtu\+\_\+type\+\_\+s@{switch\+\_\+mtu\+\_\+type\+\_\+s}}
+\index{switch\+\_\+mtu\+\_\+type\+\_\+s@{switch\+\_\+mtu\+\_\+type\+\_\+s}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+mtu\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+mtu\+\_\+type\+\_\+s}}}\label{group__L3_gae176e30748b79e1948c668298b13f675}
+mtu type \hypertarget{group__L3_gaffd4b461af9b6cc9fcfca75ce2fd634f}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+route\+\_\+event\+\_\+s@{switch\+\_\+route\+\_\+event\+\_\+s}}
+\index{switch\+\_\+route\+\_\+event\+\_\+s@{switch\+\_\+route\+\_\+event\+\_\+s}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+route\+\_\+event\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+route\+\_\+event\+\_\+s}}}\label{group__L3_gaffd4b461af9b6cc9fcfca75ce2fd634f}
+route events \hypertarget{group__L3_ga629e27822edfaf923655db4dfb6f2c51}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+s@{switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+s}}
+\index{switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+s@{switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+s}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+route\+\_\+flush\+\_\+type\+\_\+s}}}\label{group__L3_ga629e27822edfaf923655db4dfb6f2c51}
+route flush events \hypertarget{group__L3_ga27765604c6e2ee42f80f5f5fcb98ec89}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+route\+\_\+type\+\_\+s@{switch\+\_\+route\+\_\+type\+\_\+s}}
+\index{switch\+\_\+route\+\_\+type\+\_\+s@{switch\+\_\+route\+\_\+type\+\_\+s}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+route\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+route\+\_\+type\+\_\+s}}}\label{group__L3_ga27765604c6e2ee42f80f5f5fcb98ec89}
+route type 
+
+\subsection{Function Documentation}
+\hypertarget{group__L3_ga52ec8a9873b62d593070e13e90f8f676}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+api\+\_\+l3\+\_\+interface\+\_\+address\+\_\+add@{switch\+\_\+api\+\_\+l3\+\_\+interface\+\_\+address\+\_\+add}}
+\index{switch\+\_\+api\+\_\+l3\+\_\+interface\+\_\+address\+\_\+add@{switch\+\_\+api\+\_\+l3\+\_\+interface\+\_\+address\+\_\+add}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+l3\+\_\+interface\+\_\+address\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+l3\+\_\+interface\+\_\+address\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$}]{api\+\_\+route\+\_\+entry}
+\end{DoxyParamCaption}
+)}}\label{group__L3_ga52ec8a9873b62d593070e13e90f8f676}
+
+
+address add -\/ add an entry to host or lpm table to match based on the prefix length on a router interface 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device \\
+\hline
+\mbox{\tt in}  & {\em api\+\_\+route\+\_\+entry} & route entry\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L3_gac217b56ef6aea0e2e4a111461803cfbe}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+api\+\_\+l3\+\_\+interface\+\_\+address\+\_\+delete@{switch\+\_\+api\+\_\+l3\+\_\+interface\+\_\+address\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+l3\+\_\+interface\+\_\+address\+\_\+delete@{switch\+\_\+api\+\_\+l3\+\_\+interface\+\_\+address\+\_\+delete}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+l3\+\_\+interface\+\_\+address\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+l3\+\_\+interface\+\_\+address\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$}]{api\+\_\+route\+\_\+entry}
+\end{DoxyParamCaption}
+)}}\label{group__L3_gac217b56ef6aea0e2e4a111461803cfbe}
+
+
+address delete -\/ delete an entry to host or lpm table to match based on the prefix length on a router interface 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device \\
+\hline
+\mbox{\tt in}  & {\em api\+\_\+route\+\_\+entry} & route entry\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L3_gac14a16e14d6d73f584fb29ef3fee5780}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+api\+\_\+l3\+\_\+mtu\+\_\+create@{switch\+\_\+api\+\_\+l3\+\_\+mtu\+\_\+create}}
+\index{switch\+\_\+api\+\_\+l3\+\_\+mtu\+\_\+create@{switch\+\_\+api\+\_\+l3\+\_\+mtu\+\_\+create}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+l3\+\_\+mtu\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+l3\+\_\+mtu\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+uint64\+\_\+t}]{flags, }
+\item[{switch\+\_\+mtu\+\_\+t}]{mtu, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{mtu\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__L3_gac14a16e14d6d73f584fb29ef3fee5780}
+create mtu entry 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em mtu\+\_\+index} & mtu index \\
+\hline
+{\em mtu} & mtu value \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__L3_ga87de10e3d458dad5ed0c629ad16fbec3}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+add@{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+add}}
+\index{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+add@{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+add}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$}]{api\+\_\+route\+\_\+entry}
+\end{DoxyParamCaption}
+)}}\label{group__L3_ga87de10e3d458dad5ed0c629ad16fbec3}
+
+
+route add -\/ add an entry to host or lpm table to match based on the prefix length 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device \\
+\hline
+\mbox{\tt in}  & {\em api\+\_\+route\+\_\+entry} & route entry\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L3_gada6257e4684ba0a0c7dd6ad95a86419c}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+delete@{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+delete@{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+delete}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$}]{route\+\_\+entry}
+\end{DoxyParamCaption}
+)}}\label{group__L3_gada6257e4684ba0a0c7dd6ad95a86419c}
+
+
+route delete -\/ delete an entry to host or lpm table to match based on the prefix length 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device \\
+\hline
+\mbox{\tt in}  & {\em api\+\_\+route\+\_\+entry} & route entry\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L3_ga65f0364574c605a8ea536d7363691044}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+entries\+\_\+get@{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+entries\+\_\+get}}
+\index{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+entries\+\_\+get@{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+entries\+\_\+get}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+entries\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+entries\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn}}]{iterator\+\_\+fn}
+\end{DoxyParamCaption}
+)}}\label{group__L3_ga65f0364574c605a8ea536d7363691044}
+
+
+routing table iterator 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em iterator\+\_\+fn} & iterator function will be called for every route entry\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L3_ga3de4e6734c008c903b0565088b564a69}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf@{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf}}
+\index{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf@{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle, }
+\item[{{\bf switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn}}]{iterator\+\_\+fn}
+\end{DoxyParamCaption}
+)}}\label{group__L3_ga3de4e6734c008c903b0565088b564a69}
+
+
+routing table iterator 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em vrf\+\_\+handle} & vrf handle \\
+\hline
+\mbox{\tt in}  & {\em iterator\+\_\+fn} & iterator function will be called for route entry matching the vrf handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L3_ga2e4def1cfd9fddeb6f037c94e019b6ee}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+lookup@{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+lookup}}
+\index{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+lookup@{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+lookup}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+lookup}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+lookup (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$}]{api\+\_\+route\+\_\+entry, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{nhop\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__L3_ga2e4def1cfd9fddeb6f037c94e019b6ee}
+Lookup F\+I\+B table (host or L\+P\+M) for a given host address Return nexthop handle (single path or E\+C\+M\+P group) Return I\+N\+V\+A\+L\+I\+D\+\_\+\+H\+A\+N\+D\+L\+E if lookup fails 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em vrf} & virtual domain identifier \\
+\hline
+{\em ip\+\_\+addr} & I\+P address \\
+\hline
+{\em nhop\+\_\+handle} & pointer to return Nexthop Handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__L3_ga3e886527cbb4d94e02d21422bc42eed0}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+nhop\+\_\+get@{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+nhop\+\_\+get}}
+\index{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+nhop\+\_\+get@{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+nhop\+\_\+get}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+nhop\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+nhop\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle, }
+\item[{{\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{ip\+\_\+addr, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{intf\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__L3_ga3e886527cbb4d94e02d21422bc42eed0}
+Get the handle of the interface that route lookup returns for a host addr 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em vrf} & virtual domain identifier \\
+\hline
+{\em ip\+\_\+addr} & I\+P address (host or prefix) \\
+\hline
+{\em intf\+\_\+handle} & pointer to return Interface handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__L3_ga2e42f84e2a0b7bf610a4565a9ea64120}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+update@{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+update}}
+\index{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+update@{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+update}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+update}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+l3\+\_\+route\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+route\+\_\+entry\+\_\+t} $\ast$}]{api\+\_\+route\+\_\+entry}
+\end{DoxyParamCaption}
+)}}\label{group__L3_ga2e42f84e2a0b7bf610a4565a9ea64120}
+
+
+route update -\/ update an entry to host or lpm table to match based on the prefix length 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device \\
+\hline
+\mbox{\tt in}  & {\em api\+\_\+route\+\_\+entry} & route entry\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L3_ga083855ef78bebef8a14270981945476b}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+api\+\_\+l3\+\_\+v4\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf@{switch\+\_\+api\+\_\+l3\+\_\+v4\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf}}
+\index{switch\+\_\+api\+\_\+l3\+\_\+v4\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf@{switch\+\_\+api\+\_\+l3\+\_\+v4\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+l3\+\_\+v4\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+l3\+\_\+v4\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle, }
+\item[{{\bf switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn}}]{iterator\+\_\+fn}
+\end{DoxyParamCaption}
+)}}\label{group__L3_ga083855ef78bebef8a14270981945476b}
+
+
+v4 routing table iterator 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em vrf\+\_\+handle} & vrf handle \\
+\hline
+\mbox{\tt in}  & {\em iterator\+\_\+fn} & iterator function will be called for route entry matching the vrf handle and ipv4 routes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L3_gaa5ccd0b07a6b9b4eb5aa20936be9d81f}{\index{L3 Routing A\+P\+I@{L3 Routing A\+P\+I}!switch\+\_\+api\+\_\+l3\+\_\+v6\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf@{switch\+\_\+api\+\_\+l3\+\_\+v6\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf}}
+\index{switch\+\_\+api\+\_\+l3\+\_\+v6\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf@{switch\+\_\+api\+\_\+l3\+\_\+v6\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf}!L3 Routing A\+P\+I@{L3 Routing A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+l3\+\_\+v6\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+l3\+\_\+v6\+\_\+route\+\_\+entries\+\_\+get\+\_\+by\+\_\+vrf (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle, }
+\item[{{\bf switch\+\_\+l3\+\_\+table\+\_\+iterator\+\_\+fn}}]{iterator\+\_\+fn}
+\end{DoxyParamCaption}
+)}}\label{group__L3_gaa5ccd0b07a6b9b4eb5aa20936be9d81f}
+
+
+v6 routing table iterator 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em vrf\+\_\+handle} & vrf handle \\
+\hline
+\mbox{\tt in}  & {\em iterator\+\_\+fn} & iterator function will be called for route entry matching the vrf handle and ipv6 routes\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}

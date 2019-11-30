@@ -1,0 +1,237 @@
+\hypertarget{group__RMAC}{\section{Router M\+A\+C A\+P\+I}
+\label{group__RMAC}\index{Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions define and manipulate router mac groups \subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{group__RMAC_ga94f4ae9be27dff0c75f12842524418a3}{switch\+\_\+rmac\+\_\+type\+\_\+s} \hyperlink{group__RMAC_gaa7deac8b108c4f020a3ef4ad546ade81}{switch\+\_\+rmac\+\_\+type\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Router mac type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__RMAC_ga94f4ae9be27dff0c75f12842524418a3}{switch\+\_\+rmac\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+R\+M\+A\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+O\+U\+T\+E\+R} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+R\+M\+A\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+N\+E\+R} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+R\+M\+A\+C\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L} = 0x3
+ \}
+\begin{DoxyCompactList}\small\item\em Router mac type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__RMAC_ga7c52f4e8160da45447b6671c17ca8f59}{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+create} (const switch\+\_\+device\+\_\+t device, const \hyperlink{group__RMAC_gaa7deac8b108c4f020a3ef4ad546ade81}{switch\+\_\+rmac\+\_\+type\+\_\+t} rmac\+\_\+type, switch\+\_\+handle\+\_\+t $\ast$rmac\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Create a router mac group. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__RMAC_gaa00f77f280a6a2e6d03dc8e1df824178}{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t rmac\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Delete a router mac group. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__RMAC_ga547c463e0279c5e9d70a6634ff39414c}{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+create\+\_\+with\+\_\+macs} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+size\+\_\+t num\+\_\+macs, const \hyperlink{structswitch__mac__addr__s}{switch\+\_\+mac\+\_\+addr\+\_\+t} $\ast$mac, switch\+\_\+handle\+\_\+t $\ast$rmac\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Create a router mac group with rmacs. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__RMAC_gaab8b064c38ecec19f6cb7b492af70024}{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+add} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t rmac\+\_\+handle, const \hyperlink{structswitch__mac__addr__s}{switch\+\_\+mac\+\_\+addr\+\_\+t} $\ast$mac)
+\begin{DoxyCompactList}\small\item\em Add a router mac to rmac group. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__RMAC_gaa3fa84175e62a66f0d84f3073ec4012e}{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t rmac\+\_\+handle, const \hyperlink{structswitch__mac__addr__s}{switch\+\_\+mac\+\_\+addr\+\_\+t} $\ast$mac)
+\begin{DoxyCompactList}\small\item\em Delete a router mac from rmac group. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__RMAC_ga65818d6ba44406b18ce57063b81eed1b}{switch\+\_\+api\+\_\+rmac\+\_\+macs\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t rmac\+\_\+handle, switch\+\_\+uint16\+\_\+t $\ast$num\+\_\+entries, \hyperlink{structswitch__mac__addr__s}{switch\+\_\+mac\+\_\+addr\+\_\+t} $\ast$$\ast$macs)
+\begin{DoxyCompactList}\small\item\em Returns all router macs belonging to a router mac group. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__RMAC_gac3aefa69d29a9bb7ca4b5a2d540c0b77}{switch\+\_\+api\+\_\+rmac\+\_\+handle\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t rmac\+\_\+handle, const void $\ast$cli\+\_\+ctx)
+\begin{DoxyCompactList}\small\item\em Dumps router mac info using clish context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__RMAC_gaa7deac8b108c4f020a3ef4ad546ade81}{\index{Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}!switch\+\_\+rmac\+\_\+type\+\_\+t@{switch\+\_\+rmac\+\_\+type\+\_\+t}}
+\index{switch\+\_\+rmac\+\_\+type\+\_\+t@{switch\+\_\+rmac\+\_\+type\+\_\+t}!Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}}
+\subsubsection[{switch\+\_\+rmac\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+rmac\+\_\+type\+\_\+s}  {\bf switch\+\_\+rmac\+\_\+type\+\_\+t}}}\label{group__RMAC_gaa7deac8b108c4f020a3ef4ad546ade81}
+
+
+Router mac type. 
+
+Outer or inner rmac table is programmed based on the rmac type. source mac rewrite index is allocated only for the first mac entry. smac index is not reallocated or reprogrammed when the first mac is deleted. 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__RMAC_ga94f4ae9be27dff0c75f12842524418a3}{\index{Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}!switch\+\_\+rmac\+\_\+type\+\_\+s@{switch\+\_\+rmac\+\_\+type\+\_\+s}}
+\index{switch\+\_\+rmac\+\_\+type\+\_\+s@{switch\+\_\+rmac\+\_\+type\+\_\+s}!Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}}
+\subsubsection[{switch\+\_\+rmac\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+rmac\+\_\+type\+\_\+s}}}\label{group__RMAC_ga94f4ae9be27dff0c75f12842524418a3}
+
+
+Router mac type. 
+
+Outer or inner rmac table is programmed based on the rmac type. source mac rewrite index is allocated only for the first mac entry. smac index is not reallocated or reprogrammed when the first mac is deleted. 
+
+\subsection{Function Documentation}
+\hypertarget{group__RMAC_gac3aefa69d29a9bb7ca4b5a2d540c0b77}{\index{Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}!switch\+\_\+api\+\_\+rmac\+\_\+handle\+\_\+dump@{switch\+\_\+api\+\_\+rmac\+\_\+handle\+\_\+dump}}
+\index{switch\+\_\+api\+\_\+rmac\+\_\+handle\+\_\+dump@{switch\+\_\+api\+\_\+rmac\+\_\+handle\+\_\+dump}!Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+rmac\+\_\+handle\+\_\+dump}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+rmac\+\_\+handle\+\_\+dump (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{rmac\+\_\+handle, }
+\item[{const void $\ast$}]{cli\+\_\+ctx}
+\end{DoxyParamCaption}
+)}}\label{group__RMAC_gac3aefa69d29a9bb7ca4b5a2d540c0b77}
+
+
+Dumps router mac info using clish context. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em rmac\+\_\+handle} & router mac handle \\
+\hline
+\mbox{\tt in}  & {\em cli\+\_\+ctx} & cli context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__RMAC_ga65818d6ba44406b18ce57063b81eed1b}{\index{Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}!switch\+\_\+api\+\_\+rmac\+\_\+macs\+\_\+get@{switch\+\_\+api\+\_\+rmac\+\_\+macs\+\_\+get}}
+\index{switch\+\_\+api\+\_\+rmac\+\_\+macs\+\_\+get@{switch\+\_\+api\+\_\+rmac\+\_\+macs\+\_\+get}!Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+rmac\+\_\+macs\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+rmac\+\_\+macs\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{rmac\+\_\+handle, }
+\item[{switch\+\_\+uint16\+\_\+t $\ast$}]{num\+\_\+entries, }
+\item[{{\bf switch\+\_\+mac\+\_\+addr\+\_\+t} $\ast$$\ast$}]{macs}
+\end{DoxyParamCaption}
+)}}\label{group__RMAC_ga65818d6ba44406b18ce57063b81eed1b}
+
+
+Returns all router macs belonging to a router mac group. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em rmac\+\_\+handle} & router mac handle \\
+\hline
+\mbox{\tt out}  & {\em num\+\_\+entries} & number of mac entries \\
+\hline
+\mbox{\tt out}  & {\em macs} & mac array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__RMAC_gaab8b064c38ecec19f6cb7b492af70024}{\index{Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}!switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+add@{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+add}}
+\index{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+add@{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+add}!Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{rmac\+\_\+handle, }
+\item[{const {\bf switch\+\_\+mac\+\_\+addr\+\_\+t} $\ast$}]{mac}
+\end{DoxyParamCaption}
+)}}\label{group__RMAC_gaab8b064c38ecec19f6cb7b492af70024}
+
+
+Add a router mac to rmac group. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em rmac\+\_\+handle} & router mac handle \\
+\hline
+\mbox{\tt in}  & {\em mac} & mac address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__RMAC_gaa3fa84175e62a66f0d84f3073ec4012e}{\index{Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}!switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+delete@{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+delete@{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+delete}!Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{rmac\+\_\+handle, }
+\item[{const {\bf switch\+\_\+mac\+\_\+addr\+\_\+t} $\ast$}]{mac}
+\end{DoxyParamCaption}
+)}}\label{group__RMAC_gaa3fa84175e62a66f0d84f3073ec4012e}
+
+
+Delete a router mac from rmac group. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em rmac\+\_\+handle} & router mac handle \\
+\hline
+\mbox{\tt in}  & {\em mac} & mac address\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__RMAC_ga7c52f4e8160da45447b6671c17ca8f59}{\index{Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}!switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+create@{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+create}}
+\index{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+create@{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+create}!Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const {\bf switch\+\_\+rmac\+\_\+type\+\_\+t}}]{rmac\+\_\+type, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{rmac\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__RMAC_ga7c52f4e8160da45447b6671c17ca8f59}
+
+
+Create a router mac group. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em rmac\+\_\+type} & router mac type -\/ outer/inner/all \\
+\hline
+\mbox{\tt out}  & {\em rmac\+\_\+handle} & router mac handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__RMAC_ga547c463e0279c5e9d70a6634ff39414c}{\index{Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}!switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+create\+\_\+with\+\_\+macs@{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+create\+\_\+with\+\_\+macs}}
+\index{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+create\+\_\+with\+\_\+macs@{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+create\+\_\+with\+\_\+macs}!Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+create\+\_\+with\+\_\+macs}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+create\+\_\+with\+\_\+macs (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+size\+\_\+t}]{num\+\_\+macs, }
+\item[{const {\bf switch\+\_\+mac\+\_\+addr\+\_\+t} $\ast$}]{mac, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{rmac\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__RMAC_ga547c463e0279c5e9d70a6634ff39414c}
+
+
+Create a router mac group with rmacs. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em num\+\_\+macs} & number of router mac addresses \\
+\hline
+\mbox{\tt in}  & {\em mac} & router mac array \\
+\hline
+\mbox{\tt out}  & {\em rmac\+\_\+handle} & router mac handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__RMAC_gaa00f77f280a6a2e6d03dc8e1df824178}{\index{Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}!switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+delete@{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+delete@{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+delete}!Router M\+A\+C A\+P\+I@{Router M\+A\+C A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+router\+\_\+mac\+\_\+group\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{rmac\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__RMAC_gaa00f77f280a6a2e6d03dc8e1df824178}
+
+
+Delete a router mac group. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em rmac\+\_\+handle} & router mac handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}

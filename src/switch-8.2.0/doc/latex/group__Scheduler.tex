@@ -1,0 +1,405 @@
+\hypertarget{group__Scheduler}{\section{Scheduler A\+P\+I}
+\label{group__Scheduler}\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions to create Scheduler \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__scheduler__api__info__}{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}
+\item 
+struct \hyperlink{structswitch__scheduler__group__api__info__}{switch\+\_\+scheduler\+\_\+group\+\_\+api\+\_\+info\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{group__Scheduler_gab958915b2985910d70073c1f50f1db2c}{switch\+\_\+scheduler\+\_\+type\+\_\+} \hyperlink{group__Scheduler_ga62f91884031e17accd1bfa6d07bcddd5}{switch\+\_\+scheduler\+\_\+type\+\_\+t}
+\item 
+typedef enum \\*
+\hyperlink{group__Scheduler_gabdcb6853f591a9102e7a108eb4d7b331}{switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+} \hyperlink{group__Scheduler_gafaa6b883d003bac33a4e76086ae90e3b}{switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+t}
+\item 
+\hypertarget{group__Scheduler_ga03628122b1af47035f643dd2b585f6cf}{typedef enum \\*
+switch\+\_\+scheduler\+\_\+priority\+\_\+s {\bfseries switch\+\_\+scheduler\+\_\+priority\+\_\+t}}\label{group__Scheduler_ga03628122b1af47035f643dd2b585f6cf}
+
+\item 
+typedef struct \\*
+\hyperlink{structswitch__scheduler__api__info__}{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+} \hyperlink{group__Scheduler_ga3e981ad1a349d10503bfbba6cd3b2f0d}{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+t}
+\item 
+\hypertarget{group__Scheduler_ga4a5275d5b7f13520a56eedacbf3ceb53}{typedef enum \\*
+switch\+\_\+scheduler\+\_\+group\+\_\+type\+\_\+ {\bfseries switch\+\_\+scheduler\+\_\+group\+\_\+type\+\_\+t}}\label{group__Scheduler_ga4a5275d5b7f13520a56eedacbf3ceb53}
+
+\item 
+\hypertarget{group__Scheduler_gae19fd1b380e5a606f012fce472e58cd3}{typedef struct \\*
+\hyperlink{structswitch__scheduler__group__api__info__}{switch\+\_\+scheduler\+\_\+group\+\_\+api\+\_\+info\+\_\+} {\bfseries switch\+\_\+scheduler\+\_\+group\+\_\+api\+\_\+info\+\_\+t}}\label{group__Scheduler_gae19fd1b380e5a606f012fce472e58cd3}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__Scheduler_gab958915b2985910d70073c1f50f1db2c}{switch\+\_\+scheduler\+\_\+type\+\_\+} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+R\+I\+C\+T} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+D\+W\+R\+R} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+R\+I\+C\+T\+\_\+\+A\+N\+D\+\_\+\+D\+W\+R\+R} = 3
+ \}
+\item 
+enum \hyperlink{group__Scheduler_gabdcb6853f591a9102e7a108eb4d7b331}{switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+P\+P\+S} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+B\+P\+S} = 2
+ \}
+\item 
+\hypertarget{group__Scheduler_ga89f275e617ac3bb04f08c0f5f4d9c70a}{enum {\bfseries switch\+\_\+scheduler\+\_\+priority\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+0}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+1}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+2}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+3}, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+4}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+5}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+6}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+7}, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+M\+A\+X}
+ \}}\label{group__Scheduler_ga89f275e617ac3bb04f08c0f5f4d9c70a}
+
+\item 
+\hypertarget{group__Scheduler_gadc3ab56db7f3b3be0c0d1f9ea3f324eb}{enum {\bfseries switch\+\_\+scheduler\+\_\+group\+\_\+type\+\_\+} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+O\+R\+T} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+S\+C\+H\+E\+D\+U\+L\+E\+R\+\_\+\+G\+R\+O\+U\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+U\+E\+U\+E} = 2
+ \}}\label{group__Scheduler_gadc3ab56db7f3b3be0c0d1f9ea3f324eb}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_gae39139c66f0da8f3edf32c055dd36cd2}{switch\+\_\+api\+\_\+scheduler\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t scheduler\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_ga88638019ba276b4af4006a1b7cc6ea38}{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+enable} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t scheduler\+\_\+handle, bool enable)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_ga0049e941c1953496607a0867d1043638}{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+remaining\+\_\+bw\+\_\+priority\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t scheduler\+\_\+handle, uint32\+\_\+t priority)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_ga2bbd41f08991a4b3b295116986f13326}{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+guaranteed\+\_\+shaping\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t scheduler\+\_\+handle, bool pps, uint32\+\_\+t burst\+\_\+size, uint32\+\_\+t rate)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_gae5de5e440ded04b84d3f917948098b63}{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+dwrr\+\_\+shaping\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t scheduler\+\_\+handle, bool pps, uint32\+\_\+t burst\+\_\+size, uint32\+\_\+t rate)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_ga110f3ec7005eb59728f8f76a1db7b4c3}{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, bool pps, uint32\+\_\+t burst\+\_\+size, uint64\+\_\+t rate)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_ga0aa139ae439a92753531b2893bd42521}{switch\+\_\+api\+\_\+scheduler\+\_\+create} (switch\+\_\+device\+\_\+t device, const \hyperlink{group__Scheduler_ga3e981ad1a349d10503bfbba6cd3b2f0d}{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+t} $\ast$api\+\_\+info, switch\+\_\+handle\+\_\+t $\ast$scheduler\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_ga0c6971efaa94e45ddad4dc7f2a00b820}{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+create} (switch\+\_\+device\+\_\+t device, \hyperlink{structswitch__scheduler__group__api__info__}{switch\+\_\+scheduler\+\_\+group\+\_\+api\+\_\+info\+\_\+t} $\ast$api\+\_\+info, switch\+\_\+handle\+\_\+t $\ast$scheduler\+\_\+group\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_ga50131105ac33286610c4fb98da8d0be4}{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t group\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_ga63059e09351364ae8b5ea84e6d4f8779}{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+child\+\_\+handle\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t scheduler\+\_\+group\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$queue\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_gad5c3da4da4d6fd8a015512b4b50bb0b5}{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+child\+\_\+count\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t scheduler\+\_\+group\+\_\+handle, switch\+\_\+uint32\+\_\+t $\ast$child\+\_\+count)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_ga28b0295a359b1d9e190936995877365a}{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+profile\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t scheduler\+\_\+group\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$profile\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_ga570ab46c52ed357fd0aa585733805f11}{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+profile\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t scheduler\+\_\+group\+\_\+handle, switch\+\_\+handle\+\_\+t profile\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_gab2e1ad365063f32962b89f163f88a4b5}{switch\+\_\+api\+\_\+scheduler\+\_\+config\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t scheduler\+\_\+handle, const \hyperlink{group__Scheduler_ga3e981ad1a349d10503bfbba6cd3b2f0d}{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+t} $\ast$api\+\_\+info)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_ga1ef3f8aebe0319ef09668fcb2f5a1e79}{switch\+\_\+api\+\_\+scheduler\+\_\+config\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t scheduler\+\_\+handle, \hyperlink{group__Scheduler_ga3e981ad1a349d10503bfbba6cd3b2f0d}{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+t} $\ast$api\+\_\+info)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Scheduler_ga974cf29128c0829978fecae3c3a47250}{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+config\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t scheduler\+\_\+group\+\_\+handle, \hyperlink{structswitch__scheduler__group__api__info__}{switch\+\_\+scheduler\+\_\+group\+\_\+api\+\_\+info\+\_\+t} $\ast$api\+\_\+info)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__Scheduler_ga3e981ad1a349d10503bfbba6cd3b2f0d}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+t@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+t}}
+\index{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+t@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+t}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}  {\bf switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+t}}}\label{group__Scheduler_ga3e981ad1a349d10503bfbba6cd3b2f0d}
+scheduler struct \hypertarget{group__Scheduler_gafaa6b883d003bac33a4e76086ae90e3b}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+t@{switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+t}}
+\index{switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+t@{switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+t}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+}  {\bf switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+t}}}\label{group__Scheduler_gafaa6b883d003bac33a4e76086ae90e3b}
+scheduler rate type \hypertarget{group__Scheduler_ga62f91884031e17accd1bfa6d07bcddd5}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+scheduler\+\_\+type\+\_\+t@{switch\+\_\+scheduler\+\_\+type\+\_\+t}}
+\index{switch\+\_\+scheduler\+\_\+type\+\_\+t@{switch\+\_\+scheduler\+\_\+type\+\_\+t}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+scheduler\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+scheduler\+\_\+type\+\_\+}  {\bf switch\+\_\+scheduler\+\_\+type\+\_\+t}}}\label{group__Scheduler_ga62f91884031e17accd1bfa6d07bcddd5}
+Scheduler information scheduler type 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__Scheduler_gabdcb6853f591a9102e7a108eb4d7b331}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+@{switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+}}
+\index{switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+@{switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+}}}\label{group__Scheduler_gabdcb6853f591a9102e7a108eb4d7b331}
+scheduler rate type \hypertarget{group__Scheduler_gab958915b2985910d70073c1f50f1db2c}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+scheduler\+\_\+type\+\_\+@{switch\+\_\+scheduler\+\_\+type\+\_\+}}
+\index{switch\+\_\+scheduler\+\_\+type\+\_\+@{switch\+\_\+scheduler\+\_\+type\+\_\+}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+scheduler\+\_\+type\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+scheduler\+\_\+type\+\_\+}}}\label{group__Scheduler_gab958915b2985910d70073c1f50f1db2c}
+Scheduler information scheduler type 
+
+\subsection{Function Documentation}
+\hypertarget{group__Scheduler_ga110f3ec7005eb59728f8f76a1db7b4c3}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+set}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{bool}]{pps, }
+\item[{uint32\+\_\+t}]{burst\+\_\+size, }
+\item[{uint64\+\_\+t}]{rate}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_ga110f3ec7005eb59728f8f76a1db7b4c3}
+set port shaper 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_gae5de5e440ded04b84d3f917948098b63}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+dwrr\+\_\+shaping\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+dwrr\+\_\+shaping\+\_\+set}}
+\index{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+dwrr\+\_\+shaping\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+dwrr\+\_\+shaping\+\_\+set}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+dwrr\+\_\+shaping\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+dwrr\+\_\+shaping\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{scheduler\+\_\+handle, }
+\item[{bool}]{pps, }
+\item[{uint32\+\_\+t}]{burst\+\_\+size, }
+\item[{uint32\+\_\+t}]{rate}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_gae5de5e440ded04b84d3f917948098b63}
+configure queue remaining bandwidth scheduler 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+handle} & scheduler handle \\
+\hline
+{\em pps} & packet per second \\
+\hline
+{\em burst\+\_\+size} & burst size \\
+\hline
+{\em rate} & rate \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_ga88638019ba276b4af4006a1b7cc6ea38}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+enable@{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+enable}}
+\index{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+enable@{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+enable}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+enable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{scheduler\+\_\+handle, }
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_ga88638019ba276b4af4006a1b7cc6ea38}
+enable scheduling in queue 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+handle} & scheduler handle \\
+\hline
+{\em enable} & enable \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_ga2bbd41f08991a4b3b295116986f13326}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+guaranteed\+\_\+shaping\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+guaranteed\+\_\+shaping\+\_\+set}}
+\index{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+guaranteed\+\_\+shaping\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+guaranteed\+\_\+shaping\+\_\+set}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+guaranteed\+\_\+shaping\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+guaranteed\+\_\+shaping\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{scheduler\+\_\+handle, }
+\item[{bool}]{pps, }
+\item[{uint32\+\_\+t}]{burst\+\_\+size, }
+\item[{uint32\+\_\+t}]{rate}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_ga2bbd41f08991a4b3b295116986f13326}
+configure queue scheduler 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+handle} & scheduler handle \\
+\hline
+{\em pps} & packet per second \\
+\hline
+{\em burst\+\_\+size} & burst size \\
+\hline
+{\em rate} & rate \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_ga0049e941c1953496607a0867d1043638}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+remaining\+\_\+bw\+\_\+priority\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+remaining\+\_\+bw\+\_\+priority\+\_\+set}}
+\index{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+remaining\+\_\+bw\+\_\+priority\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+remaining\+\_\+bw\+\_\+priority\+\_\+set}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+remaining\+\_\+bw\+\_\+priority\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queue\+\_\+scheduling\+\_\+remaining\+\_\+bw\+\_\+priority\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{scheduler\+\_\+handle, }
+\item[{uint32\+\_\+t}]{priority}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_ga0049e941c1953496607a0867d1043638}
+set the priority of queue scheduler 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+handle} & scheduler handle \\
+\hline
+{\em priority} & priority \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_ga1ef3f8aebe0319ef09668fcb2f5a1e79}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+scheduler\+\_\+config\+\_\+get@{switch\+\_\+api\+\_\+scheduler\+\_\+config\+\_\+get}}
+\index{switch\+\_\+api\+\_\+scheduler\+\_\+config\+\_\+get@{switch\+\_\+api\+\_\+scheduler\+\_\+config\+\_\+get}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+scheduler\+\_\+config\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+scheduler\+\_\+config\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{scheduler\+\_\+handle, }
+\item[{{\bf switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+t} $\ast$}]{api\+\_\+info}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_ga1ef3f8aebe0319ef09668fcb2f5a1e79}
+Get the scheduler config for a profile 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+handle} & scheduler group handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_gab2e1ad365063f32962b89f163f88a4b5}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+scheduler\+\_\+config\+\_\+set@{switch\+\_\+api\+\_\+scheduler\+\_\+config\+\_\+set}}
+\index{switch\+\_\+api\+\_\+scheduler\+\_\+config\+\_\+set@{switch\+\_\+api\+\_\+scheduler\+\_\+config\+\_\+set}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+scheduler\+\_\+config\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+scheduler\+\_\+config\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{scheduler\+\_\+handle, }
+\item[{const {\bf switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+t} $\ast$}]{api\+\_\+info}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_gab2e1ad365063f32962b89f163f88a4b5}
+Modify the scheduler profile 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+handle} & scheduler group handle \\
+\hline
+{\em scheduler\+\_\+api\+\_\+info} & scheduler profile parameters \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_ga0aa139ae439a92753531b2893bd42521}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+scheduler\+\_\+create@{switch\+\_\+api\+\_\+scheduler\+\_\+create}}
+\index{switch\+\_\+api\+\_\+scheduler\+\_\+create@{switch\+\_\+api\+\_\+scheduler\+\_\+create}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+scheduler\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+scheduler\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{const {\bf switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+t} $\ast$}]{api\+\_\+info, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{scheduler\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_ga0aa139ae439a92753531b2893bd42521}
+Create a scheduler 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+api\+\_\+info} & scheduler api info \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_gae39139c66f0da8f3edf32c055dd36cd2}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+scheduler\+\_\+delete@{switch\+\_\+api\+\_\+scheduler\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+scheduler\+\_\+delete@{switch\+\_\+api\+\_\+scheduler\+\_\+delete}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+scheduler\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+scheduler\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{scheduler\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_gae39139c66f0da8f3edf32c055dd36cd2}
+Delete a scheduler 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+handle} & scheduler handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_gad5c3da4da4d6fd8a015512b4b50bb0b5}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+child\+\_\+count\+\_\+get@{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+child\+\_\+count\+\_\+get}}
+\index{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+child\+\_\+count\+\_\+get@{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+child\+\_\+count\+\_\+get}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+child\+\_\+count\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+child\+\_\+count\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{scheduler\+\_\+group\+\_\+handle, }
+\item[{switch\+\_\+uint32\+\_\+t $\ast$}]{child\+\_\+count}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_gad5c3da4da4d6fd8a015512b4b50bb0b5}
+Retrieve a scheduler group child count 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+group\+\_\+handle} & scheduler group handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_ga63059e09351364ae8b5ea84e6d4f8779}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+child\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+child\+\_\+handle\+\_\+get}}
+\index{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+child\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+child\+\_\+handle\+\_\+get}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+child\+\_\+handle\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+child\+\_\+handle\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{scheduler\+\_\+group\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{queue\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_ga63059e09351364ae8b5ea84e6d4f8779}
+Retrieve a scheduler group child handle 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+group\+\_\+handle} & scheduler group handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_ga974cf29128c0829978fecae3c3a47250}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+config\+\_\+get@{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+config\+\_\+get}}
+\index{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+config\+\_\+get@{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+config\+\_\+get}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+config\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+config\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{scheduler\+\_\+group\+\_\+handle, }
+\item[{{\bf switch\+\_\+scheduler\+\_\+group\+\_\+api\+\_\+info\+\_\+t} $\ast$}]{api\+\_\+info}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_ga974cf29128c0829978fecae3c3a47250}
+Get the scheduler group config for a profile 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+handle} & scheduler group handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_ga0c6971efaa94e45ddad4dc7f2a00b820}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+create@{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+create}}
+\index{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+create@{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+create}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+scheduler\+\_\+group\+\_\+api\+\_\+info\+\_\+t} $\ast$}]{api\+\_\+info, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{scheduler\+\_\+group\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_ga0c6971efaa94e45ddad4dc7f2a00b820}
+Create a scheduler group 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+group\+\_\+api\+\_\+info} & scheduler group api info \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_ga50131105ac33286610c4fb98da8d0be4}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+delete@{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+delete@{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+delete}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{group\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_ga50131105ac33286610c4fb98da8d0be4}
+Delete a scheduler group 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+group\+\_\+handle} & scheduler group handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_ga28b0295a359b1d9e190936995877365a}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+profile\+\_\+get@{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+profile\+\_\+get}}
+\index{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+profile\+\_\+get@{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+profile\+\_\+get}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+profile\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+profile\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{scheduler\+\_\+group\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{profile\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_ga28b0295a359b1d9e190936995877365a}
+Retrieve scheduler profile for a scheduler group 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+group\+\_\+handle} & scheduler group handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Scheduler_ga570ab46c52ed357fd0aa585733805f11}{\index{Scheduler A\+P\+I@{Scheduler A\+P\+I}!switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+profile\+\_\+set@{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+profile\+\_\+set}}
+\index{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+profile\+\_\+set@{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+profile\+\_\+set}!Scheduler A\+P\+I@{Scheduler A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+profile\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+scheduler\+\_\+group\+\_\+profile\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{scheduler\+\_\+group\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{profile\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Scheduler_ga570ab46c52ed357fd0aa585733805f11}
+Assign a scheduler profile for a scheduler group 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em scheduler\+\_\+group\+\_\+handle} & scheduler group handle \\
+\hline
+{\em profile\+\_\+handle} & scheduler profile handle \\
+\hline
+\end{DoxyParams}

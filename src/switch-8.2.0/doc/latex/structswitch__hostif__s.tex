@@ -1,0 +1,71 @@
+\hypertarget{structswitch__hostif__s}{\section{switch\+\_\+hostif\+\_\+s Struct Reference}
+\label{structswitch__hostif__s}\index{switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}}
+}
+
+
+{\ttfamily \#include $<$switch\+\_\+hostif.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+char\+\_\+t \hyperlink{structswitch__hostif__s_a6abf2c4fa1e9b2d265bab4ee6cc99518}{intf\+\_\+name} \mbox{[}S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E\mbox{]}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{structswitch__hostif__s_ac489a29fc7f506ec2dc9b80db51314cb}{handle}
+\item 
+\hyperlink{structswitch__mac__addr__s}{switch\+\_\+mac\+\_\+addr\+\_\+t} \hyperlink{structswitch__hostif__s_a88e9c77b0f1e2909f1be989ab2e23e8a}{mac}
+\item 
+\hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} \hyperlink{structswitch__hostif__s_a5eb00b5b5f6387f8552ca9a0dded1396}{v4addr}
+\item 
+\hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} \hyperlink{structswitch__hostif__s_ac6b227eeabbc17456154b14ab3644bb7}{v6addr}
+\item 
+\hyperlink{group__HostInterface_ga941337bc8e6d3df44983db93d6000a15}{switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+t} \hyperlink{structswitch__hostif__s_a963a45b780889ea85ae87e15b002281b}{vlan\+\_\+action}
+\item 
+bool \hyperlink{structswitch__hostif__s_afabebfb4866c63154390d1dbedca20db}{operstatus}
+\item 
+bool \hyperlink{structswitch__hostif__s_a3445a3283b1c3e9fea8082e18db4ebcb}{admin\+\_\+state}
+\item 
+struct nl\+\_\+sock $\ast$($\ast$ \hyperlink{structswitch__hostif__s_a09a5dead93b027e3583d78bc0ba1a80d}{nl\+\_\+sock\+\_\+get\+\_\+fn} )(const char $\ast$ifname, switch\+\_\+handle\+\_\+t hostif\+\_\+handle)
+\item 
+switch\+\_\+uint8\+\_\+t \hyperlink{structswitch__hostif__s_ae8f584528b5189e3770c8788868bc585}{tx\+\_\+queue}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+host interface 
+
+\subsection{Member Data Documentation}
+\hypertarget{structswitch__hostif__s_a3445a3283b1c3e9fea8082e18db4ebcb}{\index{switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}!admin\+\_\+state@{admin\+\_\+state}}
+\index{admin\+\_\+state@{admin\+\_\+state}!switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}}
+\subsubsection[{admin\+\_\+state}]{\setlength{\rightskip}{0pt plus 5cm}bool switch\+\_\+hostif\+\_\+s\+::admin\+\_\+state}}\label{structswitch__hostif__s_a3445a3283b1c3e9fea8082e18db4ebcb}
+admin state \hypertarget{structswitch__hostif__s_ac489a29fc7f506ec2dc9b80db51314cb}{\index{switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}!handle@{handle}}
+\index{handle@{handle}!switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+hostif\+\_\+s\+::handle}}\label{structswitch__hostif__s_ac489a29fc7f506ec2dc9b80db51314cb}
+handle -\/ port/interface/vlan/ln/rif \hypertarget{structswitch__hostif__s_a6abf2c4fa1e9b2d265bab4ee6cc99518}{\index{switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}!intf\+\_\+name@{intf\+\_\+name}}
+\index{intf\+\_\+name@{intf\+\_\+name}!switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}}
+\subsubsection[{intf\+\_\+name}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+char\+\_\+t switch\+\_\+hostif\+\_\+s\+::intf\+\_\+name\mbox{[}S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+N\+A\+M\+E\+\_\+\+S\+I\+Z\+E\mbox{]}}}\label{structswitch__hostif__s_a6abf2c4fa1e9b2d265bab4ee6cc99518}
+netdev interface name \hypertarget{structswitch__hostif__s_a88e9c77b0f1e2909f1be989ab2e23e8a}{\index{switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}!mac@{mac}}
+\index{mac@{mac}!switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}}
+\subsubsection[{mac}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+mac\+\_\+addr\+\_\+t} switch\+\_\+hostif\+\_\+s\+::mac}}\label{structswitch__hostif__s_a88e9c77b0f1e2909f1be989ab2e23e8a}
+hostif mac address \hypertarget{structswitch__hostif__s_a09a5dead93b027e3583d78bc0ba1a80d}{\index{switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}!nl\+\_\+sock\+\_\+get\+\_\+fn@{nl\+\_\+sock\+\_\+get\+\_\+fn}}
+\index{nl\+\_\+sock\+\_\+get\+\_\+fn@{nl\+\_\+sock\+\_\+get\+\_\+fn}!switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}}
+\subsubsection[{nl\+\_\+sock\+\_\+get\+\_\+fn}]{\setlength{\rightskip}{0pt plus 5cm}struct nl\+\_\+sock$\ast$($\ast$ switch\+\_\+hostif\+\_\+s\+::nl\+\_\+sock\+\_\+get\+\_\+fn)(const char $\ast$ifname, switch\+\_\+handle\+\_\+t hostif\+\_\+handle)}}\label{structswitch__hostif__s_a09a5dead93b027e3583d78bc0ba1a80d}
+netlink socket get cb \hypertarget{structswitch__hostif__s_afabebfb4866c63154390d1dbedca20db}{\index{switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}!operstatus@{operstatus}}
+\index{operstatus@{operstatus}!switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}}
+\subsubsection[{operstatus}]{\setlength{\rightskip}{0pt plus 5cm}bool switch\+\_\+hostif\+\_\+s\+::operstatus}}\label{structswitch__hostif__s_afabebfb4866c63154390d1dbedca20db}
+oper status \hypertarget{structswitch__hostif__s_ae8f584528b5189e3770c8788868bc585}{\index{switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}!tx\+\_\+queue@{tx\+\_\+queue}}
+\index{tx\+\_\+queue@{tx\+\_\+queue}!switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}}
+\subsubsection[{tx\+\_\+queue}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+uint8\+\_\+t switch\+\_\+hostif\+\_\+s\+::tx\+\_\+queue}}\label{structswitch__hostif__s_ae8f584528b5189e3770c8788868bc585}
+C\+P\+U Tx queue \hypertarget{structswitch__hostif__s_a5eb00b5b5f6387f8552ca9a0dded1396}{\index{switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}!v4addr@{v4addr}}
+\index{v4addr@{v4addr}!switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}}
+\subsubsection[{v4addr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+ip\+\_\+addr\+\_\+t} switch\+\_\+hostif\+\_\+s\+::v4addr}}\label{structswitch__hostif__s_a5eb00b5b5f6387f8552ca9a0dded1396}
+hostif v4 ip address \hypertarget{structswitch__hostif__s_ac6b227eeabbc17456154b14ab3644bb7}{\index{switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}!v6addr@{v6addr}}
+\index{v6addr@{v6addr}!switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}}
+\subsubsection[{v6addr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+ip\+\_\+addr\+\_\+t} switch\+\_\+hostif\+\_\+s\+::v6addr}}\label{structswitch__hostif__s_ac6b227eeabbc17456154b14ab3644bb7}
+hostif v6 ip address \hypertarget{structswitch__hostif__s_a963a45b780889ea85ae87e15b002281b}{\index{switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}!vlan\+\_\+action@{vlan\+\_\+action}}
+\index{vlan\+\_\+action@{vlan\+\_\+action}!switch\+\_\+hostif\+\_\+s@{switch\+\_\+hostif\+\_\+s}}
+\subsubsection[{vlan\+\_\+action}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+t} switch\+\_\+hostif\+\_\+s\+::vlan\+\_\+action}}\label{structswitch__hostif__s_a963a45b780889ea85ae87e15b002281b}
+vlan action 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/root/workspace/\+A\+Hash\+Flow/src/switch-\/8.\+2.\+0/switchapi/include/switchapi/switch\+\_\+hostif.\+h\end{DoxyCompactItemize}

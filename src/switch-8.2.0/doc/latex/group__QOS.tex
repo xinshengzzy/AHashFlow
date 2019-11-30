@@ -1,0 +1,208 @@
+\hypertarget{group__QOS}{\section{Q\+O\+S A\+P\+I}
+\label{group__QOS}\index{Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions to create buffers and qos maps \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__qos__map__}{switch\+\_\+qos\+\_\+map\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \\*
+\hyperlink{group__QOS_ga31ec012ceb021095a2de97a1a3438612}{switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+} \hyperlink{group__QOS_ga36b806f4d365145c9c3466c6db87383a}{switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+t}
+\item 
+typedef enum \hyperlink{group__QOS_ga0ad3378e0f7558be2c199c5665436c39}{switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+} \hyperlink{group__QOS_gae2c7461832eaa401343e50bc7e418b83}{switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+t}
+\item 
+typedef struct \hyperlink{structswitch__qos__map__}{switch\+\_\+qos\+\_\+map\+\_\+} \hyperlink{group__QOS_gaa37a048e432bfdb7113ab1c1a28f52ff}{switch\+\_\+qos\+\_\+map\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__QOS_ga31ec012ceb021095a2de97a1a3438612}{switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+N\+O\+N\+E} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+D\+S\+C\+P\+\_\+\+T\+O\+\_\+\+T\+C} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+P\+C\+P\+\_\+\+T\+O\+\_\+\+T\+C} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+D\+S\+C\+P\+\_\+\+T\+O\+\_\+\+C\+O\+L\+O\+R} = 3, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+P\+C\+P\+\_\+\+T\+O\+\_\+\+C\+O\+L\+O\+R} = 4, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+D\+S\+C\+P\+\_\+\+T\+O\+\_\+\+T\+C\+\_\+\+A\+N\+D\+\_\+\+C\+O\+L\+O\+R} = 5, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+P\+C\+P\+\_\+\+T\+O\+\_\+\+T\+C\+\_\+\+A\+N\+D\+\_\+\+C\+O\+L\+O\+R} = 6, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+D\+S\+C\+P\+\_\+\+T\+O\+\_\+\+Q\+I\+D\+\_\+\+A\+N\+D\+\_\+\+T\+C\+\_\+\+A\+N\+D\+\_\+\+C\+O\+L\+O\+R} = 14, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+P\+C\+P\+\_\+\+T\+O\+\_\+\+Q\+I\+D\+\_\+\+A\+N\+D\+\_\+\+T\+C\+\_\+\+A\+N\+D\+\_\+\+C\+O\+L\+O\+R} = 15, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+T\+C\+\_\+\+T\+O\+\_\+\+I\+C\+O\+S} = 7, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+T\+C\+\_\+\+T\+O\+\_\+\+Q\+U\+E\+U\+E} = 8, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+T\+C\+\_\+\+T\+O\+\_\+\+I\+C\+O\+S\+\_\+\+A\+N\+D\+\_\+\+Q\+U\+E\+U\+E} = 9, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+T\+O\+S\+\_\+\+T\+O\+\_\+\+T\+C} = 10, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+T\+O\+S\+\_\+\+T\+O\+\_\+\+C\+O\+L\+O\+R} = 11, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+T\+O\+S\+\_\+\+T\+O\+\_\+\+T\+C\+\_\+\+A\+N\+D\+\_\+\+C\+O\+L\+O\+R} = 12, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+T\+O\+S\+\_\+\+T\+O\+\_\+\+Q\+I\+D\+\_\+\+A\+N\+D\+\_\+\+T\+C\+\_\+\+A\+N\+D\+\_\+\+C\+O\+L\+O\+R} = 13, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+P\+F\+C\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+T\+O\+\_\+\+P\+P\+G} = 16, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+D\+S\+C\+P\+\_\+\+T\+O\+\_\+\+T\+C\+\_\+\+A\+N\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+A\+N\+D\+\_\+\+M\+E\+T\+E\+R} = 17, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+P\+C\+P\+\_\+\+T\+O\+\_\+\+T\+C\+\_\+\+A\+N\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+A\+N\+D\+\_\+\+M\+E\+T\+E\+R} = 18, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+I\+C\+O\+S\+\_\+\+T\+O\+\_\+\+P\+P\+G} = 19
+ \}
+\item 
+enum \hyperlink{group__QOS_ga0ad3378e0f7558be2c199c5665436c39}{switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+E\+G\+R\+E\+S\+S\+\_\+\+N\+O\+N\+E} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+E\+G\+R\+E\+S\+S\+\_\+\+T\+C\+\_\+\+T\+O\+\_\+\+D\+S\+C\+P} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+E\+G\+R\+E\+S\+S\+\_\+\+T\+C\+\_\+\+T\+O\+\_\+\+P\+C\+P} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+E\+G\+R\+E\+S\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+T\+O\+\_\+\+D\+S\+C\+P} = 3, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+E\+G\+R\+E\+S\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+T\+O\+\_\+\+P\+C\+P} = 4, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+E\+G\+R\+E\+S\+S\+\_\+\+T\+C\+\_\+\+A\+N\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+T\+O\+\_\+\+D\+S\+C\+P} = 5, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+E\+G\+R\+E\+S\+S\+\_\+\+T\+C\+\_\+\+A\+N\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+T\+O\+\_\+\+P\+C\+P} = 6, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+E\+G\+R\+E\+S\+S\+\_\+\+P\+F\+C\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+T\+O\+\_\+\+Q\+U\+E\+U\+E} = 7, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+E\+G\+R\+E\+S\+S\+\_\+\+T\+C\+\_\+\+T\+O\+\_\+\+T\+O\+S} = 8, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+E\+G\+R\+E\+S\+S\+\_\+\+C\+O\+L\+O\+R\+\_\+\+T\+O\+\_\+\+T\+O\+S} = 9, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+O\+S\+\_\+\+M\+A\+P\+\_\+\+E\+G\+R\+E\+S\+S\+\_\+\+T\+C\+\_\+\+A\+N\+D\+\_\+\+C\+O\+L\+O\+R\+\_\+\+T\+O\+\_\+\+T\+O\+S} = 10
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QOS_ga593f374b00999317c0eea308ade49a27}{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+create} (switch\+\_\+device\+\_\+t device, \hyperlink{group__QOS_ga36b806f4d365145c9c3466c6db87383a}{switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+t} map\+\_\+type, switch\+\_\+uint8\+\_\+t num\+\_\+entries, \hyperlink{group__QOS_gaa37a048e432bfdb7113ab1c1a28f52ff}{switch\+\_\+qos\+\_\+map\+\_\+t} $\ast$qos\+\_\+map, switch\+\_\+handle\+\_\+t $\ast$qos\+\_\+map\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QOS_ga6614d6de1b15f3168a226e473dd93b19}{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t qos\+\_\+map\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QOS_ga0aa5a7929c369d0094db5a5d74de9d93}{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+egress\+\_\+create} (switch\+\_\+device\+\_\+t device, \hyperlink{group__QOS_gae2c7461832eaa401343e50bc7e418b83}{switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+t} map\+\_\+type, switch\+\_\+uint8\+\_\+t num\+\_\+entries, \hyperlink{group__QOS_gaa37a048e432bfdb7113ab1c1a28f52ff}{switch\+\_\+qos\+\_\+map\+\_\+t} $\ast$qos\+\_\+map, switch\+\_\+handle\+\_\+t $\ast$qos\+\_\+map\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QOS_ga50059db1534f6199d678695e0c50631c}{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+egress\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t qos\+\_\+map\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QOS_gae09bfdbb0d3ffb9bfa6d2a2a5df2407f}{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+update} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t qos\+\_\+map\+\_\+handle, switch\+\_\+uint8\+\_\+t num\+\_\+entries, \hyperlink{group__QOS_gaa37a048e432bfdb7113ab1c1a28f52ff}{switch\+\_\+qos\+\_\+map\+\_\+t} $\ast$qos\+\_\+map)
+\item 
+\hypertarget{group__QOS_ga5b31065063ed01dfe616c16e48a9f684}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+type\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t qos\+\_\+map\+\_\+handle, switch\+\_\+direction\+\_\+t $\ast$dir, \hyperlink{group__QOS_ga36b806f4d365145c9c3466c6db87383a}{switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+t} $\ast$ig\+\_\+map\+\_\+type, \hyperlink{group__QOS_gae2c7461832eaa401343e50bc7e418b83}{switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+t} $\ast$eg\+\_\+map\+\_\+type)}\label{group__QOS_ga5b31065063ed01dfe616c16e48a9f684}
+
+\item 
+\hypertarget{group__QOS_ga837999ef665d73f3426009b41ac32611}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+list\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t qos\+\_\+map\+\_\+handle, \hyperlink{group__QOS_gaa37a048e432bfdb7113ab1c1a28f52ff}{switch\+\_\+qos\+\_\+map\+\_\+t} $\ast$$\ast$qos\+\_\+map\+\_\+list, switch\+\_\+uint32\+\_\+t $\ast$num\+\_\+entries)}\label{group__QOS_ga837999ef665d73f3426009b41ac32611}
+
+\item 
+\hypertarget{group__QOS_gaec4a3e96e0e68416c158a94f0e3e28cf}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t qos\+\_\+map\+\_\+handle, \hyperlink{group__QOS_gaa37a048e432bfdb7113ab1c1a28f52ff}{switch\+\_\+qos\+\_\+map\+\_\+t} $\ast$qos\+\_\+map)}\label{group__QOS_gaec4a3e96e0e68416c158a94f0e3e28cf}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__QOS_gae2c7461832eaa401343e50bc7e418b83}{\index{Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}!switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+t@{switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+t}}
+\index{switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+t@{switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+t}!Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}}
+\subsubsection[{switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+}  {\bf switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+t}}}\label{group__QOS_gae2c7461832eaa401343e50bc7e418b83}
+qos map egress type \hypertarget{group__QOS_ga36b806f4d365145c9c3466c6db87383a}{\index{Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}!switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+t@{switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+t}}
+\index{switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+t@{switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+t}!Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}}
+\subsubsection[{switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+}  {\bf switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+t}}}\label{group__QOS_ga36b806f4d365145c9c3466c6db87383a}
+Q\+O\+S information qos map ingress type \hypertarget{group__QOS_gaa37a048e432bfdb7113ab1c1a28f52ff}{\index{Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}!switch\+\_\+qos\+\_\+map\+\_\+t@{switch\+\_\+qos\+\_\+map\+\_\+t}}
+\index{switch\+\_\+qos\+\_\+map\+\_\+t@{switch\+\_\+qos\+\_\+map\+\_\+t}!Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}}
+\subsubsection[{switch\+\_\+qos\+\_\+map\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+qos\+\_\+map\+\_\+}  {\bf switch\+\_\+qos\+\_\+map\+\_\+t}}}\label{group__QOS_gaa37a048e432bfdb7113ab1c1a28f52ff}
+switch qos map struct 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__QOS_ga0ad3378e0f7558be2c199c5665436c39}{\index{Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}!switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+@{switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+}}
+\index{switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+@{switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+}!Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}}
+\subsubsection[{switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+}}}\label{group__QOS_ga0ad3378e0f7558be2c199c5665436c39}
+qos map egress type \hypertarget{group__QOS_ga31ec012ceb021095a2de97a1a3438612}{\index{Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}!switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+@{switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+}}
+\index{switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+@{switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+}!Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}}
+\subsubsection[{switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+}}}\label{group__QOS_ga31ec012ceb021095a2de97a1a3438612}
+Q\+O\+S information qos map ingress type 
+
+\subsection{Function Documentation}
+\hypertarget{group__QOS_ga0aa5a7929c369d0094db5a5d74de9d93}{\index{Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}!switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+egress\+\_\+create@{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+egress\+\_\+create}}
+\index{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+egress\+\_\+create@{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+egress\+\_\+create}!Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+egress\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+egress\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+qos\+\_\+map\+\_\+egress\+\_\+t}}]{map\+\_\+type, }
+\item[{switch\+\_\+uint8\+\_\+t}]{num\+\_\+entries, }
+\item[{{\bf switch\+\_\+qos\+\_\+map\+\_\+t} $\ast$}]{qos\+\_\+map, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{qos\+\_\+map\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__QOS_ga0aa5a7929c369d0094db5a5d74de9d93}
+Create egress qos map 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em map\+\_\+type} & qos map type \\
+\hline
+{\em num\+\_\+entries} & number of qos map entries \\
+\hline
+{\em qos\+\_\+map} & Q\+O\+S map \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QOS_ga50059db1534f6199d678695e0c50631c}{\index{Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}!switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+egress\+\_\+delete@{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+egress\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+egress\+\_\+delete@{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+egress\+\_\+delete}!Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+egress\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+egress\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{qos\+\_\+map\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__QOS_ga50059db1534f6199d678695e0c50631c}
+Delete ingress qos map 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em qos\+\_\+map\+\_\+handle} & Qos map handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QOS_ga593f374b00999317c0eea308ade49a27}{\index{Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}!switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+create@{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+create}}
+\index{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+create@{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+create}!Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+t}}]{map\+\_\+type, }
+\item[{switch\+\_\+uint8\+\_\+t}]{num\+\_\+entries, }
+\item[{{\bf switch\+\_\+qos\+\_\+map\+\_\+t} $\ast$}]{qos\+\_\+map, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{qos\+\_\+map\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__QOS_ga593f374b00999317c0eea308ade49a27}
+Create ingress qos map 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em map\+\_\+type} & qos map type \\
+\hline
+{\em num\+\_\+entries} & number of qos map entries \\
+\hline
+{\em qos\+\_\+map} & Q\+O\+S map \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QOS_ga6614d6de1b15f3168a226e473dd93b19}{\index{Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}!switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+delete@{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+delete@{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+delete}!Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+ingress\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{qos\+\_\+map\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__QOS_ga6614d6de1b15f3168a226e473dd93b19}
+Delete ingress qos map 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em qos\+\_\+map\+\_\+handle} & Qos map handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QOS_gae09bfdbb0d3ffb9bfa6d2a2a5df2407f}{\index{Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}!switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+update@{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+update}}
+\index{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+update@{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+update}!Q\+O\+S A\+P\+I@{Q\+O\+S A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+update}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+qos\+\_\+map\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{qos\+\_\+map\+\_\+handle, }
+\item[{switch\+\_\+uint8\+\_\+t}]{num\+\_\+entries, }
+\item[{{\bf switch\+\_\+qos\+\_\+map\+\_\+t} $\ast$}]{qos\+\_\+map}
+\end{DoxyParamCaption}
+)}}\label{group__QOS_gae09bfdbb0d3ffb9bfa6d2a2a5df2407f}
+Update qos map 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em num\+\_\+entries} & number of qos map entries \\
+\hline
+{\em qos\+\_\+map\+\_\+handle} & Qos map handle \\
+\hline
+{\em qos\+\_\+map} & Q\+O\+S map \\
+\hline
+\end{DoxyParams}

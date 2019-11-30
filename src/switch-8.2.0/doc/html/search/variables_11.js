@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['scheduler_5ftype',['scheduler_type',['../structswitch__scheduler__api__info__.html#a324b02644e4e542c1fec4a539296cfb0',1,'switch_scheduler_api_info_']]],
+  ['session_5fid',['session_id',['../unionswitch__dtel__watchlist__action__params__.html#a75472186ef19bd1b1d84ab8edf09363b',1,'switch_dtel_watchlist_action_params_::session_id()'],['../structswitch__api__mirror__info__s.html#a49fee648e823a1c3c8ea4a129edd2dc5',1,'switch_api_mirror_info_s::session_id()']]],
+  ['session_5ftype',['session_type',['../structswitch__api__mirror__info__s.html#a2d4737f4feb67c11f4ccfdfb4edc0e15',1,'switch_api_mirror_info_s']]],
+  ['set_5fhost_5froute',['set_host_route',['../structswitch__api__neighbor__info__s.html#a574b24b2a4b7b8fa2bec4019f0938238',1,'switch_api_neighbor_info_s']]],
+  ['shared_5fsize',['shared_size',['../structswitch__api__buffer__pool__.html#a9924befb05683e0ca6252a1c697ccdc5',1,'switch_api_buffer_pool_']]],
+  ['sip',['sip',['../structswitch__api__bfd__session__info.html#ac8b7c870da240ba95d21affa1727ae57',1,'switch_api_bfd_session_info']]],
+  ['source_5fmac',['source_mac',['../unionswitch__acl__mac__value__.html#ae8d3954ec38a08c331fde2a7e652c320',1,'switch_acl_mac_value_::source_mac()'],['../unionswitch__acl__mac__qos__acl__value__.html#a7b7f6d9ee00436e5ff87e441a53f93b9',1,'switch_acl_mac_qos_acl_value_::source_mac()'],['../unionswitch__acl__system__value__.html#a76c62516ab63f85d45f3e6cf18049f89',1,'switch_acl_system_value_::source_mac()']]],
+  ['span_5fmode',['span_mode',['../structswitch__api__mirror__info__s.html#a5c5ce47346d3a4907e3212f4e1dbde9f',1,'switch_api_mirror_info_s']]],
+  ['sport',['sport',['../structswitch__api__bfd__session__info.html#a25987feaccc3974b3fa9c5112b514b85',1,'switch_api_bfd_session_info']]],
+  ['sport_5frange_5fhandle',['sport_range_handle',['../unionswitch__acl__ip__value__.html#aa1ebf3b5531ac34096302414c28b12eb',1,'switch_acl_ip_value_::sport_range_handle()'],['../unionswitch__acl__ipv6__value__.html#ac90b3a5195c217ed92124c9c8a2ba01c',1,'switch_acl_ipv6_value_::sport_range_handle()'],['../unionswitch__acl__ip__racl__value__.html#ac9abcfb8557ba18c11e6d5156144d17a',1,'switch_acl_ip_racl_value_::sport_range_handle()'],['../unionswitch__acl__ipv6__racl__value__.html#a7c2c1b519b8d294255df4fdb0f669830',1,'switch_acl_ipv6_racl_value_::sport_range_handle()'],['../unionswitch__acl__ip__mirror__acl__value__.html#a847940f7ad65208c02b55f9946e97f98',1,'switch_acl_ip_mirror_acl_value_::sport_range_handle()'],['../unionswitch__acl__ipv6__mirror__acl__value__.html#af42bddfd4521dee70f84d394cc62b1c5',1,'switch_acl_ipv6_mirror_acl_value_::sport_range_handle()'],['../unionswitch__acl__ip__qos__acl__value__.html#a4c797914cb853b341f70ce0c8d8941ec',1,'switch_acl_ip_qos_acl_value_::sport_range_handle()'],['../unionswitch__acl__ipv6__qos__acl__value__.html#a6b6801f2ac43308b5d5f9a68491bd2f2',1,'switch_acl_ipv6_qos_acl_value_::sport_range_handle()']]],
+  ['src_5fip',['src_ip',['../structswitch__api__mirror__info__s.html#a967ce2b13a0b353581ac16523530a1ec',1,'switch_api_mirror_info_s::src_ip()'],['../structswitch__api__nat__info__.html#a783525191c4a2068257d17d42665f3a0',1,'switch_api_nat_info_::src_ip()'],['../group__Tunnel.html#ga9be28d9bd055ac1af0f30d36dce3113e',1,'switch_api_tunnel_info_s::src_ip()'],['../group__Tunnel.html#gae3eaebd60a50c2437066dace61929bd5',1,'switch_api_tunnel_term_info_s::src_ip()']]],
+  ['src_5fis_5flink_5flocal',['src_is_link_local',['../unionswitch__acl__system__value__.html#a0c3610d61d7a4f1c9aeb784b7939286c',1,'switch_acl_system_value_']]],
+  ['src_5fmac',['src_mac',['../structswitch__api__mirror__info__s.html#a6b891c383c102ccdba6ee068a0cbfb31',1,'switch_api_mirror_info_s']]],
+  ['src_5fport',['src_port',['../structswitch__api__nat__info__.html#a0ddac9ccfcf828a253278e60c45f2635',1,'switch_api_nat_info_']]],
+  ['srv6_5ffirst_5fseg',['srv6_first_seg',['../group__Tunnel.html#gaf87c6fecf6dff3564910928b7e8eea7a',1,'switch_api_tunnel_info_s']]],
+  ['srv6_5fseg_5flist',['srv6_seg_list',['../group__Tunnel.html#ga14d1a11fe2372fe426867817ab8ddabc',1,'switch_api_tunnel_info_s']]],
+  ['storm_5fcontrol_5fcolor',['storm_control_color',['../unionswitch__acl__system__value__.html#aed370c58db7e6f08487e2bb892f9c0d7',1,'switch_acl_system_value_']]],
+  ['stp_5fstate',['stp_state',['../unionswitch__acl__system__value__.html#ab1150c9b21d759f7aa7e7fa1b6527fb4',1,'switch_acl_system_value_']]],
+  ['swap_5flabel',['swap_label',['../group__Tunnel.html#ga8d085b3d34b94d8f7d454f218d4383ae',1,'switch_api_mpls_info_s']]],
+  ['switch_5fid',['switch_id',['../structswitch__acl__opt__action__params__.html#ac015d7727a6af66735d176f0ef8219ce',1,'switch_acl_opt_action_params_']]],
+  ['symmetric',['symmetric',['../structswitch__port__pause__info__.html#acfc8be4a685c9ffbf3acb06948c167e6',1,'switch_port_pause_info_']]]
+];

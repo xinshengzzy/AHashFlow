@@ -1,0 +1,229 @@
+\hypertarget{group__Meters}{\section{A\+P\+I}
+\label{group__Meters}\index{A\+P\+I@{A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions listed to configure meters \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__api__meter__}{switch\+\_\+api\+\_\+meter\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{group__Meters_ga77f75da70758cac1c9fb171fa93f8cc2}{switch\+\_\+meter\+\_\+mode\+\_\+s} \hyperlink{group__Meters_ga3fa4bfd778bf4f4b0f4bebef85f70284}{switch\+\_\+meter\+\_\+mode\+\_\+t}
+\item 
+typedef enum \\*
+\hyperlink{group__Meters_ga2eeabdade8a78d5e09693abf1f202539}{switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+s} \hyperlink{group__Meters_ga5406e13de6b3be14a1ec8dd74ede4c55}{switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+t}
+\item 
+typedef enum \hyperlink{group__Meters_ga280b2958172e3ad05fee3ffdb47b8113}{switch\+\_\+meter\+\_\+type\+\_\+s} \hyperlink{group__Meters_ga034a9655e1bdea0a64731ad6e6b375d6}{switch\+\_\+meter\+\_\+type\+\_\+t}
+\item 
+typedef \hyperlink{group__Meters_ga034a9655e1bdea0a64731ad6e6b375d6}{switch\+\_\+meter\+\_\+type\+\_\+t} \hyperlink{group__Meters_gaf0593a04026dacc8d7cf40c93b990bb5}{switch\+\_\+shaper\+\_\+type\+\_\+t}
+\item 
+\hypertarget{group__Meters_ga8b65420e0b3be4cd2ce4b46fab08fa6c}{typedef enum switch\+\_\+meter\+\_\+counter\+\_\+s {\bfseries switch\+\_\+meter\+\_\+counter\+\_\+t}}\label{group__Meters_ga8b65420e0b3be4cd2ce4b46fab08fa6c}
+
+\item 
+typedef uint64\+\_\+t \hyperlink{group__Meters_ga244ef2ce05d89f779a221e79f1550c84}{switch\+\_\+cbs\+\_\+t}
+\item 
+typedef uint64\+\_\+t \hyperlink{group__Meters_gafe2932127c3ce04089562a657642f3d5}{switch\+\_\+pbs\+\_\+t}
+\item 
+typedef uint64\+\_\+t \hyperlink{group__Meters_gaec2972cd53996da2a473dd74a55f4357}{switch\+\_\+cir\+\_\+t}
+\item 
+typedef uint64\+\_\+t \hyperlink{group__Meters_gae137996a5fcd00a72cb59367ebb7d711}{switch\+\_\+pir\+\_\+t}
+\item 
+\hypertarget{group__Meters_gada677ac701cdb1ae177d74d0409c1c99}{typedef enum switch\+\_\+meter\+\_\+attr\+\_\+s {\bfseries switch\+\_\+meter\+\_\+attr\+\_\+t}}\label{group__Meters_gada677ac701cdb1ae177d74d0409c1c99}
+
+\item 
+typedef struct \hyperlink{structswitch__api__meter__}{switch\+\_\+api\+\_\+meter\+\_\+} \hyperlink{group__Meters_ga39b6cf8a3c569d2feee8e369fbc90bb4}{switch\+\_\+api\+\_\+meter\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__Meters_ga77f75da70758cac1c9fb171fa93f8cc2}{switch\+\_\+meter\+\_\+mode\+\_\+s} \{ \hyperlink{group__Meters_gga77f75da70758cac1c9fb171fa93f8cc2a9e3ebd30b7c4d9e38b80f93a9ac78600}{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+N\+E}, 
+\hyperlink{group__Meters_gga77f75da70758cac1c9fb171fa93f8cc2a4ce908b0813c182f0d4a90677829e085}{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+T\+W\+O\+\_\+\+R\+A\+T\+E\+\_\+\+T\+H\+R\+E\+E\+\_\+\+C\+O\+L\+O\+R}, 
+\hyperlink{group__Meters_gga77f75da70758cac1c9fb171fa93f8cc2ae05c75b4416550a9ef3670e715ef1793}{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+O\+R\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L}
+ \}
+\item 
+enum \hyperlink{group__Meters_ga2eeabdade8a78d5e09693abf1f202539}{switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+s} \{ \hyperlink{group__Meters_gga2eeabdade8a78d5e09693abf1f202539a59030f7f1690943aec6727e36de2dfdf}{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+N\+O\+N\+E}, 
+\hyperlink{group__Meters_gga2eeabdade8a78d5e09693abf1f202539a1991f1bad53873284e7586a97677779e}{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+B\+L\+I\+N\+D}, 
+\hyperlink{group__Meters_gga2eeabdade8a78d5e09693abf1f202539ad31cd269078c19d550d672a6e4cd2a8a}{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+A\+W\+A\+R\+E}
+ \}
+\item 
+enum \hyperlink{group__Meters_ga280b2958172e3ad05fee3ffdb47b8113}{switch\+\_\+meter\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+A\+C\+K\+E\+T\+S} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+B\+Y\+T\+E\+S} = 2
+ \}
+\item 
+\hypertarget{group__Meters_ga619cc21435f64cc51cd38b4e57bf5ce5}{enum {\bfseries switch\+\_\+meter\+\_\+counter\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+G\+R\+E\+E\+N}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+Y\+E\+L\+L\+O\+W}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+R\+E\+D}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+U\+N\+T\+E\+R\+\_\+\+M\+A\+X}
+ \}}\label{group__Meters_ga619cc21435f64cc51cd38b4e57bf5ce5}
+
+\item 
+\hypertarget{group__Meters_ga417b98cdb28dce78d99d1f795afc6d99}{enum {\bfseries switch\+\_\+meter\+\_\+attr\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+A\+T\+T\+R\+\_\+\+C\+B\+S} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+A\+T\+T\+R\+\_\+\+P\+B\+S} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+A\+T\+T\+R\+\_\+\+C\+I\+R} = (1 $<$$<$ 2), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+A\+T\+T\+R\+\_\+\+P\+I\+R} = (1 $<$$<$ 3)
+ \}}\label{group__Meters_ga417b98cdb28dce78d99d1f795afc6d99}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Meters_ga0d1c9a3d87406bc6a4313cee5367d56d}{switch\+\_\+api\+\_\+meter\+\_\+create} (const switch\+\_\+device\+\_\+t device, const \hyperlink{group__Meters_ga39b6cf8a3c569d2feee8e369fbc90bb4}{switch\+\_\+api\+\_\+meter\+\_\+t} $\ast$api\+\_\+meter\+\_\+info, switch\+\_\+handle\+\_\+t $\ast$meter\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Meters_ga9a0e1660a9b1ce5c73382366e59142d5}{switch\+\_\+api\+\_\+meter\+\_\+update} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t meter\+\_\+handle, const switch\+\_\+uint64\+\_\+t flags, const \hyperlink{group__Meters_ga39b6cf8a3c569d2feee8e369fbc90bb4}{switch\+\_\+api\+\_\+meter\+\_\+t} $\ast$api\+\_\+meter\+\_\+info)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Meters_ga3c2af22adbe7c28abcca024d7c9ab844}{switch\+\_\+api\+\_\+meter\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t meter\+\_\+handle)
+\item 
+\hypertarget{group__Meters_gaeed5a04f870b72f6226db96690effcd8}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+meter\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t meter\+\_\+handle, \hyperlink{group__Meters_ga39b6cf8a3c569d2feee8e369fbc90bb4}{switch\+\_\+api\+\_\+meter\+\_\+t} $\ast$meter\+\_\+info)}\label{group__Meters_gaeed5a04f870b72f6226db96690effcd8}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Meters_gac46444f363690e77df60b93f9d1bfff4}{switch\+\_\+api\+\_\+meter\+\_\+counters\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t meter\+\_\+handle, const switch\+\_\+uint8\+\_\+t count, const switch\+\_\+meter\+\_\+counter\+\_\+t $\ast$counter\+\_\+ids, \hyperlink{structswitch__counter__s}{switch\+\_\+counter\+\_\+t} $\ast$counters)
+\item 
+\hypertarget{group__Meters_gaa13e2dc2b567f109a121f2715894352f}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+meter\+\_\+handle\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t meter\+\_\+handle, const void $\ast$cli\+\_\+ctx)}\label{group__Meters_gaa13e2dc2b567f109a121f2715894352f}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__Meters_ga39b6cf8a3c569d2feee8e369fbc90bb4}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+api\+\_\+meter\+\_\+t@{switch\+\_\+api\+\_\+meter\+\_\+t}}
+\index{switch\+\_\+api\+\_\+meter\+\_\+t@{switch\+\_\+api\+\_\+meter\+\_\+t}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+meter\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+api\+\_\+meter\+\_\+}  {\bf switch\+\_\+api\+\_\+meter\+\_\+t}}}\label{group__Meters_ga39b6cf8a3c569d2feee8e369fbc90bb4}
+Meter attributes \hypertarget{group__Meters_ga244ef2ce05d89f779a221e79f1550c84}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+cbs\+\_\+t@{switch\+\_\+cbs\+\_\+t}}
+\index{switch\+\_\+cbs\+\_\+t@{switch\+\_\+cbs\+\_\+t}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+cbs\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint64\+\_\+t {\bf switch\+\_\+cbs\+\_\+t}}}\label{group__Meters_ga244ef2ce05d89f779a221e79f1550c84}
+committed burst size \hypertarget{group__Meters_gaec2972cd53996da2a473dd74a55f4357}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+cir\+\_\+t@{switch\+\_\+cir\+\_\+t}}
+\index{switch\+\_\+cir\+\_\+t@{switch\+\_\+cir\+\_\+t}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+cir\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint64\+\_\+t {\bf switch\+\_\+cir\+\_\+t}}}\label{group__Meters_gaec2972cd53996da2a473dd74a55f4357}
+committed information rate \hypertarget{group__Meters_ga5406e13de6b3be14a1ec8dd74ede4c55}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+t@{switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+t}}
+\index{switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+t@{switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+t}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+s}  {\bf switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+t}}}\label{group__Meters_ga5406e13de6b3be14a1ec8dd74ede4c55}
+Meter color mode \hypertarget{group__Meters_ga3fa4bfd778bf4f4b0f4bebef85f70284}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+meter\+\_\+mode\+\_\+t@{switch\+\_\+meter\+\_\+mode\+\_\+t}}
+\index{switch\+\_\+meter\+\_\+mode\+\_\+t@{switch\+\_\+meter\+\_\+mode\+\_\+t}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+meter\+\_\+mode\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+meter\+\_\+mode\+\_\+s}  {\bf switch\+\_\+meter\+\_\+mode\+\_\+t}}}\label{group__Meters_ga3fa4bfd778bf4f4b0f4bebef85f70284}
+Meter mode \hypertarget{group__Meters_ga034a9655e1bdea0a64731ad6e6b375d6}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+meter\+\_\+type\+\_\+t@{switch\+\_\+meter\+\_\+type\+\_\+t}}
+\index{switch\+\_\+meter\+\_\+type\+\_\+t@{switch\+\_\+meter\+\_\+type\+\_\+t}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+meter\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+meter\+\_\+type\+\_\+s}  {\bf switch\+\_\+meter\+\_\+type\+\_\+t}}}\label{group__Meters_ga034a9655e1bdea0a64731ad6e6b375d6}
+Meter type \hypertarget{group__Meters_gafe2932127c3ce04089562a657642f3d5}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+pbs\+\_\+t@{switch\+\_\+pbs\+\_\+t}}
+\index{switch\+\_\+pbs\+\_\+t@{switch\+\_\+pbs\+\_\+t}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+pbs\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint64\+\_\+t {\bf switch\+\_\+pbs\+\_\+t}}}\label{group__Meters_gafe2932127c3ce04089562a657642f3d5}
+peak burst size \hypertarget{group__Meters_gae137996a5fcd00a72cb59367ebb7d711}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+pir\+\_\+t@{switch\+\_\+pir\+\_\+t}}
+\index{switch\+\_\+pir\+\_\+t@{switch\+\_\+pir\+\_\+t}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+pir\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef uint64\+\_\+t {\bf switch\+\_\+pir\+\_\+t}}}\label{group__Meters_gae137996a5fcd00a72cb59367ebb7d711}
+peak information rate \hypertarget{group__Meters_gaf0593a04026dacc8d7cf40c93b990bb5}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+shaper\+\_\+type\+\_\+t@{switch\+\_\+shaper\+\_\+type\+\_\+t}}
+\index{switch\+\_\+shaper\+\_\+type\+\_\+t@{switch\+\_\+shaper\+\_\+type\+\_\+t}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+shaper\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf switch\+\_\+meter\+\_\+type\+\_\+t} {\bf switch\+\_\+shaper\+\_\+type\+\_\+t}}}\label{group__Meters_gaf0593a04026dacc8d7cf40c93b990bb5}
+shaper type 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__Meters_ga2eeabdade8a78d5e09693abf1f202539}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+s@{switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+s}}
+\index{switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+s@{switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+s}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+meter\+\_\+color\+\_\+source\+\_\+s}}}\label{group__Meters_ga2eeabdade8a78d5e09693abf1f202539}
+Meter color mode \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+N\+O\+N\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+N\+O\+N\+E}!A\+P\+I@{A\+P\+I}}\index{A\+P\+I@{A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+N\+O\+N\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+N\+O\+N\+E}}\item[{\em 
+\hypertarget{group__Meters_gga2eeabdade8a78d5e09693abf1f202539a59030f7f1690943aec6727e36de2dfdf}{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+N\+O\+N\+E}\label{group__Meters_gga2eeabdade8a78d5e09693abf1f202539a59030f7f1690943aec6727e36de2dfdf}
+}]none \index{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+B\+L\+I\+N\+D@{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+B\+L\+I\+N\+D}!A\+P\+I@{A\+P\+I}}\index{A\+P\+I@{A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+B\+L\+I\+N\+D@{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+B\+L\+I\+N\+D}}\item[{\em 
+\hypertarget{group__Meters_gga2eeabdade8a78d5e09693abf1f202539a1991f1bad53873284e7586a97677779e}{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+B\+L\+I\+N\+D}\label{group__Meters_gga2eeabdade8a78d5e09693abf1f202539a1991f1bad53873284e7586a97677779e}
+}]color blind \index{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+A\+W\+A\+R\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+A\+W\+A\+R\+E}!A\+P\+I@{A\+P\+I}}\index{A\+P\+I@{A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+A\+W\+A\+R\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+A\+W\+A\+R\+E}}\item[{\em 
+\hypertarget{group__Meters_gga2eeabdade8a78d5e09693abf1f202539ad31cd269078c19d550d672a6e4cd2a8a}{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+C\+O\+L\+O\+R\+\_\+\+S\+O\+U\+R\+C\+E\+\_\+\+A\+W\+A\+R\+E}\label{group__Meters_gga2eeabdade8a78d5e09693abf1f202539ad31cd269078c19d550d672a6e4cd2a8a}
+}]color source \end{description}
+\end{Desc}
+\hypertarget{group__Meters_ga77f75da70758cac1c9fb171fa93f8cc2}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+meter\+\_\+mode\+\_\+s@{switch\+\_\+meter\+\_\+mode\+\_\+s}}
+\index{switch\+\_\+meter\+\_\+mode\+\_\+s@{switch\+\_\+meter\+\_\+mode\+\_\+s}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+meter\+\_\+mode\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+meter\+\_\+mode\+\_\+s}}}\label{group__Meters_ga77f75da70758cac1c9fb171fa93f8cc2}
+Meter mode \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+N\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+N\+E}!A\+P\+I@{A\+P\+I}}\index{A\+P\+I@{A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+N\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+N\+E}}\item[{\em 
+\hypertarget{group__Meters_gga77f75da70758cac1c9fb171fa93f8cc2a9e3ebd30b7c4d9e38b80f93a9ac78600}{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+N\+E}\label{group__Meters_gga77f75da70758cac1c9fb171fa93f8cc2a9e3ebd30b7c4d9e38b80f93a9ac78600}
+}]none \index{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+T\+W\+O\+\_\+\+R\+A\+T\+E\+\_\+\+T\+H\+R\+E\+E\+\_\+\+C\+O\+L\+O\+R@{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+T\+W\+O\+\_\+\+R\+A\+T\+E\+\_\+\+T\+H\+R\+E\+E\+\_\+\+C\+O\+L\+O\+R}!A\+P\+I@{A\+P\+I}}\index{A\+P\+I@{A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+T\+W\+O\+\_\+\+R\+A\+T\+E\+\_\+\+T\+H\+R\+E\+E\+\_\+\+C\+O\+L\+O\+R@{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+T\+W\+O\+\_\+\+R\+A\+T\+E\+\_\+\+T\+H\+R\+E\+E\+\_\+\+C\+O\+L\+O\+R}}\item[{\em 
+\hypertarget{group__Meters_gga77f75da70758cac1c9fb171fa93f8cc2a4ce908b0813c182f0d4a90677829e085}{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+T\+W\+O\+\_\+\+R\+A\+T\+E\+\_\+\+T\+H\+R\+E\+E\+\_\+\+C\+O\+L\+O\+R}\label{group__Meters_gga77f75da70758cac1c9fb171fa93f8cc2a4ce908b0813c182f0d4a90677829e085}
+}]two rate, three color \index{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+O\+R\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L@{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+O\+R\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L}!A\+P\+I@{A\+P\+I}}\index{A\+P\+I@{A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+O\+R\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L@{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+O\+R\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L}}\item[{\em 
+\hypertarget{group__Meters_gga77f75da70758cac1c9fb171fa93f8cc2ae05c75b4416550a9ef3670e715ef1793}{S\+W\+I\+T\+C\+H\+\_\+\+M\+E\+T\+E\+R\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+O\+R\+M\+\_\+\+C\+O\+N\+T\+R\+O\+L}\label{group__Meters_gga77f75da70758cac1c9fb171fa93f8cc2ae05c75b4416550a9ef3670e715ef1793}
+}]storm control \end{description}
+\end{Desc}
+\hypertarget{group__Meters_ga280b2958172e3ad05fee3ffdb47b8113}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+meter\+\_\+type\+\_\+s@{switch\+\_\+meter\+\_\+type\+\_\+s}}
+\index{switch\+\_\+meter\+\_\+type\+\_\+s@{switch\+\_\+meter\+\_\+type\+\_\+s}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+meter\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+meter\+\_\+type\+\_\+s}}}\label{group__Meters_ga280b2958172e3ad05fee3ffdb47b8113}
+Meter type 
+
+\subsection{Function Documentation}
+\hypertarget{group__Meters_gac46444f363690e77df60b93f9d1bfff4}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+api\+\_\+meter\+\_\+counters\+\_\+get@{switch\+\_\+api\+\_\+meter\+\_\+counters\+\_\+get}}
+\index{switch\+\_\+api\+\_\+meter\+\_\+counters\+\_\+get@{switch\+\_\+api\+\_\+meter\+\_\+counters\+\_\+get}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+meter\+\_\+counters\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+meter\+\_\+counters\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{meter\+\_\+handle, }
+\item[{const switch\+\_\+uint8\+\_\+t}]{count, }
+\item[{const switch\+\_\+meter\+\_\+counter\+\_\+t $\ast$}]{counter\+\_\+ids, }
+\item[{{\bf switch\+\_\+counter\+\_\+t} $\ast$}]{counters}
+\end{DoxyParamCaption}
+)}}\label{group__Meters_gac46444f363690e77df60b93f9d1bfff4}
+Meter counters 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em meter\+\_\+handle} & meter handle \\
+\hline
+{\em count} & number of counters \\
+\hline
+{\em counter\+\_\+ids} & meter counter ids \\
+\hline
+{\em counters} & counter values \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Meters_ga0d1c9a3d87406bc6a4313cee5367d56d}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+api\+\_\+meter\+\_\+create@{switch\+\_\+api\+\_\+meter\+\_\+create}}
+\index{switch\+\_\+api\+\_\+meter\+\_\+create@{switch\+\_\+api\+\_\+meter\+\_\+create}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+meter\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+meter\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const {\bf switch\+\_\+api\+\_\+meter\+\_\+t} $\ast$}]{api\+\_\+meter\+\_\+info, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{meter\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Meters_ga0d1c9a3d87406bc6a4313cee5367d56d}
+Create Meter 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em api\+\_\+meter\+\_\+info} & -\/ contains meter attributes \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Meters_ga3c2af22adbe7c28abcca024d7c9ab844}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+api\+\_\+meter\+\_\+delete@{switch\+\_\+api\+\_\+meter\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+meter\+\_\+delete@{switch\+\_\+api\+\_\+meter\+\_\+delete}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+meter\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+meter\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{meter\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Meters_ga3c2af22adbe7c28abcca024d7c9ab844}
+Delete Meter 
+\begin{DoxyParams}{Parameters}
+{\em device-\/} & device \\
+\hline
+{\em meter\+\_\+handle} & -\/ meter handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Meters_ga9a0e1660a9b1ce5c73382366e59142d5}{\index{A\+P\+I@{A\+P\+I}!switch\+\_\+api\+\_\+meter\+\_\+update@{switch\+\_\+api\+\_\+meter\+\_\+update}}
+\index{switch\+\_\+api\+\_\+meter\+\_\+update@{switch\+\_\+api\+\_\+meter\+\_\+update}!A\+P\+I@{A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+meter\+\_\+update}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+meter\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{meter\+\_\+handle, }
+\item[{const switch\+\_\+uint64\+\_\+t}]{flags, }
+\item[{const {\bf switch\+\_\+api\+\_\+meter\+\_\+t} $\ast$}]{api\+\_\+meter\+\_\+info}
+\end{DoxyParamCaption}
+)}}\label{group__Meters_ga9a0e1660a9b1ce5c73382366e59142d5}
+Update Meter 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device \\
+\hline
+{\em meter\+\_\+handle} & -\/ meter handle \\
+\hline
+{\em api\+\_\+meter\+\_\+info} & -\/ contains meter attributes \\
+\hline
+\end{DoxyParams}

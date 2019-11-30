@@ -1,0 +1,84 @@
+\hypertarget{structswitch__hostif__packet__s}{\section{switch\+\_\+hostif\+\_\+packet\+\_\+s Struct Reference}
+\label{structswitch__hostif__packet__s}\index{switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}}
+}
+
+
+{\ttfamily \#include $<$switch\+\_\+hostif.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+device\+\_\+t \hyperlink{structswitch__hostif__packet__s_a9b7931344bd7cf4209e9f24e81c13d31}{device}
+\item 
+\hyperlink{group__HostInterface_gab8b13524888d4f506357fae04c44babc}{switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+t} \hyperlink{structswitch__hostif__packet__s_aaabbb3db651c61453e5bd52e95f09942}{reason\+\_\+code}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{structswitch__hostif__packet__s_a0afca65ef0c09c446b9bbed2eb41c4cb}{handle}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{structswitch__hostif__packet__s_ac1010713f560f3ab5ee2722c4c5c8771}{lag\+\_\+handle}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{structswitch__hostif__packet__s_a613ae4e693a0e113d6c122d45a83a718}{ingress\+\_\+port\+\_\+handle}
+\item 
+\hypertarget{structswitch__hostif__packet__s_a08079fa227021b546e9b0784a3fb504d}{switch\+\_\+handle\+\_\+t {\bfseries network\+\_\+handle}}\label{structswitch__hostif__packet__s_a08079fa227021b546e9b0784a3fb504d}
+
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{structswitch__hostif__packet__s_aa98edd1c4f3468c3aadef8980ea157a9}{intf\+\_\+handle}
+\item 
+switch\+\_\+uint16\+\_\+t \hyperlink{structswitch__hostif__packet__s_a8b6ada7d0d168182daae16fe40849b8b}{bypass\+\_\+flags}
+\item 
+void $\ast$ \hyperlink{structswitch__hostif__packet__s_af0229aad0a9fe6783961720ce42a887a}{pkt}
+\item 
+switch\+\_\+size\+\_\+t \hyperlink{structswitch__hostif__packet__s_ab4dc6e1f2a6729cb51032ec52c4f8931}{pkt\+\_\+size}
+\item 
+switch\+\_\+port\+\_\+t \hyperlink{structswitch__hostif__packet__s_add347567c8574a2a9b23a30b1310b4cb}{port}
+\item 
+switch\+\_\+arrival\+\_\+time\+\_\+t \hyperlink{structswitch__hostif__packet__s_a25e59dce20c857179d7ddff4eda4cf01}{arrival\+\_\+time}
+\item 
+void $\ast$ \hyperlink{structswitch__hostif__packet__s_a539be41c85958076ed897bc458b1b202}{cookie}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+hostif tx/rx packet info 
+
+\subsection{Member Data Documentation}
+\hypertarget{structswitch__hostif__packet__s_a25e59dce20c857179d7ddff4eda4cf01}{\index{switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}!arrival\+\_\+time@{arrival\+\_\+time}}
+\index{arrival\+\_\+time@{arrival\+\_\+time}!switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}}
+\subsubsection[{arrival\+\_\+time}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+arrival\+\_\+time\+\_\+t switch\+\_\+hostif\+\_\+packet\+\_\+s\+::arrival\+\_\+time}}\label{structswitch__hostif__packet__s_a25e59dce20c857179d7ddff4eda4cf01}
+arrival time \hypertarget{structswitch__hostif__packet__s_a8b6ada7d0d168182daae16fe40849b8b}{\index{switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}!bypass\+\_\+flags@{bypass\+\_\+flags}}
+\index{bypass\+\_\+flags@{bypass\+\_\+flags}!switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}}
+\subsubsection[{bypass\+\_\+flags}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+uint16\+\_\+t switch\+\_\+hostif\+\_\+packet\+\_\+s\+::bypass\+\_\+flags}}\label{structswitch__hostif__packet__s_a8b6ada7d0d168182daae16fe40849b8b}
+bypass flags \hypertarget{structswitch__hostif__packet__s_a539be41c85958076ed897bc458b1b202}{\index{switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}!cookie@{cookie}}
+\index{cookie@{cookie}!switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}}
+\subsubsection[{cookie}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ switch\+\_\+hostif\+\_\+packet\+\_\+s\+::cookie}}\label{structswitch__hostif__packet__s_a539be41c85958076ed897bc458b1b202}
+app cookie \hypertarget{structswitch__hostif__packet__s_a9b7931344bd7cf4209e9f24e81c13d31}{\index{switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}!device@{device}}
+\index{device@{device}!switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}}
+\subsubsection[{device}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+device\+\_\+t switch\+\_\+hostif\+\_\+packet\+\_\+s\+::device}}\label{structswitch__hostif__packet__s_a9b7931344bd7cf4209e9f24e81c13d31}
+device id \hypertarget{structswitch__hostif__packet__s_a0afca65ef0c09c446b9bbed2eb41c4cb}{\index{switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}!handle@{handle}}
+\index{handle@{handle}!switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}}
+\subsubsection[{handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+hostif\+\_\+packet\+\_\+s\+::handle}}\label{structswitch__hostif__packet__s_a0afca65ef0c09c446b9bbed2eb41c4cb}
+port handle \hypertarget{structswitch__hostif__packet__s_a613ae4e693a0e113d6c122d45a83a718}{\index{switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}!ingress\+\_\+port\+\_\+handle@{ingress\+\_\+port\+\_\+handle}}
+\index{ingress\+\_\+port\+\_\+handle@{ingress\+\_\+port\+\_\+handle}!switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}}
+\subsubsection[{ingress\+\_\+port\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+hostif\+\_\+packet\+\_\+s\+::ingress\+\_\+port\+\_\+handle}}\label{structswitch__hostif__packet__s_a613ae4e693a0e113d6c122d45a83a718}
+ingress port handle \hypertarget{structswitch__hostif__packet__s_aa98edd1c4f3468c3aadef8980ea157a9}{\index{switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}!intf\+\_\+handle@{intf\+\_\+handle}}
+\index{intf\+\_\+handle@{intf\+\_\+handle}!switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}}
+\subsubsection[{intf\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+hostif\+\_\+packet\+\_\+s\+::intf\+\_\+handle}}\label{structswitch__hostif__packet__s_aa98edd1c4f3468c3aadef8980ea157a9}
+interface handle \hypertarget{structswitch__hostif__packet__s_ac1010713f560f3ab5ee2722c4c5c8771}{\index{switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}!lag\+\_\+handle@{lag\+\_\+handle}}
+\index{lag\+\_\+handle@{lag\+\_\+handle}!switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}}
+\subsubsection[{lag\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+hostif\+\_\+packet\+\_\+s\+::lag\+\_\+handle}}\label{structswitch__hostif__packet__s_ac1010713f560f3ab5ee2722c4c5c8771}
+lag handle \hypertarget{structswitch__hostif__packet__s_af0229aad0a9fe6783961720ce42a887a}{\index{switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}!pkt@{pkt}}
+\index{pkt@{pkt}!switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}}
+\subsubsection[{pkt}]{\setlength{\rightskip}{0pt plus 5cm}void$\ast$ switch\+\_\+hostif\+\_\+packet\+\_\+s\+::pkt}}\label{structswitch__hostif__packet__s_af0229aad0a9fe6783961720ce42a887a}
+packet \hypertarget{structswitch__hostif__packet__s_ab4dc6e1f2a6729cb51032ec52c4f8931}{\index{switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}!pkt\+\_\+size@{pkt\+\_\+size}}
+\index{pkt\+\_\+size@{pkt\+\_\+size}!switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}}
+\subsubsection[{pkt\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+size\+\_\+t switch\+\_\+hostif\+\_\+packet\+\_\+s\+::pkt\+\_\+size}}\label{structswitch__hostif__packet__s_ab4dc6e1f2a6729cb51032ec52c4f8931}
+packet size \hypertarget{structswitch__hostif__packet__s_add347567c8574a2a9b23a30b1310b4cb}{\index{switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}!port@{port}}
+\index{port@{port}!switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}}
+\subsubsection[{port}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+port\+\_\+t switch\+\_\+hostif\+\_\+packet\+\_\+s\+::port}}\label{structswitch__hostif__packet__s_add347567c8574a2a9b23a30b1310b4cb}
+port number \hypertarget{structswitch__hostif__packet__s_aaabbb3db651c61453e5bd52e95f09942}{\index{switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}!reason\+\_\+code@{reason\+\_\+code}}
+\index{reason\+\_\+code@{reason\+\_\+code}!switch\+\_\+hostif\+\_\+packet\+\_\+s@{switch\+\_\+hostif\+\_\+packet\+\_\+s}}
+\subsubsection[{reason\+\_\+code}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+t} switch\+\_\+hostif\+\_\+packet\+\_\+s\+::reason\+\_\+code}}\label{structswitch__hostif__packet__s_aaabbb3db651c61453e5bd52e95f09942}
+reason code 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/root/workspace/\+A\+Hash\+Flow/src/switch-\/8.\+2.\+0/switchapi/include/switchapi/switch\+\_\+hostif.\+h\end{DoxyCompactItemize}

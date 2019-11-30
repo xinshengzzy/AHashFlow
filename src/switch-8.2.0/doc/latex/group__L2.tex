@@ -1,0 +1,497 @@
+\hypertarget{group__L2}{\section{L2 Switching A\+P\+I}
+\label{group__L2}\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions listed to configure Mac Address tables \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__api__mac__entry__s}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+s}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \\*
+\hyperlink{group__L2_ga8bbe19fdfe987704725c338646303cb4}{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+s} \hyperlink{group__L2_gae4c546ddb72c6390d040cfa329cfe024}{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+t}
+\item 
+typedef enum \hyperlink{group__L2_ga41cd4aa537a1dfbe6380d619f28e8a6b}{switch\+\_\+mac\+\_\+action\+\_\+s} \hyperlink{group__L2_ga81675f7440ac9d8c53f957e4ec214cb1}{switch\+\_\+mac\+\_\+action\+\_\+t}
+\item 
+typedef enum \hyperlink{group__L2_ga49d8f781f5ef73c8afdbb7abbdb23a60}{switch\+\_\+mac\+\_\+event\+\_\+s} \hyperlink{group__L2_ga3728e834d7a424815bf0285e02ed0074}{switch\+\_\+mac\+\_\+event\+\_\+t}
+\item 
+typedef enum \\*
+\hyperlink{group__L2_ga852b825e1cfbfd08e4bc21e0fc5c548c}{switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+s} \hyperlink{group__L2_gabcf4ebaee3a7b04a2a48d64b9d2aceb9}{switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__api__mac__entry__s}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+s} \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t}
+\item 
+typedef void($\ast$ \hyperlink{group__L2_ga233660168fb17cb2141539df12af924c}{switch\+\_\+mac\+\_\+notification\+\_\+fn} )(const switch\+\_\+device\+\_\+t device, const switch\+\_\+uint16\+\_\+t num\+\_\+entries, const \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entry, const \hyperlink{group__L2_ga3728e834d7a424815bf0285e02ed0074}{switch\+\_\+mac\+\_\+event\+\_\+t} mac\+\_\+event, void $\ast$app\+\_\+data)
+\begin{DoxyCompactList}\small\item\em mac notifications \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__L2_ga8bbe19fdfe987704725c338646303cb4}{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+E\+D} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+Y\+N\+A\+M\+I\+C} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+S\+T\+A\+T\+I\+C} = 2
+ \}
+\item 
+enum \hyperlink{group__L2_ga41cd4aa537a1dfbe6380d619f28e8a6b}{switch\+\_\+mac\+\_\+action\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+D\+R\+O\+P} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+F\+O\+R\+W\+A\+R\+D} = 1
+ \}
+\item 
+enum \hyperlink{group__L2_ga49d8f781f5ef73c8afdbb7abbdb23a60}{switch\+\_\+mac\+\_\+event\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+O\+V\+E} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+E\+L\+E\+T\+E} = (1 $<$$<$ 2), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+L\+E\+A\+R\+N} = (1 $<$$<$ 3), 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+G\+E} = (1 $<$$<$ 4)
+ \}
+\item 
+enum \hyperlink{group__L2_ga852b825e1cfbfd08e4bc21e0fc5c548c}{switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+F\+L\+U\+S\+H\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+E\+T\+W\+O\+R\+K} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+F\+L\+U\+S\+H\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+F\+L\+U\+S\+H\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+C\+\_\+\+T\+Y\+P\+E} = (1 $<$$<$ 2), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+F\+L\+U\+S\+H\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L} = (1 $<$$<$ 3)
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga106154dbf2c93887a5bc2d44e105d856}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+add} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em Add a mac address entry to dmac table. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_gadeb87de7788e245fcab5bac934b2c3a3}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+add} (switch\+\_\+device\+\_\+t device, switch\+\_\+size\+\_\+t num\+\_\+entries, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entries)
+\begin{DoxyCompactList}\small\item\em Add set of mac address entries to dmac table. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_gaa1f1e2de37135465b532dab1e4df76a0}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+update} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em Update a mac address entry in dmac table. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_gaf95e0ac6c2f5e79ca6da65d9f18de9f2}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+update} (switch\+\_\+device\+\_\+t device, switch\+\_\+size\+\_\+t num\+\_\+entries, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entries)
+\begin{DoxyCompactList}\small\item\em Update set of mac address entries in dmac table. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga79c02c4ecb683896bd7e51ba13a0059c}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+delete} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em Delete a mac address entry from dmac table. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga655ed00e1976ad353781a043caa4e957}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+size\+\_\+t num\+\_\+entries, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entries)
+\begin{DoxyCompactList}\small\item\em Delete set of mac address entries from dmac table. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga8e6633eee0d025508056b940af6cbb50}{switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+register} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+app\+\_\+id\+\_\+t app\+\_\+id, const switch\+\_\+uint16\+\_\+t mac\+\_\+event\+\_\+flags, \hyperlink{group__L2_ga233660168fb17cb2141539df12af924c}{switch\+\_\+mac\+\_\+notification\+\_\+fn} cb\+\_\+fn)
+\begin{DoxyCompactList}\small\item\em Mac notification callback registeration. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_gaaf7d171d5d9cc7613af6774b0776303f}{switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+deregister} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+app\+\_\+id\+\_\+t app\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Mac notification callback deregisteration. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga1bdefa73175159501d6d795545fafc2a}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+set\+\_\+learning\+\_\+timeout} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Set dmac table learn timeout. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga7fc723b28885ca5a0c5f68e23647fe38}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+flush} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+uint64\+\_\+t flush\+\_\+type, const switch\+\_\+handle\+\_\+t network\+\_\+handle, const switch\+\_\+handle\+\_\+t intf\+\_\+handle, const \hyperlink{group__L2_gae4c546ddb72c6390d040cfa329cfe024}{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+t} mac\+\_\+entry\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Delete dmac table entries by vlan or interface. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga1d47a444c79287aeaa406be59dcf8c60}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+handle\+\_\+get} (const switch\+\_\+device\+\_\+t device, const \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$api\+\_\+mac\+\_\+entry, switch\+\_\+handle\+\_\+t $\ast$mac\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Get mac handle from mac entry. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_gac27d09a5dce49ba7b3e5872b9711248f}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+type\+\_\+get} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$api\+\_\+mac\+\_\+entry, \hyperlink{group__L2_gae4c546ddb72c6390d040cfa329cfe024}{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+t} $\ast$entry\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Get mac entry type from mac entry. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga340aa8e6a40d82c896b47f063d1fda1f}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+port\+\_\+id\+\_\+get} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$api\+\_\+mac\+\_\+entry, switch\+\_\+handle\+\_\+t $\ast$intf\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Get interface handle from mac entry. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_gacc5079697b52baf49a3a786060bc2a34}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+packet\+\_\+action\+\_\+get} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$api\+\_\+mac\+\_\+entry, \hyperlink{group__L2_ga81675f7440ac9d8c53f957e4ec214cb1}{switch\+\_\+mac\+\_\+action\+\_\+t} $\ast$mac\+\_\+action)
+\begin{DoxyCompactList}\small\item\em Get mac action from mac entry. \end{DoxyCompactList}\item 
+\hypertarget{group__L2_gafd075cdb4a92b3e2708954b8f09d7a64}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$api\+\_\+mac\+\_\+entry, void $\ast$cli\+\_\+ctx)}\label{group__L2_gafd075cdb4a92b3e2708954b8f09d7a64}
+
+\item 
+\hypertarget{group__L2_ga4f1baa386afd6805da236d0121860159}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+handle\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mac\+\_\+handle, void $\ast$cli\+\_\+ctx)}\label{group__L2_ga4f1baa386afd6805da236d0121860159}
+
+\item 
+\hypertarget{group__L2_ga2ef720730e2ba58333041200490c64a9}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+count\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint32\+\_\+t $\ast$count)}\label{group__L2_ga2ef720730e2ba58333041200490c64a9}
+
+\item 
+\hypertarget{group__L2_gaa22c0e9cfd1902d40059c5b5002d172c}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mac\+\_\+move\+\_\+bulk} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t network\+\_\+handle, const switch\+\_\+handle\+\_\+t old\+\_\+intf\+\_\+handle, const switch\+\_\+handle\+\_\+t new\+\_\+intf\+\_\+handle)}\label{group__L2_gaa22c0e9cfd1902d40059c5b5002d172c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t@{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t@{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+s}  {\bf switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t}}}\label{group__L2_ga2fde8bafec6b710770603b5cde2f94af}
+mac entry \hypertarget{group__L2_ga81675f7440ac9d8c53f957e4ec214cb1}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+mac\+\_\+action\+\_\+t@{switch\+\_\+mac\+\_\+action\+\_\+t}}
+\index{switch\+\_\+mac\+\_\+action\+\_\+t@{switch\+\_\+mac\+\_\+action\+\_\+t}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+mac\+\_\+action\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+mac\+\_\+action\+\_\+s}  {\bf switch\+\_\+mac\+\_\+action\+\_\+t}}}\label{group__L2_ga81675f7440ac9d8c53f957e4ec214cb1}
+mac action -\/ forward or drop \hypertarget{group__L2_gae4c546ddb72c6390d040cfa329cfe024}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+t@{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+t}}
+\index{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+t@{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+t}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+s}  {\bf switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+t}}}\label{group__L2_gae4c546ddb72c6390d040cfa329cfe024}
+mac entry type -\/ static or dynamic \hypertarget{group__L2_ga3728e834d7a424815bf0285e02ed0074}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+mac\+\_\+event\+\_\+t@{switch\+\_\+mac\+\_\+event\+\_\+t}}
+\index{switch\+\_\+mac\+\_\+event\+\_\+t@{switch\+\_\+mac\+\_\+event\+\_\+t}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+mac\+\_\+event\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+mac\+\_\+event\+\_\+s}  {\bf switch\+\_\+mac\+\_\+event\+\_\+t}}}\label{group__L2_ga3728e834d7a424815bf0285e02ed0074}
+mac event \hypertarget{group__L2_gabcf4ebaee3a7b04a2a48d64b9d2aceb9}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+t@{switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+t}}
+\index{switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+t@{switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+t}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+s}  {\bf switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+t}}}\label{group__L2_gabcf4ebaee3a7b04a2a48d64b9d2aceb9}
+mac flush type \hypertarget{group__L2_ga233660168fb17cb2141539df12af924c}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+mac\+\_\+notification\+\_\+fn@{switch\+\_\+mac\+\_\+notification\+\_\+fn}}
+\index{switch\+\_\+mac\+\_\+notification\+\_\+fn@{switch\+\_\+mac\+\_\+notification\+\_\+fn}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+mac\+\_\+notification\+\_\+fn}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ switch\+\_\+mac\+\_\+notification\+\_\+fn)(const switch\+\_\+device\+\_\+t device, const switch\+\_\+uint16\+\_\+t num\+\_\+entries, const {\bf switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entry, const {\bf switch\+\_\+mac\+\_\+event\+\_\+t} mac\+\_\+event, void $\ast$app\+\_\+data)}}\label{group__L2_ga233660168fb17cb2141539df12af924c}
+
+
+mac notifications 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em device} & device id \\
+\hline
+\mbox{\tt out}  & {\em num\+\_\+entries} & number of entries \\
+\hline
+\mbox{\tt out}  & {\em mac\+\_\+entry} & mac entry \\
+\hline
+\mbox{\tt out}  & {\em mac\+\_\+event} & mac event \\
+\hline
+\mbox{\tt out}  & {\em app\+\_\+data} & application cookie \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__L2_ga41cd4aa537a1dfbe6380d619f28e8a6b}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+mac\+\_\+action\+\_\+s@{switch\+\_\+mac\+\_\+action\+\_\+s}}
+\index{switch\+\_\+mac\+\_\+action\+\_\+s@{switch\+\_\+mac\+\_\+action\+\_\+s}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+mac\+\_\+action\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+mac\+\_\+action\+\_\+s}}}\label{group__L2_ga41cd4aa537a1dfbe6380d619f28e8a6b}
+mac action -\/ forward or drop \hypertarget{group__L2_ga8bbe19fdfe987704725c338646303cb4}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+s@{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+s}}
+\index{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+s@{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+s}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+s}}}\label{group__L2_ga8bbe19fdfe987704725c338646303cb4}
+mac entry type -\/ static or dynamic \hypertarget{group__L2_ga49d8f781f5ef73c8afdbb7abbdb23a60}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+mac\+\_\+event\+\_\+s@{switch\+\_\+mac\+\_\+event\+\_\+s}}
+\index{switch\+\_\+mac\+\_\+event\+\_\+s@{switch\+\_\+mac\+\_\+event\+\_\+s}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+mac\+\_\+event\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+mac\+\_\+event\+\_\+s}}}\label{group__L2_ga49d8f781f5ef73c8afdbb7abbdb23a60}
+mac event \hypertarget{group__L2_ga852b825e1cfbfd08e4bc21e0fc5c548c}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+s@{switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+s}}
+\index{switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+s@{switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+s}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+s}}}\label{group__L2_ga852b825e1cfbfd08e4bc21e0fc5c548c}
+mac flush type 
+
+\subsection{Function Documentation}
+\hypertarget{group__L2_ga1d47a444c79287aeaa406be59dcf8c60}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+handle\+\_\+get}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+handle\+\_\+get}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+handle\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+handle\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const {\bf switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$}]{api\+\_\+mac\+\_\+entry, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{mac\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__L2_ga1d47a444c79287aeaa406be59dcf8c60}
+
+
+Get mac handle from mac entry. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em mac\+\_\+entry} & mac entry \\
+\hline
+\mbox{\tt out}  & {\em mac\+\_\+handle} & mac handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L2_gacc5079697b52baf49a3a786060bc2a34}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+packet\+\_\+action\+\_\+get@{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+packet\+\_\+action\+\_\+get}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+packet\+\_\+action\+\_\+get@{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+packet\+\_\+action\+\_\+get}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+packet\+\_\+action\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+packet\+\_\+action\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$}]{api\+\_\+mac\+\_\+entry, }
+\item[{{\bf switch\+\_\+mac\+\_\+action\+\_\+t} $\ast$}]{mac\+\_\+action}
+\end{DoxyParamCaption}
+)}}\label{group__L2_gacc5079697b52baf49a3a786060bc2a34}
+
+
+Get mac action from mac entry. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em mac\+\_\+entry} & mac entry \\
+\hline
+\mbox{\tt out}  & {\em mac\+\_\+action} & mac action -\/ forward/drop\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L2_ga340aa8e6a40d82c896b47f063d1fda1f}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+port\+\_\+id\+\_\+get@{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+port\+\_\+id\+\_\+get}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+port\+\_\+id\+\_\+get@{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+port\+\_\+id\+\_\+get}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+port\+\_\+id\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+port\+\_\+id\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$}]{api\+\_\+mac\+\_\+entry, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{intf\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__L2_ga340aa8e6a40d82c896b47f063d1fda1f}
+
+
+Get interface handle from mac entry. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em mac\+\_\+entry} & mac entry \\
+\hline
+\mbox{\tt out}  & {\em intf\+\_\+handle} & interface handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L2_gac27d09a5dce49ba7b3e5872b9711248f}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+type\+\_\+get@{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+type\+\_\+get}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+type\+\_\+get@{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+type\+\_\+get}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+type\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+type\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$}]{api\+\_\+mac\+\_\+entry, }
+\item[{{\bf switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+t} $\ast$}]{entry\+\_\+type}
+\end{DoxyParamCaption}
+)}}\label{group__L2_gac27d09a5dce49ba7b3e5872b9711248f}
+
+
+Get mac entry type from mac entry. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em mac\+\_\+entry} & mac entry \\
+\hline
+\mbox{\tt out}  & {\em entry\+\_\+type} & mac entry type -\/ static/dynamic\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L2_gaaf7d171d5d9cc7613af6774b0776303f}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+deregister@{switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+deregister}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+deregister@{switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+deregister}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+deregister}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+deregister (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+app\+\_\+id\+\_\+t}]{app\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{group__L2_gaaf7d171d5d9cc7613af6774b0776303f}
+
+
+Mac notification callback deregisteration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em app\+\_\+id} & application id\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L2_ga8e6633eee0d025508056b940af6cbb50}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+register@{switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+register}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+register@{switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+register}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+register}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+register (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+app\+\_\+id\+\_\+t}]{app\+\_\+id, }
+\item[{const switch\+\_\+uint16\+\_\+t}]{mac\+\_\+event\+\_\+flags, }
+\item[{{\bf switch\+\_\+mac\+\_\+notification\+\_\+fn}}]{cb\+\_\+fn}
+\end{DoxyParamCaption}
+)}}\label{group__L2_ga8e6633eee0d025508056b940af6cbb50}
+
+
+Mac notification callback registeration. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em app\+\_\+id} & application id \\
+\hline
+\mbox{\tt in}  & {\em mac\+\_\+event\+\_\+flags} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L2_gadeb87de7788e245fcab5bac934b2c3a3}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+add@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+add}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+add@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+add}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+size\+\_\+t}]{num\+\_\+entries, }
+\item[{{\bf switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$}]{mac\+\_\+entries}
+\end{DoxyParamCaption}
+)}}\label{group__L2_gadeb87de7788e245fcab5bac934b2c3a3}
+
+
+Add set of mac address entries to dmac table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em num\+\_\+entries} & number of mac entries \\
+\hline
+\mbox{\tt in}  & {\em mac\+\_\+entries} & array of mac entry\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L2_ga655ed00e1976ad353781a043caa4e957}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+delete@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+delete@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+delete}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+size\+\_\+t}]{num\+\_\+entries, }
+\item[{{\bf switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$}]{mac\+\_\+entries}
+\end{DoxyParamCaption}
+)}}\label{group__L2_ga655ed00e1976ad353781a043caa4e957}
+
+
+Delete set of mac address entries from dmac table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em num\+\_\+entries} & number of mac entries \\
+\hline
+\mbox{\tt in}  & {\em mac\+\_\+entries} & array of mac entry\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L2_gaf95e0ac6c2f5e79ca6da65d9f18de9f2}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+update@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+update}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+update@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+update}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+update}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+size\+\_\+t}]{num\+\_\+entries, }
+\item[{{\bf switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$}]{mac\+\_\+entries}
+\end{DoxyParamCaption}
+)}}\label{group__L2_gaf95e0ac6c2f5e79ca6da65d9f18de9f2}
+
+
+Update set of mac address entries in dmac table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em num\+\_\+entries} & number of mac entries \\
+\hline
+\mbox{\tt in}  & {\em mac\+\_\+entries} & array of mac entry\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L2_ga106154dbf2c93887a5bc2d44e105d856}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+add@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+add}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+add@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+add}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$}]{mac\+\_\+entry}
+\end{DoxyParamCaption}
+)}}\label{group__L2_ga106154dbf2c93887a5bc2d44e105d856}
+
+
+Add a mac address entry to dmac table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em mac\+\_\+entry} & mac entry\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L2_ga79c02c4ecb683896bd7e51ba13a0059c}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+delete@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+delete@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+delete}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$}]{mac\+\_\+entry}
+\end{DoxyParamCaption}
+)}}\label{group__L2_ga79c02c4ecb683896bd7e51ba13a0059c}
+
+
+Delete a mac address entry from dmac table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em mac\+\_\+entry} & mac entry\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L2_ga7fc723b28885ca5a0c5f68e23647fe38}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+flush@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+flush}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+flush@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+flush}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+flush}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+flush (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+uint64\+\_\+t}]{flush\+\_\+type, }
+\item[{const switch\+\_\+handle\+\_\+t}]{network\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{intf\+\_\+handle, }
+\item[{const {\bf switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+t}}]{mac\+\_\+entry\+\_\+type}
+\end{DoxyParamCaption}
+)}}\label{group__L2_ga7fc723b28885ca5a0c5f68e23647fe38}
+
+
+Delete dmac table entries by vlan or interface. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em flush\+\_\+type} & flush type -\/ vlan/ln/interface \\
+\hline
+\mbox{\tt in}  & {\em network\+\_\+handle} & network handle -\/ vlan/ln \\
+\hline
+\mbox{\tt in}  & {\em intf\+\_\+handle} & interface handle \\
+\hline
+\mbox{\tt in}  & {\em mac\+\_\+entry\+\_\+type} & mac type -\/ static/dynamic\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L2_gaa1f1e2de37135465b532dab1e4df76a0}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+update@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+update}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+update@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+update}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+update}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$}]{mac\+\_\+entry}
+\end{DoxyParamCaption}
+)}}\label{group__L2_gaa1f1e2de37135465b532dab1e4df76a0}
+
+
+Update a mac address entry in dmac table. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em mac\+\_\+entry} & mac entry\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__L2_ga1bdefa73175159501d6d795545fafc2a}{\index{L2 Switching A\+P\+I@{L2 Switching A\+P\+I}!switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+set\+\_\+learning\+\_\+timeout@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+set\+\_\+learning\+\_\+timeout}}
+\index{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+set\+\_\+learning\+\_\+timeout@{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+set\+\_\+learning\+\_\+timeout}!L2 Switching A\+P\+I@{L2 Switching A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+set\+\_\+learning\+\_\+timeout}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+set\+\_\+learning\+\_\+timeout (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+uint32\+\_\+t}]{timeout}
+\end{DoxyParamCaption}
+)}}\label{group__L2_ga1bdefa73175159501d6d795545fafc2a}
+
+
+Set dmac table learn timeout. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em timeout} & timeout value\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}

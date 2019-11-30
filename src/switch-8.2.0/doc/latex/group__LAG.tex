@@ -1,0 +1,373 @@
+\hypertarget{group__LAG}{\section{L\+A\+G configuration A\+P\+I}
+\label{group__LAG}\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions listed to configure the Link Aggregation groups. Create L\+A\+G, Add/\+Del ports to L\+A\+G and set admin states Link aggregation allows for one or more ports to be treated as a single entity for reception and transmission of packets through the system. All behavior of packets on all the ports that belong to a group is identical on the device. The ports that belong to a single group can span multiple pipelines. Transmission of packets through particular ports is determined by the hashing scheme selectable globally. Typically the L2 fields (D\+M\+A\+C, S\+M\+A\+C, Ether\+Type) are used for this. The choice of this is configurable by the A\+P\+Is. \subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \hyperlink{group__LAG_ga725a51213e81fbcf7d83552dd183dc1c}{lacp\+\_\+key\+\_\+t}
+\item 
+typedef enum \hyperlink{group__LAG_ga27f33bc168b263c99fcece54e4f3c222}{switch\+\_\+lag\+\_\+type\+\_\+} \hyperlink{group__LAG_ga6090687f6492ca949c72c5929fd58dfe}{switch\+\_\+lag\+\_\+type\+\_\+t}
+\item 
+typedef switch\+\_\+status\+\_\+t($\ast$ \hyperlink{group__LAG_ga9ed343b0cd5c8838c1143ac2a41f1751}{switch\+\_\+lag\+\_\+iterator\+\_\+fn} )(uint8\+\_\+t lag\+\_\+id, switch\+\_\+handle\+\_\+t $\ast$intf\+\_\+handle, uint8\+\_\+t member\+\_\+count)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__LAG_ga27f33bc168b263c99fcece54e4f3c222}{switch\+\_\+lag\+\_\+type\+\_\+} \{ \hyperlink{group__LAG_gga27f33bc168b263c99fcece54e4f3c222a8520ce309a828bd9e867b11ede67e4c0}{S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+L\+A\+G\+\_\+\+S\+I\+M\+P\+L\+E}, 
+\hyperlink{group__LAG_gga27f33bc168b263c99fcece54e4f3c222a24adf52cd43544c8fcf521b208a690ae}{S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+L\+A\+G\+\_\+\+R\+E\+S\+I\+L\+I\+E\+N\+T}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__LAG_gaf33247bb02d1f361c6baf76f6d34dacb}{switch\+\_\+api\+\_\+lag\+\_\+create} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t $\ast$lag\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__LAG_ga371ca16cc8dddfa20974036ba5db8dc3}{switch\+\_\+api\+\_\+lag\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__LAG_gaa91eff2c7c4cd6ee25406c4db31f5089}{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+add} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+direction\+\_\+t direction, switch\+\_\+handle\+\_\+t port\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__LAG_ga1ad65f21fbdeaa2f614649137b72c14c}{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+direction\+\_\+t direction, switch\+\_\+handle\+\_\+t port\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__LAG_gacc841c8a06785e5618ac608df807c7a3}{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+create} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+direction\+\_\+t direction, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$lag\+\_\+member\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__LAG_ga2da6e62e43f9806a0a6b9f9749497d5a}{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+remove} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+member\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__LAG_gaef3f5c788ff03c58ce4b51cbf6e2f064}{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+activate} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+handle\+\_\+t port\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__LAG_ga5ba3c982fded544829a4b4f3c1b3ca88}{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+deactivate} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+handle\+\_\+t port\+\_\+handle)
+\item 
+unsigned int \hyperlink{group__LAG_ga8f9e09eaf138732eccd33c8ea472efbb}{switch\+\_\+lag\+\_\+get\+\_\+count} (switch\+\_\+handle\+\_\+t lag\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__LAG_gace75f6f21942f9e8ad611861ec60c2e2}{switch\+\_\+api\+\_\+lag\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+uint16\+\_\+t label)
+\item 
+\hypertarget{group__LAG_ga4edb2dde25b4f420076d2b5f1681f3ce}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+lag\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+uint16\+\_\+t $\ast$label)}\label{group__LAG_ga4edb2dde25b4f420076d2b5f1681f3ce}
+
+\item 
+\hypertarget{group__LAG_ga9fb44dabc7f7083c144c711e2ab5e209}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+lag\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+handle\+\_\+t acl\+\_\+group)}\label{group__LAG_ga9fb44dabc7f7083c144c711e2ab5e209}
+
+\item 
+\hypertarget{group__LAG_gabcdf8a918c9691004bcedb925ab95eec}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+lag\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$acl\+\_\+group)}\label{group__LAG_gabcdf8a918c9691004bcedb925ab95eec}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__LAG_ga44dad3b6476dd54f3c8bc71352163a21}{switch\+\_\+api\+\_\+lag\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+uint16\+\_\+t label)
+\item 
+\hypertarget{group__LAG_gab2e5bcb0198f37a46a5ebdc20566333e}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+lag\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+uint16\+\_\+t $\ast$label)}\label{group__LAG_gab2e5bcb0198f37a46a5ebdc20566333e}
+
+\item 
+\hypertarget{group__LAG_gabc8681f79d7f2d4dfda77af07e73790e}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+lag\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+handle\+\_\+t acl\+\_\+group)}\label{group__LAG_gabc8681f79d7f2d4dfda77af07e73790e}
+
+\item 
+\hypertarget{group__LAG_gac43ed0e29cc12579b4d5d7860d7c14d8}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+lag\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$acl\+\_\+group)}\label{group__LAG_gac43ed0e29cc12579b4d5d7860d7c14d8}
+
+\item 
+\hypertarget{group__LAG_gab7d33861270d8222212afa9e621a0990}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+lag\+\_\+bind\+\_\+mode\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+port\+\_\+bind\+\_\+mode\+\_\+t bind\+\_\+mode)}\label{group__LAG_gab7d33861270d8222212afa9e621a0990}
+
+\item 
+\hypertarget{group__LAG_ga5e8d5841f700fb5fa909ef3ae3c5c90f}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+lag\+\_\+bind\+\_\+mode\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, switch\+\_\+port\+\_\+bind\+\_\+mode\+\_\+t $\ast$bind\+\_\+mode)}\label{group__LAG_ga5e8d5841f700fb5fa909ef3ae3c5c90f}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__LAG_ga46f48d7e6b71e4e1ddeca664550b7a8e}{switch\+\_\+api\+\_\+lag\+\_\+peer\+\_\+link\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, bool peer\+\_\+link)
+\item 
+\hypertarget{group__LAG_ga5b79c2fa6ac0adbc8e4fe8307ea00425}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+lag\+\_\+peer\+\_\+link\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, bool $\ast$peer\+\_\+link)}\label{group__LAG_ga5b79c2fa6ac0adbc8e4fe8307ea00425}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__LAG_ga579417d4575ba232ed030d903e80c66f}{switch\+\_\+api\+\_\+lag\+\_\+mlag\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, bool mlag)
+\item 
+\hypertarget{group__LAG_ga591f03d16a4b7b325931ce18abb856d4}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+lag\+\_\+mlag\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+handle, bool $\ast$mlag)}\label{group__LAG_ga591f03d16a4b7b325931ce18abb856d4}
+
+\item 
+\hypertarget{group__LAG_gad6ed0ec34f6e6ad0201602e0912ed59f}{switch\+\_\+status\+\_\+t {\bfseries swich\+\_\+api\+\_\+lag\+\_\+handle\+\_\+from\+\_\+lag\+\_\+member\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t lag\+\_\+member\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$lag\+\_\+handle)}\label{group__LAG_gad6ed0ec34f6e6ad0201602e0912ed59f}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__LAG_gaea133475de16760ba13de131e188555e}{switch\+\_\+api\+\_\+lag\+\_\+get} (\hyperlink{group__LAG_ga9ed343b0cd5c8838c1143ac2a41f1751}{switch\+\_\+lag\+\_\+iterator\+\_\+fn} iterator\+\_\+fn)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__LAG_ga853a95867809681efa613b81a04c0684}{switch\+\_\+api\+\_\+lag\+\_\+print\+\_\+all} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__LAG_ga725a51213e81fbcf7d83552dd183dc1c}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!lacp\+\_\+key\+\_\+t@{lacp\+\_\+key\+\_\+t}}
+\index{lacp\+\_\+key\+\_\+t@{lacp\+\_\+key\+\_\+t}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{lacp\+\_\+key\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf lacp\+\_\+key\+\_\+t}}}\label{group__LAG_ga725a51213e81fbcf7d83552dd183dc1c}
+$<$ L\+A\+C\+P Key \hypertarget{group__LAG_ga9ed343b0cd5c8838c1143ac2a41f1751}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+lag\+\_\+iterator\+\_\+fn@{switch\+\_\+lag\+\_\+iterator\+\_\+fn}}
+\index{switch\+\_\+lag\+\_\+iterator\+\_\+fn@{switch\+\_\+lag\+\_\+iterator\+\_\+fn}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+lag\+\_\+iterator\+\_\+fn}]{\setlength{\rightskip}{0pt plus 5cm}typedef switch\+\_\+status\+\_\+t($\ast$ switch\+\_\+lag\+\_\+iterator\+\_\+fn)(uint8\+\_\+t lag\+\_\+id, switch\+\_\+handle\+\_\+t $\ast$intf\+\_\+handle, uint8\+\_\+t member\+\_\+count)}}\label{group__LAG_ga9ed343b0cd5c8838c1143ac2a41f1751}
+Register a iterator function to walk through all the lag 
+\begin{DoxyParams}{Parameters}
+{\em lag\+\_\+id} & Lag index \\
+\hline
+{\em intf\+\_\+handle} & List of member interfaces \\
+\hline
+{\em member\+\_\+count} & Number of lag members \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__LAG_ga6090687f6492ca949c72c5929fd58dfe}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+lag\+\_\+type\+\_\+t@{switch\+\_\+lag\+\_\+type\+\_\+t}}
+\index{switch\+\_\+lag\+\_\+type\+\_\+t@{switch\+\_\+lag\+\_\+type\+\_\+t}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+lag\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+lag\+\_\+type\+\_\+}  {\bf switch\+\_\+lag\+\_\+type\+\_\+t}}}\label{group__LAG_ga6090687f6492ca949c72c5929fd58dfe}
+type of L\+A\+G 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__LAG_ga27f33bc168b263c99fcece54e4f3c222}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+lag\+\_\+type\+\_\+@{switch\+\_\+lag\+\_\+type\+\_\+}}
+\index{switch\+\_\+lag\+\_\+type\+\_\+@{switch\+\_\+lag\+\_\+type\+\_\+}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+lag\+\_\+type\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+lag\+\_\+type\+\_\+}}}\label{group__LAG_ga27f33bc168b263c99fcece54e4f3c222}
+type of L\+A\+G \begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+L\+A\+G\+\_\+\+S\+I\+M\+P\+L\+E@{S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+L\+A\+G\+\_\+\+S\+I\+M\+P\+L\+E}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+L\+A\+G\+\_\+\+S\+I\+M\+P\+L\+E@{S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+L\+A\+G\+\_\+\+S\+I\+M\+P\+L\+E}}\item[{\em 
+\hypertarget{group__LAG_gga27f33bc168b263c99fcece54e4f3c222a8520ce309a828bd9e867b11ede67e4c0}{S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+L\+A\+G\+\_\+\+S\+I\+M\+P\+L\+E}\label{group__LAG_gga27f33bc168b263c99fcece54e4f3c222a8520ce309a828bd9e867b11ede67e4c0}
+}]simple hash \index{S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+L\+A\+G\+\_\+\+R\+E\+S\+I\+L\+I\+E\+N\+T@{S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+L\+A\+G\+\_\+\+R\+E\+S\+I\+L\+I\+E\+N\+T}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+L\+A\+G\+\_\+\+R\+E\+S\+I\+L\+I\+E\+N\+T@{S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+L\+A\+G\+\_\+\+R\+E\+S\+I\+L\+I\+E\+N\+T}}\item[{\em 
+\hypertarget{group__LAG_gga27f33bc168b263c99fcece54e4f3c222a24adf52cd43544c8fcf521b208a690ae}{S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+L\+A\+G\+\_\+\+R\+E\+S\+I\+L\+I\+E\+N\+T}\label{group__LAG_gga27f33bc168b263c99fcece54e4f3c222a24adf52cd43544c8fcf521b208a690ae}
+}]weighted/resilient hash \end{description}
+\end{Desc}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__LAG_gaf33247bb02d1f361c6baf76f6d34dacb}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+api\+\_\+lag\+\_\+create@{switch\+\_\+api\+\_\+lag\+\_\+create}}
+\index{switch\+\_\+api\+\_\+lag\+\_\+create@{switch\+\_\+api\+\_\+lag\+\_\+create}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+lag\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+lag\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{lag\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_gaf33247bb02d1f361c6baf76f6d34dacb}
+Link Aggregation Group creation 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__LAG_ga371ca16cc8dddfa20974036ba5db8dc3}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+api\+\_\+lag\+\_\+delete@{switch\+\_\+api\+\_\+lag\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+lag\+\_\+delete@{switch\+\_\+api\+\_\+lag\+\_\+delete}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+lag\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+lag\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{lag\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_ga371ca16cc8dddfa20974036ba5db8dc3}
+Link Aggregation Group deletion 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em lag\+\_\+handle} & handle of group returned on creation \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__LAG_ga44dad3b6476dd54f3c8bc71352163a21}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+api\+\_\+lag\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set@{switch\+\_\+api\+\_\+lag\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set}}
+\index{switch\+\_\+api\+\_\+lag\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set@{switch\+\_\+api\+\_\+lag\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+lag\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+lag\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{lag\+\_\+handle, }
+\item[{switch\+\_\+uint16\+\_\+t}]{label}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_ga44dad3b6476dd54f3c8bc71352163a21}
+Set L\+A\+G label This A\+P\+I will be used to set label when bind type is S\+W\+I\+T\+C\+H\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em lag\+\_\+handle} & – L\+A\+G handle \\
+\hline
+{\em label} & – port label \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__LAG_gaea133475de16760ba13de131e188555e}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+api\+\_\+lag\+\_\+get@{switch\+\_\+api\+\_\+lag\+\_\+get}}
+\index{switch\+\_\+api\+\_\+lag\+\_\+get@{switch\+\_\+api\+\_\+lag\+\_\+get}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+lag\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+lag\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{{\bf switch\+\_\+lag\+\_\+iterator\+\_\+fn}}]{iterator\+\_\+fn}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_gaea133475de16760ba13de131e188555e}
+Calls the iterator function for every lag 
+\begin{DoxyParams}{Parameters}
+{\em iterator\+\_\+fn} & -\/ Iterator function \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__LAG_gace75f6f21942f9e8ad611861ec60c2e2}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+api\+\_\+lag\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set@{switch\+\_\+api\+\_\+lag\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set}}
+\index{switch\+\_\+api\+\_\+lag\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set@{switch\+\_\+api\+\_\+lag\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+lag\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+lag\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{lag\+\_\+handle, }
+\item[{switch\+\_\+uint16\+\_\+t}]{label}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_gace75f6f21942f9e8ad611861ec60c2e2}
+Set L\+A\+G label This A\+P\+I will be used to set label when bind type is S\+W\+I\+T\+C\+H\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em lag\+\_\+handle} & – L\+A\+G handle \\
+\hline
+{\em label} & – port label \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__LAG_gaef3f5c788ff03c58ce4b51cbf6e2f064}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+activate@{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+activate}}
+\index{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+activate@{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+activate}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+activate}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+activate (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{lag\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_gaef3f5c788ff03c58ce4b51cbf6e2f064}
+Reactivate Link Aggregation Group member port 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em lag\+\_\+handle} & handle of group returned on creation \\
+\hline
+{\em port} & port in the same device on which lag\+\_\+handle was created \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__LAG_gaa91eff2c7c4cd6ee25406c4db31f5089}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+add@{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+add}}
+\index{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+add@{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+add}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{lag\+\_\+handle, }
+\item[{switch\+\_\+direction\+\_\+t}]{direction, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_gaa91eff2c7c4cd6ee25406c4db31f5089}
+Link Aggregation Group member port add 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em lag\+\_\+handle} & handle of group returned on creation \\
+\hline
+{\em direction} & allow rx and rx member add separately \\
+\hline
+{\em port} & port in the same device on which lag\+\_\+handle was created \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__LAG_gacc841c8a06785e5618ac608df807c7a3}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+create@{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+create}}
+\index{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+create@{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+create}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{lag\+\_\+handle, }
+\item[{switch\+\_\+direction\+\_\+t}]{direction, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{lag\+\_\+member\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_gacc841c8a06785e5618ac608df807c7a3}
+Link Aggregation Group member add by handle 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em lag\+\_\+handle} & handle of group returned on creation \\
+\hline
+{\em direction} & allow rx and rx member add separately \\
+\hline
+{\em port} & port in the same device on which lag\+\_\+handle was created \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__LAG_ga5ba3c982fded544829a4b4f3c1b3ca88}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+deactivate@{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+deactivate}}
+\index{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+deactivate@{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+deactivate}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+deactivate}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+deactivate (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{lag\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_ga5ba3c982fded544829a4b4f3c1b3ca88}
+Deactivate Link Aggregation Group member port 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em lag\+\_\+handle} & handle of group returned on creation \\
+\hline
+{\em port} & port in the same device on which lag\+\_\+handle was created \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__LAG_ga1ad65f21fbdeaa2f614649137b72c14c}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+delete@{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+delete@{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+delete}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{lag\+\_\+handle, }
+\item[{switch\+\_\+direction\+\_\+t}]{direction, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_ga1ad65f21fbdeaa2f614649137b72c14c}
+Link Aggregation Group member port delete 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em lag\+\_\+handle} & handle of group returned on creation \\
+\hline
+{\em direction} & control rx and tx members independently or both \\
+\hline
+{\em port} & port in the same device on which lag\+\_\+handle was created \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__LAG_ga2da6e62e43f9806a0a6b9f9749497d5a}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+remove@{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+remove}}
+\index{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+remove@{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+remove}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+remove}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+lag\+\_\+member\+\_\+remove (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{lag\+\_\+member\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_ga2da6e62e43f9806a0a6b9f9749497d5a}
+Link Aggregation Group member deletion by handle 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em lag\+\_\+member\+\_\+handle} & handle of member returned on creation \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__LAG_ga579417d4575ba232ed030d903e80c66f}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+api\+\_\+lag\+\_\+mlag\+\_\+set@{switch\+\_\+api\+\_\+lag\+\_\+mlag\+\_\+set}}
+\index{switch\+\_\+api\+\_\+lag\+\_\+mlag\+\_\+set@{switch\+\_\+api\+\_\+lag\+\_\+mlag\+\_\+set}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+lag\+\_\+mlag\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+lag\+\_\+mlag\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{lag\+\_\+handle, }
+\item[{bool}]{mlag}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_ga579417d4575ba232ed030d903e80c66f}
+configure lag as mlag member 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em lag\+\_\+handle} & lag handle \\
+\hline
+{\em mlag} & mlag member lag \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__LAG_ga46f48d7e6b71e4e1ddeca664550b7a8e}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+api\+\_\+lag\+\_\+peer\+\_\+link\+\_\+set@{switch\+\_\+api\+\_\+lag\+\_\+peer\+\_\+link\+\_\+set}}
+\index{switch\+\_\+api\+\_\+lag\+\_\+peer\+\_\+link\+\_\+set@{switch\+\_\+api\+\_\+lag\+\_\+peer\+\_\+link\+\_\+set}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+lag\+\_\+peer\+\_\+link\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+lag\+\_\+peer\+\_\+link\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{lag\+\_\+handle, }
+\item[{bool}]{peer\+\_\+link}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_ga46f48d7e6b71e4e1ddeca664550b7a8e}
+configure L\+A\+G as mlag peer-\/link 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em lag\+\_\+handle} & lag handle \\
+\hline
+{\em peer\+\_\+link} & mlag peer-\/link \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__LAG_ga853a95867809681efa613b81a04c0684}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+api\+\_\+lag\+\_\+print\+\_\+all@{switch\+\_\+api\+\_\+lag\+\_\+print\+\_\+all}}
+\index{switch\+\_\+api\+\_\+lag\+\_\+print\+\_\+all@{switch\+\_\+api\+\_\+lag\+\_\+print\+\_\+all}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+lag\+\_\+print\+\_\+all}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+lag\+\_\+print\+\_\+all (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_ga853a95867809681efa613b81a04c0684}
+Dump lag table \hypertarget{group__LAG_ga8f9e09eaf138732eccd33c8ea472efbb}{\index{L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}!switch\+\_\+lag\+\_\+get\+\_\+count@{switch\+\_\+lag\+\_\+get\+\_\+count}}
+\index{switch\+\_\+lag\+\_\+get\+\_\+count@{switch\+\_\+lag\+\_\+get\+\_\+count}!L\+A\+G configuration A\+P\+I@{L\+A\+G configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+lag\+\_\+get\+\_\+count}]{\setlength{\rightskip}{0pt plus 5cm}unsigned int switch\+\_\+lag\+\_\+get\+\_\+count (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+handle\+\_\+t}]{lag\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__LAG_ga8f9e09eaf138732eccd33c8ea472efbb}
+Link Aggregation group member count 
+\begin{DoxyParams}{Parameters}
+{\em lag\+\_\+handle} & handle of the link aggregation group \\
+\hline
+\end{DoxyParams}

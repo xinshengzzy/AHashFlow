@@ -1,0 +1,1973 @@
+\hypertarget{group__Port}{\section{Port configuration A\+P\+I}
+\label{group__Port}\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions listed to configure the ports. Mostly related to M\+A\+C programming The basic configuration on the port dictates the M\+A\+C programming. The modes can be set to one of 1x100\+G, 2x50\+G, 4x25\+G, 2x40\+G or 4x10\+G. The ports can be configured with an administrative mode and default behavior can be set. The tables that get modified in response to the port A\+P\+Is are mostly the early stage tables. The port can have a default, which generally allows tagging of untagged packets to this default domain for forwarding the packets through the device. \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__port__lane__list__s}{switch\+\_\+port\+\_\+lane\+\_\+list\+\_\+s}
+\item 
+struct \hyperlink{structswitch__port__attribute__info__s}{switch\+\_\+port\+\_\+attribute\+\_\+info\+\_\+s}
+\item 
+struct \hyperlink{structswitch__api__port__info__s}{switch\+\_\+api\+\_\+port\+\_\+info\+\_\+s}
+\item 
+struct \hyperlink{structswitch__port__pause__info__}{switch\+\_\+port\+\_\+pause\+\_\+info\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__Port_ga271f979a046c4ea8be47e95635a1079b}{\#define {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+H\+W\+\_\+\+L\+A\+N\+E\+S}~4}\label{group__Port_ga271f979a046c4ea8be47e95635a1079b}
+
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{group__Port_ga2b4ab95653b3e16a2f0ccab9982be20d}{switch\+\_\+port\+\_\+speed\+\_\+s} \hyperlink{group__Port_ga29ae043889998625e4f817091229005c}{switch\+\_\+port\+\_\+speed\+\_\+t}
+\item 
+\hypertarget{group__Port_ga48e87502b7defc96102d7bff406deb1e}{typedef enum \\*
+switch\+\_\+port\+\_\+auto\+\_\+neg\+\_\+mode\+\_\+s {\bfseries switch\+\_\+port\+\_\+auto\+\_\+neg\+\_\+mode\+\_\+t}}\label{group__Port_ga48e87502b7defc96102d7bff406deb1e}
+
+\item 
+typedef enum \\*
+\hyperlink{group__Port_gad978f1f45abc92d529c0d6c1d8d75228}{switch\+\_\+flowcontrol\+\_\+type\+\_\+s} \hyperlink{group__Port_gad870ecb5980b7fdef2532fbe7ca653db}{switch\+\_\+flowcontrol\+\_\+type\+\_\+t}
+\item 
+\hypertarget{group__Port_ga2252195b96024d5e3a05c6005c85c330}{typedef enum switch\+\_\+port\+\_\+event\+\_\+s {\bfseries switch\+\_\+port\+\_\+event\+\_\+t}}\label{group__Port_ga2252195b96024d5e3a05c6005c85c330}
+
+\item 
+\hypertarget{group__Port_ga361c8fc3f43dc3741b391b2bd020e7de}{typedef enum \\*
+switch\+\_\+port\+\_\+oper\+\_\+status\+\_\+s {\bfseries switch\+\_\+port\+\_\+oper\+\_\+status\+\_\+t}}\label{group__Port_ga361c8fc3f43dc3741b391b2bd020e7de}
+
+\item 
+\hypertarget{group__Port_gad6d9b55513602117ea5644d738dc242d}{typedef enum \\*
+switch\+\_\+port\+\_\+attribute\+\_\+s {\bfseries switch\+\_\+port\+\_\+attribute\+\_\+t}}\label{group__Port_gad6d9b55513602117ea5644d738dc242d}
+
+\item 
+\hypertarget{group__Port_ga2c38883fce229f93d075322206e0e792}{typedef enum \\*
+switch\+\_\+port\+\_\+counter\+\_\+id\+\_\+s {\bfseries switch\+\_\+port\+\_\+counter\+\_\+id\+\_\+t}}\label{group__Port_ga2c38883fce229f93d075322206e0e792}
+
+\item 
+\hypertarget{group__Port_ga9600a9b1829d8b2ec95f8ca4907eab11}{typedef enum \\*
+switch\+\_\+port\+\_\+breakout\+\_\+type\+\_\+s {\bfseries switch\+\_\+port\+\_\+breakout\+\_\+type\+\_\+t}}\label{group__Port_ga9600a9b1829d8b2ec95f8ca4907eab11}
+
+\item 
+\hypertarget{group__Port_gac7f14c2a22354c51fab819878fb1983e}{typedef enum \\*
+switch\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+s {\bfseries switch\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+t}}\label{group__Port_gac7f14c2a22354c51fab819878fb1983e}
+
+\item 
+\hypertarget{group__Port_gaa045a2c5532dac3b81f497be2e4921e0}{typedef enum switch\+\_\+port\+\_\+fec\+\_\+mode\+\_\+s {\bfseries switch\+\_\+port\+\_\+fec\+\_\+mode\+\_\+t}}\label{group__Port_gaa045a2c5532dac3b81f497be2e4921e0}
+
+\item 
+\hypertarget{group__Port_ga06a4775fb9b8e3ed8f6fe380fc5987d7}{typedef struct \\*
+\hyperlink{structswitch__port__lane__list__s}{switch\+\_\+port\+\_\+lane\+\_\+list\+\_\+s} {\bfseries switch\+\_\+port\+\_\+lane\+\_\+list\+\_\+t}}\label{group__Port_ga06a4775fb9b8e3ed8f6fe380fc5987d7}
+
+\item 
+\hypertarget{group__Port_gabfc6f5421ee471f9ca99efa1357584cd}{typedef struct \\*
+\hyperlink{structswitch__port__attribute__info__s}{switch\+\_\+port\+\_\+attribute\+\_\+info\+\_\+s} {\bfseries switch\+\_\+port\+\_\+attribute\+\_\+info\+\_\+t}}\label{group__Port_gabfc6f5421ee471f9ca99efa1357584cd}
+
+\item 
+\hypertarget{group__Port_ga7960b44bff00d9cf41c78687348dea8a}{typedef struct \\*
+\hyperlink{structswitch__api__port__info__s}{switch\+\_\+api\+\_\+port\+\_\+info\+\_\+s} {\bfseries switch\+\_\+api\+\_\+port\+\_\+info\+\_\+t}}\label{group__Port_ga7960b44bff00d9cf41c78687348dea8a}
+
+\item 
+typedef struct \\*
+\hyperlink{structswitch__port__pause__info__}{switch\+\_\+port\+\_\+pause\+\_\+info\+\_\+} \hyperlink{group__Port_ga37bc62721944eb5c3a0e123be73a0a3a}{switch\+\_\+port\+\_\+pause\+\_\+info\+\_\+t}
+\item 
+\hypertarget{group__Port_ga595e7e8f4876b0fa74eae61fb118d258}{typedef void($\ast$ {\bfseries switch\+\_\+port\+\_\+event\+\_\+notification\+\_\+fn} )(switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t handle, switch\+\_\+port\+\_\+event\+\_\+t port\+\_\+event, void $\ast$app\+\_\+data)}\label{group__Port_ga595e7e8f4876b0fa74eae61fb118d258}
+
+\item 
+\hypertarget{group__Port_ga4d368aabcfa975110ac867532c772d73}{typedef void($\ast$ {\bfseries switch\+\_\+port\+\_\+state\+\_\+change\+\_\+notification\+\_\+fn} )(switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t handle, switch\+\_\+port\+\_\+oper\+\_\+status\+\_\+t oper\+\_\+status, void $\ast$app\+\_\+data)}\label{group__Port_ga4d368aabcfa975110ac867532c772d73}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__Port_ga2b4ab95653b3e16a2f0ccab9982be20d}{switch\+\_\+port\+\_\+speed\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+P\+E\+E\+D\+\_\+\+N\+O\+N\+E} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+P\+E\+E\+D\+\_\+10\+G} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+P\+E\+E\+D\+\_\+25\+G} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+P\+E\+E\+D\+\_\+40\+G} = 3, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+P\+E\+E\+D\+\_\+50\+G} = 4, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+P\+E\+E\+D\+\_\+100\+G} = 5
+ \}
+\item 
+\hypertarget{group__Port_ga010215ff00cace01c6966090f6fea7e5}{enum {\bfseries switch\+\_\+port\+\_\+auto\+\_\+neg\+\_\+mode\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+U\+T\+O\+\_\+\+N\+E\+G\+\_\+\+M\+O\+D\+E\+\_\+\+D\+E\+F\+A\+U\+L\+T} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+U\+T\+O\+\_\+\+N\+E\+G\+\_\+\+M\+O\+D\+E\+\_\+\+E\+N\+A\+B\+L\+E} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+U\+T\+O\+\_\+\+N\+E\+G\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+L\+E} = 2
+ \}}\label{group__Port_ga010215ff00cace01c6966090f6fea7e5}
+
+\item 
+enum \hyperlink{group__Port_gad978f1f45abc92d529c0d6c1d8d75228}{switch\+\_\+flowcontrol\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+F\+L\+O\+W\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+F\+L\+O\+W\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+F\+C} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+F\+L\+O\+W\+C\+O\+N\+T\+R\+O\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+A\+U\+S\+E} = 2
+ \}
+\item 
+\hypertarget{group__Port_gab0f3450746e9df2487eb050a85f7d80b}{enum {\bfseries switch\+\_\+port\+\_\+event\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+D\+D} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+E\+L\+E\+T\+E} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+A\+X} = 3
+ \}}\label{group__Port_gab0f3450746e9df2487eb050a85f7d80b}
+
+\item 
+\hypertarget{group__Port_gadaa4a2ef52dc0bdd217b76cec3f8e275}{enum {\bfseries switch\+\_\+port\+\_\+oper\+\_\+status\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+O\+P\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+N\+O\+N\+E} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+O\+P\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+N\+K\+N\+O\+W\+N} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+O\+P\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+U\+P} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+O\+P\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+D\+O\+W\+N} = 3, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+O\+P\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+M\+A\+X}
+ \}}\label{group__Port_gadaa4a2ef52dc0bdd217b76cec3f8e275}
+
+\item 
+\hypertarget{group__Port_ga50cd49cb171ae0bdbfe15178fecdc692}{enum {\bfseries switch\+\_\+port\+\_\+attribute\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+A\+D\+M\+I\+N\+\_\+\+S\+T\+A\+T\+E} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+S\+P\+E\+E\+D} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+T\+C} = (1 $<$$<$ 2), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+Q\+O\+S\+\_\+\+G\+R\+O\+U\+P} = (1 $<$$<$ 3), 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+E\+G\+R\+E\+S\+S\+\_\+\+Q\+O\+S\+\_\+\+G\+R\+O\+U\+P} = (1 $<$$<$ 4), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+T\+C\+\_\+\+Q\+O\+S\+\_\+\+G\+R\+O\+U\+P} = (1 $<$$<$ 5), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+T\+R\+U\+S\+T\+\_\+\+D\+S\+C\+P} = (1 $<$$<$ 6), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+T\+R\+U\+S\+T\+\_\+\+P\+C\+P} = (1 $<$$<$ 7), 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+D\+E\+F\+A\+U\+L\+T\+\_\+\+C\+O\+L\+O\+R} = (1 $<$$<$ 8), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+U\+U\+C\+\_\+\+M\+E\+T\+E\+R\+\_\+\+H\+A\+N\+D\+L\+E} = (1 $<$$<$ 9), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+U\+M\+C\+\_\+\+M\+E\+T\+E\+R\+\_\+\+H\+A\+N\+D\+L\+E} = (1 $<$$<$ 10), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+B\+C\+A\+S\+T\+\_\+\+M\+E\+T\+E\+R\+\_\+\+H\+A\+N\+D\+L\+E} = (1 $<$$<$ 11), 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+O\+P\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S} = (1 $<$$<$ 12), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+L\+A\+N\+E\+\_\+\+L\+I\+S\+T} = (1 $<$$<$ 13), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+I\+N\+G\+R\+E\+S\+S\+\_\+\+A\+C\+L\+\_\+\+G\+R\+O\+U\+P} = (1 $<$$<$ 14), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+M\+O\+D\+E} = (1 $<$$<$ 15), 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+A\+U\+T\+O\+\_\+\+N\+E\+G\+\_\+\+M\+O\+D\+E} = (1 $<$$<$ 16), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+M\+T\+U} = (1 $<$$<$ 17), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+N\+U\+M\+\_\+\+Q\+U\+E\+U\+E\+S} = (1 $<$$<$ 18), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+L\+E\+A\+R\+N\+I\+N\+G\+\_\+\+E\+N\+A\+B\+L\+E\+D} = (1 $<$$<$ 19), 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+A\+T\+T\+R\+\_\+\+E\+G\+R\+E\+S\+S\+\_\+\+A\+C\+L\+\_\+\+G\+R\+O\+U\+P} = (1 $<$$<$ 20)
+ \}}\label{group__Port_ga50cd49cb171ae0bdbfe15178fecdc692}
+
+\item 
+\hypertarget{group__Port_ga04c93b3ef80f48ad8f397afc2ca9efcc}{enum {\bfseries switch\+\_\+port\+\_\+counter\+\_\+id\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+G\+O\+O\+D\+\_\+\+O\+C\+T\+E\+T\+S} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+A\+L\+L\+\_\+\+O\+C\+T\+E\+T\+S} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+G\+O\+O\+D\+\_\+\+P\+K\+T\+S} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+A\+L\+L\+\_\+\+P\+K\+T\+S} = 3, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+V\+L\+A\+N\+\_\+\+P\+K\+T\+S} = 4, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+U\+C\+A\+S\+T\+\_\+\+P\+K\+T\+S} = 5, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+M\+C\+A\+S\+T\+\_\+\+P\+K\+T\+S} = 6, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+B\+C\+A\+S\+T\+\_\+\+P\+K\+T\+S} = 7, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+F\+C\+S\+\_\+\+E\+R\+R\+O\+R\+S} = 8, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+K\+T\+S} = 9, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+C\+R\+C\+\_\+\+E\+R\+R\+O\+R\+S} = 10, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+F\+U\+L\+L} = 11, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+F\+R\+A\+G\+M\+E\+N\+T\+S} = 12, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+J\+A\+B\+B\+E\+R\+S} = 13, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+G\+O\+O\+D\+\_\+\+O\+C\+T\+E\+T\+S} = 14, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+A\+L\+L\+\_\+\+O\+C\+T\+E\+T\+S} = 15, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+G\+O\+O\+D\+\_\+\+P\+K\+T\+S} = 16, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+A\+L\+L\+\_\+\+P\+K\+T\+S} = 17, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+V\+L\+A\+N\+\_\+\+P\+K\+T\+S} = 18, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+U\+C\+A\+S\+T\+\_\+\+P\+K\+T\+S} = 19, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+M\+C\+A\+S\+T\+\_\+\+P\+K\+T\+S} = 20, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+B\+C\+A\+S\+T\+\_\+\+P\+K\+T\+S} = 21, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+E\+R\+R\+O\+R\+\_\+\+P\+K\+T\+S} = 22, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+K\+T\+S\+\_\+\+L\+T\+\_\+64} = 23, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+K\+T\+S\+\_\+\+E\+Q\+\_\+64} = 24, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+K\+T\+S\+\_\+65\+\_\+\+T\+O\+\_\+127} = 25, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+K\+T\+S\+\_\+128\+\_\+\+T\+O\+\_\+255} = 26, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+K\+T\+S\+\_\+256\+\_\+\+T\+O\+\_\+511} = 27, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+K\+T\+S\+\_\+512\+\_\+\+T\+O\+\_\+1023} = 28, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+K\+T\+S\+\_\+1024\+\_\+\+T\+O\+\_\+1518} = 29, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+K\+T\+S\+\_\+1519\+\_\+\+T\+O\+\_\+2047} = 30, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+K\+T\+S\+\_\+2048\+\_\+\+T\+O\+\_\+4095} = 31, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+K\+T\+S\+\_\+4096\+\_\+\+T\+O\+\_\+8191} = 32, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+K\+T\+S\+\_\+8192\+\_\+\+T\+O\+\_\+9215} = 33, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+K\+T\+S\+\_\+9216} = 34, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+K\+T\+S\+\_\+\+L\+T\+\_\+64} = 35, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+K\+T\+S\+\_\+\+E\+Q\+\_\+64} = 36, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+K\+T\+S\+\_\+65\+\_\+\+T\+O\+\_\+127} = 37, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+K\+T\+S\+\_\+128\+\_\+\+T\+O\+\_\+255} = 38, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+K\+T\+S\+\_\+256\+\_\+\+T\+O\+\_\+511} = 39, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+K\+T\+S\+\_\+512\+\_\+\+T\+O\+\_\+1023} = 40, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+K\+T\+S\+\_\+1024\+\_\+\+T\+O\+\_\+1518} = 41, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+K\+T\+S\+\_\+1519\+\_\+\+T\+O\+\_\+2047} = 42, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+K\+T\+S\+\_\+2048\+\_\+\+T\+O\+\_\+4095} = 43, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+K\+T\+S\+\_\+4096\+\_\+\+T\+O\+\_\+8191} = 44, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+K\+T\+S\+\_\+8192\+\_\+\+T\+O\+\_\+9215} = 45, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+K\+T\+S\+\_\+9216} = 46, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+0\+\_\+\+P\+K\+T\+S} = 47, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+1\+\_\+\+P\+K\+T\+S} = 48, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+2\+\_\+\+P\+K\+T\+S} = 49, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+3\+\_\+\+P\+K\+T\+S} = 50, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+4\+\_\+\+P\+K\+T\+S} = 51, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+5\+\_\+\+P\+K\+T\+S} = 52, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+6\+\_\+\+P\+K\+T\+S} = 53, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+7\+\_\+\+P\+K\+T\+S} = 54, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+F\+C\+\_\+0\+\_\+\+P\+K\+T\+S} = 55, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+F\+C\+\_\+1\+\_\+\+P\+K\+T\+S} = 56, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+F\+C\+\_\+2\+\_\+\+P\+K\+T\+S} = 57, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+F\+C\+\_\+3\+\_\+\+P\+K\+T\+S} = 58, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+F\+C\+\_\+4\+\_\+\+P\+K\+T\+S} = 59, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+F\+C\+\_\+5\+\_\+\+P\+K\+T\+S} = 60, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+F\+C\+\_\+6\+\_\+\+P\+K\+T\+S} = 61, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+U\+T\+\_\+\+P\+F\+C\+\_\+7\+\_\+\+P\+K\+T\+S} = 62, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+O\+V\+E\+R\+\_\+\+S\+I\+Z\+E\+D\+\_\+\+P\+K\+T\+S} = 63, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+U\+N\+D\+E\+R\+\_\+\+S\+I\+Z\+E\+D\+\_\+\+P\+K\+T\+S} = 64, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+F\+R\+A\+M\+E\+S\+\_\+\+T\+O\+O\+\_\+\+L\+O\+N\+G} = 65, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+0\+\_\+\+R\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 66, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+1\+\_\+\+R\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 67, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+2\+\_\+\+R\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 68, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+3\+\_\+\+R\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 69, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+4\+\_\+\+R\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 70, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+5\+\_\+\+R\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 71, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+6\+\_\+\+R\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 72, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+7\+\_\+\+R\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 73, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+0\+\_\+\+T\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 74, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+1\+\_\+\+T\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 75, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+2\+\_\+\+T\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 76, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+3\+\_\+\+T\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 77, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+4\+\_\+\+T\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 78, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+5\+\_\+\+T\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 79, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+6\+\_\+\+T\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 80, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+I\+N\+\_\+\+P\+F\+C\+\_\+7\+\_\+\+T\+X\+\_\+\+P\+A\+U\+S\+E\+\_\+\+D\+U\+R\+A\+T\+I\+O\+N} = 81, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+O\+C\+T\+E\+T\+S} = 82, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+P\+K\+T\+S} = 83, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+\_\+\+M\+A\+X}
+ \}}\label{group__Port_ga04c93b3ef80f48ad8f397afc2ca9efcc}
+
+\item 
+\hypertarget{group__Port_ga8cefa88ecd99f2331b77880efe2d4c85}{enum {\bfseries switch\+\_\+port\+\_\+breakout\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+B\+R\+E\+A\+K\+O\+U\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+A\+N\+E\+\_\+1} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+B\+R\+E\+A\+K\+O\+U\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+A\+N\+E\+\_\+2} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+B\+R\+E\+A\+K\+O\+U\+T\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+A\+N\+E\+\_\+4} = 3
+ \}}\label{group__Port_ga8cefa88ecd99f2331b77880efe2d4c85}
+
+\item 
+\hypertarget{group__Port_gabb078780496ff52dc4d5e557cd07fa69}{enum {\bfseries switch\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+N\+E} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+M\+O\+D\+E\+\_\+\+P\+H\+Y\+\_\+\+N\+E\+A\+R} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+M\+O\+D\+E\+\_\+\+P\+H\+Y\+\_\+\+F\+A\+R} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+C\+\_\+\+N\+E\+A\+R} = 3, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+C\+\_\+\+F\+A\+R} = 4, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+L\+O\+O\+P\+B\+A\+C\+K\+\_\+\+M\+O\+D\+E\+\_\+\+M\+A\+X}
+ \}}\label{group__Port_gabb078780496ff52dc4d5e557cd07fa69}
+
+\item 
+\hypertarget{group__Port_ga8a7257270b607874f50acbf967b98372}{enum {\bfseries switch\+\_\+port\+\_\+fec\+\_\+mode\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+F\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+N\+E} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+F\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+F\+C} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+F\+E\+C\+\_\+\+M\+O\+D\+E\+\_\+\+R\+S} = 2
+ \}}\label{group__Port_ga8a7257270b607874f50acbf967b98372}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga7a09ba95beac49bc763d563fe8c98a25}{switch\+\_\+api\+\_\+port\+\_\+probe} (switch\+\_\+device\+\_\+t device, unsigned int max\+\_\+count, unsigned int $\ast$count, \hyperlink{structswitch__api__port__info__s}{switch\+\_\+api\+\_\+port\+\_\+info\+\_\+t} $\ast$port\+\_\+info)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga8ccf05054438433dd23425f30d7af728}{switch\+\_\+api\+\_\+port\+\_\+enable\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+port\+\_\+t port, bool enable)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gab3cc4a1b27d8e28b64738a68d4e1b3dd}{switch\+\_\+api\+\_\+port\+\_\+enable\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+port\+\_\+t port, bool $\ast$enable)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga721fff732966b9706403fb8f07dca1af}{switch\+\_\+api\+\_\+port\+\_\+speed\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, \hyperlink{group__Port_ga29ae043889998625e4f817091229005c}{switch\+\_\+port\+\_\+speed\+\_\+t} speed)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga2bdeb19717ce9325f184b001a20ed84a}{switch\+\_\+api\+\_\+port\+\_\+speed\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, \hyperlink{group__Port_ga29ae043889998625e4f817091229005c}{switch\+\_\+port\+\_\+speed\+\_\+t} $\ast$speed)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga2f088c5660801030ce019958214c3c51}{switch\+\_\+api\+\_\+port\+\_\+auto\+\_\+neg\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+port\+\_\+auto\+\_\+neg\+\_\+mode\+\_\+t an\+\_\+mode)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga31cdf6eab8a5f037449ada5ea7e688c1}{switch\+\_\+api\+\_\+port\+\_\+auto\+\_\+neg\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+port\+\_\+auto\+\_\+neg\+\_\+mode\+\_\+t $\ast$an\+\_\+mode)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gad94f9eacbf5a73aae21faba1beeec0d7}{switch\+\_\+api\+\_\+port\+\_\+admin\+\_\+state\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, bool admin\+\_\+state)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga6b5350479565af6ade70298f5ddda43d}{switch\+\_\+api\+\_\+port\+\_\+admin\+\_\+state\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, bool $\ast$admin\+\_\+state)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gaaaf46ccd32903f34c23ca9d8c0b8d4ba}{switch\+\_\+api\+\_\+port\+\_\+oper\+\_\+status\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+port\+\_\+oper\+\_\+status\+\_\+t $\ast$oper\+\_\+status)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga34d4ddbb6d0bc100e803641c3fe7ef3f}{switch\+\_\+api\+\_\+port\+\_\+debounce\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+port\+\_\+t port, unsigned int interval)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gaf4533302a9f1c26a8b7042029c9a15a3}{switch\+\_\+api\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+t lb\+\_\+mode)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gabfe8e083320c55388d25ee4d15358fb1}{switch\+\_\+api\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+t $\ast$lb\+\_\+mode)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga9fa02691bc276e0584146ba6d7a51377}{switch\+\_\+api\+\_\+port\+\_\+mtu\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint32\+\_\+t rx\+\_\+mtu, switch\+\_\+uint32\+\_\+t tx\+\_\+mtu)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gabcaecdc5f3c11c0c3ab54ceae74e8f7e}{switch\+\_\+api\+\_\+port\+\_\+mtu\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint32\+\_\+t $\ast$rx\+\_\+mtu, switch\+\_\+uint32\+\_\+t $\ast$tx\+\_\+mtu)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga6a33966b85c44a7f371f976a0eacc966}{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+rate\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+port\+\_\+t port, unsigned int rate)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga0df026f78db7fea364622bd6b8fda283}{switch\+\_\+api\+\_\+port\+\_\+set} (switch\+\_\+device\+\_\+t device, \hyperlink{structswitch__api__port__info__s}{switch\+\_\+api\+\_\+port\+\_\+info\+\_\+t} $\ast$api\+\_\+port\+\_\+info)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gab9377eac11e64a53487d5c0f1fabafa4}{switch\+\_\+api\+\_\+port\+\_\+get} (switch\+\_\+device\+\_\+t device, \hyperlink{structswitch__api__port__info__s}{switch\+\_\+api\+\_\+port\+\_\+info\+\_\+t} $\ast$api\+\_\+port\+\_\+info)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga1f9950ab7dfde4c28709c0f8e0d16ba8}{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+packet\+\_\+type\+\_\+t pkt\+\_\+type, switch\+\_\+handle\+\_\+t meter\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga44911c0a2e11f0fc3a229c59e6b39b31}{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+packet\+\_\+type\+\_\+t pkt\+\_\+type, switch\+\_\+handle\+\_\+t $\ast$meter\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gaedebd2fb890d2cd97d6a98b2bb48588d}{switch\+\_\+api\+\_\+storm\+\_\+control\+\_\+counters\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t meter\+\_\+handle, const switch\+\_\+uint16\+\_\+t num\+\_\+counters, const switch\+\_\+meter\+\_\+counter\+\_\+t $\ast$counter\+\_\+ids, \hyperlink{structswitch__counter__s}{switch\+\_\+counter\+\_\+t} $\ast$counters)
+\item 
+\hypertarget{group__Port_gacc1db4db117fd3876c158bbe7b4df187}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+drop\+\_\+limit\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, uint32\+\_\+t num\+\_\+bytes)}\label{group__Port_gacc1db4db117fd3876c158bbe7b4df187}
+
+\item 
+\hypertarget{group__Port_ga6f864d2070ca27f5757c8e94fdbe16ae}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+drop\+\_\+hysteresis\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, uint32\+\_\+t num\+\_\+bytes)}\label{group__Port_ga6f864d2070ca27f5757c8e94fdbe16ae}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga39b531512e85981cb4e7f99318c3e063}{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+cos\+\_\+mapping} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, uint8\+\_\+t $\ast$cos\+\_\+to\+\_\+icos)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga6e6f45a9496d264af46b4e48d9a09d97}{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+enable} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, \hyperlink{group__Meters_gaf0593a04026dacc8d7cf40c93b990bb5}{switch\+\_\+shaper\+\_\+type\+\_\+t} shaper\+\_\+type, uint32\+\_\+t burst\+\_\+size, uint32\+\_\+t rate)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga349d90d8b9e613a7d2a23764d261c4b7}{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+disable} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga3f31b271310e845dd60834e009f98b73}{switch\+\_\+api\+\_\+port\+\_\+trust\+\_\+dscp\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, bool trust\+\_\+dscp)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga198111a47492d602a16fd096fcd8807a}{switch\+\_\+api\+\_\+port\+\_\+trust\+\_\+pcp\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, bool trust\+\_\+pcp)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gad0189f9437a11a6c75fcdfd49fdaf444}{switch\+\_\+api\+\_\+ppg\+\_\+lossless\+\_\+enable} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t ppg\+\_\+handle, bool enable)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga870eecc7306b30712441f5a81db26d81}{switch\+\_\+api\+\_\+ppg\+\_\+guaranteed\+\_\+limit\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t ppg\+\_\+handle, uint32\+\_\+t num\+\_\+bytes)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga5d92200852af4afe776553013791ac43}{switch\+\_\+api\+\_\+ppg\+\_\+skid\+\_\+limit\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t ppg\+\_\+handle, uint32\+\_\+t num\+\_\+bytes)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gaf6855c2a5526e288e5641d6199ab5218}{switch\+\_\+api\+\_\+ppg\+\_\+skid\+\_\+hysteresis\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t ppg\+\_\+handle, uint32\+\_\+t num\+\_\+bytes)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga34d51ea3998db1770eb9407d78ebd6b8}{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+ingress\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t qos\+\_\+group)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga2b82c770363f57e50782a36cf82404b9}{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+tc\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t qos\+\_\+group)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga6bc054f158879dbcdde33f1e9999b01d}{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+egress\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t qos\+\_\+group)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gae6a69047950e2a21e2d1a6f1ddc1df92}{switch\+\_\+api\+\_\+port\+\_\+tc\+\_\+default\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, uint16\+\_\+t tc)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga92721b7ede03602aa2b58c4e67d64254}{switch\+\_\+api\+\_\+port\+\_\+color\+\_\+default\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+color\+\_\+t color)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga26c2f4d6224dbdb8c95141df7028de4f}{switch\+\_\+api\+\_\+port\+\_\+flowcontrol\+\_\+mode\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, \hyperlink{group__Port_gad870ecb5980b7fdef2532fbe7ca653db}{switch\+\_\+flowcontrol\+\_\+type\+\_\+t} flow\+\_\+control)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gab5b26a9069c497ce53a3fd5405ac93f5}{switch\+\_\+api\+\_\+port\+\_\+learning\+\_\+enabled\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, bool learning\+\_\+enabled)
+\item 
+\hypertarget{group__Port_ga7f2a89cd322f2490378bc1439b9167ba}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+add} (switch\+\_\+device\+\_\+t device, \hyperlink{structswitch__api__port__info__s}{switch\+\_\+api\+\_\+port\+\_\+info\+\_\+t} $\ast$api\+\_\+port\+\_\+info, switch\+\_\+handle\+\_\+t $\ast$port\+\_\+handle)}\label{group__Port_ga7f2a89cd322f2490378bc1439b9167ba}
+
+\item 
+\hypertarget{group__Port_ga684b3171a5bfc6167f81e192cac5e4f6}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle)}\label{group__Port_ga684b3171a5bfc6167f81e192cac5e4f6}
+
+\item 
+\hypertarget{group__Port_gae1e3edc8ef18481bfa2a6beca5da110a}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+event\+\_\+notification\+\_\+register} (switch\+\_\+device\+\_\+t device, switch\+\_\+app\+\_\+id\+\_\+t app\+\_\+id, switch\+\_\+port\+\_\+event\+\_\+notification\+\_\+fn cb\+\_\+fn)}\label{group__Port_gae1e3edc8ef18481bfa2a6beca5da110a}
+
+\item 
+\hypertarget{group__Port_gafbed44eb4a2f259de693074943f3248d}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+event\+\_\+notification\+\_\+deregister} (switch\+\_\+device\+\_\+t device, switch\+\_\+app\+\_\+id\+\_\+t app\+\_\+id)}\label{group__Port_gafbed44eb4a2f259de693074943f3248d}
+
+\item 
+\hypertarget{group__Port_ga84e3a3bf8aa70ece4db43ce04737ddae}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+state\+\_\+change\+\_\+notification\+\_\+register} (switch\+\_\+device\+\_\+t device, switch\+\_\+app\+\_\+id\+\_\+t app\+\_\+id, switch\+\_\+port\+\_\+state\+\_\+change\+\_\+notification\+\_\+fn cb\+\_\+fn)}\label{group__Port_ga84e3a3bf8aa70ece4db43ce04737ddae}
+
+\item 
+\hypertarget{group__Port_gae6a3f5879951cd11e7473831cd8d28c3}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+state\+\_\+change\+\_\+notification\+\_\+deregister} (switch\+\_\+device\+\_\+t device, switch\+\_\+app\+\_\+id\+\_\+t app\+\_\+id)}\label{group__Port_gae6a3f5879951cd11e7473831cd8d28c3}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga81b2dc4b98de6c09ee757ffc368acb85}{switch\+\_\+api\+\_\+port\+\_\+id\+\_\+to\+\_\+handle\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+port\+\_\+t port, switch\+\_\+handle\+\_\+t $\ast$port\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gab2961d3b98bbe5297c433e211e6f9bf1}{switch\+\_\+api\+\_\+port\+\_\+handle\+\_\+to\+\_\+id\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+port\+\_\+t $\ast$port)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga660e63030eb7a16ffc27a19da3cd4c89}{switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint16\+\_\+t num\+\_\+entries, switch\+\_\+port\+\_\+counter\+\_\+id\+\_\+t $\ast$counter\+\_\+ids, uint64\+\_\+t $\ast$counters)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga27ceb0c47751ac0de7a45d70540ee648}{switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+counter\+\_\+id\+\_\+clear} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t port\+\_\+handle, const switch\+\_\+uint16\+\_\+t num\+\_\+counters, const switch\+\_\+port\+\_\+counter\+\_\+id\+\_\+t $\ast$counter\+\_\+ids)
+\item 
+\hypertarget{group__Port_ga98e4a0ec715427cf0718043d96f1bfb8}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+clear} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle)}\label{group__Port_ga98e4a0ec715427cf0718043d96f1bfb8}
+
+\item 
+\hypertarget{group__Port_gaf540083d2d1afaa1838a5fdbed909761}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+all\+\_\+stats\+\_\+clear} (switch\+\_\+device\+\_\+t device)}\label{group__Port_gaf540083d2d1afaa1838a5fdbed909761}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga2fe148ddd91df995079fd8952e12035d}{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t acl\+\_\+group)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga37ec64c2e627dde7ee8cfe6b3c244043}{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$acl\+\_\+group)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gaa4eb49e35e7a5d889278fe65c4721e96}{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint16\+\_\+t label)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga8dd3834c0f47483df4c79e32f741b43b}{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint16\+\_\+t $\ast$label)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga47363f3cad57f8f9fb7219c10c6af54e}{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t acl\+\_\+group)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gac3d18500fb2baada93efd5439976be3c}{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$acl\+\_\+group)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga19430bdee91f4fe0844416ea6b70d0bf}{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint16\+\_\+t label)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga13c097fa6231be471830356819fbb309}{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint16\+\_\+t $\ast$label)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga745fa511d496afbfc4f61debd06739f9}{switch\+\_\+api\+\_\+port\+\_\+bind\+\_\+mode\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+port\+\_\+bind\+\_\+mode\+\_\+t bind\+\_\+mode)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga90229db6d4ecab6f911cb13495001a1e}{switch\+\_\+api\+\_\+port\+\_\+bind\+\_\+mode\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+port\+\_\+bind\+\_\+mode\+\_\+t $\ast$bind\+\_\+mode)
+\item 
+\hypertarget{group__Port_gae3980f2bcbbe0394a469f4c5a0099550}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+handle\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t port\+\_\+handle, const void $\ast$cli\+\_\+ctx)}\label{group__Port_gae3980f2bcbbe0394a469f4c5a0099550}
+
+\item 
+\hypertarget{group__Port_ga81717a02d795a93080f9cc65733afc83}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t port\+\_\+handle, const void $\ast$cli\+\_\+ctx)}\label{group__Port_ga81717a02d795a93080f9cc65733afc83}
+
+\item 
+\hypertarget{group__Port_gac36cf8a57441dddae318085b47f542e2}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+by\+\_\+port\+\_\+number\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+port\+\_\+t port, const void $\ast$cli\+\_\+ctx)}\label{group__Port_gac36cf8a57441dddae318085b47f542e2}
+
+\item 
+\hypertarget{group__Port_gac4c63741a52c14ae8488eb2553e16762}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+info\+\_\+by\+\_\+port\+\_\+number\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+port\+\_\+t port, const void $\ast$cli\+\_\+ctx)}\label{group__Port_gac4c63741a52c14ae8488eb2553e16762}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gaa8c0716de3a44d4465c8b32fa965df19}{switch\+\_\+api\+\_\+port\+\_\+max\+\_\+queues\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint32\+\_\+t $\ast$max\+\_\+queues)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga50d0641af0a5154d176b9ddef5787be4}{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint32\+\_\+t pfc\+\_\+map)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga8519f53fe4f6365f81abc897d3353b32}{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint32\+\_\+t $\ast$pfc\+\_\+map)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga374a398006d8165eab6586c936ecbc3c}{switch\+\_\+api\+\_\+port\+\_\+link\+\_\+pause\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, bool $\ast$rx\+\_\+pause\+\_\+en, bool $\ast$tx\+\_\+pause\+\_\+en)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga7afd7387c49cd43b49955440669e8650}{switch\+\_\+api\+\_\+port\+\_\+link\+\_\+pause\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, bool rx\+\_\+pause\+\_\+en, bool tx\+\_\+pause\+\_\+en)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga12efba678f117f3402fef2f70cdbb1c9}{switch\+\_\+api\+\_\+port\+\_\+fec\+\_\+mode\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+port\+\_\+fec\+\_\+mode\+\_\+t fec\+\_\+mode)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga5dd7d6e3827bddc801ae0dfb8232adb4}{switch\+\_\+api\+\_\+port\+\_\+fec\+\_\+mode\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+port\+\_\+fec\+\_\+mode\+\_\+t $\ast$fec\+\_\+mode)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga6fb574dd86a62bb26a18e797190cb4f5}{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$ingress\+\_\+qos\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$tc\+\_\+queue\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$tc\+\_\+ppg\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$egress\+\_\+qos\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gaa685800d18d554feebc830175356ed75}{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+mirror\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t mirror\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga047de2566fe33c0984bd41645d4e7f95}{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+mirror\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$mirror\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga6d6eae1005fe82102992ad06068e79a9}{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+mirror\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t mirror\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gaffdc1f3161008ee9a9b687d2f2bb0ace}{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+mirror\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$mirror\+\_\+handle)
+\item 
+\hypertarget{group__Port_gad40dab8e3a968e4c51fd1299f8d00a59}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+sflow\+\_\+handle\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$ingress\+\_\+sflow\+\_\+handle)}\label{group__Port_gad40dab8e3a968e4c51fd1299f8d00a59}
+
+\item 
+\hypertarget{group__Port_gaab87014e74ae65e6a847cf410d726bb8}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+sflow\+\_\+handle\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$egress\+\_\+sflow\+\_\+handle)}\label{group__Port_gaab87014e74ae65e6a847cf410d726bb8}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga084eb311532471a0cd4d053fbd48c1e1}{switch\+\_\+api\+\_\+port\+\_\+max\+\_\+ppg\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint8\+\_\+t $\ast$num\+\_\+ppgs)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gadad12c0cfe002a89b62a9fcc8ac015cd}{switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, uint8\+\_\+t $\ast$num\+\_\+ppgs, switch\+\_\+handle\+\_\+t $\ast$ppg\+\_\+handles)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga960c98537f32d8e404efb413ea709ed2}{switch\+\_\+api\+\_\+port\+\_\+icos\+\_\+to\+\_\+ppg\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t qos\+\_\+map\+\_\+handle)
+\item 
+\hypertarget{group__Port_gad1e29493f3f0a32352a967c41d9dbaf5}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+icos\+\_\+to\+\_\+ppg\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$qos\+\_\+map\+\_\+handle)}\label{group__Port_gad1e29493f3f0a32352a967c41d9dbaf5}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gafc6d663e92b6aa9c1de5bbc5368fd8f1}{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+priority\+\_\+to\+\_\+queue\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t qos\+\_\+map\+\_\+handle)
+\item 
+\hypertarget{group__Port_gae523967864dadab632360ca93e0c9a34}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+priority\+\_\+to\+\_\+queue\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$qos\+\_\+map\+\_\+handle)}\label{group__Port_gae523967864dadab632360ca93e0c9a34}
+
+\item 
+\hypertarget{group__Port_gabec6ea623ed50db4bafe9403606608e2}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+scheduler\+\_\+group\+\_\+handles\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$group\+\_\+handles)}\label{group__Port_gabec6ea623ed50db4bafe9403606608e2}
+
+\item 
+\hypertarget{group__Port_ga7dd9d23f6c2ab42963997cec0c550e56}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+queue\+\_\+scheduler\+\_\+group\+\_\+handle\+\_\+count\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint32\+\_\+t $\ast$count)}\label{group__Port_ga7dd9d23f6c2ab42963997cec0c550e56}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga80afc4580e5b5fb43fbfb12a0e466121}{switch\+\_\+api\+\_\+port\+\_\+scheduler\+\_\+profile\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t scheduler\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gaf347c04b35bcbed3cc0e114fd19fd966}{switch\+\_\+api\+\_\+port\+\_\+scheduler\+\_\+profile\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$scheduler\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga04df5fc656668c287f597d8989ecdae7}{switch\+\_\+api\+\_\+port\+\_\+lane\+\_\+list\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, \hyperlink{structswitch__port__lane__list__s}{switch\+\_\+port\+\_\+lane\+\_\+list\+\_\+t} $\ast$lane\+\_\+list)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gac6ce2cf2532261b6be0220c94f4bd3e5}{switch\+\_\+api\+\_\+ppg\+\_\+drop\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t ppg\+\_\+handle, uint64\+\_\+t $\ast$num\+\_\+packets)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gaf96e0cd735ba058c331b625105be359c}{switch\+\_\+api\+\_\+ppg\+\_\+drop\+\_\+count\+\_\+clear} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t ppg\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga895dfbe740b64544f9830e98502fd75f}{switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+drop\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t port\+\_\+handle, uint64\+\_\+t $\ast$drop\+\_\+count)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gadb7e9418491fac9b59325d30fbbedbde}{switch\+\_\+api\+\_\+port\+\_\+queue\+\_\+drop\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t port\+\_\+handle, uint64\+\_\+t $\ast$drop\+\_\+count)
+\item 
+\hypertarget{group__Port_gae3b481af5227874000daf29e86eae7e8}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+port\+\_\+stats\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint16\+\_\+t num\+\_\+entries, switch\+\_\+interface\+\_\+counter\+\_\+id\+\_\+t $\ast$counter\+\_\+id, \hyperlink{structswitch__counter__s}{switch\+\_\+counter\+\_\+t} $\ast$counters)}\label{group__Port_gae3b481af5227874000daf29e86eae7e8}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_gaa7c91f0dccbc504c3b0ac8a48dcabf7f}{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+stats\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t port\+\_\+handle, const switch\+\_\+packet\+\_\+type\+\_\+t pkt\+\_\+type, \hyperlink{structswitch__counter__s}{switch\+\_\+counter\+\_\+t} $\ast$counter)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Port_ga3275987949631b3be504b7a063922497}{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+stats\+\_\+clear} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t port\+\_\+handle, const switch\+\_\+packet\+\_\+type\+\_\+t pkt\+\_\+type)
+\item 
+\hypertarget{group__Port_gaf4d8dff7ce1eb5453662093c2fd602c0}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+create} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint32\+\_\+t ppg\+\_\+index, switch\+\_\+handle\+\_\+t $\ast$ppg\+\_\+handle)}\label{group__Port_gaf4d8dff7ce1eb5453662093c2fd602c0}
+
+\item 
+\hypertarget{group__Port_gaf189d2b67804efdbed32989dd8120a66}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t ppg\+\_\+handle)}\label{group__Port_gaf189d2b67804efdbed32989dd8120a66}
+
+\item 
+\hypertarget{group__Port_gac0c41ccce00e76d17b53afafa006046e}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+default\+\_\+ppg\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$ppg\+\_\+handle)}\label{group__Port_gac0c41ccce00e76d17b53afafa006046e}
+
+\item 
+\hypertarget{group__Port_gab557635405c18abb2024183cf339aa23}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+cut\+\_\+through\+\_\+mode\+\_\+all\+\_\+set} (switch\+\_\+device\+\_\+t device, bool enable)}\label{group__Port_gab557635405c18abb2024183cf339aa23}
+
+\item 
+\hypertarget{group__Port_gaec5fdebcf11f1414fae10d1b1ec73c1e}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+usage\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t ppg\+\_\+handle, uint64\+\_\+t $\ast$gmin\+\_\+bytes, uint64\+\_\+t $\ast$shared\+\_\+bytes, uint64\+\_\+t $\ast$skid\+\_\+bytes, uint64\+\_\+t $\ast$wm\+\_\+bytes)}\label{group__Port_gaec5fdebcf11f1414fae10d1b1ec73c1e}
+
+\item 
+\hypertarget{group__Port_gad482dcd4ace702e932ad018a5d0ee185}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+usage\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t port\+\_\+handle, uint64\+\_\+t $\ast$in\+\_\+bytes, uint64\+\_\+t $\ast$out\+\_\+bytes, uint64\+\_\+t $\ast$in\+\_\+wm, uint64\+\_\+t $\ast$out\+\_\+wm)}\label{group__Port_gad482dcd4ace702e932ad018a5d0ee185}
+
+\item 
+\hypertarget{group__Port_ga66506a5972373a3a8cd0dd4d626300a1}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+stats\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t ppg\+\_\+handle, \hyperlink{structswitch__counter__s}{switch\+\_\+counter\+\_\+t} $\ast$counters)}\label{group__Port_ga66506a5972373a3a8cd0dd4d626300a1}
+
+\item 
+\hypertarget{group__Port_gac1f639a5a54dea864d2120a6f6ffd5da}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+drop\+\_\+untagged\+\_\+packet\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, bool drop\+\_\+untagged\+\_\+pkt)}\label{group__Port_gac1f639a5a54dea864d2120a6f6ffd5da}
+
+\item 
+\hypertarget{group__Port_ga3c59ae9666c21ebcf120f36f708c730f}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+drop\+\_\+untagged\+\_\+packet\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, bool $\ast$drop\+\_\+untagged\+\_\+pkt)}\label{group__Port_ga3c59ae9666c21ebcf120f36f708c730f}
+
+\item 
+\hypertarget{group__Port_gaf7cea664eceb2c128b4c2e1ca0442ce6}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+drop\+\_\+tagged\+\_\+packet\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, bool drop\+\_\+tagged\+\_\+pkt)}\label{group__Port_gaf7cea664eceb2c128b4c2e1ca0442ce6}
+
+\item 
+\hypertarget{group__Port_gac45b260f2c0d5d49a8b75a1348595646}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+drop\+\_\+tagged\+\_\+packet\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, bool $\ast$drop\+\_\+tagged\+\_\+pkt)}\label{group__Port_gac45b260f2c0d5d49a8b75a1348595646}
+
+\item 
+\hypertarget{group__Port_ga53a00e569cbabf4630b22faf0a595418}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+stats\+\_\+clear} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t ppg\+\_\+handle)}\label{group__Port_ga53a00e569cbabf4630b22faf0a595418}
+
+\item 
+\hypertarget{group__Port_gacd1c63c194ea146fa07114f3c42c255b}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+dev\+\_\+port\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+dev\+\_\+port\+\_\+t $\ast$dev\+\_\+port)}\label{group__Port_gacd1c63c194ea146fa07114f3c42c255b}
+
+\item 
+\hypertarget{group__Port_gac7e005e2a44b82edbc19fa27311b390a}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+icos\+\_\+stats\+\_\+add} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t port\+\_\+handle, const uint8\+\_\+t icos)}\label{group__Port_gac7e005e2a44b82edbc19fa27311b390a}
+
+\item 
+\hypertarget{group__Port_gace2650e146f236e4a68ed5caba909722}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+icos\+\_\+stats\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t port\+\_\+handle, const uint8\+\_\+t icos, \hyperlink{structswitch__counter__s}{switch\+\_\+counter\+\_\+t} $\ast$counter)}\label{group__Port_gace2650e146f236e4a68ed5caba909722}
+
+\item 
+\hypertarget{group__Port_ga72c13ddd6e820b3a2f1fe1c2cf4a8b2f}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+icos\+\_\+stats\+\_\+clear} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t port\+\_\+handle, const uint8\+\_\+t icos)}\label{group__Port_ga72c13ddd6e820b3a2f1fe1c2cf4a8b2f}
+
+\item 
+\hypertarget{group__Port_ga7318fc1e144a2dd293d5d837dc80dd3a}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+port\+\_\+icos\+\_\+stats\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t port\+\_\+handle, const uint8\+\_\+t icos)}\label{group__Port_ga7318fc1e144a2dd293d5d837dc80dd3a}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__Port_gad870ecb5980b7fdef2532fbe7ca653db}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+flowcontrol\+\_\+type\+\_\+t@{switch\+\_\+flowcontrol\+\_\+type\+\_\+t}}
+\index{switch\+\_\+flowcontrol\+\_\+type\+\_\+t@{switch\+\_\+flowcontrol\+\_\+type\+\_\+t}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+flowcontrol\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+flowcontrol\+\_\+type\+\_\+s}  {\bf switch\+\_\+flowcontrol\+\_\+type\+\_\+t}}}\label{group__Port_gad870ecb5980b7fdef2532fbe7ca653db}
+port flowcontrol type \hypertarget{group__Port_ga37bc62721944eb5c3a0e123be73a0a3a}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+port\+\_\+pause\+\_\+info\+\_\+t@{switch\+\_\+port\+\_\+pause\+\_\+info\+\_\+t}}
+\index{switch\+\_\+port\+\_\+pause\+\_\+info\+\_\+t@{switch\+\_\+port\+\_\+pause\+\_\+info\+\_\+t}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+port\+\_\+pause\+\_\+info\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+port\+\_\+pause\+\_\+info\+\_\+}  {\bf switch\+\_\+port\+\_\+pause\+\_\+info\+\_\+t}}}\label{group__Port_ga37bc62721944eb5c3a0e123be73a0a3a}
+Port Pause message information \hypertarget{group__Port_ga29ae043889998625e4f817091229005c}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+port\+\_\+speed\+\_\+t@{switch\+\_\+port\+\_\+speed\+\_\+t}}
+\index{switch\+\_\+port\+\_\+speed\+\_\+t@{switch\+\_\+port\+\_\+speed\+\_\+t}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+port\+\_\+speed\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+port\+\_\+speed\+\_\+s}  {\bf switch\+\_\+port\+\_\+speed\+\_\+t}}}\label{group__Port_ga29ae043889998625e4f817091229005c}
+port speed 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__Port_gad978f1f45abc92d529c0d6c1d8d75228}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+flowcontrol\+\_\+type\+\_\+s@{switch\+\_\+flowcontrol\+\_\+type\+\_\+s}}
+\index{switch\+\_\+flowcontrol\+\_\+type\+\_\+s@{switch\+\_\+flowcontrol\+\_\+type\+\_\+s}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+flowcontrol\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+flowcontrol\+\_\+type\+\_\+s}}}\label{group__Port_gad978f1f45abc92d529c0d6c1d8d75228}
+port flowcontrol type \hypertarget{group__Port_ga2b4ab95653b3e16a2f0ccab9982be20d}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+port\+\_\+speed\+\_\+s@{switch\+\_\+port\+\_\+speed\+\_\+s}}
+\index{switch\+\_\+port\+\_\+speed\+\_\+s@{switch\+\_\+port\+\_\+speed\+\_\+s}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+port\+\_\+speed\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+port\+\_\+speed\+\_\+s}}}\label{group__Port_ga2b4ab95653b3e16a2f0ccab9982be20d}
+port speed 
+
+\subsection{Function Documentation}
+\hypertarget{group__Port_ga6b5350479565af6ade70298f5ddda43d}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+admin\+\_\+state\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+admin\+\_\+state\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+admin\+\_\+state\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+admin\+\_\+state\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+admin\+\_\+state\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+admin\+\_\+state\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{bool $\ast$}]{admin\+\_\+state}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga6b5350479565af6ade70298f5ddda43d}
+Port get admin state 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port handle of device to get \\
+\hline
+{\em admin\+\_\+state} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gad94f9eacbf5a73aae21faba1beeec0d7}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+admin\+\_\+state\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+admin\+\_\+state\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+admin\+\_\+state\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+admin\+\_\+state\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+admin\+\_\+state\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+admin\+\_\+state\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{bool}]{admin\+\_\+state}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gad94f9eacbf5a73aae21faba1beeec0d7}
+Port set admin state. Enable/disable port 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port handle of device to get \\
+\hline
+{\em admin\+\_\+state} & Administrative state \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga31cdf6eab8a5f037449ada5ea7e688c1}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+auto\+\_\+neg\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+auto\+\_\+neg\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+auto\+\_\+neg\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+auto\+\_\+neg\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+auto\+\_\+neg\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+auto\+\_\+neg\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+port\+\_\+auto\+\_\+neg\+\_\+mode\+\_\+t $\ast$}]{an\+\_\+mode}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga31cdf6eab8a5f037449ada5ea7e688c1}
+Port Autonegotiation get 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to get \\
+\hline
+{\em enable} & returns T\+R\+U\+E if Autonegotiation is set else F\+A\+L\+S\+E \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga2f088c5660801030ce019958214c3c51}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+auto\+\_\+neg\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+auto\+\_\+neg\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+auto\+\_\+neg\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+auto\+\_\+neg\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+auto\+\_\+neg\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+auto\+\_\+neg\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+port\+\_\+auto\+\_\+neg\+\_\+mode\+\_\+t}]{an\+\_\+mode}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga2f088c5660801030ce019958214c3c51}
+Port Autonegotiation Set 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to set \\
+\hline
+{\em enable} & Enable Autonegotiation if T\+R\+U\+E else disable \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga90229db6d4ecab6f911cb13495001a1e}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+bind\+\_\+mode\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+bind\+\_\+mode\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+bind\+\_\+mode\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+bind\+\_\+mode\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+bind\+\_\+mode\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+bind\+\_\+mode\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+port\+\_\+bind\+\_\+mode\+\_\+t $\ast$}]{bind\+\_\+mode}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga90229db6d4ecab6f911cb13495001a1e}
+Get port bind mode 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em port\+\_\+handle} & – port handle \\
+\hline
+{\em bind\+\_\+mode} & -\/ Bind mode from switch\+\_\+port\+\_\+bind\+\_\+mode\+\_\+t \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga745fa511d496afbfc4f61debd06739f9}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+bind\+\_\+mode\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+bind\+\_\+mode\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+bind\+\_\+mode\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+bind\+\_\+mode\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+bind\+\_\+mode\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+bind\+\_\+mode\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+port\+\_\+bind\+\_\+mode\+\_\+t}]{bind\+\_\+mode}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga745fa511d496afbfc4f61debd06739f9}
+Set port bind mode 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em port\+\_\+handle} & – port handle \\
+\hline
+{\em bind\+\_\+mode} & -\/ Bind mode from switch\+\_\+port\+\_\+bind\+\_\+mode\+\_\+t \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga92721b7ede03602aa2b58c4e67d64254}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+color\+\_\+default\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+color\+\_\+default\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+color\+\_\+default\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+color\+\_\+default\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+color\+\_\+default\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+color\+\_\+default\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+color\+\_\+t}]{color}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga92721b7ede03602aa2b58c4e67d64254}
+set default color on port 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em color} & packet color \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga34d4ddbb6d0bc100e803641c3fe7ef3f}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+debounce\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+debounce\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+debounce\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+debounce\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+debounce\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+debounce\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+port\+\_\+t}]{port, }
+\item[{unsigned int}]{interval}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga34d4ddbb6d0bc100e803641c3fe7ef3f}
+Port operational state declaration interval 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to get \\
+\hline
+{\em interval} & microseconds to debounce \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gac3d18500fb2baada93efd5439976be3c}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{acl\+\_\+group}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gac3d18500fb2baada93efd5439976be3c}
+Get A\+C\+L group handle The port label is derived from the A\+C\+L group handle 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em port\+\_\+handle} & – port handle \\
+\hline
+{\em acl\+\_\+group} & -\/ A\+C\+L group handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga47363f3cad57f8f9fb7219c10c6af54e}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{acl\+\_\+group}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga47363f3cad57f8f9fb7219c10c6af54e}
+Set A\+C\+L group handle The port label is derived from the A\+C\+L group handle 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em port\+\_\+handle} & – port handle \\
+\hline
+{\em acl\+\_\+group} & -\/ A\+C\+L group handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga13c097fa6231be471830356819fbb309}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+uint16\+\_\+t $\ast$}]{label}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga13c097fa6231be471830356819fbb309}
+Get custom port label This A\+P\+I can be used to get label when bind type is S\+W\+I\+T\+C\+H\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em port\+\_\+handle} & – port handle \\
+\hline
+{\em label} & – port label \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga19430bdee91f4fe0844416ea6b70d0bf}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+uint16\+\_\+t}]{label}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga19430bdee91f4fe0844416ea6b70d0bf}
+Set custom port label This A\+P\+I has to be used to set label when bind type is S\+W\+I\+T\+C\+H\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em port\+\_\+handle} & – port handle \\
+\hline
+{\em label} & – port label \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gaffdc1f3161008ee9a9b687d2f2bb0ace}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+mirror\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+mirror\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+mirror\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+mirror\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+mirror\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+mirror\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{mirror\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gaffdc1f3161008ee9a9b687d2f2bb0ace}
+Port get egress mirror 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port on device to get \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga6d6eae1005fe82102992ad06068e79a9}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+mirror\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+mirror\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+mirror\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+mirror\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+mirror\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+mirror\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{mirror\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga6d6eae1005fe82102992ad06068e79a9}
+Port set egress mirror 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port on device to set \\
+\hline
+{\em mirror\+\_\+handle} & mirror session handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga6a33966b85c44a7f371f976a0eacc966}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+rate\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+rate\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+rate\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+rate\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+rate\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+egress\+\_\+rate\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+port\+\_\+t}]{port, }
+\item[{unsigned int}]{rate}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga6a33966b85c44a7f371f976a0eacc966}
+Port egress rate set 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to set \\
+\hline
+{\em rate} & rate in kbps \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gab3cc4a1b27d8e28b64738a68d4e1b3dd}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+enable\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+enable\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+enable\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+enable\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+enable\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+enable\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+port\+\_\+t}]{port, }
+\item[{bool $\ast$}]{enable}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gab3cc4a1b27d8e28b64738a68d4e1b3dd}
+Port Enable Get -\/ Get the Port Enabled state 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to get information \\
+\hline
+{\em enable} & T\+R\+U\+E =$>$ port is enabled F\+A\+L\+S\+E =$>$ Port is disabled \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga8ccf05054438433dd23425f30d7af728}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+enable\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+enable\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+enable\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+enable\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+enable\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+enable\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+port\+\_\+t}]{port, }
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga8ccf05054438433dd23425f30d7af728}
+Port Enable Set-\/ Enabled the port on a device 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to set \\
+\hline
+{\em enable} & T\+R\+U\+E =$>$ port is enabled F\+A\+L\+S\+E =$>$ Port is disabled \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga5dd7d6e3827bddc801ae0dfb8232adb4}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+fec\+\_\+mode\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+fec\+\_\+mode\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+fec\+\_\+mode\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+fec\+\_\+mode\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+fec\+\_\+mode\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+fec\+\_\+mode\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+port\+\_\+fec\+\_\+mode\+\_\+t $\ast$}]{fec\+\_\+mode}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga5dd7d6e3827bddc801ae0dfb8232adb4}
+Port get F\+E\+C mode 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port on device to get \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga12efba678f117f3402fef2f70cdbb1c9}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+fec\+\_\+mode\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+fec\+\_\+mode\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+fec\+\_\+mode\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+fec\+\_\+mode\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+fec\+\_\+mode\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+fec\+\_\+mode\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+port\+\_\+fec\+\_\+mode\+\_\+t}]{fec\+\_\+mode}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga12efba678f117f3402fef2f70cdbb1c9}
+Port set F\+E\+C mode 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port on device to set \\
+\hline
+{\em F\+E\+C} & mode -\/ N\+O\+N\+E/\+F\+C/\+R\+S \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga26c2f4d6224dbdb8c95141df7028de4f}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+flowcontrol\+\_\+mode\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+flowcontrol\+\_\+mode\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+flowcontrol\+\_\+mode\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+flowcontrol\+\_\+mode\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+flowcontrol\+\_\+mode\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+flowcontrol\+\_\+mode\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{{\bf switch\+\_\+flowcontrol\+\_\+type\+\_\+t}}]{flow\+\_\+control}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga26c2f4d6224dbdb8c95141df7028de4f}
+set port flowcontrol mode 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em flow\+\_\+control} & flow control type \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gab9377eac11e64a53487d5c0f1fabafa4}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+port\+\_\+info\+\_\+t} $\ast$}]{api\+\_\+port\+\_\+info}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gab9377eac11e64a53487d5c0f1fabafa4}
+Get Port configuration 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em api\+\_\+port\+\_\+info} & port information inclduing port number (portnumber specified in port\+\_\+info-\/$>$port\+\_\+number) \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gab2961d3b98bbe5297c433e211e6f9bf1}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+handle\+\_\+to\+\_\+id\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+handle\+\_\+to\+\_\+id\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+handle\+\_\+to\+\_\+id\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+handle\+\_\+to\+\_\+id\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+handle\+\_\+to\+\_\+id\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+handle\+\_\+to\+\_\+id\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+port\+\_\+t $\ast$}]{port}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gab2961d3b98bbe5297c433e211e6f9bf1}
+Get port I\+D given port handle 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & Port handle \\
+\hline
+{\em port} & port on device to get \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga960c98537f32d8e404efb413ea709ed2}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+icos\+\_\+to\+\_\+ppg\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+icos\+\_\+to\+\_\+ppg\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+icos\+\_\+to\+\_\+ppg\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+icos\+\_\+to\+\_\+ppg\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+icos\+\_\+to\+\_\+ppg\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+icos\+\_\+to\+\_\+ppg\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{qos\+\_\+map\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga960c98537f32d8e404efb413ea709ed2}
+Port set internal cos to P\+P\+G 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port on device to set \\
+\hline
+{\em qos\+\_\+map\+\_\+handle} & Qo\+S handle for internal cos to P\+P\+G qos-\/map. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga81b2dc4b98de6c09ee757ffc368acb85}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+id\+\_\+to\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+id\+\_\+to\+\_\+handle\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+id\+\_\+to\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+id\+\_\+to\+\_\+handle\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+id\+\_\+to\+\_\+handle\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+id\+\_\+to\+\_\+handle\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+port\+\_\+t}]{port, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{port\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga81b2dc4b98de6c09ee757ffc368acb85}
+Get port handle given port I\+D 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to get \\
+\hline
+{\em port\+\_\+handle} & Port handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga37ec64c2e627dde7ee8cfe6b3c244043}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{acl\+\_\+group}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga37ec64c2e627dde7ee8cfe6b3c244043}
+Get A\+C\+L group handle The port label is derived from the A\+C\+L group handle 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em port\+\_\+handle} & – port handle \\
+\hline
+{\em acl\+\_\+group} & -\/ A\+C\+L group handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga2fe148ddd91df995079fd8952e12035d}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{acl\+\_\+group}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga2fe148ddd91df995079fd8952e12035d}
+Set A\+C\+L group handle The port label is derived from the A\+C\+L group handle 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em port\+\_\+handle} & – port handle \\
+\hline
+{\em acl\+\_\+group} & -\/ A\+C\+L group handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga8dd3834c0f47483df4c79e32f741b43b}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+uint16\+\_\+t $\ast$}]{label}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga8dd3834c0f47483df4c79e32f741b43b}
+Get custom port label This A\+P\+I can be used to get label when bind type is S\+W\+I\+T\+C\+H\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em port\+\_\+handle} & – port handle \\
+\hline
+{\em label} & – port label \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gaa4eb49e35e7a5d889278fe65c4721e96}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+uint16\+\_\+t}]{label}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gaa4eb49e35e7a5d889278fe65c4721e96}
+Set custom port label This A\+P\+I has to be used to set label when bind type is S\+W\+I\+T\+C\+H\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em port\+\_\+handle} & – port handle \\
+\hline
+{\em label} & – port label \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga047de2566fe33c0984bd41645d4e7f95}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+mirror\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+mirror\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+mirror\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+mirror\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+mirror\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+mirror\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{mirror\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga047de2566fe33c0984bd41645d4e7f95}
+Port get ingress mirror 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port on device to get \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gaa685800d18d554feebc830175356ed75}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+mirror\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+mirror\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+mirror\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+mirror\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+mirror\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+ingress\+\_\+mirror\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{mirror\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gaa685800d18d554feebc830175356ed75}
+Port set ingress mirror 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port on device to set \\
+\hline
+{\em mirror\+\_\+handle} & mirror session handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga04df5fc656668c287f597d8989ecdae7}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+lane\+\_\+list\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+lane\+\_\+list\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+lane\+\_\+list\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+lane\+\_\+list\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+lane\+\_\+list\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+lane\+\_\+list\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{{\bf switch\+\_\+port\+\_\+lane\+\_\+list\+\_\+t} $\ast$}]{lane\+\_\+list}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga04df5fc656668c287f597d8989ecdae7}
+Port get list of lanes 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port on device to get \\
+\hline
+{\em lane\+\_\+list} & list of lanes \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gab5b26a9069c497ce53a3fd5405ac93f5}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+learning\+\_\+enabled\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+learning\+\_\+enabled\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+learning\+\_\+enabled\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+learning\+\_\+enabled\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+learning\+\_\+enabled\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+learning\+\_\+enabled\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{bool}]{learning\+\_\+enabled}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gab5b26a9069c497ce53a3fd5405ac93f5}
+enable mac learning on port 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em learning\+\_\+enabled} & enable mac learning \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga374a398006d8165eab6586c936ecbc3c}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+link\+\_\+pause\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+link\+\_\+pause\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+link\+\_\+pause\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+link\+\_\+pause\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+link\+\_\+pause\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+link\+\_\+pause\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{bool $\ast$}]{rx\+\_\+pause\+\_\+en, }
+\item[{bool $\ast$}]{tx\+\_\+pause\+\_\+en}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga374a398006d8165eab6586c936ecbc3c}
+Port get link flow control 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to set \\
+\hline
+{\em rx\+\_\+pause\+\_\+en} & R\+X flow control \\
+\hline
+{\em tx\+\_\+pause\+\_\+en} & T\+X flow control \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga7afd7387c49cd43b49955440669e8650}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+link\+\_\+pause\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+link\+\_\+pause\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+link\+\_\+pause\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+link\+\_\+pause\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+link\+\_\+pause\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+link\+\_\+pause\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{bool}]{rx\+\_\+pause\+\_\+en, }
+\item[{bool}]{tx\+\_\+pause\+\_\+en}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga7afd7387c49cd43b49955440669e8650}
+Port set link flow control 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to set \\
+\hline
+{\em rx\+\_\+pause} & and tx\+\_\+pause \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gabfe8e083320c55388d25ee4d15358fb1}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+t $\ast$}]{lb\+\_\+mode}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gabfe8e083320c55388d25ee4d15358fb1}
+Port get M\+A\+C loopback config 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to get \\
+\hline
+{\em enable} & T\+R\+U\+E if loopback is enabled else F\+A\+L\+S\+E \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gaf4533302a9f1c26a8b7042029c9a15a3}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+port\+\_\+loopback\+\_\+mode\+\_\+t}]{lb\+\_\+mode}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gaf4533302a9f1c26a8b7042029c9a15a3}
+Port set M\+A\+C in loopback 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to set \\
+\hline
+{\em enable} & loopback enabled if T\+R\+U\+E else F\+A\+L\+S\+E \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga084eb311532471a0cd4d053fbd48c1e1}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+max\+\_\+ppg\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+max\+\_\+ppg\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+max\+\_\+ppg\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+max\+\_\+ppg\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+max\+\_\+ppg\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+max\+\_\+ppg\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+uint8\+\_\+t $\ast$}]{num\+\_\+ppgs}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga084eb311532471a0cd4d053fbd48c1e1}
+Port get max P\+P\+Gs 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port on device to get \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gaa8c0716de3a44d4465c8b32fa965df19}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+max\+\_\+queues\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+max\+\_\+queues\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+max\+\_\+queues\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+max\+\_\+queues\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+max\+\_\+queues\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+max\+\_\+queues\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+uint32\+\_\+t $\ast$}]{max\+\_\+queues}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gaa8c0716de3a44d4465c8b32fa965df19}
+Get total number of queues 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em port\+\_\+handle} & – port handle \\
+\hline
+{\em max\+\_\+queues} & -\/ Total number of queues on the port \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gabcaecdc5f3c11c0c3ab54ceae74e8f7e}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+mtu\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+mtu\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+mtu\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+mtu\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+mtu\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+mtu\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+uint32\+\_\+t $\ast$}]{rx\+\_\+mtu, }
+\item[{switch\+\_\+uint32\+\_\+t $\ast$}]{tx\+\_\+mtu}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gabcaecdc5f3c11c0c3ab54ceae74e8f7e}
+Port L3 M\+T\+U settings 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to set \\
+\hline
+{\em l3mtu} & I\+P M\+T\+U on port \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga9fa02691bc276e0584146ba6d7a51377}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+mtu\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+mtu\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+mtu\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+mtu\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+mtu\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+mtu\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+uint32\+\_\+t}]{rx\+\_\+mtu, }
+\item[{switch\+\_\+uint32\+\_\+t}]{tx\+\_\+mtu}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga9fa02691bc276e0584146ba6d7a51377}
+Port L2 M\+T\+U settings 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to set \\
+\hline
+{\em l2mtu} & Max frame size on port \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gaaaf46ccd32903f34c23ca9d8c0b8d4ba}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+oper\+\_\+status\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+oper\+\_\+status\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+oper\+\_\+status\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+oper\+\_\+status\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+oper\+\_\+status\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+oper\+\_\+status\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+port\+\_\+oper\+\_\+status\+\_\+t $\ast$}]{oper\+\_\+status}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gaaaf46ccd32903f34c23ca9d8c0b8d4ba}
+Port get operational state 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to get \\
+\hline
+{\em oper\+\_\+status} & Operational status \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga39b531512e85981cb4e7f99318c3e063}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+cos\+\_\+mapping@{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+cos\+\_\+mapping}}
+\index{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+cos\+\_\+mapping@{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+cos\+\_\+mapping}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+cos\+\_\+mapping}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+cos\+\_\+mapping (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{uint8\+\_\+t $\ast$}]{cos\+\_\+to\+\_\+icos}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga39b531512e85981cb4e7f99318c3e063}
+Set port cos and pfc cos mapping 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em cos\+\_\+to\+\_\+icos} & cos to ingress cos bitmap \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga8519f53fe4f6365f81abc897d3353b32}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+uint32\+\_\+t $\ast$}]{pfc\+\_\+map}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga8519f53fe4f6365f81abc897d3353b32}
+Port get link prirority flow control 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to set \\
+\hline
+{\em pfc} & cos bitmap \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gafc6d663e92b6aa9c1de5bbc5368fd8f1}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+priority\+\_\+to\+\_\+queue\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+priority\+\_\+to\+\_\+queue\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+priority\+\_\+to\+\_\+queue\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+priority\+\_\+to\+\_\+queue\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+priority\+\_\+to\+\_\+queue\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+priority\+\_\+to\+\_\+queue\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{qos\+\_\+map\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gafc6d663e92b6aa9c1de5bbc5368fd8f1}
+Port set P\+F\+C priority to Queue 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port on device to set \\
+\hline
+{\em qos\+\_\+map\+\_\+handle} & Qo\+S handle for P\+F\+C priority to Queue mapping. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga50d0641af0a5154d176b9ddef5787be4}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+pfc\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+uint32\+\_\+t}]{pfc\+\_\+map}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga50d0641af0a5154d176b9ddef5787be4}
+Port set link prirority flow control 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to set \\
+\hline
+{\em pfc} & cos bitmap \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga895dfbe740b64544f9830e98502fd75f}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+drop\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+drop\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+drop\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+drop\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+drop\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+drop\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{uint64\+\_\+t $\ast$}]{drop\+\_\+count}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga895dfbe740b64544f9830e98502fd75f}
+Port get total P\+P\+G drop packets 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em drop\+\_\+count} & total P\+P\+G drop packets \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gadad12c0cfe002a89b62a9fcc8ac015cd}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+ppg\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{uint8\+\_\+t $\ast$}]{num\+\_\+ppgs, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{ppg\+\_\+handles}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gadad12c0cfe002a89b62a9fcc8ac015cd}
+Get port priority groups 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em num\+\_\+ppgs} & number of ppgs \\
+\hline
+{\em ppg\+\_\+handles} & list of ppg handles \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga7a09ba95beac49bc763d563fe8c98a25}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+probe@{switch\+\_\+api\+\_\+port\+\_\+probe}}
+\index{switch\+\_\+api\+\_\+port\+\_\+probe@{switch\+\_\+api\+\_\+port\+\_\+probe}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+probe}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+probe (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{unsigned int}]{max\+\_\+count, }
+\item[{unsigned int $\ast$}]{count, }
+\item[{{\bf switch\+\_\+api\+\_\+port\+\_\+info\+\_\+t} $\ast$}]{port\+\_\+info}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga7a09ba95beac49bc763d563fe8c98a25}
+Probe for existing ports -\/ configuration based on current status or default (when called immediately after init with default config 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em max\+\_\+count} & maximum number of ports to return \\
+\hline
+{\em count} & actual count returned \\
+\hline
+{\em port\+\_\+info} & array of port\+\_\+info structures per port \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga6bc054f158879dbcdde33f1e9999b01d}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+egress\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+egress\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+egress\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+egress\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+egress\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+egress\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{qos\+\_\+group}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga6bc054f158879dbcdde33f1e9999b01d}
+set egress qos group on port 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em qos\+\_\+group} & qos group \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga6fb574dd86a62bb26a18e797190cb4f5}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{ingress\+\_\+qos\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{tc\+\_\+queue\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{tc\+\_\+ppg\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{egress\+\_\+qos\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga6fb574dd86a62bb26a18e797190cb4f5}
+Port get ingress/egress qos handles 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port on device to get \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga34d51ea3998db1770eb9407d78ebd6b8}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+ingress\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+ingress\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+ingress\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+ingress\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+ingress\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+ingress\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{qos\+\_\+group}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga34d51ea3998db1770eb9407d78ebd6b8}
+set ingress qos group on port 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em qos\+\_\+group} & qos group \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga2b82c770363f57e50782a36cf82404b9}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+tc\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+tc\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+tc\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+tc\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+tc\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+qos\+\_\+group\+\_\+tc\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{qos\+\_\+group}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga2b82c770363f57e50782a36cf82404b9}
+set tc qos group on port 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em qos\+\_\+group} & qos group \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gadb7e9418491fac9b59325d30fbbedbde}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+queue\+\_\+drop\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+queue\+\_\+drop\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+queue\+\_\+drop\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+queue\+\_\+drop\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+queue\+\_\+drop\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+queue\+\_\+drop\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{uint64\+\_\+t $\ast$}]{drop\+\_\+count}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gadb7e9418491fac9b59325d30fbbedbde}
+Port get total Queue drop packets 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em drop\+\_\+count} & total Queue drop packets \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gaf347c04b35bcbed3cc0e114fd19fd966}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+scheduler\+\_\+profile\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+scheduler\+\_\+profile\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+scheduler\+\_\+profile\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+scheduler\+\_\+profile\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+scheduler\+\_\+profile\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+scheduler\+\_\+profile\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{scheduler\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gaf347c04b35bcbed3cc0e114fd19fd966}
+Port get Queue scheduler profile 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port on device to get \\
+\hline
+{\em scheduler\+\_\+handle} & Queue scheduler profile handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga80afc4580e5b5fb43fbfb12a0e466121}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+scheduler\+\_\+profile\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+scheduler\+\_\+profile\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+scheduler\+\_\+profile\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+scheduler\+\_\+profile\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+scheduler\+\_\+profile\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+scheduler\+\_\+profile\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{scheduler\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga80afc4580e5b5fb43fbfb12a0e466121}
+Port set Queue scheduler profile 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & port on device to set \\
+\hline
+{\em scheduler\+\_\+handle} & Queue scheduler profile handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga0df026f78db7fea364622bd6b8fda283}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+port\+\_\+info\+\_\+t} $\ast$}]{api\+\_\+port\+\_\+info}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga0df026f78db7fea364622bd6b8fda283}
+Set Port configuration 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em api\+\_\+port\+\_\+info} & port information inclduing port number (portnumber specified in port\+\_\+info-\/$>$port\+\_\+number) \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga349d90d8b9e613a7d2a23764d261c4b7}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+disable@{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+disable}}
+\index{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+disable@{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+disable}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+disable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+disable (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga349d90d8b9e613a7d2a23764d261c4b7}
+Disable port shaping 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga6e6f45a9496d264af46b4e48d9a09d97}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+enable@{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+enable}}
+\index{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+enable@{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+enable}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+enable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+shaping\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{{\bf switch\+\_\+shaper\+\_\+type\+\_\+t}}]{shaper\+\_\+type, }
+\item[{uint32\+\_\+t}]{burst\+\_\+size, }
+\item[{uint32\+\_\+t}]{rate}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga6e6f45a9496d264af46b4e48d9a09d97}
+Enable port shaping 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em shaper\+\_\+type} & shaper type in bytes or packets \\
+\hline
+{\em burst\+\_\+size} & burst size \\
+\hline
+{\em rate} & rate \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga2bdeb19717ce9325f184b001a20ed84a}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+speed\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+speed\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+speed\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+speed\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+speed\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+speed\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{{\bf switch\+\_\+port\+\_\+speed\+\_\+t} $\ast$}]{speed}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga2bdeb19717ce9325f184b001a20ed84a}
+Port Speed Get 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to get \\
+\hline
+{\em speed} & actual speed of port \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga721fff732966b9706403fb8f07dca1af}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+speed\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+speed\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+speed\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+speed\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+speed\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+speed\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{{\bf switch\+\_\+port\+\_\+speed\+\_\+t}}]{speed}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga721fff732966b9706403fb8f07dca1af}
+Port Speed Set 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device to set \\
+\hline
+{\em speed} & desired speed of port \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga27ceb0c47751ac0de7a45d70540ee648}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+counter\+\_\+id\+\_\+clear@{switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+counter\+\_\+id\+\_\+clear}}
+\index{switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+counter\+\_\+id\+\_\+clear@{switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+counter\+\_\+id\+\_\+clear}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+counter\+\_\+id\+\_\+clear}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+counter\+\_\+id\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{const switch\+\_\+uint16\+\_\+t}]{num\+\_\+counters, }
+\item[{const switch\+\_\+port\+\_\+counter\+\_\+id\+\_\+t $\ast$}]{counter\+\_\+ids}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga27ceb0c47751ac0de7a45d70540ee648}
+Clear port statistics for given counter\+\_\+ids 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & Port handle \\
+\hline
+{\em num\+\_\+entries} & Total number of ports to get \\
+\hline
+{\em counter\+\_\+ids} & Counter I\+D, array should be equal to num\+\_\+entries \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga660e63030eb7a16ffc27a19da3cd4c89}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+stats\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+uint16\+\_\+t}]{num\+\_\+entries, }
+\item[{switch\+\_\+port\+\_\+counter\+\_\+id\+\_\+t $\ast$}]{counter\+\_\+ids, }
+\item[{uint64\+\_\+t $\ast$}]{counters}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga660e63030eb7a16ffc27a19da3cd4c89}
+Get port statistics 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port\+\_\+handle} & Port handle \\
+\hline
+{\em num\+\_\+entries} & Total number of ports to get \\
+\hline
+{\em counter\+\_\+ids} & Counter I\+D, array should be equal to num\+\_\+entries \\
+\hline
+{\em counters} & Return array of counters matching the counter\+\_\+ids \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga44911c0a2e11f0fc3a229c59e6b39b31}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+packet\+\_\+type\+\_\+t}]{pkt\+\_\+type, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{meter\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga44911c0a2e11f0fc3a229c59e6b39b31}
+Get meter handle for port 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device \\
+\hline
+{\em pkt\+\_\+type} & packet type \\
+\hline
+{\em meter\+\_\+handle} & meter handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga1f9950ab7dfde4c28709c0f8e0d16ba8}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+packet\+\_\+type\+\_\+t}]{pkt\+\_\+type, }
+\item[{switch\+\_\+handle\+\_\+t}]{meter\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga1f9950ab7dfde4c28709c0f8e0d16ba8}
+Set meter handle for port 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em port} & port on device \\
+\hline
+{\em pkt\+\_\+type} & packet type \\
+\hline
+{\em meter\+\_\+handle} & meter handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga3275987949631b3be504b7a063922497}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+stats\+\_\+clear@{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+stats\+\_\+clear}}
+\index{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+stats\+\_\+clear@{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+stats\+\_\+clear}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+stats\+\_\+clear}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+stats\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{const switch\+\_\+packet\+\_\+type\+\_\+t}]{pkt\+\_\+type}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga3275987949631b3be504b7a063922497}
+Clear port storm control stats by packet type
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em pkt\+\_\+type} & packet type -\/ unicast/multicast/broadcast \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gaa7c91f0dccbc504c3b0ac8a48dcabf7f}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+stats\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+stats\+\_\+get}}
+\index{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+stats\+\_\+get@{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+stats\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+stats\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+storm\+\_\+control\+\_\+stats\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{const switch\+\_\+packet\+\_\+type\+\_\+t}]{pkt\+\_\+type, }
+\item[{{\bf switch\+\_\+counter\+\_\+t} $\ast$}]{counter}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gaa7c91f0dccbc504c3b0ac8a48dcabf7f}
+Get port storm control stats by packet type
+
+
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em pkt\+\_\+type} & packet type -\/ unicast/multicast/broadcast \\
+\hline
+{\em counters} & -\/ return counter array with size S\+W\+I\+T\+C\+H\+\_\+\+C\+O\+L\+O\+R\+\_\+\+M\+A\+X \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gae6a69047950e2a21e2d1a6f1ddc1df92}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+tc\+\_\+default\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+tc\+\_\+default\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+tc\+\_\+default\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+tc\+\_\+default\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+tc\+\_\+default\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+tc\+\_\+default\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{uint16\+\_\+t}]{tc}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gae6a69047950e2a21e2d1a6f1ddc1df92}
+set default tc on port 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em tc} & traffic class \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga3f31b271310e845dd60834e009f98b73}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+trust\+\_\+dscp\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+trust\+\_\+dscp\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+trust\+\_\+dscp\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+trust\+\_\+dscp\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+trust\+\_\+dscp\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+trust\+\_\+dscp\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{bool}]{trust\+\_\+dscp}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga3f31b271310e845dd60834e009f98b73}
+enable dscp trust on port 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em trust\+\_\+dscp} & dscp trust \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga198111a47492d602a16fd096fcd8807a}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+port\+\_\+trust\+\_\+pcp\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+trust\+\_\+pcp\+\_\+set}}
+\index{switch\+\_\+api\+\_\+port\+\_\+trust\+\_\+pcp\+\_\+set@{switch\+\_\+api\+\_\+port\+\_\+trust\+\_\+pcp\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+port\+\_\+trust\+\_\+pcp\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+port\+\_\+trust\+\_\+pcp\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{bool}]{trust\+\_\+pcp}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga198111a47492d602a16fd096fcd8807a}
+enable pcp trust on port 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em trust\+\_\+pcp} & pcp trust \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gaf96e0cd735ba058c331b625105be359c}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+ppg\+\_\+drop\+\_\+count\+\_\+clear@{switch\+\_\+api\+\_\+ppg\+\_\+drop\+\_\+count\+\_\+clear}}
+\index{switch\+\_\+api\+\_\+ppg\+\_\+drop\+\_\+count\+\_\+clear@{switch\+\_\+api\+\_\+ppg\+\_\+drop\+\_\+count\+\_\+clear}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+ppg\+\_\+drop\+\_\+count\+\_\+clear}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+ppg\+\_\+drop\+\_\+count\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{ppg\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gaf96e0cd735ba058c331b625105be359c}
+Port get P\+P\+G drop count clear 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em ppg\+\_\+handle} & port P\+P\+G handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gac6ce2cf2532261b6be0220c94f4bd3e5}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+ppg\+\_\+drop\+\_\+get@{switch\+\_\+api\+\_\+ppg\+\_\+drop\+\_\+get}}
+\index{switch\+\_\+api\+\_\+ppg\+\_\+drop\+\_\+get@{switch\+\_\+api\+\_\+ppg\+\_\+drop\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+ppg\+\_\+drop\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+ppg\+\_\+drop\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{ppg\+\_\+handle, }
+\item[{uint64\+\_\+t $\ast$}]{num\+\_\+packets}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gac6ce2cf2532261b6be0220c94f4bd3e5}
+Port get P\+P\+G drop packets 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to use \\
+\hline
+{\em ppg\+\_\+handle} & port P\+P\+G handle \\
+\hline
+{\em num\+\_\+packets} & drop packets \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga870eecc7306b30712441f5a81db26d81}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+ppg\+\_\+guaranteed\+\_\+limit\+\_\+set@{switch\+\_\+api\+\_\+ppg\+\_\+guaranteed\+\_\+limit\+\_\+set}}
+\index{switch\+\_\+api\+\_\+ppg\+\_\+guaranteed\+\_\+limit\+\_\+set@{switch\+\_\+api\+\_\+ppg\+\_\+guaranteed\+\_\+limit\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+ppg\+\_\+guaranteed\+\_\+limit\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+ppg\+\_\+guaranteed\+\_\+limit\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{ppg\+\_\+handle, }
+\item[{uint32\+\_\+t}]{num\+\_\+bytes}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga870eecc7306b30712441f5a81db26d81}
+set guaranteed limit on ppg 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em ppg\+\_\+handle} & ppg handle \\
+\hline
+{\em num\+\_\+bytes} & number of bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gad0189f9437a11a6c75fcdfd49fdaf444}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+ppg\+\_\+lossless\+\_\+enable@{switch\+\_\+api\+\_\+ppg\+\_\+lossless\+\_\+enable}}
+\index{switch\+\_\+api\+\_\+ppg\+\_\+lossless\+\_\+enable@{switch\+\_\+api\+\_\+ppg\+\_\+lossless\+\_\+enable}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+ppg\+\_\+lossless\+\_\+enable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+ppg\+\_\+lossless\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{ppg\+\_\+handle, }
+\item[{bool}]{enable}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gad0189f9437a11a6c75fcdfd49fdaf444}
+enable lossless mode in port priority group 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em ppg\+\_\+handle} & ppg handle \\
+\hline
+{\em enable} & enable \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gaf6855c2a5526e288e5641d6199ab5218}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+ppg\+\_\+skid\+\_\+hysteresis\+\_\+set@{switch\+\_\+api\+\_\+ppg\+\_\+skid\+\_\+hysteresis\+\_\+set}}
+\index{switch\+\_\+api\+\_\+ppg\+\_\+skid\+\_\+hysteresis\+\_\+set@{switch\+\_\+api\+\_\+ppg\+\_\+skid\+\_\+hysteresis\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+ppg\+\_\+skid\+\_\+hysteresis\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+ppg\+\_\+skid\+\_\+hysteresis\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{ppg\+\_\+handle, }
+\item[{uint32\+\_\+t}]{num\+\_\+bytes}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gaf6855c2a5526e288e5641d6199ab5218}
+set hystersis lmit on ppg 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em ppg\+\_\+handle} & ppg handle \\
+\hline
+{\em num\+\_\+bytes} & number of bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_ga5d92200852af4afe776553013791ac43}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+ppg\+\_\+skid\+\_\+limit\+\_\+set@{switch\+\_\+api\+\_\+ppg\+\_\+skid\+\_\+limit\+\_\+set}}
+\index{switch\+\_\+api\+\_\+ppg\+\_\+skid\+\_\+limit\+\_\+set@{switch\+\_\+api\+\_\+ppg\+\_\+skid\+\_\+limit\+\_\+set}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+ppg\+\_\+skid\+\_\+limit\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+ppg\+\_\+skid\+\_\+limit\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{ppg\+\_\+handle, }
+\item[{uint32\+\_\+t}]{num\+\_\+bytes}
+\end{DoxyParamCaption}
+)}}\label{group__Port_ga5d92200852af4afe776553013791ac43}
+set skid lmit on ppg 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em ppg\+\_\+handle} & ppg handle \\
+\hline
+{\em num\+\_\+bytes} & number of bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Port_gaedebd2fb890d2cd97d6a98b2bb48588d}{\index{Port configuration A\+P\+I@{Port configuration A\+P\+I}!switch\+\_\+api\+\_\+storm\+\_\+control\+\_\+counters\+\_\+get@{switch\+\_\+api\+\_\+storm\+\_\+control\+\_\+counters\+\_\+get}}
+\index{switch\+\_\+api\+\_\+storm\+\_\+control\+\_\+counters\+\_\+get@{switch\+\_\+api\+\_\+storm\+\_\+control\+\_\+counters\+\_\+get}!Port configuration A\+P\+I@{Port configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+storm\+\_\+control\+\_\+counters\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+storm\+\_\+control\+\_\+counters\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{meter\+\_\+handle, }
+\item[{const switch\+\_\+uint16\+\_\+t}]{num\+\_\+counters, }
+\item[{const switch\+\_\+meter\+\_\+counter\+\_\+t $\ast$}]{counter\+\_\+ids, }
+\item[{{\bf switch\+\_\+counter\+\_\+t} $\ast$}]{counters}
+\end{DoxyParamCaption}
+)}}\label{group__Port_gaedebd2fb890d2cd97d6a98b2bb48588d}
+Meter stats 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em meter\+\_\+handle} & meter handle \\
+\hline
+{\em count} & number of counters \\
+\hline
+{\em counter\+\_\+ids} & meter counter ids \\
+\hline
+{\em counters} & counter values \\
+\hline
+\end{DoxyParams}

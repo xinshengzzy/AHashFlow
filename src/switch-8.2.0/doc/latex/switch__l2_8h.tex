@@ -1,0 +1,104 @@
+\hypertarget{switch__l2_8h}{\section{/root/workspace/\+A\+Hash\+Flow/src/switch-\/8.2.0/switchapi/include/switchapi/switch\+\_\+l2.h File Reference}
+\label{switch__l2_8h}\index{/root/workspace/\+A\+Hash\+Flow/src/switch-\/8.\+2.\+0/switchapi/include/switchapi/switch\+\_\+l2.\+h@{/root/workspace/\+A\+Hash\+Flow/src/switch-\/8.\+2.\+0/switchapi/include/switchapi/switch\+\_\+l2.\+h}}
+}
+{\ttfamily \#include \char`\"{}switch\+\_\+base\+\_\+types.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}switch\+\_\+status.\+h\char`\"{}}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__api__mac__entry__s}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+s}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \\*
+\hyperlink{group__L2_ga8bbe19fdfe987704725c338646303cb4}{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+s} \hyperlink{group__L2_gae4c546ddb72c6390d040cfa329cfe024}{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+t}
+\item 
+typedef enum \hyperlink{group__L2_ga41cd4aa537a1dfbe6380d619f28e8a6b}{switch\+\_\+mac\+\_\+action\+\_\+s} \hyperlink{group__L2_ga81675f7440ac9d8c53f957e4ec214cb1}{switch\+\_\+mac\+\_\+action\+\_\+t}
+\item 
+typedef enum \hyperlink{group__L2_ga49d8f781f5ef73c8afdbb7abbdb23a60}{switch\+\_\+mac\+\_\+event\+\_\+s} \hyperlink{group__L2_ga3728e834d7a424815bf0285e02ed0074}{switch\+\_\+mac\+\_\+event\+\_\+t}
+\item 
+typedef enum \\*
+\hyperlink{group__L2_ga852b825e1cfbfd08e4bc21e0fc5c548c}{switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+s} \hyperlink{group__L2_gabcf4ebaee3a7b04a2a48d64b9d2aceb9}{switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__api__mac__entry__s}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+s} \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t}
+\item 
+typedef void($\ast$ \hyperlink{group__L2_ga233660168fb17cb2141539df12af924c}{switch\+\_\+mac\+\_\+notification\+\_\+fn} )(const switch\+\_\+device\+\_\+t device, const switch\+\_\+uint16\+\_\+t num\+\_\+entries, const \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entry, const \hyperlink{group__L2_ga3728e834d7a424815bf0285e02ed0074}{switch\+\_\+mac\+\_\+event\+\_\+t} mac\+\_\+event, void $\ast$app\+\_\+data)
+\begin{DoxyCompactList}\small\item\em mac notifications \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__L2_ga8bbe19fdfe987704725c338646303cb4}{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+U\+N\+S\+P\+E\+C\+I\+F\+I\+E\+D} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+D\+Y\+N\+A\+M\+I\+C} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+S\+T\+A\+T\+I\+C} = 2
+ \}
+\item 
+enum \hyperlink{group__L2_ga41cd4aa537a1dfbe6380d619f28e8a6b}{switch\+\_\+mac\+\_\+action\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+D\+R\+O\+P} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+F\+O\+R\+W\+A\+R\+D} = 1
+ \}
+\item 
+enum \hyperlink{group__L2_ga49d8f781f5ef73c8afdbb7abbdb23a60}{switch\+\_\+mac\+\_\+event\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+C\+R\+E\+A\+T\+E} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+M\+O\+V\+E} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+D\+E\+L\+E\+T\+E} = (1 $<$$<$ 2), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+L\+E\+A\+R\+N} = (1 $<$$<$ 3), 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+E\+V\+E\+N\+T\+\_\+\+A\+G\+E} = (1 $<$$<$ 4)
+ \}
+\item 
+enum \hyperlink{group__L2_ga852b825e1cfbfd08e4bc21e0fc5c548c}{switch\+\_\+mac\+\_\+flush\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+F\+L\+U\+S\+H\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+E\+T\+W\+O\+R\+K} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+F\+L\+U\+S\+H\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+F\+L\+U\+S\+H\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+C\+\_\+\+T\+Y\+P\+E} = (1 $<$$<$ 2), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+C\+\_\+\+F\+L\+U\+S\+H\+\_\+\+T\+Y\+P\+E\+\_\+\+A\+L\+L} = (1 $<$$<$ 3)
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga106154dbf2c93887a5bc2d44e105d856}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+add} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em Add a mac address entry to dmac table. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_gadeb87de7788e245fcab5bac934b2c3a3}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+add} (switch\+\_\+device\+\_\+t device, switch\+\_\+size\+\_\+t num\+\_\+entries, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entries)
+\begin{DoxyCompactList}\small\item\em Add set of mac address entries to dmac table. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_gaa1f1e2de37135465b532dab1e4df76a0}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+update} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em Update a mac address entry in dmac table. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_gaf95e0ac6c2f5e79ca6da65d9f18de9f2}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+update} (switch\+\_\+device\+\_\+t device, switch\+\_\+size\+\_\+t num\+\_\+entries, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entries)
+\begin{DoxyCompactList}\small\item\em Update set of mac address entries in dmac table. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga79c02c4ecb683896bd7e51ba13a0059c}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+delete} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entry)
+\begin{DoxyCompactList}\small\item\em Delete a mac address entry from dmac table. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga655ed00e1976ad353781a043caa4e957}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entries\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+size\+\_\+t num\+\_\+entries, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$mac\+\_\+entries)
+\begin{DoxyCompactList}\small\item\em Delete set of mac address entries from dmac table. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga8e6633eee0d025508056b940af6cbb50}{switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+register} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+app\+\_\+id\+\_\+t app\+\_\+id, const switch\+\_\+uint16\+\_\+t mac\+\_\+event\+\_\+flags, \hyperlink{group__L2_ga233660168fb17cb2141539df12af924c}{switch\+\_\+mac\+\_\+notification\+\_\+fn} cb\+\_\+fn)
+\begin{DoxyCompactList}\small\item\em Mac notification callback registeration. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_gaaf7d171d5d9cc7613af6774b0776303f}{switch\+\_\+api\+\_\+mac\+\_\+notification\+\_\+deregister} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+app\+\_\+id\+\_\+t app\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Mac notification callback deregisteration. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga1bdefa73175159501d6d795545fafc2a}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+set\+\_\+learning\+\_\+timeout} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+uint32\+\_\+t timeout)
+\begin{DoxyCompactList}\small\item\em Set dmac table learn timeout. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga7fc723b28885ca5a0c5f68e23647fe38}{switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+flush} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+uint64\+\_\+t flush\+\_\+type, const switch\+\_\+handle\+\_\+t network\+\_\+handle, const switch\+\_\+handle\+\_\+t intf\+\_\+handle, const \hyperlink{group__L2_gae4c546ddb72c6390d040cfa329cfe024}{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+t} mac\+\_\+entry\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Delete dmac table entries by vlan or interface. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga1d47a444c79287aeaa406be59dcf8c60}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+handle\+\_\+get} (const switch\+\_\+device\+\_\+t device, const \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$api\+\_\+mac\+\_\+entry, switch\+\_\+handle\+\_\+t $\ast$mac\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Get mac handle from mac entry. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_gac27d09a5dce49ba7b3e5872b9711248f}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+type\+\_\+get} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$api\+\_\+mac\+\_\+entry, \hyperlink{group__L2_gae4c546ddb72c6390d040cfa329cfe024}{switch\+\_\+mac\+\_\+entry\+\_\+type\+\_\+t} $\ast$entry\+\_\+type)
+\begin{DoxyCompactList}\small\item\em Get mac entry type from mac entry. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_ga340aa8e6a40d82c896b47f063d1fda1f}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+port\+\_\+id\+\_\+get} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$api\+\_\+mac\+\_\+entry, switch\+\_\+handle\+\_\+t $\ast$intf\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Get interface handle from mac entry. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__L2_gacc5079697b52baf49a3a786060bc2a34}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+packet\+\_\+action\+\_\+get} (switch\+\_\+device\+\_\+t device, \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$api\+\_\+mac\+\_\+entry, \hyperlink{group__L2_ga81675f7440ac9d8c53f957e4ec214cb1}{switch\+\_\+mac\+\_\+action\+\_\+t} $\ast$mac\+\_\+action)
+\begin{DoxyCompactList}\small\item\em Get mac action from mac entry. \end{DoxyCompactList}\item 
+\hypertarget{group__L2_gafd075cdb4a92b3e2708954b8f09d7a64}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const \hyperlink{group__L2_ga2fde8bafec6b710770603b5cde2f94af}{switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+t} $\ast$api\+\_\+mac\+\_\+entry, void $\ast$cli\+\_\+ctx)}\label{group__L2_gafd075cdb4a92b3e2708954b8f09d7a64}
+
+\item 
+\hypertarget{group__L2_ga4f1baa386afd6805da236d0121860159}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mac\+\_\+entry\+\_\+handle\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mac\+\_\+handle, void $\ast$cli\+\_\+ctx)}\label{group__L2_ga4f1baa386afd6805da236d0121860159}
+
+\item 
+\hypertarget{group__L2_ga2ef720730e2ba58333041200490c64a9}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mac\+\_\+table\+\_\+entry\+\_\+count\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint32\+\_\+t $\ast$count)}\label{group__L2_ga2ef720730e2ba58333041200490c64a9}
+
+\item 
+\hypertarget{group__L2_gaa22c0e9cfd1902d40059c5b5002d172c}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mac\+\_\+move\+\_\+bulk} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t network\+\_\+handle, const switch\+\_\+handle\+\_\+t old\+\_\+intf\+\_\+handle, const switch\+\_\+handle\+\_\+t new\+\_\+intf\+\_\+handle)}\label{group__L2_gaa22c0e9cfd1902d40059c5b5002d172c}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+brief This file contains A\+P\+I to program smac and dmac tables. The basic switching A\+P\+Is are controlled by the manipulation of the M\+A\+C tables – source and destination. Addresses learnt from packets on a port and/or V\+L\+A\+N are used to switch packets destined that address within the V\+L\+A\+N.
+
+brief This file contains A\+P\+I to program ipv4/ipv6 fib and lpm tables. The basic routing A\+P\+Is are controlled by the manipulation of these routing tables – fib and lpm. 

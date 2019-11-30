@@ -1,0 +1,665 @@
+\hypertarget{group__HostInterface}{\section{Host Interface A\+P\+I}
+\label{group__HostInterface}\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions define and manipulate host interfaces \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__hostif__group__s}{switch\+\_\+hostif\+\_\+group\+\_\+s}
+\item 
+struct \hyperlink{structswitch__api__hostif__rcode__info__s}{switch\+\_\+api\+\_\+hostif\+\_\+rcode\+\_\+info\+\_\+s}
+\item 
+struct \hyperlink{structswitch__hostif__packet__s}{switch\+\_\+hostif\+\_\+packet\+\_\+s}
+\item 
+struct \hyperlink{structswitch__hostif__s}{switch\+\_\+hostif\+\_\+s}
+\item 
+struct \hyperlink{structswitch__hostif__rx__filter__key__s}{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+key\+\_\+s}
+\item 
+struct \hyperlink{structswitch__hostif__rx__filter__action__s}{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+action\+\_\+s}
+\item 
+struct \hyperlink{structswitch__hostif__tx__filter__key__s}{switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+key\+\_\+s}
+\item 
+struct \hyperlink{structswitch__packet__tx__filter__action__s}{switch\+\_\+packet\+\_\+tx\+\_\+filter\+\_\+action\+\_\+s}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \\*
+\hyperlink{group__HostInterface_ga4a81fc4f5f8643f528b3a45009b5ba84}{switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+s} \hyperlink{group__HostInterface_gab8b13524888d4f506357fae04c44babc}{switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+t}
+\item 
+\hypertarget{group__HostInterface_gac4de3c3cd6950e8a1b2b7f899b366ba1}{typedef enum \\*
+switch\+\_\+hostif\+\_\+channel\+\_\+s {\bfseries switch\+\_\+hostif\+\_\+channel\+\_\+t}}\label{group__HostInterface_gac4de3c3cd6950e8a1b2b7f899b366ba1}
+
+\item 
+\hypertarget{group__HostInterface_gaf100302a896240b145824be54a9bc989}{typedef enum \\*
+switch\+\_\+tx\+\_\+bypass\+\_\+flags\+\_\+s {\bfseries switch\+\_\+tx\+\_\+bypass\+\_\+flags\+\_\+t}}\label{group__HostInterface_gaf100302a896240b145824be54a9bc989}
+
+\item 
+\hypertarget{group__HostInterface_ga54d2584981997b9745518cf88eb6e62a}{typedef enum switch\+\_\+hostif\+\_\+attr\+\_\+s {\bfseries switch\+\_\+hostif\+\_\+attr\+\_\+t}}\label{group__HostInterface_ga54d2584981997b9745518cf88eb6e62a}
+
+\item 
+typedef enum \\*
+\hyperlink{group__HostInterface_ga0986f09d2454602d51b3051c139a2f6f}{switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+s} \hyperlink{group__HostInterface_ga941337bc8e6d3df44983db93d6000a15}{switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+t}
+\item 
+\hypertarget{group__HostInterface_ga1752e7273ac657ed3d8169ba90248cca}{typedef enum \\*
+switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+attr\+\_\+s {\bfseries switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+attr\+\_\+t}}\label{group__HostInterface_ga1752e7273ac657ed3d8169ba90248cca}
+
+\item 
+\hypertarget{group__HostInterface_ga493455f9a9cf3278c0f407e236545d66}{typedef enum \\*
+switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+attr\+\_\+s {\bfseries switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+attr\+\_\+t}}\label{group__HostInterface_ga493455f9a9cf3278c0f407e236545d66}
+
+\item 
+\hypertarget{group__HostInterface_ga80eb043a62ab9c29adc9e5df77f2bb1f}{typedef enum \\*
+switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+priority\+\_\+s {\bfseries switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+priority\+\_\+t}}\label{group__HostInterface_ga80eb043a62ab9c29adc9e5df77f2bb1f}
+
+\item 
+\hypertarget{group__HostInterface_ga2725f9b6b3275e45c505199fef684881}{typedef enum \\*
+switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+priority\+\_\+s {\bfseries switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+priority\+\_\+t}}\label{group__HostInterface_ga2725f9b6b3275e45c505199fef684881}
+
+\item 
+\hypertarget{group__HostInterface_gadb64d79a14b98022b85e20e97c43f16e}{typedef enum \\*
+switch\+\_\+hostif\+\_\+rcode\+\_\+attr\+\_\+s {\bfseries switch\+\_\+hostif\+\_\+rcode\+\_\+attr\+\_\+t}}\label{group__HostInterface_gadb64d79a14b98022b85e20e97c43f16e}
+
+\item 
+typedef struct \\*
+\hyperlink{structswitch__hostif__group__s}{switch\+\_\+hostif\+\_\+group\+\_\+s} \hyperlink{group__HostInterface_gaaacd1815b505c965d68a7604f211d907}{switch\+\_\+hostif\+\_\+group\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__api__hostif__rcode__info__s}{switch\+\_\+api\+\_\+hostif\+\_\+rcode\+\_\+info\+\_\+s} \hyperlink{group__HostInterface_gad572618a94aec43492d76730093e105f}{switch\+\_\+api\+\_\+hostif\+\_\+rcode\+\_\+info\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__hostif__packet__s}{switch\+\_\+hostif\+\_\+packet\+\_\+s} \hyperlink{group__HostInterface_gacf3b5146e7fbf5d3726cbd9ba7cd6636}{switch\+\_\+hostif\+\_\+packet\+\_\+t}
+\item 
+typedef struct \hyperlink{structswitch__hostif__s}{switch\+\_\+hostif\+\_\+s} \hyperlink{group__HostInterface_ga3cd1d0c163caae841da0f87a23e5caf7}{switch\+\_\+hostif\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__hostif__rx__filter__key__s}{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+key\+\_\+s} \hyperlink{group__HostInterface_ga10a6365e0fb5dfe061e099c366131070}{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+key\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__hostif__rx__filter__action__s}{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+action\+\_\+s} \hyperlink{group__HostInterface_gae246494c29a7bbbbec6d51554108d01b}{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+action\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__hostif__tx__filter__key__s}{switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+key\+\_\+s} \hyperlink{group__HostInterface_gabae602b7028818087fe7f1c9b8d02c34}{switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+key\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__packet__tx__filter__action__s}{switch\+\_\+packet\+\_\+tx\+\_\+filter\+\_\+action\+\_\+s} \hyperlink{group__HostInterface_ga294bb3f6e4fd80c02ca1c80acf11422c}{switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+action\+\_\+t}
+\item 
+typedef void($\ast$ \hyperlink{group__HostInterface_gaeb0d6cedcbaf8794cc964f72383bc404}{switch\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+fn} )(\hyperlink{group__HostInterface_gacf3b5146e7fbf5d3726cbd9ba7cd6636}{switch\+\_\+hostif\+\_\+packet\+\_\+t} $\ast$hostif\+\_\+packet)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__HostInterface_ga4a81fc4f5f8643f528b3a45009b5ba84}{switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+N\+O\+N\+E} = 0x0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+C\+U\+S\+T\+O\+M} = 0x1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+D\+R\+O\+P} = 0x2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+N\+U\+L\+L\+\_\+\+D\+R\+O\+P} = 0x3, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+S\+F\+L\+O\+W\+\_\+\+S\+A\+M\+P\+L\+E} = 0x4, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+B\+F\+D\+\_\+\+R\+X} = 0x5, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+B\+F\+D\+\_\+\+E\+V\+E\+N\+T} = 0x6, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+A\+C\+L\+\_\+\+L\+O\+G} = 0x7, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+P\+T\+P} = 0x8, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L2\+\_\+\+S\+T\+A\+R\+T} = 0x100, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+S\+T\+P} = S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L2\+\_\+\+S\+T\+A\+R\+T, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L\+A\+C\+P}, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+E\+A\+P\+O\+L}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L\+L\+D\+P}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+P\+V\+R\+S\+T}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+I\+G\+M\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+U\+E\+R\+Y}, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+I\+G\+M\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+E\+A\+V\+E}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+I\+G\+M\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V1\+\_\+\+R\+E\+P\+O\+R\+T}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+I\+G\+M\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V2\+\_\+\+R\+E\+P\+O\+R\+T}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+I\+G\+M\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V3\+\_\+\+R\+E\+P\+O\+R\+T}, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+I\+G\+M\+P}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L2\+\_\+\+M\+I\+S\+S\+\_\+\+U\+N\+I\+C\+A\+S\+T}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L2\+\_\+\+M\+I\+S\+S\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L2\+\_\+\+M\+I\+S\+S\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T}, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L2\+\_\+\+E\+N\+D}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L3\+\_\+\+S\+T\+A\+R\+T} = 0x200, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+S\+A\+M\+P\+L\+E\+P\+A\+C\+K\+E\+T} = S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L3\+\_\+\+S\+T\+A\+R\+T, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+A\+R\+P\+\_\+\+R\+E\+Q\+U\+E\+S\+T} = 0x201, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+A\+R\+P\+\_\+\+R\+E\+S\+P\+O\+N\+S\+E} = 0x202, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+D\+H\+C\+P} = 0x203, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+O\+S\+P\+F} = 0x204, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+P\+I\+M} = 0x205, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+V\+R\+R\+P} = 0x206, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+D\+H\+C\+P\+V6} = 0x208, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+O\+S\+P\+F\+V6} = 0x209, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+V\+R\+R\+P\+V6} = 0x20a, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+I\+P\+V6\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+D\+I\+S\+C\+O\+V\+E\+R\+Y} = 0x20c, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+I\+P\+V6\+\_\+\+M\+L\+D\+\_\+\+V1\+\_\+\+V2} = 0x20d, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+I\+P\+V6\+\_\+\+M\+L\+D\+\_\+\+V1\+\_\+\+R\+E\+P\+O\+R\+T} = 0x20e, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+I\+P\+V6\+\_\+\+M\+L\+D\+\_\+\+V1\+\_\+\+D\+O\+N\+E} = 0x20f, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+M\+L\+D\+\_\+\+V2\+\_\+\+R\+E\+P\+O\+R\+T} = 0x210, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L3\+\_\+\+M\+T\+U\+\_\+\+E\+R\+R\+O\+R} = 0x211, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+T\+T\+L\+\_\+\+E\+R\+R\+O\+R} = 0x212, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+G\+L\+E\+A\+N} = 0x213, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+I\+C\+M\+P\+\_\+\+R\+E\+D\+I\+R\+E\+C\+T} = 0x215, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+S\+R\+C\+\_\+\+I\+S\+\_\+\+L\+I\+N\+K\+\_\+\+L\+O\+C\+A\+L} = 0x216, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L3\+\_\+\+R\+E\+D\+I\+R\+E\+C\+T} = 0x217, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+B\+R\+O\+A\+D\+C\+A\+S\+T} = 0x218, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+S\+S\+H} = 0x219, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+S\+N\+M\+P} = 0x21a, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L3\+\_\+\+E\+N\+D}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+I\+P\+\_\+\+S\+T\+A\+R\+T} = 0x400, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+M\+Y\+I\+P} = S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+I\+P\+\_\+\+S\+T\+A\+R\+T, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+B\+G\+P}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+B\+G\+P\+V6}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+L\+O\+C\+A\+L\+\_\+\+I\+P\+\_\+\+E\+N\+D}, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E\+\_\+\+M\+A\+X}
+ \}
+\item 
+\hypertarget{group__HostInterface_gab22ee3b5247799ec2ca92c64cbbe5407}{enum {\bfseries switch\+\_\+hostif\+\_\+channel\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+C\+B}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+F\+D}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+C\+H\+A\+N\+N\+E\+L\+\_\+\+N\+E\+T\+D\+E\+V}
+ \}}\label{group__HostInterface_gab22ee3b5247799ec2ca92c64cbbe5407}
+
+\item 
+\hypertarget{group__HostInterface_ga067ec27ed8be941b346ebbe527c5e6e0}{enum {\bfseries switch\+\_\+tx\+\_\+bypass\+\_\+flags\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+N\+O\+N\+E} = 0x0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+L2} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+L3} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+A\+C\+L} = (1 $<$$<$ 2), 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+Q\+O\+S} = (1 $<$$<$ 3), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+M\+E\+T\+E\+R} = (1 $<$$<$ 4), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+S\+Y\+S\+T\+E\+M\+\_\+\+A\+C\+L} = (1 $<$$<$ 5), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+B\+Y\+P\+A\+S\+S\+\_\+\+A\+L\+L} = 0x\+F\+F\+F\+F
+ \}}\label{group__HostInterface_ga067ec27ed8be941b346ebbe527c5e6e0}
+
+\item 
+\hypertarget{group__HostInterface_ga2afb2a6d4f95e81cc08ee0d6b3198780}{enum {\bfseries switch\+\_\+hostif\+\_\+attr\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+A\+T\+T\+R\+\_\+\+H\+A\+N\+D\+L\+E} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+A\+T\+T\+R\+\_\+\+M\+A\+C\+\_\+\+A\+D\+D\+R\+E\+S\+S} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+A\+T\+T\+R\+\_\+\+I\+P\+V4\+\_\+\+A\+D\+D\+R\+E\+S\+S} = (1 $<$$<$ 2), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+A\+T\+T\+R\+\_\+\+I\+P\+V6\+\_\+\+A\+D\+D\+R\+E\+S\+S} = (1 $<$$<$ 3), 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+A\+T\+T\+R\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E\+\_\+\+N\+A\+M\+E} = (1 $<$$<$ 4), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+A\+T\+T\+R\+\_\+\+A\+D\+M\+I\+N\+\_\+\+S\+T\+A\+T\+E} = (1 $<$$<$ 5), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+A\+T\+T\+R\+\_\+\+O\+P\+E\+R\+\_\+\+S\+T\+A\+T\+U\+S} = (1 $<$$<$ 6), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+A\+T\+T\+R\+\_\+\+V\+L\+A\+N\+\_\+\+A\+C\+T\+I\+O\+N} = (1 $<$$<$ 7), 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+A\+T\+T\+R\+\_\+\+Q\+U\+E\+U\+E} = (1 $<$$<$ 8)
+ \}}\label{group__HostInterface_ga2afb2a6d4f95e81cc08ee0d6b3198780}
+
+\item 
+enum \hyperlink{group__HostInterface_ga0986f09d2454602d51b3051c139a2f6f}{switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+V\+L\+A\+N\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+N\+O\+N\+E} = 0x0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+V\+L\+A\+N\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+A\+D\+D} = 0x1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+V\+L\+A\+N\+\_\+\+A\+C\+T\+I\+O\+N\+\_\+\+R\+E\+M\+O\+V\+E} = 0x2
+ \}
+\item 
+\hypertarget{group__HostInterface_gaae20631e30094c4d344a96c98673c6cb}{enum {\bfseries switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+attr\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+A\+T\+T\+R\+\_\+\+P\+O\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+A\+T\+T\+R\+\_\+\+L\+A\+G\+\_\+\+H\+A\+N\+D\+L\+E} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+A\+T\+T\+R\+\_\+\+I\+N\+T\+F\+\_\+\+H\+A\+N\+D\+L\+E} = (1 $<$$<$ 2), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+A\+T\+T\+R\+\_\+\+H\+A\+N\+D\+L\+E} = (1 $<$$<$ 3), 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+A\+T\+T\+R\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E} = (1 $<$$<$ 4), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+A\+T\+T\+R\+\_\+\+E\+T\+H\+E\+R\+\_\+\+T\+Y\+P\+E} = (1 $<$$<$ 5), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+A\+T\+T\+R\+\_\+\+G\+L\+O\+B\+A\+L} = (1 $<$$<$ 6)
+ \}}\label{group__HostInterface_gaae20631e30094c4d344a96c98673c6cb}
+
+\item 
+\hypertarget{group__HostInterface_gab7d97f894a9ffb9e8121021de6bd99bf}{enum {\bfseries switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+attr\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+T\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+A\+T\+T\+R\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+H\+A\+N\+D\+L\+E} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+T\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+A\+T\+T\+R\+\_\+\+V\+L\+A\+N\+\_\+\+I\+D} = (1 $<$$<$ 1)
+ \}}\label{group__HostInterface_gab7d97f894a9ffb9e8121021de6bd99bf}
+
+\item 
+\hypertarget{group__HostInterface_ga55d8ada64060e816d572fc482f3c91df}{enum {\bfseries switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+priority\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+M\+I\+N} = 0x0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+P\+O\+R\+T} = 0x1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+L\+A\+G} = 0x2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+I\+N\+T\+E\+R\+F\+A\+C\+E} = 0x3, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+V\+L\+A\+N} = 0x4, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+L\+N} = 0x5, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+R\+I\+F} = 0x6, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+P\+R\+I\+O1} = 0x10, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+P\+R\+I\+O2} = 0x11, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+P\+R\+I\+O3} = 0x12, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+P\+R\+I\+O4} = 0x13, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+M\+A\+X} = 0x14
+ \}}\label{group__HostInterface_ga55d8ada64060e816d572fc482f3c91df}
+
+\item 
+\hypertarget{group__HostInterface_ga867f79583d6548f921fb77949a0f1183}{enum {\bfseries switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+priority\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+T\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+M\+I\+N} = 0x0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+T\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+H\+O\+S\+T\+I\+F} = 0x1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+T\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+P\+R\+I\+O1} = 0x4, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+T\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+P\+R\+I\+O2} = 0x5, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+T\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+P\+R\+I\+O3} = 0x6, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+T\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+P\+R\+I\+O4} = 0x7, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+T\+X\+\_\+\+F\+I\+L\+T\+E\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y\+\_\+\+M\+A\+X} = 0x8
+ \}}\label{group__HostInterface_ga867f79583d6548f921fb77949a0f1183}
+
+\item 
+\hypertarget{group__HostInterface_ga6174fbb5d8f36cb7ce80ba9fd5b65792}{enum {\bfseries switch\+\_\+hostif\+\_\+rcode\+\_\+attr\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+C\+O\+D\+E\+\_\+\+A\+T\+T\+R\+\_\+\+R\+E\+A\+S\+O\+N\+\_\+\+C\+O\+D\+E} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+C\+O\+D\+E\+\_\+\+A\+T\+T\+R\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+A\+C\+T\+I\+O\+N} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+C\+O\+D\+E\+\_\+\+A\+T\+T\+R\+\_\+\+P\+R\+I\+O\+R\+I\+T\+Y} = (1 $<$$<$ 2), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+R\+C\+O\+D\+E\+\_\+\+A\+T\+T\+R\+\_\+\+H\+O\+S\+T\+I\+F\+\_\+\+G\+R\+O\+U\+P} = (1 $<$$<$ 3)
+ \}}\label{group__HostInterface_ga6174fbb5d8f36cb7ce80ba9fd5b65792}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_ga83fd4080c1b537079798860daefbf6cc}{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+register} (switch\+\_\+device\+\_\+t device, switch\+\_\+app\+\_\+id\+\_\+t app\+\_\+id, \hyperlink{group__HostInterface_gaeb0d6cedcbaf8794cc964f72383bc404}{switch\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+fn} cb\+\_\+fn, void $\ast$cookie)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_ga31fe407c40876daea5a30bafb648e0a7}{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+deregister} (switch\+\_\+device\+\_\+t device, switch\+\_\+app\+\_\+id\+\_\+t app\+\_\+id, \hyperlink{group__HostInterface_gaeb0d6cedcbaf8794cc964f72383bc404}{switch\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+fn} cb\+\_\+fn)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_ga17e21f6a908c5b9b4ed994e8aba767d5}{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+packet} (\hyperlink{group__HostInterface_gacf3b5146e7fbf5d3726cbd9ba7cd6636}{switch\+\_\+hostif\+\_\+packet\+\_\+t} $\ast$hostif\+\_\+packet)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_ga9e9ddcf1e547c133df0c8ece60982f49}{switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+create} (const switch\+\_\+device\+\_\+t device, const \hyperlink{group__HostInterface_gaaacd1815b505c965d68a7604f211d907}{switch\+\_\+hostif\+\_\+group\+\_\+t} $\ast$hif\+\_\+group, switch\+\_\+handle\+\_\+t $\ast$hif\+\_\+group\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_ga07f00ae4bc53e60002ebad9c7ee297a8}{switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t hif\+\_\+group\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_ga6ce501a10c9d4d167aaa71f35f0f3c65}{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+create} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+uint64\+\_\+t flags, const \hyperlink{group__HostInterface_gad572618a94aec43492d76730093e105f}{switch\+\_\+api\+\_\+hostif\+\_\+rcode\+\_\+info\+\_\+t} $\ast$rcode\+\_\+api\+\_\+info, switch\+\_\+handle\+\_\+t $\ast$hostif\+\_\+rcode\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_ga6dd335d280eb94c14d97bece73a66b8d}{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+update} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t hostif\+\_\+rcode\+\_\+handle, const switch\+\_\+uint64\+\_\+t flags, const \hyperlink{group__HostInterface_gad572618a94aec43492d76730093e105f}{switch\+\_\+api\+\_\+hostif\+\_\+rcode\+\_\+info\+\_\+t} $\ast$rcode\+\_\+api\+\_\+info)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_gab04148c1eb71593a4507380eb574f2d3}{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t hostif\+\_\+rcode\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_ga5d24f6986bc6f45ac5993e7ece399cac}{switch\+\_\+api\+\_\+hostif\+\_\+create} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+uint64\+\_\+t flags, const \hyperlink{group__HostInterface_ga3cd1d0c163caae841da0f87a23e5caf7}{switch\+\_\+hostif\+\_\+t} $\ast$hostif, switch\+\_\+handle\+\_\+t $\ast$hostif\+\_\+handle)
+\item 
+\hypertarget{group__HostInterface_ga1306c5623c28b14e9d7b68cf146ac394}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+hostif\+\_\+update} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t hostif\+\_\+handle, const switch\+\_\+uint64\+\_\+t flags, \hyperlink{group__HostInterface_ga3cd1d0c163caae841da0f87a23e5caf7}{switch\+\_\+hostif\+\_\+t} $\ast$hostif)}\label{group__HostInterface_ga1306c5623c28b14e9d7b68cf146ac394}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_gaf0f5a97b3319e353f2b9ee7f8c132cc7}{switch\+\_\+api\+\_\+hostif\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t hostif\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_ga75452d6fe80774f25eefb57b474dd4c3}{switch\+\_\+api\+\_\+hostif\+\_\+nhop\+\_\+get} (switch\+\_\+device\+\_\+t device, \hyperlink{group__HostInterface_gab8b13524888d4f506357fae04c44babc}{switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+t} rcode, switch\+\_\+handle\+\_\+t $\ast$nhop\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_gae8eecc6f092995ced289b55b6cafb994}{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+create} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+priority\+\_\+t priority, const switch\+\_\+uint64\+\_\+t flags, const \hyperlink{group__HostInterface_gabae602b7028818087fe7f1c9b8d02c34}{switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+key\+\_\+t} $\ast$tx\+\_\+key, const \hyperlink{group__HostInterface_ga294bb3f6e4fd80c02ca1c80acf11422c}{switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+action\+\_\+t} $\ast$tx\+\_\+action, switch\+\_\+handle\+\_\+t $\ast$tx\+\_\+filter\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_ga85f3010a1279ac7b4b2b1cb5dfe865f1}{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t tx\+\_\+filter\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_ga9e27da5dbe1173fd99fc4e2504cb0ffe}{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+create} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+priority\+\_\+t priority, const switch\+\_\+uint64\+\_\+t flags, const \hyperlink{group__HostInterface_ga10a6365e0fb5dfe061e099c366131070}{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+key\+\_\+t} $\ast$rx\+\_\+key, const \hyperlink{group__HostInterface_gae246494c29a7bbbbec6d51554108d01b}{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+action\+\_\+t} $\ast$rx\+\_\+action, switch\+\_\+handle\+\_\+t $\ast$rx\+\_\+filter\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_gacf3edf1e21747ebc8cbba91210c1b4d4}{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t rx\+\_\+filter\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_ga41264be91adc3843ff3e59b9906d53bc}{switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+create} (const switch\+\_\+device\+\_\+t device, const \hyperlink{group__Meters_ga39b6cf8a3c569d2feee8e369fbc90bb4}{switch\+\_\+api\+\_\+meter\+\_\+t} $\ast$api\+\_\+meter\+\_\+info, switch\+\_\+handle\+\_\+t $\ast$meter\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_gac8a864a038cb353d6b09a08093bef01f}{switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t meter\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__HostInterface_gae606f4e68dd2d3ecb4615b5558a50916}{switch\+\_\+api\+\_\+hostif\+\_\+cpu\+\_\+tx\+\_\+queue\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t hostif\+\_\+handle, switch\+\_\+uint8\+\_\+t qid)
+\item 
+\hypertarget{group__HostInterface_gae78263c89e8d6474df4fb6fa59c21339}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+hostif\+\_\+handle\+\_\+get} (const switch\+\_\+device\+\_\+t device, const char $\ast$intf\+\_\+name, switch\+\_\+handle\+\_\+t $\ast$hostif\+\_\+handle)}\label{group__HostInterface_gae78263c89e8d6474df4fb6fa59c21339}
+
+\item 
+\hypertarget{group__HostInterface_ga0e1b5fac3b4eea4416d3214d814d6c47}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t hostif\+\_\+group\+\_\+handle, \hyperlink{group__HostInterface_gaaacd1815b505c965d68a7604f211d907}{switch\+\_\+hostif\+\_\+group\+\_\+t} $\ast$hostif\+\_\+group)}\label{group__HostInterface_ga0e1b5fac3b4eea4416d3214d814d6c47}
+
+\item 
+\hypertarget{group__HostInterface_ga4586dd4f3c3af36c50e36f477e658032}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+meter\+\_\+set} (const switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t handle, switch\+\_\+handle\+\_\+t meter\+\_\+handle)}\label{group__HostInterface_ga4586dd4f3c3af36c50e36f477e658032}
+
+\item 
+\hypertarget{group__HostInterface_gaf8c922a1a89bc1637ae069a19177e6f2}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+hostif\+\_\+oper\+\_\+state\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t hostif\+\_\+handle, bool oper\+\_\+state)}\label{group__HostInterface_gaf8c922a1a89bc1637ae069a19177e6f2}
+
+\item 
+\hypertarget{group__HostInterface_gadc216bbf9d071055faa618a5f8324a63}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+hostif\+\_\+oper\+\_\+state\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t hostif\+\_\+handle, bool $\ast$oper\+\_\+state)}\label{group__HostInterface_gadc216bbf9d071055faa618a5f8324a63}
+
+\item 
+\hypertarget{group__HostInterface_gabdc2654c7a32ca7606c4f59faa746d80}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+counter\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t meter\+\_\+handle, \hyperlink{structswitch__counter__s}{switch\+\_\+counter\+\_\+t} $\ast$counter)}\label{group__HostInterface_gabdc2654c7a32ca7606c4f59faa746d80}
+
+\item 
+\hypertarget{group__HostInterface_gaa75fcee70189d90ce1e1113c8337e1c0}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+counter\+\_\+clear} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t meter\+\_\+handle)}\label{group__HostInterface_gaa75fcee70189d90ce1e1113c8337e1c0}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__HostInterface_gad572618a94aec43492d76730093e105f}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+rcode\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+hostif\+\_\+rcode\+\_\+info\+\_\+t}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+rcode\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+hostif\+\_\+rcode\+\_\+info\+\_\+t}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+rcode\+\_\+info\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+api\+\_\+hostif\+\_\+rcode\+\_\+info\+\_\+s}  {\bf switch\+\_\+api\+\_\+hostif\+\_\+rcode\+\_\+info\+\_\+t}}}\label{group__HostInterface_gad572618a94aec43492d76730093e105f}
+switch hostif reason code info \hypertarget{group__HostInterface_gaaacd1815b505c965d68a7604f211d907}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+hostif\+\_\+group\+\_\+t@{switch\+\_\+hostif\+\_\+group\+\_\+t}}
+\index{switch\+\_\+hostif\+\_\+group\+\_\+t@{switch\+\_\+hostif\+\_\+group\+\_\+t}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+hostif\+\_\+group\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+hostif\+\_\+group\+\_\+s}  {\bf switch\+\_\+hostif\+\_\+group\+\_\+t}}}\label{group__HostInterface_gaaacd1815b505c965d68a7604f211d907}
+switch hostif group \hypertarget{group__HostInterface_gacf3b5146e7fbf5d3726cbd9ba7cd6636}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+hostif\+\_\+packet\+\_\+t@{switch\+\_\+hostif\+\_\+packet\+\_\+t}}
+\index{switch\+\_\+hostif\+\_\+packet\+\_\+t@{switch\+\_\+hostif\+\_\+packet\+\_\+t}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+hostif\+\_\+packet\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+hostif\+\_\+packet\+\_\+s}  {\bf switch\+\_\+hostif\+\_\+packet\+\_\+t}}}\label{group__HostInterface_gacf3b5146e7fbf5d3726cbd9ba7cd6636}
+hostif tx/rx packet info \hypertarget{group__HostInterface_gab8b13524888d4f506357fae04c44babc}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+t@{switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+t}}
+\index{switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+t@{switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+t}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+s}  {\bf switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+t}}}\label{group__HostInterface_gab8b13524888d4f506357fae04c44babc}
+switch hostif reason code \hypertarget{group__HostInterface_gaeb0d6cedcbaf8794cc964f72383bc404}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+fn@{switch\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+fn}}
+\index{switch\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+fn@{switch\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+fn}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+fn}]{\setlength{\rightskip}{0pt plus 5cm}typedef void($\ast$ switch\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+fn)({\bf switch\+\_\+hostif\+\_\+packet\+\_\+t} $\ast$hostif\+\_\+packet)}}\label{group__HostInterface_gaeb0d6cedcbaf8794cc964f72383bc404}
+C\+P\+U Rx Callback \hypertarget{group__HostInterface_gae246494c29a7bbbbec6d51554108d01b}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+action\+\_\+t@{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+action\+\_\+t}}
+\index{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+action\+\_\+t@{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+action\+\_\+t}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+action\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+action\+\_\+s}  {\bf switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+action\+\_\+t}}}\label{group__HostInterface_gae246494c29a7bbbbec6d51554108d01b}
+rx action for net filter \hypertarget{group__HostInterface_ga10a6365e0fb5dfe061e099c366131070}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+key\+\_\+t@{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+key\+\_\+t}}
+\index{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+key\+\_\+t@{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+key\+\_\+t}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+key\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+key\+\_\+s}  {\bf switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+key\+\_\+t}}}\label{group__HostInterface_ga10a6365e0fb5dfe061e099c366131070}
+rx key for net filter \hypertarget{group__HostInterface_ga3cd1d0c163caae841da0f87a23e5caf7}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+hostif\+\_\+t@{switch\+\_\+hostif\+\_\+t}}
+\index{switch\+\_\+hostif\+\_\+t@{switch\+\_\+hostif\+\_\+t}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+hostif\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+hostif\+\_\+s}  {\bf switch\+\_\+hostif\+\_\+t}}}\label{group__HostInterface_ga3cd1d0c163caae841da0f87a23e5caf7}
+host interface \hypertarget{group__HostInterface_ga294bb3f6e4fd80c02ca1c80acf11422c}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+action\+\_\+t@{switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+action\+\_\+t}}
+\index{switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+action\+\_\+t@{switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+action\+\_\+t}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+action\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+packet\+\_\+tx\+\_\+filter\+\_\+action\+\_\+s}  {\bf switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+action\+\_\+t}}}\label{group__HostInterface_ga294bb3f6e4fd80c02ca1c80acf11422c}
+tx net filter ation \hypertarget{group__HostInterface_gabae602b7028818087fe7f1c9b8d02c34}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+key\+\_\+t@{switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+key\+\_\+t}}
+\index{switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+key\+\_\+t@{switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+key\+\_\+t}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+key\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+key\+\_\+s}  {\bf switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+key\+\_\+t}}}\label{group__HostInterface_gabae602b7028818087fe7f1c9b8d02c34}
+tx key for net filter \hypertarget{group__HostInterface_ga941337bc8e6d3df44983db93d6000a15}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+t@{switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+t}}
+\index{switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+t@{switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+t}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+s}  {\bf switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+t}}}\label{group__HostInterface_ga941337bc8e6d3df44983db93d6000a15}
+hostif vlan action 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__HostInterface_ga4a81fc4f5f8643f528b3a45009b5ba84}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+s@{switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+s}}
+\index{switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+s@{switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+s}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+s}}}\label{group__HostInterface_ga4a81fc4f5f8643f528b3a45009b5ba84}
+switch hostif reason code \hypertarget{group__HostInterface_ga0986f09d2454602d51b3051c139a2f6f}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+s@{switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+s}}
+\index{switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+s@{switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+s}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+hostif\+\_\+vlan\+\_\+action\+\_\+s}}}\label{group__HostInterface_ga0986f09d2454602d51b3051c139a2f6f}
+hostif vlan action 
+
+\subsection{Function Documentation}
+\hypertarget{group__HostInterface_gae606f4e68dd2d3ecb4615b5558a50916}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+cpu\+\_\+tx\+\_\+queue\+\_\+set@{switch\+\_\+api\+\_\+hostif\+\_\+cpu\+\_\+tx\+\_\+queue\+\_\+set}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+cpu\+\_\+tx\+\_\+queue\+\_\+set@{switch\+\_\+api\+\_\+hostif\+\_\+cpu\+\_\+tx\+\_\+queue\+\_\+set}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+cpu\+\_\+tx\+\_\+queue\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+cpu\+\_\+tx\+\_\+queue\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{hostif\+\_\+handle, }
+\item[{switch\+\_\+uint8\+\_\+t}]{qid}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_gae606f4e68dd2d3ecb4615b5558a50916}
+set C\+P\+U Tx queue 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em hostif\+\_\+handle} & hostif handle  C\+P\+U Tx queue identiier \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_ga5d24f6986bc6f45ac5993e7ece399cac}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+create@{switch\+\_\+api\+\_\+hostif\+\_\+create}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+create@{switch\+\_\+api\+\_\+hostif\+\_\+create}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+uint64\+\_\+t}]{flags, }
+\item[{const {\bf switch\+\_\+hostif\+\_\+t} $\ast$}]{hostif, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{hostif\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_ga5d24f6986bc6f45ac5993e7ece399cac}
+Create host interface 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em hostif} & host interface \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_gaf0f5a97b3319e353f2b9ee7f8c132cc7}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+delete@{switch\+\_\+api\+\_\+hostif\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+delete@{switch\+\_\+api\+\_\+hostif\+\_\+delete}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{hostif\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_gaf0f5a97b3319e353f2b9ee7f8c132cc7}
+Delete host interface 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em hostif\+\_\+handle} & hostif handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_ga9e9ddcf1e547c133df0c8ece60982f49}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+create@{switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+create}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+create@{switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+create}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const {\bf switch\+\_\+hostif\+\_\+group\+\_\+t} $\ast$}]{hif\+\_\+group, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{hif\+\_\+group\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_ga9e9ddcf1e547c133df0c8ece60982f49}
+Create a hostif profile to be shared across multiple reason codes 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em hostif\+\_\+group} & hostif group info \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_ga07f00ae4bc53e60002ebad9c7ee297a8}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+delete@{switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+delete@{switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+delete}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+group\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{hif\+\_\+group\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_ga07f00ae4bc53e60002ebad9c7ee297a8}
+Delete a hostif profile that is shared across multiple reason codes 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em hostif\+\_\+group\+\_\+id} & hostif group id \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_ga41264be91adc3843ff3e59b9906d53bc}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+create@{switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+create}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+create@{switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+create}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const {\bf switch\+\_\+api\+\_\+meter\+\_\+t} $\ast$}]{api\+\_\+meter\+\_\+info, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{meter\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_ga41264be91adc3843ff3e59b9906d53bc}
+create a meter for control plane policing 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em api\+\_\+meter\+\_\+info} & meter struct \\
+\hline
+{\em meter\+\_\+handle} & return meter handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_gac8a864a038cb353d6b09a08093bef01f}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+delete@{switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+delete@{switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+delete}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+meter\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{meter\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_gac8a864a038cb353d6b09a08093bef01f}
+delete meter for control plane policing 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em meter\+\_\+handle} & meter handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_ga75452d6fe80774f25eefb57b474dd4c3}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+nhop\+\_\+get@{switch\+\_\+api\+\_\+hostif\+\_\+nhop\+\_\+get}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+nhop\+\_\+get@{switch\+\_\+api\+\_\+hostif\+\_\+nhop\+\_\+get}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+nhop\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+nhop\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+t}}]{rcode, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{nhop\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_ga75452d6fe80774f25eefb57b474dd4c3}
+Return nexthop based on reason code 
+\begin{DoxyParams}{Parameters}
+{\em rcode} & Reason code \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_ga6ce501a10c9d4d167aaa71f35f0f3c65}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+create@{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+create}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+create@{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+create}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+uint64\+\_\+t}]{flags, }
+\item[{const {\bf switch\+\_\+api\+\_\+hostif\+\_\+rcode\+\_\+info\+\_\+t} $\ast$}]{rcode\+\_\+api\+\_\+info, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{hostif\+\_\+rcode\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_ga6ce501a10c9d4d167aaa71f35f0f3c65}
+Add a hostif reason code to trap/forward the packet to cpu 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em rcode\+\_\+api\+\_\+info} & reason code info \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_gab04148c1eb71593a4507380eb574f2d3}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+delete@{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+delete@{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+delete}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{hostif\+\_\+rcode\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_gab04148c1eb71593a4507380eb574f2d3}
+Remove a reason code to trap/forward the packet to cpu 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em reason\+\_\+code} & reason code \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_ga6dd335d280eb94c14d97bece73a66b8d}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+update@{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+update}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+update@{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+update}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+update}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+reason\+\_\+code\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{hostif\+\_\+rcode\+\_\+handle, }
+\item[{const switch\+\_\+uint64\+\_\+t}]{flags, }
+\item[{const {\bf switch\+\_\+api\+\_\+hostif\+\_\+rcode\+\_\+info\+\_\+t} $\ast$}]{rcode\+\_\+api\+\_\+info}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_ga6dd335d280eb94c14d97bece73a66b8d}
+Update a hostif reason code to trap/forward the packet to cpu 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em rcode\+\_\+api\+\_\+info} & reason code info \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_ga31fe407c40876daea5a30bafb648e0a7}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+deregister@{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+deregister}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+deregister@{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+deregister}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+deregister}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+deregister (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+app\+\_\+id\+\_\+t}]{app\+\_\+id, }
+\item[{{\bf switch\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+fn}}]{cb\+\_\+fn}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_ga31fe407c40876daea5a30bafb648e0a7}
+Deregister for callback on reception of packets qualified by reason 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to register callback \\
+\hline
+{\em cb\+\_\+fn} & callback function pointer \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_ga83fd4080c1b537079798860daefbf6cc}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+register@{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+register}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+register@{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+register}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+register}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+register (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+app\+\_\+id\+\_\+t}]{app\+\_\+id, }
+\item[{{\bf switch\+\_\+hostif\+\_\+rx\+\_\+callback\+\_\+fn}}]{cb\+\_\+fn, }
+\item[{void $\ast$}]{cookie}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_ga83fd4080c1b537079798860daefbf6cc}
+Register for callback on reception of packets qualified by reason 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to register callback \\
+\hline
+{\em cb\+\_\+fn} & callback function pointer \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_ga9e27da5dbe1173fd99fc4e2504cb0ffe}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+create@{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+create}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+create@{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+create}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+priority\+\_\+t}]{priority, }
+\item[{const switch\+\_\+uint64\+\_\+t}]{flags, }
+\item[{const {\bf switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+key\+\_\+t} $\ast$}]{rx\+\_\+key, }
+\item[{const {\bf switch\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+action\+\_\+t} $\ast$}]{rx\+\_\+action, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{rx\+\_\+filter\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_ga9e27da5dbe1173fd99fc4e2504cb0ffe}
+Create rx net filter 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em rx\+\_\+key} & rx net filter key \\
+\hline
+{\em rx\+\_\+action} & rx net filter action \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_gacf3edf1e21747ebc8cbba91210c1b4d4}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+delete@{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+delete@{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+delete}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+rx\+\_\+filter\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{rx\+\_\+filter\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_gacf3edf1e21747ebc8cbba91210c1b4d4}
+Delete rx net filter 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em rx\+\_\+key} & rx net filter key \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_gae8eecc6f092995ced289b55b6cafb994}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+create@{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+create}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+create@{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+create}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+priority\+\_\+t}]{priority, }
+\item[{const switch\+\_\+uint64\+\_\+t}]{flags, }
+\item[{const {\bf switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+key\+\_\+t} $\ast$}]{tx\+\_\+key, }
+\item[{const {\bf switch\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+action\+\_\+t} $\ast$}]{tx\+\_\+action, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{tx\+\_\+filter\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_gae8eecc6f092995ced289b55b6cafb994}
+Create tx net filter 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em tx\+\_\+key} & tx net filter key \\
+\hline
+{\em tx\+\_\+action} & tx net filter action \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_ga85f3010a1279ac7b4b2b1cb5dfe865f1}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+delete@{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+delete@{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+delete}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+filter\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{tx\+\_\+filter\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_ga85f3010a1279ac7b4b2b1cb5dfe865f1}
+Delete tx net filter 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em tx\+\_\+key} & tx net filter key \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__HostInterface_ga17e21f6a908c5b9b4ed994e8aba767d5}{\index{Host Interface A\+P\+I@{Host Interface A\+P\+I}!switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+packet@{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+packet}}
+\index{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+packet@{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+packet}!Host Interface A\+P\+I@{Host Interface A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+packet}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+hostif\+\_\+tx\+\_\+packet (
+\begin{DoxyParamCaption}
+\item[{{\bf switch\+\_\+hostif\+\_\+packet\+\_\+t} $\ast$}]{hostif\+\_\+packet}
+\end{DoxyParamCaption}
+)}}\label{group__HostInterface_ga17e21f6a908c5b9b4ed994e8aba767d5}
+Allocate packe memory to transmit 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em hostif\+\_\+packet} & packet info \\
+\hline
+\end{DoxyParams}

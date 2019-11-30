@@ -1,0 +1,27 @@
+var modules =
+[
+    [ "ACL API", "group__ACL.html", "group__ACL" ],
+    [ "Offload", "group__BFD.html", "group__BFD" ],
+    [ "Buffer API", "group__Buffer.html", "group__Buffer" ],
+    [ "switch - switch Description", "group__switch.html", "group__switch" ],
+    [ "DTel API", "group__DTel.html", "group__DTel" ],
+    [ "Host Interface API", "group__HostInterface.html", "group__HostInterface" ],
+    [ "Interface configuration API", "group__Interface.html", "group__Interface" ],
+    [ "L2 Switching API", "group__L2.html", "group__L2" ],
+    [ "L3 Routing API", "group__L3.html", "group__L3" ],
+    [ "LAG configuration API", "group__LAG.html", "group__LAG" ],
+    [ "Multicast API", "group__MULTICAST.html", "group__MULTICAST" ],
+    [ "API", "group__Meters.html", "group__Meters" ],
+    [ "Mirroring API", "group__Mirror.html", "group__Mirror" ],
+    [ "Tunnel API", "group__Tunnel.html", "group__Tunnel" ],
+    [ "NAT API", "group__NAT.html", "group__NAT" ],
+    [ "ARP/Neighbor API", "group__ARP.html", "group__ARP" ],
+    [ "Port configuration API", "group__Port.html", "group__Port" ],
+    [ "QOS API", "group__QOS.html", "group__QOS" ],
+    [ "QUEUE API", "group__QUEUE.html", "group__QUEUE" ],
+    [ "Router MAC API", "group__RMAC.html", "group__RMAC" ],
+    [ "Scheduler API", "group__Scheduler.html", "group__Scheduler" ],
+    [ "Spanning Tree Group API", "group__stp.html", "group__stp" ],
+    [ "VLAN configuration API", "group__VLAN.html", "group__VLAN" ],
+    [ "Virtual Router API", "group__VRF.html", "group__VRF" ]
+];

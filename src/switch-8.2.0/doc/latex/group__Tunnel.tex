@@ -1,0 +1,582 @@
+\hypertarget{group__Tunnel}{\section{Tunnel A\+P\+I}
+\label{group__Tunnel}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions create tunnel interfaces \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__mpls__s}{switch\+\_\+mpls\+\_\+s}
+\item 
+struct \hyperlink{structswitch__mpls__label__stack__s}{switch\+\_\+mpls\+\_\+label\+\_\+stack\+\_\+s}
+\item 
+struct \hyperlink{structswitch__api__mpls__info__s}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s}
+\item 
+struct \hyperlink{structswitch__srv6__segment__s}{switch\+\_\+srv6\+\_\+segment\+\_\+s}
+\item 
+struct \hyperlink{structswitch__qinq__s}{switch\+\_\+qinq\+\_\+s}
+\item 
+struct \hyperlink{structswitch__api__tunnel__info__s}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s}
+\item 
+struct \hyperlink{structswitch__api__tunnel__term__info__s}{switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+s}
+\item 
+struct \hyperlink{structswitch__api__tunnel__mapper__s}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+s}
+\item 
+struct \hyperlink{structswitch__api__tunnel__mapper__entry__s}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__Tunnel_ga358d11e6167bb874159a7b6ac253221b}{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+L\+A\+B\+E\+L\+\_\+\+M\+A\+X}~5
+\item 
+\#define \hyperlink{group__Tunnel_ga4445b89170c80300ca9bc62249605ec4}{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V4\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+N\+U\+L\+L}~0
+\item 
+\#define \hyperlink{group__Tunnel_gad1efd6059d9f7fbd49f3ca77b5cca89d}{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V6\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+N\+U\+L\+L}~2
+\item 
+\#define \hyperlink{group__Tunnel_ga7da56385741dd85fc62b0518245e0b06}{S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+M\+A\+X}~3
+\item 
+\#define \hyperlink{group__Tunnel_ga9d8eb6604f4c584e8bcd459e24868968}{S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H}~16
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{group__Tunnel_ga0604465b082bd3c18d8252cc9d50e771}{switch\+\_\+mpls\+\_\+type\+\_\+s} \hyperlink{group__Tunnel_ga9757d049be2922674f9c5350384ff3ae}{switch\+\_\+mpls\+\_\+type\+\_\+t}
+\item 
+typedef enum \hyperlink{group__Tunnel_ga9422139cfd73bb4e5796a35c4569d763}{switch\+\_\+mpls\+\_\+mode\+\_\+s} \hyperlink{group__Tunnel_ga31b707543626fd0d899f011a2bf91fc9}{switch\+\_\+mpls\+\_\+mode\+\_\+t}
+\item 
+\hypertarget{group__Tunnel_ga5812c1c4677b4d75b7ed933d03a63cff}{typedef enum \\*
+switch\+\_\+mpls\+\_\+tunnel\+\_\+type\+\_\+s {\bfseries switch\+\_\+mpls\+\_\+tunnel\+\_\+type\+\_\+t}}\label{group__Tunnel_ga5812c1c4677b4d75b7ed933d03a63cff}
+
+\item 
+typedef struct \hyperlink{structswitch__mpls__s}{switch\+\_\+mpls\+\_\+s} \hyperlink{group__Tunnel_gaa1a400888248e1e756adbd37f010f288}{switch\+\_\+mpls\+\_\+t}
+\item 
+\hypertarget{group__Tunnel_ga2533a1ed0adc2602ec426a7e0b553c8e}{typedef struct \\*
+\hyperlink{structswitch__mpls__label__stack__s}{switch\+\_\+mpls\+\_\+label\+\_\+stack\+\_\+s} {\bfseries switch\+\_\+mpls\+\_\+label\+\_\+stack\+\_\+t}}\label{group__Tunnel_ga2533a1ed0adc2602ec426a7e0b553c8e}
+
+\item 
+typedef struct \\*
+\hyperlink{structswitch__api__mpls__info__s}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s} \hyperlink{group__Tunnel_gab183bce9dc3bd5f8baa23b589e040674}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+t}
+\item 
+\hypertarget{group__Tunnel_gaf40098a00826b3b6bfed7ec311fa4208}{typedef enum \hyperlink{group__Tunnel_gae6e97544aa9d069ef7640927ba5f92aa}{switch\+\_\+tunnel\+\_\+type\+\_\+s} {\bfseries switch\+\_\+tunnel\+\_\+type\+\_\+t}}\label{group__Tunnel_gaf40098a00826b3b6bfed7ec311fa4208}
+
+\item 
+\hypertarget{group__Tunnel_ga1a14ad2492a83d5936040e1ffa2a4abd}{typedef enum \\*
+\hyperlink{group__Tunnel_gac912a56b58661dcec8846d16be80de31}{switch\+\_\+tunnel\+\_\+map\+\_\+type\+\_\+s} {\bfseries switch\+\_\+tunnel\+\_\+map\+\_\+type\+\_\+t}}\label{group__Tunnel_ga1a14ad2492a83d5936040e1ffa2a4abd}
+
+\item 
+\hypertarget{group__Tunnel_gad4322baf90307dfbca395e5e7fa44de5}{typedef enum \\*
+\hyperlink{group__Tunnel_gaf17d995b62e3e95fc88052f69156317d}{switch\+\_\+tunnel\+\_\+term\+\_\+entry\+\_\+type\+\_\+s} {\bfseries switch\+\_\+tunnel\+\_\+term\+\_\+entry\+\_\+type\+\_\+t}}\label{group__Tunnel_gad4322baf90307dfbca395e5e7fa44de5}
+
+\item 
+\hypertarget{group__Tunnel_ga50eba8f8a87d82d4e555543ac632064f}{typedef enum \\*
+switch\+\_\+tunnel\+\_\+ip\+\_\+addr\+\_\+type\+\_\+s {\bfseries switch\+\_\+tunnel\+\_\+ip\+\_\+addr\+\_\+type\+\_\+t}}\label{group__Tunnel_ga50eba8f8a87d82d4e555543ac632064f}
+
+\item 
+typedef enum \\*
+\hyperlink{group__Tunnel_gaa171c0101a1f87af3f4cc2d44343e4a0}{switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+s} \hyperlink{group__Tunnel_ga8c691aa3424f01425814cccd5c076e44}{switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__srv6__segment__s}{switch\+\_\+srv6\+\_\+segment\+\_\+s} \hyperlink{group__Tunnel_ga58531f8a8bab6f7c34f9bd77c243ec2f}{switch\+\_\+srv6\+\_\+segment\+\_\+t}
+\item 
+typedef struct \hyperlink{structswitch__qinq__s}{switch\+\_\+qinq\+\_\+s} \hyperlink{group__Tunnel_gaf7119659216df7efc9b7453d85ab2451}{switch\+\_\+qinq\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__api__tunnel__info__s}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s} \hyperlink{group__Tunnel_ga9c4faabdbd4426a0e9903279ad118116}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+t}
+\item 
+\hypertarget{group__Tunnel_ga446d83c7ebbbfbce496227a6474744f3}{typedef struct \\*
+\hyperlink{structswitch__api__tunnel__term__info__s}{switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+s} {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+t}}\label{group__Tunnel_ga446d83c7ebbbfbce496227a6474744f3}
+
+\item 
+typedef struct \\*
+\hyperlink{structswitch__api__tunnel__mapper__s}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+s} \hyperlink{group__Tunnel_gabce2bf13973701d284cb4c173ee4d9d7}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__api__tunnel__mapper__entry__s}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s} \hyperlink{group__Tunnel_gadb6058730695240a36e37a65dbc20e8b}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__Tunnel_ga0604465b082bd3c18d8252cc9d50e771}{switch\+\_\+mpls\+\_\+type\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E} = 0x0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+O\+M\+P\+L\+S} = 0x1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+V4\+\_\+\+M\+P\+L\+S} = 0x2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+V6\+\_\+\+M\+P\+L\+S} = 0x3, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+P\+L\+S} = 0x4, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+T\+Y\+P\+E\+\_\+\+P\+W} = 0x5
+ \}
+\item 
+enum \hyperlink{group__Tunnel_ga9422139cfd73bb4e5796a35c4569d763}{switch\+\_\+mpls\+\_\+mode\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+N\+O\+N\+E} = 0x0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+I\+N\+I\+T\+I\+A\+T\+E} = 0x1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+T\+R\+A\+N\+S\+I\+T} = 0x2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+M\+O\+D\+E\+\_\+\+T\+E\+R\+M\+I\+N\+A\+T\+E} = 0x3
+ \}
+\item 
+\hypertarget{group__Tunnel_gad462fe4bcfc60a5accb57fca50604119}{enum {\bfseries switch\+\_\+mpls\+\_\+tunnel\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+P\+L\+S} = 0x1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+P\+L\+S\+\_\+\+U\+D\+P} = 0x2
+ \}}\label{group__Tunnel_gad462fe4bcfc60a5accb57fca50604119}
+
+\item 
+enum \hyperlink{group__Tunnel_gae6e97544aa9d069ef7640927ba5f92aa}{switch\+\_\+tunnel\+\_\+type\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E}, 
+\hyperlink{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaad5df733370918231c8f13563934f60fd}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+I\+N\+Q}, 
+\hyperlink{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaad4a41baf3c5f3130da297703e290248c}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+X\+L\+A\+N}, 
+\hyperlink{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaae1a0ba91dceb95390218ea33c2150b1d}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+E}, 
+\\*
+\hyperlink{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaa493851ce01e4c37628f86d14228ef1af}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+V\+G\+R\+E}, 
+\hyperlink{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaa68078ff6bca79368ada183ce6e241f7e}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+E\+N\+E\+V\+E}, 
+\hyperlink{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaaa2c526d95d1a6055b8a6f9a5daa1a100}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+R\+S\+P\+A\+N\+\_\+\+T3}, 
+\hyperlink{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaa974ad2ece6d8ef98900be8867017320d}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+I\+P}, 
+\\*
+\hyperlink{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaa4e8a2fbd8dd8c0ebf29aae049ef10233}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+R\+V6}, 
+\hyperlink{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaad48b30b4a980ef987855c156156c132d}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+T\+E\+L\+\_\+\+R\+E\+P\+O\+R\+T}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+A\+X}
+ \}
+\item 
+enum \hyperlink{group__Tunnel_gac912a56b58661dcec8846d16be80de31}{switch\+\_\+tunnel\+\_\+map\+\_\+type\+\_\+s} \{ \\*
+\hyperlink{group__Tunnel_ggac912a56b58661dcec8846d16be80de31ab2458708261280b7621ac40840481343}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+V\+L\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E}, 
+\hyperlink{group__Tunnel_ggac912a56b58661dcec8846d16be80de31a73a960fde645eda2b9d0fd21af48f4cd}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+L\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I}, 
+\hyperlink{group__Tunnel_ggac912a56b58661dcec8846d16be80de31a242942905c6a329405e8c15d034e2bd9}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+L\+N\+\_\+\+H\+A\+N\+D\+L\+E}, 
+\hyperlink{group__Tunnel_ggac912a56b58661dcec8846d16be80de31afea4a258a3d486412f4c1f92e5eec89d}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I}, 
+\\*
+\hyperlink{group__Tunnel_ggac912a56b58661dcec8846d16be80de31ab2a5e2ef901607054aafb0dbe75e4612}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+R\+F\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I}, 
+\hyperlink{group__Tunnel_ggac912a56b58661dcec8846d16be80de31abcd2f59cdb7e0243eab22dba7637e617}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+V\+R\+F\+\_\+\+H\+A\+N\+D\+L\+E}
+ \}
+\item 
+enum \hyperlink{group__Tunnel_gaf17d995b62e3e95fc88052f69156317d}{switch\+\_\+tunnel\+\_\+term\+\_\+entry\+\_\+type\+\_\+s} \{ \hyperlink{group__Tunnel_ggaf17d995b62e3e95fc88052f69156317da3c45f1ca2c0530e414a1c0b71dd02517}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+E\+R\+M\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+P2\+P}, 
+\hyperlink{group__Tunnel_ggaf17d995b62e3e95fc88052f69156317da4c6f3a5d2b6cdaf4b84b9a880f670228}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+E\+R\+M\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+P2\+M\+P}
+ \}
+\item 
+\hypertarget{group__Tunnel_ga0f1af995653a7dca16375318237a87f4}{enum {\bfseries switch\+\_\+tunnel\+\_\+ip\+\_\+addr\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+V4} = 0x0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+I\+P\+\_\+\+A\+D\+D\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+V6} = 0x1
+ \}}\label{group__Tunnel_ga0f1af995653a7dca16375318237a87f4}
+
+\item 
+enum \hyperlink{group__Tunnel_gaa171c0101a1f87af3f4cc2d44343e4a0}{switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+N\+I\+C\+A\+S\+T} = 0x0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+U\+L\+T\+I\+C\+A\+S\+T} = 0x1
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{group__Tunnel_ga4b3dd27e7774ae591300985844cc01af}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mpls\+\_\+tunnel\+\_\+create} (switch\+\_\+device\+\_\+t device, \hyperlink{group__Tunnel_gab183bce9dc3bd5f8baa23b589e040674}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+t} $\ast$api\+\_\+mpls\+\_\+info, switch\+\_\+handle\+\_\+t $\ast$mpls\+\_\+handle)}\label{group__Tunnel_ga4b3dd27e7774ae591300985844cc01af}
+
+\item 
+\hypertarget{group__Tunnel_ga1e5321092c4e94225283c3dd0c9600a2}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mpls\+\_\+tunnel\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t mpls\+\_\+handle)}\label{group__Tunnel_ga1e5321092c4e94225283c3dd0c9600a2}
+
+\item 
+\hypertarget{group__Tunnel_ga2dcc40ee02d03950140140343b1ce1f0}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mpls\+\_\+label\+\_\+stack\+\_\+create} (switch\+\_\+device\+\_\+t device, \hyperlink{structswitch__mpls__label__stack__s}{switch\+\_\+mpls\+\_\+label\+\_\+stack\+\_\+t} $\ast$label\+\_\+stack, switch\+\_\+handle\+\_\+t $\ast$label\+\_\+stack\+\_\+handle)}\label{group__Tunnel_ga2dcc40ee02d03950140140343b1ce1f0}
+
+\item 
+\hypertarget{group__Tunnel_ga84dbbfaaada5e1211cb19df41829dbff}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mpls\+\_\+label\+\_\+stack\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t label\+\_\+stack\+\_\+handle)}\label{group__Tunnel_ga84dbbfaaada5e1211cb19df41829dbff}
+
+\item 
+\hypertarget{group__Tunnel_ga25dac433293a2e57e0178560f9325e10}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+create} (const switch\+\_\+device\+\_\+t device, const \hyperlink{group__Tunnel_gabce2bf13973701d284cb4c173ee4d9d7}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+t} $\ast$tunnel\+\_\+mapper, switch\+\_\+handle\+\_\+t $\ast$tunnel\+\_\+mapper\+\_\+handle)}\label{group__Tunnel_ga25dac433293a2e57e0178560f9325e10}
+
+\item 
+\hypertarget{group__Tunnel_gabf39f5b2f3ed22d07991eedb9cf12678}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t tunnel\+\_\+mapper\+\_\+handle)}\label{group__Tunnel_gabf39f5b2f3ed22d07991eedb9cf12678}
+
+\item 
+\hypertarget{group__Tunnel_ga9bdbb33761dd0dadfd0c5fa9b541bccc}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entries\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t tunnel\+\_\+mapper\+\_\+handle, switch\+\_\+uint16\+\_\+t $\ast$num\+\_\+entries, switch\+\_\+handle\+\_\+t $\ast$tunnel\+\_\+mapper\+\_\+entry\+\_\+handles)}\label{group__Tunnel_ga9bdbb33761dd0dadfd0c5fa9b541bccc}
+
+\item 
+\hypertarget{group__Tunnel_gad295d08b95f5cd3f733912dc9d06c746}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+create} (const switch\+\_\+device\+\_\+t device, const \hyperlink{group__Tunnel_gadb6058730695240a36e37a65dbc20e8b}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+t} $\ast$tunnel\+\_\+mapper\+\_\+entry, switch\+\_\+handle\+\_\+t $\ast$tunnel\+\_\+mapper\+\_\+entry\+\_\+handle)}\label{group__Tunnel_gad295d08b95f5cd3f733912dc9d06c746}
+
+\item 
+\hypertarget{group__Tunnel_ga5249e4222be4ac00f8bf41e035c6db57}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t tunnel\+\_\+mapper\+\_\+entry\+\_\+handle)}\label{group__Tunnel_ga5249e4222be4ac00f8bf41e035c6db57}
+
+\item 
+\hypertarget{group__Tunnel_gaafddf227b57cba2ff4eb5065f38d08c9}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t tunnel\+\_\+mapper\+\_\+entry\+\_\+handle, \hyperlink{group__Tunnel_gadb6058730695240a36e37a65dbc20e8b}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+t} $\ast$tunnel\+\_\+mapper\+\_\+entry)}\label{group__Tunnel_gaafddf227b57cba2ff4eb5065f38d08c9}
+
+\item 
+\hypertarget{group__Tunnel_ga7a01d4558a6ee06e18a169717bf68b99}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+create} (const switch\+\_\+device\+\_\+t device, const \hyperlink{group__Tunnel_ga9c4faabdbd4426a0e9903279ad118116}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+t} $\ast$tunnel\+\_\+info, switch\+\_\+handle\+\_\+t $\ast$tunnel\+\_\+handle)}\label{group__Tunnel_ga7a01d4558a6ee06e18a169717bf68b99}
+
+\item 
+\hypertarget{group__Tunnel_ga04860a058be2ec6cdea0ed3a20fbf7ef}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t tunnel\+\_\+handle)}\label{group__Tunnel_ga04860a058be2ec6cdea0ed3a20fbf7ef}
+
+\item 
+\hypertarget{group__Tunnel_ga2a26589f76ff8cb525ea2b81a66f6be8}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t tunnel\+\_\+handle, \hyperlink{group__Tunnel_ga9c4faabdbd4426a0e9903279ad118116}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+t} $\ast$api\+\_\+tunnel\+\_\+info)}\label{group__Tunnel_ga2a26589f76ff8cb525ea2b81a66f6be8}
+
+\item 
+\hypertarget{group__Tunnel_ga4aadce36eca4cf958191287a59942159}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+interface\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t tunnel\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$intf\+\_\+handle)}\label{group__Tunnel_ga4aadce36eca4cf958191287a59942159}
+
+\item 
+\hypertarget{group__Tunnel_ga0bac0044a3768324d9825eb9d16e98a3}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+entries\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t tunnel\+\_\+handle, switch\+\_\+uint16\+\_\+t $\ast$num\+\_\+entries, switch\+\_\+handle\+\_\+t $\ast$tunnel\+\_\+term\+\_\+handles)}\label{group__Tunnel_ga0bac0044a3768324d9825eb9d16e98a3}
+
+\item 
+\hypertarget{group__Tunnel_ga2bede1a41f48ff194408ece3456d1b7f}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+create} (const switch\+\_\+device\+\_\+t device, const \hyperlink{structswitch__api__tunnel__term__info__s}{switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+t} $\ast$tunnel\+\_\+term\+\_\+info, switch\+\_\+handle\+\_\+t $\ast$tunnel\+\_\+handle)}\label{group__Tunnel_ga2bede1a41f48ff194408ece3456d1b7f}
+
+\item 
+\hypertarget{group__Tunnel_gad585582fb7158e73f56f8970911d1ebc}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t tunnel\+\_\+term\+\_\+handle)}\label{group__Tunnel_gad585582fb7158e73f56f8970911d1ebc}
+
+\item 
+\hypertarget{group__Tunnel_ga1aab5c3202d708d77c68cf6f9ef5003f}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t tunnel\+\_\+term\+\_\+handle, \hyperlink{structswitch__api__tunnel__term__info__s}{switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+t} $\ast$api\+\_\+term\+\_\+info)}\label{group__Tunnel_ga1aab5c3202d708d77c68cf6f9ef5003f}
+
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+mpls\+\_\+label\+\_\+t \hyperlink{group__Tunnel_ga2c144b7c6e8e43b29bf0fe4cc2075204}{switch\+\_\+mpls\+\_\+s\+::label}
+\item 
+switch\+\_\+uint8\+\_\+t \hyperlink{group__Tunnel_gaa051a49261e173522f5912b8ba8d0c73}{switch\+\_\+mpls\+\_\+s\+::exp}
+\item 
+switch\+\_\+uint8\+\_\+t \hyperlink{group__Tunnel_ga0a0835cb20b911ab796b4050f6c6bb49}{switch\+\_\+mpls\+\_\+s\+::ttl}
+\item 
+\hyperlink{group__Tunnel_gaa1a400888248e1e756adbd37f010f288}{switch\+\_\+mpls\+\_\+t} \hyperlink{group__Tunnel_gaf21845a304f409165053ed260fc8da3e}{switch\+\_\+mpls\+\_\+label\+\_\+stack\+\_\+s\+::label\+\_\+list} \mbox{[}\hyperlink{group__Tunnel_ga358d11e6167bb874159a7b6ac253221b}{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+L\+A\+B\+E\+L\+\_\+\+M\+A\+X}\mbox{]}
+\item 
+switch\+\_\+uint16\+\_\+t \hyperlink{group__Tunnel_ga601501fd20b6f5d298fb0f06ce0897d5}{switch\+\_\+mpls\+\_\+label\+\_\+stack\+\_\+s\+::num\+\_\+labels}
+\item 
+bool \hyperlink{group__Tunnel_gaefae3f185e3c94cb263058c963043565}{switch\+\_\+mpls\+\_\+label\+\_\+stack\+\_\+s\+::bos}
+\item 
+switch\+\_\+mpls\+\_\+tunnel\+\_\+type\+\_\+t \hyperlink{group__Tunnel_ga2f8e73c9ca6cc1282e923f8e3ca982e5}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::tunnel\+\_\+type}
+\item 
+\hyperlink{group__Tunnel_ga9757d049be2922674f9c5350384ff3ae}{switch\+\_\+mpls\+\_\+type\+\_\+t} \hyperlink{group__Tunnel_gaaba85ce3e34b028c217449796c83d6f0}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::mpls\+\_\+type}
+\item 
+\hyperlink{group__Tunnel_ga31b707543626fd0d899f011a2bf91fc9}{switch\+\_\+mpls\+\_\+mode\+\_\+t} \hyperlink{group__Tunnel_ga74f8a7c6cdb442d448911935d40a43a0}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::mpls\+\_\+mode}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_ga93781a9c1fb024b92c97056e2c95cc9d}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::vrf\+\_\+handle}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_gae87675e11f4c9787d9937f500bfbc914}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::rmac\+\_\+handle}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_gac651442108f51cc85587aafe8d7838a9}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::network\+\_\+handle}
+\item 
+switch\+\_\+mpls\+\_\+label\+\_\+t \hyperlink{group__Tunnel_ga8d085b3d34b94d8f7d454f218d4383ae}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::swap\+\_\+label}
+\item 
+switch\+\_\+mpls\+\_\+label\+\_\+t \hyperlink{group__Tunnel_ga6c0a6fe3e1634d7041b2812d232f9fe2}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::pop\+\_\+label}
+\item 
+switch\+\_\+uint8\+\_\+t \hyperlink{group__Tunnel_gaf0d8b8fada5e6ac49400245cafe38524}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::pop\+\_\+count}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_ga8d7c143424c5cb897e18e749ef9aaff7}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::intf\+\_\+handle}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_ga78469526e456f991248a2cd545be8008}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::nhop\+\_\+handle}
+\item 
+\hyperlink{structswitch__mac__addr__s}{switch\+\_\+mac\+\_\+addr\+\_\+t} \hyperlink{group__Tunnel_ga62f1b9c744e029bab8e5688751f3f347}{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::mac\+\_\+addr}
+\item 
+\hypertarget{group__Tunnel_ga13c6acc4575e1f194c05592e88b0d9bf}{switch\+\_\+uint8\+\_\+t {\bfseries switch\+\_\+srv6\+\_\+segment\+\_\+s\+::sid} \mbox{[}\hyperlink{group__Tunnel_ga9d8eb6604f4c584e8bcd459e24868968}{S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H}\mbox{]}}\label{group__Tunnel_ga13c6acc4575e1f194c05592e88b0d9bf}
+
+\item 
+switch\+\_\+vlan\+\_\+t \hyperlink{group__Tunnel_ga49a0974681b01e892b9518aa253488df}{switch\+\_\+qinq\+\_\+s\+::outer}
+\item 
+switch\+\_\+vlan\+\_\+t \hyperlink{group__Tunnel_gaf1d9443f4c5a0701ae353c0917065ab8}{switch\+\_\+qinq\+\_\+s\+::inner}
+\item 
+switch\+\_\+tunnel\+\_\+type\+\_\+t \hyperlink{group__Tunnel_ga6685d34b1ba33c1f547b06b6a9237a62}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::tunnel\+\_\+type}
+\item 
+\hyperlink{group__Tunnel_ga8c691aa3424f01425814cccd5c076e44}{switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+t} \hyperlink{group__Tunnel_ga08132f7df2f5c508bde52a738ea627fd}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::entry\+\_\+type}
+\item 
+switch\+\_\+tunnel\+\_\+ip\+\_\+addr\+\_\+type\+\_\+t \hyperlink{group__Tunnel_ga216a84a9b59dfb89fcc2233add2d2dfb}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::ip\+\_\+type}
+\item 
+switch\+\_\+direction\+\_\+t \hyperlink{group__Tunnel_gacd286841672592eab97054f29f43f797}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::direction}
+\item 
+\hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} \hyperlink{group__Tunnel_ga9be28d9bd055ac1af0f30d36dce3113e}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::src\+\_\+ip}
+\item 
+switch\+\_\+uint8\+\_\+t \hyperlink{group__Tunnel_ga86a3834db1f6b212b027d1f652021ffc}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::ttl}
+\item 
+switch\+\_\+uint32\+\_\+t \hyperlink{group__Tunnel_gae83720f8c95f2c463c79af35ddda9530}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::gre\+\_\+key}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_ga48608d8e6f79b52969707065beab3b29}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::decap\+\_\+mapper\+\_\+handle}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_gaf221e7b6dc190d612ae79c4a47087637}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::encap\+\_\+mapper\+\_\+handle}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_ga37daad6891f426ccac9ea1c7f750a443}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::underlay\+\_\+rif\+\_\+handle}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_ga1ad550339f0fde32bb88063b0141a0cc}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::overlay\+\_\+rif\+\_\+handle}
+\item 
+switch\+\_\+uint16\+\_\+t \hyperlink{group__Tunnel_gad06fec7740f72b2510bb540c7744792e}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::erspan\+\_\+span\+\_\+id}
+\item 
+\hyperlink{group__Tunnel_ga58531f8a8bab6f7c34f9bd77c243ec2f}{switch\+\_\+srv6\+\_\+segment\+\_\+t} \hyperlink{group__Tunnel_ga14d1a11fe2372fe426867817ab8ddabc}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::srv6\+\_\+seg\+\_\+list} \mbox{[}\hyperlink{group__Tunnel_ga7da56385741dd85fc62b0518245e0b06}{S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+M\+A\+X}\mbox{]}
+\item 
+switch\+\_\+uint8\+\_\+t \hyperlink{group__Tunnel_gaf87c6fecf6dff3564910928b7e8eea7a}{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::srv6\+\_\+first\+\_\+seg}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_ga8741eaf6ce1e5362f4fe1a61fbb1b3a5}{switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+s\+::tunnel\+\_\+handle}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_gad17881c029ef16dde1b3fdc6d66ad388}{switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+s\+::vrf\+\_\+handle}
+\item 
+switch\+\_\+tunnel\+\_\+type\+\_\+t \hyperlink{group__Tunnel_gaa35e1acc0835967b9202df9383e8a060}{switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+s\+::tunnel\+\_\+type}
+\item 
+switch\+\_\+tunnel\+\_\+term\+\_\+entry\+\_\+type\+\_\+t \hyperlink{group__Tunnel_ga3d6d200a504a59a4075506ccc5afaebe}{switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+s\+::term\+\_\+entry\+\_\+type}
+\item 
+\hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} \hyperlink{group__Tunnel_gae3eaebd60a50c2437066dace61929bd5}{switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+s\+::src\+\_\+ip}
+\item 
+\hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} \hyperlink{group__Tunnel_ga82dc368b7c3f3663420f3c1b41a04880}{switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+s\+::dst\+\_\+ip}
+\item 
+switch\+\_\+tunnel\+\_\+map\+\_\+type\+\_\+t \hyperlink{group__Tunnel_gaabdc00f1db835c1e46b0c8c8054d6d5e}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+s\+::tunnel\+\_\+map\+\_\+type}
+\item 
+switch\+\_\+tunnel\+\_\+map\+\_\+type\+\_\+t \hyperlink{group__Tunnel_ga64713ea1034e8583ee43f1d811e03eba}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s\+::tunnel\+\_\+map\+\_\+type}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_ga57c05fa2b7375ae67c1ec2c14e44b4c6}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s\+::tunnel\+\_\+mapper\+\_\+handle}
+\item 
+switch\+\_\+vni\+\_\+t \hyperlink{group__Tunnel_ga6df67b78ae859af0bd8c54bffe5a25a6}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s\+::tunnel\+\_\+vni}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_gafbb8e8e313ad0a67bc337a6a29878a7c}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s\+::ln\+\_\+handle}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_ga15e98ca4e3a4039ada5611919b7b6a53}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s\+::vlan\+\_\+handle}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{group__Tunnel_ga394a19941f2d37aa9e323044f18e349b}{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s\+::vrf\+\_\+handle}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__Tunnel_ga4445b89170c80300ca9bc62249605ec4}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V4\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+N\+U\+L\+L@{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V4\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+N\+U\+L\+L}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V4\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+N\+U\+L\+L@{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V4\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+N\+U\+L\+L}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V4\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V4\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+N\+U\+L\+L~0}}\label{group__Tunnel_ga4445b89170c80300ca9bc62249605ec4}
+Mpls ipv4 explicit null label \hypertarget{group__Tunnel_gad1efd6059d9f7fbd49f3ca77b5cca89d}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V6\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+N\+U\+L\+L@{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V6\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+N\+U\+L\+L}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V6\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+N\+U\+L\+L@{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V6\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+N\+U\+L\+L}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V6\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+N\+U\+L\+L}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V6\+\_\+\+E\+X\+P\+L\+I\+C\+I\+T\+\_\+\+N\+U\+L\+L~2}}\label{group__Tunnel_gad1efd6059d9f7fbd49f3ca77b5cca89d}
+Mpls ipv6 explicit null label \hypertarget{group__Tunnel_ga358d11e6167bb874159a7b6ac253221b}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+L\+A\+B\+E\+L\+\_\+\+M\+A\+X@{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+L\+A\+B\+E\+L\+\_\+\+M\+A\+X}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+L\+A\+B\+E\+L\+\_\+\+M\+A\+X@{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+L\+A\+B\+E\+L\+\_\+\+M\+A\+X}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+L\+A\+B\+E\+L\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+L\+A\+B\+E\+L\+\_\+\+M\+A\+X~5}}\label{group__Tunnel_ga358d11e6167bb874159a7b6ac253221b}
+Maximum mpls labels supported \hypertarget{group__Tunnel_ga7da56385741dd85fc62b0518245e0b06}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+M\+A\+X@{S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+M\+A\+X}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+M\+A\+X@{S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+M\+A\+X}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+M\+A\+X}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+M\+A\+X~3}}\label{group__Tunnel_ga7da56385741dd85fc62b0518245e0b06}
+Maximum srv6 segments supported \hypertarget{group__Tunnel_ga9d8eb6604f4c584e8bcd459e24868968}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H@{S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H@{S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+I\+D\+\_\+\+L\+E\+N\+G\+T\+H~16}}\label{group__Tunnel_ga9d8eb6604f4c584e8bcd459e24868968}
+Srv6 Segment I\+D Length 
+
+\subsection{Typedef Documentation}
+\hypertarget{group__Tunnel_gab183bce9dc3bd5f8baa23b589e040674}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+t}}
+\index{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+t}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s}  {\bf switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+t}}}\label{group__Tunnel_gab183bce9dc3bd5f8baa23b589e040674}
+mpls information \hypertarget{group__Tunnel_ga9c4faabdbd4426a0e9903279ad118116}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+t}}
+\index{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+t}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s}  {\bf switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+t}}}\label{group__Tunnel_ga9c4faabdbd4426a0e9903279ad118116}
+Tunnel information \hypertarget{group__Tunnel_gadb6058730695240a36e37a65dbc20e8b}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+t@{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+t}}
+\index{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+t@{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+t}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s}  {\bf switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+t}}}\label{group__Tunnel_gadb6058730695240a36e37a65dbc20e8b}
+tunnel mapper entry \hypertarget{group__Tunnel_gabce2bf13973701d284cb4c173ee4d9d7}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+t@{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+t}}
+\index{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+t@{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+t}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+s}  {\bf switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+t}}}\label{group__Tunnel_gabce2bf13973701d284cb4c173ee4d9d7}
+tunnel mapper \hypertarget{group__Tunnel_ga31b707543626fd0d899f011a2bf91fc9}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+mpls\+\_\+mode\+\_\+t@{switch\+\_\+mpls\+\_\+mode\+\_\+t}}
+\index{switch\+\_\+mpls\+\_\+mode\+\_\+t@{switch\+\_\+mpls\+\_\+mode\+\_\+t}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+mpls\+\_\+mode\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+mpls\+\_\+mode\+\_\+s}  {\bf switch\+\_\+mpls\+\_\+mode\+\_\+t}}}\label{group__Tunnel_ga31b707543626fd0d899f011a2bf91fc9}
+Mpls mode \hypertarget{group__Tunnel_gaa1a400888248e1e756adbd37f010f288}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+mpls\+\_\+t@{switch\+\_\+mpls\+\_\+t}}
+\index{switch\+\_\+mpls\+\_\+t@{switch\+\_\+mpls\+\_\+t}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+mpls\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+mpls\+\_\+s}  {\bf switch\+\_\+mpls\+\_\+t}}}\label{group__Tunnel_gaa1a400888248e1e756adbd37f010f288}
+mpls header \hypertarget{group__Tunnel_ga9757d049be2922674f9c5350384ff3ae}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+mpls\+\_\+type\+\_\+t@{switch\+\_\+mpls\+\_\+type\+\_\+t}}
+\index{switch\+\_\+mpls\+\_\+type\+\_\+t@{switch\+\_\+mpls\+\_\+type\+\_\+t}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+mpls\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+mpls\+\_\+type\+\_\+s}  {\bf switch\+\_\+mpls\+\_\+type\+\_\+t}}}\label{group__Tunnel_ga9757d049be2922674f9c5350384ff3ae}
+Mpls tunnel type \hypertarget{group__Tunnel_gaf7119659216df7efc9b7453d85ab2451}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+qinq\+\_\+t@{switch\+\_\+qinq\+\_\+t}}
+\index{switch\+\_\+qinq\+\_\+t@{switch\+\_\+qinq\+\_\+t}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+qinq\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+qinq\+\_\+s}  {\bf switch\+\_\+qinq\+\_\+t}}}\label{group__Tunnel_gaf7119659216df7efc9b7453d85ab2451}
+Qin\+Q encapsulation format \hypertarget{group__Tunnel_ga58531f8a8bab6f7c34f9bd77c243ec2f}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+srv6\+\_\+segment\+\_\+t@{switch\+\_\+srv6\+\_\+segment\+\_\+t}}
+\index{switch\+\_\+srv6\+\_\+segment\+\_\+t@{switch\+\_\+srv6\+\_\+segment\+\_\+t}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+srv6\+\_\+segment\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+srv6\+\_\+segment\+\_\+s}  {\bf switch\+\_\+srv6\+\_\+segment\+\_\+t}}}\label{group__Tunnel_ga58531f8a8bab6f7c34f9bd77c243ec2f}
+Segment routing Segments \hypertarget{group__Tunnel_ga8c691aa3424f01425814cccd5c076e44}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+t@{switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+t}}
+\index{switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+t@{switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+t}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+s}  {\bf switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+t}}}\label{group__Tunnel_ga8c691aa3424f01425814cccd5c076e44}
+Tunnel Entry Type 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__Tunnel_ga9422139cfd73bb4e5796a35c4569d763}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+mpls\+\_\+mode\+\_\+s@{switch\+\_\+mpls\+\_\+mode\+\_\+s}}
+\index{switch\+\_\+mpls\+\_\+mode\+\_\+s@{switch\+\_\+mpls\+\_\+mode\+\_\+s}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+mpls\+\_\+mode\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+mpls\+\_\+mode\+\_\+s}}}\label{group__Tunnel_ga9422139cfd73bb4e5796a35c4569d763}
+Mpls mode \hypertarget{group__Tunnel_ga0604465b082bd3c18d8252cc9d50e771}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+mpls\+\_\+type\+\_\+s@{switch\+\_\+mpls\+\_\+type\+\_\+s}}
+\index{switch\+\_\+mpls\+\_\+type\+\_\+s@{switch\+\_\+mpls\+\_\+type\+\_\+s}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+mpls\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+mpls\+\_\+type\+\_\+s}}}\label{group__Tunnel_ga0604465b082bd3c18d8252cc9d50e771}
+Mpls tunnel type \hypertarget{group__Tunnel_gaa171c0101a1f87af3f4cc2d44343e4a0}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+s@{switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+s}}
+\index{switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+s@{switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+s}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+s}}}\label{group__Tunnel_gaa171c0101a1f87af3f4cc2d44343e4a0}
+Tunnel Entry Type \hypertarget{group__Tunnel_gac912a56b58661dcec8846d16be80de31}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+tunnel\+\_\+map\+\_\+type\+\_\+s@{switch\+\_\+tunnel\+\_\+map\+\_\+type\+\_\+s}}
+\index{switch\+\_\+tunnel\+\_\+map\+\_\+type\+\_\+s@{switch\+\_\+tunnel\+\_\+map\+\_\+type\+\_\+s}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+tunnel\+\_\+map\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+tunnel\+\_\+map\+\_\+type\+\_\+s}}}\label{group__Tunnel_gac912a56b58661dcec8846d16be80de31}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+V\+L\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+V\+L\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+V\+L\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+V\+L\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E}}\item[{\em 
+\hypertarget{group__Tunnel_ggac912a56b58661dcec8846d16be80de31ab2458708261280b7621ac40840481343}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+V\+L\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E}\label{group__Tunnel_ggac912a56b58661dcec8846d16be80de31ab2458708261280b7621ac40840481343}
+}]tunnel map type vni to vlan handle \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+L\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+L\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+L\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+L\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I}}\item[{\em 
+\hypertarget{group__Tunnel_ggac912a56b58661dcec8846d16be80de31a73a960fde645eda2b9d0fd21af48f4cd}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+L\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I}\label{group__Tunnel_ggac912a56b58661dcec8846d16be80de31a73a960fde645eda2b9d0fd21af48f4cd}
+}]tunnel map type vlan handle to vni \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+L\+N\+\_\+\+H\+A\+N\+D\+L\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+L\+N\+\_\+\+H\+A\+N\+D\+L\+E}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+L\+N\+\_\+\+H\+A\+N\+D\+L\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+L\+N\+\_\+\+H\+A\+N\+D\+L\+E}}\item[{\em 
+\hypertarget{group__Tunnel_ggac912a56b58661dcec8846d16be80de31a242942905c6a329405e8c15d034e2bd9}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+L\+N\+\_\+\+H\+A\+N\+D\+L\+E}\label{group__Tunnel_ggac912a56b58661dcec8846d16be80de31a242942905c6a329405e8c15d034e2bd9}
+}]tunnel map type vni to ln handle \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I}}\item[{\em 
+\hypertarget{group__Tunnel_ggac912a56b58661dcec8846d16be80de31afea4a258a3d486412f4c1f92e5eec89d}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+N\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I}\label{group__Tunnel_ggac912a56b58661dcec8846d16be80de31afea4a258a3d486412f4c1f92e5eec89d}
+}]tunnel map type ln handle to vni \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+R\+F\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+R\+F\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+R\+F\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+R\+F\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I}}\item[{\em 
+\hypertarget{group__Tunnel_ggac912a56b58661dcec8846d16be80de31ab2a5e2ef901607054aafb0dbe75e4612}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+R\+F\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+O\+\_\+\+V\+N\+I}\label{group__Tunnel_ggac912a56b58661dcec8846d16be80de31ab2a5e2ef901607054aafb0dbe75e4612}
+}]tunnel map type vrf handle to vni \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+V\+R\+F\+\_\+\+H\+A\+N\+D\+L\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+V\+R\+F\+\_\+\+H\+A\+N\+D\+L\+E}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+V\+R\+F\+\_\+\+H\+A\+N\+D\+L\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+V\+R\+F\+\_\+\+H\+A\+N\+D\+L\+E}}\item[{\em 
+\hypertarget{group__Tunnel_ggac912a56b58661dcec8846d16be80de31abcd2f59cdb7e0243eab22dba7637e617}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+M\+A\+P\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+N\+I\+\_\+\+T\+O\+\_\+\+V\+R\+F\+\_\+\+H\+A\+N\+D\+L\+E}\label{group__Tunnel_ggac912a56b58661dcec8846d16be80de31abcd2f59cdb7e0243eab22dba7637e617}
+}]tunnel map type vni to vrf handle \end{description}
+\end{Desc}
+\hypertarget{group__Tunnel_gaf17d995b62e3e95fc88052f69156317d}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+tunnel\+\_\+term\+\_\+entry\+\_\+type\+\_\+s@{switch\+\_\+tunnel\+\_\+term\+\_\+entry\+\_\+type\+\_\+s}}
+\index{switch\+\_\+tunnel\+\_\+term\+\_\+entry\+\_\+type\+\_\+s@{switch\+\_\+tunnel\+\_\+term\+\_\+entry\+\_\+type\+\_\+s}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+tunnel\+\_\+term\+\_\+entry\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+tunnel\+\_\+term\+\_\+entry\+\_\+type\+\_\+s}}}\label{group__Tunnel_gaf17d995b62e3e95fc88052f69156317d}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+E\+R\+M\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+P2\+P@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+E\+R\+M\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+P2\+P}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+E\+R\+M\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+P2\+P@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+E\+R\+M\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+P2\+P}}\item[{\em 
+\hypertarget{group__Tunnel_ggaf17d995b62e3e95fc88052f69156317da3c45f1ca2c0530e414a1c0b71dd02517}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+E\+R\+M\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+P2\+P}\label{group__Tunnel_ggaf17d995b62e3e95fc88052f69156317da3c45f1ca2c0530e414a1c0b71dd02517}
+}]point to point \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+E\+R\+M\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+P2\+M\+P@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+E\+R\+M\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+P2\+M\+P}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+E\+R\+M\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+P2\+M\+P@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+E\+R\+M\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+P2\+M\+P}}\item[{\em 
+\hypertarget{group__Tunnel_ggaf17d995b62e3e95fc88052f69156317da4c6f3a5d2b6cdaf4b84b9a880f670228}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+E\+R\+M\+\_\+\+E\+N\+T\+R\+Y\+\_\+\+T\+Y\+P\+E\+\_\+\+P2\+M\+P}\label{group__Tunnel_ggaf17d995b62e3e95fc88052f69156317da4c6f3a5d2b6cdaf4b84b9a880f670228}
+}]point to multipoint \end{description}
+\end{Desc}
+\hypertarget{group__Tunnel_gae6e97544aa9d069ef7640927ba5f92aa}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!switch\+\_\+tunnel\+\_\+type\+\_\+s@{switch\+\_\+tunnel\+\_\+type\+\_\+s}}
+\index{switch\+\_\+tunnel\+\_\+type\+\_\+s@{switch\+\_\+tunnel\+\_\+type\+\_\+s}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{switch\+\_\+tunnel\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+tunnel\+\_\+type\+\_\+s}}}\label{group__Tunnel_gae6e97544aa9d069ef7640927ba5f92aa}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+I\+N\+Q@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+I\+N\+Q}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+I\+N\+Q@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+I\+N\+Q}}\item[{\em 
+\hypertarget{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaad5df733370918231c8f13563934f60fd}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+Q\+I\+N\+Q}\label{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaad5df733370918231c8f13563934f60fd}
+}]Qin\+Q tunnel \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+X\+L\+A\+N@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+X\+L\+A\+N}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+X\+L\+A\+N@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+X\+L\+A\+N}}\item[{\em 
+\hypertarget{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaad4a41baf3c5f3130da297703e290248c}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+X\+L\+A\+N}\label{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaad4a41baf3c5f3130da297703e290248c}
+}]Vxlan tunnel \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+E}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+E}}\item[{\em 
+\hypertarget{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaae1a0ba91dceb95390218ea33c2150b1d}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+R\+E}\label{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaae1a0ba91dceb95390218ea33c2150b1d}
+}]Gre Tunnel \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+V\+G\+R\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+V\+G\+R\+E}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+V\+G\+R\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+V\+G\+R\+E}}\item[{\em 
+\hypertarget{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaa493851ce01e4c37628f86d14228ef1af}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+V\+G\+R\+E}\label{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaa493851ce01e4c37628f86d14228ef1af}
+}]Nv\+Gre Tunnel \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+E\+N\+E\+V\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+E\+N\+E\+V\+E}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+E\+N\+E\+V\+E@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+E\+N\+E\+V\+E}}\item[{\em 
+\hypertarget{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaa68078ff6bca79368ada183ce6e241f7e}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+G\+E\+N\+E\+V\+E}\label{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaa68078ff6bca79368ada183ce6e241f7e}
+}]Geneve Tunnel \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+R\+S\+P\+A\+N\+\_\+\+T3@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+R\+S\+P\+A\+N\+\_\+\+T3}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+R\+S\+P\+A\+N\+\_\+\+T3@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+R\+S\+P\+A\+N\+\_\+\+T3}}\item[{\em 
+\hypertarget{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaaa2c526d95d1a6055b8a6f9a5daa1a100}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+R\+S\+P\+A\+N\+\_\+\+T3}\label{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaaa2c526d95d1a6055b8a6f9a5daa1a100}
+}]Erspan T3 Tunnel \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+I\+P@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+I\+P}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+I\+P@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+I\+P}}\item[{\em 
+\hypertarget{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaa974ad2ece6d8ef98900be8867017320d}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+I\+P}\label{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaa974ad2ece6d8ef98900be8867017320d}
+}]I\+P in I\+P Tunnel \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+R\+V6@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+R\+V6}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+R\+V6@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+R\+V6}}\item[{\em 
+\hypertarget{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaa4e8a2fbd8dd8c0ebf29aae049ef10233}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+R\+V6}\label{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaa4e8a2fbd8dd8c0ebf29aae049ef10233}
+}]Segment Routing Tunnel \index{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+T\+E\+L\+\_\+\+R\+E\+P\+O\+R\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+T\+E\+L\+\_\+\+R\+E\+P\+O\+R\+T}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+T\+E\+L\+\_\+\+R\+E\+P\+O\+R\+T@{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+T\+E\+L\+\_\+\+R\+E\+P\+O\+R\+T}}\item[{\em 
+\hypertarget{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaad48b30b4a980ef987855c156156c132d}{S\+W\+I\+T\+C\+H\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+T\+E\+L\+\_\+\+R\+E\+P\+O\+R\+T}\label{group__Tunnel_ggae6e97544aa9d069ef7640927ba5f92aaad48b30b4a980ef987855c156156c132d}
+}]Telemetry Report \end{description}
+\end{Desc}
+
+
+\subsection{Variable Documentation}
+\hypertarget{group__Tunnel_gaefae3f185e3c94cb263058c963043565}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!bos@{bos}}
+\index{bos@{bos}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{bos}]{\setlength{\rightskip}{0pt plus 5cm}bool switch\+\_\+mpls\+\_\+label\+\_\+stack\+\_\+s\+::bos}}\label{group__Tunnel_gaefae3f185e3c94cb263058c963043565}
+bottom of stack bit \hypertarget{group__Tunnel_ga48608d8e6f79b52969707065beab3b29}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!decap\+\_\+mapper\+\_\+handle@{decap\+\_\+mapper\+\_\+handle}}
+\index{decap\+\_\+mapper\+\_\+handle@{decap\+\_\+mapper\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{decap\+\_\+mapper\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::decap\+\_\+mapper\+\_\+handle}}\label{group__Tunnel_ga48608d8e6f79b52969707065beab3b29}
+ingress tunnel mapper \hypertarget{group__Tunnel_gacd286841672592eab97054f29f43f797}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!direction@{direction}}
+\index{direction@{direction}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+direction\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::direction}}\label{group__Tunnel_gacd286841672592eab97054f29f43f797}
+tunnel direction \hypertarget{group__Tunnel_ga82dc368b7c3f3663420f3c1b41a04880}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!dst\+\_\+ip@{dst\+\_\+ip}}
+\index{dst\+\_\+ip@{dst\+\_\+ip}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{dst\+\_\+ip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+ip\+\_\+addr\+\_\+t} switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+s\+::dst\+\_\+ip}}\label{group__Tunnel_ga82dc368b7c3f3663420f3c1b41a04880}
+destination ip address \hypertarget{group__Tunnel_gaf221e7b6dc190d612ae79c4a47087637}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!encap\+\_\+mapper\+\_\+handle@{encap\+\_\+mapper\+\_\+handle}}
+\index{encap\+\_\+mapper\+\_\+handle@{encap\+\_\+mapper\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{encap\+\_\+mapper\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::encap\+\_\+mapper\+\_\+handle}}\label{group__Tunnel_gaf221e7b6dc190d612ae79c4a47087637}
+egress tunnel mapper \hypertarget{group__Tunnel_ga08132f7df2f5c508bde52a738ea627fd}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!entry\+\_\+type@{entry\+\_\+type}}
+\index{entry\+\_\+type@{entry\+\_\+type}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{entry\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+tunnel\+\_\+entry\+\_\+type\+\_\+t} switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::entry\+\_\+type}}\label{group__Tunnel_ga08132f7df2f5c508bde52a738ea627fd}
+tunnel entry type \hypertarget{group__Tunnel_gad06fec7740f72b2510bb540c7744792e}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!erspan\+\_\+span\+\_\+id@{erspan\+\_\+span\+\_\+id}}
+\index{erspan\+\_\+span\+\_\+id@{erspan\+\_\+span\+\_\+id}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{erspan\+\_\+span\+\_\+id}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+uint16\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::erspan\+\_\+span\+\_\+id}}\label{group__Tunnel_gad06fec7740f72b2510bb540c7744792e}
+span id \hypertarget{group__Tunnel_gaa051a49261e173522f5912b8ba8d0c73}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!exp@{exp}}
+\index{exp@{exp}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{exp}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+uint8\+\_\+t switch\+\_\+mpls\+\_\+s\+::exp}}\label{group__Tunnel_gaa051a49261e173522f5912b8ba8d0c73}
+type of service \hypertarget{group__Tunnel_gae83720f8c95f2c463c79af35ddda9530}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!gre\+\_\+key@{gre\+\_\+key}}
+\index{gre\+\_\+key@{gre\+\_\+key}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{gre\+\_\+key}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+uint32\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::gre\+\_\+key}}\label{group__Tunnel_gae83720f8c95f2c463c79af35ddda9530}
+Gre key \hypertarget{group__Tunnel_gaf1d9443f4c5a0701ae353c0917065ab8}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!inner@{inner}}
+\index{inner@{inner}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{inner}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+vlan\+\_\+t switch\+\_\+qinq\+\_\+s\+::inner}}\label{group__Tunnel_gaf1d9443f4c5a0701ae353c0917065ab8}
+inner vlan tag \hypertarget{group__Tunnel_ga8d7c143424c5cb897e18e749ef9aaff7}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!intf\+\_\+handle@{intf\+\_\+handle}}
+\index{intf\+\_\+handle@{intf\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{intf\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::intf\+\_\+handle}}\label{group__Tunnel_ga8d7c143424c5cb897e18e749ef9aaff7}
+interface handle \hypertarget{group__Tunnel_ga216a84a9b59dfb89fcc2233add2d2dfb}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!ip\+\_\+type@{ip\+\_\+type}}
+\index{ip\+\_\+type@{ip\+\_\+type}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{ip\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+tunnel\+\_\+ip\+\_\+addr\+\_\+type\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::ip\+\_\+type}}\label{group__Tunnel_ga216a84a9b59dfb89fcc2233add2d2dfb}
+tunnel ip type \hypertarget{group__Tunnel_ga2c144b7c6e8e43b29bf0fe4cc2075204}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!label@{label}}
+\index{label@{label}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{label}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+mpls\+\_\+label\+\_\+t switch\+\_\+mpls\+\_\+s\+::label}}\label{group__Tunnel_ga2c144b7c6e8e43b29bf0fe4cc2075204}
+mpls label \hypertarget{group__Tunnel_gaf21845a304f409165053ed260fc8da3e}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!label\+\_\+list@{label\+\_\+list}}
+\index{label\+\_\+list@{label\+\_\+list}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{label\+\_\+list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+mpls\+\_\+t} switch\+\_\+mpls\+\_\+label\+\_\+stack\+\_\+s\+::label\+\_\+list\mbox{[}{\bf S\+W\+I\+T\+C\+H\+\_\+\+M\+P\+L\+S\+\_\+\+L\+A\+B\+E\+L\+\_\+\+M\+A\+X}\mbox{]}}}\label{group__Tunnel_gaf21845a304f409165053ed260fc8da3e}
+list of mpls labels \hypertarget{group__Tunnel_gafbb8e8e313ad0a67bc337a6a29878a7c}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!ln\+\_\+handle@{ln\+\_\+handle}}
+\index{ln\+\_\+handle@{ln\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{ln\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s\+::ln\+\_\+handle}}\label{group__Tunnel_gafbb8e8e313ad0a67bc337a6a29878a7c}
+logical network handle \hypertarget{group__Tunnel_ga62f1b9c744e029bab8e5688751f3f347}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!mac\+\_\+addr@{mac\+\_\+addr}}
+\index{mac\+\_\+addr@{mac\+\_\+addr}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{mac\+\_\+addr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+mac\+\_\+addr\+\_\+t} switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::mac\+\_\+addr}}\label{group__Tunnel_ga62f1b9c744e029bab8e5688751f3f347}
+outer destination mac address \hypertarget{group__Tunnel_ga74f8a7c6cdb442d448911935d40a43a0}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!mpls\+\_\+mode@{mpls\+\_\+mode}}
+\index{mpls\+\_\+mode@{mpls\+\_\+mode}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{mpls\+\_\+mode}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+mpls\+\_\+mode\+\_\+t} switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::mpls\+\_\+mode}}\label{group__Tunnel_ga74f8a7c6cdb442d448911935d40a43a0}
+mpls mode \hypertarget{group__Tunnel_gaaba85ce3e34b028c217449796c83d6f0}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!mpls\+\_\+type@{mpls\+\_\+type}}
+\index{mpls\+\_\+type@{mpls\+\_\+type}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{mpls\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+mpls\+\_\+type\+\_\+t} switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::mpls\+\_\+type}}\label{group__Tunnel_gaaba85ce3e34b028c217449796c83d6f0}
+mpls type \hypertarget{group__Tunnel_gac651442108f51cc85587aafe8d7838a9}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!network\+\_\+handle@{network\+\_\+handle}}
+\index{network\+\_\+handle@{network\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{network\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::network\+\_\+handle}}\label{group__Tunnel_gac651442108f51cc85587aafe8d7838a9}
+vlan/ln handle for l2-\/l3 vpn \hypertarget{group__Tunnel_ga78469526e456f991248a2cd545be8008}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!nhop\+\_\+handle@{nhop\+\_\+handle}}
+\index{nhop\+\_\+handle@{nhop\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{nhop\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::nhop\+\_\+handle}}\label{group__Tunnel_ga78469526e456f991248a2cd545be8008}
+nhop handle \hypertarget{group__Tunnel_ga601501fd20b6f5d298fb0f06ce0897d5}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!num\+\_\+labels@{num\+\_\+labels}}
+\index{num\+\_\+labels@{num\+\_\+labels}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{num\+\_\+labels}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+uint16\+\_\+t switch\+\_\+mpls\+\_\+label\+\_\+stack\+\_\+s\+::num\+\_\+labels}}\label{group__Tunnel_ga601501fd20b6f5d298fb0f06ce0897d5}
+number of labels \hypertarget{group__Tunnel_ga49a0974681b01e892b9518aa253488df}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!outer@{outer}}
+\index{outer@{outer}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{outer}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+vlan\+\_\+t switch\+\_\+qinq\+\_\+s\+::outer}}\label{group__Tunnel_ga49a0974681b01e892b9518aa253488df}
+outer vlan tag \hypertarget{group__Tunnel_ga1ad550339f0fde32bb88063b0141a0cc}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!overlay\+\_\+rif\+\_\+handle@{overlay\+\_\+rif\+\_\+handle}}
+\index{overlay\+\_\+rif\+\_\+handle@{overlay\+\_\+rif\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{overlay\+\_\+rif\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::overlay\+\_\+rif\+\_\+handle}}\label{group__Tunnel_ga1ad550339f0fde32bb88063b0141a0cc}
+overlay rif handle \hypertarget{group__Tunnel_gaf0d8b8fada5e6ac49400245cafe38524}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!pop\+\_\+count@{pop\+\_\+count}}
+\index{pop\+\_\+count@{pop\+\_\+count}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{pop\+\_\+count}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+uint8\+\_\+t switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::pop\+\_\+count}}\label{group__Tunnel_gaf0d8b8fada5e6ac49400245cafe38524}
+number of mpls pop \hypertarget{group__Tunnel_ga6c0a6fe3e1634d7041b2812d232f9fe2}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!pop\+\_\+label@{pop\+\_\+label}}
+\index{pop\+\_\+label@{pop\+\_\+label}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{pop\+\_\+label}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+mpls\+\_\+label\+\_\+t switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::pop\+\_\+label}}\label{group__Tunnel_ga6c0a6fe3e1634d7041b2812d232f9fe2}
+last pop label \hypertarget{group__Tunnel_gae87675e11f4c9787d9937f500bfbc914}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!rmac\+\_\+handle@{rmac\+\_\+handle}}
+\index{rmac\+\_\+handle@{rmac\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{rmac\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::rmac\+\_\+handle}}\label{group__Tunnel_gae87675e11f4c9787d9937f500bfbc914}
+router mac handle \hypertarget{group__Tunnel_ga9be28d9bd055ac1af0f30d36dce3113e}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!src\+\_\+ip@{src\+\_\+ip}}
+\index{src\+\_\+ip@{src\+\_\+ip}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{src\+\_\+ip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+ip\+\_\+addr\+\_\+t} switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::src\+\_\+ip}}\label{group__Tunnel_ga9be28d9bd055ac1af0f30d36dce3113e}
+source ip address \hypertarget{group__Tunnel_gae3eaebd60a50c2437066dace61929bd5}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!src\+\_\+ip@{src\+\_\+ip}}
+\index{src\+\_\+ip@{src\+\_\+ip}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{src\+\_\+ip}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+ip\+\_\+addr\+\_\+t} switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+s\+::src\+\_\+ip}}\label{group__Tunnel_gae3eaebd60a50c2437066dace61929bd5}
+source ip address \hypertarget{group__Tunnel_gaf87c6fecf6dff3564910928b7e8eea7a}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!srv6\+\_\+first\+\_\+seg@{srv6\+\_\+first\+\_\+seg}}
+\index{srv6\+\_\+first\+\_\+seg@{srv6\+\_\+first\+\_\+seg}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{srv6\+\_\+first\+\_\+seg}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+uint8\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::srv6\+\_\+first\+\_\+seg}}\label{group__Tunnel_gaf87c6fecf6dff3564910928b7e8eea7a}
+I\+Pv6 sr first segment \hypertarget{group__Tunnel_ga14d1a11fe2372fe426867817ab8ddabc}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!srv6\+\_\+seg\+\_\+list@{srv6\+\_\+seg\+\_\+list}}
+\index{srv6\+\_\+seg\+\_\+list@{srv6\+\_\+seg\+\_\+list}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{srv6\+\_\+seg\+\_\+list}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+srv6\+\_\+segment\+\_\+t} switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::srv6\+\_\+seg\+\_\+list\mbox{[}{\bf S\+W\+I\+T\+C\+H\+\_\+\+S\+R\+V6\+\_\+\+S\+E\+G\+M\+E\+N\+T\+\_\+\+M\+A\+X}\mbox{]}}}\label{group__Tunnel_ga14d1a11fe2372fe426867817ab8ddabc}
+I\+Pv6 sr segments \hypertarget{group__Tunnel_ga8d085b3d34b94d8f7d454f218d4383ae}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!swap\+\_\+label@{swap\+\_\+label}}
+\index{swap\+\_\+label@{swap\+\_\+label}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{swap\+\_\+label}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+mpls\+\_\+label\+\_\+t switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::swap\+\_\+label}}\label{group__Tunnel_ga8d085b3d34b94d8f7d454f218d4383ae}
+swap label \hypertarget{group__Tunnel_ga3d6d200a504a59a4075506ccc5afaebe}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!term\+\_\+entry\+\_\+type@{term\+\_\+entry\+\_\+type}}
+\index{term\+\_\+entry\+\_\+type@{term\+\_\+entry\+\_\+type}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{term\+\_\+entry\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+tunnel\+\_\+term\+\_\+entry\+\_\+type\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+s\+::term\+\_\+entry\+\_\+type}}\label{group__Tunnel_ga3d6d200a504a59a4075506ccc5afaebe}
+tunnel term entry type \hypertarget{group__Tunnel_ga0a0835cb20b911ab796b4050f6c6bb49}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!ttl@{ttl}}
+\index{ttl@{ttl}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{ttl}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+uint8\+\_\+t switch\+\_\+mpls\+\_\+s\+::ttl}}\label{group__Tunnel_ga0a0835cb20b911ab796b4050f6c6bb49}
+time to live \hypertarget{group__Tunnel_ga86a3834db1f6b212b027d1f652021ffc}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!ttl@{ttl}}
+\index{ttl@{ttl}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{ttl}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+uint8\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::ttl}}\label{group__Tunnel_ga86a3834db1f6b212b027d1f652021ffc}
+time to live \hypertarget{group__Tunnel_ga8741eaf6ce1e5362f4fe1a61fbb1b3a5}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!tunnel\+\_\+handle@{tunnel\+\_\+handle}}
+\index{tunnel\+\_\+handle@{tunnel\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{tunnel\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+s\+::tunnel\+\_\+handle}}\label{group__Tunnel_ga8741eaf6ce1e5362f4fe1a61fbb1b3a5}
+tunnel handle \hypertarget{group__Tunnel_gaabdc00f1db835c1e46b0c8c8054d6d5e}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!tunnel\+\_\+map\+\_\+type@{tunnel\+\_\+map\+\_\+type}}
+\index{tunnel\+\_\+map\+\_\+type@{tunnel\+\_\+map\+\_\+type}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{tunnel\+\_\+map\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+tunnel\+\_\+map\+\_\+type\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+s\+::tunnel\+\_\+map\+\_\+type}}\label{group__Tunnel_gaabdc00f1db835c1e46b0c8c8054d6d5e}
+tunnel mapper entry type \hypertarget{group__Tunnel_ga64713ea1034e8583ee43f1d811e03eba}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!tunnel\+\_\+map\+\_\+type@{tunnel\+\_\+map\+\_\+type}}
+\index{tunnel\+\_\+map\+\_\+type@{tunnel\+\_\+map\+\_\+type}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{tunnel\+\_\+map\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+tunnel\+\_\+map\+\_\+type\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s\+::tunnel\+\_\+map\+\_\+type}}\label{group__Tunnel_ga64713ea1034e8583ee43f1d811e03eba}
+tunnel mapper entry type \hypertarget{group__Tunnel_ga57c05fa2b7375ae67c1ec2c14e44b4c6}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!tunnel\+\_\+mapper\+\_\+handle@{tunnel\+\_\+mapper\+\_\+handle}}
+\index{tunnel\+\_\+mapper\+\_\+handle@{tunnel\+\_\+mapper\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{tunnel\+\_\+mapper\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s\+::tunnel\+\_\+mapper\+\_\+handle}}\label{group__Tunnel_ga57c05fa2b7375ae67c1ec2c14e44b4c6}
+tunnel mapper handle \hypertarget{group__Tunnel_ga2f8e73c9ca6cc1282e923f8e3ca982e5}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!tunnel\+\_\+type@{tunnel\+\_\+type}}
+\index{tunnel\+\_\+type@{tunnel\+\_\+type}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{tunnel\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+mpls\+\_\+tunnel\+\_\+type\+\_\+t switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::tunnel\+\_\+type}}\label{group__Tunnel_ga2f8e73c9ca6cc1282e923f8e3ca982e5}
+mpls tunnel type \hypertarget{group__Tunnel_ga6685d34b1ba33c1f547b06b6a9237a62}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!tunnel\+\_\+type@{tunnel\+\_\+type}}
+\index{tunnel\+\_\+type@{tunnel\+\_\+type}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{tunnel\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+tunnel\+\_\+type\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::tunnel\+\_\+type}}\label{group__Tunnel_ga6685d34b1ba33c1f547b06b6a9237a62}
+tunnel type \hypertarget{group__Tunnel_gaa35e1acc0835967b9202df9383e8a060}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!tunnel\+\_\+type@{tunnel\+\_\+type}}
+\index{tunnel\+\_\+type@{tunnel\+\_\+type}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{tunnel\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+tunnel\+\_\+type\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+s\+::tunnel\+\_\+type}}\label{group__Tunnel_gaa35e1acc0835967b9202df9383e8a060}
+tunnel type \hypertarget{group__Tunnel_ga6df67b78ae859af0bd8c54bffe5a25a6}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!tunnel\+\_\+vni@{tunnel\+\_\+vni}}
+\index{tunnel\+\_\+vni@{tunnel\+\_\+vni}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{tunnel\+\_\+vni}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+vni\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s\+::tunnel\+\_\+vni}}\label{group__Tunnel_ga6df67b78ae859af0bd8c54bffe5a25a6}
+tunne vni \hypertarget{group__Tunnel_ga37daad6891f426ccac9ea1c7f750a443}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!underlay\+\_\+rif\+\_\+handle@{underlay\+\_\+rif\+\_\+handle}}
+\index{underlay\+\_\+rif\+\_\+handle@{underlay\+\_\+rif\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{underlay\+\_\+rif\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+info\+\_\+s\+::underlay\+\_\+rif\+\_\+handle}}\label{group__Tunnel_ga37daad6891f426ccac9ea1c7f750a443}
+underlay rif handle \hypertarget{group__Tunnel_ga15e98ca4e3a4039ada5611919b7b6a53}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!vlan\+\_\+handle@{vlan\+\_\+handle}}
+\index{vlan\+\_\+handle@{vlan\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{vlan\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s\+::vlan\+\_\+handle}}\label{group__Tunnel_ga15e98ca4e3a4039ada5611919b7b6a53}
+vlan handle \hypertarget{group__Tunnel_ga93781a9c1fb024b92c97056e2c95cc9d}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!vrf\+\_\+handle@{vrf\+\_\+handle}}
+\index{vrf\+\_\+handle@{vrf\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{vrf\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+mpls\+\_\+info\+\_\+s\+::vrf\+\_\+handle}}\label{group__Tunnel_ga93781a9c1fb024b92c97056e2c95cc9d}
+vrf handle for l3vpn \hypertarget{group__Tunnel_gad17881c029ef16dde1b3fdc6d66ad388}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!vrf\+\_\+handle@{vrf\+\_\+handle}}
+\index{vrf\+\_\+handle@{vrf\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{vrf\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+term\+\_\+info\+\_\+s\+::vrf\+\_\+handle}}\label{group__Tunnel_gad17881c029ef16dde1b3fdc6d66ad388}
+vrf handle \hypertarget{group__Tunnel_ga394a19941f2d37aa9e323044f18e349b}{\index{Tunnel A\+P\+I@{Tunnel A\+P\+I}!vrf\+\_\+handle@{vrf\+\_\+handle}}
+\index{vrf\+\_\+handle@{vrf\+\_\+handle}!Tunnel A\+P\+I@{Tunnel A\+P\+I}}
+\subsubsection[{vrf\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+api\+\_\+tunnel\+\_\+mapper\+\_\+entry\+\_\+s\+::vrf\+\_\+handle}}\label{group__Tunnel_ga394a19941f2d37aa9e323044f18e349b}
+vrf handle 

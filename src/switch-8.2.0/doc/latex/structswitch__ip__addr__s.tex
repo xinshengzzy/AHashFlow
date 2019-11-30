@@ -1,0 +1,46 @@
+\hypertarget{structswitch__ip__addr__s}{\section{switch\+\_\+ip\+\_\+addr\+\_\+s Struct Reference}
+\label{structswitch__ip__addr__s}\index{switch\+\_\+ip\+\_\+addr\+\_\+s@{switch\+\_\+ip\+\_\+addr\+\_\+s}}
+}
+
+
+{\ttfamily \#include $<$switch\+\_\+base\+\_\+types.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+ip\+\_\+addr\+\_\+type\+\_\+t \hyperlink{structswitch__ip__addr__s_ac495e005825ee6fb659c53d0da26c93d}{type}
+\item 
+\hypertarget{structswitch__ip__addr__s_a42405599f71faabc461bec8865d714ed}{\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>switch\_ip4\_t \hyperlink{structswitch__ip__addr__s_a86348301b627ece114d2f8e1ea3d4ac7}{v4addr}\\
+\>\hyperlink{structswitch__uint128__t}{switch\_ip6\_t} \hyperlink{structswitch__ip__addr__s_a28a4b6fbb750ba21aacff4fd1ec923b4}{v6addr}\\
+\} {\bfseries ip}}\label{structswitch__ip__addr__s_a42405599f71faabc461bec8865d714ed}
+\\
+
+\end{tabbing}\item 
+switch\+\_\+prefix\+\_\+t \hyperlink{structswitch__ip__addr__s_adad36be1af6cffc68bd7bfad575eb5ec}{prefix\+\_\+len}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+I\+P address 
+
+\subsection{Member Data Documentation}
+\hypertarget{structswitch__ip__addr__s_adad36be1af6cffc68bd7bfad575eb5ec}{\index{switch\+\_\+ip\+\_\+addr\+\_\+s@{switch\+\_\+ip\+\_\+addr\+\_\+s}!prefix\+\_\+len@{prefix\+\_\+len}}
+\index{prefix\+\_\+len@{prefix\+\_\+len}!switch\+\_\+ip\+\_\+addr\+\_\+s@{switch\+\_\+ip\+\_\+addr\+\_\+s}}
+\subsubsection[{prefix\+\_\+len}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+prefix\+\_\+t switch\+\_\+ip\+\_\+addr\+\_\+s\+::prefix\+\_\+len}}\label{structswitch__ip__addr__s_adad36be1af6cffc68bd7bfad575eb5ec}
+prefix length Limit is 32 for I\+Pv4 and 128 for I\+Pv6 \hypertarget{structswitch__ip__addr__s_ac495e005825ee6fb659c53d0da26c93d}{\index{switch\+\_\+ip\+\_\+addr\+\_\+s@{switch\+\_\+ip\+\_\+addr\+\_\+s}!type@{type}}
+\index{type@{type}!switch\+\_\+ip\+\_\+addr\+\_\+s@{switch\+\_\+ip\+\_\+addr\+\_\+s}}
+\subsubsection[{type}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+ip\+\_\+addr\+\_\+type\+\_\+t switch\+\_\+ip\+\_\+addr\+\_\+s\+::type}}\label{structswitch__ip__addr__s_ac495e005825ee6fb659c53d0da26c93d}
+I\+P type -\/ v4 or v6 \hypertarget{structswitch__ip__addr__s_a86348301b627ece114d2f8e1ea3d4ac7}{\index{switch\+\_\+ip\+\_\+addr\+\_\+s@{switch\+\_\+ip\+\_\+addr\+\_\+s}!v4addr@{v4addr}}
+\index{v4addr@{v4addr}!switch\+\_\+ip\+\_\+addr\+\_\+s@{switch\+\_\+ip\+\_\+addr\+\_\+s}}
+\subsubsection[{v4addr}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+ip4\+\_\+t switch\+\_\+ip\+\_\+addr\+\_\+s\+::v4addr}}\label{structswitch__ip__addr__s_a86348301b627ece114d2f8e1ea3d4ac7}
+I\+Pv4 address \hypertarget{structswitch__ip__addr__s_a28a4b6fbb750ba21aacff4fd1ec923b4}{\index{switch\+\_\+ip\+\_\+addr\+\_\+s@{switch\+\_\+ip\+\_\+addr\+\_\+s}!v6addr@{v6addr}}
+\index{v6addr@{v6addr}!switch\+\_\+ip\+\_\+addr\+\_\+s@{switch\+\_\+ip\+\_\+addr\+\_\+s}}
+\subsubsection[{v6addr}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+ip6\+\_\+t} switch\+\_\+ip\+\_\+addr\+\_\+s\+::v6addr}}\label{structswitch__ip__addr__s_a28a4b6fbb750ba21aacff4fd1ec923b4}
+I\+Pv6 address 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/root/workspace/\+A\+Hash\+Flow/src/switch-\/8.\+2.\+0/switchapi/include/switchapi/switch\+\_\+base\+\_\+types.\+h\end{DoxyCompactItemize}

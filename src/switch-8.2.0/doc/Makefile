@@ -146,7 +146,7 @@ CYGPATH_W = echo
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = false
-DOXYGEN = 
+DOXYGEN = doxygen
 DSYMUTIL = 
 DUMPBIN = 
 ECHO_C = 
@@ -463,12 +463,12 @@ uninstall-am:
 	mostlyclean-generic mostlyclean-libtool pdf pdf-am ps ps-am \
 	tags-am uninstall uninstall-am
 
-#doc:
-#	@$(DOXYGEN) Doxyfile
-#	@echo  The documentation is under: $(builddir)/doc/
 doc:
-	@echo "ERROR: unable to generate documentation; DOXYGEN not found!"
-	@exit -1
+	@$(DOXYGEN) Doxyfile
+	@echo  The documentation is under: $(builddir)/doc/
+#doc:
+#	@echo "ERROR: unable to generate documentation; DOXYGEN not found!"
+#	@exit -1
 
 # Tell versions [3.59,3.63) of GNU make to not export all variables.
 # Otherwise a system limit (for SysV at least) may be exceeded.

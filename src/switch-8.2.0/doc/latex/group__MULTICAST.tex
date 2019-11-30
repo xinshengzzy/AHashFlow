@@ -1,0 +1,468 @@
+\hypertarget{group__MULTICAST}{\section{Multicast A\+P\+I}
+\label{group__MULTICAST}\index{Multicast A\+P\+I@{Multicast A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions listed to create/delete multicast trees and to add/delete multicast routes M\+F\+I\+B
+
+The multicast A\+P\+I's are controlled based on the multicast protocols that propagates the route entries to M\+F\+I\+B. A multicast tree handle is programmed against each route in mfib. The tree is derived in the queuing block and the packet is replicated based on the members. \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__mcast__member__s}{switch\+\_\+mcast\+\_\+member\+\_\+s}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \\*
+\hyperlink{group__MULTICAST_gac149f82b4265da38bcb13f6745749e2e}{switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+s} \hyperlink{group__MULTICAST_ga2312dc87779fff0cad006e54ae20bae4}{switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+t}
+\item 
+typedef enum \hyperlink{group__MULTICAST_gae6d9578ab942865212c38f150d50cdf8}{switch\+\_\+mcast\+\_\+mode\+\_\+} \hyperlink{group__MULTICAST_ga4559597730b0814511eb5ae86dd2bf31}{switch\+\_\+mcast\+\_\+mode\+\_\+t}
+\item 
+\hypertarget{group__MULTICAST_gaf6a5b6b32ceb9e89af190b39cb5a9076}{typedef struct \\*
+\hyperlink{structswitch__mcast__member__s}{switch\+\_\+mcast\+\_\+member\+\_\+s} {\bfseries switch\+\_\+mcast\+\_\+member\+\_\+t}}\label{group__MULTICAST_gaf6a5b6b32ceb9e89af190b39cb5a9076}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__MULTICAST_gac149f82b4265da38bcb13f6745749e2e}{switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+C\+A\+S\+T\+\_\+\+R\+O\+U\+T\+E\+\_\+\+A\+T\+T\+R\+\_\+\+C\+O\+P\+Y\+\_\+\+T\+O\+\_\+\+C\+P\+U} = (1 $<$$<$ 0)
+ \}
+\item 
+enum \hyperlink{group__MULTICAST_gae6d9578ab942865212c38f150d50cdf8}{switch\+\_\+mcast\+\_\+mode\+\_\+} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+M\+C\+A\+S\+T\+\_\+\+I\+P\+M\+C\+\_\+\+N\+O\+N\+E}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+M\+C\+A\+S\+T\+\_\+\+I\+P\+M\+C\+\_\+\+P\+I\+M\+\_\+\+S\+M}, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+M\+C\+A\+S\+T\+\_\+\+I\+P\+M\+C\+\_\+\+P\+I\+M\+\_\+\+B\+I\+D\+I\+R}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_gaed553572534b4b4beda08a43485081fe}{switch\+\_\+api\+\_\+multicast\+\_\+index\+\_\+create} (const switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t $\ast$mgid\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_ga3d1a64779f1434cf4080bd2be0b6a7df}{switch\+\_\+api\+\_\+multicast\+\_\+index\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mgid\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_gaee21bb50d53079c7559f1813eec4fea7}{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+add} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mgid\+\_\+handle, const switch\+\_\+uint16\+\_\+t num\+\_\+mbrs, const \hyperlink{structswitch__mcast__member__s}{switch\+\_\+mcast\+\_\+member\+\_\+t} $\ast$mbrs)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_gaac3d763e9a89d2fc3374c21eff740f82}{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mgid\+\_\+handle, const switch\+\_\+uint16\+\_\+t num\+\_\+mbrs, const \hyperlink{structswitch__mcast__member__s}{switch\+\_\+mcast\+\_\+member\+\_\+t} $\ast$mbrs)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_ga287df9d5e7815244963db8166203bbeb}{switch\+\_\+api\+\_\+multicast\+\_\+ecmp\+\_\+member\+\_\+add} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mgid\+\_\+handle, const switch\+\_\+handle\+\_\+t ecmp\+\_\+nhop\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_ga4f6c3f2096a36c9d0d4be44e5964b7fe}{switch\+\_\+api\+\_\+multicast\+\_\+ecmp\+\_\+member\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mgid\+\_\+handle, const switch\+\_\+handle\+\_\+t ecmp\+\_\+nhop\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_gab43492e9cb444611351178e3e1daaf30}{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mgid\+\_\+handle, switch\+\_\+uint16\+\_\+t $\ast$num\+\_\+mbrs, \hyperlink{structswitch__mcast__member__s}{switch\+\_\+mcast\+\_\+member\+\_\+t} $\ast$$\ast$mbrs)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_gaf63bf66cafbf74d5f98066bbca97dde7}{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+add} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+uint64\+\_\+t flags, const switch\+\_\+handle\+\_\+t mgid\+\_\+handle, const switch\+\_\+handle\+\_\+t rpf\+\_\+handle, const switch\+\_\+handle\+\_\+t vrf\+\_\+handle, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$src\+\_\+ip, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$grp\+\_\+ip, const \hyperlink{group__MULTICAST_ga4559597730b0814511eb5ae86dd2bf31}{switch\+\_\+mcast\+\_\+mode\+\_\+t} mc\+\_\+mode)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_gaf6dcfd3c79db2a2fbf0d6b750b3e5663}{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vrf\+\_\+handle, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$src\+\_\+ip, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$grp\+\_\+ip)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_ga72925b32d423becbdb77443b62582100}{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+stats\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vrf\+\_\+handle, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$src\+\_\+ip, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$grp\+\_\+ip, \hyperlink{structswitch__counter__s}{switch\+\_\+counter\+\_\+t} $\ast$counter)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_ga9edcfcb595c0ed98b596fec5ca8095b6}{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+miss\+\_\+mgid\+\_\+set} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mgid\+\_\+handle, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_ga053fcc402cff3b8adf7f91c4d953f525}{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+mgid\+\_\+set} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+uint64\+\_\+t flags, const switch\+\_\+handle\+\_\+t mgid\+\_\+handle, const switch\+\_\+handle\+\_\+t vrf\+\_\+handle, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$src\+\_\+ip, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$grp\+\_\+ip, const \hyperlink{group__MULTICAST_ga4559597730b0814511eb5ae86dd2bf31}{switch\+\_\+mcast\+\_\+mode\+\_\+t} mc\+\_\+mode)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_ga0a5ec90245a694e02fe043c2e78c407e}{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+rpf\+\_\+set} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t rpf\+\_\+handle, const switch\+\_\+handle\+\_\+t vrf\+\_\+handle, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$src\+\_\+ip, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$grp\+\_\+ip, const \hyperlink{group__MULTICAST_ga4559597730b0814511eb5ae86dd2bf31}{switch\+\_\+mcast\+\_\+mode\+\_\+t} mc\+\_\+mode)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_ga0dab846c9e8c97710166e3da17b986a1}{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+tree\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vrf\+\_\+handle, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$src\+\_\+ip, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$grp\+\_\+ip, switch\+\_\+handle\+\_\+t $\ast$mgid\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$rpf\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_ga227be5f207c8fbfbb74566f5abceb2a0}{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+add} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+uint64\+\_\+t flags, const switch\+\_\+handle\+\_\+t mgid\+\_\+handle, const switch\+\_\+handle\+\_\+t bd\+\_\+handle, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$src\+\_\+ip, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$grp\+\_\+ip)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_ga9577bd3b02d814e158c2479dffb6cd95}{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t bd\+\_\+handle, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$src\+\_\+ip, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$grp\+\_\+ip)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__MULTICAST_ga50dbd73d4c3c69f6bbd1af58137c75e8}{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+tree\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$src\+\_\+ip, const \hyperlink{structswitch__ip__addr__s}{switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$grp\+\_\+ip, switch\+\_\+handle\+\_\+t $\ast$mgid\+\_\+handle)
+\item 
+\hypertarget{group__MULTICAST_gaeb6f5f91c5c4a9e2cc429c88fe86cffe}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mcast\+\_\+handle\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mgid\+\_\+handle, const void $\ast$cli\+\_\+ctx)}\label{group__MULTICAST_gaeb6f5f91c5c4a9e2cc429c88fe86cffe}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__MULTICAST_ga4559597730b0814511eb5ae86dd2bf31}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+mcast\+\_\+mode\+\_\+t@{switch\+\_\+mcast\+\_\+mode\+\_\+t}}
+\index{switch\+\_\+mcast\+\_\+mode\+\_\+t@{switch\+\_\+mcast\+\_\+mode\+\_\+t}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+mcast\+\_\+mode\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+mcast\+\_\+mode\+\_\+}  {\bf switch\+\_\+mcast\+\_\+mode\+\_\+t}}}\label{group__MULTICAST_ga4559597730b0814511eb5ae86dd2bf31}
+Multicast mode \hypertarget{group__MULTICAST_ga2312dc87779fff0cad006e54ae20bae4}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+t@{switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+t}}
+\index{switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+t@{switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+t}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+s}  {\bf switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+t}}}\label{group__MULTICAST_ga2312dc87779fff0cad006e54ae20bae4}
+multicast route attributes 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__MULTICAST_gae6d9578ab942865212c38f150d50cdf8}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+mcast\+\_\+mode\+\_\+@{switch\+\_\+mcast\+\_\+mode\+\_\+}}
+\index{switch\+\_\+mcast\+\_\+mode\+\_\+@{switch\+\_\+mcast\+\_\+mode\+\_\+}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+mcast\+\_\+mode\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+mcast\+\_\+mode\+\_\+}}}\label{group__MULTICAST_gae6d9578ab942865212c38f150d50cdf8}
+Multicast mode \hypertarget{group__MULTICAST_gac149f82b4265da38bcb13f6745749e2e}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+s@{switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+s}}
+\index{switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+s@{switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+s}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+mcast\+\_\+route\+\_\+attr\+\_\+s}}}\label{group__MULTICAST_gac149f82b4265da38bcb13f6745749e2e}
+multicast route attributes 
+
+\subsection{Function Documentation}
+\hypertarget{group__MULTICAST_ga287df9d5e7815244963db8166203bbeb}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+ecmp\+\_\+member\+\_\+add@{switch\+\_\+api\+\_\+multicast\+\_\+ecmp\+\_\+member\+\_\+add}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+ecmp\+\_\+member\+\_\+add@{switch\+\_\+api\+\_\+multicast\+\_\+ecmp\+\_\+member\+\_\+add}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+ecmp\+\_\+member\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+ecmp\+\_\+member\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{mgid\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{ecmp\+\_\+nhop\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_ga287df9d5e7815244963db8166203bbeb}
+Add an ecmp group to multicast tree 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em mgid\+\_\+handle} & -\/ Handle that uniquely identifies multicast tree \\
+\hline
+{\em ecmp\+\_\+nhop\+\_\+handle} & -\/ Handle the uniquely identifies the ecmp nh group \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_ga4f6c3f2096a36c9d0d4be44e5964b7fe}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+ecmp\+\_\+member\+\_\+delete@{switch\+\_\+api\+\_\+multicast\+\_\+ecmp\+\_\+member\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+ecmp\+\_\+member\+\_\+delete@{switch\+\_\+api\+\_\+multicast\+\_\+ecmp\+\_\+member\+\_\+delete}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+ecmp\+\_\+member\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+ecmp\+\_\+member\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{mgid\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{ecmp\+\_\+nhop\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_ga4f6c3f2096a36c9d0d4be44e5964b7fe}
+Remove an ecmp group from multicast tree 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em mgid\+\_\+handle} & -\/ Handle that uniquely identifies multicast tree \\
+\hline
+{\em ecmp\+\_\+nhop\+\_\+handle} & -\/ Handle the uniquely identifies the ecmp nh group \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_gaed553572534b4b4beda08a43485081fe}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+index\+\_\+create@{switch\+\_\+api\+\_\+multicast\+\_\+index\+\_\+create}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+index\+\_\+create@{switch\+\_\+api\+\_\+multicast\+\_\+index\+\_\+create}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+index\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+index\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{mgid\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_gaed553572534b4b4beda08a43485081fe}
+Create a Multicast Tree 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_ga3d1a64779f1434cf4080bd2be0b6a7df}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+index\+\_\+delete@{switch\+\_\+api\+\_\+multicast\+\_\+index\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+index\+\_\+delete@{switch\+\_\+api\+\_\+multicast\+\_\+index\+\_\+delete}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+index\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+index\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{mgid\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_ga3d1a64779f1434cf4080bd2be0b6a7df}
+Delete a multicast tree 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em mgid\+\_\+handle} & -\/ Handle that uniquely identifies multicast tree \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_ga227be5f207c8fbfbb74566f5abceb2a0}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+add@{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+add}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+add@{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+add}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+uint64\+\_\+t}]{flags, }
+\item[{const switch\+\_\+handle\+\_\+t}]{mgid\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{bd\+\_\+handle, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{src\+\_\+ip, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{grp\+\_\+ip}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_ga227be5f207c8fbfbb74566f5abceb2a0}
+Add an L2 (S,G) or ($\ast$, G) route entry to M\+F\+I\+B. 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em mgid\+\_\+handle} & -\/ Handle that uniquely identifies multicast tree \\
+\hline
+{\em vlan\+\_\+handle} & -\/ Handle of vlan to add L2 route \\
+\hline
+{\em src\+\_\+ip} & -\/ Source I\+P address \\
+\hline
+{\em grp\+\_\+ip} & -\/ Group I\+P address \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_ga9577bd3b02d814e158c2479dffb6cd95}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+delete@{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+delete@{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+delete}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{bd\+\_\+handle, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{src\+\_\+ip, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{grp\+\_\+ip}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_ga9577bd3b02d814e158c2479dffb6cd95}
+Delete an L2 (S,G) or ($\ast$, G) route entry to M\+F\+I\+B. 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em vlan\+\_\+handle} & -\/ Handle of vlan to delete L2 route \\
+\hline
+{\em src\+\_\+ip} & -\/ Source I\+P address \\
+\hline
+{\em grp\+\_\+ip} & -\/ Group I\+P address \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_ga50dbd73d4c3c69f6bbd1af58137c75e8}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+tree\+\_\+get@{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+tree\+\_\+get}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+tree\+\_\+get@{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+tree\+\_\+get}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+tree\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+l2route\+\_\+tree\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{src\+\_\+ip, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{grp\+\_\+ip, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{mgid\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_ga50dbd73d4c3c69f6bbd1af58137c75e8}
+For an L2 (S,G) or ($\ast$, G) get the multicast tree 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em vlan\+\_\+handle} & -\/ Handle of vlan to delete L2 route \\
+\hline
+{\em src\+\_\+ip} & -\/ Source I\+P address \\
+\hline
+{\em grp\+\_\+ip} & -\/ Group I\+P address \\
+\hline
+{\em mgid\+\_\+handle} & -\/ Handle of multicast tree \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_gaee21bb50d53079c7559f1813eec4fea7}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+add@{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+add}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+add@{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+add}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{mgid\+\_\+handle, }
+\item[{const switch\+\_\+uint16\+\_\+t}]{num\+\_\+mbrs, }
+\item[{const {\bf switch\+\_\+mcast\+\_\+member\+\_\+t} $\ast$}]{mbrs}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_gaee21bb50d53079c7559f1813eec4fea7}
+Add a list of members to multicast tree 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em mgid\+\_\+handle} & -\/ Handle that uniquely identifies multicast tree \\
+\hline
+{\em mbr\+\_\+count} & -\/ Count of members \\
+\hline
+{\em mbrs} & -\/ List of interfaces to be added to multicast tree \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_gaac3d763e9a89d2fc3374c21eff740f82}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+delete@{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+delete@{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+delete}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{mgid\+\_\+handle, }
+\item[{const switch\+\_\+uint16\+\_\+t}]{num\+\_\+mbrs, }
+\item[{const {\bf switch\+\_\+mcast\+\_\+member\+\_\+t} $\ast$}]{mbrs}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_gaac3d763e9a89d2fc3374c21eff740f82}
+Delete a list of members to multicast tree 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em mgid\+\_\+handle} & -\/ Handle that uniquely identifies multicast tree \\
+\hline
+{\em mbr\+\_\+count} & -\/ Count of members \\
+\hline
+{\em mbrs} & -\/ List of interfaces to be deleted from multicast tree \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_gab43492e9cb444611351178e3e1daaf30}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+get@{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+get}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+get@{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+get}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+member\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{mgid\+\_\+handle, }
+\item[{switch\+\_\+uint16\+\_\+t $\ast$}]{num\+\_\+mbrs, }
+\item[{{\bf switch\+\_\+mcast\+\_\+member\+\_\+t} $\ast$$\ast$}]{mbrs}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_gab43492e9cb444611351178e3e1daaf30}
+Get the list of members of a multicast tree 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em mgid\+\_\+handle} & -\/ Handle that uniquely identifies multicast tree \\
+\hline
+{\em mbr\+\_\+count} & -\/ Count of members \\
+\hline
+{\em mbrs} & -\/ List of interfaces part of the multicast tree \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_gaf63bf66cafbf74d5f98066bbca97dde7}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+add@{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+add}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+add@{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+add}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+uint64\+\_\+t}]{flags, }
+\item[{const switch\+\_\+handle\+\_\+t}]{mgid\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{rpf\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{src\+\_\+ip, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{grp\+\_\+ip, }
+\item[{const {\bf switch\+\_\+mcast\+\_\+mode\+\_\+t}}]{mc\+\_\+mode}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_gaf63bf66cafbf74d5f98066bbca97dde7}
+Add a (S,G) or ($\ast$, G) entry to M\+F\+I\+B. 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em mgid\+\_\+handle} & -\/ Handle that uniquely identifies multicast tree \\
+\hline
+{\em rpf\+\_\+handle} & -\/ Handle that uniquely identifies R\+P\+F group \\
+\hline
+{\em vlan\+\_\+vrf\+\_\+handle} & -\/ V\+R\+F handle \\
+\hline
+{\em src\+\_\+ip} & -\/ Source I\+P address \\
+\hline
+{\em grp\+\_\+ip} & -\/ Group I\+P address \\
+\hline
+{\em mc\+\_\+mode} & -\/ Multicast mode to indicate P\+I\+M S\+M/\+P\+I\+M B\+I\+D\+I\+R \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_gaf6dcfd3c79db2a2fbf0d6b750b3e5663}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+delete@{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+delete@{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+delete}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{src\+\_\+ip, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{grp\+\_\+ip}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_gaf6dcfd3c79db2a2fbf0d6b750b3e5663}
+Delete a (S,G) or ($\ast$, G) entry from M\+F\+I\+B. 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em vrf\+\_\+handle} & -\/ V\+R\+F handle \\
+\hline
+{\em src\+\_\+ip} & -\/ Source I\+P address \\
+\hline
+{\em grp\+\_\+ip} & -\/ Group I\+P address \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_ga053fcc402cff3b8adf7f91c4d953f525}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+mgid\+\_\+set@{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+mgid\+\_\+set}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+mgid\+\_\+set@{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+mgid\+\_\+set}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+mgid\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+mgid\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+uint64\+\_\+t}]{flags, }
+\item[{const switch\+\_\+handle\+\_\+t}]{mgid\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{src\+\_\+ip, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{grp\+\_\+ip, }
+\item[{const {\bf switch\+\_\+mcast\+\_\+mode\+\_\+t}}]{mc\+\_\+mode}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_ga053fcc402cff3b8adf7f91c4d953f525}
+Update mgid of (S,G) or ($\ast$, G) entry to M\+F\+I\+B. 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em mgid\+\_\+handle} & -\/ Handle that uniquely identifies multicast tree \\
+\hline
+{\em vlan\+\_\+vrf\+\_\+handle} & -\/ V\+R\+F handle \\
+\hline
+{\em src\+\_\+ip} & -\/ Source I\+P address \\
+\hline
+{\em grp\+\_\+ip} & -\/ Group I\+P address \\
+\hline
+{\em mc\+\_\+mode} & -\/ Multicast mode to indicate P\+I\+M S\+M/\+P\+I\+M B\+I\+D\+I\+R \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_ga9edcfcb595c0ed98b596fec5ca8095b6}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+miss\+\_\+mgid\+\_\+set@{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+miss\+\_\+mgid\+\_\+set}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+miss\+\_\+mgid\+\_\+set@{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+miss\+\_\+mgid\+\_\+set}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+miss\+\_\+mgid\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+miss\+\_\+mgid\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{mgid\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_ga9edcfcb595c0ed98b596fec5ca8095b6}
+Configure M\+G\+I\+D handle on R\+P\+F fail or mroute miss 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em mgid\+\_\+handle} & -\/ M\+G\+I\+D handle \\
+\hline
+{\em vlan\+\_\+handle} & -\/ vlan handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_ga0a5ec90245a694e02fe043c2e78c407e}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+rpf\+\_\+set@{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+rpf\+\_\+set}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+rpf\+\_\+set@{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+rpf\+\_\+set}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+rpf\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+rpf\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{rpf\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{src\+\_\+ip, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{grp\+\_\+ip, }
+\item[{const {\bf switch\+\_\+mcast\+\_\+mode\+\_\+t}}]{mc\+\_\+mode}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_ga0a5ec90245a694e02fe043c2e78c407e}
+Update rpf of (S,G) or ($\ast$, G) entry to M\+F\+I\+B. 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em rpf\+\_\+handle} & -\/ Handle that uniquely identifies an R\+P\+F group \\
+\hline
+{\em vlan\+\_\+vrf\+\_\+handle} & -\/ V\+R\+F handle \\
+\hline
+{\em src\+\_\+ip} & -\/ Source I\+P address \\
+\hline
+{\em grp\+\_\+ip} & -\/ Group I\+P address \\
+\hline
+{\em mc\+\_\+mode} & -\/ Multicast mode to indicate P\+I\+M S\+M/\+P\+I\+M B\+I\+D\+I\+R \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_ga72925b32d423becbdb77443b62582100}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+stats\+\_\+get@{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+stats\+\_\+get}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+stats\+\_\+get@{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+stats\+\_\+get}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+stats\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+stats\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{src\+\_\+ip, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{grp\+\_\+ip, }
+\item[{{\bf switch\+\_\+counter\+\_\+t} $\ast$}]{counter}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_ga72925b32d423becbdb77443b62582100}
+Get stats per (S,G) or ($\ast$, G) entry from M\+F\+I\+B. 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em vrf\+\_\+handle} & -\/ V\+R\+F handle \\
+\hline
+{\em src\+\_\+ip} & -\/ Source I\+P address \\
+\hline
+{\em grp\+\_\+ip} & -\/ Group I\+P address \&param counter -\/ Counters returned \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__MULTICAST_ga0dab846c9e8c97710166e3da17b986a1}{\index{Multicast A\+P\+I@{Multicast A\+P\+I}!switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+tree\+\_\+get@{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+tree\+\_\+get}}
+\index{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+tree\+\_\+get@{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+tree\+\_\+get}!Multicast A\+P\+I@{Multicast A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+tree\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+multicast\+\_\+mroute\+\_\+tree\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{src\+\_\+ip, }
+\item[{const {\bf switch\+\_\+ip\+\_\+addr\+\_\+t} $\ast$}]{grp\+\_\+ip, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{mgid\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{rpf\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__MULTICAST_ga0dab846c9e8c97710166e3da17b986a1}
+For a (S,G) or ($\ast$, G) get the multicast tree 
+\begin{DoxyParams}{Parameters}
+{\em device} & -\/ device that programs the tree \\
+\hline
+{\em vrf\+\_\+handle} & -\/ V\+R\+F handle \\
+\hline
+{\em src\+\_\+ip} & -\/ Source I\+P address \\
+\hline
+{\em grp\+\_\+ip} & -\/ Group I\+P address \\
+\hline
+{\em mgid\+\_\+handle} & -\/ M\+G\+I\+D handle of multicast tree \\
+\hline
+{\em rpf\+\_\+handle} & -\/ R\+P\+F handle of multicast tree \\
+\hline
+\end{DoxyParams}

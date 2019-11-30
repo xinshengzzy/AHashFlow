@@ -1,0 +1,369 @@
+\hypertarget{group__QUEUE}{\section{Q\+U\+E\+U\+E A\+P\+I}
+\label{group__QUEUE}\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions to allocate queues \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__api__queue__info__s}{switch\+\_\+api\+\_\+queue\+\_\+info\+\_\+s}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__QUEUE_gaf07e036d72e57f28e80e078d6fd09bd3}{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+Q\+U\+E\+U\+E}~8
+\item 
+\#define \hyperlink{group__QUEUE_gaecd834097d78ac088d4d6765770dbeb7}{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+P\+O\+R\+T\+\_\+\+Q\+U\+E\+U\+E}~8
+\item 
+\#define \hyperlink{group__QUEUE_ga3d8890e94a7bc0059c97d9ffe0338af5}{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+C\+P\+U\+\_\+\+Q\+U\+E\+U\+E}~32
+\item 
+\#define \hyperlink{group__QUEUE_gad15126a3cd060722141ab50b7b81c7cf}{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+F\+F\+I\+C\+\_\+\+C\+L\+A\+S\+S\+E\+S}~32
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \\*
+\hyperlink{group__QUEUE_ga52bffabee8ef791c8e3e0c1dd1bdd0cb}{switch\+\_\+queue\+\_\+attribute\+\_\+s} \hyperlink{group__QUEUE_ga7a4593247f7a7aa628e39211a924c141}{switch\+\_\+queue\+\_\+attribute\+\_\+t}
+\item 
+\hypertarget{group__QUEUE_gabe9d092ab7db84d304c85319d27343f0}{typedef struct \\*
+\hyperlink{structswitch__api__queue__info__s}{switch\+\_\+api\+\_\+queue\+\_\+info\+\_\+s} {\bfseries switch\+\_\+api\+\_\+queue\+\_\+info\+\_\+t}}\label{group__QUEUE_gabe9d092ab7db84d304c85319d27343f0}
+
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__QUEUE_ga52bffabee8ef791c8e3e0c1dd1bdd0cb}{switch\+\_\+queue\+\_\+attribute\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+A\+T\+T\+R\+\_\+\+P\+O\+R\+T\+\_\+\+H\+A\+N\+D\+L\+E} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+A\+T\+T\+R\+\_\+\+Q\+U\+E\+U\+E\+\_\+\+I\+D} = (1 $<$$<$ 1)
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QUEUE_gaa6a8c84353933c15bbe2bae22c8937ff}{switch\+\_\+api\+\_\+queues\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle, switch\+\_\+uint32\+\_\+t $\ast$num\+\_\+queues, switch\+\_\+handle\+\_\+t $\ast$queue\+\_\+handles)
+\item 
+\hypertarget{group__QUEUE_gae00b23e373e8afa53fae9e34c890c801}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+queue\+\_\+create} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+uint64\+\_\+t flags, const \hyperlink{structswitch__api__queue__info__s}{switch\+\_\+api\+\_\+queue\+\_\+info\+\_\+t} $\ast$api\+\_\+queue\+\_\+info, switch\+\_\+handle\+\_\+t $\ast$queue\+\_\+handle)}\label{group__QUEUE_gae00b23e373e8afa53fae9e34c890c801}
+
+\item 
+\hypertarget{group__QUEUE_gac8560b068017596fe8e6535933b5175a}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+queue\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t port\+\_\+handle)}\label{group__QUEUE_gac8560b068017596fe8e6535933b5175a}
+
+\item 
+\hypertarget{group__QUEUE_ga3991ab02ba1a6e22d6337b4de8eae354}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+queue\+\_\+color\+\_\+drop\+\_\+enable} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle, bool enable)}\label{group__QUEUE_ga3991ab02ba1a6e22d6337b4de8eae354}
+
+\item 
+\hypertarget{group__QUEUE_gabd931e79a1b3190ea5f51899dc008e8f}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+queue\+\_\+color\+\_\+limit\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle, switch\+\_\+color\+\_\+t color, switch\+\_\+uint32\+\_\+t limit)}\label{group__QUEUE_gabd931e79a1b3190ea5f51899dc008e8f}
+
+\item 
+\hypertarget{group__QUEUE_ga2d4aa58b44074bbf4d89ccc5aaba2681}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+queue\+\_\+color\+\_\+hysteresis\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle, switch\+\_\+color\+\_\+t color, switch\+\_\+uint32\+\_\+t limit)}\label{group__QUEUE_ga2d4aa58b44074bbf4d89ccc5aaba2681}
+
+\item 
+\hypertarget{group__QUEUE_gad157cb892d128b0fc9e04fbaaea7ecd7}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+queue\+\_\+pfc\+\_\+cos\+\_\+mapping} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle, switch\+\_\+uint8\+\_\+t cos)}\label{group__QUEUE_gad157cb892d128b0fc9e04fbaaea7ecd7}
+
+\item 
+\hypertarget{group__QUEUE_ga1cf2a824ff139b103509773518c9b9c7}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+max\+\_\+queues\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint32\+\_\+t $\ast$max\+\_\+queues)}\label{group__QUEUE_ga1cf2a824ff139b103509773518c9b9c7}
+
+\item 
+\hypertarget{group__QUEUE_gaea2e800e95079139db42f99d2cedbb5a}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+max\+\_\+cpu\+\_\+queues\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint32\+\_\+t $\ast$max\+\_\+queues)}\label{group__QUEUE_gaea2e800e95079139db42f99d2cedbb5a}
+
+\item 
+\hypertarget{group__QUEUE_ga6db6e93da25446f14fcfc4a347de3ed6}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+max\+\_\+traffic\+\_\+class\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+uint32\+\_\+t $\ast$traffic\+\_\+classes)}\label{group__QUEUE_ga6db6e93da25446f14fcfc4a347de3ed6}
+
+\item 
+\hypertarget{group__QUEUE_gac9f2f5c1aa4aa6c44ef096ca5df84216}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+dtel\+\_\+tail\+\_\+drop\+\_\+deflection\+\_\+queue\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+pipe\+\_\+t pipe\+\_\+id, switch\+\_\+handle\+\_\+t queue\+\_\+handle)}\label{group__QUEUE_gac9f2f5c1aa4aa6c44ef096ca5df84216}
+
+\item 
+\hypertarget{group__QUEUE_ga897bea7fd87bcd3e80eceec1d90a853d}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+queue\+\_\+handle\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t queue\+\_\+handle, const void $\ast$cli\+\_\+ctx)}\label{group__QUEUE_ga897bea7fd87bcd3e80eceec1d90a853d}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QUEUE_ga2fd306789d4d74268c419f1ef049fb05}{switch\+\_\+api\+\_\+queue\+\_\+guaranteed\+\_\+rate\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle, bool pps, uint32\+\_\+t burst, uint64\+\_\+t rate)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QUEUE_ga6f6da01f1f8be132ff0ace4da512a080}{switch\+\_\+api\+\_\+queue\+\_\+strict\+\_\+priority\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle, switch\+\_\+scheduler\+\_\+priority\+\_\+t priority)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QUEUE_ga680e48a7920869009a4f349a9644812c}{switch\+\_\+api\+\_\+queue\+\_\+dwrr\+\_\+weight\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle, uint16\+\_\+t weight)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QUEUE_ga761c698de45de8e484e513c20842955a}{switch\+\_\+api\+\_\+queue\+\_\+shaping\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle, bool pps, switch\+\_\+uint32\+\_\+t burst, uint64\+\_\+t rate)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QUEUE_gab74a31aea5220f701fa5fcb11eff1a96}{switch\+\_\+api\+\_\+queue\+\_\+index\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle, switch\+\_\+uint8\+\_\+t $\ast$queue\+\_\+index)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QUEUE_gac1e40b9cc3da02160a0cb39b6a7aec17}{switch\+\_\+api\+\_\+queue\+\_\+port\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$port\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QUEUE_ga0155cba07d46d7d15499ed26111b238d}{switch\+\_\+api\+\_\+queue\+\_\+drop\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle, uint64\+\_\+t $\ast$num\+\_\+packets)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QUEUE_gad02b08f9a4a7c5a6c5e2b28059aae0b2}{switch\+\_\+api\+\_\+queue\+\_\+drop\+\_\+count\+\_\+clear} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QUEUE_ga93cd0c37e64b51f733f01d17046c6677}{switch\+\_\+api\+\_\+queue\+\_\+guaranteed\+\_\+limit\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle, uint32\+\_\+t num\+\_\+bytes)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QUEUE_ga8123f74c030ca6de8446a4e52cfd60f3}{switch\+\_\+api\+\_\+queue\+\_\+usage\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle, uint64\+\_\+t $\ast$inuse\+\_\+bytes, uint64\+\_\+t $\ast$wm\+\_\+bytes)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QUEUE_gaaa86eccefa1ece78eb273b1b0d9913ac}{switch\+\_\+api\+\_\+egress\+\_\+queue\+\_\+stats\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle, \hyperlink{structswitch__counter__s}{switch\+\_\+counter\+\_\+t} $\ast$queue\+\_\+stats)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__QUEUE_ga9a8bc5eb6448614218f04188e8002b3d}{switch\+\_\+api\+\_\+egress\+\_\+queue\+\_\+stats\+\_\+clear} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t queue\+\_\+handle)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__QUEUE_ga3d8890e94a7bc0059c97d9ffe0338af5}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+C\+P\+U\+\_\+\+Q\+U\+E\+U\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+C\+P\+U\+\_\+\+Q\+U\+E\+U\+E}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+C\+P\+U\+\_\+\+Q\+U\+E\+U\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+C\+P\+U\+\_\+\+Q\+U\+E\+U\+E}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+C\+P\+U\+\_\+\+Q\+U\+E\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+C\+P\+U\+\_\+\+Q\+U\+E\+U\+E~32}}\label{group__QUEUE_ga3d8890e94a7bc0059c97d9ffe0338af5}
+max number of C\+P\+U queues \hypertarget{group__QUEUE_gaecd834097d78ac088d4d6765770dbeb7}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+P\+O\+R\+T\+\_\+\+Q\+U\+E\+U\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+P\+O\+R\+T\+\_\+\+Q\+U\+E\+U\+E}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+P\+O\+R\+T\+\_\+\+Q\+U\+E\+U\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+P\+O\+R\+T\+\_\+\+Q\+U\+E\+U\+E}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+P\+O\+R\+T\+\_\+\+Q\+U\+E\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+P\+O\+R\+T\+\_\+\+Q\+U\+E\+U\+E~8}}\label{group__QUEUE_gaecd834097d78ac088d4d6765770dbeb7}
+max number of port queues \hypertarget{group__QUEUE_gaf07e036d72e57f28e80e078d6fd09bd3}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+Q\+U\+E\+U\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+Q\+U\+E\+U\+E}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+Q\+U\+E\+U\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+Q\+U\+E\+U\+E}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+Q\+U\+E\+U\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+Q\+U\+E\+U\+E~8}}\label{group__QUEUE_gaf07e036d72e57f28e80e078d6fd09bd3}
+max number of queues \hypertarget{group__QUEUE_gad15126a3cd060722141ab50b7b81c7cf}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+F\+F\+I\+C\+\_\+\+C\+L\+A\+S\+S\+E\+S@{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+F\+F\+I\+C\+\_\+\+C\+L\+A\+S\+S\+E\+S}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+F\+F\+I\+C\+\_\+\+C\+L\+A\+S\+S\+E\+S@{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+F\+F\+I\+C\+\_\+\+C\+L\+A\+S\+S\+E\+S}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+F\+F\+I\+C\+\_\+\+C\+L\+A\+S\+S\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+T\+R\+A\+F\+F\+I\+C\+\_\+\+C\+L\+A\+S\+S\+E\+S~32}}\label{group__QUEUE_gad15126a3cd060722141ab50b7b81c7cf}
+max number of traffic classes 
+
+\subsection{Typedef Documentation}
+\hypertarget{group__QUEUE_ga7a4593247f7a7aa628e39211a924c141}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+queue\+\_\+attribute\+\_\+t@{switch\+\_\+queue\+\_\+attribute\+\_\+t}}
+\index{switch\+\_\+queue\+\_\+attribute\+\_\+t@{switch\+\_\+queue\+\_\+attribute\+\_\+t}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+queue\+\_\+attribute\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+queue\+\_\+attribute\+\_\+s}  {\bf switch\+\_\+queue\+\_\+attribute\+\_\+t}}}\label{group__QUEUE_ga7a4593247f7a7aa628e39211a924c141}
+Q\+U\+E\+U\+E information 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__QUEUE_ga52bffabee8ef791c8e3e0c1dd1bdd0cb}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+queue\+\_\+attribute\+\_\+s@{switch\+\_\+queue\+\_\+attribute\+\_\+s}}
+\index{switch\+\_\+queue\+\_\+attribute\+\_\+s@{switch\+\_\+queue\+\_\+attribute\+\_\+s}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+queue\+\_\+attribute\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+queue\+\_\+attribute\+\_\+s}}}\label{group__QUEUE_ga52bffabee8ef791c8e3e0c1dd1bdd0cb}
+Q\+U\+E\+U\+E information 
+
+\subsection{Function Documentation}
+\hypertarget{group__QUEUE_ga9a8bc5eb6448614218f04188e8002b3d}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+api\+\_\+egress\+\_\+queue\+\_\+stats\+\_\+clear@{switch\+\_\+api\+\_\+egress\+\_\+queue\+\_\+stats\+\_\+clear}}
+\index{switch\+\_\+api\+\_\+egress\+\_\+queue\+\_\+stats\+\_\+clear@{switch\+\_\+api\+\_\+egress\+\_\+queue\+\_\+stats\+\_\+clear}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+egress\+\_\+queue\+\_\+stats\+\_\+clear}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+egress\+\_\+queue\+\_\+stats\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{queue\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__QUEUE_ga9a8bc5eb6448614218f04188e8002b3d}
+clear the queue stats for egress queue 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em queue\+\_\+handle} & queue handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QUEUE_gaaa86eccefa1ece78eb273b1b0d9913ac}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+api\+\_\+egress\+\_\+queue\+\_\+stats\+\_\+get@{switch\+\_\+api\+\_\+egress\+\_\+queue\+\_\+stats\+\_\+get}}
+\index{switch\+\_\+api\+\_\+egress\+\_\+queue\+\_\+stats\+\_\+get@{switch\+\_\+api\+\_\+egress\+\_\+queue\+\_\+stats\+\_\+get}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+egress\+\_\+queue\+\_\+stats\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+egress\+\_\+queue\+\_\+stats\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{queue\+\_\+handle, }
+\item[{{\bf switch\+\_\+counter\+\_\+t} $\ast$}]{queue\+\_\+stats}
+\end{DoxyParamCaption}
+)}}\label{group__QUEUE_gaaa86eccefa1ece78eb273b1b0d9913ac}
+get the queue stats for egress queue 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em queue\+\_\+handle} & queue handle \\
+\hline
+{\em queue} & stats in bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QUEUE_gad02b08f9a4a7c5a6c5e2b28059aae0b2}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+api\+\_\+queue\+\_\+drop\+\_\+count\+\_\+clear@{switch\+\_\+api\+\_\+queue\+\_\+drop\+\_\+count\+\_\+clear}}
+\index{switch\+\_\+api\+\_\+queue\+\_\+drop\+\_\+count\+\_\+clear@{switch\+\_\+api\+\_\+queue\+\_\+drop\+\_\+count\+\_\+clear}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queue\+\_\+drop\+\_\+count\+\_\+clear}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queue\+\_\+drop\+\_\+count\+\_\+clear (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{queue\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__QUEUE_gad02b08f9a4a7c5a6c5e2b28059aae0b2}
+Clear the queue drop counter 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em queue\+\_\+handle} & queue handle. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QUEUE_ga0155cba07d46d7d15499ed26111b238d}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+api\+\_\+queue\+\_\+drop\+\_\+get@{switch\+\_\+api\+\_\+queue\+\_\+drop\+\_\+get}}
+\index{switch\+\_\+api\+\_\+queue\+\_\+drop\+\_\+get@{switch\+\_\+api\+\_\+queue\+\_\+drop\+\_\+get}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queue\+\_\+drop\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queue\+\_\+drop\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{queue\+\_\+handle, }
+\item[{uint64\+\_\+t $\ast$}]{num\+\_\+packets}
+\end{DoxyParamCaption}
+)}}\label{group__QUEUE_ga0155cba07d46d7d15499ed26111b238d}
+Get the queue drop counter 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em queue\+\_\+handle} & queue handle. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QUEUE_ga680e48a7920869009a4f349a9644812c}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+api\+\_\+queue\+\_\+dwrr\+\_\+weight\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+dwrr\+\_\+weight\+\_\+set}}
+\index{switch\+\_\+api\+\_\+queue\+\_\+dwrr\+\_\+weight\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+dwrr\+\_\+weight\+\_\+set}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queue\+\_\+dwrr\+\_\+weight\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queue\+\_\+dwrr\+\_\+weight\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{queue\+\_\+handle, }
+\item[{uint16\+\_\+t}]{weight}
+\end{DoxyParamCaption}
+)}}\label{group__QUEUE_ga680e48a7920869009a4f349a9644812c}
+set the weight of queue scheduler 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em queue\+\_\+handle} & queue handle \\
+\hline
+{\em weight} & weight \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QUEUE_ga93cd0c37e64b51f733f01d17046c6677}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+api\+\_\+queue\+\_\+guaranteed\+\_\+limit\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+guaranteed\+\_\+limit\+\_\+set}}
+\index{switch\+\_\+api\+\_\+queue\+\_\+guaranteed\+\_\+limit\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+guaranteed\+\_\+limit\+\_\+set}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queue\+\_\+guaranteed\+\_\+limit\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queue\+\_\+guaranteed\+\_\+limit\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{queue\+\_\+handle, }
+\item[{uint32\+\_\+t}]{num\+\_\+bytes}
+\end{DoxyParamCaption}
+)}}\label{group__QUEUE_ga93cd0c37e64b51f733f01d17046c6677}
+set the min guaranteed limit for queue 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em queue\+\_\+handle} & queue handle \\
+\hline
+{\em num\+\_\+bytes} & number of min guaranteed bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QUEUE_ga2fd306789d4d74268c419f1ef049fb05}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+api\+\_\+queue\+\_\+guaranteed\+\_\+rate\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+guaranteed\+\_\+rate\+\_\+set}}
+\index{switch\+\_\+api\+\_\+queue\+\_\+guaranteed\+\_\+rate\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+guaranteed\+\_\+rate\+\_\+set}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queue\+\_\+guaranteed\+\_\+rate\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queue\+\_\+guaranteed\+\_\+rate\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{queue\+\_\+handle, }
+\item[{bool}]{pps, }
+\item[{uint32\+\_\+t}]{burst, }
+\item[{uint64\+\_\+t}]{rate}
+\end{DoxyParamCaption}
+)}}\label{group__QUEUE_ga2fd306789d4d74268c419f1ef049fb05}
+set the guaranteed min rate of queue scheduler 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em pps} & pps or bps flag \\
+\hline
+{\em queue} & queue handle \\
+\hline
+{\em burst} & burst \\
+\hline
+{\em rate} & guaranteed min rate in bps or pps. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QUEUE_gab74a31aea5220f701fa5fcb11eff1a96}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+api\+\_\+queue\+\_\+index\+\_\+get@{switch\+\_\+api\+\_\+queue\+\_\+index\+\_\+get}}
+\index{switch\+\_\+api\+\_\+queue\+\_\+index\+\_\+get@{switch\+\_\+api\+\_\+queue\+\_\+index\+\_\+get}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queue\+\_\+index\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queue\+\_\+index\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{queue\+\_\+handle, }
+\item[{switch\+\_\+uint8\+\_\+t $\ast$}]{queue\+\_\+index}
+\end{DoxyParamCaption}
+)}}\label{group__QUEUE_gab74a31aea5220f701fa5fcb11eff1a96}
+Get the queue index 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em queue\+\_\+handle} & queue handle. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QUEUE_gac1e40b9cc3da02160a0cb39b6a7aec17}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+api\+\_\+queue\+\_\+port\+\_\+get@{switch\+\_\+api\+\_\+queue\+\_\+port\+\_\+get}}
+\index{switch\+\_\+api\+\_\+queue\+\_\+port\+\_\+get@{switch\+\_\+api\+\_\+queue\+\_\+port\+\_\+get}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queue\+\_\+port\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queue\+\_\+port\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{queue\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{port\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__QUEUE_gac1e40b9cc3da02160a0cb39b6a7aec17}
+Get the queue port handle 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em queue\+\_\+handle} & queue handle. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QUEUE_ga761c698de45de8e484e513c20842955a}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+api\+\_\+queue\+\_\+shaping\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+shaping\+\_\+set}}
+\index{switch\+\_\+api\+\_\+queue\+\_\+shaping\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+shaping\+\_\+set}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queue\+\_\+shaping\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queue\+\_\+shaping\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{queue\+\_\+handle, }
+\item[{bool}]{pps, }
+\item[{switch\+\_\+uint32\+\_\+t}]{burst, }
+\item[{uint64\+\_\+t}]{rate}
+\end{DoxyParamCaption}
+)}}\label{group__QUEUE_ga761c698de45de8e484e513c20842955a}
+Set the queue shaper 
+\begin{DoxyParams}{Parameters}
+{\em device} & device  pps/bps flag. \\
+\hline
+{\em queue\+\_\+handle} & queue handle \\
+\hline
+{\em burst} & burst size in bytes \\
+\hline
+{\em rate} & rate in bps or in pps. \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QUEUE_ga6f6da01f1f8be132ff0ace4da512a080}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+api\+\_\+queue\+\_\+strict\+\_\+priority\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+strict\+\_\+priority\+\_\+set}}
+\index{switch\+\_\+api\+\_\+queue\+\_\+strict\+\_\+priority\+\_\+set@{switch\+\_\+api\+\_\+queue\+\_\+strict\+\_\+priority\+\_\+set}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queue\+\_\+strict\+\_\+priority\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queue\+\_\+strict\+\_\+priority\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{queue\+\_\+handle, }
+\item[{switch\+\_\+scheduler\+\_\+priority\+\_\+t}]{priority}
+\end{DoxyParamCaption}
+)}}\label{group__QUEUE_ga6f6da01f1f8be132ff0ace4da512a080}
+set the priority of queue scheduler 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em queue} & queue handle \\
+\hline
+{\em priority} & priority \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QUEUE_ga8123f74c030ca6de8446a4e52cfd60f3}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+api\+\_\+queue\+\_\+usage\+\_\+get@{switch\+\_\+api\+\_\+queue\+\_\+usage\+\_\+get}}
+\index{switch\+\_\+api\+\_\+queue\+\_\+usage\+\_\+get@{switch\+\_\+api\+\_\+queue\+\_\+usage\+\_\+get}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queue\+\_\+usage\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queue\+\_\+usage\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{queue\+\_\+handle, }
+\item[{uint64\+\_\+t $\ast$}]{inuse\+\_\+bytes, }
+\item[{uint64\+\_\+t $\ast$}]{wm\+\_\+bytes}
+\end{DoxyParamCaption}
+)}}\label{group__QUEUE_ga8123f74c030ca6de8446a4e52cfd60f3}
+get the queue usage for queue 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em queue\+\_\+handle} & queue handle \\
+\hline
+{\em inuse\+\_\+bytes} & in\+\_\+use bytes \\
+\hline
+{\em wm\+\_\+bytes} & Water mark bytes \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__QUEUE_gaa6a8c84353933c15bbe2bae22c8937ff}{\index{Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}!switch\+\_\+api\+\_\+queues\+\_\+get@{switch\+\_\+api\+\_\+queues\+\_\+get}}
+\index{switch\+\_\+api\+\_\+queues\+\_\+get@{switch\+\_\+api\+\_\+queues\+\_\+get}!Q\+U\+E\+U\+E A\+P\+I@{Q\+U\+E\+U\+E A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+queues\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+queues\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{port\+\_\+handle, }
+\item[{switch\+\_\+uint32\+\_\+t $\ast$}]{num\+\_\+queues, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{queue\+\_\+handles}
+\end{DoxyParamCaption}
+)}}\label{group__QUEUE_gaa6a8c84353933c15bbe2bae22c8937ff}
+Get port queues 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em port\+\_\+handle} & port handle \\
+\hline
+{\em num\+\_\+queues} & number of queues \\
+\hline
+{\em queue\+\_\+handles} & list of queue handles \\
+\hline
+\end{DoxyParams}

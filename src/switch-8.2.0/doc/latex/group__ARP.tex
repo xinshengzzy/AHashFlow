@@ -1,0 +1,126 @@
+\hypertarget{group__ARP}{\section{A\+R\+P/\+Neighbor A\+P\+I}
+\label{group__ARP}\index{A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions to add I\+P-\/\+Mac associations \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__api__neighbor__info__s}{switch\+\_\+api\+\_\+neighbor\+\_\+info\+\_\+s}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \\*
+\hyperlink{group__ARP_gae636aa9c208e60064eb6c68c707537f7}{switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+s} \hyperlink{group__ARP_gaf9904c6d66d51eba396e678466e3ef45}{switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+t}
+\item 
+typedef enum \\*
+\hyperlink{group__ARP_ga731fa1e12488772adc0b26c05c6b7b1c}{switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+s} \hyperlink{group__ARP_gac9c559935317c4845662f75ef6f8fa3a}{switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+t}
+\item 
+\hypertarget{group__ARP_gac943cd03cbfbea16e60c2472637d09a4}{typedef enum switch\+\_\+neighbor\+\_\+type\+\_\+s {\bfseries switch\+\_\+neighbor\+\_\+type\+\_\+t}}\label{group__ARP_gac943cd03cbfbea16e60c2472637d09a4}
+
+\item 
+typedef struct \\*
+\hyperlink{structswitch__api__neighbor__info__s}{switch\+\_\+api\+\_\+neighbor\+\_\+info\+\_\+s} \hyperlink{group__ARP_gabec2e5422f9b1b796d495f8b9bbd7bc9}{switch\+\_\+api\+\_\+neighbor\+\_\+info\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__ARP_gae636aa9c208e60064eb6c68c707537f7}{switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+P\+L\+S\+\_\+\+S\+W\+A\+P\+\_\+\+L3\+V\+P\+N} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+P\+L\+S\+\_\+\+S\+W\+A\+P\+\_\+\+P\+U\+S\+H\+\_\+\+L3\+V\+P\+N} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+P\+L\+S\+\_\+\+P\+U\+S\+H\+\_\+\+L2\+V\+P\+N} = 3, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+P\+L\+S\+\_\+\+P\+U\+S\+H\+\_\+\+L3\+V\+P\+N} = 4, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+V4\+\_\+\+T\+U\+N\+N\+E\+L} = 5, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P\+V6\+\_\+\+T\+U\+N\+N\+E\+L} = 6, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V4\+\_\+\+U\+D\+P\+\_\+\+P\+U\+S\+H\+\_\+\+L2\+V\+P\+N} = 7, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V4\+\_\+\+U\+D\+P\+\_\+\+P\+U\+S\+H\+\_\+\+L3\+V\+P\+N} = 8, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V4\+\_\+\+U\+D\+P\+\_\+\+S\+W\+A\+P\+\_\+\+P\+U\+S\+H\+\_\+\+L3\+V\+P\+N} = 9, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V4\+\_\+\+U\+D\+P\+\_\+\+S\+W\+A\+P\+\_\+\+L3\+V\+P\+N} = 10, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V6\+\_\+\+U\+D\+P\+\_\+\+P\+U\+S\+H\+\_\+\+L2\+V\+P\+N} = 11, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V6\+\_\+\+U\+D\+P\+\_\+\+P\+U\+S\+H\+\_\+\+L3\+V\+P\+N} = 12, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V6\+\_\+\+U\+D\+P\+\_\+\+S\+W\+A\+P\+\_\+\+P\+U\+S\+H\+\_\+\+L3\+V\+P\+N} = 13, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+T\+Y\+P\+E\+\_\+\+M\+P\+L\+S\+\_\+\+I\+P\+V6\+\_\+\+U\+D\+P\+\_\+\+S\+W\+A\+P\+\_\+\+L3\+V\+P\+N} = 14
+ \}
+\item 
+enum \hyperlink{group__ARP_ga731fa1e12488772adc0b26c05c6b7b1c}{switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+R\+W\+\_\+\+T\+Y\+P\+E\+\_\+\+L2} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+R\+W\+\_\+\+T\+Y\+P\+E\+\_\+\+L3} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+R\+W\+\_\+\+T\+Y\+P\+E\+\_\+\+L2\+\_\+\+M\+I\+R\+R\+O\+R} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+A\+P\+I\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+R\+W\+\_\+\+T\+Y\+P\+E\+\_\+\+L3\+\_\+\+V\+N\+I} = 3
+ \}
+\item 
+\hypertarget{group__ARP_gaa98904b3ae0e46e78109600867eabd92}{enum {\bfseries switch\+\_\+neighbor\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+I\+P} = 0x0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+N\+E\+I\+G\+H\+B\+O\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+H\+O\+P} = 0x1
+ \}}\label{group__ARP_gaa98904b3ae0e46e78109600867eabd92}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__ARP_gaece59d35183672cc20fadd577e425883}{switch\+\_\+api\+\_\+neighbor\+\_\+create} (switch\+\_\+device\+\_\+t device, \hyperlink{group__ARP_gabec2e5422f9b1b796d495f8b9bbd7bc9}{switch\+\_\+api\+\_\+neighbor\+\_\+info\+\_\+t} $\ast$api\+\_\+neighbor, switch\+\_\+handle\+\_\+t $\ast$neighbor\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__ARP_ga385fb65769cf7b6a62ba786b05a45057}{switch\+\_\+api\+\_\+neighbor\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t neighbor\+\_\+handle)
+\item 
+\hypertarget{group__ARP_ga26975929c1c222887e2306869337fa7b}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+neighbor\+\_\+handle\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t nieighbor\+\_\+handle, const void $\ast$cli\+\_\+ctx)}\label{group__ARP_ga26975929c1c222887e2306869337fa7b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__ARP_gabec2e5422f9b1b796d495f8b9bbd7bc9}{\index{A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}!switch\+\_\+api\+\_\+neighbor\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+neighbor\+\_\+info\+\_\+t}}
+\index{switch\+\_\+api\+\_\+neighbor\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+neighbor\+\_\+info\+\_\+t}!A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+neighbor\+\_\+info\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+api\+\_\+neighbor\+\_\+info\+\_\+s}  {\bf switch\+\_\+api\+\_\+neighbor\+\_\+info\+\_\+t}}}\label{group__ARP_gabec2e5422f9b1b796d495f8b9bbd7bc9}
+Neighbor identifier \hypertarget{group__ARP_gac9c559935317c4845662f75ef6f8fa3a}{\index{A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}!switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+t@{switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+t}}
+\index{switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+t@{switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+t}!A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}}
+\subsubsection[{switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+s}  {\bf switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+t}}}\label{group__ARP_gac9c559935317c4845662f75ef6f8fa3a}
+Neighbor rewrite type \hypertarget{group__ARP_gaf9904c6d66d51eba396e678466e3ef45}{\index{A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}!switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+t@{switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+t}}
+\index{switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+t@{switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+t}!A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}}
+\subsubsection[{switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+s}  {\bf switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+t}}}\label{group__ARP_gaf9904c6d66d51eba396e678466e3ef45}
+A\+R\+P information Neighbor type 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__ARP_ga731fa1e12488772adc0b26c05c6b7b1c}{\index{A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}!switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+s@{switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+s}}
+\index{switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+s@{switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+s}!A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}}
+\subsubsection[{switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+neighbor\+\_\+rw\+\_\+type\+\_\+s}}}\label{group__ARP_ga731fa1e12488772adc0b26c05c6b7b1c}
+Neighbor rewrite type \hypertarget{group__ARP_gae636aa9c208e60064eb6c68c707537f7}{\index{A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}!switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+s@{switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+s}}
+\index{switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+s@{switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+s}!A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}}
+\subsubsection[{switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+neighbor\+\_\+tunnel\+\_\+type\+\_\+s}}}\label{group__ARP_gae636aa9c208e60064eb6c68c707537f7}
+A\+R\+P information Neighbor type 
+
+\subsection{Function Documentation}
+\hypertarget{group__ARP_gaece59d35183672cc20fadd577e425883}{\index{A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}!switch\+\_\+api\+\_\+neighbor\+\_\+create@{switch\+\_\+api\+\_\+neighbor\+\_\+create}}
+\index{switch\+\_\+api\+\_\+neighbor\+\_\+create@{switch\+\_\+api\+\_\+neighbor\+\_\+create}!A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+neighbor\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+neighbor\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+neighbor\+\_\+info\+\_\+t} $\ast$}]{api\+\_\+neighbor, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{neighbor\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__ARP_gaece59d35183672cc20fadd577e425883}
+A\+R\+P entry add 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em neighbor} & -\/ A\+R\+P information used to set egress table \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__ARP_ga385fb65769cf7b6a62ba786b05a45057}{\index{A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}!switch\+\_\+api\+\_\+neighbor\+\_\+delete@{switch\+\_\+api\+\_\+neighbor\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+neighbor\+\_\+delete@{switch\+\_\+api\+\_\+neighbor\+\_\+delete}!A\+R\+P/\+Neighbor A\+P\+I@{A\+R\+P/\+Neighbor A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+neighbor\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+neighbor\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{neighbor\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__ARP_ga385fb65769cf7b6a62ba786b05a45057}
+A\+R\+P entry delete 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em neighbor\+\_\+handle} & -\/ handle of the arp entry \\
+\hline
+\end{DoxyParams}

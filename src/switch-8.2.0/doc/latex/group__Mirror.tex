@@ -1,0 +1,252 @@
+\hypertarget{group__Mirror}{\section{Mirroring A\+P\+I}
+\label{group__Mirror}\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions to manage mirror sessions \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__api__mirror__info__s}{switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+s}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__Mirror_gad8fd0aedd4d812e90c888043344acb53}{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+S}~1024
+\item 
+\#define \hyperlink{group__Mirror_ga9569fbb2f576f139948976594d716974}{S\+W\+I\+T\+C\+H\+\_\+\+C\+P\+U\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D}~250
+\item 
+\#define \hyperlink{group__Mirror_ga4688aeae07e273f0e3fbbfdc0ea3bf36}{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+O\+N\+\_\+\+D\+R\+O\+P\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D}~1015
+\item 
+\#define \hyperlink{group__Mirror_gafb1a3a1ab2b2196a75e65f155f3e1cf0}{S\+W\+I\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+T\+M}~60
+\item 
+\#define \hyperlink{group__Mirror_ga9698f60bd8df886af3705bf119b66869}{S\+W\+I\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+E\+G\+R\+E\+S\+S}~62
+\item 
+\hypertarget{group__Mirror_gaef6f8bf34bc24a840d36b296491d76f2}{\#define {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+C\+O\+A\+L\+E\+S\+C\+E\+D\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+B\+A\+S\+E\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D}~1016}\label{group__Mirror_gaef6f8bf34bc24a840d36b296491d76f2}
+
+\item 
+\hypertarget{group__Mirror_ga72e9206edba01256f8032d75e96e6b80}{\#define {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+C\+O\+A\+L\+E\+S\+C\+E\+D\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+S}~8}\label{group__Mirror_ga72e9206edba01256f8032d75e96e6b80}
+
+\item 
+\#define {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+C\+O\+A\+L\+E\+S\+C\+E\+D\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned int \hyperlink{group__Mirror_gaf5ec4a656bd46aede10f08c5dfd3a09c}{switch\+\_\+mirror\+\_\+id\+\_\+t}
+\item 
+typedef enum \\*
+\hyperlink{group__Mirror_ga74ee0e13e7534b52d540c6b4dcc85249}{switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+s} \hyperlink{group__Mirror_ga0ae970af72459bcb4f7baee3d004bbca}{switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+t}
+\item 
+typedef enum \hyperlink{group__Mirror_ga58d4e2d8a2e2b8efebe22d1adbdd0f2e}{switch\+\_\+mirror\+\_\+type\+\_\+s} \hyperlink{group__Mirror_gab7f122c0c6b29dbe9f63ceea0603a2c9}{switch\+\_\+mirror\+\_\+type\+\_\+t}
+\item 
+typedef enum \\*
+\hyperlink{group__Mirror_ga2123897bf0979e5bfd4b1388faef95ff}{switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+s} \hyperlink{group__Mirror_gaca455b8eb6709bf2398d9565dd2afb73}{switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+t}
+\item 
+\hypertarget{group__Mirror_ga3da5335d1589bb356fa7e4314561c551}{typedef enum \\*
+\hyperlink{group__Mirror_ga2079fb7f359b736e7452ee4ef9064414}{switch\+\_\+mirror\+\_\+span\+\_\+mode\+\_\+s} {\bfseries switch\+\_\+mirror\+\_\+span\+\_\+mode\+\_\+t}}\label{group__Mirror_ga3da5335d1589bb356fa7e4314561c551}
+
+\item 
+\hypertarget{group__Mirror_ga73953aedab3864ff0c369cbfdc8d8ecc}{typedef enum \\*
+switch\+\_\+mirror\+\_\+attribute\+\_\+s {\bfseries switch\+\_\+mirror\+\_\+attribute\+\_\+t}}\label{group__Mirror_ga73953aedab3864ff0c369cbfdc8d8ecc}
+
+\item 
+typedef struct \\*
+\hyperlink{structswitch__api__mirror__info__s}{switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+s} \hyperlink{group__Mirror_gac1b339df3793f4dfdd6603bb17b36f0a}{switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__Mirror_ga74ee0e13e7534b52d540c6b4dcc85249}{switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+I\+M\+P\+L\+E} = 0x0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+T\+R\+U\+N\+C\+A\+T\+E} = 0x1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+A\+L\+E\+S\+C\+E} = 0x2
+ \}
+\item 
+enum \hyperlink{group__Mirror_ga58d4e2d8a2e2b8efebe22d1adbdd0f2e}{switch\+\_\+mirror\+\_\+type\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+L\+O\+C\+A\+L} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+R\+E\+M\+O\+T\+E} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+E\+N\+H\+A\+N\+C\+E\+D\+\_\+\+R\+E\+M\+O\+T\+E} = 3, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+T\+E\+L\+\_\+\+R\+E\+P\+O\+R\+T} = 4
+ \}
+\item 
+enum \hyperlink{group__Mirror_ga2123897bf0979e5bfd4b1388faef95ff}{switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+R\+S\+P\+A\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E} = 0x0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+R\+S\+P\+A\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+L\+A\+N\+\_\+\+I\+D} = 0x1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+R\+S\+P\+A\+N\+\_\+\+T\+Y\+P\+E\+\_\+\+V\+L\+A\+N\+\_\+\+H\+A\+N\+D\+L\+E} = 0x2
+ \}
+\item 
+enum \hyperlink{group__Mirror_ga2079fb7f359b736e7452ee4ef9064414}{switch\+\_\+mirror\+\_\+span\+\_\+mode\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+R\+E\+W\+R\+I\+T\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E} = 0x0, 
+\hyperlink{group__Mirror_gga2079fb7f359b736e7452ee4ef9064414a826cd28ac1ff8673ff5d1f2447d0c607}{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+N\+H\+O\+P} = 0x1, 
+\hyperlink{group__Mirror_gga2079fb7f359b736e7452ee4ef9064414ab8bc765c47a7238b44cf6ebb87aa3ba2}{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+P\+A\+R\+A\+M\+S} = 0x2, 
+\hyperlink{group__Mirror_gga2079fb7f359b736e7452ee4ef9064414a3228a5d25c1d26a143382818f730614a}{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+R\+E\+W\+R\+I\+T\+E} = 0x3
+ \}
+\item 
+\hypertarget{group__Mirror_ga4aa74f0f2d3ba97afe1d4ed299deab3b}{enum {\bfseries switch\+\_\+mirror\+\_\+attribute\+\_\+s} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+S\+R\+C\+\_\+\+I\+P} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+S\+T\+\_\+\+I\+P} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+S\+R\+C\+\_\+\+M\+A\+C} = (1 $<$$<$ 2), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+D\+S\+T\+\_\+\+M\+A\+C} = (1 $<$$<$ 3), 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+T\+T\+L} = (1 $<$$<$ 4), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+T\+O\+S} = (1 $<$$<$ 5), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+L\+A\+N\+\_\+\+I\+D} = (1 $<$$<$ 6), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+L\+A\+N\+\_\+\+T\+P\+I\+D} = (1 $<$$<$ 7), 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+A\+T\+T\+R\+I\+B\+U\+T\+E\+\_\+\+V\+L\+A\+N\+\_\+\+C\+O\+S} = (1 $<$$<$ 8)
+ \}}\label{group__Mirror_ga4aa74f0f2d3ba97afe1d4ed299deab3b}
+
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Mirror_gae9d6660d71a3bd4596a1dfe6f65ee5af}{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+create} (switch\+\_\+device\+\_\+t device, \hyperlink{group__Mirror_gac1b339df3793f4dfdd6603bb17b36f0a}{switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+t} $\ast$api\+\_\+mirror\+\_\+info, switch\+\_\+handle\+\_\+t $\ast$mirror\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Mirror_ga84db182d7bc3f245e0fb2c9c7df4c1ca}{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+update} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mirror\+\_\+handle, const switch\+\_\+uint64\+\_\+t flags, const \hyperlink{group__Mirror_gac1b339df3793f4dfdd6603bb17b36f0a}{switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+t} $\ast$api\+\_\+mirror\+\_\+info)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__Mirror_ga9409211a8c1af0bd67d38a8e0322be05}{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mirror\+\_\+handle)
+\item 
+\hypertarget{group__Mirror_gad49967af50f0a123c0df9807f8174e8b}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+mirror\+\_\+nhop\+\_\+create} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mirror\+\_\+handle, const switch\+\_\+handle\+\_\+t nhop\+\_\+handle)}\label{group__Mirror_gad49967af50f0a123c0df9807f8174e8b}
+
+\item 
+\hypertarget{group__Mirror_gada7c7f034a4540d2fcd3d966ad8ebca0}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+mirror\+\_\+nhop\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mirror\+\_\+handle)}\label{group__Mirror_gada7c7f034a4540d2fcd3d966ad8ebca0}
+
+\item 
+\hypertarget{group__Mirror_ga0cc6709dc921a6d11b8edaefaaf63146}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+type\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t mirror\+\_\+handle, \hyperlink{group__Mirror_gab7f122c0c6b29dbe9f63ceea0603a2c9}{switch\+\_\+mirror\+\_\+type\+\_\+t} $\ast$type)}\label{group__Mirror_ga0cc6709dc921a6d11b8edaefaaf63146}
+
+\item 
+\hypertarget{group__Mirror_ga37524c7bbec3e24a919ea2d92cd98284}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+monitor\+\_\+port\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t mirror\+\_\+handle, const \hyperlink{group__Mirror_gac1b339df3793f4dfdd6603bb17b36f0a}{switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+t} $\ast$mirror\+\_\+info)}\label{group__Mirror_ga37524c7bbec3e24a919ea2d92cd98284}
+
+\item 
+\hypertarget{group__Mirror_gaeb69501fdc0c9fd9992c53930918fdad}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+monitor\+\_\+vlan\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t mirror\+\_\+handle, const \hyperlink{group__Mirror_gac1b339df3793f4dfdd6603bb17b36f0a}{switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+t} $\ast$mirror\+\_\+info)}\label{group__Mirror_gaeb69501fdc0c9fd9992c53930918fdad}
+
+\item 
+\hypertarget{group__Mirror_ga2dfc48e1e96a6dab11de7054171023fa}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+info\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t mirror\+\_\+handle, \hyperlink{group__Mirror_gac1b339df3793f4dfdd6603bb17b36f0a}{switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+t} $\ast$info)}\label{group__Mirror_ga2dfc48e1e96a6dab11de7054171023fa}
+
+\item 
+\hypertarget{group__Mirror_gaf92b680254816b9b57ae463ff1b98312}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+mirror\+\_\+handle\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t mirror\+\_\+handle, const void $\ast$cli\+\_\+ctx)}\label{group__Mirror_gaf92b680254816b9b57ae463ff1b98312}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__Mirror_gae71d5baa71663a91a4a10f81fb8f7224}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+C\+O\+A\+L\+E\+S\+C\+E\+D\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D@{S\+W\+I\+T\+C\+H\+\_\+\+C\+O\+A\+L\+E\+S\+C\+E\+D\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+C\+O\+A\+L\+E\+S\+C\+E\+D\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D@{S\+W\+I\+T\+C\+H\+\_\+\+C\+O\+A\+L\+E\+S\+C\+E\+D\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+C\+O\+A\+L\+E\+S\+C\+E\+D\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+C\+O\+A\+L\+E\+S\+C\+E\+D\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+M\+A\+X\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D}}\label{group__Mirror_gae71d5baa71663a91a4a10f81fb8f7224}
+{\bfseries Value\+:}
+\begin{DoxyCode}
+(SWITCH\_COALESCED\_MIRROR\_BASE\_SESSION\_ID +   \(\backslash\)
+   SWITCH\_MAX\_COALESCED\_MIRROR\_SESSIONS - 1)
+\end{DoxyCode}
+\hypertarget{group__Mirror_ga9569fbb2f576f139948976594d716974}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+C\+P\+U\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D@{S\+W\+I\+T\+C\+H\+\_\+\+C\+P\+U\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+C\+P\+U\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D@{S\+W\+I\+T\+C\+H\+\_\+\+C\+P\+U\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+C\+P\+U\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+C\+P\+U\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D~250}}\label{group__Mirror_ga9569fbb2f576f139948976594d716974}
+I\+D for cpu mirror session \hypertarget{group__Mirror_gad8fd0aedd4d812e90c888043344acb53}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+S@{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+S}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+S@{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+S}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+E\+S\+S\+I\+O\+N\+S~1024}}\label{group__Mirror_gad8fd0aedd4d812e90c888043344acb53}
+M\+A\+X mirroring sessions supported \hypertarget{group__Mirror_ga4688aeae07e273f0e3fbbfdc0ea3bf36}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+O\+N\+\_\+\+D\+R\+O\+P\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D@{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+O\+N\+\_\+\+D\+R\+O\+P\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+O\+N\+\_\+\+D\+R\+O\+P\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D@{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+O\+N\+\_\+\+D\+R\+O\+P\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+O\+N\+\_\+\+D\+R\+O\+P\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+O\+N\+\_\+\+D\+R\+O\+P\+\_\+\+S\+E\+S\+S\+I\+O\+N\+\_\+\+I\+D~1015}}\label{group__Mirror_ga4688aeae07e273f0e3fbbfdc0ea3bf36}
+I\+D for mirror on drop session \hypertarget{group__Mirror_ga9698f60bd8df886af3705bf119b66869}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+E\+G\+R\+E\+S\+S@{S\+W\+I\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+E\+G\+R\+E\+S\+S}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+E\+G\+R\+E\+S\+S@{S\+W\+I\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+E\+G\+R\+E\+S\+S}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+E\+G\+R\+E\+S\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+E\+G\+R\+E\+S\+S~62}}\label{group__Mirror_ga9698f60bd8df886af3705bf119b66869}
+Platform Id for Egress pipeline \hypertarget{group__Mirror_gafb1a3a1ab2b2196a75e65f155f3e1cf0}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+T\+M@{S\+W\+I\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+T\+M}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+T\+M@{S\+W\+I\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+T\+M}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+T\+M}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+P\+L\+A\+T\+F\+O\+R\+M\+\_\+\+I\+D\+\_\+\+T\+M~60}}\label{group__Mirror_gafb1a3a1ab2b2196a75e65f155f3e1cf0}
+Platform Id for Traffic Manager 
+
+\subsection{Typedef Documentation}
+\hypertarget{group__Mirror_gac1b339df3793f4dfdd6603bb17b36f0a}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+t}}
+\index{switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+t}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+s}  {\bf switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+t}}}\label{group__Mirror_gac1b339df3793f4dfdd6603bb17b36f0a}
+mirror Session Info \hypertarget{group__Mirror_gaf5ec4a656bd46aede10f08c5dfd3a09c}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!switch\+\_\+mirror\+\_\+id\+\_\+t@{switch\+\_\+mirror\+\_\+id\+\_\+t}}
+\index{switch\+\_\+mirror\+\_\+id\+\_\+t@{switch\+\_\+mirror\+\_\+id\+\_\+t}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{switch\+\_\+mirror\+\_\+id\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int switch\+\_\+mirror\+\_\+id\+\_\+t}}\label{group__Mirror_gaf5ec4a656bd46aede10f08c5dfd3a09c}
+Mirror I\+D \hypertarget{group__Mirror_gaca455b8eb6709bf2398d9565dd2afb73}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+t@{switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+t}}
+\index{switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+t@{switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+t}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+s}  {\bf switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+t}}}\label{group__Mirror_gaca455b8eb6709bf2398d9565dd2afb73}
+mirror remote span type \hypertarget{group__Mirror_ga0ae970af72459bcb4f7baee3d004bbca}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+t@{switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+t}}
+\index{switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+t@{switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+t}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+s}  {\bf switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+t}}}\label{group__Mirror_ga0ae970af72459bcb4f7baee3d004bbca}
+mirror Session type \hypertarget{group__Mirror_gab7f122c0c6b29dbe9f63ceea0603a2c9}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!switch\+\_\+mirror\+\_\+type\+\_\+t@{switch\+\_\+mirror\+\_\+type\+\_\+t}}
+\index{switch\+\_\+mirror\+\_\+type\+\_\+t@{switch\+\_\+mirror\+\_\+type\+\_\+t}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{switch\+\_\+mirror\+\_\+type\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+mirror\+\_\+type\+\_\+s}  {\bf switch\+\_\+mirror\+\_\+type\+\_\+t}}}\label{group__Mirror_gab7f122c0c6b29dbe9f63ceea0603a2c9}
+mirror Type 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__Mirror_ga2123897bf0979e5bfd4b1388faef95ff}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+s@{switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+s}}
+\index{switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+s@{switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+s}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+mirror\+\_\+rspan\+\_\+type\+\_\+s}}}\label{group__Mirror_ga2123897bf0979e5bfd4b1388faef95ff}
+mirror remote span type \hypertarget{group__Mirror_ga74ee0e13e7534b52d540c6b4dcc85249}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+s@{switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+s}}
+\index{switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+s@{switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+s}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+mirror\+\_\+session\+\_\+type\+\_\+s}}}\label{group__Mirror_ga74ee0e13e7534b52d540c6b4dcc85249}
+mirror Session type \hypertarget{group__Mirror_ga2079fb7f359b736e7452ee4ef9064414}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!switch\+\_\+mirror\+\_\+span\+\_\+mode\+\_\+s@{switch\+\_\+mirror\+\_\+span\+\_\+mode\+\_\+s}}
+\index{switch\+\_\+mirror\+\_\+span\+\_\+mode\+\_\+s@{switch\+\_\+mirror\+\_\+span\+\_\+mode\+\_\+s}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{switch\+\_\+mirror\+\_\+span\+\_\+mode\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+mirror\+\_\+span\+\_\+mode\+\_\+s}}}\label{group__Mirror_ga2079fb7f359b736e7452ee4ef9064414}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+N\+H\+O\+P@{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+N\+H\+O\+P}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+N\+H\+O\+P@{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+N\+H\+O\+P}}\item[{\em 
+\hypertarget{group__Mirror_gga2079fb7f359b736e7452ee4ef9064414a826cd28ac1ff8673ff5d1f2447d0c607}{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+N\+H\+O\+P}\label{group__Mirror_gga2079fb7f359b736e7452ee4ef9064414a826cd28ac1ff8673ff5d1f2447d0c607}
+}]tunnel nexthop is required in this mode. uses nexthop tracking \index{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+P\+A\+R\+A\+M\+S@{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+P\+A\+R\+A\+M\+S}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+P\+A\+R\+A\+M\+S@{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+P\+A\+R\+A\+M\+S}}\item[{\em 
+\hypertarget{group__Mirror_gga2079fb7f359b736e7452ee4ef9064414ab8bc765c47a7238b44cf6ebb87aa3ba2}{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+P\+A\+R\+A\+M\+S}\label{group__Mirror_gga2079fb7f359b736e7452ee4ef9064414ab8bc765c47a7238b44cf6ebb87aa3ba2}
+}]tunnel parameters like sip and dip is required. tunnel will be created implicitly. uses nexthop tracking \index{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+R\+E\+W\+R\+I\+T\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+R\+E\+W\+R\+I\+T\+E}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+R\+E\+W\+R\+I\+T\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+R\+E\+W\+R\+I\+T\+E}}\item[{\em 
+\hypertarget{group__Mirror_gga2079fb7f359b736e7452ee4ef9064414a3228a5d25c1d26a143382818f730614a}{S\+W\+I\+T\+C\+H\+\_\+\+M\+I\+R\+R\+O\+R\+\_\+\+S\+P\+A\+N\+\_\+\+M\+O\+D\+E\+\_\+\+T\+U\+N\+N\+E\+L\+\_\+\+R\+E\+W\+R\+I\+T\+E}\label{group__Mirror_gga2079fb7f359b736e7452ee4ef9064414a3228a5d25c1d26a143382818f730614a}
+}]tunnel is resolved and the final adjacencies are provided. nexthop tracking is not used \end{description}
+\end{Desc}
+\hypertarget{group__Mirror_ga58d4e2d8a2e2b8efebe22d1adbdd0f2e}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!switch\+\_\+mirror\+\_\+type\+\_\+s@{switch\+\_\+mirror\+\_\+type\+\_\+s}}
+\index{switch\+\_\+mirror\+\_\+type\+\_\+s@{switch\+\_\+mirror\+\_\+type\+\_\+s}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{switch\+\_\+mirror\+\_\+type\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+mirror\+\_\+type\+\_\+s}}}\label{group__Mirror_ga58d4e2d8a2e2b8efebe22d1adbdd0f2e}
+mirror Type 
+
+\subsection{Function Documentation}
+\hypertarget{group__Mirror_gae9d6660d71a3bd4596a1dfe6f65ee5af}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+create@{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+create}}
+\index{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+create@{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+create}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+t} $\ast$}]{api\+\_\+mirror\+\_\+info, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{mirror\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Mirror_gae9d6660d71a3bd4596a1dfe6f65ee5af}
+Create a mirror sesion 
+\begin{DoxyParams}{Parameters}
+{\em device} & device on which to create mirror session \\
+\hline
+{\em api\+\_\+mirror\+\_\+info} & parameters of mirror session \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Mirror_ga9409211a8c1af0bd67d38a8e0322be05}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+delete@{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+delete@{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+delete}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{mirror\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__Mirror_ga9409211a8c1af0bd67d38a8e0322be05}
+delete the mirror session 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em mirror\+\_\+handle} & mirror handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__Mirror_ga84db182d7bc3f245e0fb2c9c7df4c1ca}{\index{Mirroring A\+P\+I@{Mirroring A\+P\+I}!switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+update@{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+update}}
+\index{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+update@{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+update}!Mirroring A\+P\+I@{Mirroring A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+update}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+mirror\+\_\+session\+\_\+update (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{mirror\+\_\+handle, }
+\item[{const switch\+\_\+uint64\+\_\+t}]{flags, }
+\item[{const {\bf switch\+\_\+api\+\_\+mirror\+\_\+info\+\_\+t} $\ast$}]{api\+\_\+mirror\+\_\+info}
+\end{DoxyParamCaption}
+)}}\label{group__Mirror_ga84db182d7bc3f245e0fb2c9c7df4c1ca}
+Update a mirror sesion 
+\begin{DoxyParams}{Parameters}
+{\em device} & device on which to create mirror session \\
+\hline
+{\em mirror\+\_\+handle} & mirror handle \\
+\hline
+{\em api\+\_\+mirror\+\_\+info} & parameters of mirror session \\
+\hline
+\end{DoxyParams}

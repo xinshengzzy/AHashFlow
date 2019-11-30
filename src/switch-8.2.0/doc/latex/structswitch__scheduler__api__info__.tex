@@ -1,0 +1,69 @@
+\hypertarget{structswitch__scheduler__api__info__}{\section{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+ Struct Reference}
+\label{structswitch__scheduler__api__info__}\index{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}}
+}
+
+
+{\ttfamily \#include $<$switch\+\_\+scheduler.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__Scheduler_ga62f91884031e17accd1bfa6d07bcddd5}{switch\+\_\+scheduler\+\_\+type\+\_\+t} \hyperlink{structswitch__scheduler__api__info___a324b02644e4e542c1fec4a539296cfb0}{scheduler\+\_\+type}
+\item 
+switch\+\_\+handle\+\_\+t \hyperlink{structswitch__scheduler__api__info___a39c03f1d9101f9f365624ed294ff6298}{queue\+\_\+handle}
+\item 
+\hypertarget{structswitch__scheduler__api__info___a9fc18e882dafa4cfe9e43fdb9053bb04}{\hyperlink{group__Scheduler_gafaa6b883d003bac33a4e76086ae90e3b}{switch\+\_\+scheduler\+\_\+rate\+\_\+type\+\_\+t} {\bfseries shaper\+\_\+type}}\label{structswitch__scheduler__api__info___a9fc18e882dafa4cfe9e43fdb9053bb04}
+
+\item 
+uint32\+\_\+t \hyperlink{structswitch__scheduler__api__info___a00be453b7f125827b4cdd214758ed3b8}{priority}
+\item 
+uint32\+\_\+t \hyperlink{structswitch__scheduler__api__info___af67753b2b5a967a2622509d6173e8583}{rem\+\_\+bw\+\_\+priority}
+\item 
+uint16\+\_\+t \hyperlink{structswitch__scheduler__api__info___a5fbeb37e26b1365f943cce012758cf00}{weight}
+\item 
+switch\+\_\+uint64\+\_\+t \hyperlink{structswitch__scheduler__api__info___a4b941fa3f027b64a80023e2a793c2099}{min\+\_\+burst\+\_\+size}
+\item 
+uint64\+\_\+t \hyperlink{structswitch__scheduler__api__info___a8a1df3a5a53915ae7f5399badc2a4173}{min\+\_\+rate}
+\item 
+switch\+\_\+uint64\+\_\+t \hyperlink{structswitch__scheduler__api__info___a21ff5ba4e054aa95741df42277cb5625}{max\+\_\+burst\+\_\+size}
+\item 
+uint64\+\_\+t \hyperlink{structswitch__scheduler__api__info___a9e2c38f94350f794aad12da23c48ae55}{max\+\_\+rate}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+scheduler struct 
+
+\subsection{Member Data Documentation}
+\hypertarget{structswitch__scheduler__api__info___a21ff5ba4e054aa95741df42277cb5625}{\index{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}!max\+\_\+burst\+\_\+size@{max\+\_\+burst\+\_\+size}}
+\index{max\+\_\+burst\+\_\+size@{max\+\_\+burst\+\_\+size}!switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}}
+\subsubsection[{max\+\_\+burst\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+uint64\+\_\+t switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+\+::max\+\_\+burst\+\_\+size}}\label{structswitch__scheduler__api__info___a21ff5ba4e054aa95741df42277cb5625}
+maximum burst size \hypertarget{structswitch__scheduler__api__info___a9e2c38f94350f794aad12da23c48ae55}{\index{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}!max\+\_\+rate@{max\+\_\+rate}}
+\index{max\+\_\+rate@{max\+\_\+rate}!switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}}
+\subsubsection[{max\+\_\+rate}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+\+::max\+\_\+rate}}\label{structswitch__scheduler__api__info___a9e2c38f94350f794aad12da23c48ae55}
+maximum rate in bps or pps $>$ \hypertarget{structswitch__scheduler__api__info___a4b941fa3f027b64a80023e2a793c2099}{\index{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}!min\+\_\+burst\+\_\+size@{min\+\_\+burst\+\_\+size}}
+\index{min\+\_\+burst\+\_\+size@{min\+\_\+burst\+\_\+size}!switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}}
+\subsubsection[{min\+\_\+burst\+\_\+size}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+uint64\+\_\+t switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+\+::min\+\_\+burst\+\_\+size}}\label{structswitch__scheduler__api__info___a4b941fa3f027b64a80023e2a793c2099}
+minimum burst size \hypertarget{structswitch__scheduler__api__info___a8a1df3a5a53915ae7f5399badc2a4173}{\index{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}!min\+\_\+rate@{min\+\_\+rate}}
+\index{min\+\_\+rate@{min\+\_\+rate}!switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}}
+\subsubsection[{min\+\_\+rate}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+\+::min\+\_\+rate}}\label{structswitch__scheduler__api__info___a8a1df3a5a53915ae7f5399badc2a4173}
+minimum rate in bps or pps \hypertarget{structswitch__scheduler__api__info___a00be453b7f125827b4cdd214758ed3b8}{\index{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}!priority@{priority}}
+\index{priority@{priority}!switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}}
+\subsubsection[{priority}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+\+::priority}}\label{structswitch__scheduler__api__info___a00be453b7f125827b4cdd214758ed3b8}
+$<$ scheduler rate type priority \hypertarget{structswitch__scheduler__api__info___a39c03f1d9101f9f365624ed294ff6298}{\index{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}!queue\+\_\+handle@{queue\+\_\+handle}}
+\index{queue\+\_\+handle@{queue\+\_\+handle}!switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}}
+\subsubsection[{queue\+\_\+handle}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+handle\+\_\+t switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+\+::queue\+\_\+handle}}\label{structswitch__scheduler__api__info___a39c03f1d9101f9f365624ed294ff6298}
+queue handle \hypertarget{structswitch__scheduler__api__info___af67753b2b5a967a2622509d6173e8583}{\index{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}!rem\+\_\+bw\+\_\+priority@{rem\+\_\+bw\+\_\+priority}}
+\index{rem\+\_\+bw\+\_\+priority@{rem\+\_\+bw\+\_\+priority}!switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}}
+\subsubsection[{rem\+\_\+bw\+\_\+priority}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+\+::rem\+\_\+bw\+\_\+priority}}\label{structswitch__scheduler__api__info___af67753b2b5a967a2622509d6173e8583}
+remaining bandwidth priority \hypertarget{structswitch__scheduler__api__info___a324b02644e4e542c1fec4a539296cfb0}{\index{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}!scheduler\+\_\+type@{scheduler\+\_\+type}}
+\index{scheduler\+\_\+type@{scheduler\+\_\+type}!switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}}
+\subsubsection[{scheduler\+\_\+type}]{\setlength{\rightskip}{0pt plus 5cm}{\bf switch\+\_\+scheduler\+\_\+type\+\_\+t} switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+\+::scheduler\+\_\+type}}\label{structswitch__scheduler__api__info___a324b02644e4e542c1fec4a539296cfb0}
+scheduler type \hypertarget{structswitch__scheduler__api__info___a5fbeb37e26b1365f943cce012758cf00}{\index{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}!weight@{weight}}
+\index{weight@{weight}!switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+@{switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+}}
+\subsubsection[{weight}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t switch\+\_\+scheduler\+\_\+api\+\_\+info\+\_\+\+::weight}}\label{structswitch__scheduler__api__info___a5fbeb37e26b1365f943cce012758cf00}
+weight 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/root/workspace/\+A\+Hash\+Flow/src/switch-\/8.\+2.\+0/switchapi/include/switchapi/switch\+\_\+scheduler.\+h\end{DoxyCompactItemize}

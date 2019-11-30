@@ -1,0 +1,705 @@
+\hypertarget{group__VLAN}{\section{V\+L\+A\+N configuration A\+P\+I}
+\label{group__VLAN}\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions listed to configure V\+L\+A\+N The basic L2 domain for isolating traffic is configured using configuration of V\+L\+A\+Ns. The maximum number of V\+L\+A\+Ns supported on the device is limited to 4k (4096). The operations on V\+L\+A\+N correspond to setting up broadcast domain and optionally ingress and egress V\+L\+A\+N translate tables. \subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga312a8e04ecebcacacd610e639c77d906}{switch\+\_\+api\+\_\+vlan\+\_\+create} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+vlan\+\_\+t vlan\+\_\+id, switch\+\_\+handle\+\_\+t $\ast$vlan\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga1eaeb5260ef20b99e060aab6c9458508}{switch\+\_\+api\+\_\+vlan\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle)
+\item 
+\hypertarget{group__VLAN_ga718c3b3f5d3e0a53e4ba393c9ecfcc76}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+vlan\+\_\+id\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+vlan\+\_\+t vlan\+\_\+id)}\label{group__VLAN_ga718c3b3f5d3e0a53e4ba393c9ecfcc76}
+
+\item 
+\hypertarget{group__VLAN_gad1a38137dc31133e378adbcb15dbb272}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+vlan\+\_\+attribute\+\_\+set} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, const switch\+\_\+uint64\+\_\+t flags, const \hyperlink{structswitch__api__vlan__info__s}{switch\+\_\+api\+\_\+vlan\+\_\+info\+\_\+t} $\ast$api\+\_\+vlan\+\_\+info)}\label{group__VLAN_gad1a38137dc31133e378adbcb15dbb272}
+
+\item 
+\hypertarget{group__VLAN_ga74d1c86e835303f5c908dbed41a7f79c}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+vlan\+\_\+attribute\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, const switch\+\_\+uint64\+\_\+t flags, \hyperlink{structswitch__api__vlan__info__s}{switch\+\_\+api\+\_\+vlan\+\_\+info\+\_\+t} $\ast$api\+\_\+vlan\+\_\+info)}\label{group__VLAN_ga74d1c86e835303f5c908dbed41a7f79c}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga3c56613edcd857a1acf584b32243adca}{switch\+\_\+api\+\_\+vlan\+\_\+learning\+\_\+set} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, const bool enable)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_gaf4e308e262c09faf863edeb40f8303c7}{switch\+\_\+api\+\_\+vlan\+\_\+learning\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, bool $\ast$enable)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga7191d184ab3caacf45007a06ef11ae7b}{switch\+\_\+api\+\_\+vlan\+\_\+aging\+\_\+interval\+\_\+set} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, const switch\+\_\+int32\+\_\+t age\+\_\+interval)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga59121c6d479d4392d3b7dfcfe57e06dd}{switch\+\_\+api\+\_\+vlan\+\_\+aging\+\_\+interval\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, switch\+\_\+int32\+\_\+t $\ast$age\+\_\+interval)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga19c763e4390f3e91027301e0c9c8307e}{switch\+\_\+api\+\_\+vlan\+\_\+igmp\+\_\+snooping\+\_\+set} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, const bool enable)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_gac885b45961e8af94f1914a27f71e7a9c}{switch\+\_\+api\+\_\+vlan\+\_\+igmp\+\_\+snooping\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, bool $\ast$enable)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_gac33613f678384471b8eb4a7927c0f5bb}{switch\+\_\+api\+\_\+vlan\+\_\+mld\+\_\+snooping\+\_\+set} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, const bool enable)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_gaf556ecb7766d84dff5f3f4de1d32766f}{switch\+\_\+api\+\_\+vlan\+\_\+mld\+\_\+snooping\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, bool $\ast$enable)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga846586f529673556b314c2cce430ba1e}{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+add} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, const switch\+\_\+handle\+\_\+t intf\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$member\+\_\+handles)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga6802cba443697307526f234af3079f62}{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+remove} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, const switch\+\_\+handle\+\_\+t intf\+\_\+handle)
+\item 
+\hypertarget{group__VLAN_ga98158d6d6e4d8cf816c2c860102c4581}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+remove\+\_\+by\+\_\+member\+\_\+handle} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t member\+\_\+handles)}\label{group__VLAN_ga98158d6d6e4d8cf816c2c860102c4581}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga8f8e46977088ec6fca4612da284466f5}{switch\+\_\+api\+\_\+vlan\+\_\+interfaces\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, switch\+\_\+uint16\+\_\+t $\ast$num\+\_\+entries, \hyperlink{structswitch__vlan__interface__}{switch\+\_\+vlan\+\_\+interface\+\_\+t} $\ast$$\ast$mbrs)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga5e04a16e1d47aef8cf5385c7bd46d508}{switch\+\_\+api\+\_\+vlan\+\_\+id\+\_\+to\+\_\+handle\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+vlan\+\_\+t vlan\+\_\+id, switch\+\_\+handle\+\_\+t $\ast$vlan\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_gad33fe80bba68efbc1ee4867a87782d88}{switch\+\_\+api\+\_\+vlan\+\_\+handle\+\_\+to\+\_\+id\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, switch\+\_\+vlan\+\_\+t $\ast$vlan\+\_\+id)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga40627ca2ddc9afa7fed5d0c52a972925}{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+enable} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_gab68bd3bdc40dd0156ae7be2f475c01ea}{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+disable} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga4f90f6fb5b09a7278a958500cca7d523}{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, const switch\+\_\+uint8\+\_\+t num\+\_\+entries, const switch\+\_\+bd\+\_\+counter\+\_\+id\+\_\+t $\ast$counter\+\_\+ids, \hyperlink{structswitch__counter__s}{switch\+\_\+counter\+\_\+t} $\ast$counters)
+\item 
+\hypertarget{group__VLAN_ga45cfb8305c79d90f422ca4aed52d71bb}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+vlan\+\_\+handle\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, const void $\ast$cli\+\_\+ctx)}\label{group__VLAN_ga45cfb8305c79d90f422ca4aed52d71bb}
+
+\item 
+\hypertarget{group__VLAN_ga60814e5a5a9e9394a5cb4cd4c084aa94}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+vlan\+\_\+id\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+vlan\+\_\+t vlan\+\_\+id, const void $\ast$cli\+\_\+ctx)}\label{group__VLAN_ga60814e5a5a9e9394a5cb4cd4c084aa94}
+
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga6acab509f2c4344f8146af032da7d287}{switch\+\_\+api\+\_\+vlan\+\_\+stp\+\_\+handle\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t vlan\+\_\+handle, switch\+\_\+handle\+\_\+t stp\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_gaa4e63e54839ae6fb16b4043a80643768}{switch\+\_\+api\+\_\+vlan\+\_\+stp\+\_\+handle\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t vlan\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$stp\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_gae46e00d7ebfcd79d5183f9e47eb1c6ad}{switch\+\_\+api\+\_\+vlan\+\_\+mrpf\+\_\+group\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t vlan\+\_\+handle, switch\+\_\+mrpf\+\_\+group\+\_\+t mrpf\+\_\+group)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga5ffd0ddf09678c08f3f035bb7993b6d4}{switch\+\_\+api\+\_\+vlan\+\_\+mrpf\+\_\+group\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t vlan\+\_\+handle, switch\+\_\+mrpf\+\_\+group\+\_\+t $\ast$mrpf\+\_\+group)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga551a24868ebed777ac6ce5eb4ab05b34}{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t bd\+\_\+handle, switch\+\_\+handle\+\_\+t acl\+\_\+group)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga15d21aafeb415f51921402970a9a0086}{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t bd\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$acl\+\_\+group)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_gada709abecd0a81f400147162a6de3e85}{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t vlan\+\_\+handle, switch\+\_\+uint16\+\_\+t label)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_gaa88eb71f9ccb153e745e729ba5dba231}{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t vlan\+\_\+handle, switch\+\_\+uint16\+\_\+t $\ast$label)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga14a187a4d10477fa336aa56b7590f2ad}{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t bd\+\_\+handle, switch\+\_\+handle\+\_\+t acl\+\_\+group)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_gabb9d7e044d367704553e0f16d489ac10}{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t bd\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$acl\+\_\+group)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga39907b2fbbe0af7d53c647b02ee5489f}{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t vlan\+\_\+handle, switch\+\_\+uint16\+\_\+t label)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga847d469b74bb8af097e041d949a3a280}{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t vlan\+\_\+handle, switch\+\_\+uint16\+\_\+t $\ast$label)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga54044f38b7a574c8ab0ae21621a87b8c}{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+vlan\+\_\+id\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t vlan\+\_\+member\+\_\+handle, switch\+\_\+vlan\+\_\+t $\ast$vlan\+\_\+id)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_gab1e499e8b360f92912e0cbb4f8c6feae}{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+vlan\+\_\+tagging\+\_\+mode\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t vlan\+\_\+member\+\_\+handle, bool $\ast$tag\+\_\+mode)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga68553f8c739a578f248f2cf90772fe6b}{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+intf\+\_\+handle\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t vlan\+\_\+member\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$intf\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VLAN_ga91f53bad27e089d735a6f0d43f902757}{switch\+\_\+api\+\_\+vlan\+\_\+bd\+\_\+get} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t vlan\+\_\+handle, switch\+\_\+uint32\+\_\+t $\ast$bd)
+\item 
+\hypertarget{group__VLAN_ga3443a531c8332eea4e79af6ffeffe645}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+vlan\+\_\+mrouter\+\_\+handle\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vlan\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$mgid\+\_\+handle)}\label{group__VLAN_ga3443a531c8332eea4e79af6ffeffe645}
+
+\item 
+\hypertarget{group__VLAN_ga639f4e688a2ffe4b3be61ad72ffea9ae}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+interface\+\_\+native\+\_\+vlan\+\_\+tag\+\_\+enable} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t intf\+\_\+handle, const bool enable)}\label{group__VLAN_ga639f4e688a2ffe4b3be61ad72ffea9ae}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{group__VLAN_ga59121c6d479d4392d3b7dfcfe57e06dd}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+aging\+\_\+interval\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+aging\+\_\+interval\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+aging\+\_\+interval\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+aging\+\_\+interval\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+aging\+\_\+interval\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+aging\+\_\+interval\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{switch\+\_\+int32\+\_\+t $\ast$}]{age\+\_\+interval}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga59121c6d479d4392d3b7dfcfe57e06dd}
+Get mac age interval on vlan 
+\begin{DoxyParams}{Parameters}
+{\em vlan\+\_\+handle} & -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em value} & -\/ Value of mac age interval \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga7191d184ab3caacf45007a06ef11ae7b}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+aging\+\_\+interval\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+aging\+\_\+interval\+\_\+set}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+aging\+\_\+interval\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+aging\+\_\+interval\+\_\+set}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+aging\+\_\+interval\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+aging\+\_\+interval\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{const switch\+\_\+int32\+\_\+t}]{age\+\_\+interval}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga7191d184ab3caacf45007a06ef11ae7b}
+Set mac age interval on vlan 
+\begin{DoxyParams}{Parameters}
+{\em vlan\+\_\+handle} & -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em value} & -\/ Value of mac learning enabled \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga91f53bad27e089d735a6f0d43f902757}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+bd\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+bd\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+bd\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+bd\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+bd\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+bd\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{switch\+\_\+uint32\+\_\+t $\ast$}]{bd}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga91f53bad27e089d735a6f0d43f902757}
+Get bd value of a vlan handle 
+\begin{DoxyParams}{Parameters}
+{\em -\/} & device -\/ device \\
+\hline
+{\em -\/} & vlan\+\_\+handle -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em -\/} & bd value -\/ Return bd value which is derived via the bd handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga312a8e04ecebcacacd610e639c77d906}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+create@{switch\+\_\+api\+\_\+vlan\+\_\+create}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+create@{switch\+\_\+api\+\_\+vlan\+\_\+create}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+vlan\+\_\+t}]{vlan\+\_\+id, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{vlan\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga312a8e04ecebcacacd610e639c77d906}
+V\+L\+A\+N create 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em vlan\+\_\+id} & Id of the V\+L\+A\+N \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga1eaeb5260ef20b99e060aab6c9458508}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+delete@{switch\+\_\+api\+\_\+vlan\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+delete@{switch\+\_\+api\+\_\+vlan\+\_\+delete}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga1eaeb5260ef20b99e060aab6c9458508}
+Delete V\+L\+A\+N 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em vlan\+\_\+handle} & handle of V\+L\+A\+N returned by create \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_gabb9d7e044d367704553e0f16d489ac10}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+group\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{bd\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{acl\+\_\+group}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_gabb9d7e044d367704553e0f16d489ac10}
+Get A\+C\+L group handle The bd label is derived from A\+C\+L group handle 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em vlan\+\_\+handle} & – V\+L\+A\+N handle \\
+\hline
+{\em acl\+\_\+group} & -\/ A\+C\+L group handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga14a187a4d10477fa336aa56b7590f2ad}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+group\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{bd\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{acl\+\_\+group}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga14a187a4d10477fa336aa56b7590f2ad}
+Set bd label via A\+C\+L group handle The bd label will be derived from A\+C\+L group handle 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em vlan\+\_\+handle} & – V\+L\+A\+N handle \\
+\hline
+{\em acl\+\_\+group} & -\/ A\+C\+L group handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga847d469b74bb8af097e041d949a3a280}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+label\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{switch\+\_\+uint16\+\_\+t $\ast$}]{label}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga847d469b74bb8af097e041d949a3a280}
+Get custom bd label This A\+P\+I has be used to get bd label when bind type is S\+W\+I\+T\+C\+H\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em vlan\+\_\+handle} & – V\+L\+A\+N handle \\
+\hline
+{\em label} & – bd label \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga39907b2fbbe0af7d53c647b02ee5489f}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+egress\+\_\+acl\+\_\+label\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{switch\+\_\+uint16\+\_\+t}]{label}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga39907b2fbbe0af7d53c647b02ee5489f}
+Set custom bd label This A\+P\+I has be used to set bd label when bind type is S\+W\+I\+T\+C\+H\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em vlan\+\_\+handle} & – V\+L\+A\+N handle \\
+\hline
+{\em label} & – bd label \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_gad33fe80bba68efbc1ee4867a87782d88}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+handle\+\_\+to\+\_\+id\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+handle\+\_\+to\+\_\+id\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+handle\+\_\+to\+\_\+id\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+handle\+\_\+to\+\_\+id\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+handle\+\_\+to\+\_\+id\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+handle\+\_\+to\+\_\+id\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{switch\+\_\+vlan\+\_\+t $\ast$}]{vlan\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_gad33fe80bba68efbc1ee4867a87782d88}
+Get vlan handle to vlan id mapping 
+\begin{DoxyParams}{Parameters}
+{\em vlan\+\_\+handle} & vlan handle \\
+\hline
+{\em vlan\+\_\+id} & vlan id \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga5e04a16e1d47aef8cf5385c7bd46d508}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+id\+\_\+to\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+id\+\_\+to\+\_\+handle\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+id\+\_\+to\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+id\+\_\+to\+\_\+handle\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+id\+\_\+to\+\_\+handle\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+id\+\_\+to\+\_\+handle\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+vlan\+\_\+t}]{vlan\+\_\+id, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{vlan\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga5e04a16e1d47aef8cf5385c7bd46d508}
+Get vlan id to vlan handle mapping 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em vlan\+\_\+id} & vlan id \\
+\hline
+{\em vlan\+\_\+handle} & vlan handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_gac885b45961e8af94f1914a27f71e7a9c}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+igmp\+\_\+snooping\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+igmp\+\_\+snooping\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+igmp\+\_\+snooping\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+igmp\+\_\+snooping\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+igmp\+\_\+snooping\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+igmp\+\_\+snooping\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{bool $\ast$}]{enable}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_gac885b45961e8af94f1914a27f71e7a9c}
+Get igmp snooping enable flag for vlan 
+\begin{DoxyParams}{Parameters}
+{\em vlan\+\_\+handle} & -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em value} & -\/ Value of igmp snooping enabled flag \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga19c763e4390f3e91027301e0c9c8307e}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+igmp\+\_\+snooping\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+igmp\+\_\+snooping\+\_\+set}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+igmp\+\_\+snooping\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+igmp\+\_\+snooping\+\_\+set}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+igmp\+\_\+snooping\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+igmp\+\_\+snooping\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{const bool}]{enable}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga19c763e4390f3e91027301e0c9c8307e}
+Set igmp snooping enable flag for vlan 
+\begin{DoxyParams}{Parameters}
+{\em vlan\+\_\+handle} & -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em value} & -\/ Value of igmp snooping enabled flag \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga15d21aafeb415f51921402970a9a0086}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{bd\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{acl\+\_\+group}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga15d21aafeb415f51921402970a9a0086}
+Get A\+C\+L group handle The bd label is derived from A\+C\+L group handle 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em vlan\+\_\+handle} & – V\+L\+A\+N handle \\
+\hline
+{\em acl\+\_\+group} & -\/ A\+C\+L group handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga551a24868ebed777ac6ce5eb4ab05b34}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+group\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{bd\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{acl\+\_\+group}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga551a24868ebed777ac6ce5eb4ab05b34}
+Set bd label via A\+C\+L group handle The bd label will be derived from A\+C\+L group handle 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em vlan\+\_\+handle} & – V\+L\+A\+N handle \\
+\hline
+{\em acl\+\_\+group} & -\/ A\+C\+L group handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_gaa88eb71f9ccb153e745e729ba5dba231}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{switch\+\_\+uint16\+\_\+t $\ast$}]{label}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_gaa88eb71f9ccb153e745e729ba5dba231}
+Get custom bd label This A\+P\+I has be used to get bd label when bind type is S\+W\+I\+T\+C\+H\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em vlan\+\_\+handle} & – V\+L\+A\+N handle \\
+\hline
+{\em label} & – bd label \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_gada709abecd0a81f400147162a6de3e85}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+ingress\+\_\+acl\+\_\+label\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{switch\+\_\+uint16\+\_\+t}]{label}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_gada709abecd0a81f400147162a6de3e85}
+Set custom bd label This A\+P\+I has be used to set bd label when bind type is S\+W\+I\+T\+C\+H\+\_\+\+H\+A\+N\+D\+L\+E\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+O\+N\+E 
+\begin{DoxyParams}{Parameters}
+{\em device} & – device \\
+\hline
+{\em vlan\+\_\+handle} & – V\+L\+A\+N handle \\
+\hline
+{\em label} & – bd label \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga8f8e46977088ec6fca4612da284466f5}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+interfaces\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+interfaces\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+interfaces\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+interfaces\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+interfaces\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+interfaces\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{switch\+\_\+uint16\+\_\+t $\ast$}]{num\+\_\+entries, }
+\item[{{\bf switch\+\_\+vlan\+\_\+interface\+\_\+t} $\ast$$\ast$}]{mbrs}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga8f8e46977088ec6fca4612da284466f5}
+Get the list of interfaces that belong to a vlan. 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em vlan\+\_\+handle} & -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em mbr\+\_\+count} & -\/ Number of interfaces \\
+\hline
+{\em mbrs} & -\/ List of interfaces \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_gaf4e308e262c09faf863edeb40f8303c7}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+learning\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+learning\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+learning\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+learning\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+learning\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+learning\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{bool $\ast$}]{enable}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_gaf4e308e262c09faf863edeb40f8303c7}
+Get vlan learning attribute 
+\begin{DoxyParams}{Parameters}
+{\em -\/} & device -\/ device \\
+\hline
+{\em -\/} & vlan\+\_\+handle -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em -\/} & enable -\/ Boolean value \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga3c56613edcd857a1acf584b32243adca}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+learning\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+learning\+\_\+set}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+learning\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+learning\+\_\+set}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+learning\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+learning\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{const bool}]{enable}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga3c56613edcd857a1acf584b32243adca}
+Set vlan learning attribute 
+\begin{DoxyParams}{Parameters}
+{\em -\/} & device -\/ device \\
+\hline
+{\em -\/} & vlan\+\_\+handle -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em -\/} & enable -\/ Boolean value \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga846586f529673556b314c2cce430ba1e}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+add@{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+add}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+add@{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+add}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{intf\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{member\+\_\+handles}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga846586f529673556b314c2cce430ba1e}
+Add ports to vlan. By default, ports will be added to the flood list based on the flood type. 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em vlan\+\_\+handle} & -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em port\+\_\+count} & -\/ Number of ports to be added to vlan \\
+\hline
+{\em vlan\+\_\+port} & -\/ List of interfaces/ports/lags \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga68553f8c739a578f248f2cf90772fe6b}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+intf\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+intf\+\_\+handle\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+intf\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+intf\+\_\+handle\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+intf\+\_\+handle\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+intf\+\_\+handle\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{vlan\+\_\+member\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{intf\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga68553f8c739a578f248f2cf90772fe6b}
+Get interface handle of a vlan member handle 
+\begin{DoxyParams}{Parameters}
+{\em -\/} & device -\/ device \\
+\hline
+{\em -\/} & vlan\+\_\+handle -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em -\/} & intf\+\_\+handle -\/ Return interface handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga6802cba443697307526f234af3079f62}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+remove@{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+remove}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+remove@{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+remove}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+remove}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+remove (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{intf\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga6802cba443697307526f234af3079f62}
+Remove ports from vlan. By default, ports will be removed from flood list based on the flood type. 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em vlan\+\_\+handle} & -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em port\+\_\+count} & -\/ Number of ports to be removed from vlan \\
+\hline
+{\em vlan\+\_\+port-\/} & List of interfaces/ports/lags \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga54044f38b7a574c8ab0ae21621a87b8c}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+vlan\+\_\+id\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+vlan\+\_\+id\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+vlan\+\_\+id\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+vlan\+\_\+id\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+vlan\+\_\+id\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+vlan\+\_\+id\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{vlan\+\_\+member\+\_\+handle, }
+\item[{switch\+\_\+vlan\+\_\+t $\ast$}]{vlan\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga54044f38b7a574c8ab0ae21621a87b8c}
+Get V\+L\+A\+N Id of a vlan member handle 
+\begin{DoxyParams}{Parameters}
+{\em -\/} & device -\/ device \\
+\hline
+{\em -\/} & vlan\+\_\+handle -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em -\/} & vlan\+\_\+id -\/ Return vlan id \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_gab1e499e8b360f92912e0cbb4f8c6feae}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+vlan\+\_\+tagging\+\_\+mode\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+vlan\+\_\+tagging\+\_\+mode\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+vlan\+\_\+tagging\+\_\+mode\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+vlan\+\_\+tagging\+\_\+mode\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+vlan\+\_\+tagging\+\_\+mode\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+member\+\_\+vlan\+\_\+tagging\+\_\+mode\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{vlan\+\_\+member\+\_\+handle, }
+\item[{bool $\ast$}]{tag\+\_\+mode}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_gab1e499e8b360f92912e0cbb4f8c6feae}
+Get vlan tagging mode of a vlan member handle 
+\begin{DoxyParams}{Parameters}
+{\em -\/} & device -\/ device \\
+\hline
+{\em -\/} & vlan\+\_\+handle -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em -\/} & tagging\+\_\+mode -\/ Return boolean tagging mode \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_gaf556ecb7766d84dff5f3f4de1d32766f}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+mld\+\_\+snooping\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+mld\+\_\+snooping\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+mld\+\_\+snooping\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+mld\+\_\+snooping\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+mld\+\_\+snooping\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+mld\+\_\+snooping\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{bool $\ast$}]{enable}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_gaf556ecb7766d84dff5f3f4de1d32766f}
+Get mld snooping enable flag for vlan 
+\begin{DoxyParams}{Parameters}
+{\em vlan\+\_\+handle} & -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em value} & -\/ Value of mld snooping enabled flag \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_gac33613f678384471b8eb4a7927c0f5bb}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+mld\+\_\+snooping\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+mld\+\_\+snooping\+\_\+set}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+mld\+\_\+snooping\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+mld\+\_\+snooping\+\_\+set}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+mld\+\_\+snooping\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+mld\+\_\+snooping\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{const bool}]{enable}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_gac33613f678384471b8eb4a7927c0f5bb}
+Set mld snooping enable flag for vlan 
+\begin{DoxyParams}{Parameters}
+{\em vlan\+\_\+handle} & -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em value} & -\/ Value of mld snooping enabled flag \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga5ffd0ddf09678c08f3f035bb7993b6d4}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+mrpf\+\_\+group\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+mrpf\+\_\+group\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+mrpf\+\_\+group\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+mrpf\+\_\+group\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+mrpf\+\_\+group\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+mrpf\+\_\+group\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{switch\+\_\+mrpf\+\_\+group\+\_\+t $\ast$}]{mrpf\+\_\+group}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga5ffd0ddf09678c08f3f035bb7993b6d4}
+Get multicast R\+P\+F group 
+\begin{DoxyParams}{Parameters}
+{\em -\/} & device -\/ device \\
+\hline
+{\em -\/} & vlan\+\_\+handle -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em -\/} & mrpf\+\_\+group -\/ Multicast R\+P\+F group \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_gae46e00d7ebfcd79d5183f9e47eb1c6ad}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+mrpf\+\_\+group\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+mrpf\+\_\+group\+\_\+set}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+mrpf\+\_\+group\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+mrpf\+\_\+group\+\_\+set}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+mrpf\+\_\+group\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+mrpf\+\_\+group\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{switch\+\_\+mrpf\+\_\+group\+\_\+t}]{mrpf\+\_\+group}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_gae46e00d7ebfcd79d5183f9e47eb1c6ad}
+Set multicast R\+P\+F group 
+\begin{DoxyParams}{Parameters}
+{\em -\/} & device -\/ device \\
+\hline
+{\em -\/} & vlan\+\_\+handle -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em -\/} & mrpf\+\_\+group -\/ Multicast R\+P\+F group \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_gab68bd3bdc40dd0156ae7be2f475c01ea}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+disable@{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+disable}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+disable@{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+disable}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+disable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+disable (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_gab68bd3bdc40dd0156ae7be2f475c01ea}
+Enable vlan statistics 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to be programmed \\
+\hline
+{\em vlan\+\_\+handle} & Vlan handle that identifies vlan uniquely \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga40627ca2ddc9afa7fed5d0c52a972925}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+enable@{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+enable}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+enable@{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+enable}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+enable}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+enable (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga40627ca2ddc9afa7fed5d0c52a972925}
+Enable vlan statistics 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to be programmed \\
+\hline
+{\em vlan\+\_\+handle} & Vlan handle that identifies vlan uniquely \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga4f90f6fb5b09a7278a958500cca7d523}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+stats\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{const switch\+\_\+uint8\+\_\+t}]{num\+\_\+entries, }
+\item[{const switch\+\_\+bd\+\_\+counter\+\_\+id\+\_\+t $\ast$}]{counter\+\_\+ids, }
+\item[{{\bf switch\+\_\+counter\+\_\+t} $\ast$}]{counters}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga4f90f6fb5b09a7278a958500cca7d523}
+Get vlan statistics 
+\begin{DoxyParams}{Parameters}
+{\em device} & device to be programmed \\
+\hline
+{\em vlan\+\_\+handle} & Vlan handle that identifies vlan uniquely \\
+\hline
+{\em count} & number of counter ids \\
+\hline
+{\em counter\+\_\+ids} & list of counter ids \\
+\hline
+{\em counters} & counter values to be returned \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_gaa4e63e54839ae6fb16b4043a80643768}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+stp\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+stp\+\_\+handle\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+stp\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+vlan\+\_\+stp\+\_\+handle\+\_\+get}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+stp\+\_\+handle\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+stp\+\_\+handle\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{stp\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_gaa4e63e54839ae6fb16b4043a80643768}
+Get spanning tree handle 
+\begin{DoxyParams}{Parameters}
+{\em -\/} & device -\/ device \\
+\hline
+{\em -\/} & vlan\+\_\+handle -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em -\/} & stp\+\_\+handle -\/ Spanning tree handle \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__VLAN_ga6acab509f2c4344f8146af032da7d287}{\index{V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}!switch\+\_\+api\+\_\+vlan\+\_\+stp\+\_\+handle\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+stp\+\_\+handle\+\_\+set}}
+\index{switch\+\_\+api\+\_\+vlan\+\_\+stp\+\_\+handle\+\_\+set@{switch\+\_\+api\+\_\+vlan\+\_\+stp\+\_\+handle\+\_\+set}!V\+L\+A\+N configuration A\+P\+I@{V\+L\+A\+N configuration A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vlan\+\_\+stp\+\_\+handle\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vlan\+\_\+stp\+\_\+handle\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{vlan\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t}]{stp\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__VLAN_ga6acab509f2c4344f8146af032da7d287}
+Set spanning tree handle 
+\begin{DoxyParams}{Parameters}
+{\em -\/} & device -\/ device \\
+\hline
+{\em -\/} & vlan\+\_\+handle -\/ Vlan handle that identifies vlan uniquely \\
+\hline
+{\em -\/} & stp\+\_\+handle -\/ Spanning tree handle \\
+\hline
+\end{DoxyParams}

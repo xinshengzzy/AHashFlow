@@ -1,0 +1,258 @@
+\hypertarget{group__VRF}{\section{Virtual Router A\+P\+I}
+\label{group__VRF}\index{Virtual Router A\+P\+I@{Virtual Router A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions define and manipulate vrf \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__api__vrf__info__s}{switch\+\_\+api\+\_\+vrf\+\_\+info\+\_\+s}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{group__VRF_gaa744243387e6ba5060d6f1fc951b451a}{switch\+\_\+vrf\+\_\+attr\+\_\+s} \hyperlink{group__VRF_gafbc9b07a84dd1748e55ab9ebf00f0be6}{switch\+\_\+vrf\+\_\+attr\+\_\+t}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__api__vrf__info__s}{switch\+\_\+api\+\_\+vrf\+\_\+info\+\_\+s} \hyperlink{group__VRF_ga44195f5d4f2288238ecc29f5a20f9a21}{switch\+\_\+api\+\_\+vrf\+\_\+info\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__VRF_gaa744243387e6ba5060d6f1fc951b451a}{switch\+\_\+vrf\+\_\+attr\+\_\+s} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+V\+R\+F\+\_\+\+A\+T\+T\+R\+\_\+\+R\+M\+A\+C\+\_\+\+H\+A\+N\+D\+L\+E} = (1 $<$$<$ 0), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+V\+R\+F\+\_\+\+A\+T\+T\+R\+\_\+\+I\+P\+V4\+\_\+\+U\+N\+I\+C\+A\+S\+T} = (1 $<$$<$ 1), 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+V\+R\+F\+\_\+\+A\+T\+T\+R\+\_\+\+I\+P\+V6\+\_\+\+U\+N\+I\+C\+A\+S\+T} = (1 $<$$<$ 2)
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VRF_ga3d660a81d57eb853cea3087242cd4369}{switch\+\_\+api\+\_\+vrf\+\_\+create} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+vrf\+\_\+t vrf\+\_\+id, switch\+\_\+handle\+\_\+t $\ast$vrf\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Create a virtual router. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VRF_gad3c6e261a5c6b46706a16e8b7551efeb}{switch\+\_\+api\+\_\+vrf\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vrf\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Delete a virtual router. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VRF_ga9e7b4703f6c1b9e78e1736c670b33084}{switch\+\_\+api\+\_\+vrf\+\_\+id\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+vrf\+\_\+t vrf\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Delete a virtual router by vrf identifier. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VRF_ga78fbe0d7a736edcd2343ca639a3db970}{switch\+\_\+api\+\_\+vrf\+\_\+id\+\_\+to\+\_\+handle\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+vrf\+\_\+t vrf\+\_\+id, switch\+\_\+handle\+\_\+t $\ast$vrf\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Get virtual router handle from vrf identifier. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VRF_ga088fd3673da11c5666e0be69c4b4f5c9}{switch\+\_\+api\+\_\+vrf\+\_\+handle\+\_\+to\+\_\+id\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vrf\+\_\+handle, switch\+\_\+vrf\+\_\+t $\ast$vrf\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Get virtual router identifier from vrf handle. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VRF_ga35b76770bf867548181e88dd432cfcec}{switch\+\_\+api\+\_\+vrf\+\_\+handle\+\_\+dump} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vrf\+\_\+handle, const void $\ast$cli\+\_\+ctx)
+\begin{DoxyCompactList}\small\item\em Dump virtual router identifier info in C\+L\+I. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VRF_ga17a587af1024a7b6a8055da8f3e86880}{switch\+\_\+api\+\_\+vrf\+\_\+rmac\+\_\+handle\+\_\+set} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vrf\+\_\+handle, const switch\+\_\+handle\+\_\+t rmac\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Set a rmac group to virtual router. \end{DoxyCompactList}\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__VRF_ga31b7064921d28ed1a85e9f3c7a0ec8d3}{switch\+\_\+api\+\_\+vrf\+\_\+rmac\+\_\+handle\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t vrf\+\_\+handle, switch\+\_\+handle\+\_\+t $\ast$rmac\+\_\+handle)
+\begin{DoxyCompactList}\small\item\em Get rmac group for a virtual router. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__VRF_ga44195f5d4f2288238ecc29f5a20f9a21}{\index{Virtual Router A\+P\+I@{Virtual Router A\+P\+I}!switch\+\_\+api\+\_\+vrf\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+vrf\+\_\+info\+\_\+t}}
+\index{switch\+\_\+api\+\_\+vrf\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+vrf\+\_\+info\+\_\+t}!Virtual Router A\+P\+I@{Virtual Router A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vrf\+\_\+info\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+api\+\_\+vrf\+\_\+info\+\_\+s}  {\bf switch\+\_\+api\+\_\+vrf\+\_\+info\+\_\+t}}}\label{group__VRF_ga44195f5d4f2288238ecc29f5a20f9a21}
+vrf attriute structure \hypertarget{group__VRF_gafbc9b07a84dd1748e55ab9ebf00f0be6}{\index{Virtual Router A\+P\+I@{Virtual Router A\+P\+I}!switch\+\_\+vrf\+\_\+attr\+\_\+t@{switch\+\_\+vrf\+\_\+attr\+\_\+t}}
+\index{switch\+\_\+vrf\+\_\+attr\+\_\+t@{switch\+\_\+vrf\+\_\+attr\+\_\+t}!Virtual Router A\+P\+I@{Virtual Router A\+P\+I}}
+\subsubsection[{switch\+\_\+vrf\+\_\+attr\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+vrf\+\_\+attr\+\_\+s}  {\bf switch\+\_\+vrf\+\_\+attr\+\_\+t}}}\label{group__VRF_gafbc9b07a84dd1748e55ab9ebf00f0be6}
+vrf attributes 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__VRF_gaa744243387e6ba5060d6f1fc951b451a}{\index{Virtual Router A\+P\+I@{Virtual Router A\+P\+I}!switch\+\_\+vrf\+\_\+attr\+\_\+s@{switch\+\_\+vrf\+\_\+attr\+\_\+s}}
+\index{switch\+\_\+vrf\+\_\+attr\+\_\+s@{switch\+\_\+vrf\+\_\+attr\+\_\+s}!Virtual Router A\+P\+I@{Virtual Router A\+P\+I}}
+\subsubsection[{switch\+\_\+vrf\+\_\+attr\+\_\+s}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+vrf\+\_\+attr\+\_\+s}}}\label{group__VRF_gaa744243387e6ba5060d6f1fc951b451a}
+vrf attributes 
+
+\subsection{Function Documentation}
+\hypertarget{group__VRF_ga3d660a81d57eb853cea3087242cd4369}{\index{Virtual Router A\+P\+I@{Virtual Router A\+P\+I}!switch\+\_\+api\+\_\+vrf\+\_\+create@{switch\+\_\+api\+\_\+vrf\+\_\+create}}
+\index{switch\+\_\+api\+\_\+vrf\+\_\+create@{switch\+\_\+api\+\_\+vrf\+\_\+create}!Virtual Router A\+P\+I@{Virtual Router A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vrf\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vrf\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+vrf\+\_\+t}]{vrf\+\_\+id, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{vrf\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__VRF_ga3d660a81d57eb853cea3087242cd4369}
+
+
+Create a virtual router. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em vrf\+\_\+id} & id to uniquely identify a virtual router. vrf id is optional. If set to 0, an internal vrf id will be allocated. \\
+\hline
+\mbox{\tt out}  & {\em vrf\+\_\+handle} & virtual router handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__VRF_gad3c6e261a5c6b46706a16e8b7551efeb}{\index{Virtual Router A\+P\+I@{Virtual Router A\+P\+I}!switch\+\_\+api\+\_\+vrf\+\_\+delete@{switch\+\_\+api\+\_\+vrf\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+vrf\+\_\+delete@{switch\+\_\+api\+\_\+vrf\+\_\+delete}!Virtual Router A\+P\+I@{Virtual Router A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vrf\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vrf\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__VRF_gad3c6e261a5c6b46706a16e8b7551efeb}
+
+
+Delete a virtual router. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em vrf\+\_\+handle} & virtual router handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__VRF_ga35b76770bf867548181e88dd432cfcec}{\index{Virtual Router A\+P\+I@{Virtual Router A\+P\+I}!switch\+\_\+api\+\_\+vrf\+\_\+handle\+\_\+dump@{switch\+\_\+api\+\_\+vrf\+\_\+handle\+\_\+dump}}
+\index{switch\+\_\+api\+\_\+vrf\+\_\+handle\+\_\+dump@{switch\+\_\+api\+\_\+vrf\+\_\+handle\+\_\+dump}!Virtual Router A\+P\+I@{Virtual Router A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vrf\+\_\+handle\+\_\+dump}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vrf\+\_\+handle\+\_\+dump (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle, }
+\item[{const void $\ast$}]{cli\+\_\+ctx}
+\end{DoxyParamCaption}
+)}}\label{group__VRF_ga35b76770bf867548181e88dd432cfcec}
+
+
+Dump virtual router identifier info in C\+L\+I. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em vrf\+\_\+handle} & virtual router handle \\
+\hline
+\mbox{\tt in}  & {\em cli\+\_\+ctx} & cli context\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__VRF_ga088fd3673da11c5666e0be69c4b4f5c9}{\index{Virtual Router A\+P\+I@{Virtual Router A\+P\+I}!switch\+\_\+api\+\_\+vrf\+\_\+handle\+\_\+to\+\_\+id\+\_\+get@{switch\+\_\+api\+\_\+vrf\+\_\+handle\+\_\+to\+\_\+id\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vrf\+\_\+handle\+\_\+to\+\_\+id\+\_\+get@{switch\+\_\+api\+\_\+vrf\+\_\+handle\+\_\+to\+\_\+id\+\_\+get}!Virtual Router A\+P\+I@{Virtual Router A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vrf\+\_\+handle\+\_\+to\+\_\+id\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vrf\+\_\+handle\+\_\+to\+\_\+id\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle, }
+\item[{switch\+\_\+vrf\+\_\+t $\ast$}]{vrf\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{group__VRF_ga088fd3673da11c5666e0be69c4b4f5c9}
+
+
+Get virtual router identifier from vrf handle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em vrf\+\_\+handle} & virtual router handle \\
+\hline
+\mbox{\tt out}  & {\em vrf\+\_\+id} & virtual router identifier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__VRF_ga9e7b4703f6c1b9e78e1736c670b33084}{\index{Virtual Router A\+P\+I@{Virtual Router A\+P\+I}!switch\+\_\+api\+\_\+vrf\+\_\+id\+\_\+delete@{switch\+\_\+api\+\_\+vrf\+\_\+id\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+vrf\+\_\+id\+\_\+delete@{switch\+\_\+api\+\_\+vrf\+\_\+id\+\_\+delete}!Virtual Router A\+P\+I@{Virtual Router A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vrf\+\_\+id\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vrf\+\_\+id\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+vrf\+\_\+t}]{vrf\+\_\+id}
+\end{DoxyParamCaption}
+)}}\label{group__VRF_ga9e7b4703f6c1b9e78e1736c670b33084}
+
+
+Delete a virtual router by vrf identifier. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em vrf\+\_\+id} & virtual router identifier\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__VRF_ga78fbe0d7a736edcd2343ca639a3db970}{\index{Virtual Router A\+P\+I@{Virtual Router A\+P\+I}!switch\+\_\+api\+\_\+vrf\+\_\+id\+\_\+to\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+vrf\+\_\+id\+\_\+to\+\_\+handle\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vrf\+\_\+id\+\_\+to\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+vrf\+\_\+id\+\_\+to\+\_\+handle\+\_\+get}!Virtual Router A\+P\+I@{Virtual Router A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vrf\+\_\+id\+\_\+to\+\_\+handle\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vrf\+\_\+id\+\_\+to\+\_\+handle\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+vrf\+\_\+t}]{vrf\+\_\+id, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{vrf\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__VRF_ga78fbe0d7a736edcd2343ca639a3db970}
+
+
+Get virtual router handle from vrf identifier. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em vrf\+\_\+id} & virtual router identifier \\
+\hline
+\mbox{\tt out}  & {\em vrf\+\_\+handle} & virtual router handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__VRF_ga31b7064921d28ed1a85e9f3c7a0ec8d3}{\index{Virtual Router A\+P\+I@{Virtual Router A\+P\+I}!switch\+\_\+api\+\_\+vrf\+\_\+rmac\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+vrf\+\_\+rmac\+\_\+handle\+\_\+get}}
+\index{switch\+\_\+api\+\_\+vrf\+\_\+rmac\+\_\+handle\+\_\+get@{switch\+\_\+api\+\_\+vrf\+\_\+rmac\+\_\+handle\+\_\+get}!Virtual Router A\+P\+I@{Virtual Router A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vrf\+\_\+rmac\+\_\+handle\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vrf\+\_\+rmac\+\_\+handle\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{rmac\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__VRF_ga31b7064921d28ed1a85e9f3c7a0ec8d3}
+
+
+Get rmac group for a virtual router. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em vrf\+\_\+handle} & virtual router handle \\
+\hline
+\mbox{\tt out}  & {\em rmac\+\_\+handle} & router mac handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}
+\hypertarget{group__VRF_ga17a587af1024a7b6a8055da8f3e86880}{\index{Virtual Router A\+P\+I@{Virtual Router A\+P\+I}!switch\+\_\+api\+\_\+vrf\+\_\+rmac\+\_\+handle\+\_\+set@{switch\+\_\+api\+\_\+vrf\+\_\+rmac\+\_\+handle\+\_\+set}}
+\index{switch\+\_\+api\+\_\+vrf\+\_\+rmac\+\_\+handle\+\_\+set@{switch\+\_\+api\+\_\+vrf\+\_\+rmac\+\_\+handle\+\_\+set}!Virtual Router A\+P\+I@{Virtual Router A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+vrf\+\_\+rmac\+\_\+handle\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+vrf\+\_\+rmac\+\_\+handle\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{vrf\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{rmac\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__VRF_ga17a587af1024a7b6a8055da8f3e86880}
+
+
+Set a rmac group to virtual router. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em device} & device id \\
+\hline
+\mbox{\tt in}  & {\em vrf\+\_\+handle} & virtual router handle \\
+\hline
+\mbox{\tt in}  & {\em rmac\+\_\+handle} & router mac handle\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\#\+S\+W\+I\+T\+C\+H\+\_\+\+S\+T\+A\+T\+U\+S\+\_\+\+S\+U\+C\+C\+E\+S\+S if success otherwise error code is returned. 
+\end{DoxyReturn}

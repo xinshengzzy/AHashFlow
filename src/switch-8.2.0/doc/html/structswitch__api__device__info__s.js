@@ -1,0 +1,28 @@
+var structswitch__api__device__info__s =
+[
+    [ "aging_interval", "structswitch__api__device__info__s.html#ad763fad91b193319f4b033f5250ab245", null ],
+    [ "default_log_level", "structswitch__api__device__info__s.html#a46b4681cedb2ff5c0843a371640daf38", null ],
+    [ "default_vlan", "structswitch__api__device__info__s.html#a355c7d6a12564d76a6d45f5cea341917", null ],
+    [ "default_vrf", "structswitch__api__device__info__s.html#a8397e0e411ce2ba6b33c529ed7f49927", null ],
+    [ "ecmp_hash_flags", "structswitch__api__device__info__s.html#a7ce9f935b5bfdb8f891e835db8ed7e05", null ],
+    [ "eth_cpu_port", "structswitch__api__device__info__s.html#a304caaf49e036b1981e37a6aa53fa377", null ],
+    [ "install_dmac", "structswitch__api__device__info__s.html#a2291c5b9b3cb1450852478bf90df5a6e", null ],
+    [ "lag_hash_flags", "structswitch__api__device__info__s.html#a9ea97601dd9946af69c963da088a5887", null ],
+    [ "mac", "structswitch__api__device__info__s.html#ac13509ef24f3c9cf2dd64e24bd3d737b", null ],
+    [ "mac_learning", "structswitch__api__device__info__s.html#a955f4d46b6e96bf792f9459ea56568bc", null ],
+    [ "max_ecmp_groups", "structswitch__api__device__info__s.html#a69f965827a491ed4500c24759ac9a959", null ],
+    [ "max_ecmp_members", "structswitch__api__device__info__s.html#ae5b7248aae9aa7931b8122c48126e608", null ],
+    [ "max_lag_groups", "structswitch__api__device__info__s.html#ac4b4f3d5f6b50a9bdfe9942c4381bc47", null ],
+    [ "max_lag_members", "structswitch__api__device__info__s.html#a59c6a528e2e720386b439ae99376a8ea", null ],
+    [ "max_port_mtu", "structswitch__api__device__info__s.html#a514fef0113d6c42d6cdef95e475fb395", null ],
+    [ "max_ports", "structswitch__api__device__info__s.html#aa51241cbf2c66c030e6dbdd3734512a1", null ],
+    [ "max_vrf", "structswitch__api__device__info__s.html#aa8590487144b0fe01959b7b717f68022", null ],
+    [ "num_active_ports", "structswitch__api__device__info__s.html#a7e1c4e293a457ef2c6edc1a83a13c52a", null ],
+    [ "pcie_cpu_port", "structswitch__api__device__info__s.html#a16ae76a1071523609b503735c3bea431", null ],
+    [ "port_list", "structswitch__api__device__info__s.html#a07aea87d15a339a7c24f743cd9253bcb", null ],
+    [ "refresh_interval", "structswitch__api__device__info__s.html#a254206c03e9010d7a479e17d96bd0e6d", null ],
+    [ "rmac_handle", "structswitch__api__device__info__s.html#aeec9bd0c4feaf5dd9650a27b9d6eaf1d", null ],
+    [ "tunnel_dmac", "structswitch__api__device__info__s.html#a7dde512ce1357c13af47c052b3bae6ad", null ],
+    [ "vlan_handle", "structswitch__api__device__info__s.html#a195fea6eeb1f1ee9c0e0e2d22aaf979d", null ],
+    [ "vrf_handle", "structswitch__api__device__info__s.html#abee10a0fa352b512256c72d305906a9f", null ]
+];

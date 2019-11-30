@@ -1,0 +1,26 @@
+var structswitch__api__mirror__info__s =
+[
+    [ "cos", "structswitch__api__mirror__info__s.html#a05cf7979699265bac77b111c3777c717", null ],
+    [ "direction", "structswitch__api__mirror__info__s.html#aabe4901c09dc2b839446f723d82cdd7a", null ],
+    [ "dst_ip", "structswitch__api__mirror__info__s.html#a864421edded9a8792cd846748c1b1574", null ],
+    [ "dst_mac", "structswitch__api__mirror__info__s.html#aa6b7290b4dfed262b43f114c220bb318", null ],
+    [ "egress_port_handle", "structswitch__api__mirror__info__s.html#af332b7903dcd17f278b9ed08a2e679e7", null ],
+    [ "extract_len", "structswitch__api__mirror__info__s.html#a5761ff09e7becd993b4e9b877e1d22b2", null ],
+    [ "max_pkt_len", "structswitch__api__mirror__info__s.html#ae8ad00a0d2994470ee7f4575ffbee8b7", null ],
+    [ "mirror_type", "structswitch__api__mirror__info__s.html#a96ea1cd04b4fd76d6b0ca9d7479a2e4a", null ],
+    [ "nhop_handle", "structswitch__api__mirror__info__s.html#a5adec0aa52730d8bf67e18a71b46f00f", null ],
+    [ "rspan_type", "structswitch__api__mirror__info__s.html#a2620074b2897938812ee23aca2af7d4b", null ],
+    [ "session_id", "structswitch__api__mirror__info__s.html#a49fee648e823a1c3c8ea4a129edd2dc5", null ],
+    [ "session_type", "structswitch__api__mirror__info__s.html#a2d4737f4feb67c11f4ccfdfb4edc0e15", null ],
+    [ "span_mode", "structswitch__api__mirror__info__s.html#a5c5ce47346d3a4907e3212f4e1dbde9f", null ],
+    [ "src_ip", "structswitch__api__mirror__info__s.html#a967ce2b13a0b353581ac16523530a1ec", null ],
+    [ "src_mac", "structswitch__api__mirror__info__s.html#a6b891c383c102ccdba6ee068a0cbfb31", null ],
+    [ "timeout_usec", "structswitch__api__mirror__info__s.html#a6068e1833b8c7f498be3cb44f27b46eb", null ],
+    [ "tos", "structswitch__api__mirror__info__s.html#a1d2704eb0f9a7c224c7d63c6fafa1206", null ],
+    [ "ttl", "structswitch__api__mirror__info__s.html#aa9ee0d1fcf9ff4eba0ccbd7c8b619c43", null ],
+    [ "vlan_handle", "structswitch__api__mirror__info__s.html#a75e656875bcde00f5b3b05735f78aada", null ],
+    [ "vlan_id", "structswitch__api__mirror__info__s.html#ab0edc988263aeafd90f558f8701d5cf1", null ],
+    [ "vlan_tag_valid", "structswitch__api__mirror__info__s.html#a94f7176a1219b8ae7444aefc40d31dd9", null ],
+    [ "vlan_tpid", "structswitch__api__mirror__info__s.html#a3fc15780339e394d76ffb7ea8f2f5649", null ],
+    [ "vrf_handle", "structswitch__api__mirror__info__s.html#ac9ab8271227d7a182942c0c1242332ac", null ]
+];

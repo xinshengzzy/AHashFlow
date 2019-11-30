@@ -1,0 +1,66 @@
+\hypertarget{group__BFD}{\section{Offload}
+\label{group__BFD}\index{Offload@{Offload}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions to manage B\+F\+D session offload \subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structswitch__api__bfd__session__info}{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+info}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \\*
+\hyperlink{structswitch__api__bfd__session__info}{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+info} \hyperlink{group__BFD_gac35c149be420a6b31ae5326113a7fa31}{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+info\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__BFD_gae303379f2306f4b90b114e6a2601983a}{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+create} (switch\+\_\+device\+\_\+t device, \hyperlink{group__BFD_gac35c149be420a6b31ae5326113a7fa31}{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+info\+\_\+t} $\ast$bfd\+\_\+api\+\_\+info, switch\+\_\+handle\+\_\+t $\ast$bfd\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__BFD_ga9afb063821d616a0941b8eee45d2b858}{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+delete} (switch\+\_\+device\+\_\+t device, switch\+\_\+handle\+\_\+t bfd\+\_\+session\+\_\+hdl)
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{group__BFD_gac35c149be420a6b31ae5326113a7fa31}{\index{Offload@{Offload}!switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+info\+\_\+t}}
+\index{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+info\+\_\+t@{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+info\+\_\+t}!Offload@{Offload}}
+\subsubsection[{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+info\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+info}  {\bf switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+info\+\_\+t}}}\label{group__BFD_gac35c149be420a6b31ae5326113a7fa31}
+B\+F\+D Session Information 
+
+\subsection{Function Documentation}
+\hypertarget{group__BFD_gae303379f2306f4b90b114e6a2601983a}{\index{Offload@{Offload}!switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+create@{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+create}}
+\index{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+create@{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+create}!Offload@{Offload}}
+\subsubsection[{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{{\bf switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+info\+\_\+t} $\ast$}]{bfd\+\_\+api\+\_\+info, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{bfd\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__BFD_gae303379f2306f4b90b114e6a2601983a}
+Offload a B\+F\+D sesion to datapath 
+\begin{DoxyParams}{Parameters}
+{\em device} & device on which B\+F\+D session is offloaded \\
+\hline
+{\em bfd\+\_\+api\+\_\+info} & -\/ B\+F\+D session information \\
+\hline
+{\em bfd\+\_\+handle} & -\/ Handle returned for the B\+F\+D session created \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__BFD_ga9afb063821d616a0941b8eee45d2b858}{\index{Offload@{Offload}!switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+delete@{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+delete@{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+delete}!Offload@{Offload}}
+\subsubsection[{switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+bfd\+\_\+session\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{switch\+\_\+device\+\_\+t}]{device, }
+\item[{switch\+\_\+handle\+\_\+t}]{bfd\+\_\+session\+\_\+hdl}
+\end{DoxyParamCaption}
+)}}\label{group__BFD_ga9afb063821d616a0941b8eee45d2b858}
+Delete offloaded B\+F\+D sesion from datapath 
+\begin{DoxyParams}{Parameters}
+{\em device} & device on which B\+F\+D session is offloaded \\
+\hline
+{\em bfd\+\_\+handle} & -\/ B\+F\+D session handle for the session being deleted \\
+\hline
+\end{DoxyParams}

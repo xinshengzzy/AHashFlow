@@ -1,0 +1,202 @@
+\hypertarget{group__stp}{\section{Spanning Tree Group A\+P\+I}
+\label{group__stp}\index{Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}}
+}
+
+
+\subsection{Detailed Description}
+A\+P\+I functions listed to configure stp \subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__stp_ga7d82d13b8bc0f41d1c736b3aadecff25}{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+S\+T\+P\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+S}~1024
+\item 
+\#define \hyperlink{group__stp_ga3cb957033a58fe3de452dcaa6d49f2de}{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+V\+L\+A\+N\+\_\+\+P\+E\+R\+\_\+\+S\+T\+P\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}~16
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \hyperlink{group__stp_ga6581381a1b134b4d8fe0f963addec7b5}{switch\+\_\+stp\+\_\+state\+\_\+} \hyperlink{group__stp_ga487b2b1cdeaa476047d2022273f58a56}{switch\+\_\+stp\+\_\+state\+\_\+t}
+\item 
+typedef enum \hyperlink{group__stp_ga8f4ad089a2dadfd52729fb2023e53498}{switch\+\_\+stp\+\_\+mode\+\_\+} \hyperlink{group__stp_ga035989f5b66364811135ccdf18d03e9b}{switch\+\_\+stp\+\_\+mode\+\_\+t}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group__stp_ga6581381a1b134b4d8fe0f963addec7b5}{switch\+\_\+stp\+\_\+state\+\_\+} \{ \\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+N\+O\+N\+E} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+L\+E\+A\+R\+N\+I\+N\+G} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+F\+O\+R\+W\+A\+R\+D\+I\+N\+G} = 3, 
+\\*
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+P\+\_\+\+S\+T\+A\+T\+E\+\_\+\+B\+L\+O\+C\+K\+I\+N\+G} = 4
+ \}
+\item 
+enum \hyperlink{group__stp_ga8f4ad089a2dadfd52729fb2023e53498}{switch\+\_\+stp\+\_\+mode\+\_\+} \{ {\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+P\+\_\+\+M\+O\+D\+E\+\_\+\+D\+I\+S\+A\+B\+L\+E\+D} = 0, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+P\+\_\+\+M\+O\+D\+E\+\_\+\+S\+T\+P} = 1, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+P\+\_\+\+M\+O\+D\+E\+\_\+\+R\+S\+T\+P} = 2, 
+{\bfseries S\+W\+I\+T\+C\+H\+\_\+\+P\+O\+R\+T\+\_\+\+S\+T\+P\+\_\+\+M\+O\+D\+E\+\_\+\+M\+S\+T\+P} = 3
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__stp_gafb0f5ccd942a574ea1264e174239af6e}{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+create} (const switch\+\_\+device\+\_\+t device, const \hyperlink{group__stp_ga035989f5b66364811135ccdf18d03e9b}{switch\+\_\+stp\+\_\+mode\+\_\+t} stp\+\_\+mode, switch\+\_\+handle\+\_\+t $\ast$stp\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__stp_ga86e410c6b12fcf88fa7ec84a3a57a6ad}{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+delete} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t stp\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__stp_gaab9418d721ed1abba5b6ee3b24c98b40}{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+member\+\_\+add} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t stp\+\_\+handle, const switch\+\_\+handle\+\_\+t network\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__stp_ga2cc5a14c62f7f4a4cb31b549b9d32026}{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+member\+\_\+remove} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t stp\+\_\+handle, const switch\+\_\+handle\+\_\+t network\+\_\+handle)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__stp_gab74d12ab01cbf7ad799f1f9853ceec51}{switch\+\_\+api\+\_\+stp\+\_\+interface\+\_\+state\+\_\+set} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t stp\+\_\+handle, const switch\+\_\+handle\+\_\+t handle, const \hyperlink{group__stp_ga487b2b1cdeaa476047d2022273f58a56}{switch\+\_\+stp\+\_\+state\+\_\+t} state)
+\item 
+switch\+\_\+status\+\_\+t \hyperlink{group__stp_gac5a755098cfd3d003b5cb428af2bba03}{switch\+\_\+api\+\_\+stp\+\_\+interface\+\_\+state\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t stp\+\_\+handle, const switch\+\_\+handle\+\_\+t intf\+\_\+handle, \hyperlink{group__stp_ga487b2b1cdeaa476047d2022273f58a56}{switch\+\_\+stp\+\_\+state\+\_\+t} $\ast$state)
+\item 
+\hypertarget{group__stp_gacfbc89a1ca729d39aae3028866014fbb}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+members\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t stp\+\_\+handle, switch\+\_\+uint16\+\_\+t $\ast$num\+\_\+entries, switch\+\_\+handle\+\_\+t $\ast$$\ast$network\+\_\+handles)}\label{group__stp_gacfbc89a1ca729d39aae3028866014fbb}
+
+\item 
+\hypertarget{group__stp_ga63a05275d4c50dc98cd7808bb24f0943}{switch\+\_\+status\+\_\+t {\bfseries switch\+\_\+api\+\_\+stp\+\_\+interfaces\+\_\+get} (const switch\+\_\+device\+\_\+t device, const switch\+\_\+handle\+\_\+t stp\+\_\+handle, switch\+\_\+uint16\+\_\+t $\ast$num\+\_\+entries, switch\+\_\+handle\+\_\+t $\ast$$\ast$port\+\_\+handles)}\label{group__stp_ga63a05275d4c50dc98cd7808bb24f0943}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{group__stp_ga7d82d13b8bc0f41d1c736b3aadecff25}{\index{Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+S\+T\+P\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+S@{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+S\+T\+P\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+S}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+S\+T\+P\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+S@{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+S\+T\+P\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+S}!Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+S\+T\+P\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+S}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+S\+T\+P\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E\+S~1024}}\label{group__stp_ga7d82d13b8bc0f41d1c736b3aadecff25}
+Maximum spanning tree instances \hypertarget{group__stp_ga3cb957033a58fe3de452dcaa6d49f2de}{\index{Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}!S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+V\+L\+A\+N\+\_\+\+P\+E\+R\+\_\+\+S\+T\+P\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+V\+L\+A\+N\+\_\+\+P\+E\+R\+\_\+\+S\+T\+P\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}}
+\index{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+V\+L\+A\+N\+\_\+\+P\+E\+R\+\_\+\+S\+T\+P\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E@{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+V\+L\+A\+N\+\_\+\+P\+E\+R\+\_\+\+S\+T\+P\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}!Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}}
+\subsubsection[{S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+V\+L\+A\+N\+\_\+\+P\+E\+R\+\_\+\+S\+T\+P\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E}]{\setlength{\rightskip}{0pt plus 5cm}\#define S\+W\+I\+T\+C\+H\+\_\+\+M\+A\+X\+\_\+\+V\+L\+A\+N\+\_\+\+P\+E\+R\+\_\+\+S\+T\+P\+\_\+\+I\+N\+S\+T\+A\+N\+C\+E~16}}\label{group__stp_ga3cb957033a58fe3de452dcaa6d49f2de}
+Maximum vlan in stp instance 
+
+\subsection{Typedef Documentation}
+\hypertarget{group__stp_ga035989f5b66364811135ccdf18d03e9b}{\index{Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}!switch\+\_\+stp\+\_\+mode\+\_\+t@{switch\+\_\+stp\+\_\+mode\+\_\+t}}
+\index{switch\+\_\+stp\+\_\+mode\+\_\+t@{switch\+\_\+stp\+\_\+mode\+\_\+t}!Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}}
+\subsubsection[{switch\+\_\+stp\+\_\+mode\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+stp\+\_\+mode\+\_\+}  {\bf switch\+\_\+stp\+\_\+mode\+\_\+t}}}\label{group__stp_ga035989f5b66364811135ccdf18d03e9b}
+Spanning tree mode \hypertarget{group__stp_ga487b2b1cdeaa476047d2022273f58a56}{\index{Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}!switch\+\_\+stp\+\_\+state\+\_\+t@{switch\+\_\+stp\+\_\+state\+\_\+t}}
+\index{switch\+\_\+stp\+\_\+state\+\_\+t@{switch\+\_\+stp\+\_\+state\+\_\+t}!Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}}
+\subsubsection[{switch\+\_\+stp\+\_\+state\+\_\+t}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf switch\+\_\+stp\+\_\+state\+\_\+}  {\bf switch\+\_\+stp\+\_\+state\+\_\+t}}}\label{group__stp_ga487b2b1cdeaa476047d2022273f58a56}
+Spanning Tree Group State 
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{group__stp_ga8f4ad089a2dadfd52729fb2023e53498}{\index{Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}!switch\+\_\+stp\+\_\+mode\+\_\+@{switch\+\_\+stp\+\_\+mode\+\_\+}}
+\index{switch\+\_\+stp\+\_\+mode\+\_\+@{switch\+\_\+stp\+\_\+mode\+\_\+}!Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}}
+\subsubsection[{switch\+\_\+stp\+\_\+mode\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+stp\+\_\+mode\+\_\+}}}\label{group__stp_ga8f4ad089a2dadfd52729fb2023e53498}
+Spanning tree mode \hypertarget{group__stp_ga6581381a1b134b4d8fe0f963addec7b5}{\index{Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}!switch\+\_\+stp\+\_\+state\+\_\+@{switch\+\_\+stp\+\_\+state\+\_\+}}
+\index{switch\+\_\+stp\+\_\+state\+\_\+@{switch\+\_\+stp\+\_\+state\+\_\+}!Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}}
+\subsubsection[{switch\+\_\+stp\+\_\+state\+\_\+}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf switch\+\_\+stp\+\_\+state\+\_\+}}}\label{group__stp_ga6581381a1b134b4d8fe0f963addec7b5}
+Spanning Tree Group State 
+
+\subsection{Function Documentation}
+\hypertarget{group__stp_gafb0f5ccd942a574ea1264e174239af6e}{\index{Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}!switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+create@{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+create}}
+\index{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+create@{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+create}!Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+create}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+create (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const {\bf switch\+\_\+stp\+\_\+mode\+\_\+t}}]{stp\+\_\+mode, }
+\item[{switch\+\_\+handle\+\_\+t $\ast$}]{stp\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__stp_gafb0f5ccd942a574ea1264e174239af6e}
+Create a spanning Tree group 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em stp\+\_\+mode} & spanning tree mode \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__stp_ga86e410c6b12fcf88fa7ec84a3a57a6ad}{\index{Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}!switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+delete@{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+delete}}
+\index{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+delete@{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+delete}!Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+delete}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+delete (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{stp\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__stp_ga86e410c6b12fcf88fa7ec84a3a57a6ad}
+Delete a spanning tree group 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em stg\+\_\+handle} & handle of the spanning tree group \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__stp_gaab9418d721ed1abba5b6ee3b24c98b40}{\index{Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}!switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+member\+\_\+add@{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+member\+\_\+add}}
+\index{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+member\+\_\+add@{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+member\+\_\+add}!Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+member\+\_\+add}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+member\+\_\+add (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{stp\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{network\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__stp_gaab9418d721ed1abba5b6ee3b24c98b40}
+Add V\+L\+A\+N to the stp 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em stg\+\_\+handle} & spanning tree group handle \\
+\hline
+{\em vlan\+\_\+count} & count of vlans \\
+\hline
+{\em vlan\+\_\+handle} & list of vlan handles \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__stp_ga2cc5a14c62f7f4a4cb31b549b9d32026}{\index{Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}!switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+member\+\_\+remove@{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+member\+\_\+remove}}
+\index{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+member\+\_\+remove@{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+member\+\_\+remove}!Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+member\+\_\+remove}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+stp\+\_\+group\+\_\+member\+\_\+remove (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{stp\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{network\+\_\+handle}
+\end{DoxyParamCaption}
+)}}\label{group__stp_ga2cc5a14c62f7f4a4cb31b549b9d32026}
+Remove V\+L\+A\+N from the stp 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em stg\+\_\+handle} & spanning tree group handle \\
+\hline
+{\em vlan\+\_\+count} & count of vlans \\
+\hline
+{\em vlan\+\_\+handle} & list of vlan handles \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__stp_gac5a755098cfd3d003b5cb428af2bba03}{\index{Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}!switch\+\_\+api\+\_\+stp\+\_\+interface\+\_\+state\+\_\+get@{switch\+\_\+api\+\_\+stp\+\_\+interface\+\_\+state\+\_\+get}}
+\index{switch\+\_\+api\+\_\+stp\+\_\+interface\+\_\+state\+\_\+get@{switch\+\_\+api\+\_\+stp\+\_\+interface\+\_\+state\+\_\+get}!Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+stp\+\_\+interface\+\_\+state\+\_\+get}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+stp\+\_\+interface\+\_\+state\+\_\+get (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{stp\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{intf\+\_\+handle, }
+\item[{{\bf switch\+\_\+stp\+\_\+state\+\_\+t} $\ast$}]{state}
+\end{DoxyParamCaption}
+)}}\label{group__stp_gac5a755098cfd3d003b5cb428af2bba03}
+Get the state of the port belonging to a stp 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em stg\+\_\+handle} & handle of the Spanning tree group \\
+\hline
+{\em intf\+\_\+handle} & -\/ spanning tree interface \\
+\hline
+{\em state} & stp state \\
+\hline
+\end{DoxyParams}
+\hypertarget{group__stp_gab74d12ab01cbf7ad799f1f9853ceec51}{\index{Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}!switch\+\_\+api\+\_\+stp\+\_\+interface\+\_\+state\+\_\+set@{switch\+\_\+api\+\_\+stp\+\_\+interface\+\_\+state\+\_\+set}}
+\index{switch\+\_\+api\+\_\+stp\+\_\+interface\+\_\+state\+\_\+set@{switch\+\_\+api\+\_\+stp\+\_\+interface\+\_\+state\+\_\+set}!Spanning Tree Group A\+P\+I@{Spanning Tree Group A\+P\+I}}
+\subsubsection[{switch\+\_\+api\+\_\+stp\+\_\+interface\+\_\+state\+\_\+set}]{\setlength{\rightskip}{0pt plus 5cm}switch\+\_\+status\+\_\+t switch\+\_\+api\+\_\+stp\+\_\+interface\+\_\+state\+\_\+set (
+\begin{DoxyParamCaption}
+\item[{const switch\+\_\+device\+\_\+t}]{device, }
+\item[{const switch\+\_\+handle\+\_\+t}]{stp\+\_\+handle, }
+\item[{const switch\+\_\+handle\+\_\+t}]{handle, }
+\item[{const {\bf switch\+\_\+stp\+\_\+state\+\_\+t}}]{state}
+\end{DoxyParamCaption}
+)}}\label{group__stp_gab74d12ab01cbf7ad799f1f9853ceec51}
+Set the port belonging to a stp in one of discard, learn or forward 
+\begin{DoxyParams}{Parameters}
+{\em device} & device \\
+\hline
+{\em stg\+\_\+handle} & handle of the Spanning tree group \\
+\hline
+{\em intf\+\_\+handle} & -\/ spanning tree interface \\
+\hline
+{\em state} & stp state \\
+\hline
+\end{DoxyParams}
