@@ -5,6 +5,7 @@ header_type ethernet_t {
         etherType : 16;
     }
 }
+header ethernet_t ethernet;
 
 header_type ipv4_t {
     fields {
@@ -22,6 +23,7 @@ header_type ipv4_t {
         dstip: 32;
     }
 }
+header ipv4_t ipv4;
 
 header_type tcp_t {
     fields {
@@ -37,3 +39,47 @@ header_type tcp_t {
         urgentPtr: 16;
     }
 }
+header tcp_t tcp;
+
+header_type udp_t {
+    fields {
+        sPort : 16;
+        dPort : 16;
+        hdr_length : 16;
+        checksum : 16;
+    }
+}
+header udp_t udp;
+
+header_type promote_header_t {
+    fields {
+		digest: 32;
+		m_table_id: 4;
+		idx: 32;
+		cnt: 32;
+		promoteType: 8;
+    }
+}
+header promote_header_t promote_header;
+
+
+header_type record_export_header_t {
+    fields {
+		digest: 32;
+		cnt: 32;
+		exportType: 8;
+    }
+}
+header record_export_header_t record_export_header;
+
+header_type id_export_header_t {
+    fields {
+		srcip: 32;
+		dstip: 32;
+		srcport: 16;
+		dstport: 16;
+		proto: 8;
+		exportType: 8;
+    }
+}
+header id_export_header_t id_export_header;

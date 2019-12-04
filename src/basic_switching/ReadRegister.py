@@ -27,5 +27,13 @@ flag = basic_switching_register_flags_t(read_hw_sync = True)
 #res = client.register_read_pktcnt(sess_hdl, dev_tgt, 0, flag)
 #client.register_write_cntr(sess_hdl, dev_tgt, 0, 5)
 res = client.register_read_cntr(sess_hdl, dev_tgt, 0, flag)
-print "res:", res
+print "pkt_cnt:", res
+res = client.register_read_cntr(sess_hdl, dev_tgt, 5, flag)
+print "promote_cnt:", res
+res = client.register_read_cntr_noop(sess_hdl, dev_tgt, 0, flag)
+print "cntr_noop:", res
+res = client.register_read_cntr_noop(sess_hdl, dev_tgt, 1, flag)
+print "cntr_drop:", res
+res = client.register_read_cntr_meta(sess_hdl, dev_tgt, 0, flag)
+print "measurement_meta.cnt:", res
 conn_mgr.client_cleanup(hex_to_i32(sess_hdl))

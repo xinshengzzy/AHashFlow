@@ -1,13 +1,20 @@
-APP=basic_switching
+P4_NAME=basic_switching
 build:
 	cd $(BUILD) && \
 	./autogen.sh && \
-	./configure --prefix=$(SDE_INSTALL) --with-tofino P4_NAME=$(APP) P4_PATH=$(SRC)/$(APP)/$(APP).p4 --enable-thrift=1 && \
+	./configure --prefix=$(SDE_INSTALL) \
+		--with-tofino \
+		--enable-thrift \
+		P4_VERSION=p4-14 \
+		P4_ARCHITECTURE=tna \
+		P4_NAME=$(P4_NAME) \
+		P4_PATH=$(SRC)/$(P4_NAME)/$(P4_NAME).p4 && \
+	make uninstall && \
 	make clean && \
 	make && \
 	make install
 run:
-	$(SDE)/run_switchd.sh -p $(APP)
+	$(SDE)/run_switchd.sh -p $(P4_NAME)
 push:
 	git add -A
 	git commit -m "Automatic uploading. No comments!"
@@ -19,13 +26,12 @@ register:
 send:
 	python SendPacket.py
 test: 
-	echo $(APP)
+	echo $(P4_NAME)
 ptf:
-	$(SDE_INSTALL)/bin/veth_setup.sh
-	$(SDE_INSTALL)/bin/dma_setup.sh
 	cd $(SDE) && \
-	./run_p4_tests.sh -p $(APP)
+	python $(SDE_INSTALL)/lib/python2.7/site-packages/p4testutils/run_ptf_tests.py \
+		--test-dir $(SRC)/$(P4_NAME)/ptf-tests
 model:
 	$(SDE_INSTALL)/bin/veth_setup.sh
 	$(SDE_INSTALL)/bin/dma_setup.sh
-	$(SDE)/run_tofino_model.sh -p $(APP)
+	$(SDE)/run_tofino_model.sh -p $(P4_NAME)

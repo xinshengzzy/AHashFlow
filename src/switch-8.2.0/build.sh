@@ -1,4 +1,4 @@
-./configure --prefix=$SDE_INSTALL enable_thrift=yes
+./configure --prefix=$SDE_INSTALL enable_thrift=yes \
 	--with-tofino \
 	--with-switchsai \
 	--with-cpu-veth \

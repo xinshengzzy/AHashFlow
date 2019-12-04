@@ -10,6 +10,7 @@
 #include "includes/macro.p4"
 
 #define PKT_INSTANCE_TYPE_NORMAL 0
+#define GAMMA 5
 
 field_list flow {
     ipv4.srcip;
@@ -78,12 +79,13 @@ header_type measurement_meta_t {
         stage: 4; // indicating variable for stage of back inserting;
         stage2: 4; // indicating variable for stage of reporting;
         digest: 8; // digest for differentiating in ancillary table;
-        ac_flow_count: 8; // temp storage for flow count of ancillary table;
-        flag: 32; // subtract flag used for judging negative or not
-        flag2: 32; // subtract flag used for judging negative or not
+        a_cnt: 8; // temp storage for flow count of ancillary table;
+        b_cnt: 8; // temp storage for flow count of B Table;
+        flag_min: 32; // subtract flag used for judging negative or not
+        flag_max: 32; // subtract flag used for judging negative or not
         fingerprint: 32; // fingerprint for 5-tuple;
-        min_flow_count: 32; // minimum flow count of all 3 sub tables of main table;
-        max_flow_count: 32; // maximum flow count of all 3 sub tables of main table;
+        cnt_min: 32; // minimum flow count of all 3 sub tables of main table;
+        cnt_max: 32; // maximum flow count of all 3 sub tables of main table;
         temp_flow_count: 32; // temp storage for flow count of the current sub table;
         main_table_1_predicate: 4; // output predicate in main sub table 1;
         main_table_2_predicate: 4; // output predicate in main sub table 2;
@@ -697,10 +699,10 @@ register ancillary_table
     instance_count: ANCILLARY_TABLE_SIZE;
 }
 
-blackbox stateful_alu update_ancillary_table
+blackbox stateful_alu update_a_table
 {
     reg: ancillary_table;
-    condition_lo: register_hi == 0;
+    condition_lo: register_hi == 0 and register_lo == 0;
     condition_hi: register_hi == measurement_meta.digest;
 
     update_lo_1_predicate: condition_lo or condition_hi;
@@ -710,48 +712,109 @@ blackbox stateful_alu update_ancillary_table
 
     update_hi_1_value: measurement_meta.digest;
 
-    output_predicate: condition_hi;
+    output_value: alu_lo;
+    output_dst: measurement_meta.a_cnt;
+}
+
+action update_a_table_action()
+{
+    update_a_table.execute_stateful_alu_from_hash(hash_4);
+}
+
+table update_a_table_t
+{
+    actions {
+        update_a_table_action;
+    }
+    default_action: update_a_table_action;
+    max_size: 1;
+}
+
+action compare_action()
+{
+    subtract(measurement_meta.flag_min, measurement_meta.cnt_min, measurement_meta.a_cnt);
+    subtract(measurement_meta.flag_max, GAMMA, measurement_meta.a_cnt);
+	subtract(measurement_meta.flag_active, measurement_meta.cnt_max, measurement_meta.b_cnt);
+}
+
+table compare_t
+{
+    reads {
+        measurement_meta.a_count: exact;
+    }
+    actions {
+        compare_action;
+        nop;
+    }
+    default_action: compare_action;
+    max_size: 1;
+}
+
+
+// register array for the B table
+register b_table
+{
+    width: 8;
+    instance_count: ANCILLARY_TABLE_SIZE;
+}
+
+blackbox stateful_alu update_b_table
+{
+    reg: b_table;
+    condition_lo: measurement_meta.a_cnt == 1;
+
+    update_lo_1_predicate: condition_lo;
+    update_lo_1_value: measurement_meta.cnt_max;
+
     output_value: register_lo;
-    output_dst: measurement_meta.ac_flow_count;
+    output_dst: measurement_meta.b_cnt;
 }
 
-action update_ancillary_table_action()
+action update_b_action()
 {
-    update_ancillary_table.execute_stateful_alu_from_hash(hash_4);
+    update_b_table.execute_stateful_alu_from_hash(hash_4);
 }
 
-table update_ancillary_table_t
+table update_b_t
 {
-    reads {
-        measurement_meta.promotion: exact;
-        measurement_meta.main_table_1_predicate: exact;
-        measurement_meta.main_table_2_predicate: exact;
-        measurement_meta.main_table_3_predicate: exact;
-    }
     actions {
-        update_ancillary_table_action;
-        nop;
+        update_b_action;
     }
-    default_action: nop;
+    default_action: update_b_action;
     max_size: 1;
 }
 
-action min_value_subtract_pktcnt_a_action()
-{
-    subtract(measurement_meta.flag, measurement_meta.min_flow_count, measurement_meta.ac_flow_count);
+action promote_max_action() {
+	add_header(promote_header);	
+	modify_field(promote_header.digest, measurement_meta.digest1);
+	modify_field(promote_header.m_table_id, measurement_meta.table_id_max);
+	modify_field(promote_header.idx, measurement_meta.idx_max);
+	modify_field(promote_header.cnt, measurement_meta.cnt_max);
+	modify_field(promote_header.promoteType, ipv4.proto);
+	modify_field(ipv4.proto, IPV4_PROMOTE);
 }
 
-table min_value_subtract_pktcnt_a_t
-{
-    reads {
-        measurement_meta.ac_flow_count: exact;
-    }
-    actions {
-        min_value_subtract_pktcnt_a_action;
-        nop;
-    }
-    default_action: min_value_subtract_pktcnt_a_action;
-    max_size: 1;
+action promote_min_action() {
+	add_header(promote_header);	
+	modify_field(promote_header.digest, measurement_meta.digest1);
+	modify_field(promote_header.m_table_id, measurement_meta.table_id_min);
+	modify_field(promote_header.idx, measurement_meta.idx_min);
+	modify_field(promote_header.cnt, measurement_meta.cnt_min);
+	modify_field(promote_header.promoteType, ipv4.proto);
+	modify_field(ipv4.proto, IPV4_PROMOTE);
+}
+
+table promote_t {
+	reads {
+		measurement_meta.flag_min: ternary;
+		measurement_meta.flag_max: ternary;
+		measurement_meta.active_flag: exact;
+	}	
+	actions {
+		promote_max_action;
+		promote_min_action;
+		cancel_circ_action;
+	}
 }
 
 field_list recirculate_fields
@@ -763,26 +826,8 @@ field_list recirculate_fields
 
 action cancel_recirc_action()
 {
-//    modify_field(measurement_meta.promotion, 1);
-//    recirculate(recirculate_fields);
-//	recirculate(68);
-//	clone_egress_pkt_to_ingress(0, recirculate_fields);
-	modify_field(standard_metadata.instance_type, PKT_INSTANCE_TYPE_NORMAL);
-//	modify_field(standard_metadata.instance_type, 0);
-}
-
-table cancel_recirc_t
-{
-    reads {
-        measurement_meta.ac_flow_count: range;
-        measurement_meta.flag: ternary;
-    }
-    actions {
-        cancel_recirc_action;//highest bit is 1;
-        nop;
-    }
-    default_action: nop;
-    max_size: 1;
+	// drop();
+	mark_for_drop();
 }
 
 control ingress
@@ -843,11 +888,12 @@ control ingress
 control egress
 {
 //    apply(copy_to_cpu_t);
-    apply(update_ancillary_table_t)
+    apply(update_a_table_t)
 	{
         update_ancillary_table_action {
-            apply(min_value_subtract_pktcnt_a_t);
-            apply(cancel_recirc_t);
+			apply(update_b_t);
+            apply(compare_t);
+			apply(promote_t);
         }
     }
     // apply(update_ancillary_table_key_t);

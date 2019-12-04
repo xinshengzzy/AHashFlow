@@ -1,12 +1,21 @@
+#P4_NAME=emulation
+P4_NAME=basic_switching
 build:
 	cd $(BUILD) && \
 	./autogen.sh && \
-	./configure --prefix=$(SDE_INSTALL) --with-tofino P4_NAME=AHashFlow P4_PATH=$(SRC)/AHashFlow/AHashFlow.p4 --enable-thrift && \
+	./configure --prefix=$(SDE_INSTALL) \
+		--with-tofino \
+		--enable-thrift \
+		P4_VERSION=p4-14 \
+		P4_ARCHITECTURE=tna \
+		P4_NAME=$(P4_NAME) \
+		P4_PATH=$(SRC)/$(P4_NAME)/$(P4_NAME).p4 && \
+	make uninstall && \
 	make clean && \
 	make && \
 	make install
 run:
-	/root/bf-sde-8.2.0/run_switchd.sh -p AHashFlow
+	$(SDE)/run_switchd.sh -p $(P4_NAME)
 push:
 	git add -A
 	git commit -m "Automatic uploading. No comments!"
@@ -14,11 +23,16 @@ push:
 pull:
 	git pull
 register:
-	python ReadRegister.py
+	python ./$(P4_NAME)/ReadRegister.py
 send:
 	python SendPacket.py
-test: test.cc
-	g++ test.cc -o test
-	./test
+test: 
+	echo $(P4_NAME)
 ptf:
-	/root/bf-sde-8.2.0/run_p4_tests.sh -p AHashFlow
+	cd $(SDE) && \
+	python $(SDE_INSTALL)/lib/python2.7/site-packages/p4testutils/run_ptf_tests.py \
+		--test-dir $(SRC)/$(P4_NAME)/ptf-tests
+model:
+	$(SDE_INSTALL)/bin/veth_setup.sh
+	$(SDE_INSTALL)/bin/dma_setup.sh
+	$(SDE)/run_tofino_model.sh -p $(P4_NAME)

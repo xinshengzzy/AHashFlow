@@ -1,12 +1,21 @@
+#define ETHERTYPE_IPV4 0x0800
+#define IPV4_TCP 0x0006
+#define IPV4_UDP 0x0011
+#define IPV4_ID_EXPORT 0x0012
+#define IPV4_RECORD_EXPORT 0x0013
+#define IPV4_PROMOTE 0x0014
+#define ID_RECORD_EXPORT 0x0015
+#define ID_EXPORT_UDP 0x0016
+#define RECORD_EXPORT_UDP 0x0017
+#define PROMOTE_UDP 0x0018
+#define ID_EXPORT_TCP 0x0019
+#define RECORD_EXPORT_TCP 0x0020
+#define PROMOTE_TCP 0x0021
+
 parser start {
     return parse_ethernet;
 }
 
-#define ETHERTYPE_IPV4 0x0800
-#define IPV4_TCP 0x0006
-#define IPV4_UDP 0x0011
-
-header ethernet_t ethernet;
 
 parser parse_ethernet {
     extract(ethernet);
@@ -16,8 +25,6 @@ parser parse_ethernet {
     }
 //  return parse_ipv4;
 }
-
-header ipv4_t ipv4;
 
 field_list ipv4_checksum_list {
     ipv4.version;
@@ -49,13 +56,43 @@ calculated_field ipv4.hdrChecksum  {
 parser parse_ipv4 {
     extract(ipv4);
     return select(latest.proto){
-        IPV4_TCP : parse_tcp;
+        IPV4_TCP: parse_tcp;
+		IPV4_UDP: parse_udp;
+		IPV4_ID_EXPORT: parse_id_export;
+		IPV4_RECORD_EXPORT: parse_record_export;
+		IPV4_PROMOTE: parse_promote;	
         default: ingress;
     }
-//  return parse_tcp;
 }
 
-header tcp_t tcp;
+parser parse_id_export {
+	extract(id_export_header);
+	return select(latest.exportType) {
+		ID_RECORD_EXPORT: parse_record_export;
+		ID_EXPORT_UDP: parse_udp;
+		ID_EXPORT_TCP: parse_tcp;
+		default: ingress;
+	}
+}
+
+parser parse_record_export {
+	extract(record_export_header);
+	return select(latest.exportType) {
+		RECORD_EXPORT_UDP: parse_udp;
+		RECORD_EXPORT_TCP: parse_tcp;
+		default: ingress;
+	}
+}
+
+parser parse_promote {
+	extract(promote_header);
+	return select(latest.promoteType) {
+		PROMOTE_UDP: parse_udp;
+		PROMOTE_TCP: parse_tcp;
+		default: ingress;
+	}
+}
+
 
 parser parse_tcp {
     extract(tcp);

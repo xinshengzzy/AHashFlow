@@ -487,14 +487,9 @@ table bloom_filter_sample {
  *****************************************************************************/
 register sampling_cntr {
     width : 32;
-//    static: sip_sampler;
+    static: sip_sampler;
     instance_count : 143360; // Fills 35 + 1 spare RAMs (max size)
 }
-
-//register scratch {
-//	width: 32;
-//	instance_count: 10000;
-//}
 
 /* Note the extra complexity of this ALU program is required so that if C2C was
  * already set (by the bloom filter) it will stay set even if this ALU says not
@@ -504,40 +499,242 @@ blackbox stateful_alu sampling_alu {
     initial_register_lo_value: 1;
     condition_lo: register_lo >= 10;
     condition_hi: ig_intr_md_for_tm.copy_to_cpu != 0;
+    update_lo_1_predicate: condition_lo;
+    update_lo_1_value: 1;
+    update_lo_2_predicate: not condition_lo;
+    update_lo_2_value: register_lo + 1;
+    update_hi_1_value: 1;
+    output_predicate: condition_lo or condition_hi;
+    output_value : alu_hi;
+    output_dst : ig_intr_md_for_tm.copy_to_cpu;
+}
+action sample(index) {
+    sampling_alu.execute_stateful_alu(index);
+}
+action no_sample() {}
+
+table sip_sampler {
+    reads { ipv4.sip : exact; }
+    actions {
+        sample;
+        no_sample;
+    }
+    size : 85000;
+}
+
+
+/******************************************************************************
+ *
+ * Flowlet Table
+ *  - Generate an extra 8 bit field to influence action profile selection.
+ *  - Ideally the timestamp should come from the "global timestamp" intrinsic
+ *    metadata however that is difficult to control from a test script, instead
+ *    a dummy timestamp will be used.
+ *
+ *****************************************************************************/
+/* Field list describing which fields contribute to the flowlet hash. */
+field_list flowlet_hash_fields {
+    ipv4.proto;
+    ipv4.sip;
+    ipv4.dip;
+    tcp.sPort;
+    tcp.dPort;
+}
+field_list_calculation flowlet_hash {
+    input { flowlet_hash_fields; }
+    algorithm: crc16;
+    output_width: 15;
+}
+
+register flowlet_state {
+    width : 64;
+    instance_count : 32768;
+}
+
+/* Flowlet lifetime is 50 microseconds.  Use 0xFFFF as un-initialized value
+ * to signal no next hop has been stored yet. */
+blackbox stateful_alu flowlet_alu {
+    reg: flowlet_state;
+    condition_hi: register_hi != 65535;
+    condition_lo: md.flowlet_ts - register_lo > 50000;
+    update_hi_1_predicate: condition_hi or condition_lo;
+    update_hi_1_value: md.nh_id;
+    update_lo_2_value: md.flowlet_ts;
+    output_value: alu_hi;
+    output_dst: md.nh_id;
+    initial_register_hi_value: 65535;
+    initial_register_lo_value: 60000;
+}
+
+action set_flowlet_hash_and_ts() {
+    modify_field_with_hash_based_offset(md.flowlet_temp, 0, flowlet_hash, 32768);
+    modify_field(md.flowlet_ts, md.timestamp);
+}
+table flowlet_prepare {
+    actions { set_flowlet_hash_and_ts; }
+    size : 1;
+}
+action run_flowlet_alu() {
+    flowlet_alu.execute_stateful_alu(md.flowlet_temp);
+}
+table flowlet_next_hop {
+    actions { run_flowlet_alu; }
+    size : 1;
+}
+
+
+/******************************************************************************
+ *
+ * IPv4 Route Table
+ *
+ *****************************************************************************/
+action set_next_hop(nh) {
+    modify_field(md.nh_id, nh);
+}
+action set_ecmp(ecmp_id) {
+    modify_field(md.nh_id, ecmp_id);
+}
+
+table ipv4_route {
+    reads { ipv4.dip : lpm; }
+    actions {
+        set_next_hop;
+        set_ecmp;
+    }
+    size : 512;
+}
+
+/******************************************************************************
+ *
+ * Next Hop ECMP Table
+ *
+ *****************************************************************************/
+field_list next_hop_ecmp_hash_fields {
+    ipv4.proto;
+    ipv4.sip;
+    ipv4.dip;
+    tcp.sPort;
+    tcp.dPort;
+    md.flowlet_hash_input;
+}
+field_list_calculation next_hop_ecmp_hash {
+    input { next_hop_ecmp_hash_fields; }
+    algorithm : crc32;
+    output_width : 29;
+}
+register next_hop_ecmp_reg {
+    width : 1;
+    instance_count : 131072;
+}
+blackbox stateful_alu next_hop_ecmp_alu {
+    reg: next_hop_ecmp_reg;
+    selector_binding: next_hop_ecmp;
+    update_lo_1_value: clr_bit;
+}
+action_selector next_hop_ecmp_selector {
+    selection_key: next_hop_ecmp_hash;
+    selection_mode: fair;
+}
+action_profile next_hop_ecmp_ap {
+    actions { set_next_hop; }
+    size : 4096;
+    dynamic_action_selection : next_hop_ecmp_selector;
+}
+@pragma stage 6
+@pragma selector_max_group_size 200
+table next_hop_ecmp {
+    reads { md.nh_id : exact; }
+    action_profile : next_hop_ecmp_ap;
+    size : 4096;
+}
+field_list ecmp_index_identity_hash_fields {
+    md.ecmp_tbl_bit_index;
+}
+field_list_calculation ecmp_index_identity_hash {
+    input { ecmp_index_identity_hash_fields; }
+    algorithm: identity;
+    output_width: 17;
+}
+action set_mbr_down() {
+    next_hop_ecmp_alu.execute_stateful_alu_from_hash(ecmp_index_identity_hash);
+    drop();
+}
+@pragma stage 6
+table next_hop_ecmp_fast_update {
+    actions {
+        set_mbr_down;
+    }
+    size : 1;
+}
+
+@pragma stage 5
+table make_key_ecmp_fast_update {
+    reads {
+        pktgen_recirc.key mask 0xFFFF : exact;
+        pktgen_recirc.packet_id : exact;
+    }
+    actions {
+        set_ecmp_fast_update_key;
+        drop_ecmp_update_pkt;
+    }
+    default_action: drop_ecmp_update_pkt;
+    size : 16384;
+}
+action set_ecmp_fast_update_key(key) {
+    modify_field(md.ecmp_tbl_bit_index, key);
+}
+action drop_ecmp_update_pkt() {
+    drop();
+}
+
+/******************************************************************************
+ *
+ * Next Hop Table
+ *  - Uses a register to do useless operations to test multiple instructions
+ *    on a stateful ALU.
+ *
+ *****************************************************************************/
+register scratch {
+    width: 16;
+    static: next_hop;
+    instance_count: 4096;
+}
+blackbox stateful_alu scratch_alu_add {
+    reg: scratch;
     update_lo_1_value: register_lo + md.nh_id;
 }
-//blackbox stateful_alu scratch_alu_sub {
-//    reg: scratch;
-//    update_lo_1_value: md.nh_id - register_lo;
-//}
-//blackbox stateful_alu scratch_alu_zero {
-//    reg: scratch;
-//    update_lo_1_value: 0;
-//}
-//blackbox stateful_alu scratch_alu_invert {
-//    reg: scratch;
-//    update_lo_1_value: ~register_lo;
-//}
+blackbox stateful_alu scratch_alu_sub {
+    reg: scratch;
+    update_lo_1_value: md.nh_id - register_lo;
+}
+blackbox stateful_alu scratch_alu_zero {
+    reg: scratch;
+    update_lo_1_value: 0;
+}
+blackbox stateful_alu scratch_alu_invert {
+    reg: scratch;
+    update_lo_1_value: ~register_lo;
+}
 
 action set_egr_ifid(ifid) {
     modify_field(md.egr_ifid, ifid);
 }
-//action scratch_add(index, ifid) {
-//    set_egr_ifid(ifid);
-//    scratch_alu_add.execute_stateful_alu(index);
-//}
-//action scratch_sub(index, ifid) {
-//    set_egr_ifid(ifid);
-//    scratch_alu_sub.execute_stateful_alu(index);
-//}
-//action scratch_zero(index, ifid) {
-//    set_egr_ifid(ifid);
-//    scratch_alu_zero.execute_stateful_alu(index);
-//}
-//action scratch_invert(index, ifid) {
-//    set_egr_ifid(ifid);
-//    scratch_alu_invert.execute_stateful_alu(index);
-//}
+action scratch_add(index, ifid) {
+    set_egr_ifid(ifid);
+    scratch_alu_add.execute_stateful_alu(index);
+}
+action scratch_sub(index, ifid) {
+    set_egr_ifid(ifid);
+    scratch_alu_sub.execute_stateful_alu(index);
+}
+action scratch_zero(index, ifid) {
+    set_egr_ifid(ifid);
+    scratch_alu_zero.execute_stateful_alu(index);
+}
+action scratch_invert(index, ifid) {
+    set_egr_ifid(ifid);
+    scratch_alu_invert.execute_stateful_alu(index);
+}
 action next_hop_down(mgid) {
     add_header(recirc_hdr);
     modify_field(recirc_hdr.tag, 0xF);
@@ -550,10 +747,10 @@ table next_hop {
     reads   { md.nh_id : ternary; }
     actions {
         set_egr_ifid;
-//        scratch_add;
-//        scratch_sub;
-//        scratch_zero;
-//        scratch_invert;
+        scratch_add;
+        scratch_sub;
+        scratch_zero;
+        scratch_invert;
         next_hop_down;
     }
     size: 4096;
@@ -709,15 +906,15 @@ control ingress {
                     apply(bloom_filter_sample);
                 }
 
-//                apply(sip_sampler);
+                apply(sip_sampler);
 
-//                apply(flowlet_prepare);
-//                apply(ipv4_route) {
-//                    set_ecmp {
-//                        apply(next_hop_ecmp);
-//                        //apply(flowlet_next_hop);
-//                    }
-//                }
+                apply(flowlet_prepare);
+                apply(ipv4_route) {
+                    set_ecmp {
+                        apply(next_hop_ecmp);
+                        //apply(flowlet_next_hop);
+                    }
+                }
 
                 apply(next_hop);
 
@@ -759,8 +956,8 @@ control pgen_pass_1_ctrl_flow {
         apply( clr_bloom_filter_2 );
         apply( clr_bloom_filter_3 );
     } else if ( valid(pktgen_recirc) ) {
-//        apply(make_key_ecmp_fast_update);
-//        apply(next_hop_ecmp_fast_update);
+        apply(make_key_ecmp_fast_update);
+        apply(next_hop_ecmp_fast_update);
     } else {
         apply(prepare_for_recirc);
     }

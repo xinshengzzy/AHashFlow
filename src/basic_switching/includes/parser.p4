@@ -25,14 +25,24 @@ parser start {
 
 #define ETHERTYPE_VLAN 0x8100
 #define ETHERTYPE_IPV4 0x0800
+#define ETHERTYPE_MYHEADER 0x0801
 
 parser parse_ethernet {
     extract(ethernet);
     return select(latest.etherType) {
         ETHERTYPE_VLAN : parse_vlan;
 //        ETHERTYPE_IPV4 : parse_ipv4;
+		ETHERTYPE_MYHEADER: parse_my_header;
         default: ingress;
     }
+}
+
+parser parse_my_header {
+	extract(my_header);
+	return select(latest.etherType) {
+		ETHERTYPE_VLAN : parse_vlan;
+		default: ingress;
+	}
 }
 
 parser parse_vlan {
@@ -43,4 +53,3 @@ parser parse_vlan {
         default: ingress;
     }
 }
-
