@@ -26,6 +26,7 @@ client = basic_switching.Client(p4_protocol)
 flag = basic_switching_register_flags_t(read_hw_sync = True)
 #res = client.register_read_pktcnt(sess_hdl, dev_tgt, 0, flag)
 #client.register_write_cntr(sess_hdl, dev_tgt, 0, 5)
+'''
 res = client.register_read_cntr(sess_hdl, dev_tgt, 0, flag)
 print "pkt_cnt:", res
 res = client.register_read_cntr(sess_hdl, dev_tgt, 5, flag)
@@ -36,4 +37,51 @@ res = client.register_read_cntr_noop(sess_hdl, dev_tgt, 1, flag)
 print "cntr_drop:", res
 res = client.register_read_cntr_meta(sess_hdl, dev_tgt, 0, flag)
 print "measurement_meta.cnt:", res
+'''
+#res = client.register_read_cntr1(sess_hdl, dev_tgt, 0, flag)
+#print "cntr1:", res
+#res = client.register_read_cntr2(sess_hdl, dev_tgt, 0, flag)
+#print "cntr2:", res
+res = client.register_read_cntr4(sess_hdl, dev_tgt, 0, flag)
+print "cntr4[0]:", res
+'''
+res = client.register_read_cntr4(sess_hdl, dev_tgt, 0, flag)
+print "cntr4:", res
+res = client.register_read_cntr5(sess_hdl, dev_tgt, 0, flag)
+print "cntr5:", res
+'''
+'''
+res = client.register_read_cntr6(sess_hdl, dev_tgt, 0, flag)
+print "cntr6:", res
+res = client.register_read_cntr7(sess_hdl, dev_tgt, 0, flag)
+print "cntr7:", res
+res = client.register_read_cntr8(sess_hdl, dev_tgt, 0, flag)
+print "cntr8:", res
+res = client.register_read_cntr9(sess_hdl, dev_tgt, 0, flag)
+print "cntr9:", res
+res = client.register_read_cntr10(sess_hdl, dev_tgt, 0, flag)
+print "cntr10:", res
+res = client.register_read_cntr11(sess_hdl, dev_tgt, 0, flag)
+print "cntr11:", res
+res = client.register_read_cntr12(sess_hdl, dev_tgt, 0, flag)
+print "cntr12:", res
+'''
+'''
+res = client.register_read_cntr13(sess_hdl, dev_tgt, 0, flag)
+print "cntr13:", res
+res = client.register_read_cntr14(sess_hdl, dev_tgt, 0, flag)
+print "cntr14:", res
+res = client.register_read_cntr15(sess_hdl, dev_tgt, 0, flag)
+print "cntr15:", res
+res = client.register_read_cntr16(sess_hdl, dev_tgt, 0, flag)
+print "cntr16:", res
+res = client.register_read_cntr17(sess_hdl, dev_tgt, 0, flag)
+print "cntr17:", res
+res = client.register_read_cntr18(sess_hdl, dev_tgt, 0, flag)
+print "cntr18:", res
+res = client.register_read_cntr19(sess_hdl, dev_tgt, 0, flag)
+print "cntr19:", res
+#res = client.register_read_cntr20(sess_hdl, dev_tgt, 0, flag)
+#print "cntr20:", res
+'''
 conn_mgr.client_cleanup(hex_to_i32(sess_hdl))

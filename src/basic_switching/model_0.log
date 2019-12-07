@@ -1,142 +1,101 @@
-:12-02 13:59:35.675819:    event-log build
-:12-02 13:59:35.675944:    Setting logging fn
-:12-02 13:59:35.675964:    Registering handler for tx
-:12-02 13:59:36.021128:    :-:-:<0,0,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
-:12-02 13:59:36.021279:    :-:-:<0,0,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
-:12-02 13:59:36.026099:    :-:-:<0,1,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
-:12-02 13:59:36.026198:    :-:-:<0,1,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
-:12-02 13:59:36.031008:    :-:-:<0,2,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
-:12-02 13:59:36.031105:    :-:-:<0,2,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
-:12-02 13:59:36.036127:    :-:-:<0,3,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
-:12-02 13:59:36.036222:    :-:-:<0,3,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
-:12-02 14:00:26.792177:    :-:-:<0,0,0>:Begin packet processing
-:12-02 14:00:26.792305:    :0x1:-:<0,0,0>:========== Ingress Pkt from port 0 (104 bytes)  ==========
-:12-02 14:00:26.792321:    :0x1:-:<0,0,0>:Packet :
-:12-02 14:00:26.792336:        :0x1:-:<0,0,0>:00 11 11 11 11 11 00 55 55 55 55 55 08 00 45 00 
-:12-02 14:00:26.792349:        :0x1:-:<0,0,0>:00 56 00 65 00 00 40 06 af 93 c0 a8 00 01 0a 00 
-:12-02 14:00:26.792365:        :0x1:-:<0,0,0>:00 01 04 d2 00 50 00 00 00 00 00 00 00 00 50 02 
-:12-02 14:00:26.792381:        :0x1:-:<0,0,0>:20 00 c3 d5 00 00 00 01 02 03 04 05 06 07 08 09 
-:12-02 14:00:26.792416:    :0x1:-:<0,0,->:========== Packet to input parser: from port 0 (120 bytes)  ==========
-:12-02 14:00:26.792427:    :0x1:-:<0,0,->:Packet :
-:12-02 14:00:26.792444:        :0x1:-:<0,0,->:00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 
-:12-02 14:00:26.792461:        :0x1:-:<0,0,->:00 11 11 11 11 11 00 55 55 55 55 55 08 00 45 00 
-:12-02 14:00:26.792474:        :0x1:-:<0,0,->:00 56 00 65 00 00 40 06 af 93 c0 a8 00 01 0a 00 
-:12-02 14:00:26.792486:        :0x1:-:<0,0,->:00 01 04 d2 00 50 00 00 00 00 00 00 00 00 50 02 
-:12-02 14:00:26.792575:        :0x1:-:<0,0,0>:Ingress Parser State <Shim start state>
-:12-02 14:00:26.792694:        :0x1:-:<0,0,0>:Ingress Parser State <POV initialization>_<Ingress intrinsic metadata>
-:12-02 14:00:26.792756:        :0x1:-:<0,0,0>:Ingress Parser State <Phase 0>
-:12-02 14:00:26.792888:        :0x1:-:<0,0,0>:Ingress Parser State start_parse_ethernet
-:12-02 14:00:26.793319:        :0x1:-:<0,0,->:Ingress Headers:
-:12-02 14:00:26.793365:        :0x1:-:<0,0,->:Header ethernet is valid
-:12-02 14:00:26.793477:    :0x1:-:<0,0,->:------------ Stage 0 ------------
-:12-02 14:00:26.795569:    :0x1:-:<0,0,0>:Ingress : Table recirc_tbl is miss
-:12-02 14:00:26.795597:        :0x1:-:<0,0,0>:Key:
-:12-02 14:00:26.795731:        :0x1:-:<0,0,0>:Execute Default Action: do_recirc
-:12-02 14:00:26.795887:        :0x1:-:<0,0,0>:Action Results:
-:12-02 14:00:26.795901:        :0x1:-:<0,0,0>:	----- RecirculatePrimitive -----
-:12-02 14:00:26.795911:        :0x1:-:<0,0,0>:	Destination:
-:12-02 14:00:26.795920:        :0x1:-:<0,0,0>:	ig_intr_md_for_tm.ucast_egress_port[8:0] = 0x44
-:12-02 14:00:26.795930:        :0x1:-:<0,0,0>:	Source 1:
-:12-02 14:00:26.795940:        :0x1:-:<0,0,0>:	ig_intr_md.ingress_port[8:0] = 0x0
-:12-02 14:00:26.795950:        :0x1:-:<0,0,0>:	Source 2:
-:12-02 14:00:26.795959:        :0x1:-:<0,0,0>:	Val=0x44
-:12-02 14:00:26.795972:        :0x1:-:<0,0,0>:Next Table = update_cntr_t
-:12-02 14:00:26.796051:    :0x1:-:<0,0,0>:Ingress : Gateway table condition (True) matched.
-:12-02 14:00:26.796077:    :0x1:-:<0,0,0>:Ingress : Gateway attached to update_cntr_t
-:12-02 14:00:26.796092:    :0x1:-:<0,0,0>:Ingress : Associated table update_cntr_t is executed
-:12-02 14:00:26.796103:    :0x1:-:<0,0,0>:Ingress : Gateway did provide payload.
-:12-02 14:00:26.796113:        :0x1:-:<0,0,0>:Executed StatefulALU 3 with instruction 0
-:12-02 14:00:26.796149:        :0x1:-:<0,0,0>:Execute Action: update_cntr_action
-:12-02 14:00:26.796216:        :0x1:-:<0,0,0>:Action Results:
-:12-02 14:00:26.796227:        :0x1:-:<0,0,0>:	----- ExecuteStatefulAluPrimitive -----
-:12-02 14:00:26.796236:        :0x1:-:<0,0,0>:	----- BlackBox: update_cntr -----
-:12-02 14:00:26.796245:        :0x1:-:<0,0,0>:	----- register: cntr -----
-:12-02 14:00:26.796559:        :0x1:-:<0,0,0>:	--- SALU Condition ---
-:12-02 14:00:26.796573:        :0x1:-:<0,0,0>:	  Not supplied by program.
-:12-02 14:00:26.796583:        :0x1:-:<0,0,0>:	    SALU ConditionLo: FALSE
-:12-02 14:00:26.796592:        :0x1:-:<0,0,0>:	    SALU ConditionHi: FALSE
-:12-02 14:00:26.796601:        :0x1:-:<0,0,0>:	--- SALU Update ---
-:12-02 14:00:26.796610:        :0x1:-:<0,0,0>:	  --- SALU Update Lo 1 ---
-:12-02 14:00:26.796619:        :0x1:-:<0,0,0>:	    Update Lo 1 predicate not supplied by program
-:12-02 14:00:26.796628:        :0x1:-:<0,0,0>:	    Update Lo 1 PredicateResult: TRUE
-:12-02 14:00:26.796638:        :0x1:-:<0,0,0>:	    Update Lo 1 expression result: 0x00000001
-:12-02 14:00:26.796647:        :0x1:-:<0,0,0>:	    Update Lo 1 expression result computed using fields:
-:12-02 14:00:26.796656:        :0x1:-:<0,0,0>:	        Constant Input Value
-:12-02 14:00:26.796665:        :0x1:-:<0,0,0>:	        0x1: 0x00000000
-:12-02 14:00:26.796674:        :0x1:-:<0,0,0>:	--- SALU Output ---
-:12-02 14:00:26.796683:        :0x1:-:<0,0,0>:	    Output destination supplied by program
-:12-02 14:00:26.796692:        :0x1:-:<0,0,0>:	---  SALU Register ---
-:12-02 14:00:26.796701:        :0x1:-:<0,0,0>:	   Register Index: 0
-:12-02 14:00:26.796710:        :0x1:-:<0,0,0>:	     Before stateful alu execution: 0x00000000
-:12-02 14:00:26.796720:        :0x1:-:<0,0,0>:	     After stateful alu execution: 0x00000001
-:12-02 14:00:26.796734:        :0x1:-:<0,0,0>:Next Table = forward
-:12-02 14:00:26.845338:    :0x1:-:<0,0,->:------------ Stage 1 ------------
-:12-02 14:00:26.847680:    :0x1:-:<0,0,1>:Ingress : Table forward is hit
-:12-02 14:00:26.847720:        :0x1:-:<0,0,1>:Key:
-:12-02 14:00:26.847841:        :0x1:-:<0,0,1>:	ethernet.dstAddr[39:8] = 0x11111111
-:12-02 14:00:26.847866:        :0x1:-:<0,0,1>:	ethernet.dstAddr[47:40] = 0x0
-:12-02 14:00:26.847886:        :0x1:-:<0,0,1>:	ethernet.dstAddr[7:0] = 0x11
-:12-02 14:00:26.847933:        :0x1:-:<0,0,1>:Execute Action: set_egr
-:12-02 14:00:26.848048:        :0x1:-:<0,0,1>:Action Results:
-:12-02 14:00:26.848069:        :0x1:-:<0,0,1>:	----- ModifyFieldPrimitive -----
-:12-02 14:00:26.848089:        :0x1:-:<0,0,1>:	Destination:
-:12-02 14:00:26.848108:        :0x1:-:<0,0,1>:	ig_intr_md_for_tm.ucast_egress_port[8:0] = 0x1
-:12-02 14:00:26.848128:        :0x1:-:<0,0,1>:	mask=0x1FF
-:12-02 14:00:26.848146:        :0x1:-:<0,0,1>:	Source 1:
-:12-02 14:00:26.848169:        :0x1:-:<0,0,1>:	egress_spec=action_param
-:12-02 14:00:26.848192:        :0x1:-:<0,0,1>:Next Table = --END_OF_PIPELINE--
-:12-02 14:00:26.850599:    :0x1:-:<0,0,->:------------ Stage 2 ------------
-:12-02 14:00:26.855027:    :0x1:-:<0,0,->:------------ Stage 3 ------------
-:12-02 14:00:26.859456:    :0x1:-:<0,0,->:------------ Stage 4 ------------
-:12-02 14:00:26.863879:    :0x1:-:<0,0,->:------------ Stage 5 ------------
-:12-02 14:00:26.868297:    :0x1:-:<0,0,->:------------ Stage 6 ------------
-:12-02 14:00:26.872708:    :0x1:-:<0,0,->:------------ Stage 7 ------------
-:12-02 14:00:26.877127:    :0x1:-:<0,0,->:------------ Stage 8 ------------
-:12-02 14:00:26.881555:    :0x1:-:<0,0,->:------------ Stage 9 ------------
-:12-02 14:00:26.885980:    :0x1:-:<0,0,->:------------ Stage 10 ------------
-:12-02 14:00:26.890403:    :0x1:-:<0,0,->:------------ Stage 11 ------------
-:12-02 14:00:26.897741:        :0x1:-:<0,0,->:Ingress Deparser Headers:
-:12-02 14:00:26.897815:        :0x1:-:<0,0,->:Header ethernet is valid
-:12-02 14:00:26.902893:    :0x1:-:<0,0,->:---- Mirroring session 0 : ingress  ----
-:12-02 14:00:26.902925:        :0x1:-:<0,0,->:Mirroring session 0 is not enabled
-:12-02 14:00:26.903009:    :-:0x1:<0,0,0>:========== Egress Pkt from TM to port 1 (tm 105, real 108 bytes) ==========
-:12-02 14:00:26.903044:    :-:0x1:<0,0,0>:Packet :
-:12-02 14:00:26.903066:        :-:0x1:<0,0,0>:00 01 00 00 00 11 11 11 11 11 00 55 55 55 55 55 
-:12-02 14:00:26.903085:        :-:0x1:<0,0,0>:08 00 45 00 00 56 00 65 00 00 40 06 af 93 c0 a8 
-:12-02 14:00:26.903104:        :-:0x1:<0,0,0>:00 01 0a 00 00 01 04 d2 00 50 00 00 00 00 00 00 
-:12-02 14:00:26.903124:        :-:0x1:<0,0,0>:00 00 50 02 20 00 c3 d5 00 00 00 01 02 03 04 05 
-:12-02 14:00:26.903201:        :-:0x1:<0,0,0>:Egress Parser State <Shim start state>
-:12-02 14:00:26.903367:        :-:0x1:<0,0,0>:Egress Parser State <POV initialization>_<Egress intrinsic metadata>_<POV skip>_start_parse_ethernet
-:12-02 14:00:26.903784:        :-:0x1:<0,0,->:Egress Headers:
-:12-02 14:00:26.903838:        :-:0x1:<0,0,->:Header ethernet is valid
-:12-02 14:00:26.903955:    :-:0x1:<0,0,->:------------ Stage 0 ------------
-:12-02 14:00:26.905595:    :-:0x1:<0,0,0>:Egress : Table acl is miss
-:12-02 14:00:26.905630:        :-:0x1:<0,0,0>:Key:
-:12-02 14:00:26.905778:        :-:0x1:<0,0,0>:	ethernet.dstAddr[23:0] = 0x111111
-:12-02 14:00:26.905803:        :-:0x1:<0,0,0>:	ethernet.srcAddr[47:40] = 0x0
-:12-02 14:00:26.905823:        :-:0x1:<0,0,0>:	ethernet.srcAddr[15:0] = 0x5555
-:12-02 14:00:26.905843:        :-:0x1:<0,0,0>:	ethernet.dstAddr[47:40] = 0x0
-:12-02 14:00:26.905865:        :-:0x1:<0,0,0>:	ethernet.srcAddr[39:32] = 0x55
-:12-02 14:00:26.905884:        :-:0x1:<0,0,0>:	ethernet.dstAddr[39:24] = 0x1111
-:12-02 14:00:26.905906:        :-:0x1:<0,0,0>:	ethernet.srcAddr[31:16] = 0x5555
-:12-02 14:00:26.905928:        :-:0x1:<0,0,0>:Next Table = --END_OF_PIPELINE--
-:12-02 14:00:26.908010:    :-:0x1:<0,0,->:------------ Stage 1 ------------
-:12-02 14:00:26.911626:    :-:0x1:<0,0,->:------------ Stage 2 ------------
-:12-02 14:00:26.915393:    :-:0x1:<0,0,->:------------ Stage 3 ------------
-:12-02 14:00:26.919151:    :-:0x1:<0,0,->:------------ Stage 4 ------------
-:12-02 14:00:26.922899:    :-:0x1:<0,0,->:------------ Stage 5 ------------
-:12-02 14:00:26.926663:    :-:0x1:<0,0,->:------------ Stage 6 ------------
-:12-02 14:00:26.930388:    :-:0x1:<0,0,->:------------ Stage 7 ------------
-:12-02 14:00:26.934141:    :-:0x1:<0,0,->:------------ Stage 8 ------------
-:12-02 14:00:26.937902:    :-:0x1:<0,0,->:------------ Stage 9 ------------
-:12-02 14:00:26.941682:    :-:0x1:<0,0,->:------------ Stage 10 ------------
-:12-02 14:00:26.945442:    :-:0x1:<0,0,->:------------ Stage 11 ------------
-:12-02 14:00:26.951964:        :-:0x1:<0,0,->:Egress Deparser Headers:
-:12-02 14:00:26.952031:        :-:0x1:<0,0,->:Header ethernet is valid
-:12-02 14:00:26.956963:    :-:0x1:<0,0,0>:========== Tx Pkt to port 1 (104 bytes) ==========
-:12-02 14:00:26.956993:    :-:0x1:<0,0,0>:Packet :
-:12-02 14:00:26.957014:        :-:0x1:<0,0,0>:00 11 11 11 11 11 00 55 55 55 55 55 08 00 45 00 
-:12-02 14:00:26.957033:        :-:0x1:<0,0,0>:00 56 00 65 00 00 40 06 af 93 c0 a8 00 01 0a 00 
-:12-02 14:00:26.957052:        :-:0x1:<0,0,0>:00 01 04 d2 00 50 00 00 00 00 00 00 00 00 50 02 
-:12-02 14:00:26.957071:        :-:0x1:<0,0,0>:20 00 c3 d5 00 00 00 01 02 03 04 05 06 07 08 09 
-:12-02 14:00:26.957490:    :-:-:<0,0,0>:Waiting for packets to process
+:12-06 12:53:33.989208:    event-log build
+:12-06 12:53:33.989336:    Setting logging fn
+:12-06 12:53:33.989367:    Registering handler for tx
+:12-06 12:53:34.336750:    :-:-:<0,0,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:12-06 12:53:34.336893:    :-:-:<0,0,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:12-06 12:53:34.341872:    :-:-:<0,1,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:12-06 12:53:34.341967:    :-:-:<0,1,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:12-06 12:53:34.346922:    :-:-:<0,2,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:12-06 12:53:34.347020:    :-:-:<0,2,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:12-06 12:53:34.352242:    :-:-:<0,3,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:12-06 12:53:34.352346:    :-:-:<0,3,->:LearningFilter::clear : Excessive clearing of filter 1 !!! Nothing to clear
+:12-06 12:54:22.045935:    :-:-:<0,0,0>:Begin packet processing
+:12-06 12:54:22.046062:    :0x1:-:<0,0,0>:========== Ingress Pkt from port 0 (104 bytes)  ==========
+:12-06 12:54:22.046077:    :0x1:-:<0,0,0>:Packet :
+:12-06 12:54:22.046092:        :0x1:-:<0,0,0>:00 11 11 11 11 11 00 55 55 55 55 55 08 00 45 00 
+:12-06 12:54:22.046105:        :0x1:-:<0,0,0>:00 56 00 65 00 00 40 06 af 93 c0 a8 00 01 0a 00 
+:12-06 12:54:22.046118:        :0x1:-:<0,0,0>:00 01 04 d2 00 50 00 00 00 00 00 00 00 00 50 02 
+:12-06 12:54:22.046134:        :0x1:-:<0,0,0>:20 00 c3 d5 00 00 00 01 02 03 04 05 06 07 08 09 
+:12-06 12:54:22.046169:    :0x1:-:<0,0,->:========== Packet to input parser: from port 0 (120 bytes)  ==========
+:12-06 12:54:22.046180:    :0x1:-:<0,0,->:Packet :
+:12-06 12:54:22.046193:        :0x1:-:<0,0,->:00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 
+:12-06 12:54:22.046206:        :0x1:-:<0,0,->:00 11 11 11 11 11 00 55 55 55 55 55 08 00 45 00 
+:12-06 12:54:22.046218:        :0x1:-:<0,0,->:00 56 00 65 00 00 40 06 af 93 c0 a8 00 01 0a 00 
+:12-06 12:54:22.046231:        :0x1:-:<0,0,->:00 01 04 d2 00 50 00 00 00 00 00 00 00 00 50 02 
+:12-06 12:54:22.046320:        :0x1:-:<0,0,0>:Ingress Parser State <Shim start state>
+:12-06 12:54:22.046443:        :0x1:-:<0,0,0>:Ingress Parser State <POV initialization>_<Ingress intrinsic metadata>
+:12-06 12:54:22.046505:        :0x1:-:<0,0,0>:Ingress Parser State <Phase 0>
+:12-06 12:54:22.046628:        :0x1:-:<0,0,0>:Ingress Parser State start_parse_ethernet
+:12-06 12:54:22.047119:        :0x1:-:<0,0,->:Ingress Headers:
+:12-06 12:54:22.047170:        :0x1:-:<0,0,->:Header ethernet is valid
+:12-06 12:54:22.047276:    :0x1:-:<0,0,->:------------ Stage 0 ------------
+:12-06 12:54:22.049610:    :0x1:-:<0,0,0>:Ingress : Gateway table condition (True) matched.
+:12-06 12:54:22.049647:    :0x1:-:<0,0,0>:Ingress : Gateway attached to modify_cntr4_t
+:12-06 12:54:22.049658:    :0x1:-:<0,0,0>:Ingress : Associated table modify_cntr4_t is executed
+:12-06 12:54:22.049668:    :0x1:-:<0,0,0>:Ingress : Gateway did provide payload.
+:12-06 12:54:22.049698:        :0x1:-:<0,0,0>:Execute Action: modify_cntr4
+:12-06 12:54:22.049789:        :0x1:-:<0,0,0>:Action Results:
+:12-06 12:54:22.049801:        :0x1:-:<0,0,0>:	----- ModifyFieldPrimitive -----
+:12-06 12:54:22.049811:        :0x1:-:<0,0,0>:	Destination:
+:12-06 12:54:22.049821:        :0x1:-:<0,0,0>:	measurement_meta.cntr4[31:0] = 0x103E8
+:12-06 12:54:22.049831:        :0x1:-:<0,0,0>:	mask=0xFFFFFFFF
+:12-06 12:54:22.049840:        :0x1:-:<0,0,0>:	Source 1:
+:12-06 12:54:22.049850:        :0x1:-:<0,0,0>:	Val=0x103E8
+:12-06 12:54:22.049861:        :0x1:-:<0,0,0>:Next Table = modify_cntr3_t
+:12-06 12:54:22.099032:    :0x1:-:<0,0,->:------------ Stage 1 ------------
+:12-06 12:54:22.101329:    :0x1:-:<0,0,1>:Ingress : Gateway table condition (True) matched.
+:12-06 12:54:22.101389:    :0x1:-:<0,0,1>:Ingress : Gateway attached to modify_cntr3_t
+:12-06 12:54:22.101409:    :0x1:-:<0,0,1>:Ingress : Associated table modify_cntr3_t is executed
+:12-06 12:54:22.101442:    :0x1:-:<0,0,1>:Ingress : Gateway did provide payload.
+:12-06 12:54:22.101489:        :0x1:-:<0,0,1>:Execute Action: modify_cntr3
+:12-06 12:54:22.101611:        :0x1:-:<0,0,1>:Action Results:
+:12-06 12:54:22.101632:        :0x1:-:<0,0,1>:	----- ModifyFieldPrimitive -----
+:12-06 12:54:22.101652:        :0x1:-:<0,0,1>:	Destination:
+:12-06 12:54:22.101673:        :0x1:-:<0,0,1>:	measurement_meta.cntr3[15:0] = 0x3E8
+:12-06 12:54:22.101696:        :0x1:-:<0,0,1>:	mask=0xFFFF
+:12-06 12:54:22.101717:        :0x1:-:<0,0,1>:	Source 1:
+:12-06 12:54:22.101738:        :0x1:-:<0,0,1>:	measurement_meta.cntr4[31:0] = 0x0
+:12-06 12:54:22.101761:        :0x1:-:<0,0,1>:Next Table = update_cntr3_t
+:12-06 12:54:22.104150:    :0x1:-:<0,0,->:------------ Stage 2 ------------
+:12-06 12:54:22.105985:    :0x1:-:<0,0,2>:Ingress : Gateway table condition (True) matched.
+:12-06 12:54:22.106039:    :0x1:-:<0,0,2>:Ingress : Gateway attached to update_cntr3_t
+:12-06 12:54:22.106059:    :0x1:-:<0,0,2>:Ingress : Associated table update_cntr3_t is executed
+:12-06 12:54:22.106080:    :0x1:-:<0,0,2>:Ingress : Gateway did provide payload.
+:12-06 12:54:22.106096:        :0x1:-:<0,0,2>:Executed StatefulALU 3 with instruction 0
+:12-06 12:54:22.106150:        :0x1:-:<0,0,2>:Execute Action: update_cntr3_action
+:12-06 12:54:22.106231:        :0x1:-:<0,0,2>:Action Results:
+:12-06 12:54:22.106248:        :0x1:-:<0,0,2>:	----- ExecuteStatefulAluPrimitive -----
+:12-06 12:54:22.106270:        :0x1:-:<0,0,2>:	----- BlackBox: update_cntr3 -----
+:12-06 12:54:22.106291:        :0x1:-:<0,0,2>:	----- register: cntr3 -----
+:12-06 12:54:22.106857:        :0x1:-:<0,0,2>:	--- SALU Condition ---
+:12-06 12:54:22.106884:        :0x1:-:<0,0,2>:	  Not supplied by program.
+:12-06 12:54:22.106906:        :0x1:-:<0,0,2>:	    SALU ConditionLo: FALSE
+:12-06 12:54:22.106927:        :0x1:-:<0,0,2>:	    SALU ConditionHi: FALSE
+:12-06 12:54:22.106948:        :0x1:-:<0,0,2>:	--- SALU Update ---
+:12-06 12:54:22.106971:        :0x1:-:<0,0,2>:	  --- SALU Update Lo 1 ---
+:12-06 12:54:22.106991:        :0x1:-:<0,0,2>:	    Update Lo 1 predicate not supplied by program
+:12-06 12:54:22.107011:        :0x1:-:<0,0,2>:	    Update Lo 1 PredicateResult: TRUE
+:12-06 12:54:22.107033:        :0x1:-:<0,0,2>:	    Update Lo 1 expression result: 0x000003e8
+:12-06 12:54:22.107051:        :0x1:-:<0,0,2>:	    Update Lo 1 expression result computed using fields:
+:12-06 12:54:22.107070:        :0x1:-:<0,0,2>:	        measurement_meta.cntr3: 0x000003e8
+:12-06 12:54:22.107090:        :0x1:-:<0,0,2>:	--- SALU Output ---
+:12-06 12:54:22.107109:        :0x1:-:<0,0,2>:	    Output destination supplied by program
+:12-06 12:54:22.107134:        :0x1:-:<0,0,2>:	---  SALU Register ---
+:12-06 12:54:22.107156:        :0x1:-:<0,0,2>:	   Register Index: 0
+:12-06 12:54:22.107179:        :0x1:-:<0,0,2>:	     Before stateful alu execution: 0x00000000
+:12-06 12:54:22.107201:        :0x1:-:<0,0,2>:	     After stateful alu execution: 0x000003e8
+:12-06 12:54:22.107229:        :0x1:-:<0,0,2>:Next Table = --END_OF_PIPELINE--
+:12-06 12:54:22.109628:    :0x1:-:<0,0,->:------------ Stage 3 ------------
+:12-06 12:54:22.114058:    :0x1:-:<0,0,->:------------ Stage 4 ------------
+:12-06 12:54:22.118473:    :0x1:-:<0,0,->:------------ Stage 5 ------------
+:12-06 12:54:22.122890:    :0x1:-:<0,0,->:------------ Stage 6 ------------
+:12-06 12:54:22.127324:    :0x1:-:<0,0,->:------------ Stage 7 ------------
+:12-06 12:54:22.131760:    :0x1:-:<0,0,->:------------ Stage 8 ------------
+:12-06 12:54:22.136175:    :0x1:-:<0,0,->:------------ Stage 9 ------------
+:12-06 12:54:22.140584:    :0x1:-:<0,0,->:------------ Stage 10 ------------
+:12-06 12:54:22.144995:    :0x1:-:<0,0,->:------------ Stage 11 ------------
+:12-06 12:54:22.152388:        :0x1:-:<0,0,->:Ingress Deparser Headers:
+:12-06 12:54:22.152468:        :0x1:-:<0,0,->:Header ethernet is valid
+:12-06 12:54:22.157670:    :-:-:<0,0,->:---- Mirroring session 0 : ingress  ----
+:12-06 12:54:22.157701:        :-:-:<0,0,->:Mirroring session 0 is not enabled
+:12-06 12:54:22.158090:    :-:-:<0,0,0>:Waiting for packets to process

@@ -24,7 +24,9 @@ limitations under the License.
 
 header_type measurement_meta_t {
     fields {
-        cnt: 16; // indicating variable for recirculate;
+		cntr3: 16;
+		cntr4: 16;
+		predicate: 8;
     }
 }
 
@@ -40,60 +42,6 @@ header_type my_header_t {
 
 header my_header_t my_header;
 
-//action insert_header() {
-//	add_header(my_header);
-//	modify_field(my_header.cnt, 100);
-//	modify_field(my_header.idx, 100);
-//	modify_field(my_header.etherType, ETHERTYPE_MYHEADER);
-//}
-
-
-register cntr1 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr1 {
-	reg: cntr1;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr1_action() {
-	update_cntr1.execute_stateful_alu(0);
-}
-
-//table update_cntr1_t {
-//	actions {
-//		update_cntr1_action;
-//	}
-//	default_action: update_cntr1_action;
-//	size: 1;
-//}
-
-
-register cntr2 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr2 {
-	reg: cntr2;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr2_action() {
-	update_cntr2.execute_stateful_alu(0);
-}
-
-//table update_cntr2_t {
-//	actions {
-//		update_cntr2_action;
-//	}
-//	default_action: update_cntr2_action;
-//	size: 1;
-//}
-
-
 register cntr3 {
 	width: 16;
 	instance_count: 10;
@@ -101,592 +49,54 @@ register cntr3 {
 
 blackbox stateful_alu update_cntr3 {
 	reg: cntr3;
-	update_lo_1_value: register_lo + 1;
+	condition_lo: register_lo == 0;
+	condition_hi: register_hi == 0;
+	update_lo_1_value: 0;
+	
+	output_value: predicate;
+	output_dst: measurement_meta.predicate;
 }
 
 action update_cntr3_action() {
 	update_cntr3.execute_stateful_alu(0);
 }
 
+//@pragma stage 2
 table update_cntr3_t {
-	reads {
-		measurement_meta.cnt: exact;
-	}
 	actions {
-		update_cntr1_action;
-		update_cntr2_action;
 		update_cntr3_action;
 	}
 	default_action: update_cntr3_action;
 	size: 4;
 }
 
-
 register cntr4 {
-	width: 16;
+	width: 8;
 	instance_count: 10;
 }
 
 blackbox stateful_alu update_cntr4 {
 	reg: cntr4;
-	update_lo_1_value: register_lo + 1;
+	update_lo_1_value: measurement_meta.predicate;
 }
 
 action update_cntr4_action() {
 	update_cntr4.execute_stateful_alu(0);
 }
 
+@pragma stage 3
 table update_cntr4_t {
 	actions {
 		update_cntr4_action;
 	}
 	default_action: update_cntr4_action;
-	size: 1;
+	size: 4;
 }
-
-
-register cntr5 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr5 {
-	reg: cntr5;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr5_action() {
-	update_cntr5.execute_stateful_alu(0);
-}
-
-table update_cntr5_t {
-	actions {
-		update_cntr5_action;
-	}
-	default_action: update_cntr5_action;
-	size: 1;
-}
-
-
-register cntr6 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr6 {
-	reg: cntr6;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr6_action() {
-	update_cntr6.execute_stateful_alu(0);
-}
-
-table update_cntr6_t {
-	actions {
-		update_cntr6_action;
-	}
-	default_action: update_cntr6_action;
-	size: 1;
-}
-
-
-register cntr7 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr7 {
-	reg: cntr7;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr7_action() {
-	update_cntr7.execute_stateful_alu(0);
-}
-
-table update_cntr7_t {
-	actions {
-		update_cntr7_action;
-	}
-	default_action: update_cntr7_action;
-	size: 1;
-}
-
-
-register cntr8 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr8 {
-	reg: cntr8;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr8_action() {
-	update_cntr8.execute_stateful_alu(0);
-}
-
-table update_cntr8_t {
-	actions {
-		update_cntr8_action;
-	}
-	default_action: update_cntr8_action;
-	size: 1;
-}
-
-
-
-register cntr9 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr9 {
-	reg: cntr9;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr9_action() {
-	update_cntr9.execute_stateful_alu(0);
-}
-
-table update_cntr9_t {
-	actions {
-		update_cntr9_action;
-	}
-	default_action: update_cntr9_action;
-	size: 1;
-}
-
-register cntr10 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr10 {
-	reg: cntr10;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr10_action() {
-	update_cntr10.execute_stateful_alu(0);
-}
-
-table update_cntr10_t {
-	actions {
-		update_cntr10_action;
-	}
-	default_action: update_cntr10_action;
-	size: 1;
-}
-
-register cntr11 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr11 {
-	reg: cntr11;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr11_action() {
-	update_cntr11.execute_stateful_alu(0);
-}
-
-table update_cntr11_t {
-	actions {
-		update_cntr11_action;
-	}
-	default_action: update_cntr11_action;
-	size: 1;
-}
-
-register cntr12 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr12 {
-	reg: cntr12;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr12_action() {
-	update_cntr12.execute_stateful_alu(0);
-}
-
-table update_cntr12_t {
-	actions {
-		update_cntr12_action;
-	}
-	default_action: update_cntr12_action;
-	size: 1;
-}
-
-register cntr13 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr13 {
-	reg: cntr13;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr13_action() {
-	update_cntr13.execute_stateful_alu(0);
-}
-
-table update_cntr13_t {
-	actions {
-		update_cntr13_action;
-	}
-	default_action: update_cntr13_action;
-	size: 1;
-}
-
-register cntr14 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr14 {
-	reg: cntr14;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr14_action() {
-	update_cntr14.execute_stateful_alu(0);
-}
-
-table update_cntr14_t {
-	actions {
-		update_cntr14_action;
-	}
-	default_action: update_cntr14_action;
-	size: 1;
-}
-
-register cntr15 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr15 {
-	reg: cntr15;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr15_action() {
-	update_cntr15.execute_stateful_alu(0);
-}
-
-table update_cntr15_t {
-	actions {
-		update_cntr15_action;
-	}
-	default_action: update_cntr15_action;
-	size: 1;
-}
-
-register cntr16 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr16 {
-	reg: cntr16;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr16_action() {
-	update_cntr16.execute_stateful_alu(0);
-}
-
-table update_cntr16_t {
-	actions {
-		update_cntr16_action;
-	}
-	default_action: update_cntr16_action;
-	size: 1;
-}
-
-register cntr17 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr17 {
-	reg: cntr17;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr17_action() {
-	update_cntr17.execute_stateful_alu(0);
-}
-
-table update_cntr17_t {
-	actions {
-		update_cntr17_action;
-	}
-	default_action: update_cntr17_action;
-	size: 1;
-}
-
-register cntr18 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr18 {
-	reg: cntr18;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr18_action() {
-	update_cntr18.execute_stateful_alu(0);
-}
-
-table update_cntr18_t {
-	actions {
-		update_cntr18_action;
-	}
-	default_action: update_cntr18_action;
-	size: 1;
-}
-
-register cntr19 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr19 {
-	reg: cntr19;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr19_action() {
-	update_cntr19.execute_stateful_alu(0);
-}
-
-table update_cntr19_t {
-	actions {
-		update_cntr19_action;
-	}
-	default_action: update_cntr19_action;
-	size: 1;
-}
-
-register cntr20 {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr20 {
-	reg: cntr20;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr20_action() {
-	update_cntr20.execute_stateful_alu(0);
-}
-
-table update_cntr20_t {
-	actions {
-		update_cntr20_action;
-	}
-	default_action: update_cntr20_action;
-	size: 1;
-}
-
-register cntr {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr {
-	reg: cntr;
-	update_lo_1_value: register_lo + 1;
-
-    output_value: alu_lo;
-    output_dst: measurement_meta.cnt;
-}
-
-action update_cntr_action() {
-	update_cntr.execute_stateful_alu(0);
-}
-
-table update_cntr_t {
-	actions {
-		update_cntr_action;
-	}
-	default_action: update_cntr_action;
-	size: 1;
-}
-
-
-blackbox stateful_alu promote_bb {
-	reg: cntr;
-	update_lo_1_value: my_header.cnt;
-}
-
-action promote_action() {
-	promote_bb.execute_stateful_alu(5);
-	bypass_egress();
-}
-
-table promote_t{
-	actions {
-		promote_action;
-	}
-	default_action: promote_action;
-}
-
-//action set_egr(egress_spec) {
-//    modify_field(ig_intr_md_for_tm.ucast_egress_port, egress_spec);
-//}
-
-action set_egr() {
-    modify_field(ig_intr_md_for_tm.ucast_egress_port, 0);
-}
-
-register cntr_noop {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr_noop {
-	reg: cntr_noop;
-	update_lo_1_value: register_lo + 1;
-}
-
-action noop() {
-	modify_field(my_header.cnt, 100);
-	modify_field(my_header.idx, 100);
-	modify_field(my_header.etherType, ETHERTYPE_VLAN);
-	modify_field(ethernet.etherType, ETHERTYPE_MYHEADER);
-//	remove_header(ethernet);
-	add_header(my_header);
-//	add_header(ethernet);
-	update_cntr_noop.execute_stateful_alu(0);
-}
-
-action nop() {
-}
-
-action _drop() {
-    drop();
-}
-
-table forward {
-//    reads {
-//        ethernet.dstAddr : exact;
-//    }
-    actions {
-        set_egr;
-    }
-	default_action: set_egr;
-}
-
-table acl {
-    reads {
-        ethernet.dstAddr : ternary;
-        ethernet.srcAddr : ternary;
-    }
-    actions {
-        nop;
-        _drop;
-    }
-}
-
-action do_recirc() {
-	recirculate(68);
-}
-
-table recirc_tbl {
-	actions {
-		do_recirc;
-	}
-	default_action: do_recirc;
-	size: 1;
-}
-
-register cntr_meta {
-	width: 16;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr_meta {
-	reg: cntr_meta;
-	update_lo_1_value: measurement_meta.cnt;
-}
-
-action dump_meta_cnt() {
-	update_cntr_meta.execute_stateful_alu(0);
-}
-
-table dump_meta_cnt_t {
-	actions {
-		dump_meta_cnt;
-	}
-	default_action: dump_meta_cnt;
-}
-
-action drop_it() {
-//    mark_for_drop();
-	update_cntr_noop.execute_stateful_alu(1);
-	drop();
-}
-
-table drop_pkt_t{
-	reads {
-		measurement_meta.cnt: exact;
-	}
-	actions {
-		drop_it;
-		noop;
-	}
-	default_action: noop;
-}
-
 control ingress {
-//	apply(update_cntr1_t);
-//	apply(update_cntr2_t);
 	apply(update_cntr3_t);
 	apply(update_cntr4_t);
-	apply(update_cntr5_t);
-	apply(update_cntr6_t);
-	apply(update_cntr7_t);
-	apply(update_cntr8_t);
-	apply(update_cntr9_t);
-	apply(update_cntr10_t);
-	apply(update_cntr11_t);
-	apply(update_cntr12_t);
-	apply(update_cntr13_t);
-	apply(update_cntr14_t);
-	apply(update_cntr15_t);
-	apply(update_cntr16_t);
-	apply(update_cntr17_t);
-	apply(update_cntr18_t);
-	apply(update_cntr19_t);
-	apply(update_cntr20_t);
-	if (ethernet.etherType == ETHERTYPE_MYHEADER) {
-		apply(promote_t);
-	}
-	else {
-		apply(recirc_tbl);
-		apply(update_cntr_t);
-//    apply(forward);
-    }
 }
 
 control egress {
-//    apply(acl);
-	apply(drop_pkt_t);
-	apply(dump_meta_cnt_t);
-	apply(forward);
 }
 

@@ -98,3 +98,8 @@ parser parse_tcp {
     extract(tcp);
     return ingress;
 }
+
+parser parse_udp {
+    extract(udp);
+    return ingress;
+}

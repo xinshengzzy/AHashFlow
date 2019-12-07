@@ -53,11 +53,11 @@ header udp_t udp;
 
 header_type promote_header_t {
     fields {
-		digest: 32;
-		m_table_id: 4;
+		fingerprint: 32;
 		idx: 32;
 		cnt: 32;
 		promoteType: 8;
+		m_table_id: 8;
     }
 }
 header promote_header_t promote_header;
@@ -65,7 +65,7 @@ header promote_header_t promote_header;
 
 header_type record_export_header_t {
     fields {
-		digest: 32;
+		fingerprint: 32;
 		cnt: 32;
 		exportType: 8;
     }
