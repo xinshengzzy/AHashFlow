@@ -9,3 +9,5 @@
 #define M_TABLE_3_SIZE 1024
 #define DIGEST_WIDTH 8
 #define FINGERPRINT_WIDTH 32
+#define GAMMA 5
+#define PRED 1

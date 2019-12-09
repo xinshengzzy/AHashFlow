@@ -4,31 +4,8 @@
 #include <tofino/constants.p4>
 #include "includes/headers.p4"
 #include "includes/parser.p4"
-#include "tofino/stateful_alu_blackbox.p4"
 
 #define CPU_PORT 64
-
-register cntr {
-	width: 32;
-	instance_count: 10;
-}
-
-blackbox stateful_alu update_cntr {
-	reg: cntr;
-	update_lo_1_value: register_lo + 1;
-}
-
-action update_cntr_action() {
-	update_cntr.execute_stateful_alu(0);
-}
-
-table update_cntr_t {
-	actions {
-		update_cntr_action;
-	}
-	default_action: update_cntr_action;
-	size: 1;
-}
 
 action add_cpu_header(pad1, fabric_color, fabric_qos, dst_device, dst_port_or_group, reserved1, ingress_ifindex, ingress_bd, reason_code) {
     add_header(fabric_header);
@@ -87,8 +64,7 @@ control process_ingress_knet {
 }
 
 control ingress {
-	apply(update_cntr_t);
-	process_ingress_knet();
+  process_ingress_knet();
 }
 
 control egress {

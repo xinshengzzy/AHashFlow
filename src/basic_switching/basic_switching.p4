@@ -23,80 +23,127 @@ limitations under the License.
 #include "tofino/stateful_alu_blackbox.p4"
 
 header_type measurement_meta_t {
-    fields {
-		cntr3: 16;
-		cntr4: 16;
-		predicate: 8;
-    }
+	fields {
+		index: 32;
+	}
 }
 
 metadata measurement_meta_t measurement_meta;
 
-header_type my_header_t {
-    fields {
-        cnt: 16;
-        idx: 16;
-        etherType : 16;
-    }
-}
-
-header my_header_t my_header;
-
-register cntr3 {
+register cntr1 {
 	width: 16;
 	instance_count: 10;
 }
 
+blackbox stateful_alu update_cntr1 {
+	reg: cntr1;
+	update_lo_1_value: register_lo + 1;
+}
+
+action update_cntr1_action() {
+	update_cntr1.execute_stateful_alu(0);
+	modify_field(ig_intr_md_for_tm.copy_to_cpu, 1);
+}
+
+table update_cntr1_t {
+	reads {
+		ipv4.srcip: exact;
+		ipv4.dstip: exact;
+//		ethernet.etherType: exact;
+	}
+	actions {
+		update_cntr1_action;
+		nop;
+	}
+	default_action: nop;
+	size: 10;
+}
+
+register cntr2 {
+	width: 32;
+	instance_count: 10;
+}
+
+blackbox stateful_alu update_cntr2 {
+	reg: cntr2;
+	update_lo_1_value: register_lo + 1;
+
+	output_dst: measurement_meta.index;
+	output_value: register_lo;
+}
+
+action update_cntr2_action() {
+	update_cntr2.execute_stateful_alu();
+}
+
+table update_cntr2_t {
+	actions {
+		update_cntr2_action;
+	}
+	default_action: update_cntr2_action;
+	size: 10;
+}
+
+register cntr3 {
+	width: 32;
+	instance_count: 1000;
+}
+
 blackbox stateful_alu update_cntr3 {
 	reg: cntr3;
-	condition_lo: register_lo == 0;
-	condition_hi: register_hi == 0;
-	update_lo_1_value: 0;
-	
-	output_value: predicate;
-	output_dst: measurement_meta.predicate;
+	update_lo_1_value: ethernet.etherType;
 }
 
 action update_cntr3_action() {
-	update_cntr3.execute_stateful_alu(0);
+	update_cntr3.execute_stateful_alu(measurement_meta.index);
 }
 
-//@pragma stage 2
 table update_cntr3_t {
 	actions {
 		update_cntr3_action;
 	}
 	default_action: update_cntr3_action;
-	size: 4;
 }
 
-register cntr4 {
-	width: 8;
-	instance_count: 10;
+action set_egr(egress_spec) {
+    modify_field(ig_intr_md_for_tm.ucast_egress_port, egress_spec);
 }
 
-blackbox stateful_alu update_cntr4 {
-	reg: cntr4;
-	update_lo_1_value: measurement_meta.predicate;
+action nop() {
 }
 
-action update_cntr4_action() {
-	update_cntr4.execute_stateful_alu(0);
+action _drop() {
+    drop();
 }
 
-@pragma stage 3
-table update_cntr4_t {
-	actions {
-		update_cntr4_action;
-	}
-	default_action: update_cntr4_action;
-	size: 4;
+table forward {
+    reads {
+		ig_intr_md.ingress_port: exact;
+    }
+    actions {
+        set_egr; nop;
+    }
 }
+
+table acl {
+    reads {
+        ethernet.dstAddr : ternary;
+        ethernet.srcAddr : ternary;
+    }
+    actions {
+        nop;
+        _drop;
+    }
+}
+
 control ingress {
+	apply(update_cntr1_t);
+	apply(update_cntr2_t);
 	apply(update_cntr3_t);
-	apply(update_cntr4_t);
+    apply(forward);
 }
 
 control egress {
+    apply(acl);
 }
 

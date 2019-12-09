@@ -9,9 +9,6 @@
 #include "includes/parser.p4"
 #include "includes/macro.p4"
 
-#define PKT_INSTANCE_TYPE_NORMAL 0
-#define GAMMA 5
-#define PRED 0
 
 field_list flow {
     ipv4.srcip;
@@ -118,6 +115,38 @@ header_type measurement_meta_t {
 }
 
 metadata measurement_meta_t measurement_meta;
+
+
+////////// for the useage of testing //////////
+register cntr1 {
+	width: 16;
+	instance_count: 10;
+}
+
+blackbox stateful_alu update_cntr1 {
+	reg: cntr1;
+	update_lo_1_value: register_lo + 1;
+}
+
+action update_cntr1_action() {
+	update_cntr1.execute_stateful_alu(0);
+}
+
+@pragma stage 0
+table update_cntr1_t {
+	reads {
+		ipv4.srcip: exact;
+		ipv4.dstip: exact;
+	}
+	actions {
+		update_cntr1_action;
+		nop;
+	}
+	default_action: nop;
+	size: 10;
+}
+////////// end the test //////////
+
 
 action nop()
 {
@@ -301,17 +330,6 @@ action update_m_table_2_key_action()
 {
     update_m_table_2_key.execute_stateful_alu_from_hash(hash_2);
 }
-
-//blackbox stateful_alu rewrite_m_table_2_key
-//{
-//    reg: m_table_2_key;
-//    update_lo_1_value: measurement_meta.fingerprint;
-//}
-
-//action rewrite_m_table_2_key_action()
-//{
-//    rewrite_m_table_2_key.execute_stateful_alu_from_hash(hash_2);
-//}
 
 @pragma stage 2
 table update_m_table_2_key_t
@@ -772,7 +790,8 @@ table subtract_t {
 action export_flow_record_action() {
 	add_header(record_export_header);
 	remove_header(promote_header);
-	modify_field(ipv4.proto, IPV4_RECORD_EXPORT);
+	// assume that all the packets are from the TCP flows
+	modify_field(tcp.srcport, TCP_RECORD_EXPORT);
 	modify_field(record_export_header.fingerprint, measurement_meta.export_fingerprint);
 	modify_field(record_export_header.cnt, measurement_meta.export_cnt);
 	modify_field(record_export_header.exportType, promote_header.promoteType);
@@ -989,8 +1008,9 @@ action promote_max_action() {
 	modify_field(promote_header.m_table_id, measurement_meta.m_table_id_max);
 	modify_field(promote_header.idx, measurement_meta.idx_max);
 	modify_field(promote_header.cnt, measurement_meta.cnt_max);
-	modify_field(promote_header.promoteType, ipv4.proto);
-	modify_field(ipv4.proto, IPV4_PROMOTE);
+	// we assume that all the packets are from TCP flows
+	modify_field(promote_header.promoteType, tcp.srcport);
+	modify_field(tcp.srcport, TCP_PROMOTE);
 	recirculate(68);
 }
 
@@ -1000,8 +1020,9 @@ action promote_min_action() {
 	modify_field(promote_header.m_table_id, measurement_meta.m_table_id_min);
 	modify_field(promote_header.idx, measurement_meta.idx_min);
 	modify_field(promote_header.cnt, measurement_meta.cnt_min);
-	modify_field(promote_header.promoteType, ipv4.proto);
-	modify_field(ipv4.proto, IPV4_PROMOTE);
+	// we assume that all the packets are from TCP flows
+	modify_field(promote_header.promoteType, tcp.srcport);
+	modify_field(tcp.srcport, TCP_PROMOTE);
 	recirculate(68);
 }
 
@@ -1015,7 +1036,9 @@ table promote_t {
 	actions {
 		promote_max_action;
 		promote_min_action;
+		nop;
 	}
+	default_action: nop;
 }
 
 //field_list recirculate_fields
@@ -1034,6 +1057,7 @@ table promote_t {
 control ingress
 {
 	// stage 0
+	apply(update_cntr1_t);
     apply(generate_fingerprint_t);
     apply(calc_digest_t);
 	apply(calc_m_table_1_idx_t);
@@ -1057,17 +1081,14 @@ control ingress
 	} 
 	else{
 		// stage 1
-		apply(update_m_table_1_key_t) {
-			update_m_table_1_key_action {
-				// stage 2
-				apply(update_m_table_2_key_t) {
-					update_m_table_2_key_action {
-						// stage 3
-						apply(update_m_table_3_key_t);
-					}
+		apply(update_m_table_1_key_t);
+			// stage 2
+			apply(update_m_table_2_key_t) {
+				update_m_table_2_key_action {
+					// stage 3
+					apply(update_m_table_3_key_t);
 				}
 			}
-		}
 		// stage 4
 		apply(update_m_table_1_value_t); 
 		// stage 5

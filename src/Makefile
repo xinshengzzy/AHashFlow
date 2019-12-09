@@ -1,7 +1,7 @@
 #P4_NAME=emulation
-#P4_NAME=basic_switching
+P4_NAME=basic_switching
 #P4_NAME=multicast_scale
-P4_NAME=AHashFlow
+#P4_NAME=AHashFlow
 build:
 	cd $(BUILD) && \
 	./autogen.sh && \
@@ -17,7 +17,12 @@ build:
 	make && \
 	make install
 run:
-	$(SDE)/run_switchd.sh -p $(P4_NAME)
+	$(SDE)/run_switchd.sh -p $(P4_NAME) &
+configure:
+	bfshell -f $(SRC)/$(P4_NAME)/commands.txt
+kill:
+	pkill bf_switchd
+	pkill run_switchd.sh
 push:
 	git add -A
 	git commit -m "Automatic uploading. No comments!"

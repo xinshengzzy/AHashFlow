@@ -42,8 +42,13 @@ print "measurement_meta.cnt:", res
 #print "cntr1:", res
 #res = client.register_read_cntr2(sess_hdl, dev_tgt, 0, flag)
 #print "cntr2:", res
-res = client.register_read_cntr4(sess_hdl, dev_tgt, 0, flag)
-print "cntr4[0]:", res
+res = client.register_read_cntr1(sess_hdl, dev_tgt, 0, flag)
+print "cntr1[0]:", res
+res = client.register_read_cntr2(sess_hdl, dev_tgt, 0, flag)
+print "cntr2[0]:", res
+#for i in range(min(res)):
+#    etherType = client.register_read_cntr3(sess_hdl, dev_tgt, i, flag)
+#    print "etherType:", etherType
 '''
 res = client.register_read_cntr4(sess_hdl, dev_tgt, 0, flag)
 print "cntr4:", res
