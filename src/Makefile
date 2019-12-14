@@ -17,12 +17,11 @@ build:
 	make && \
 	make install
 run:
+	pkill bf_switchd || true
+	pkill run_switchd.sh || true
 	$(SDE)/run_switchd.sh -p $(P4_NAME) &
 configure:
 	bfshell -f $(SRC)/$(P4_NAME)/commands.txt
-kill:
-	pkill bf_switchd
-	pkill run_switchd.sh
 push:
 	git add -A
 	git commit -m "Automatic uploading. No comments!"
@@ -33,8 +32,6 @@ register:
 	python ./$(P4_NAME)/ReadRegister.py
 send:
 	python SendPacket.py
-test: 
-	echo $(P4_NAME)
 ptf:
 	cd $(SDE) && \
 	python $(SDE_INSTALL)/lib/python2.7/site-packages/p4testutils/run_ptf_tests.py \

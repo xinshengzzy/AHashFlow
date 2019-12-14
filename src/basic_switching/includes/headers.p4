@@ -25,6 +25,33 @@ header_type ipv4_t {
 }
 header ipv4_t ipv4;
 
+field_list ipv4_checksum_list {
+    ipv4.version;
+    ipv4.ihl;
+    ipv4.diffserv;
+    ipv4.totalLen;
+    ipv4.identification;
+    ipv4.flags;
+    ipv4.fragOffset;
+    ipv4.ttl;
+    ipv4.proto;
+    ipv4.srcip;
+    ipv4.dstip;
+}
+
+field_list_calculation ipv4_checksum {
+    input {
+        ipv4_checksum_list;
+    }
+    algorithm : csum16;
+    output_width : 16;
+}
+
+calculated_field ipv4.hdrChecksum  {
+    verify ipv4_checksum;
+    update ipv4_checksum;
+}
+
 header_type tcp_t {
     fields {
         srcport : 16;
@@ -43,13 +70,61 @@ header tcp_t tcp;
 
 header_type udp_t {
     fields {
-        sPort : 16;
-        dPort : 16;
+        srcport : 16;
+        dstport : 16;
         hdr_length : 16;
         checksum : 16;
     }
 }
 header udp_t udp;
+
+field_list udp_checksum_list {
+    ipv4.srcip;
+    ipv4.dstip;
+//    8'0;
+//	measurement_meta.zero;
+//    ipv4.proto;
+	measurement_meta.proto;
+    measurement_meta.l4_len;
+    udp.srcport;
+    udp.dstport;
+    udp.hdr_length;
+    payload;
+//    8'0;
+}
+
+field_list_calculation udp_checksum {
+    input {
+        udp_checksum_list;
+    }
+    algorithm : csum16;
+    output_width : 16;
+}
+
+calculated_field udp.checksum {
+//	verify udp_checksum;
+//    update udp_checksum if (measurement_meta.export_flag == 1);
+    update udp_checksum;
+}
+
+field_list udp_checksum_list2 {
+    ipv4.srcip;
+    ipv4.dstip;
+    8'0;
+    ipv4.proto;
+    measurement_meta.l4_len;
+    udp.srcport;
+    udp.dstport;
+    udp.hdr_length;
+}
+
+field_list_calculation udp_checksum2 {
+    input {
+        udp_checksum_list2;
+    }
+    algorithm : crc16;
+    output_width : 16;
+}
 
 header_type promote_header_t {
     fields {
@@ -62,28 +137,6 @@ header_type promote_header_t {
 }
 header promote_header_t promote_header;
 
-
-header_type record_export_header_t {
-    fields {
-		fingerprint: 32;
-		cnt: 32;
-		exportType: 8;
-    }
-}
-header record_export_header_t record_export_header;
-
-header_type id_export_header_t {
-    fields {
-		srcip: 32;
-		dstip: 32;
-		srcport: 16;
-		dstport: 16;
-		proto: 8;
-		exportType: 8;
-    }
-}
-header id_export_header_t id_export_header;
-
 header_type vlan_tag_t {
 	fields {
 		pcp : 3;
@@ -94,3 +147,18 @@ header_type vlan_tag_t {
 }
 
 header vlan_tag_t vlan;
+
+header_type export_header_t {
+	fields {
+		fingerprint: 32;
+		cnt: 32;
+		srcip: 32;
+		dstip: 32;
+		srcport: 16;
+		dstport: 16;
+		proto: 8;
+		padding: 8;
+	}
+}
+
+header export_header_t export_header;

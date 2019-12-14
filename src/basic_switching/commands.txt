@@ -18,8 +18,10 @@ exit
 pd-basic-switching
 pd forward add_entry set_egr ig_intr_md_ingress_port 60 action_egress_spec 160
 pd forward add_entry set_egr ig_intr_md_ingress_port 160 action_egress_spec 60
-pd update_cntr1_t add_entry update_cntr1_action ipv4_srcip 167772170 ipv4_dstip 167772171
-pd update_cntr1_t add_entry update_cntr1_action ipv4_srcip 1684300900 ipv4_dstip 3368601800
-pd update_cntr1_t add_entry update_cntr1_action ipv4_srcip 3368601800 ipv4_dstip 1684300900 
+pd export_t add_entry export ipv4_srcip 167772170 ipv4_dstip 167772171
+pd export_t add_entry export ipv4_srcip 167772171 ipv4_dstip 167772170
+pd update_cntr1_t add_entry update_cntr1_action ipv4_srcip 0x0a00000a ipv4_dstip 0x0a00000b
+pd update_cntr2_t add_entry update_cntr2_action ipv4_srcip 0x0a00000a ipv4_dstip 0x0a00000b
+pd update_cntr3_t add_entry update_cntr3_action ipv4_srcip 0x0a00000a ipv4_dstip 0x0a00000b
 dump_table forward
 exit
