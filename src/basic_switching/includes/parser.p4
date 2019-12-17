@@ -5,6 +5,7 @@
 #define UDP_EXPORT 0x0017
 #define UDP_PROMOTE 0x0018
 #define TCP_PROMOTE 0x0021
+#define EXPORT_HEADER_LEN 22
 
 parser start {
     return parse_ethernet;
@@ -18,7 +19,6 @@ parser parse_ethernet {
 		ETHERTYPE_VLAN: parse_vlan;
         default: ingress;
     }
-//  return parse_ipv4;
 }
 
 parser parse_vlan {

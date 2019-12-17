@@ -1,0 +1,21 @@
+ucli
+pm
+port-add 5/- 40g NONE
+port-add 9/- 40g NONE
+port-enb 5/-
+port-enb 9/-
+..
+bf_pltfm
+qsfp
+qsfp-lpmode-hw 5 0
+qsfp-lpmode-hw 9 0
+..
+..
+pm
+show
+..
+exit
+pd-basic-switching
+pd forward add_entry set_egr ig_intr_md_ingress_port 60 action_egress_spec 160
+pd forward add_entry set_egr ig_intr_md_ingress_port 160 action_egress_spec 60
+exit

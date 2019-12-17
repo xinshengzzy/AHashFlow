@@ -23,6 +23,9 @@ header_type ipv4_t {
         dstip: 32;
     }
 }
+
+@pragma pa_fragment ingress ipv4.hdrChecksum
+@pragma pa_fragment egress ipv4.hdrChecksum
 header ipv4_t ipv4;
 
 field_list ipv4_checksum_list {
@@ -76,21 +79,20 @@ header_type udp_t {
         checksum : 16;
     }
 }
+
+@pragma pa_fragment egress udp.checksum
 header udp_t udp;
 
 field_list udp_checksum_list {
     ipv4.srcip;
     ipv4.dstip;
-//    8'0;
-//	measurement_meta.zero;
-//    ipv4.proto;
-	measurement_meta.proto;
+    8'0;
+    ipv4.proto;
     measurement_meta.l4_len;
     udp.srcport;
     udp.dstport;
     udp.hdr_length;
     payload;
-//    8'0;
 }
 
 field_list_calculation udp_checksum {
@@ -102,28 +104,7 @@ field_list_calculation udp_checksum {
 }
 
 calculated_field udp.checksum {
-//	verify udp_checksum;
-//    update udp_checksum if (measurement_meta.export_flag == 1);
-    update udp_checksum;
-}
-
-field_list udp_checksum_list2 {
-    ipv4.srcip;
-    ipv4.dstip;
-    8'0;
-    ipv4.proto;
-    measurement_meta.l4_len;
-    udp.srcport;
-    udp.dstport;
-    udp.hdr_length;
-}
-
-field_list_calculation udp_checksum2 {
-    input {
-        udp_checksum_list2;
-    }
-    algorithm : crc16;
-    output_width : 16;
+    update udp_checksum if (measurement_meta.update_udp_flag == 1);
 }
 
 header_type promote_header_t {
