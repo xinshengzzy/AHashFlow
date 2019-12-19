@@ -26,10 +26,20 @@ header_type measurement_meta_t {
 	fields {
 		update_udp_flag: 1;
 		l4_len: 16;
+		clone_a: 16;
+		clone_b: 16;
+		clone_c: 16;
+		ipv4_totalLen: 16;
 	}
 }
 
 metadata measurement_meta_t measurement_meta;
+
+
+field_list clone_fields {
+	measurement_meta.clone_a;
+	measurement_meta.clone_b;
+}
 
 action set_egr(egress_spec) {
     modify_field(ig_intr_md_for_tm.ucast_egress_port, egress_spec);
@@ -62,7 +72,73 @@ table acl {
     }
 }
 
+action remove() {
+	remove_header(tcp);
+	add_header(udp);
+	add(ipv4.totalLen, measurement_meta.ipv4_totalLen, -12);
+	modify_field(ipv4.proto, IPV4_UDP);
+	add(udp.totalLen, measurement_meta.ipv4_totalLen, -12);
+	modify_field(udp.srcport, UDP_EXPORT);
+	modify_field(udp.dstport, 8082);
+	modify_field(udp.checksum, 0);
+//	add(udp.totalLen, measurement_meta.ipv4_totalLen, -32);
+}
+
+table remove_t {
+	reads {
+		ipv4.srcip: exact;
+		ipv4.dstip: exact;
+	}
+	actions {
+		remove;
+		nop;
+	}
+	default_action: nop;
+}
+
+action set_udp_length() {
+	add_header(udp);
+	modify_field(ipv4.proto, IPV4_UDP);
+	add(udp.totalLen, ipv4.totalLen, -20);
+	modify_field(udp.srcport, UDP_EXPORT);
+	modify_field(udp.dstport, 8082);
+	modify_field(udp.checksum, 0);
+}
+
+table set_udp_length_t {
+	reads {
+		ipv4.srcip: exact;
+		ipv4.dstip: exact;
+	}
+	actions {
+		set_udp_length;
+		nop;
+	}
+	default_action: nop;
+}
+
+action add_hdr() {
+	add_header(udp);
+	add(ipv4.totalLen, ipv4.totalLen, 8);
+	modify_field(ipv4.proto, IPV4_UDP);
+	modify_field(udp.srcport, UDP_EXPORT);
+	modify_field(udp.dstport, 8082);
+}
+
+table add_t {
+	reads {
+		ipv4.srcip: exact;
+		ipv4.dstip: exact;
+	}
+	actions {
+		add_hdr;
+		nop;
+	}
+	default_action: nop;
+}
+
 action update_headers_1() {
+//	clone_ingress_pkt_to_egress(udp_checksum_list);
 	add_header(export_header);
 	add(ipv4.totalLen, ipv4.totalLen, EXPORT_HEADER_LEN);
 	modify_field(udp.srcport, UDP_EXPORT);
@@ -82,16 +158,16 @@ table update_headers_1_t {
 }
 
 action update_headers_2 () {
-	add(udp.hdr_length, ipv4.totalLen, -20);
+	add(udp.totalLen, ipv4.totalLen, -20);
 	modify_field(measurement_meta.update_udp_flag, 0);
-	modify_field(export_header.fingerprint, 0x11);	
-	modify_field(export_header.cnt, 0x21);
-	modify_field(export_header.srcip, 0x31);
-	modify_field(export_header.dstip, 0x41);
-	modify_field(export_header.srcport, 0x51);
-	modify_field(export_header.dstport, 0x61);
-	modify_field(export_header.proto, 0x71);
-	modify_field(export_header.padding, 0x81);
+	modify_field(export_header.fingerprint, 0x67686970);	
+	modify_field(export_header.cnt, 0x67686970);
+	modify_field(export_header.srcip, 0x67686970);
+	modify_field(export_header.dstip, 0x67686970);
+	modify_field(export_header.srcport, 0x6768);
+	modify_field(export_header.dstport, 0x6768);
+	modify_field(export_header.proto, 0x67);
+	modify_field(export_header.padding, 0x67);
 	modify_field(measurement_meta.l4_len, 0);
 }
 
@@ -107,12 +183,68 @@ table update_headers_2_t {
 	default_action: nop;
 }
 
+register cntr1 {
+	width: 32;
+	instance_count: 10;	   
+}
+
+blackbox stateful_alu update_cntr1_bb {
+	reg: cntr1;
+	update_lo_1_value: register_lo + 1;
+}
+
+action update_cntr1() {
+	update_cntr1_bb.execute_stateful_alu(0);
+}
+
+table update_cntr1_t {
+	reads {
+		ipv4.srcip: exact;
+		ipv4.dstip: exact;
+	}
+	actions {
+		update_cntr1;
+		nop;
+	}
+	default_action: nop;
+}
+
+action do_resubmit() {
+	resubmit();
+}
+
+table resubmit_t {
+	actions {
+		do_resubmit;
+	}
+	default_action: do_resubmit;
+}
+
+action clone() {
+	clone_ingress_pkt_to_egress(measurement_meta.clone_c, clone_fields);
+}
+
+table clone_t {
+	actions {
+		clone;
+	}
+	default_action: clone;
+}
+
 control ingress {
-	if(valid(udp)) {
+	apply(forward);
+//	apply(clone_t);
+	if(valid(tcp)) {
+		apply(remove_t);
+//		apply(set_udp_length_t);
+//		apply(add_t);
 		apply(update_headers_1_t);
 		apply(update_headers_2_t);
+		apply(update_cntr1_t);
 	}
-    apply(forward);
+	if(0 == ig_intr_md.resubmit_flag) {
+		apply(resubmit_t);
+	}
 }
 
 control egress {

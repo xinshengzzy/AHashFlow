@@ -75,7 +75,7 @@ header_type udp_t {
     fields {
         srcport : 16;
         dstport : 16;
-        hdr_length : 16;
+        totalLen : 16;
         checksum : 16;
     }
 }
@@ -83,7 +83,7 @@ header_type udp_t {
 @pragma pa_fragment egress udp.checksum
 header udp_t udp;
 
-field_list udp_checksum_list {
+/*field_list udp_checksum_list {
     ipv4.srcip;
     ipv4.dstip;
     8'0;
@@ -91,7 +91,7 @@ field_list udp_checksum_list {
     measurement_meta.l4_len;
     udp.srcport;
     udp.dstport;
-    udp.hdr_length;
+    udp.totalLen;
     payload;
 }
 
@@ -116,7 +116,7 @@ header_type promote_header_t {
 		m_table_id: 8;
     }
 }
-header promote_header_t promote_header;
+header promote_header_t promote_header;*/
 
 header_type vlan_tag_t {
 	fields {

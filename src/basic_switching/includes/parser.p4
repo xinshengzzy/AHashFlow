@@ -31,6 +31,7 @@ parser parse_vlan {
 
 parser parse_ipv4 {
     extract(ipv4);
+	set_metadata(measurement_meta.ipv4_totalLen, ipv4.totalLen);
     return select(latest.proto){
         IPV4_TCP: parse_tcp;
 		IPV4_UDP: parse_udp;
@@ -39,27 +40,18 @@ parser parse_ipv4 {
 }
 parser parse_tcp {
     extract(tcp);
-	return select(latest.srcport) {
-		TCP_PROMOTE: parse_promote;
-		default: ingress;
-	}
+	return ingress;
 }
 
 parser parse_udp {
     extract(udp);
 	return select(latest.srcport) {
 		UDP_EXPORT: parse_export_header;
-		UDP_PROMOTE: parse_promote;
 		default: ingress;
 	}
 }
 
 parser parse_export_header {
 	extract(export_header);
-	return ingress;
-}
-
-parser parse_promote {
-	extract(promote_header);
 	return ingress;
 }

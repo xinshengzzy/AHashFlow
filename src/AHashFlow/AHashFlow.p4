@@ -73,7 +73,6 @@ field_list_calculation fingerprint_hash {
 // metadata for measurement program
 header_type measurement_meta_t {
     fields {
-        promotion: 1; // indicating variable for recirculate;
         stage: 4; // indicating variable for stage of back inserting;
         stage2: 4; // indicating variable for stage of reporting;
         digest: 8; // digest for differentiating in ancillary table;
@@ -109,13 +108,39 @@ header_type measurement_meta_t {
 		diff2: 32; // m_table_1_cnt - m_table_3_cnt
 		diff3: 32; // m_table_2_cnt - m_table_3_cnt
         ancillary_table_predicate: 4; // output predicate in main sub table 1
-		export_fingerprint: 32; // the fingerprint evicted from the M table
-		export_cnt: 32; // the counter evicted from the M table
+		ipv4_totalLen: 16;
+//		update_udp_flag: 1;
+//		l4_len: 16;
     }
 }
 
 metadata measurement_meta_t measurement_meta;
 
+
+header_type promote_meta_t {
+	fields {
+		fingerprint: 32;
+		m_table_id: 8;
+		idx: 32;
+	 	cnt: 32;		 
+		m_table_1: 1;
+		m_table_2: 1;
+		m_table_3: 1;
+		field_A: 24;
+		field_C: 16;
+	}
+}
+
+metadata promote_meta_t promote_meta;
+
+field_list resubmit_fields {
+//	promote_meta.fingerprint;
+//	promote_meta.m_table_id;
+//	promote_meta.idx;
+//	promote_meta.cnt;
+	promote_meta.field_A;
+	promote_meta.field_C;
+}
 
 ////////// for the useage of testing //////////
 register cntr1 {
@@ -131,6 +156,7 @@ blackbox stateful_alu update_cntr1 {
 action update_cntr1_action() {
 	update_cntr1.execute_stateful_alu(0);
 }
+
 
 @pragma stage 0
 table update_cntr1_t {
@@ -148,9 +174,21 @@ table update_cntr1_t {
 ////////// end the test //////////
 
 
-action nop()
-{
-    // no operation conducted
+action set_egr(egress_spec) {
+	modify_field(ig_intr_md_for_tm.ucast_egress_port, egress_spec);
+}
+
+action nop() {}
+
+@pragma stage 0
+table forward {
+	reads {
+		ig_intr_md.ingress_port: exact;
+	}
+	actions {
+		set_egr; 
+		nop;
+	}
 }
 
 // action for transforming 5-tuple into 32-bit fingerprint;
@@ -167,20 +205,6 @@ table generate_fingerprint_t
         generate_fingerprint_action;
     }
     default_action: generate_fingerprint_action;
-}
-
-action do_recirc() {
-	recirculate(68);
-}
-
-table recirc_tbl {
-	reads {
-		measurement_meta.promotion: exact;	
-	}
-	actions {
-		do_recirc;
-		nop;
-	}
 }
 
 // action for generating digest which is used for comparing in anciliary table
@@ -283,21 +307,22 @@ table update_m_table_1_key_t
 blackbox stateful_alu promote_m_table_1_key
 {
     reg: m_table_1_key;
-    update_lo_1_value: promote_header.fingerprint;
+    update_lo_1_value: promote_meta.fingerprint;
 	output_value: register_lo;
-	output_dst: measurement_meta.export_fingerprint;	  
+	output_dst: export_header.fingerprint;	  
 }
 
 action promote_m_table_1_key_action()
 {
-    promote_m_table_1_key.execute_stateful_alu(promote_header.idx);
+    promote_m_table_1_key.execute_stateful_alu(promote_meta.idx);
+	modify_field(promote_meta.m_table_1, 1);
 }
 
 @pragma stage 1
 table promote_m_table_1_key_t
 {
 	reads {
-		promote_header.m_table_id: exact;
+		promote_meta.m_table_id: exact;
 	}
     actions {
         promote_m_table_1_key_action;
@@ -348,21 +373,22 @@ table update_m_table_2_key_t
 blackbox stateful_alu promote_m_table_2_key
 {
     reg: m_table_2_key;
-    update_lo_1_value: promote_header.fingerprint;
+    update_lo_1_value: promote_meta.fingerprint;
 	output_value: register_lo;
-	output_dst: measurement_meta.export_fingerprint;	  
+	output_dst: export_header.fingerprint;	  
 }
 
 action promote_m_table_2_key_action()
 {
-    promote_m_table_2_key.execute_stateful_alu(promote_header.idx);
+    promote_m_table_2_key.execute_stateful_alu(promote_meta.idx);
+	modify_field(promote_meta.m_table_2, 1);
 }
 
 @pragma stage 2
 table promote_m_table_2_key_t
 {
 	reads {
-		promote_header.m_table_id: exact;
+		promote_meta.m_table_id: exact;
 	}
     actions {
         promote_m_table_2_key_action;
@@ -396,17 +422,6 @@ action update_m_table_3_key_action()
     update_m_table_3_key.execute_stateful_alu_from_hash(hash_3);
 }
 
-//blackbox stateful_alu rewrite_m_table_3_key
-//{
-//    reg: m_table_3_key;
-//    update_lo_1_value: measurement_meta.fingerprint;
-//}
-
-//action rewrite_m_table_3_key_action()
-//{
-//    rewrite_m_table_3_key.execute_stateful_alu_from_hash(hash_3);
-//}
-
 @pragma stage 3
 table update_m_table_3_key_t
 {
@@ -424,21 +439,22 @@ table update_m_table_3_key_t
 blackbox stateful_alu promote_m_table_3_key
 {
     reg: m_table_3_key;
-    update_lo_1_value: promote_header.fingerprint;
+    update_lo_1_value: promote_meta.fingerprint;
 	output_value: register_lo;
-	output_dst: measurement_meta.export_fingerprint;	  
+	output_dst: export_header.fingerprint;	  
 }
 
 action promote_m_table_3_key_action()
 {
-    promote_m_table_3_key.execute_stateful_alu(promote_header.idx);
+    promote_m_table_3_key.execute_stateful_alu(promote_meta.idx);
+	modify_field(promote_meta.m_table_3, 1);
 }
 
 @pragma stage 3
 table promote_m_table_3_key_t
 {
 	reads {
-		promote_header.m_table_id: exact;
+		promote_meta.m_table_id: exact;
 	}
     actions {
         promote_m_table_3_key_action;
@@ -513,16 +529,13 @@ blackbox stateful_alu init_m_table_1_value
 action init_m_table_1_value_action()
 {
     init_m_table_1_value.execute_stateful_alu_from_hash(hash_1);
-	modify_field(ig_intr_md_for_tm.copy_to_cpu, 1);
 }
 
-@pragma stage 4
+@pragma stage 2
 table update_m_table_1_value_t
 {
     reads {
         measurement_meta.m_table_1_predicate: exact;
-        measurement_meta.m_table_2_predicate: exact;
-        measurement_meta.m_table_3_predicate: exact;
     }
     actions {
         update_m_table_1_value_action;
@@ -536,21 +549,21 @@ table update_m_table_1_value_t
 blackbox stateful_alu promote_m_table_1_value
 {
     reg: m_table_1_value;
-    update_lo_1_value: promote_header.cnt;
+    update_lo_1_value: promote_meta.cnt;
 	output_value: register_lo;
-	output_dst: measurement_meta.export_cnt;	  
+	output_dst: export_header.cnt;	  
 }
 
 action promote_m_table_1_value_action()
 {
-    promote_m_table_1_value.execute_stateful_alu(promote_header.idx);
+    promote_m_table_1_value.execute_stateful_alu(promote_meta.idx);
 }
 
-@pragma stage 4
+@pragma stage 2
 table promote_m_table_1_value_t
 {
 	reads {
-		promote_header.m_table_id: exact;
+		promote_meta.m_table_1: exact;
 	}
     actions {
         promote_m_table_1_value_action;
@@ -625,13 +638,11 @@ action init_m_table_2_value_action()
 	modify_field(ig_intr_md_for_tm.copy_to_cpu, 1);
 }
 
-@pragma stage 5
+@pragma stage 3
 table update_m_table_2_value_t
 {
     reads {
-        measurement_meta.m_table_1_predicate: exact;
         measurement_meta.m_table_2_predicate: exact;
-        measurement_meta.m_table_3_predicate: exact;
     }
     actions {
         update_m_table_2_value_action;
@@ -644,21 +655,21 @@ table update_m_table_2_value_t
 blackbox stateful_alu promote_m_table_2_value
 {
     reg: m_table_2_value;
-    update_lo_1_value: promote_header.cnt;
+    update_lo_1_value: promote_meta.cnt;
 	output_value: register_lo;
-	output_dst: measurement_meta.export_cnt;	  
+	output_dst: export_header.cnt;	  
 }
 
 action promote_m_table_2_value_action()
 {
-    promote_m_table_2_value.execute_stateful_alu(promote_header.idx);
+    promote_m_table_2_value.execute_stateful_alu(promote_meta.idx);
 }
 
-@pragma stage 5
+@pragma stage 3
 table promote_m_table_2_value_t
 {
 	reads {
-		promote_header.m_table_id: exact;
+		promote_meta.m_table_2: exact;
 	}
     actions {
         promote_m_table_2_value_action;
@@ -730,12 +741,10 @@ action init_m_table_3_value_action()
 	modify_field(ig_intr_md_for_tm.copy_to_cpu, 1);
 }
 
-@pragma stage 6
+@pragma stage 4
 table update_m_table_3_value_t
 {
     reads {
-        measurement_meta.m_table_1_predicate: exact;
-        measurement_meta.m_table_2_predicate: exact;
         measurement_meta.m_table_3_predicate: exact;
     }
     actions {
@@ -749,21 +758,21 @@ table update_m_table_3_value_t
 blackbox stateful_alu promote_m_table_3_value
 {
     reg: m_table_3_value;
-    update_lo_1_value: promote_header.cnt;
+    update_lo_1_value: promote_meta.cnt;
 	output_value: register_lo;
-	output_dst: measurement_meta.export_cnt;	  
+	output_dst: export_header.cnt;	  
 }
 
 action promote_m_table_3_value_action()
 {
-    promote_m_table_3_value.execute_stateful_alu(promote_header.idx);
+    promote_m_table_3_value.execute_stateful_alu(promote_meta.idx);
 }
 
-@pragma stage 6
+@pragma stage 4
 table promote_m_table_3_value_t
 {
 	reads {
-		promote_header.m_table_id: exact;
+		promote_meta.m_table_3: exact;
 	}
     actions {
         promote_m_table_3_value_action;
@@ -779,7 +788,7 @@ action subtract_action() {
 	subtract(measurement_meta.diff3, measurement_meta.m_table_2_cnt, measurement_meta.m_table_3_cnt);
 }
 
-@pragma stage 7
+@pragma stage 5
 table subtract_t {
 	actions {
 		subtract_action;
@@ -787,24 +796,39 @@ table subtract_t {
 	default_action: subtract_action;
 }
 
-action export_flow_record_action() {
-	add_header(record_export_header);
-	remove_header(promote_header);
-	// assume that all the packets are from the TCP flows
-	modify_field(tcp.srcport, TCP_RECORD_EXPORT);
-	modify_field(record_export_header.fingerprint, measurement_meta.export_fingerprint);
-	modify_field(record_export_header.cnt, measurement_meta.export_cnt);
-	modify_field(record_export_header.exportType, promote_header.promoteType);
-	modify_field(ig_intr_md_for_tm.copy_to_cpu, 1);
+action config_export_header() {
+	modify_field(export_header.srcip, ipv4.srcip);
+	modify_field(export_header.dstip, ipv4.dstip);
+	modify_field(export_header.proto, ipv4.proto);
+	modify_field(export_header.flag, 1);
 }
 
-@pragma stage 7
-table export_flow_record_t {
-	actions {
-		export_flow_record_action;
-	}	
-	default_action: export_flow_record_action;
+action config_export_header_tcp() {
+	config_export_header();
+	modify_field(export_header.srcport, tcp.srcport);
+	modify_field(export_header.dstport, tcp.dstport);
 }
+
+action config_export_header_udp() {
+	config_export_header();
+	modify_field(export_header.srcport, udp.srcport);
+	modify_field(export_header.dstport, udp.dstport);
+}
+
+@pragma stage 5
+table config_export_header_t {
+	reads {
+		tcp: valid;
+		udp: valid;
+	}
+	actions {
+		config_export_header_udp;
+		config_export_header_tcp;
+		nop;
+	}
+	default_action: nop;
+}
+
 
 action update_min_max_1 () {
 	modify_field(measurement_meta.cnt_max, measurement_meta.m_table_1_cnt, 0x000000ff);
@@ -860,7 +884,7 @@ action update_min_max_6 () {
 	modify_field(measurement_meta.m_table_id_min, 1);
 }
 
-@pragma stage 8
+@pragma stage 6
 table update_min_max_t {
 	reads {
 		measurement_meta.diff1 mask 0x80000000: exact;
@@ -877,35 +901,6 @@ table update_min_max_t {
 	}
     max_size: 6;
 }
-
-
-
-
-
-
-
-
-//action copy_pkt_to_cpu_action()
-//{
-//    modify_field(ig_intr_md_for_tm.copy_to_cpu, 1);
-    // modify_field(intrinsic_metadata.cos_for_copy_to_cpu, ...);
-//}
-
-//table copy_to_cpu_t
-//{
-//    reads {
-//        measurement_meta.promotion: exact;
-//        measurement_meta.m_table_1_predicate: ternary;
-//        measurement_meta.m_table_2_predicate: ternary;
-//        measurement_meta.m_table_3_predicate: ternary;
-//    }
-//    actions {
-//        copy_pkt_to_cpu_action;
-//        nop;
-//    }
-//    default_action: nop;
-//    max_size: 4;
-//}
 
 register a_table
 {
@@ -935,7 +930,7 @@ action update_a_table_action()
     update_a_table.execute_stateful_alu_from_hash(hash_4);
 }
 
-@pragma stage 8
+@pragma stage 6
 table update_a_table_t
 {
     actions {
@@ -952,7 +947,7 @@ action compare_action()
 	subtract(measurement_meta.flag_active, measurement_meta.cnt_max, measurement_meta.b_cnt);
 }
 
-@pragma stage 10
+@pragma stage 8
 table compare_t
 {
     reads {
@@ -974,7 +969,6 @@ register b_table
     instance_count: A_TABLE_SIZE;
 }
 
-@pragma stage 7
 blackbox stateful_alu update_b_table
 {
     reg: b_table;
@@ -992,7 +986,7 @@ action update_b_action()
     update_b_table.execute_stateful_alu_from_hash(hash_4);
 }
 
-@pragma stage 9
+@pragma stage 7
 table update_b_t
 {
     actions {
@@ -1002,127 +996,161 @@ table update_b_t
     max_size: 1;
 }
 
-action promote_max_action() {
-	add_header(promote_header);	
-	modify_field(promote_header.fingerprint, measurement_meta.fingerprint);
-	modify_field(promote_header.m_table_id, measurement_meta.m_table_id_max);
-	modify_field(promote_header.idx, measurement_meta.idx_max);
-	modify_field(promote_header.cnt, measurement_meta.cnt_max);
-	// we assume that all the packets are from TCP flows
-	modify_field(promote_header.promoteType, tcp.srcport);
-	modify_field(tcp.srcport, TCP_PROMOTE);
-	recirculate(68);
+action config_promotion(m_table_id, idx, cnt){
+	modify_field(promote_meta.fingerprint, measurement_meta.fingerprint);
+	modify_field(promote_meta.m_table_id, m_table_id);
+	modify_field(promote_meta.idx, idx);
+	modify_field(promote_meta.cnt, cnt);
 }
 
-action promote_min_action() {
-	add_header(promote_header);	
-	modify_field(promote_header.fingerprint, measurement_meta.fingerprint);
-	modify_field(promote_header.m_table_id, measurement_meta.m_table_id_min);
-	modify_field(promote_header.idx, measurement_meta.idx_min);
-	modify_field(promote_header.cnt, measurement_meta.cnt_min);
-	// we assume that all the packets are from TCP flows
-	modify_field(promote_header.promoteType, tcp.srcport);
-	modify_field(tcp.srcport, TCP_PROMOTE);
-	recirculate(68);
+action config_promotion_min() {
+	config_promotion(measurement_meta.m_table_id_min, measurement_meta.idx_min, 
+			measurement_meta.cnt_min);
 }
 
-@pragma stage 11
-table promote_t {
+action config_promotion_max() {
+	config_promotion(measurement_meta.m_table_id_max, measurement_meta.idx_max, 
+			measurement_meta.cnt_max);
+}
+
+@pragma stage 9
+table config_promotion_t {
 	reads {
 		measurement_meta.flag_min: ternary;
 		measurement_meta.flag_max: ternary;
 		measurement_meta.flag_active: exact;
 	}	
 	actions {
-		promote_max_action;
-		promote_min_action;
+		config_promotion_min;
+		config_promotion_max;
 		nop;
 	}
 	default_action: nop;
 }
 
-//field_list recirculate_fields
-//{
-//    measurement_meta.promotion; //1-bit
-//    measurement_meta.stage; //4-bit
-//    measurement_meta.ac_flow_count; //32-bit
-//}
+action do_resubmit() {
+	resubmit(resubmit_fields);
+}
 
-//action cancel_recirc_action()
-//{
-//	// drop();
-//	mark_for_drop();
-//}
+@pragma stage 10
+table resubmit_t {
+	actions {
+		do_resubmit;
+	}
+	default_action: do_resubmit;
+}
 
-control ingress
+
+action remove() {
+	remove_header(tcp);
+	add_header(udp);
+	add(ipv4.totalLen, measurement_meta.ipv4_totalLen, -12);
+	modify_field(ipv4.proto, IPV4_UDP);
+	add(udp.totalLen, measurement_meta.ipv4_totalLen, -32);
+	modify_field(udp.srcport, UDP_EXPORT);
+	modify_field(udp.dstport, 8082);
+	modify_field(udp.checksum, 0);
+}
+
+table remove_t {
+	actions {
+		remove;
+	}
+	default_action: remove;
+}
+
+action do_drop()
+{
+	drop();
+}
+
+action export() {
+	add_header(export_header);
+	add(ipv4.totalLen, ipv4.totalLen, EXPORT_HEADER_LEN);
+	add(udp.totalLen, udp.totalLen, EXPORT_HEADER_LEN);
+	modify_field(udp.srcport, UDP_EXPORT);
+	modify_field(udp.dstport, CTRL_PORT);
+	modify_field(udp.checksum, 0);
+}
+
+table export_t {
+	reads {
+		export_header.flag: exact;
+	}
+	actions {
+		do_drop;
+		export;
+	}	
+	default_action: do_drop;
+}
+
+control AHashFlow
 {
 	// stage 0
-	apply(update_cntr1_t);
+	apply(forward);
+//	apply(update_cntr1_t);
     apply(generate_fingerprint_t);
     apply(calc_digest_t);
 	apply(calc_m_table_1_idx_t);
 	apply(calc_m_table_2_idx_t);
 	apply(calc_m_table_3_idx_t);
-	if(valid(promote_header)) {
+	if(1 == ig_intr_md.resubmit_flag) {
 		// stage 1
 		apply(promote_m_table_1_key_t);	
 		// stage 2
+		apply(promote_m_table_1_value_t);	
 		apply(promote_m_table_2_key_t);	
 		// stage 3
+		apply(promote_m_table_2_value_t);	
 		apply(promote_m_table_3_key_t);	
 		// stage 4
-		apply(promote_m_table_1_value_t);	
-		// stage 5
-		apply(promote_m_table_2_value_t);	
-		// stage 6
 		apply(promote_m_table_3_value_t);	
-		// stage 7
-		apply(export_flow_record_t);	
+		// stage 5
+		apply(config_export_header_t);
 	} 
 	else{
 		// stage 1
 		apply(update_m_table_1_key_t);
-			// stage 2
-			apply(update_m_table_2_key_t) {
-				update_m_table_2_key_action {
-					// stage 3
-					apply(update_m_table_3_key_t);
-				}
-			}
-		// stage 4
+		// stage 2
 		apply(update_m_table_1_value_t); 
-		// stage 5
+		apply(update_m_table_2_key_t); 
+		// stage 3
 		apply(update_m_table_2_value_t); 
-		// stage 6
+		apply(update_m_table_3_key_t);
+		// stage 4
 		apply(update_m_table_3_value_t);
 		if (measurement_meta.m_table_1_predicate == PRED and measurement_meta.m_table_2_predicate == PRED and measurement_meta.m_table_3_predicate == PRED)	{
-			// stage 7
+			// stage 5
 			apply(subtract_t);
-			// stage 8
+			// stage 6
 			apply(update_min_max_t);
 			apply(update_a_table_t);
-			// stage 9
+			// stage 7
 			apply(update_b_t);
-			// stage 10
+			// stage 8
 			apply(compare_t)
 			{
 				compare_action {
-					// stage 11
-					apply(promote_t);
+					// stage 9
+			//		apply(config_promotion_t);
+					// stage 10
+					apply(resubmit_t);
 				}
 			}
 		}
 	}
 }
 
+control ingress {
+	if(valid(udp) or valid(tcp)) {
+		AHashFlow();
+	}
+}
 control egress
 {
-//    apply(copy_to_cpu_t);
-    // apply(update_ancillary_table_key_t);
-    // apply(update_ancillary_table_value_t) {
-    //     update_ancillary_table_value_action {
-    //         apply(min_value_subtract_pktcnt_a_t);
-    //         apply(handle_recirculate_t);
-    //     }
-    // }
+	if(valid(tcp)) {
+		apply(remove_t);
+	}
+	apply(export_t);
+
 }
