@@ -105,18 +105,21 @@ field_list_calculation udp_checksum {
 
 calculated_field udp.checksum {
     update udp_checksum if (measurement_meta.update_udp_flag == 1);
-}
+}*/
 
 header_type promote_header_t {
     fields {
 		fingerprint: 32;
 		idx: 32;
 		cnt: 32;
-		promoteType: 8;
-		m_table_id: 8;
+		m_table_1: 1;
+		m_table_2: 1;
+		m_table_3: 1;
+		next_header: 8;
+		padding: 5;
     }
 }
-header promote_header_t promote_header;*/
+header promote_header_t promote_header;
 
 header_type vlan_tag_t {
 	fields {

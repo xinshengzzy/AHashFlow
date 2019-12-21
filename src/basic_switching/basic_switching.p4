@@ -30,6 +30,8 @@ header_type measurement_meta_t {
 		clone_b: 16;
 		clone_c: 16;
 		ipv4_totalLen: 16;
+		ipv4_proto: 8;
+		cntr1_hi: 8;
 	}
 }
 
@@ -117,12 +119,41 @@ table set_udp_length_t {
 	default_action: nop;
 }
 
+action add_promote_header() {
+	add_header(promote_header);
+	add(ipv4.totalLen, ipv4.totalLen, PROMOTE_HEADER_LEN);
+	modify_field(ipv4.proto, IPV4_PROMOTION);
+	modify_field(promote_header.next_header, measurement_meta.ipv4_proto);
+	modify_field(promote_header.fingerprint, 100);
+	modify_field(promote_header.idx, 200);
+	modify_field(promote_header.cnt, 300);
+}
+
+table add_promote_header_t {
+	actions {
+		add_promote_header;
+	}
+	default_action: add_promote_header;
+}
+
+action remove_promote_header() {
+	remove_header(promote_header);
+	add(ipv4.totalLen, ipv4.totalLen, -PROMOTE_HEADER_LEN);
+	modify_field(ipv4.proto, promote_header.next_header);
+}
+
+table remove_promote_header_t {
+	actions {
+		remove_promote_header;
+	}
+	default_action: remove_promote_header;
+}
+
 action add_hdr() {
-	add_header(udp);
-	add(ipv4.totalLen, ipv4.totalLen, 8);
-	modify_field(ipv4.proto, IPV4_UDP);
-	modify_field(udp.srcport, UDP_EXPORT);
-	modify_field(udp.dstport, 8082);
+	add_header(promote_header);
+	add(ipv4.totalLen, ipv4.totalLen, 14);
+	modify_field(ipv4.proto, IPV4_PROMOTION);
+
 }
 
 table add_t {
@@ -184,23 +215,29 @@ table update_headers_2_t {
 }
 
 register cntr1 {
-	width: 32;
+	width: 16;
 	instance_count: 10;	   
 }
 
 blackbox stateful_alu update_cntr1_bb {
 	reg: cntr1;
+	condition_hi: register_hi == 0;
 	update_lo_1_value: register_lo + 1;
+	update_hi_1_value: 100;	
+//	output_value: alu_hi;
+//	output_dst: measurement_meta.cntr1_hi;
 }
 
 action update_cntr1() {
 	update_cntr1_bb.execute_stateful_alu(0);
 }
 
+//		ipv4.srcip: exact;
+//		ipv4.dstip: exact;
+
 table update_cntr1_t {
 	reads {
-		ipv4.srcip: exact;
-		ipv4.dstip: exact;
+		udp.srcport: ternary;
 	}
 	actions {
 		update_cntr1;
@@ -220,6 +257,18 @@ table resubmit_t {
 	default_action: do_resubmit;
 }
 
+action do_recirc() {
+	recirculate(68);
+//	invalidate(ig_intr_md_for_tm.mcast_grp_a);
+}
+
+table recirc_t {
+	actions {
+		do_recirc;
+	}
+	default_action: do_recirc;
+}
+
 action clone() {
 	clone_ingress_pkt_to_egress(measurement_meta.clone_c, clone_fields);
 }
@@ -231,20 +280,29 @@ table clone_t {
 	default_action: clone;
 }
 
+
+
 control ingress {
 	apply(forward);
 //	apply(clone_t);
-	if(valid(tcp)) {
-		apply(remove_t);
+	if(valid(udp)) {
+		apply(update_cntr1_t);
+//		apply(remove_t);
 //		apply(set_udp_length_t);
 //		apply(add_t);
 		apply(update_headers_1_t);
 		apply(update_headers_2_t);
-		apply(update_cntr1_t);
 	}
-	if(0 == ig_intr_md.resubmit_flag) {
-		apply(resubmit_t);
-	}
+//	if(0 == ig_intr_md.resubmit_flag) {
+//	if(0 == ig_intr_md.recirculate_flag) {
+//	if(valid(promote_header)) {
+	//	apply(resubmit_t);
+//		apply(recirc_t);
+//		apply(remove_promote_header_t);
+//	}
+//	else{
+//		apply(recirc_t);
+//	}
 }
 
 control egress {

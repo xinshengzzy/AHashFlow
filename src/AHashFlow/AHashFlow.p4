@@ -14,8 +14,8 @@ field_list flow {
     ipv4.srcip;
     ipv4.dstip;
     ipv4.proto;
-    tcp.srcport;
-    tcp.dstport;
+    export_meta.srcport;
+    export_meta.dstport;
 }
 
 // hash function for main_table_1 and fingerprint generation
@@ -109,37 +109,78 @@ header_type measurement_meta_t {
 		diff3: 32; // m_table_2_cnt - m_table_3_cnt
         ancillary_table_predicate: 4; // output predicate in main sub table 1
 		ipv4_totalLen: 16;
-//		update_udp_flag: 1;
-//		l4_len: 16;
+		ipv4_proto: 8;
     }
 }
 
 metadata measurement_meta_t measurement_meta;
 
-
 header_type promote_meta_t {
 	fields {
-		fingerprint: 32;
-		m_table_id: 8;
-		idx: 32;
-	 	cnt: 32;		 
+		promotion_pkt: 1;
 		m_table_1: 1;
 		m_table_2: 1;
 		m_table_3: 1;
-		field_A: 24;
-		field_C: 16;
 	}
 }
-
 metadata promote_meta_t promote_meta;
 
 field_list resubmit_fields {
-//	promote_meta.fingerprint;
-//	promote_meta.m_table_id;
-//	promote_meta.idx;
-//	promote_meta.cnt;
-	promote_meta.field_A;
-	promote_meta.field_C;
+	promote_meta.promotion_pkt;
+}
+
+header_type export_meta_t {
+	fields{
+		srcport: 16;
+		dstport: 16;
+	}
+}
+metadata export_meta_t export_meta;
+
+action add_promote_header() {
+	add_header(promote_header);
+	add(ipv4.totalLen, ipv4.totalLen, PROMOTE_HEADER_LEN);
+	modify_field(ipv4.proto, IPV4_PROMOTION);
+	modify_field(promote_header.next_header, measurement_meta.ipv4_proto);
+}
+
+table add_promote_header_t {
+	actions {
+		add_promote_header;
+	}
+	default_action: add_promote_header;
+}
+
+action remove_promote_header() {
+	remove_header(promote_header);
+	add(ipv4.totalLen, ipv4.totalLen, -PROMOTE_HEADER_LEN);
+	add(measurement_meta.ipv4_totalLen, measurement_meta.ipv4_totalLen, -PROMOTE_HEADER_LEN);
+	modify_field(ipv4.proto, promote_header.next_header);
+}
+
+action rmv_promote_header_set_export_flag() {
+	remove_promote_header();
+	modify_field(export_header.flag, 1);
+}
+
+@pragma stage 5
+table rmv_promote_header_set_export_flag_t {
+	actions {
+		rmv_promote_header_set_export_flag;
+	}
+	default_action: rmv_promote_header_set_export_flag;
+}
+
+action set_export_flag() {
+	modify_field(export_header.flag, 1);
+}
+
+@pragma stage 5
+table set_export_flag_t {
+	actions {
+		set_export_flag;
+	}
+	default_action: set_export_flag;
 }
 
 ////////// for the useage of testing //////////
@@ -307,14 +348,14 @@ table update_m_table_1_key_t
 blackbox stateful_alu promote_m_table_1_key
 {
     reg: m_table_1_key;
-    update_lo_1_value: promote_meta.fingerprint;
+    update_lo_1_value: promote_header.fingerprint;
 	output_value: register_lo;
 	output_dst: export_header.fingerprint;	  
 }
 
 action promote_m_table_1_key_action()
 {
-    promote_m_table_1_key.execute_stateful_alu(promote_meta.idx);
+    promote_m_table_1_key.execute_stateful_alu(promote_header.idx);
 	modify_field(promote_meta.m_table_1, 1);
 }
 
@@ -322,7 +363,7 @@ action promote_m_table_1_key_action()
 table promote_m_table_1_key_t
 {
 	reads {
-		promote_meta.m_table_id: exact;
+		promote_header.m_table_id: exact;
 	}
     actions {
         promote_m_table_1_key_action;
@@ -360,7 +401,7 @@ action update_m_table_2_key_action()
 table update_m_table_2_key_t
 {
     reads {
-        measurement_meta.m_table_1_predicate: ternary;
+        measurement_meta.m_table_1_predicate: exact;
     }
     actions {
         update_m_table_2_key_action;
@@ -373,14 +414,14 @@ table update_m_table_2_key_t
 blackbox stateful_alu promote_m_table_2_key
 {
     reg: m_table_2_key;
-    update_lo_1_value: promote_meta.fingerprint;
+    update_lo_1_value: promote_header.fingerprint;
 	output_value: register_lo;
 	output_dst: export_header.fingerprint;	  
 }
 
 action promote_m_table_2_key_action()
 {
-    promote_m_table_2_key.execute_stateful_alu(promote_meta.idx);
+    promote_m_table_2_key.execute_stateful_alu(promote_header.idx);
 	modify_field(promote_meta.m_table_2, 1);
 }
 
@@ -388,7 +429,7 @@ action promote_m_table_2_key_action()
 table promote_m_table_2_key_t
 {
 	reads {
-		promote_meta.m_table_id: exact;
+		promote_header.m_table_id: exact;
 	}
     actions {
         promote_m_table_2_key_action;
@@ -426,7 +467,8 @@ action update_m_table_3_key_action()
 table update_m_table_3_key_t
 {
     reads {
-        measurement_meta.m_table_2_predicate: ternary;
+        measurement_meta.m_table_1_predicate: exact;
+        measurement_meta.m_table_2_predicate: exact;
     }
     actions {
         update_m_table_3_key_action;
@@ -439,14 +481,14 @@ table update_m_table_3_key_t
 blackbox stateful_alu promote_m_table_3_key
 {
     reg: m_table_3_key;
-    update_lo_1_value: promote_meta.fingerprint;
+    update_lo_1_value: promote_header.fingerprint;
 	output_value: register_lo;
 	output_dst: export_header.fingerprint;	  
 }
 
 action promote_m_table_3_key_action()
 {
-    promote_m_table_3_key.execute_stateful_alu(promote_meta.idx);
+    promote_m_table_3_key.execute_stateful_alu(promote_header.idx);
 	modify_field(promote_meta.m_table_3, 1);
 }
 
@@ -454,7 +496,7 @@ action promote_m_table_3_key_action()
 table promote_m_table_3_key_t
 {
 	reads {
-		promote_meta.m_table_id: exact;
+		promote_header.m_table_id: exact;
 	}
     actions {
         promote_m_table_3_key_action;
@@ -549,14 +591,14 @@ table update_m_table_1_value_t
 blackbox stateful_alu promote_m_table_1_value
 {
     reg: m_table_1_value;
-    update_lo_1_value: promote_meta.cnt;
+    update_lo_1_value: promote_header.cnt;
 	output_value: register_lo;
 	output_dst: export_header.cnt;	  
 }
 
 action promote_m_table_1_value_action()
 {
-    promote_m_table_1_value.execute_stateful_alu(promote_meta.idx);
+    promote_m_table_1_value.execute_stateful_alu(promote_header.idx);
 }
 
 @pragma stage 2
@@ -648,21 +690,23 @@ table update_m_table_2_value_t
         update_m_table_2_value_action;
         read_m_table_2_value_action;
         init_m_table_2_value_action;
+		nop;
     }
-    max_size: 3;
+	default_action: nop;
+    max_size: 4;
 }
 
 blackbox stateful_alu promote_m_table_2_value
 {
     reg: m_table_2_value;
-    update_lo_1_value: promote_meta.cnt;
+    update_lo_1_value: promote_header.cnt;
 	output_value: register_lo;
 	output_dst: export_header.cnt;	  
 }
 
 action promote_m_table_2_value_action()
 {
-    promote_m_table_2_value.execute_stateful_alu(promote_meta.idx);
+    promote_m_table_2_value.execute_stateful_alu(promote_header.idx);
 }
 
 @pragma stage 3
@@ -758,14 +802,14 @@ table update_m_table_3_value_t
 blackbox stateful_alu promote_m_table_3_value
 {
     reg: m_table_3_value;
-    update_lo_1_value: promote_meta.cnt;
+    update_lo_1_value: promote_header.cnt;
 	output_value: register_lo;
 	output_dst: export_header.cnt;	  
 }
 
 action promote_m_table_3_value_action()
 {
-    promote_m_table_3_value.execute_stateful_alu(promote_meta.idx);
+    promote_m_table_3_value.execute_stateful_alu(promote_header.idx);
 }
 
 @pragma stage 4
@@ -800,7 +844,8 @@ action config_export_header() {
 	modify_field(export_header.srcip, ipv4.srcip);
 	modify_field(export_header.dstip, ipv4.dstip);
 	modify_field(export_header.proto, ipv4.proto);
-	modify_field(export_header.flag, 1);
+	modify_field(export_header.srcport, export_meta.srcport);
+	modify_field(export_header.dstport, export_meta.dstport);
 }
 
 action config_export_header_tcp() {
@@ -815,7 +860,7 @@ action config_export_header_udp() {
 	modify_field(export_header.dstport, udp.dstport);
 }
 
-@pragma stage 5
+@pragma stage 10
 table config_export_header_t {
 	reads {
 		tcp: valid;
@@ -830,58 +875,43 @@ table config_export_header_t {
 }
 
 
-action update_min_max_1 () {
-	modify_field(measurement_meta.cnt_max, measurement_meta.m_table_1_cnt, 0x000000ff);
-	modify_field(measurement_meta.idx_max, measurement_meta.m_table_1_idx);
-	modify_field(measurement_meta.m_table_id_max, 1);
-	modify_field(measurement_meta.cnt_min, measurement_meta.m_table_3_cnt);
-	modify_field(measurement_meta.idx_min, measurement_meta.m_table_3_idx);
-	modify_field(measurement_meta.m_table_id_min, 3);
+action update_min_max (cnt_min, idx_min, m_table_id_min, cnt_max, idx_max, m_table_id_max) {
+	modify_field(measurement_meta.cnt_min, cnt_min);
+	modify_field(measurement_meta.idx_min, idx_min);
+	modify_field(measurement_meta.m_table_id_min, m_table_id_min);
+	modify_field(measurement_meta.cnt_max, cnt_max, 0x000000ff);
+	modify_field(measurement_meta.idx_max, idx_max);
+	modify_field(measurement_meta.m_table_id_max, m_table_id_max);
 }
 
-action update_min_max_2 () {
-	modify_field(measurement_meta.cnt_max, measurement_meta.m_table_1_cnt, 0x000000ff);
-	modify_field(measurement_meta.idx_max, measurement_meta.m_table_1_idx);
-	modify_field(measurement_meta.m_table_id_max, 1);
-	modify_field(measurement_meta.cnt_min, measurement_meta.m_table_2_cnt);
-	modify_field(measurement_meta.idx_min, measurement_meta.m_table_2_idx);
-	modify_field(measurement_meta.m_table_id_min, 2);
+action update_min_1_max_2 () {
+	update_min_max(measurement_meta.m_table_1_cnt, measurement_meta.m_table_1_idx, 1, 
+			measurement_meta.m_table_2_cnt, measurement_meta.m_table_2_idx, 2);
 }
 
-action update_min_max_3 () {
-	modify_field(measurement_meta.cnt_max, measurement_meta.m_table_2_cnt, 0x000000ff);
-	modify_field(measurement_meta.idx_max, measurement_meta.m_table_2_idx);
-	modify_field(measurement_meta.m_table_id_max, 2);
-	modify_field(measurement_meta.cnt_min, measurement_meta.m_table_3_cnt);
-	modify_field(measurement_meta.idx_min, measurement_meta.m_table_3_idx);
-	modify_field(measurement_meta.m_table_id_min, 3);
+action update_min_1_max_3 () {
+	update_min_max(measurement_meta.m_table_1_cnt, measurement_meta.m_table_1_idx, 1, 
+			measurement_meta.m_table_3_cnt, measurement_meta.m_table_3_idx, 3);
 }
 
-action update_min_max_4 () {
-	modify_field(measurement_meta.cnt_max, measurement_meta.m_table_2_cnt, 0x000000ff);
-	modify_field(measurement_meta.idx_max, measurement_meta.m_table_2_idx);
-	modify_field(measurement_meta.m_table_id_max, 2);
-	modify_field(measurement_meta.cnt_min, measurement_meta.m_table_1_cnt);
-	modify_field(measurement_meta.idx_min, measurement_meta.m_table_1_idx);
-	modify_field(measurement_meta.m_table_id_min, 1);
+action update_min_2_max_1 () {
+	update_min_max(measurement_meta.m_table_2_cnt, measurement_meta.m_table_2_idx, 2, 
+			measurement_meta.m_table_1_cnt, measurement_meta.m_table_1_idx, 1);
 }
 
-action update_min_max_5 () {
-	modify_field(measurement_meta.cnt_max, measurement_meta.m_table_3_cnt, 0x000000ff);
-	modify_field(measurement_meta.idx_max, measurement_meta.m_table_3_idx);
-	modify_field(measurement_meta.m_table_id_max, 3);
-	modify_field(measurement_meta.cnt_min, measurement_meta.m_table_2_cnt);
-	modify_field(measurement_meta.idx_min, measurement_meta.m_table_2_idx);
-	modify_field(measurement_meta.m_table_id_min, 2);
+action update_min_2_max_3 () {
+	update_min_max(measurement_meta.m_table_2_cnt, measurement_meta.m_table_2_idx, 2, 
+			measurement_meta.m_table_3_cnt, measurement_meta.m_table_3_idx, 3);
 }
 
-action update_min_max_6 () {
-	modify_field(measurement_meta.cnt_max, measurement_meta.m_table_3_cnt, 0x000000ff);
-	modify_field(measurement_meta.idx_max, measurement_meta.m_table_3_idx);
-	modify_field(measurement_meta.m_table_id_max, 3);
-	modify_field(measurement_meta.cnt_min, measurement_meta.m_table_1_cnt);
-	modify_field(measurement_meta.idx_min, measurement_meta.m_table_1_idx);
-	modify_field(measurement_meta.m_table_id_min, 1);
+action update_min_3_max_1 () {
+	update_min_max(measurement_meta.m_table_3_cnt, measurement_meta.m_table_3_idx, 3, 
+			measurement_meta.m_table_1_cnt, measurement_meta.m_table_1_idx, 1);
+}
+
+action update_min_3_max_2 () {
+	update_min_max(measurement_meta.m_table_3_cnt, measurement_meta.m_table_3_idx, 3, 
+			measurement_meta.m_table_2_cnt, measurement_meta.m_table_2_idx, 2);
 }
 
 @pragma stage 6
@@ -890,14 +920,24 @@ table update_min_max_t {
 		measurement_meta.diff1 mask 0x80000000: exact;
 		measurement_meta.diff2 mask 0x80000000: exact;
 		measurement_meta.diff3 mask 0x80000000: exact;
+		/*diff1	diff2	diff3	min	max
+		 *0		0		0		3	1
+		 *0		0		1		2	1
+		 *0		1		0		NO	NO
+		 *0		1		1		2	3
+		 *1		0		0		3	2
+		 *1		0		1		NO	NO
+		 *1		1		0		1	2
+		 *1		1		1		1	3
+		 * */
 	}
 	actions {
-		update_min_max_1;
-		update_min_max_2;
-		update_min_max_3;
-		update_min_max_4;
-		update_min_max_5;
-		update_min_max_6;
+		update_min_1_max_2;
+		update_min_1_max_3;
+		update_min_2_max_1;
+		update_min_2_max_3;
+		update_min_3_max_1;
+		update_min_3_max_2;
 	}
     max_size: 6;
 }
@@ -950,15 +990,10 @@ action compare_action()
 @pragma stage 8
 table compare_t
 {
-    reads {
-        measurement_meta.a_cnt: exact;
-    }
     actions {
         compare_action;
-        nop;
     }
     default_action: compare_action;
-    max_size: 2;
 }
 
 
@@ -996,52 +1031,52 @@ table update_b_t
     max_size: 1;
 }
 
-action config_promotion(m_table_id, idx, cnt){
-	modify_field(promote_meta.fingerprint, measurement_meta.fingerprint);
-	modify_field(promote_meta.m_table_id, m_table_id);
-	modify_field(promote_meta.idx, idx);
-	modify_field(promote_meta.cnt, cnt);
+action do_promotion(cnt, m_table_id, idx){
+	modify_field(promote_header.cnt, cnt);
+	modify_field(promote_header.m_table_id, m_table_id);
+	modify_field(promote_header.idx, idx);
+	modify_field(promote_header.fingerprint, measurement_meta.fingerprint);
+	add_promote_header();
+	modify_field(promote_meta.promotion_pkt, 1);
+	resubmit(resubmit_fields);
 }
 
-action config_promotion_min() {
-	config_promotion(measurement_meta.m_table_id_min, measurement_meta.idx_min, 
-			measurement_meta.cnt_min);
+action do_promotion_min() {
+	do_promotion(measurement_meta.cnt_min, measurement_meta.m_table_id_min, 
+			measurement_meta.idx_min);
 }
 
-action config_promotion_max() {
-	config_promotion(measurement_meta.m_table_id_max, measurement_meta.idx_max, 
-			measurement_meta.cnt_max);
+action do_promotion_max() {
+	do_promotion(measurement_meta.cnt_max, measurement_meta.m_table_id_max, 
+			measurement_meta.idx_max);
 }
 
 @pragma stage 9
-table config_promotion_t {
+table promote_t {
 	reads {
 		measurement_meta.flag_min: ternary;
 		measurement_meta.flag_max: ternary;
-		measurement_meta.flag_active: exact;
-	}	
+		measurement_meta.flag_active: ternary;
+		/*flag_min	flag_max	flag_active	action
+		 *0			0			0			nop
+		 *0			0			!=0			nop
+		 *0			1			0			do_promotion_max
+		 *0			1			!=0			nop
+		 *1			0			0			do_promotion_min
+		 *1			0			!=0			do_promotion_min
+		 *1			1			0			do_promotion_min
+		 *1			1			!=0			do_promotion_min
+		 * */
+	}
 	actions {
-		config_promotion_min;
-		config_promotion_max;
+		do_promotion_min;
+		do_promotion_max;
 		nop;
 	}
 	default_action: nop;
 }
 
-action do_resubmit() {
-	resubmit(resubmit_fields);
-}
-
-@pragma stage 10
-table resubmit_t {
-	actions {
-		do_resubmit;
-	}
-	default_action: do_resubmit;
-}
-
-
-action remove() {
+action rmv_tcp_add_udp() {
 	remove_header(tcp);
 	add_header(udp);
 	add(ipv4.totalLen, measurement_meta.ipv4_totalLen, -12);
@@ -1052,11 +1087,12 @@ action remove() {
 	modify_field(udp.checksum, 0);
 }
 
-table remove_t {
+@pragma stage 10
+table rmv_tcp_add_udp_t {
 	actions {
-		remove;
+		rmv_tcp_add_udp;
 	}
-	default_action: remove;
+	default_action: rmv_tcp_add_udp;
 }
 
 action do_drop()
@@ -1065,6 +1101,7 @@ action do_drop()
 }
 
 action export() {
+	config_export_header();
 	add_header(export_header);
 	add(ipv4.totalLen, ipv4.totalLen, EXPORT_HEADER_LEN);
 	add(udp.totalLen, udp.totalLen, EXPORT_HEADER_LEN);
@@ -1073,6 +1110,7 @@ action export() {
 	modify_field(udp.checksum, 0);
 }
 
+@pragma stage 11
 table export_t {
 	reads {
 		export_header.flag: exact;
@@ -1086,29 +1124,14 @@ table export_t {
 
 control AHashFlow
 {
-	// stage 0
-	apply(forward);
 //	apply(update_cntr1_t);
-    apply(generate_fingerprint_t);
-    apply(calc_digest_t);
-	apply(calc_m_table_1_idx_t);
-	apply(calc_m_table_2_idx_t);
-	apply(calc_m_table_3_idx_t);
-	if(1 == ig_intr_md.resubmit_flag) {
-		// stage 1
-		apply(promote_m_table_1_key_t);	
-		// stage 2
-		apply(promote_m_table_1_value_t);	
-		apply(promote_m_table_2_key_t);	
-		// stage 3
-		apply(promote_m_table_2_value_t);	
-		apply(promote_m_table_3_key_t);	
-		// stage 4
-		apply(promote_m_table_3_value_t);	
-		// stage 5
-		apply(config_export_header_t);
-	} 
-	else{
+	if(0 == promote_meta.promotion_pkt) {
+		// stage 0
+		apply(generate_fingerprint_t);
+		apply(calc_digest_t);
+		apply(calc_m_table_1_idx_t);
+		apply(calc_m_table_2_idx_t);
+		apply(calc_m_table_3_idx_t);
 		// stage 1
 		apply(update_m_table_1_key_t);
 		// stage 2
@@ -1119,7 +1142,9 @@ control AHashFlow
 		apply(update_m_table_3_key_t);
 		// stage 4
 		apply(update_m_table_3_value_t);
-		if (measurement_meta.m_table_1_predicate == PRED and measurement_meta.m_table_2_predicate == PRED and measurement_meta.m_table_3_predicate == PRED)	{
+		if (PRED_COL == measurement_meta.m_table_1_predicate and 
+			PRED_COL == measurement_meta.m_table_2_predicate and 
+			PRED_COL == measurement_meta.m_table_3_predicate) {// collision occurs in every m table
 			// stage 5
 			apply(subtract_t);
 			// stage 6
@@ -1132,25 +1157,46 @@ control AHashFlow
 			{
 				compare_action {
 					// stage 9
-			//		apply(config_promotion_t);
-					// stage 10
-					apply(resubmit_t);
+					apply(promote_t);
 				}
 			}
 		}
+		else if(PRED_EMP == measurement_meta.m_table_1_predicate or 
+			PRED_EMP == measurement_meta.m_table_2_predicate or 
+			PRED_EMP == measurement_meta.m_table_3_predicate) {// there is a empty bucket
+			// stage 5
+			apply(set_export_flag_t);		
+		}
 	}
+	else{
+		// stage 1
+		apply(promote_m_table_1_key_t);	
+		// stage 2
+		apply(promote_m_table_1_value_t);	
+		apply(promote_m_table_2_key_t);	
+		// stage 3
+		apply(promote_m_table_2_value_t);	
+		apply(promote_m_table_3_key_t);	
+		// stage 4
+		apply(promote_m_table_3_value_t);	
+		// stage 5
+		apply(rmv_promote_header_set_export_flag_t);
+	} 
+	if(valid(tcp)) {
+		// stage 10
+		apply(rmv_tcp_add_udp_t);
+	}
+	// stage 11
+	apply(export_t);
 }
 
 control ingress {
+	apply(forward);
 	if(valid(udp) or valid(tcp)) {
 		AHashFlow();
 	}
 }
 control egress
 {
-	if(valid(tcp)) {
-		apply(remove_t);
-	}
-	apply(export_t);
 
 }

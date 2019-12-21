@@ -1,9 +1,9 @@
 #P4_NAME=emulation
 #P4_NAME=basic_switching
-#P4_NAME=my_switching
 #P4_NAME=multi_device
 #P4_NAME=multicast_scale
 P4_NAME=AHashFlow
+#P4_NAME=resubmit
 build:
 	cd $(BUILD) && \
 	./autogen.sh && \
@@ -22,7 +22,8 @@ run:
 	pkill bf_switchd || true
 	pkill run_switchd.sh || true
 	$(SDE)/run_switchd.sh -p $(P4_NAME) &
-	sleep 23
+#	sleep 23
+configure:
 	bfshell -f $(SRC)/$(P4_NAME)/commands.txt
 push:
 	git add -A
