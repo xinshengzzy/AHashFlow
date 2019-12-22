@@ -1,16 +1,7 @@
 // AHashFlow specific parameters
-#define MAIN_TABLE_IDX_WIDTH 10
-#define A_TABLE_IDX_WIDTH 12
-#define A_TABLE_SIZE 4096
-#define B_TABLE_IDX_WIDTH 12
-#define B_TABLE_SIZE 4096
-#define MAIN_TABLE_SIZE 3072
-#define M_TABLE_1_SIZE 1024
-#define M_TABLE_2_SIZE 1024
-#define M_TABLE_3_SIZE 1024
-#define DIGEST_WIDTH 8
+#define HASH_TABLE_IDX_WIDTH 15
+#define HASH_TABLE_SIZE 32768 // 0.25 MB of memory, 8 B for each bucket
 #define FINGERPRINT_WIDTH 32
-#define GAMMA 5
 #define THRESH 5 // when an evicted flow record has a packet count greater than THRESH, it
 	// is exported to the control plane, otherwise it is dropped
 #define PRED_COL 1

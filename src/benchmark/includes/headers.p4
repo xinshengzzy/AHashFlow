@@ -7,6 +7,17 @@ header_type ethernet_t {
 }
 header ethernet_t ethernet;
 
+header_type vlan_tag_t {
+	fields {
+		pcp : 3;
+		cfi : 1;
+		vid : 12;
+		etherType : 16;
+	}
+}
+
+header vlan_tag_t vlan;
+
 header_type ipv4_t {
     fields {
         version : 4;
@@ -24,8 +35,8 @@ header_type ipv4_t {
     }
 }
 
-@pragma pa_fragment ingress ipv4.hdrChecksum
-@pragma pa_fragment egress ipv4.hdrChecksum
+//@pragma pa_fragment ingress ipv4.hdrChecksum
+//@pragma pa_fragment egress ipv4.hdrChecksum
 header ipv4_t ipv4;
 
 field_list ipv4_checksum_list {
@@ -80,10 +91,11 @@ header_type udp_t {
     }
 }
 
-@pragma pa_fragment egress udp.checksum
+//@pragma pa_fragment egress udp.checksum
 header udp_t udp;
 
-/*field_list udp_checksum_list {
+/*
+field_list udp_checksum_list {
     ipv4.srcip;
     ipv4.dstip;
     8'0;
@@ -110,27 +122,15 @@ calculated_field udp.checksum {
 header_type promote_header_t {
     fields {
 		fingerprint: 32;
-		idx: 32;
 		cnt: 32;
-		m_table_1: 1;
-		m_table_2: 1;
-		m_table_3: 1;
+		idx: 32;
 		next_header: 8;
-		padding: 5;
+		m_table_id: 4;
+		padding: 4;
     }
 }
 header promote_header_t promote_header;
 
-header_type vlan_tag_t {
-	fields {
-		pcp : 3;
-		cfi : 1;
-		vid : 12;
-		etherType : 16;
-	}
-}
-
-header vlan_tag_t vlan;
 
 header_type export_header_t {
 	fields {
@@ -141,7 +141,8 @@ header_type export_header_t {
 		srcport: 16;
 		dstport: 16;
 		proto: 8;
-		padding: 8;
+		flag: 1;
+		padding: 7;
 	}
 }
 

@@ -18,48 +18,49 @@ field_list flow {
     export_meta.dstport;
 }
 
-// hash function for main_table_1 and fingerprint generation
+// hash function for first heavy table
 field_list_calculation hash_1 {
     input {
         flow;
     }
     algorithm: crc32;
-    output_width: MAIN_TABLE_IDX_WIDTH;
+    output_width: HEAVY_TABLE_IDX_WIDTH;
 }
 
-// hash function for main_table_2
+// hash function for second heavy table
 field_list_calculation hash_2 {
     input {
         flow;
     }
     algorithm: crc32_extend;
-    output_width: MAIN_TABLE_IDX_WIDTH;
+    output_width: HEAVY_TABLE_IDX_WIDTH;
 }
 
-// hash function for main_table_3
+// hash function for third heavy table
 field_list_calculation hash_3 {
     input {
         flow;
     }
     algorithm: crc32_lsb;
-    output_width: MAIN_TABLE_IDX_WIDTH;
+    output_width: HEAVY_TABLE_IDX_WIDTH;
 }
 
-// 1 hash function for ancillary table
+// hash function for fourth heavy table
 field_list_calculation hash_4 {
     input {
         flow;
     }
     algorithm: crc32_msb;
-    output_width: A_TABLE_IDX_WIDTH;
+    output_width: HEAVY_TABLE_IDX_WIDTH;
 }
 
-field_list_calculation digest_hash {
+// hash function for light table
+field_list_calculation hash_5 {
     input {
         flow;
     }
-    algorithm: identity;
-    output_width: DIGEST_WIDTH;
+    algorithm: crc_32_bzip2;
+    output_width: LIHGT_TABLE_IDX_WIDTH;
 }
 
 field_list_calculation fingerprint_hash {
@@ -73,11 +74,15 @@ field_list_calculation fingerprint_hash {
 // metadata for measurement program
 header_type measurement_meta_t {
     fields {
-        digest: 8; // digest for differentiating in ancillary table;
         a_cnt: 8; // temp storage for flow count of ancillary table;
         b_cnt: 8; // temp storage for flow count of B Table;
         flag_min: 32; // subtract flag used for judging negative or not
+        flag_max: 32; // subtract flag used for judging negative or not
+        flag_active: 8; // subtract flag used for judging negative or not
         fingerprint: 32; // fingerprint for 5-tuple;
+        cnt_max: 8; // maximum flow count of all 3 sub tables of main table;
+		idx_max: 32; // the index of the bucket corresponding to cnt_max
+		m_table_id_max: 4; // which m table the cnt_max is located.
         cnt_min: 32; // minimum flow count of all 3 sub tables of main table;
 		idx_min: 32; // the index of the bucket corresponding to cnt_min
 		m_table_id_min: 4; // which m table the cnt_min is located
@@ -100,6 +105,7 @@ header_type measurement_meta_t {
 		diff1: 32; // m_table_1_cnt - m_table_2_cnt
 		diff2: 32; // m_table_1_cnt - m_table_3_cnt
 		diff3: 32; // m_table_2_cnt - m_table_3_cnt
+        ancillary_table_predicate: 4; // output predicate in main sub table 1
 		ipv4_totalLen: 16;
 		ipv4_proto: 8;
     }
@@ -303,10 +309,10 @@ table calc_m_table_3_idx_t
 }
 
 // register for storing key of the first main sub table 1
-register m_table_1_key
+register heavy_table_1_all
 {
     width: 32;
-    instance_count: M_TABLE_1_SIZE;
+    instance_count: HEAVY_TABLE_SIZE;
 }
 
 blackbox stateful_alu update_m_table_1_key
@@ -867,26 +873,47 @@ table config_export_header_t {
 }
 
 
-action update_min_max (cnt, idx, m_table_id) {
-	modify_field(measurement_meta.cnt_min, cnt);
-	modify_field(measurement_meta.idx_min, idx);
-	modify_field(measurement_meta.m_table_id_min, m_table_id);
+action update_min_max (cnt_min, idx_min, m_table_id_min, cnt_max, idx_max, m_table_id_max) {
+	modify_field(measurement_meta.cnt_min, cnt_min);
+	modify_field(measurement_meta.idx_min, idx_min);
+	modify_field(measurement_meta.m_table_id_min, m_table_id_min);
+	modify_field(measurement_meta.cnt_max, cnt_max, 0x000000ff);
+	modify_field(measurement_meta.idx_max, idx_max);
+	modify_field(measurement_meta.m_table_id_max, m_table_id_max);
 }
 
-action update_min_1 () {
-	update_min_max(measurement_meta.m_table_1_cnt, measurement_meta.m_table_1_idx, 1);
+action update_min_1_max_2 () {
+	update_min_max(measurement_meta.m_table_1_cnt, measurement_meta.m_table_1_idx, 1, 
+			measurement_meta.m_table_2_cnt, measurement_meta.m_table_2_idx, 2);
 }
 
-action update_min_2 () {
-	update_min_max(measurement_meta.m_table_2_cnt, measurement_meta.m_table_2_idx, 2);
+action update_min_1_max_3 () {
+	update_min_max(measurement_meta.m_table_1_cnt, measurement_meta.m_table_1_idx, 1, 
+			measurement_meta.m_table_3_cnt, measurement_meta.m_table_3_idx, 3);
 }
 
-action update_min_3 () {
-	update_min_max(measurement_meta.m_table_3_cnt, measurement_meta.m_table_3_idx, 3);
+action update_min_2_max_1 () {
+	update_min_max(measurement_meta.m_table_2_cnt, measurement_meta.m_table_2_idx, 2, 
+			measurement_meta.m_table_1_cnt, measurement_meta.m_table_1_idx, 1);
+}
+
+action update_min_2_max_3 () {
+	update_min_max(measurement_meta.m_table_2_cnt, measurement_meta.m_table_2_idx, 2, 
+			measurement_meta.m_table_3_cnt, measurement_meta.m_table_3_idx, 3);
+}
+
+action update_min_3_max_1 () {
+	update_min_max(measurement_meta.m_table_3_cnt, measurement_meta.m_table_3_idx, 3, 
+			measurement_meta.m_table_1_cnt, measurement_meta.m_table_1_idx, 1);
+}
+
+action update_min_3_max_2 () {
+	update_min_max(measurement_meta.m_table_3_cnt, measurement_meta.m_table_3_idx, 3, 
+			measurement_meta.m_table_2_cnt, measurement_meta.m_table_2_idx, 2);
 }
 
 @pragma stage 6
-table update_min_t {
+table update_min_max_t {
 	reads {
 		measurement_meta.diff1 mask 0x80000000: exact;
 		measurement_meta.diff2 mask 0x80000000: exact;
@@ -903,9 +930,12 @@ table update_min_t {
 		 * */
 	}
 	actions {
-		update_min_1;
-		update_min_2;
-		update_min_3;
+		update_min_1_max_2;
+		update_min_1_max_3;
+		update_min_2_max_1;
+		update_min_2_max_3;
+		update_min_3_max_1;
+		update_min_3_max_2;
 	}
     max_size: 6;
 }
@@ -951,15 +981,52 @@ table update_a_table_t
 action compare_action()
 {
     subtract(measurement_meta.flag_min, measurement_meta.cnt_min, measurement_meta.a_cnt);
+    subtract(measurement_meta.flag_max, GAMMA, measurement_meta.a_cnt);
+	subtract(measurement_meta.flag_active, measurement_meta.cnt_max, measurement_meta.b_cnt);
 }
 
-@pragma stage 7
+@pragma stage 8
 table compare_t
 {
     actions {
         compare_action;
     }
     default_action: compare_action;
+}
+
+
+// register array for the B table
+register b_table
+{
+    width: 8;
+    instance_count: A_TABLE_SIZE;
+}
+
+blackbox stateful_alu update_b_table
+{
+    reg: b_table;
+    condition_lo: measurement_meta.a_cnt == 1;
+
+    update_lo_1_predicate: condition_lo;
+    update_lo_1_value: measurement_meta.cnt_max;
+
+    output_value: alu_lo;
+    output_dst: measurement_meta.b_cnt;
+}
+
+action update_b_action()
+{
+    update_b_table.execute_stateful_alu_from_hash(hash_4);
+}
+
+@pragma stage 7
+table update_b_t
+{
+    actions {
+        update_b_action;
+    }
+    default_action: update_b_action;
+    max_size: 1;
 }
 
 action do_promotion(cnt, m_table_id, idx){
@@ -977,13 +1044,31 @@ action do_promotion_min() {
 			measurement_meta.idx_min);
 }
 
-@pragma stage 8
+action do_promotion_max() {
+	do_promotion(measurement_meta.cnt_max, measurement_meta.m_table_id_max, 
+			measurement_meta.idx_max);
+}
+
+@pragma stage 9
 table promote_t {
 	reads {
-		measurement_meta.flag_min mask 0x80000000: exact;
+		measurement_meta.flag_min: ternary;
+		measurement_meta.flag_max: ternary;
+		measurement_meta.flag_active: ternary;
+		/*flag_min	flag_max	flag_active	action
+		 *0			0			0			nop
+		 *0			0			!=0			nop
+		 *0			1			0			do_promotion_max
+		 *0			1			!=0			nop
+		 *1			0			0			do_promotion_min
+		 *1			0			!=0			do_promotion_min
+		 *1			1			0			do_promotion_min
+		 *1			1			!=0			do_promotion_min
+		 * */
 	}
 	actions {
 		do_promotion_min;
+		do_promotion_max;
 		nop;
 	}
 	default_action: nop;
@@ -1000,7 +1085,7 @@ action rmv_tcp_add_udp() {
 	modify_field(udp.checksum, 0);
 }
 
-@pragma stage 9
+@pragma stage 10
 table rmv_tcp_add_udp_t {
 	actions {
 		rmv_tcp_add_udp;
@@ -1023,7 +1108,7 @@ action export() {
 	modify_field(udp.checksum, 0);
 }
 
-@pragma stage 10
+@pragma stage 11
 table export_t {
 	reads {
 		export_header.flag: exact;
@@ -1035,7 +1120,7 @@ table export_t {
 	default_action: do_drop;
 }
 
-control HashFlow
+control AHashFlow
 {
 //	apply(update_cntr1_t);
 	if(0 == promote_meta.promotion_pkt) {
@@ -1061,12 +1146,18 @@ control HashFlow
 			// stage 5
 			apply(subtract_t);
 			// stage 6
-			apply(update_min_t);
+			apply(update_min_max_t);
 			apply(update_a_table_t);
 			// stage 7
-			apply(compare_t);
+			apply(update_b_t);
 			// stage 8
-			apply(promote_t);
+			apply(compare_t)
+			{
+				compare_action {
+					// stage 9
+					apply(promote_t);
+				}
+			}
 		}
 		else if(PRED_EMP == measurement_meta.m_table_1_predicate or 
 			PRED_EMP == measurement_meta.m_table_2_predicate or 
@@ -1090,17 +1181,17 @@ control HashFlow
 		apply(rmv_promote_header_set_export_flag_t);
 	} 
 	if(valid(tcp)) {
-		// stage 9
+		// stage 10
 		apply(rmv_tcp_add_udp_t);
 	}
-	// stage 10
+	// stage 11
 	apply(export_t);
 }
 
 control ingress {
 	apply(forward);
 	if(valid(udp) or valid(tcp)) {
-		HashFlow();
+		AHashFlow();
 	}
 }
 control egress

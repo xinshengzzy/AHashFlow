@@ -1,15 +1,5 @@
-#define ETHERTYPE_IPV4 0x0800
-#define ETHERTYPE_VLAN 0x8100
-#define IPV4_TCP 0x06
-#define IPV4_UDP 0x11
-#define IPV4_PROMOTION 0xA1
-#define PROMOTE_TCP 0x06
-#define PROMOTE_UDP 0x11
-#define UDP_EXPORT 0x0017
-#define UDP_PROMOTE 0x0018
-#define TCP_PROMOTE 0x0021
-#define EXPORT_HEADER_LEN 22
-#define PROMOTE_HEADER_LEN 14
+#include "macro.p4"
+
 parser start {
     return parse_ethernet;
 }
@@ -32,6 +22,7 @@ parser parse_vlan {
 	}
 }
 
+@pragma pack 4
 parser parse_ipv4 {
     extract(ipv4);
 	set_metadata(measurement_meta.ipv4_totalLen, ipv4.totalLen);
@@ -55,11 +46,15 @@ parser parse_promote_header {
 
 parser parse_tcp {
     extract(tcp);
+	set_metadata(export_meta.srcport, tcp.srcport);
+	set_metadata(export_meta.dstport, tcp.dstport);
 	return ingress;
 }
 
 parser parse_udp {
     extract(udp);
+	set_metadata(export_meta.srcport, udp.srcport);
+	set_metadata(export_meta.dstport, udp.dstport);
 	return select(latest.srcport) {
 		UDP_EXPORT: parse_export_header;
 		default: ingress;
@@ -70,3 +65,4 @@ parser parse_export_header {
 	extract(export_header);
 	return ingress;
 }
+

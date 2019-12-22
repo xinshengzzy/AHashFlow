@@ -246,7 +246,7 @@ register cntr1 {
 blackbox stateful_alu update_cntr1_bb {
 	reg: cntr1;
 //	condition_hi: register_hi == 0;
-	update_lo_1_value: 100;
+	update_lo_1_value: 65530;
 //	update_hi_1_value: 100;	
 //	output_value: alu_hi;
 //	output_dst: measurement_meta.cntr1_hi;

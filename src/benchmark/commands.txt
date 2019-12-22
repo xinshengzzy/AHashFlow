@@ -1,0 +1,26 @@
+ucli
+pm
+port-add 5/- 40g NONE
+port-add 9/- 40g NONE
+port-enb 5/-
+port-enb 9/-
+..
+bf_pltfm
+qsfp
+qsfp-lpmode-hw 5 0
+qsfp-lpmode-hw 9 0
+..
+..
+pm
+show
+..
+exit
+pd-benchmark
+pd forward add_entry set_egr ig_intr_md_ingress_port 60 action_egress_spec 160
+pd forward add_entry set_egr ig_intr_md_ingress_port 160 action_egress_spec 60
+pd export_t add_entry export_flow_id measurement_meta_minus_ef 0x00000000 measurement_meta_minus_ec 0x00000000 measurement_meta_diff 0x80000000
+pd export_t add_entry do_drop measurement_meta_minus_ef 0x00000000 measurement_meta_minus_ec 0x80000000 measurement_meta_diff 0x00000000
+pd export_t add_entry do_drop measurement_meta_minus_ef 0x00000000 measurement_meta_minus_ec 0x80000000 measurement_meta_diff 0x80000000
+pd export_t add_entry export_flow_id_record measurement_meta_minus_ef 0x80000000 measurement_meta_minus_ec 0x80000000 measurement_meta_diff 0x00000000
+pd export_t add_entry do_drop measurement_meta_minus_ef 0x80000000 measurement_meta_minus_ec 0x80000000 measurement_meta_diff 0x80000000
+exit

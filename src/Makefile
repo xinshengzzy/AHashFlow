@@ -3,8 +3,11 @@
 #P4_NAME=multi_device
 #P4_NAME=multicast_scale
 #P4_NAME=AHashFlow
-P4_NAME=HashFlow
+#P4_NAME=HashFlow
 #P4_NAME=resubmit
+#P4_NAME=benchmark
+#P4_NAME=myswitch
+P4_NAME=Elastic
 build:
 	cd $(BUILD) && \
 	./autogen.sh && \
@@ -19,11 +22,22 @@ build:
 	make clean && \
 	make && \
 	make install
+uninstall:
+	cd $(BUILD) && \
+	./autogen.sh && \
+	./configure --prefix=$(SDE_INSTALL) \
+		--with-tofino \
+		--enable-thrift \
+		P4_VERSION=p4-14 \
+		P4_ARCHITECTURE=tna \
+		P4_NAME=$(P4_NAME) \
+		P4_PATH=$(SRC)/$(P4_NAME)/$(P4_NAME).p4 && \
+	make uninstall && \
+	make clean
 run:
 	pkill bf_switchd || true
 	pkill run_switchd.sh || true
 	$(SDE)/run_switchd.sh -p $(P4_NAME) &
-#	sleep 23
 configure:
 	bfshell -f $(SRC)/$(P4_NAME)/commands.txt
 push:
