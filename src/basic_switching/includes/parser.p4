@@ -10,6 +10,9 @@
 #define TCP_PROMOTE 0x0021
 #define EXPORT_HEADER_LEN 22
 #define PROMOTE_HEADER_LEN 14
+#define CTRL_IP 0x0a00000b
+#define CTRL_SRC_IP 0x0a00000a
+#define CTRL_PORT 8082
 parser start {
     return parse_ethernet;
 }
@@ -34,24 +37,22 @@ parser parse_vlan {
 
 parser parse_ipv4 {
     extract(ipv4);
-	set_metadata(measurement_meta.ipv4_totalLen, ipv4.totalLen);
-	set_metadata(measurement_meta.ipv4_proto, ipv4.proto);
     return select(latest.proto){
-		IPV4_PROMOTION: parse_promote_header;
+//		IPV4_PROMOTION: parse_promote_header;
         IPV4_TCP: parse_tcp;
 		IPV4_UDP: parse_udp;
         default: ingress;
     }
 }
 
-parser parse_promote_header {
-	extract(promote_header);
-	return select(latest.next_header){
-        PROMOTE_TCP: parse_tcp;
-		PROMOTE_UDP: parse_udp;
-        default: ingress;
-	}
-}
+//parser parse_promote_header {
+//	extract(promote_header);
+//	return select(latest.next_header){
+//        PROMOTE_TCP: parse_tcp;
+//		PROMOTE_UDP: parse_udp;
+//        default: ingress;
+//	}
+//}
 
 parser parse_tcp {
     extract(tcp);

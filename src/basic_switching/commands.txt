@@ -18,4 +18,5 @@ exit
 pd-basic-switching
 pd forward add_entry set_egr ig_intr_md_ingress_port 60 action_egress_spec 160
 pd forward add_entry set_egr ig_intr_md_ingress_port 160 action_egress_spec 60
+pd export_t add_entry export ipv4_srcip 0x0a00000a ipv4_dstip 0x0a00000b
 exit

@@ -18,5 +18,4 @@ exit
 pd-AHashFlow
 pd forward add_entry set_egr ig_intr_md_ingress_port 60 action_egress_spec 160
 pd forward add_entry set_egr ig_intr_md_ingress_port 160 action_egress_spec 60
-pd export_t add_entry export export_promotion_meta_export_flag 0
 exit

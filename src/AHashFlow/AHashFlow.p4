@@ -175,13 +175,17 @@ table rmv_promote_header_config_export_header_t {
 }
 
 action export_set_flag_config_header() {
-	config_export_header(export_promotion_meta.srcip, export_promotion_meta.dstip,
-			export_promotion_meta.proto, export_promotion_meta.srcport,
-			export_promotion_meta.dstport);
+//	config_export_header(export_promotion_meta.srcip, export_promotion_meta.dstip,
+//			export_promotion_meta.proto, export_promotion_meta.srcport,
+//			export_promotion_meta.dstport);
+	config_export_header(0x11, 0x21, 0x31, 0x41, 0x51);
 	modify_field(export_promotion_meta.export_flag, 1);
+	modify_field(export_header.fingerprint, 0);
+	modify_field(export_header.cnt, 0);
+	modify_field(export_header.padding, 0);
 }
 
-@pragma stage 5
+//@pragma stage 5
 table export_set_flag_config_header_t {
 	actions {
 		export_set_flag_config_header;
@@ -1094,28 +1098,33 @@ action config_export_header(srcip, dstip, proto, srcport, dstport) {
 }
 
 action export() {
-//	config_export_header();
-//	add_header(export_header);
-//	add(ipv4.totalLen, ipv4.totalLen, EXPORT_HEADER_LEN);
-//	add(udp.totalLen, udp.totalLen, EXPORT_HEADER_LEN);
-	modify_field(ipv4.srcip, CTRL_SRC_IP);
-	modify_field(ipv4.dstip, CTRL_IP);
+	//////////
+	config_export_header(0x11, 0x21, 0x31, 0x41, 0x51);
+	modify_field(export_promotion_meta.export_flag, 1);
+	modify_field(export_header.fingerprint, 0);
+	modify_field(export_header.cnt, 0);
+	modify_field(export_header.padding, 0);
+	/////////
+	add_header(export_header);
+	add(ipv4.totalLen, ipv4.totalLen, EXPORT_HEADER_LEN);
+	add(udp.totalLen, udp.totalLen, EXPORT_HEADER_LEN);
+//	modify_field(ipv4.srcip, CTRL_SRC_IP);
+//	modify_field(ipv4.dstip, CTRL_IP);
 	modify_field(udp.srcport, UDP_EXPORT);
-	modify_field(udp.dstport, CTRL_PORT);
+//	modify_field(udp.dstport, CTRL_PORT);
 	modify_field(udp.checksum, 0);
-//	modify_field(ig_intr_md_for_tm.ucast_egress_port, 60);
 }
 
-@pragma stage 11
+//@pragma stage 11
 table export_t {
-	reads {
-		export_promotion_meta.export_flag: exact;
+//	reads {
+//		export_promotion_meta.export_flag: exact;
 //		export_promotion_meta.export_flag: ternary;
 //		ipv4.srcip: ternary;
 //		ipv4.dstip: ternary;
-	}
+//	}
 	actions {
-		do_drop;
+//		do_drop;
 		export;
 	}	
 	default_action: export;
@@ -1192,8 +1201,10 @@ control AHashFlow
 
 control ingress {
 	apply(forward);
-//	apply(export_set_flag_config_header_t);		
-	apply(export_t);
+	if(valid(udp)) {
+		apply(export_t);
+//		apply(export_set_flag_config_header_t);		
+	}
 //	if(valid(udp) or valid(tcp)) {
 //		AHashFlow();
 //	}
