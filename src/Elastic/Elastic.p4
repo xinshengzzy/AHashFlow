@@ -308,41 +308,157 @@ table calc_m_table_3_idx_t
     default_action: calc_m_table_3_idx;
 }
 
-// register for storing key of the first main sub table 1
+// registers and actions for the first heavy table
 register heavy_table_1_all
 {
     width: 32;
-    instance_count: HEAVY_TABLE_SIZE;
+    instance_count: HEAVY_TABLE_1_SIZE;
 }
 
-blackbox stateful_alu update_m_table_1_key
+blackbox stateful_alu update_ht_1_all {
+	reg: heavy_table_1_all;
+	update_lo_value: register_lo + 1;
+
+	output_value: alu_lo;
+	output_dst: measurement_meta.vote_all_1;	 
+}
+
+action update_ht_1_all_action()
 {
-    reg: m_table_1_key;
-    condition_lo: register_lo == 0;
-    condition_hi: register_lo == measurement_meta.fingerprint;
-
-    update_lo_1_predicate: condition_lo or condition_hi;
-    update_lo_1_value: measurement_meta.fingerprint;
-
-    output_value: predicate;
-    output_dst: measurement_meta.m_table_1_predicate;
+    update_ht_1_all.execute_stateful_alu_from_hash(hash_1);
 }
 
-action update_m_table_1_key_action()
+table update_ht_1_all_t {
+	actions {
+		update_ht_1_all_action;
+	}
+	default_action: update_ht_1_all_action;
+}
+
+action shift() {
+	shift_right(measurement_meta.vote_all_1, measurement_meta.vote_all_1, N_SHIFT);	
+}
+
+table shift_t {
+	actions {
+		shift;
+	}
+	default_action: shift;
+}
+
+register heavy_table_1_pos
 {
-    update_m_table_1_key.execute_stateful_alu_from_hash(hash_1);
+    width: 64;
+    instance_count: HEAVY_TABLE_1_SIZE;
 }
 
-@pragma stage 1
-table update_m_table_1_key_t
+blackbox stateful_alu update_ht_1_pos {
+	reg: heavy_table_1_pos;
+
+	condition_lo: measurement_meta.fingerprint == register_lo;
+	condition_hi: measurement_meta.vote_all_1 >= register_hi;
+
+	update_lo_1_predicate: not condition_lo and condition_hi;	   
+	update_lo_1_value: measurement_meta.fingerprint;
+
+	update_hi_1_predicate: not condition_lo and condition_hi;
+	update_hi_1_value: register_hi + 1;
+	update_hi_2_predicate: condition_hi;
+	update_hi_2_value: register_hi + 1;
+
+	output_predicate: not condition_lo and condition_hi;
+	output_value: register_lo;
+	output_dst: measurement_meta.hh_1_fingerprint;	 
+}
+
+action update_ht_1_pos_action()
+{
+    update_ht_1_pos.execute_stateful_alu_from_hash(hash_1);
+}
+
+table update_ht_1_pos_t
 {
     actions {
-        update_m_table_1_key_action;
+        update_ht_1_pos_action;
     }
-    default_action: update_m_table_1_key_action;
-    max_size: 1;
+    default_action: update_ht_1_pos_action;
 }
 
+// registers and actions for the second heavy table
+register heavy_table_2_all
+{
+    width: 32;
+    instance_count: HEAVY_TABLE_2_SIZE;
+}
+
+blackbox stateful_alu update_ht_2_all {
+	reg: heavy_table_2_all;
+	update_lo_value: register_lo + 1;
+
+	output_value: alu_lo;
+	output_dst: measurement_meta.vote_all_2;	 
+}
+
+action update_ht_2_all_action()
+{
+    update_ht_2_all.execute_stateful_alu_from_hash(hash_2);
+}
+
+table update_ht_2_all_t {
+	actions {
+		update_ht_2_all_action;
+	}
+	default_action: update_ht_2_all_action;
+}
+
+action shift_2() {
+	shift_right(measurement_meta.vote_all_2, measurement_meta.vote_all_2, N_SHIFT);	
+}
+
+table shift_t {
+	actions {
+		shift_2;
+	}
+	default_action: shift_2;
+}
+
+register heavy_table_2_pos
+{
+    width: 64;
+    instance_count: HEAVY_TABLE_2_SIZE;
+}
+
+blackbox stateful_alu update_ht_2_pos {
+	reg: heavy_table_2_pos;
+
+	condition_lo: measurement_meta.fingerprint == register_lo;
+	condition_hi: measurement_meta.vote_all_2 >= register_hi;
+
+	update_lo_1_predicate: not condition_lo and condition_hi;	   
+	update_lo_1_value: measurement_meta.fingerprint;
+
+	update_hi_1_predicate: not condition_lo and condition_hi;
+	update_hi_1_value: register_hi + 1;
+	update_hi_2_predicate: condition_hi;
+	update_hi_2_value: register_hi + 1;
+
+	output_predicate: not condition_lo and condition_hi;
+	output_value: register_lo;
+	output_dst: measurement_meta.hh_2_fingerprint;	 
+}
+
+action update_ht_2_pos_action()
+{
+    update_ht_2_pos.execute_stateful_alu_from_hash(hash_2);
+}
+
+table update_ht_2_pos_t
+{
+    actions {
+        update_ht_2_pos_action;
+    }
+    default_action: update_ht_2_pos_action;
+}
 blackbox stateful_alu promote_m_table_1_key
 {
     reg: m_table_1_key;

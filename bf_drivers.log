@@ -7350,3 +7350,77 @@
 2019-12-07 13:35:24.616057 DEBUG BF_PORT FSM :0: 60:-: BF_FSM_ST_WAIT_PCS_UP      --> BF_FSM_ST_WAIT_DWN_EVNT   
 2019-12-07 13:35:24.616064 DEBUG BF_PORT 0: 60: --- Up
 2019-12-07 13:35:24.616077 DEBUG BF_PM PM: Dev 0 : front port 9/0 (60) : UP
+2019-12-26 08:25:11.453179 DEBUG BF_PLTFM Platform-mgr started 
+
+2019-12-26 08:25:11.453707 DEBUG BF_PLTFM cdc_ethernet port is usb0
+
+2019-12-26 08:25:12.086022 DEBUG BF_PLTFM EEPROM DATA FROM BMC 
+ {"Information": {"Location on Fabric": "Montara", "Product Sub-Version": "3", "Facebook PCB Part Number": "035-000003-02", "CRC8": "0xed", "System Assembly Part Number": "015-000003-02", "Product Serial Number": "AI23025784", "System Manufacturing Date": "06-11-18", "Local MAC": "3C:2C:99:D5:74:A5", "Assembled At": "Joytech", "ODM PCBA Serial Number": "AI23025126", "Product Asset Tag": "000000001", "Product Name": "Montara", "ODM PCBA Part Number": "NP3ZZ7632023A", "Product Production State": "1", "Product Part Number": "20-000003", "PCB Manufacturer": "ISU", "System Manufacturer": "Joytech", "Extended MAC Address Size": "140", "Facebook PCBA Part Number": "025-000003-02", "Version": "1", "Extended MAC Base": "3C:2C:99:D5:74:9D", "Product Version": "1"}, "Resources": [], "Actions": []}
+2019-12-26 08:25:12.086071 DEBUG BF_PLTFM Assembled at: Joytech 
+
+2019-12-26 08:25:12.086084 DEBUG BF_PLTFM CRC8: 14 
+
+2019-12-26 08:25:12.086091 DEBUG BF_PLTFM Extended MAC Address Size: 0 
+
+2019-12-26 08:25:12.086100 DEBUG BF_PLTFM Extended MAC Base 3c:2c:99:d5:74:9d
+
+2019-12-26 08:25:12.086108 DEBUG BF_PLTFM Unable to parse BFN PCB Part Number, Ignoring.
+
+2019-12-26 08:25:12.086115 DEBUG BF_PLTFM Unable to parse BFN PCBA Part Number, Ignoring.
+
+2019-12-26 08:25:12.086123 DEBUG BF_PLTFM Local MAC 3c:2c:99:d5:74:a5
+
+2019-12-26 08:25:12.086130 DEBUG BF_PLTFM Location on Fabric: Montara
+
+2019-12-26 08:25:12.086137 DEBUG BF_PLTFM ODM PCBA Part Number NP3ZZ7632023A 
+
+2019-12-26 08:25:12.086144 DEBUG BF_PLTFM ODM PCBA Serial Number AI23025126 
+
+2019-12-26 08:25:12.086151 DEBUG BF_PLTFM PCB Manufacturer: ISU
+
+2019-12-26 08:25:12.086159 DEBUG BF_PLTFM Product Asset Tag: 000000001
+
+2019-12-26 08:25:12.086166 DEBUG BF_PLTFM Product Name: Montara 
+
+2019-12-26 08:25:12.086173 DEBUG BF_PLTFM Product Number: 20-000003 
+
+2019-12-26 08:25:12.086180 DEBUG BF_PLTFM Product Production State: 0 
+
+2019-12-26 08:25:12.086187 DEBUG BF_PLTFM Product Serial Number: AI23025784 
+
+2019-12-26 08:25:12.086194 DEBUG BF_PLTFM Product Sub-Version: 0 
+
+2019-12-26 08:25:12.086201 DEBUG BF_PLTFM Product Version: 0 
+
+2019-12-26 08:25:12.086211 DEBUG BF_PLTFM EEPROM SUCCESS: Board type : 003234
+
+2019-12-26 08:25:12.086218 DEBUG BF_PLTFM System Manufacturer: Joytech 
+
+2019-12-26 08:25:12.086225 DEBUG BF_PLTFM System Manufacturing Date: 06-11-18 
+
+2019-12-26 08:25:12.086243 DEBUG BF_PLTFM Version: 0 
+
+2019-12-26 08:25:12.087581 DEBUG BF_PLTFM USB Initialized at bf_pltfm_cp2112_open:907
+
+2019-12-26 08:25:12.087609 DEBUG BF_PLTFM No Devices found are 6
+
+2019-12-26 08:25:12.087619 DEBUG BF_PLTFM USB devices found at bf_pltfm_cp2112_open:920
+
+2019-12-26 08:25:12.087651 DEBUG BF_PLTFM USB handle found at bf_pltfm_cp2112_open:935
+
+2019-12-26 08:25:12.087660 DEBUG BF_PLTFM The USB dev is 0x1a3c320
+
+2019-12-26 08:25:12.087666 DEBUG BF_PLTFM The USB dev handle is 0xfa7720
+
+2019-12-26 08:25:12.087674 DEBUG BF_PLTFM Kernel driver auto detach set at bf_pltfm_cp2112_open:957
+
+2019-12-26 08:25:12.087687 ERROR BF_PLTFM Error in claiming the interface with error code Resource busy at bf_pltfm_cp2112_open:965
+
+2019-12-26 08:25:12.087750 ERROR BF_PLTFM Error: Unable to open CP2112 devices at bf_pltfm_cp2112_init:1310
+
+2019-12-26 08:25:12.087777 ERROR BF_PLTFM pltfm_mgr: CP2112 library initialization failed
+
+2019-12-26 08:25:12.087799 ERROR BF_PLTFM Error in cp2112 initialization
+
+2019-12-26 08:25:12.087821 ERROR BF_PLTFM pltfm_mgr: platform init failed
+

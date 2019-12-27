@@ -14,8 +14,8 @@ field_list flow {
     ipv4.srcip;
     ipv4.dstip;
     ipv4.proto;
-    export_meta.srcport;
-    export_meta.dstport;
+    export_promotion_meta.srcport;
+    export_promotion_meta.dstport;
 }
 
 // hash function for main_table_1 and fingerprint generation
@@ -108,40 +108,39 @@ header_type measurement_meta_t {
 		diff2: 32; // m_table_1_cnt - m_table_3_cnt
 		diff3: 32; // m_table_2_cnt - m_table_3_cnt
         ancillary_table_predicate: 4; // output predicate in main sub table 1
-		ipv4_totalLen: 16;
-		ipv4_proto: 8;
     }
 }
 
 metadata measurement_meta_t measurement_meta;
 
-header_type promote_meta_t {
-	fields {
-		promotion_pkt: 1;
+field_list resubmit_fields {
+	export_promotion_meta.promotion_flag;
+}
+
+header_type export_promotion_meta_t {
+	fields{
+		srcip: 32;
+		dstip: 32;
+		proto: 8;
+		srcport: 16;
+		dstport: 16;
+		ipv4_totalLen: 16;
+		promotion_flag: 1;
+		export_flag: 1;
 		m_table_1: 1;
 		m_table_2: 1;
 		m_table_3: 1;
 	}
 }
-metadata promote_meta_t promote_meta;
-
-field_list resubmit_fields {
-	promote_meta.promotion_pkt;
-}
-
-header_type export_meta_t {
-	fields{
-		srcport: 16;
-		dstport: 16;
-	}
-}
-metadata export_meta_t export_meta;
+metadata export_promotion_meta_t export_promotion_meta;
 
 action add_promote_header() {
 	add_header(promote_header);
 	add(ipv4.totalLen, ipv4.totalLen, PROMOTE_HEADER_LEN);
+	add(export_promotion_meta.ipv4_totalLen, 
+			export_promotion_meta.ipv4_totalLen, PROMOTE_HEADER_LEN);
 	modify_field(ipv4.proto, IPV4_PROMOTION);
-	modify_field(promote_header.next_header, measurement_meta.ipv4_proto);
+	modify_field(promote_header.next_header, export_promotion_meta.proto);
 }
 
 table add_promote_header_t {
@@ -154,38 +153,45 @@ table add_promote_header_t {
 action remove_promote_header() {
 	remove_header(promote_header);
 	add(ipv4.totalLen, ipv4.totalLen, -PROMOTE_HEADER_LEN);
-	add(measurement_meta.ipv4_totalLen, measurement_meta.ipv4_totalLen, -PROMOTE_HEADER_LEN);
+	add(export_promotion_meta.ipv4_totalLen, 
+			export_promotion_meta.ipv4_totalLen, -PROMOTE_HEADER_LEN);
 	modify_field(ipv4.proto, promote_header.next_header);
 }
 
-action rmv_promote_header_set_export_flag() {
+action rmv_promote_header_config_export_header() {
+//	update_cntr1_action();
 	remove_promote_header();
-	modify_field(export_header.flag, 1);
+	config_export_header(promote_header.srcip, promote_header.dstip,
+			promote_header.proto, promote_header.srcport, promote_header.dstport);
+	modify_field(export_promotion_meta.export_flag, 1);
 }
 
 @pragma stage 5
-table rmv_promote_header_set_export_flag_t {
+table rmv_promote_header_config_export_header_t {
 	actions {
-		rmv_promote_header_set_export_flag;
+		rmv_promote_header_config_export_header;
 	}
-	default_action: rmv_promote_header_set_export_flag;
+	default_action: rmv_promote_header_config_export_header;
 }
 
-action set_export_flag() {
-	modify_field(export_header.flag, 1);
+action export_set_flag_config_header() {
+	config_export_header(export_promotion_meta.srcip, export_promotion_meta.dstip,
+			export_promotion_meta.proto, export_promotion_meta.srcport,
+			export_promotion_meta.dstport);
+	modify_field(export_promotion_meta.export_flag, 1);
 }
 
 @pragma stage 5
-table set_export_flag_t {
+table export_set_flag_config_header_t {
 	actions {
-		set_export_flag;
+		export_set_flag_config_header;
 	}
-	default_action: set_export_flag;
+	default_action: export_set_flag_config_header;
 }
 
 ////////// for the useage of testing //////////
 register cntr1 {
-	width: 16;
+	width: 32;
 	instance_count: 10;
 }
 
@@ -199,18 +205,18 @@ action update_cntr1_action() {
 }
 
 
-@pragma stage 0
 table update_cntr1_t {
-	reads {
-		ipv4.srcip: exact;
-		ipv4.dstip: exact;
-	}
+//	reads {
+//		ipv4.srcip: exact;
+//		ipv4.dstip: exact;
+//	}
 	actions {
 		update_cntr1_action;
-		nop;
+//		nop;
 	}
-	default_action: nop;
-	size: 10;
+	default_action: update_cntr1_action;
+//	default_action: nop;
+//	size: 10;
 }
 ////////// end the test //////////
 
@@ -356,7 +362,7 @@ blackbox stateful_alu promote_m_table_1_key
 action promote_m_table_1_key_action()
 {
     promote_m_table_1_key.execute_stateful_alu(promote_header.idx);
-	modify_field(promote_meta.m_table_1, 1);
+	modify_field(export_promotion_meta.m_table_1, 1);
 }
 
 @pragma stage 1
@@ -422,7 +428,7 @@ blackbox stateful_alu promote_m_table_2_key
 action promote_m_table_2_key_action()
 {
     promote_m_table_2_key.execute_stateful_alu(promote_header.idx);
-	modify_field(promote_meta.m_table_2, 1);
+	modify_field(export_promotion_meta.m_table_2, 1);
 }
 
 @pragma stage 2
@@ -489,7 +495,7 @@ blackbox stateful_alu promote_m_table_3_key
 action promote_m_table_3_key_action()
 {
     promote_m_table_3_key.execute_stateful_alu(promote_header.idx);
-	modify_field(promote_meta.m_table_3, 1);
+	modify_field(export_promotion_meta.m_table_3, 1);
 }
 
 @pragma stage 3
@@ -605,7 +611,7 @@ action promote_m_table_1_value_action()
 table promote_m_table_1_value_t
 {
 	reads {
-		promote_meta.m_table_1: exact;
+		export_promotion_meta.m_table_1: exact;
 	}
     actions {
         promote_m_table_1_value_action;
@@ -713,7 +719,7 @@ action promote_m_table_2_value_action()
 table promote_m_table_2_value_t
 {
 	reads {
-		promote_meta.m_table_2: exact;
+		export_promotion_meta.m_table_2: exact;
 	}
     actions {
         promote_m_table_2_value_action;
@@ -816,7 +822,7 @@ action promote_m_table_3_value_action()
 table promote_m_table_3_value_t
 {
 	reads {
-		promote_meta.m_table_3: exact;
+		export_promotion_meta.m_table_3: exact;
 	}
     actions {
         promote_m_table_3_value_action;
@@ -838,40 +844,6 @@ table subtract_t {
 		subtract_action;
 	}
 	default_action: subtract_action;
-}
-
-action config_export_header() {
-	modify_field(export_header.srcip, ipv4.srcip);
-	modify_field(export_header.dstip, ipv4.dstip);
-	modify_field(export_header.proto, ipv4.proto);
-	modify_field(export_header.srcport, export_meta.srcport);
-	modify_field(export_header.dstport, export_meta.dstport);
-}
-
-action config_export_header_tcp() {
-	config_export_header();
-	modify_field(export_header.srcport, tcp.srcport);
-	modify_field(export_header.dstport, tcp.dstport);
-}
-
-action config_export_header_udp() {
-	config_export_header();
-	modify_field(export_header.srcport, udp.srcport);
-	modify_field(export_header.dstport, udp.dstport);
-}
-
-@pragma stage 10
-table config_export_header_t {
-	reads {
-		tcp: valid;
-		udp: valid;
-	}
-	actions {
-		config_export_header_udp;
-		config_export_header_tcp;
-		nop;
-	}
-	default_action: nop;
 }
 
 
@@ -1036,8 +1008,13 @@ action do_promotion(cnt, m_table_id, idx){
 	modify_field(promote_header.m_table_id, m_table_id);
 	modify_field(promote_header.idx, idx);
 	modify_field(promote_header.fingerprint, measurement_meta.fingerprint);
+	modify_field(promote_header.srcip, export_promotion_meta.srcip);
+	modify_field(promote_header.dstip, export_promotion_meta.dstip);
+	modify_field(promote_header.proto, export_promotion_meta.proto);
+	modify_field(promote_header.srcport, export_promotion_meta.srcport);
+	modify_field(promote_header.dstport, export_promotion_meta.dstport);
 	add_promote_header();
-	modify_field(promote_meta.promotion_pkt, 1);
+	modify_field(export_promotion_meta.promotion_flag, 1);
 	resubmit(resubmit_fields);
 }
 
@@ -1079,12 +1056,12 @@ table promote_t {
 action rmv_tcp_add_udp() {
 	remove_header(tcp);
 	add_header(udp);
-	add(ipv4.totalLen, measurement_meta.ipv4_totalLen, -12);
+	add(ipv4.totalLen, export_promotion_meta.ipv4_totalLen, -12);
 	modify_field(ipv4.proto, IPV4_UDP);
-	add(udp.totalLen, measurement_meta.ipv4_totalLen, -32);
-	modify_field(udp.srcport, UDP_EXPORT);
-	modify_field(udp.dstport, 8082);
-	modify_field(udp.checksum, 0);
+	add(udp.totalLen, export_promotion_meta.ipv4_totalLen, -32);
+//	modify_field(udp.srcport, UDP_EXPORT);
+//	modify_field(udp.dstport, 8082);
+//	modify_field(udp.checksum, 0);
 }
 
 @pragma stage 10
@@ -1100,32 +1077,53 @@ action do_drop()
 	drop();
 }
 
-action export() {
-	config_export_header();
-	add_header(export_header);
-	add(ipv4.totalLen, ipv4.totalLen, EXPORT_HEADER_LEN);
+action config_export_header(srcip, dstip, proto, srcport, dstport) {
+	modify_field(export_header.srcip, srcip);
+	modify_field(export_header.dstip, dstip);
+	modify_field(export_header.proto, proto);
+	modify_field(export_header.srcport, srcport);
+	modify_field(export_header.dstport, dstport);
+
+/*	add(ipv4.totalLen, ipv4.totalLen, EXPORT_HEADER_LEN);
 	add(udp.totalLen, udp.totalLen, EXPORT_HEADER_LEN);
+	modify_field(ipv4.srcip, CTRL_SRC_IP);
+	modify_field(ipv4.dstip, CTRL_IP);
+	modify_field(udp.srcport, UDP_EXPORT);
+	modify_field(udp.dstport, CTRL_PORT);
+	modify_field(udp.checksum, 0);*/
+}
+
+action export() {
+//	config_export_header();
+//	add_header(export_header);
+//	add(ipv4.totalLen, ipv4.totalLen, EXPORT_HEADER_LEN);
+//	add(udp.totalLen, udp.totalLen, EXPORT_HEADER_LEN);
+	modify_field(ipv4.srcip, CTRL_SRC_IP);
+	modify_field(ipv4.dstip, CTRL_IP);
 	modify_field(udp.srcport, UDP_EXPORT);
 	modify_field(udp.dstport, CTRL_PORT);
 	modify_field(udp.checksum, 0);
+//	modify_field(ig_intr_md_for_tm.ucast_egress_port, 60);
 }
 
 @pragma stage 11
 table export_t {
 	reads {
-		export_header.flag: exact;
+		export_promotion_meta.export_flag: exact;
+//		export_promotion_meta.export_flag: ternary;
+//		ipv4.srcip: ternary;
+//		ipv4.dstip: ternary;
 	}
 	actions {
 		do_drop;
 		export;
 	}	
-	default_action: do_drop;
+	default_action: export;
 }
 
 control AHashFlow
 {
-//	apply(update_cntr1_t);
-	if(0 == promote_meta.promotion_pkt) {
+	if(0 == export_promotion_meta.promotion_flag) {
 		// stage 0
 		apply(generate_fingerprint_t);
 		apply(calc_digest_t);
@@ -1165,7 +1163,8 @@ control AHashFlow
 			PRED_EMP == measurement_meta.m_table_2_predicate or 
 			PRED_EMP == measurement_meta.m_table_3_predicate) {// there is a empty bucket
 			// stage 5
-			apply(set_export_flag_t);		
+			apply(export_set_flag_config_header_t);		
+			apply(update_cntr1_t);
 		}
 	}
 	else{
@@ -1180,21 +1179,24 @@ control AHashFlow
 		// stage 4
 		apply(promote_m_table_3_value_t);	
 		// stage 5
-		apply(rmv_promote_header_set_export_flag_t);
-	} 
+		apply(rmv_promote_header_config_export_header_t);
+	}
+//	apply(set_export_flag_t);		
 	if(valid(tcp)) {
 		// stage 10
 		apply(rmv_tcp_add_udp_t);
 	}
-	// stage 11
+//	// stage 11
 	apply(export_t);
 }
 
 control ingress {
 	apply(forward);
-	if(valid(udp) or valid(tcp)) {
-		AHashFlow();
-	}
+//	apply(export_set_flag_config_header_t);		
+	apply(export_t);
+//	if(valid(udp) or valid(tcp)) {
+//		AHashFlow();
+//	}
 }
 control egress
 {

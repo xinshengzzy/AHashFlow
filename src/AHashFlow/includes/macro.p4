@@ -14,6 +14,8 @@
 #define PRED_COL 1
 #define PRED_EMP 2 
 #define PRED_MAT 4
+#define CTRL_IP 0x0a00000b
+#define CTRL_SRC_IP 0x0a00000a
 #define CTRL_PORT 8082
 // parameters about protocols
 #define ETHERTYPE_IPV4 0x0800
@@ -23,6 +25,6 @@
 #define IPV4_UDP 0x11
 #define PROMOTE_TCP 0x06
 #define PROMOTE_UDP 0x11
-#define UDP_EXPORT 0x0017
+#define UDP_EXPORT 0x1111
 #define EXPORT_HEADER_LEN 22
-#define PROMOTE_HEADER_LEN 14
+#define PROMOTE_HEADER_LEN 28

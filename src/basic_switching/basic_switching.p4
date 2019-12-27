@@ -248,8 +248,8 @@ blackbox stateful_alu update_cntr1_bb {
 //	condition_hi: register_hi == 0;
 	update_lo_1_value: 100;
 //	update_hi_1_value: 100;	
-//	output_value: alu_hi;
-//	output_dst: measurement_meta.cntr1_hi;
+	output_value: alu_lo;
+	output_dst: measurement_meta.cntr1_hi;
 }
 
 action update_cntr1() {
@@ -305,21 +305,36 @@ table clone_t {
 	default_action: clone;
 }
 
+action modify_header() {
+	modify_field(ipv4.dstip, 0x0a00000b);
+}
+
+table modify_header_t {
+	reads {
+		ipv4.srcip: exact;
+		ipv4.dstip: exact;
+	}
+	actions {
+		modify_header;
+	}
+}
+
 
 
 control ingress {
 	apply(forward);
+//	apply(modify_header_t);
 //	apply(clone_t);
-	if(valid(udp)) {
-		apply(test1_t);
-		apply(test2_t);
-		apply(update_cntr1_t);
+//	if(valid(udp)) {
+//		apply(test1_t);
+//		apply(test2_t);
+//		apply(update_cntr1_t);
 //		apply(remove_t);
 //		apply(set_udp_length_t);
 //		apply(add_t);
-		apply(update_headers_1_t);
-		apply(update_headers_2_t);
-	}
+//		apply(update_headers_1_t);
+//		apply(update_headers_2_t);
+//	}
 //	if(0 == ig_intr_md.resubmit_flag) {
 //	if(0 == ig_intr_md.recirculate_flag) {
 //	if(valid(promote_header)) {
