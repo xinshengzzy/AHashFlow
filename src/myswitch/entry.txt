@@ -1,0 +1,43 @@
+update_main_table_1_key_t promotion 0 stage * update_main_table_1_key_action;
+update_main_table_1_key_t promotion 1 stage 1 rewrite_main_table_1_key_action;
+
+copy_pkt_to_cpu_t_1 main_table_1_predicate 2 copy_pkt_to_cpu_action;
+
+update_main_table_1_value_t promotion 1 stage 1 main_table_1_predicate * rewrite_main_table_1_value_action;
+update_main_table_1_value_t promotion 0 stage * main_table_1_predicate 2/4/8 update_main_table_1_value_action;
+update_main_table_1_value_t promotion 0 stage * main_table_1_predicate 1 read_main_table_1_value_action;
+
+update_main_table_2_key_t promotion 1 stage 2 main_table_1_predicate * rewrite_main_table_2_key_action;
+update_main_table_2_key_t promotion 0 stage * main_table_1_predicate 1 update_main_table_2_key_action;
+
+copy_pkt_to_cpu_t_3 main_table_2_predicate 2 copy_pkt_to_cpu_action;
+
+update_main_table_2_value_t promotion 1 stage 2 main_table_1_predicate * main_table_2_predicate * rewrite_main_table_2_value_action;
+update_main_table_2_value_t promotion 0 stage * main_table_1_predicate 1 main_table_2_predicate 2/4/8 update_main_table_2_value_action;
+update_main_table_2_value_t promotion 0 stage * main_table_1_predicate 1 main_table_2_predicate 1 read_main_table_2_value_action;
+
+update_min_2_t flag [0 mask 0x80000000] update_min_2_action;
+
+update_max_2_t flag2 [0x80000000 mask 0x80000000] update_max_2_action;
+
+update_main_table_3_key_t promotion 1 stage 3 main_table_1_predicate * main_table_2_predicate * rewrite_main_table_3_key_action;
+update_main_table_3_key_t promotion 0 stage * main_table_1_predicate 1 main_table_2_predicate 1 update_main_table_3_key_action;
+
+copy_pkt_to_cpu_t_5 main_table_3_predicate 2 copy_pkt_to_cpu_action;
+
+update_main_table_3_value_t promotion 1 stage 3 main_table_1_predicate * main_table_2_predicate * main_table_3_predicate * rewrite_main_table_3_value_action;
+update_main_table_3_value_t promotion 0 stage * main_table_1_predicate 1 main_table_2_predicate 1 main_table_3_predicate 2/4/8 update_main_table_3_value_action;
+update_main_table_3_value_t promotion 0 stage * main_table_1_predicate 1 main_table_2_predicate 1 main_table_3_predicate 1 read_main_table_3_value_action;
+
+update_min_3_t flag [0 mask 0x80000000] update_min_3_action;
+
+update_max_3_t flag2 [0x80000000 mask 0x80000000] update_max_3_action;
+
+update_ancillary_table_key_t promotion 0 main_table_1_predicate 1 main_table_2_predicate 1 main_table_3_predicate 1 update_ancillary_table_key_action;
+
+update_ancillary_table_value_t promotion 0 main_table_1_predicate 1 main_table_2_predicate 1 main_table_3_predicate 1 update_ancillary_table_value_action;
+
+min_value_subtract_pktcnt_a_t ancillary_table_predicate 4 min_value_subtract_pktcnt_a_action;
+
+handle_resubmit_t ancillary_table_predicate 4 flag [0x80000000 mask 0x80000000] resubmit_action;
+

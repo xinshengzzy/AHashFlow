@@ -23,7 +23,8 @@ field_list_calculation hash_1 {
     input {
         flow;
     }
-    algorithm: crc32;
+//    algorithm: crc32;
+    algorithm: crc_32c;
     output_width: MAIN_TABLE_IDX_WIDTH;
 }
 
@@ -32,7 +33,8 @@ field_list_calculation hash_2 {
     input {
         flow;
     }
-    algorithm: crc32_extend;
+//    algorithm: crc32_msb;
+    algorithm: crc_32d;
     output_width: MAIN_TABLE_IDX_WIDTH;
 }
 
@@ -41,7 +43,8 @@ field_list_calculation hash_3 {
     input {
         flow;
     }
-    algorithm: crc32_lsb;
+//    algorithm: crc_32_bzip2;
+    algorithm: crc_32q;
     output_width: MAIN_TABLE_IDX_WIDTH;
 }
 
@@ -73,8 +76,6 @@ field_list_calculation fingerprint_hash {
 // metadata for measurement program
 header_type measurement_meta_t {
     fields {
-        stage: 4; // indicating variable for stage of back inserting;
-        stage2: 4; // indicating variable for stage of reporting;
         digest: 8; // digest for differentiating in ancillary table;
         a_cnt: 8; // temp storage for flow count of ancillary table;
         b_cnt: 8; // temp storage for flow count of B Table;
@@ -107,7 +108,6 @@ header_type measurement_meta_t {
 		diff1: 32; // m_table_1_cnt - m_table_2_cnt
 		diff2: 32; // m_table_1_cnt - m_table_3_cnt
 		diff3: 32; // m_table_2_cnt - m_table_3_cnt
-        ancillary_table_predicate: 4; // output predicate in main sub table 1
     }
 }
 
@@ -127,6 +127,7 @@ header_type export_promotion_meta_t {
 		ipv4_totalLen: 16;
 		promotion_flag: 1;
 		export_flag: 1;
+		resubmit_flag: 1;
 		m_table_1: 1;
 		m_table_2: 1;
 		m_table_3: 1;
@@ -159,11 +160,13 @@ action remove_promote_header() {
 }
 
 action rmv_promote_header_config_export_header() {
-//	update_cntr1_action();
 	remove_promote_header();
 	config_export_header(promote_header.srcip, promote_header.dstip,
 			promote_header.proto, promote_header.srcport, promote_header.dstport, 
 			promote_header.fingerprint);
+	modify_field(export_header.m_table_1_idx, 0);
+	modify_field(export_header.m_table_2_idx, 0);
+	modify_field(export_header.m_table_3_idx, 0);
 	modify_field(export_promotion_meta.export_flag, 1);
 }
 
@@ -182,6 +185,9 @@ action export_set_flag_config_header() {
 	modify_field(export_header.padding, 0x00);
 	modify_field(export_header.record_fingerprint, 0x00000000);
 	modify_field(export_header.record_cnt, 0x00000000);
+	modify_field(export_header.m_table_1_idx, measurement_meta.m_table_1_idx);
+	modify_field(export_header.m_table_2_idx, measurement_meta.m_table_2_idx);
+	modify_field(export_header.m_table_3_idx, measurement_meta.m_table_3_idx);
 	modify_field(export_promotion_meta.export_flag, 1);
 }
 
@@ -210,20 +216,69 @@ action update_cntr1_action() {
 
 
 table update_cntr1_t {
-//	reads {
-//		ipv4.srcip: exact;
-//		ipv4.dstip: exact;
-//	}
 	actions {
 		update_cntr1_action;
-//		nop;
 	}
 	default_action: update_cntr1_action;
-//	default_action: nop;
-//	size: 10;
+}
+
+register cntr2 {
+	width: 32;
+	instance_count: 10;
+}
+
+blackbox stateful_alu update_cntr2 {
+	reg: cntr2;
+	update_lo_1_value: register_lo + 1;
+}
+
+action update_cntr2_action() {
+	update_cntr2.execute_stateful_alu(0);
+}
+
+table update_cntr2_t {
+	actions {
+		update_cntr2_action;
+	}
+	default_action: update_cntr2_action;
+}
+register cntr3 {
+	width: 32;
+	instance_count: 10;
+}
+
+blackbox stateful_alu update_cntr3 {
+	reg: cntr3;
+	update_lo_1_value: register_lo + 1;
+}
+
+action update_cntr3_action() {
+	update_cntr3.execute_stateful_alu(0);
+}
+
+table update_cntr3_t {
+	actions {
+		update_cntr3_action;
+	}
+	default_action: update_cntr3_action;
 }
 ////////// end the test //////////
 
+action initialize() {
+	modify_field(export_promotion_meta.promotion_flag, 0);
+	modify_field(export_promotion_meta.export_flag, 0);
+	modify_field(export_promotion_meta.resubmit_flag, 0);
+	modify_field(export_promotion_meta.m_table_1, 0);
+	modify_field(export_promotion_meta.m_table_2, 0);
+	modify_field(export_promotion_meta.m_table_3, 0);
+}
+
+table initialize_t {
+	actions {
+		initialize;
+	}
+	default_action: initialize;
+}
 
 action set_egr(egress_spec) {
 	modify_field(ig_intr_md_for_tm.ucast_egress_port, egress_spec);
@@ -1011,25 +1066,25 @@ action do_promotion(cnt, m_table_id, idx){
 	modify_field(promote_header.cnt, cnt);
 	modify_field(promote_header.m_table_id, m_table_id);
 	modify_field(promote_header.idx, idx);
-	modify_field(promote_header.fingerprint, measurement_meta.fingerprint);
-	modify_field(promote_header.srcip, export_promotion_meta.srcip);
-	modify_field(promote_header.dstip, export_promotion_meta.dstip);
-	modify_field(promote_header.proto, export_promotion_meta.proto);
-	modify_field(promote_header.srcport, export_promotion_meta.srcport);
-	modify_field(promote_header.dstport, export_promotion_meta.dstport);
+	config_export_header(export_promotion_meta.srcip, export_promotion_meta.dstip,
+			export_promotion_meta.proto, export_promotion_meta.srcport,
+			export_promotion_meta.dstport, measurement_meta.fingerprint);
 	add_promote_header();
 	modify_field(export_promotion_meta.promotion_flag, 1);
+	modify_field(export_promotion_meta.resubmit_flag, 1);
 	resubmit(resubmit_fields);
 }
 
 action do_promotion_min() {
 	do_promotion(measurement_meta.cnt_min, measurement_meta.m_table_id_min, 
 			measurement_meta.idx_min);
+//	update_cntr1_action();
 }
 
 action do_promotion_max() {
 	do_promotion(measurement_meta.cnt_max, measurement_meta.m_table_id_max, 
 			measurement_meta.idx_max);
+//	update_cntr2_action();
 }
 
 @pragma stage 9
@@ -1156,10 +1211,13 @@ control AHashFlow
 			PRED_EMP == measurement_meta.m_table_3_predicate) {// there is a empty bucket
 			// stage 5
 			apply(export_set_flag_config_header_t);		
-			apply(update_cntr1_t);
 		}
 	}
 	else{
+		apply(update_cntr1_t);
+		if(valid(promote_header)) {
+			apply(update_cntr2_t);
+		}
 		// stage 1
 		apply(promote_m_table_1_key_t);	
 		// stage 2
@@ -1173,13 +1231,15 @@ control AHashFlow
 		// stage 5
 		apply(rmv_promote_header_config_export_header_t);
 	}
-//	apply(set_export_flag_t);		
-	if(valid(tcp)) {
-		// stage 10
-		apply(rmv_tcp_add_udp_t);
+	//	apply(set_export_flag_t);		
+	if(0 == export_promotion_meta.resubmit_flag) {
+		if(valid(tcp)) {
+			// stage 10
+			apply(rmv_tcp_add_udp_t);
+		}
+		// stage 11
+		apply(export_t);
 	}
-//	// stage 11
-	apply(export_t);
 }
 
 control ingress {

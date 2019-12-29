@@ -1,17 +1,5 @@
-// parser.p4
-#define ETHERTYPE_IPV4 0x0800
-#define ETHERTYPE_VLAN 0x8100
-#define IPV4_TCP 0x06
-#define IPV4_UDP 0x11
-#define IPV4_PROMOTION 0xA1
-#define PROMOTE_TCP 0x06
-#define PROMOTE_UDP 0x11
-#define UDP_EXPORT 0x0017
-#define EXPORT_HEADER_LEN 22
-#define PROMOTE_HEADER_LEN 14
-#define CTRL_IP 0x0a00000b
-#define CTRL_SRC_IP 0x0a00000a
-#define CTRL_PORT 8082
+#include "macro.p4"
+
 parser start {
     return parse_ethernet;
 }
@@ -34,8 +22,13 @@ parser parse_vlan {
 	}
 }
 
+@pragma pack 4
 parser parse_ipv4 {
     extract(ipv4);
+	set_metadata(export_promotion_meta.ipv4_totalLen, ipv4.totalLen);
+	set_metadata(export_promotion_meta.proto, ipv4.proto);
+	set_metadata(export_promotion_meta.srcip, ipv4.srcip);
+	set_metadata(export_promotion_meta.dstip, ipv4.dstip);
     return select(latest.proto){
 		IPV4_PROMOTION: parse_promote_header;
         IPV4_TCP: parse_tcp;
@@ -55,11 +48,15 @@ parser parse_promote_header {
 
 parser parse_tcp {
     extract(tcp);
+	set_metadata(export_promotion_meta.srcport, tcp.srcport);
+	set_metadata(export_promotion_meta.dstport, tcp.dstport);
 	return ingress;
 }
 
 parser parse_udp {
     extract(udp);
+	set_metadata(export_promotion_meta.srcport, udp.srcport);
+	set_metadata(export_promotion_meta.dstport, udp.dstport);
 	return select(latest.srcport) {
 		UDP_EXPORT: parse_export_header;
 		default: ingress;
@@ -70,3 +67,4 @@ parser parse_export_header {
 	extract(export_header);
 	return ingress;
 }
+
