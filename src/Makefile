@@ -2,11 +2,11 @@
 #P4_NAME=basic_switching
 #P4_NAME=multi_device
 #P4_NAME=multicast_scale
-#P4_NAME=AHashFlow
+P4_NAME=AHashFlow
 #P4_NAME=HashFlow
 #P4_NAME=resubmit
 #P4_NAME=benchmark
-P4_NAME=myswitch
+#P4_NAME=myswitch
 #P4_NAME=Elastic
 build:
 	cd $(BUILD) && \

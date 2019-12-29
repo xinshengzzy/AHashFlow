@@ -29,6 +29,11 @@ flag = AHashFlow_register_flags_t(read_hw_sync = True)
 #for idx in range(100):
 #    res = client.register_read_m_table_1_key(sess_hdl, dev_tgt, idx, flag)
 #    print "idx:", idx, ", res:", res
-res = client.register_read_cntr1(sess_hdl, dev_tgt, 0, flag)
-print "cntr1:", res
+for idx in range(100):
+    key = client.register_read_m_table_1_key(sess_hdl, dev_tgt, idx, flag)
+    value = client.register_read_m_table_1_value(sess_hdl, dev_tgt, idx, flag)
+    print "idx:", idx
+    print "key:", key
+    print "value:", value
+    print "----------"
 conn_mgr.client_cleanup(hex_to_i32(sess_hdl))

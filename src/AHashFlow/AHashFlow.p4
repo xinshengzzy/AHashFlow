@@ -162,7 +162,8 @@ action rmv_promote_header_config_export_header() {
 //	update_cntr1_action();
 	remove_promote_header();
 	config_export_header(promote_header.srcip, promote_header.dstip,
-			promote_header.proto, promote_header.srcport, promote_header.dstport);
+			promote_header.proto, promote_header.srcport, promote_header.dstport, 
+			promote_header.fingerprint);
 	modify_field(export_promotion_meta.export_flag, 1);
 }
 
@@ -175,17 +176,16 @@ table rmv_promote_header_config_export_header_t {
 }
 
 action export_set_flag_config_header() {
-//	config_export_header(export_promotion_meta.srcip, export_promotion_meta.dstip,
-//			export_promotion_meta.proto, export_promotion_meta.srcport,
-//			export_promotion_meta.dstport);
-	config_export_header(0x11, 0x21, 0x31, 0x41, 0x51);
+	config_export_header(export_promotion_meta.srcip, export_promotion_meta.dstip,
+			export_promotion_meta.proto, export_promotion_meta.srcport,
+			export_promotion_meta.dstport, measurement_meta.fingerprint);
+	modify_field(export_header.padding, 0x00);
+	modify_field(export_header.record_fingerprint, 0x00000000);
+	modify_field(export_header.record_cnt, 0x00000000);
 	modify_field(export_promotion_meta.export_flag, 1);
-	modify_field(export_header.fingerprint, 0);
-	modify_field(export_header.cnt, 0);
-	modify_field(export_header.padding, 0);
 }
 
-//@pragma stage 5
+@pragma stage 5
 table export_set_flag_config_header_t {
 	actions {
 		export_set_flag_config_header;
@@ -360,7 +360,7 @@ blackbox stateful_alu promote_m_table_1_key
     reg: m_table_1_key;
     update_lo_1_value: promote_header.fingerprint;
 	output_value: register_lo;
-	output_dst: export_header.fingerprint;	  
+	output_dst: export_header.record_fingerprint;	  
 }
 
 action promote_m_table_1_key_action()
@@ -426,7 +426,7 @@ blackbox stateful_alu promote_m_table_2_key
     reg: m_table_2_key;
     update_lo_1_value: promote_header.fingerprint;
 	output_value: register_lo;
-	output_dst: export_header.fingerprint;	  
+	output_dst: export_header.record_fingerprint;	  
 }
 
 action promote_m_table_2_key_action()
@@ -493,7 +493,7 @@ blackbox stateful_alu promote_m_table_3_key
     reg: m_table_3_key;
     update_lo_1_value: promote_header.fingerprint;
 	output_value: register_lo;
-	output_dst: export_header.fingerprint;	  
+	output_dst: export_header.record_fingerprint;	  
 }
 
 action promote_m_table_3_key_action()
@@ -603,7 +603,7 @@ blackbox stateful_alu promote_m_table_1_value
     reg: m_table_1_value;
     update_lo_1_value: promote_header.cnt;
 	output_value: register_lo;
-	output_dst: export_header.cnt;	  
+	output_dst: export_header.record_cnt;	  
 }
 
 action promote_m_table_1_value_action()
@@ -711,7 +711,7 @@ blackbox stateful_alu promote_m_table_2_value
     reg: m_table_2_value;
     update_lo_1_value: promote_header.cnt;
 	output_value: register_lo;
-	output_dst: export_header.cnt;	  
+	output_dst: export_header.record_cnt;	  
 }
 
 action promote_m_table_2_value_action()
@@ -814,7 +814,7 @@ blackbox stateful_alu promote_m_table_3_value
     reg: m_table_3_value;
     update_lo_1_value: promote_header.cnt;
 	output_value: register_lo;
-	output_dst: export_header.cnt;	  
+	output_dst: export_header.record_cnt;	  
 }
 
 action promote_m_table_3_value_action()
@@ -1081,53 +1081,36 @@ action do_drop()
 	drop();
 }
 
-action config_export_header(srcip, dstip, proto, srcport, dstport) {
+action config_export_header(srcip, dstip, proto, srcport, dstport, fingerprint) {
 	modify_field(export_header.srcip, srcip);
 	modify_field(export_header.dstip, dstip);
 	modify_field(export_header.proto, proto);
 	modify_field(export_header.srcport, srcport);
 	modify_field(export_header.dstport, dstport);
+	modify_field(export_header.fingerprint, fingerprint);
+}
 
-/*	add(ipv4.totalLen, ipv4.totalLen, EXPORT_HEADER_LEN);
+action export() {
+	add_header(export_header);
+	add(ipv4.totalLen, ipv4.totalLen, EXPORT_HEADER_LEN);
 	add(udp.totalLen, udp.totalLen, EXPORT_HEADER_LEN);
 	modify_field(ipv4.srcip, CTRL_SRC_IP);
 	modify_field(ipv4.dstip, CTRL_IP);
 	modify_field(udp.srcport, UDP_EXPORT);
 	modify_field(udp.dstport, CTRL_PORT);
-	modify_field(udp.checksum, 0);*/
-}
-
-action export() {
-	//////////
-	config_export_header(0x11, 0x21, 0x31, 0x41, 0x51);
-	modify_field(export_promotion_meta.export_flag, 1);
-	modify_field(export_header.fingerprint, 0);
-	modify_field(export_header.cnt, 0);
-	modify_field(export_header.padding, 0);
-	/////////
-	add_header(export_header);
-	add(ipv4.totalLen, ipv4.totalLen, EXPORT_HEADER_LEN);
-	add(udp.totalLen, udp.totalLen, EXPORT_HEADER_LEN);
-//	modify_field(ipv4.srcip, CTRL_SRC_IP);
-//	modify_field(ipv4.dstip, CTRL_IP);
-	modify_field(udp.srcport, UDP_EXPORT);
-//	modify_field(udp.dstport, CTRL_PORT);
 	modify_field(udp.checksum, 0);
 }
 
-//@pragma stage 11
+@pragma stage 11
 table export_t {
-//	reads {
-//		export_promotion_meta.export_flag: exact;
-//		export_promotion_meta.export_flag: ternary;
-//		ipv4.srcip: ternary;
-//		ipv4.dstip: ternary;
-//	}
+	reads {
+		export_promotion_meta.export_flag: exact;
+	}
 	actions {
-//		do_drop;
+		do_drop;
 		export;
 	}	
-	default_action: export;
+	default_action: do_drop;
 }
 
 control AHashFlow
@@ -1201,13 +1184,9 @@ control AHashFlow
 
 control ingress {
 	apply(forward);
-	if(valid(udp)) {
-		apply(export_t);
-//		apply(export_set_flag_config_header_t);		
+	if(valid(udp) or valid(tcp)) {
+		AHashFlow();
 	}
-//	if(valid(udp) or valid(tcp)) {
-//		AHashFlow();
-//	}
 }
 control egress
 {

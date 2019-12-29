@@ -25,15 +25,14 @@ table forward {
 
 action export() {
 	//////////
+//	modify_field(export_header.fingerprint, 0x01);
+//	modify_field(export_header.cnt, 0x00);
 	modify_field(export_header.srcip, 0x11);
 	modify_field(export_header.dstip, 0x21);
-	modify_field(export_header.proto, 0x31);
 	modify_field(export_header.srcport, 0x41);
 	modify_field(export_header.dstport, 0x51);
-
-	modify_field(export_header.fingerprint, 0x11);
-	modify_field(export_header.cnt, 0x22);
-	modify_field(export_header.padding, 0);
+	modify_field(export_header.proto, 0x31);
+//	modify_field(export_header.padding, 0);
 	/////////
 	add_header(export_header);
 	add(ipv4.totalLen, ipv4.totalLen, EXPORT_HEADER_LEN);
@@ -46,15 +45,15 @@ action export() {
 }
 
 table export_t {
-	reads {
-		ipv4.srcip: exact;
-		ipv4.dstip: exact;
-	}
+//	reads {
+//		ipv4.srcip: exact;
+//		ipv4.dstip: exact;
+//	}
 	actions {
-		nop;
+//		nop;
 		export;
 	}	
-	default_action: nop;
+	default_action: export;
 }
 control ingress {
 	apply(forward);

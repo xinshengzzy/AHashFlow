@@ -122,13 +122,9 @@ calculated_field udp.checksum {
 header_type promote_header_t {
     fields {
 		fingerprint: 32;
-//		fingerprint: 16;
 		cnt: 32;
-//		cnt: 16;
 		idx: 32;
-//		idx: 16;
 		srcip: 32;
-//		srcip: 16;
 		dstip: 32;
 		srcport: 16;
 		dstport: 16;
@@ -143,8 +139,9 @@ header promote_header_t promote_header;
 
 header_type export_header_t {
 	fields {
+		record_fingerprint: 32;
+		record_cnt: 32;
 		fingerprint: 32;
-		cnt: 32;
 		srcip: 32;
 		dstip: 32;
 		srcport: 16;
