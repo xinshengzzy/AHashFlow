@@ -1,3 +1,4 @@
+// parser.p4
 #include "macro.p4"
 
 parser start {
@@ -30,21 +31,12 @@ parser parse_ipv4 {
 	set_metadata(export_promotion_meta.srcip, ipv4.srcip);
 	set_metadata(export_promotion_meta.dstip, ipv4.dstip);
     return select(latest.proto){
-		IPV4_PROMOTION: parse_promote_header;
         IPV4_TCP: parse_tcp;
 		IPV4_UDP: parse_udp;
         default: ingress;
     }
 }
 
-parser parse_promote_header {
-	extract(promote_header);
-	return select(latest.next_header){
-        PROMOTE_TCP: parse_tcp;
-		PROMOTE_UDP: parse_udp;
-        default: ingress;
-	}
-}
 
 parser parse_tcp {
     extract(tcp);

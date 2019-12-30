@@ -5,8 +5,8 @@ from thrift.transport import TTransport
 import conn_mgr_pd_rpc.conn_mgr
 from res_pd_rpc.ttypes import *
 from ptf.thriftutils import *
-from AHashFlow.p4_pd_rpc.ttypes import *
-import AHashFlow.p4_pd_rpc.AHashFlow as AHashFlow
+from myswitch.p4_pd_rpc.ttypes import *
+import myswitch.p4_pd_rpc.myswitch as myswitch
 
 thrift_server = "localhost"
 #transport = TSocket.TSocket(thrift_server, 9090)
@@ -20,10 +20,10 @@ sess_hdl = conn_mgr.client_init()
 dev = 0
 dev_tgt = DevTarget_t(dev, hex_to_i16(0xFFFF))
 
-p4_prefix = "AHashFlow"
+p4_prefix = "myswitch"
 p4_protocol = TMultiplexedProtocol.TMultiplexedProtocol(bprotocol, p4_prefix) 
-client = AHashFlow.Client(p4_protocol)
-flag = AHashFlow_register_flags_t(read_hw_sync = True)
+client = myswitch.Client(p4_protocol)
+flag = myswitch_register_flags_t(read_hw_sync = True)
 #res = client.register_read_pktcnt(sess_hdl, dev_tgt, 0, flag)
 #client.register_write_main_table_1_value(sess_hdl, dev_tgt, 0, 5)
 #for idx in range(100):

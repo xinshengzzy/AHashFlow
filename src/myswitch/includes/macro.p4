@@ -1,3 +1,4 @@
+// macro.p4
 // AHashFlow specific parameters
 #define MAIN_TABLE_IDX_WIDTH 13
 #define M_TABLE_1_SIZE 8192
@@ -19,12 +20,7 @@
 // parameters about protocols
 #define ETHERTYPE_IPV4 0x0800
 #define ETHERTYPE_VLAN 0x8100
-#define IPV4_PROMOTION 0xA1
 #define IPV4_TCP 0x06
 #define IPV4_UDP 0x11
-#define PROMOTE_TCP 0x06
-#define PROMOTE_UDP 0x11
 #define UDP_EXPORT 0x1111
-//#define EXPORT_HEADER_LEN 26
 #define EXPORT_HEADER_LEN 38
-#define PROMOTE_HEADER_LEN 28

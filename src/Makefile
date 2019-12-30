@@ -48,6 +48,9 @@ pull:
 	git pull
 register:
 	python ./$(P4_NAME)/ReadRegister.py
+dump:
+	cd $(P4_NAME) && \
+	python dump_records.py
 send:
 	python SendPacket.py
 ptf:

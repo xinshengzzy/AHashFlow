@@ -1,3 +1,4 @@
+// headers.p4
 header_type ethernet_t {
     fields {
         dstAddr : 48;
@@ -93,49 +94,6 @@ header_type udp_t {
 
 //@pragma pa_fragment egress udp.checksum
 header udp_t udp;
-
-/*
-field_list udp_checksum_list {
-    ipv4.srcip;
-    ipv4.dstip;
-    8'0;
-    ipv4.proto;
-    measurement_meta.l4_len;
-    udp.srcport;
-    udp.dstport;
-    udp.totalLen;
-    payload;
-}
-
-field_list_calculation udp_checksum {
-    input {
-        udp_checksum_list;
-    }
-    algorithm : csum16;
-    output_width : 16;
-}
-
-calculated_field udp.checksum {
-    update udp_checksum if (measurement_meta.update_udp_flag == 1);
-}*/
-
-header_type promote_header_t {
-    fields {
-		cnt: 32;
-		idx: 32;
-		fingerprint: 32;
-		srcip: 32;
-		dstip: 32;
-		srcport: 16;
-		dstport: 16;
-		next_header: 8;
-		proto: 8;
-		m_table_id: 4;
-		padding: 12;
-    }
-}
-header promote_header_t promote_header;
-
 
 header_type export_header_t {
 	fields {

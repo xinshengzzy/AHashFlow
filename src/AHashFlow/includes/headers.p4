@@ -1,3 +1,4 @@
+// headers.p4
 header_type ethernet_t {
     fields {
         dstAddr : 48;
@@ -152,7 +153,8 @@ header_type export_header_t {
 		srcport: 16;
 		dstport: 16;
 		proto: 8;
-		padding: 8;
+		padding: 8; // 0x00 if it is for the exported flow ID only.
+				 // 0xff if it is for the exported flow ID as well as flow record
 	}
 }
 

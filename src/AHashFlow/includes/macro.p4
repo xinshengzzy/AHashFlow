@@ -1,3 +1,4 @@
+// macro.p4
 // AHashFlow specific parameters
 #define MAIN_TABLE_IDX_WIDTH 13
 #define M_TABLE_1_SIZE 8192
@@ -7,6 +8,11 @@
 #define A_TABLE_SIZE 16384
 #define B_TABLE_IDX_WIDTH 14
 #define B_TABLE_SIZE 16384
+#define M_KEY_WIDTH 32
+#define M_VALUE_WIDTH 32
+#define A_ENTRY_WIDTH 16
+#define B_ENTRY_WIDTH 16
+#define CNT_MAX_MASK 0x0000ffff
 #define DIGEST_WIDTH 8
 #define FINGERPRINT_WIDTH 32
 #define GAMMA 5
