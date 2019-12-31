@@ -12,6 +12,7 @@ push:
 	git add -A
 	git commit -m "Automatic uploading. No comments!"
 	git push
+	$(MAKE) pull
 pull:
 	git pull
 register:
