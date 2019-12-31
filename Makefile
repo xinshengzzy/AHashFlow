@@ -15,6 +15,7 @@ push:
 pull:
 	git pull
 config:
+	git config credential.helper store
 	git config --global user.email xinshengzzy@gmail.com
 	git config --global user.name xinshengzzy
 register:
