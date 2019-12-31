@@ -14,6 +14,9 @@ push:
 	git push
 pull:
 	git pull
+config:
+	git config --global user.email xinshengzzy@gmail.com
+	git config --global user.name xinshengzzy
 register:
 	python ReadRegister.py
 send:
