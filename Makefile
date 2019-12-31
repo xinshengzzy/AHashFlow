@@ -15,6 +15,10 @@ push:
 	$(MAKE) pull
 pull:
 	git pull
+configure:
+	git config credential.helper store
+	git config --global user.email xinshengzzy@gmail.com
+	git config --global user.name xinshengzzy
 register:
 	python ReadRegister.py
 send:
