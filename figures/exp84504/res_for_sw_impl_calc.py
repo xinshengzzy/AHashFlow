@@ -3,6 +3,7 @@ from simulators.AHashFlow import AHashFlow
 from flow_tools import *
 import json
 filename = "/root/traces/CAIDA.equinix-nyc.dirA.20180315-125910.UTC.anon.clean.pcap"
+CAIDA.equinix-nyc.dirA.20180315-130000.UTC.anon.clean.pcap
 n_pkts = 1000000
 thresh = 5
 def main(filename, n_pkts, thresh):
