@@ -7,8 +7,8 @@ from matplotlib.patches import Ellipse
 font = {'size':18}
 matplotlib.rc('font', **font)
 
-sw = "./sw/res_for_sw_impl.json"
-hw = "./hw/res_for_hw_impl.json"
+sw = "res_for_sw_impl.json"
+hw = "res_for_hw_impl.json"
 
 def func(src):
 	thresholds = []
