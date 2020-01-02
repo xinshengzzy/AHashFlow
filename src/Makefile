@@ -51,6 +51,9 @@ register:
 dump:
 	cd $(P4_NAME) && \
 	python dump_records.py
+	rm ~/workspace/pcap/records2.txt
+	cp $(P4_NAME)/records2.txt ~/workspace/pcap/
+	$(MAKE) -C ~/workspace/pcap/ push
 send:
 	python SendPacket.py
 ptf:

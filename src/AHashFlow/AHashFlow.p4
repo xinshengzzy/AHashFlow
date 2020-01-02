@@ -84,7 +84,7 @@ header_type measurement_meta_t {
         flag_max: 32; // subtract flag used for judging negative or not
         flag_active: 8; // subtract flag used for judging negative or not
         fingerprint: 32; // fingerprint for 5-tuple;
-        cnt_max: 8; // maximum flow count of all 3 sub tables of main table;
+        cnt_max: B_ENTRY_WIDTH; // maximum flow count of all 3 sub tables of main table;
 		idx_max: 32; // the index of the bucket corresponding to cnt_max
 		m_table_id_max: 4; // which m table the cnt_max is located.
         cnt_min: 32; // minimum flow count of all 3 sub tables of main table;
@@ -967,15 +967,15 @@ table update_min_max_t {
 		measurement_meta.diff1 mask 0x80000000: exact;
 		measurement_meta.diff2 mask 0x80000000: exact;
 		measurement_meta.diff3 mask 0x80000000: exact;
-		/*diff1	diff2	diff3	min	max
-		 *0		0		0		3	1
-		 *0		0		1		2	1
-		 *0		1		0		NO	NO
-		 *0		1		1		2	3
-		 *1		0		0		3	2
-		 *1		0		1		NO	NO
-		 *1		1		0		1	2
-		 *1		1		1		1	3
+		/*diff1			diff2			diff3			min	max
+		 *0x00000000	0x00000000		0x00000000		3	1
+		 *0x00000000	0x00000000		0x80000000		2	1
+		 *0x00000000	0x80000000		0x00000000		NO	NO
+		 *0x00000000	0x80000000		0x80000000		2	3
+		 *0x80000000	0x00000000		0x00000000		3	2
+		 *0x80000000	0x00000000		0x80000000		NO	NO
+		 *0x80000000	0x80000000		0x00000000		1	2
+		 *0x80000000	0x8000000		0x80000000		1	3
 		 * */
 	}
 	actions {
@@ -1048,7 +1048,7 @@ table compare_t
 register b_table
 {
     width: B_ENTRY_WIDTH;
-    instance_count: A_TABLE_SIZE;
+    instance_count: B_TABLE_SIZE;
 }
 
 blackbox stateful_alu update_b_table
@@ -1095,13 +1095,17 @@ action do_promotion(cnt, m_table_id, idx){
 }
 
 action do_promotion_min() {
-	do_promotion(measurement_meta.cnt_min, measurement_meta.m_table_id_min, 
+//	do_promotion(measurement_meta.cnt_min, measurement_meta.m_table_id_min, 
+//			measurement_meta.idx_min);
+	do_promotion(measurement_meta.a_cnt, measurement_meta.m_table_id_min, 
 			measurement_meta.idx_min);
 //	update_cntr1_action();
 }
 
 action do_promotion_max() {
-	do_promotion(measurement_meta.cnt_max, measurement_meta.m_table_id_max, 
+//	do_promotion(measurement_meta.cnt_max, measurement_meta.m_table_id_max, 
+//			measurement_meta.idx_max);
+	do_promotion(measurement_meta.a_cnt, measurement_meta.m_table_id_max, 
 			measurement_meta.idx_max);
 //	update_cntr2_action();
 }
@@ -1112,15 +1116,15 @@ table promote_t {
 		measurement_meta.flag_min: ternary;
 		measurement_meta.flag_max: ternary;
 		measurement_meta.flag_active: ternary;
-		/*flag_min	flag_max	flag_active	action
-		 *0			0			0			nop
-		 *0			0			!=0			nop
-		 *0			1			0			do_promotion_max
-		 *0			1			!=0			nop
-		 *1			0			0			do_promotion_min
-		 *1			0			!=0			do_promotion_min
-		 *1			1			0			do_promotion_min
-		 *1			1			!=0			do_promotion_min
+		/*flag_min		flag_max		flag_active	action
+		 *0x00000000	0x00000000		0			nop
+		 *0x00000000	0x00000000		not 0		nop
+		 *0x00000000	0x80000000		0			do_promotion_max
+		 *0x00000000	0x80000000		not 0		nop
+		 *0x80000000	0x00000000		0			do_promotion_min
+		 *0x80000000	0x00000000		not 0		do_promotion_min
+		 *0x80000000	0x80000000		0			do_promotion_min
+		 *0x8000000		0x80000000		not 0		do_promotion_min
 		 * */
 	}
 	actions {
@@ -1238,13 +1242,9 @@ control AHashFlow
 				// stage 7
 				apply(update_b_t);
 				// stage 8
-				apply(compare_t)
-				{
-					compare_action {
-						// stage 9
-						apply(promote_t);
-					}
-				}
+				apply(compare_t);
+				// stage 9
+				apply(promote_t);
 			}
 			else if(PRED_EMP == measurement_meta.m_table_1_predicate or 
 				PRED_EMP == measurement_meta.m_table_2_predicate or 

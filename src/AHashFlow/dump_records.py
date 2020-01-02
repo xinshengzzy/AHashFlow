@@ -54,6 +54,9 @@ for idx in range(m_table_3_size):
     value = client.register_read_m_table_3_value(sess_hdl, dev_tgt, idx, flag)
     records.append((key[1], value[1]))
 
-with open("./records.json", "w") as f:
-    json.dump(records, f)
+with open("./records2.txt", "w") as f:
+    f.write("#fingerprint\tcount\n")
+    for item in records:
+        l = str(item[0]) + "\t" + str(item[1]) + "\n"
+        f.write(l)
 conn_mgr.client_cleanup(hex_to_i32(sess_hdl))
