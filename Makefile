@@ -12,9 +12,10 @@ push:
 	git add -A
 	git commit -m "Automatic uploading. No comments!"
 	git push
+	$(MAKE) pull
 pull:
 	git pull
-config:
+configure:
 	git config credential.helper store
 	git config --global user.email xinshengzzy@gmail.com
 	git config --global user.name xinshengzzy
