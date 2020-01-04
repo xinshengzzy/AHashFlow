@@ -20,6 +20,8 @@ $(dst3): $(prog) $(src3)
 	python $< $(src3) $@
 $(dst4): $(prog) $(src4)
 	python $< $(src4) $@
+plot:
+	 python plot.py
 pull:
 	 $(MAKE) -C ../../ pull
 push:
