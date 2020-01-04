@@ -24,19 +24,19 @@ if __name__ == "__main__":
 	with open(src2, "r") as f:
 		cdf2 = json.load(f)
 		len2 = len(cdf2)
-		print "len1:", len1
+		print "len2:", len2
 		if len2 > len_max:
 			len2 = len_max
 	with open(src3, "r") as f:
 		cdf3 = json.load(f)
 		len3 = len(cdf3)
-		print "len1:", len1
+		print "len3:", len3
 		if len3 > len_max:
 			len3 = len_max
 	with open(src4, "r") as f:
 		cdf4 = json.load(f)
 		len4 = len(cdf4)
-		print "len1:", len1
+		print "len4:", len4
 		if len4 > len_max:
 			len4 = len_max
 
@@ -52,7 +52,7 @@ if __name__ == "__main__":
 #	plt.plot(range(5), are_hw, label = "Hardware", marker = "o")
 #	plt.legend(bbox_to_anchor=(0.0, 1.02, 1.0, 0.102), loc = 3, ncol = 2, mode = "expand", borderaxespad = 0.0)
 	plt.legend(loc = 4)
-	plt.xlabel("Flow Size/pkts")
+	plt.xlabel("Interval/sec")
 	plt.ylabel("CDF")
 	plt.savefig("cdf.pdf", bbox_inches = "tight")
 	plt.savefig("cdf.png", bbox_inches = "tight")
