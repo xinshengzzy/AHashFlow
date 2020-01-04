@@ -18,21 +18,25 @@ if __name__ == "__main__":
 	with open(src1, "r") as f:
 		cdf1 = json.load(f)
 		len1 = len(cdf1)
+		print "len1:", len1
 		if len1 > len_max:
 			len1 = len_max
 	with open(src2, "r") as f:
 		cdf2 = json.load(f)
 		len2 = len(cdf2)
+		print "len2:", len2
 		if len2 > len_max:
 			len2 = len_max
 	with open(src3, "r") as f:
 		cdf3 = json.load(f)
 		len3 = len(cdf3)
+		print "len3:", len3
 		if len3 > len_max:
 			len3 = len_max
 	with open(src4, "r") as f:
 		cdf4 = json.load(f)
 		len4 = len(cdf4)
+		print "len4:", len4
 		if len4 > len_max:
 			len4 = len_max
 
