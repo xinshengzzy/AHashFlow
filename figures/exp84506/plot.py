@@ -52,7 +52,7 @@ if __name__ == "__main__":
 #	plt.plot(range(5), are_hw, label = "Hardware", marker = "o")
 #	plt.legend(bbox_to_anchor=(0.0, 1.02, 1.0, 0.102), loc = 3, ncol = 2, mode = "expand", borderaxespad = 0.0)
 	plt.legend(loc = 4)
-	plt.xlabel("Interval/sec")
+	plt.xlabel("Flow Size/pkts")
 	plt.ylabel("CDF")
 	plt.savefig("cdf.pdf", bbox_inches = "tight")
 	plt.savefig("cdf.png", bbox_inches = "tight")
