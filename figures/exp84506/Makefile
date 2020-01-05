@@ -22,7 +22,5 @@ $(dst4): $(prog) $(src4)
 	python $< $(src4) $@
 plot:
 	 python plot.py
-pull:
-	 $(MAKE) -C ../../ pull
-push:
-	 $(MAKE) -C ../../ push
+update:
+	 $(MAKE) -C ../../ update

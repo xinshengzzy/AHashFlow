@@ -36,7 +36,5 @@ $(dst6): $(zipf_gen) $(this)
 	python $< $(zipf_n) $(alpha2) $(n_points) $@
 plot:
 	 python plot.py
-pull:
-	 $(MAKE) -C ../../ pull
-push:
-	 $(MAKE) -C ../../ push
+update:
+	 $(MAKE) -C ../../ update
