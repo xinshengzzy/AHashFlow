@@ -32,13 +32,13 @@ if __name__ == "__main__":
 	f1score_50 = []
 	f1score_60 = []
 	for gamma in gammas:
-		records = results[gamma]
-		are_10, f1score_10 = func(are_10, f1score_10, records[10])
-		are_20, f1score_20 = func(are_20, f1score_20, records[20])
-		are_30, f1score_30 = func(are_30, f1score_30, records[30])
-		are_40, f1score_40 = func(are_40, f1score_40, records[40])
-		are_50, f1score_50 = func(are_50, f1score_50, records[50])
-		are_60, f1score_60 = func(are_60, f1score_60, records[60])
+		records = results[str(gamma)]
+		are_10, f1score_10 = func(are_10, f1score_10, records["10"])
+		are_20, f1score_20 = func(are_20, f1score_20, records["20"])
+		are_30, f1score_30 = func(are_30, f1score_30, records["30"])
+		are_40, f1score_40 = func(are_40, f1score_40, records["40"])
+		are_50, f1score_50 = func(are_50, f1score_50, records["50"])
+		are_60, f1score_60 = func(are_60, f1score_60, records["60"])
 
 
 
