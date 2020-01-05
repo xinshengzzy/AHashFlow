@@ -12,6 +12,7 @@ analyze:
 	$(MAKE) $(dst2)
 	$(MAKE) $(dst3)
 	$(MAKE) $(dst4)
+	$(MAKE) update
 $(dst1): $(prog) $(src1)
 	python $< $(src1) $@
 $(dst2): $(prog) $(src2)
@@ -21,6 +22,7 @@ $(dst3): $(prog) $(src3)
 $(dst4): $(prog) $(src4)
 	python $< $(src4) $@
 plot:
-	 python plot.py
+	python plot.py
+	$(MAKE) update
 update:
 	 $(MAKE) -C ../../ update
