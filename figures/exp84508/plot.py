@@ -42,7 +42,7 @@ if __name__ == "__main__":
 	plt.plot(nflows4, label = "ISP2", marker = "1", mfc="none")
 #	plt.plot(range(5), are_hw, label = "Hardware", marker = "o")
 #	plt.legend(bbox_to_anchor=(0.0, 1.02, 1.0, 0.102), loc = 3, ncol = 2, mode = "expand", borderaxespad = 0.0)
-	plt.legend(loc = 4)
+	plt.legend(loc = 3)
 	plt.ylabel("Nun. of Active Flows (X10000)")
 	plt.xlabel("Time/Sec")
 	plt.savefig("nflows.pdf", bbox_inches = "tight")
