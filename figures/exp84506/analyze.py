@@ -25,6 +25,7 @@ def func(src, dst):
 	for key, value in flows.items():
 		sizes.append(value["size"])
 	length = max(sizes)
+	print "max flow size:", max(sizes)
 	cdf = [0]*(length + 1)
 	for item in sizes:
 		cdf[item] = cdf[item] + 1
