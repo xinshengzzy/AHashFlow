@@ -22,13 +22,13 @@ analyze:
 	$(MAKE) $(dst4)
 	$(MAKE) $(dst5)
 	$(MAKE) $(dst6)
-$(dst1): $(prog) $(src1)
+$(dst1): $(prog) $(src1) $(this)
 	python $< $(src1) $(n_points) $@
-$(dst2): $(prog) $(src2)
+$(dst2): $(prog) $(src2) $(this)
 	python $< $(src2) $(n_points) $@
-$(dst3): $(prog) $(src3)
+$(dst3): $(prog) $(src3) $(this)
 	python $< $(src3) $(n_points) $@
-$(dst4): $(prog) $(src4)
+$(dst4): $(prog) $(src4) $(this)
 	python $< $(src4) $(n_points) $@
 $(dst5): $(zipf_gen) $(this)
 	python $< $(zipf_n) $(alpha1) $(n_points) $@
