@@ -12,8 +12,9 @@ dst5 = ./zipf_dist_1.json
 dst6 = ./zipf_dist_2.json
 n_points = 20
 zipf_n = 100000
-alpha1 = 0.8
-alpha2 = 1.2
+alpha1 = 0.9
+alpha2 = 1.1
+this = ./Makefile
 analyze:
 	$(MAKE) $(dst1)
 	$(MAKE) $(dst2)
@@ -29,9 +30,9 @@ $(dst3): $(prog) $(src3)
 	python $< $(src3) $(n_points) $@
 $(dst4): $(prog) $(src4)
 	python $< $(src4) $(n_points) $@
-$(dst5): $(zipf_gen) 
+$(dst5): $(zipf_gen) $(this)
 	python $< $(zipf_n) $(alpha1) $(n_points) $@
-$(dst6): $(zipf_gen) 
+$(dst6): $(zipf_gen) $(this)
 	python $< $(zipf_n) $(alpha2) $(n_points) $@
 plot:
 	 python plot.py
