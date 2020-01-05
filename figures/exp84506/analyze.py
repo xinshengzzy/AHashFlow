@@ -22,8 +22,8 @@ def func(src, dst):
 			else:
 				sizes.append(flows[flowid]["size"])
 				flows[flowid] = {"latest": timestamp, "size": 1}
-	for item in flows.items():
-		sizes.append(item["size"])
+	for key, value in flows.items():
+		sizes.append(value["size"])
 	length = max(sizes)
 	cdf = [0]*(length + 1)
 	for item in sizes:
