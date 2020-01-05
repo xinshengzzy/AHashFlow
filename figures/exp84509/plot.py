@@ -19,6 +19,7 @@ if __name__ == "__main__":
 		results = json.load(f)
 
 	gammas = range(1, 11)
+	n_promotions = []
 	are_10 = []
 	are_20 = []
 	are_30 = []
@@ -32,15 +33,22 @@ if __name__ == "__main__":
 	f1score_50 = []
 	f1score_60 = []
 	for gamma in gammas:
+		npromotions.appdn(results[str(gamma)]["n_promotions"])
+	for gamma in gammas:
 		records = results[str(gamma)]
-		are_10, f1score_10 = func(are_10, f1score_10, records["10"])
-		are_20, f1score_20 = func(are_20, f1score_20, records["20"])
-		are_30, f1score_30 = func(are_30, f1score_30, records["30"])
-		are_40, f1score_40 = func(are_40, f1score_40, records["40"])
-		are_50, f1score_50 = func(are_50, f1score_50, records["50"])
-		are_60, f1score_60 = func(are_60, f1score_60, records["60"])
-
-
+		n_promotions.append(records["n_promotions"])
+		are_10.append(records["are"][10])
+		f1score_10.append(records["f1score"]["10"])
+		are_20.append(records["are"]["20"])
+		f1score_20.append(records["f1score"]["20"])
+		are_30.append(records["are"]["30"])
+		f1score_30.append(records["f1score"]["30"])
+		are_40.append(records["are"][40])
+		f1score_40.append(records["f1score"]["40"])
+		are_50.append(records["are"]["50"])
+		f1score_50.append(records["f1score"]["50"])
+		are_60.append(records["are"]["60"])
+		f1score_60.append(records["f1score"]["60"])
 
 	plt.figure(1)
 #	plt.title("Heavy Hitters ARE")
@@ -77,3 +85,16 @@ if __name__ == "__main__":
 	plt.ylabel("F1 Score")
 	plt.savefig("f1score.pdf", bbox_inches = "tight")
 	plt.savefig("f1score.png", bbox_inches = "tight")
+
+	plt.figure(3)
+#	plt.title("Heavy Hitters ARE")
+#	plt.xticks(range(5), ("1M", "5M", "10M", "15M", "20M"))
+#	plt.ylim(0, 1.05)
+	plt.plot(gammas, n_promotions, label = "thresh=10", marker = "x", mfc="none")
+#	plt.plot(range(5), are_hw, label = "Hardware", marker = "o")
+#	plt.legend(bbox_to_anchor=(0.0, 1.02, 1.0, 0.102), loc = 3, ncol = 2, mode = "expand", borderaxespad = 0.0)
+	plt.legend(loc = 3)
+	plt.xlabel(r"$\gamma$")
+	plt.ylabel("Num. of Promotions")
+	plt.savefig("npromotions.pdf", bbox_inches = "tight")
+	plt.savefig("npromotions.png", bbox_inches = "tight")
