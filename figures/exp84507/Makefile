@@ -12,7 +12,7 @@ dst5 = ./zipf_dist_1.json
 dst6 = ./zipf_dist_2.json
 n_points = 20
 zipf_n = 100000
-alpha1 = 0.9
+alpha1 = 1.0
 alpha2 = 1.1
 this = ./Makefile
 analyze:
