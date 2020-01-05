@@ -56,3 +56,38 @@ if __name__ == "__main__":
 	plt.ylabel("CDF")
 	plt.savefig("cdf.pdf", bbox_inches = "tight")
 	plt.savefig("cdf.png", bbox_inches = "tight")
+
+	g1 = [0]*len1
+	g2 = [0]*len2
+	g3 = [0]*len3
+	g4 = [0]*len4
+
+	for i in range(1, len1):
+		g1[i] = (1 - cdf1[i])/(1 - cdf1[i - 1])
+	for i in range(1, len2):
+		g2[i] = (1 - cdf2[i])/(1 - cdf2[i - 1])
+	for i in range(1, len3):
+		g3[i] = (1 - cdf3[i])/(1 - cdf3[i - 1])
+	for i in range(1, len4):
+		g4[i] = (1 - cdf4[i])/(1 - cdf4[i - 1])
+
+	print "g1[7]:", g1[7]
+	print "g2[7]:", g2[7]
+	print "g3[7]:", g3[7]
+	print "g4[7]:", g4[7]
+
+	plt.figure(2)
+#	plt.title("Heavy Hitters ARE")
+#	plt.xticks(range(5), ("1M", "5M", "10M", "15M", "20M"))
+	plt.ylim(0, 1.05)
+	plt.plot(range(len1), g1[0: len1], label = "CAIDA1", marker = "x", mfc="none")
+	plt.plot(range(len2), g2[0: len2], label = "CAIDA2", marker = "s", mfc="none")
+	plt.plot(range(len3), g3[0: len3], label = "ISP1", marker = "o", mfc="none")
+	plt.plot(range(len4), g4[0: len4], label = "ISP2", marker = "1", mfc="none")
+#	plt.plot(range(5), are_hw, label = "Hardware", marker = "o")
+#	plt.legend(bbox_to_anchor=(0.0, 1.02, 1.0, 0.102), loc = 3, ncol = 2, mode = "expand", borderaxespad = 0.0)
+	plt.legend(loc = 4)
+	plt.xlabel("Flow Size/pkts")
+	plt.ylabel("G(x)")
+	plt.savefig("probability.pdf", bbox_inches = "tight")
+	plt.savefig("probability.png", bbox_inches = "tight")
