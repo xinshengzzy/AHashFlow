@@ -54,7 +54,7 @@ if __name__ == "__main__":
 	plt.plot(gammas, are_60, label = "thresh=60", marker = "d", mfc="none")
 #	plt.plot(range(5), are_hw, label = "Hardware", marker = "o")
 #	plt.legend(bbox_to_anchor=(0.0, 1.02, 1.0, 0.102), loc = 3, ncol = 2, mode = "expand", borderaxespad = 0.0)
-	plt.legend(loc = 3)
+	plt.legend(loc = 2)
 	plt.xlabel(r"$\gamma$")
 	plt.ylabel("ARE")
 	plt.savefig("are.pdf", bbox_inches = "tight")
