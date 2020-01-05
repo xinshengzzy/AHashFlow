@@ -71,10 +71,10 @@ if __name__ == "__main__":
 	for i in range(1, len4):
 		g4[i] = (1 - cdf4[i])/(1 - cdf4[i - 1])
 
-	print "g1[7]:", g1[7]
-	print "g2[7]:", g2[7]
-	print "g3[7]:", g3[7]
-	print "g4[7]:", g4[7]
+	print "g1[5]:", g1[5]
+	print "g2[5]:", g2[5]
+	print "g3[5]:", g3[5]
+	print "g4[5]:", g4[5]
 
 	plt.figure(2)
 #	plt.title("Heavy Hitters ARE")
