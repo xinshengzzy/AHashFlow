@@ -22,6 +22,8 @@ def func(src, n_points, dst):
 			else:
 				sizes.append(flows[flowid]["size"])
 				flows[flowid] = {"latest": timestamp, "size": 1}
+	for key, value in flows.items():
+		sizes.append(value["size"])
 	sizes.sort(reverse = True)
 	length = len(sizes)
 	cdf = [0] + sizes
