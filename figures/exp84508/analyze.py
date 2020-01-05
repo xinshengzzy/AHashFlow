@@ -9,13 +9,13 @@ def func(src, dst):
 		pkts = json.load(f)
 	periods = []
 	flows = dict()
-	start = -1
+	begin = -1
 	end = 0
 	for p in pkts:
 		flowid = "\t".join([p["srcip"], p["dstip"], p["proto"], p["srcport"], p["dstport"]])
 		timestamp = float(p["timestamp"])
-		if -1 == start:
-			start = timestamp
+		if -1 == begin:
+			begin = timestamp
 		if timestamp > end:
 			end = timestamp
 		if flowid not in flows:
@@ -32,7 +32,7 @@ def func(src, dst):
 		periods.append([value["begin"], value["end"]])
 	length = int(math.floor(end - begin + 0.5) + 1)
 	n_flows = [0]*length
-	for item in periods:`
+	for item in periods:
 		pt1 = int(math.floor(item[0] - begin + 0.5))
 		pt2 = int(math.floor(item[1] - begin + 0.5))
 		for i in range(pt1, pt2 + 1):
@@ -45,4 +45,4 @@ if "__main__" == __name__:
 	assert(3 == len(sys.argv))
 	src = sys.argv[1]
 	dst = sys.argv[2]
-	func(src, n_points, dst)
+	func(src, dst)
