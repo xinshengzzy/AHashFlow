@@ -7,46 +7,42 @@ T = 10.0
 def func(src, dst):
 	with open(src, "r") as f:
 		pkts = json.load(f)
-	sizes = []
+	periods = []
 	flows = dict()
 	start = -1
+	end = 0
 	for p in pkts:
 		flowid = "\t".join([p["srcip"], p["dstip"], p["proto"], p["srcport"], p["dstport"]])
 		timestamp = float(p["timestamp"])
 		if -1 == start:
 			start = timestamp
+		if timestamp > end:
+			end = timestamp
 		if flowid not in flows:
-			flows[flowid] = {"latest": timestamp, "size": 1}
+			flows[flowid] = {"begin": timestamp, "end": timestamp, "size": 1}
 		else:
-			interval = timestamp - flows[flowid]["latest"]
+			interval = timestamp - flows[flowid]["end"]
 			if interval <= T:
-				flows[flowid]["latest"] = timestamp
+				flows[flowid]["end"] = timestamp
 				flows[flowid]["size"] = flows[flowid]["size"] + 1
 			else:
-				sizes.append(flows[flowid]["size"])
-				flows[flowid] = {"latest": timestamp, "size": 1}
-	sizes.sort(reverse = True)
-	length = len(sizes)
-	cdf = [0] + sizes
-	for i in range(1, length + 1):
-	   cdf[i] = cdf[i] + cdf[i - 1]
-	total = float(cdf[length])
-	for i in range(len(cdf)):
-		cdf[i] = cdf[i]/total
-
-	leap = 1.0/n_points
-	index = []
-	value = []
-	for i in range(n_points + 1):
-		index.append(i*leap)
-		value.append(cdf[int(i*leap*length)])
+				periods.append([flows[flowid]["begin"], flows[flowid]["end"]])
+				flows[flowid] = {"begin": timestamp, "end": timestamp, "size": 1}
+	for key, value in flows.items():
+		periods.append([value["begin"], value["end"]])
+	length = int(math.floor(end - begin + 0.5) + 1)
+	n_flows = [0]*length
+	for item in periods:`
+		pt1 = int(math.floor(item[0] - begin + 0.5))
+		pt2 = int(math.floor(item[1] - begin + 0.5))
+		for i in range(pt1, pt2 + 1):
+			n_flows[i] = n_flows[i] + 1
 	with open(dst, "w") as f:
-		json.dump([index, value], f)
+		json.dump(n_flows, f)
 
 
 if "__main__" == __name__:
-	assert(4 == len(sys.argv))
+	assert(3 == len(sys.argv))
 	src = sys.argv[1]
-	n_points = int(sys.argv[2])
-	dst = sys.argv[3]
+	dst = sys.argv[2]
 	func(src, n_points, dst)
