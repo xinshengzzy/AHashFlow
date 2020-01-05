@@ -4,7 +4,7 @@ import math
 
 T = 10.0
 
-def func(src, dst):
+def func(src, n_points, dst):
 	with open(src, "r") as f:
 		pkts = json.load(f)
 	sizes = []
@@ -31,7 +31,6 @@ def func(src, dst):
 	for i in range(len(cdf)):
 		cdf[i] = cdf[i]/total
 
-	n_points = 20
 	leap = 1.0/n_points
 	index = []
 	value = []
@@ -43,7 +42,8 @@ def func(src, dst):
 
 
 if "__main__" == __name__:
-	assert(3 == len(sys.argv))
+	assert(4 == len(sys.argv))
 	src = sys.argv[1]
-	dst = sys.argv[2]
-	func(src, dst)
+	n_points = int(sys.argv[2])
+	dst = sys.argv[3]
+	func(src, n_points, dst)
