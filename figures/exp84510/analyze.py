@@ -5,7 +5,7 @@ from my_constants import *
 import simulators.AHashFlow as AHashFlow
 import simulators.FlowClassifier as FlowClassifier
 import simulators.Perfect as Perfect
-from flow_tools import *
+from network.flow_tools import *
 
 n_pkts = -1
 

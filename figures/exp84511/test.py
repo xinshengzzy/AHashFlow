@@ -4,34 +4,24 @@ import math
 from my_constants import *
 import simulators.AHashFlow as AHashFlow
 import simulators.FlowClassifier as FlowClassifier
-from network.flow_tools import *
+from flow_tools import *
 
-n_pkts = -1
+n_pkts = 1000
 
 def func(src, gamma, flows, n_pkts):
 	AHashFlow.set_gamma(gamma)
 	ahf = AHashFlow.AHashFlow(src, TYPE_JSON, n_pkts)
 	results = dict()
-	results["n_promotions"] = len(ahf.records)
-	results["n_exports"] = len(ahf.ids)
-	results["are"] = dict()
-	results["f1score"] = dict()
 	for thresh in [10, 20, 30, 40, 50, 60]:
 		are = hh_are_calc(flows, ahf.flows, thresh)
-		f1score = hh_f1score_calc(flows, ahf.flows, thresh)
-		results["are"][thresh] = are
-		results["f1score"][thresh] = f1score
-#		results[thresh] = {"are": are, "f1score": f1score}
-		print "thresh:", thresh, ", are:", are, ", f1score:", f1score
+		f1score = hh_f1score_calc(flow, ahf.flows, thresh)
+		results[thresh] = {"are": are, "f1score": f1score}
 	return results
 
 def calc(src, dst):
 	cls = FlowClassifier.FlowClassifier(src, TYPE_JSON, n_pkts)
-	print "real n_flows:", len(cls.flows)
 	results = dict()
-	for gamma in range(0, 11):
-#	for gamma in range(2, 4):
-		print "gamma:", gamma
+	for gamma in range(2, 11):
 		temp = func(src, gamma, cls.flows, n_pkts)
 		results[gamma] = temp
 	with open(dst, "w") as f:
@@ -39,7 +29,8 @@ def calc(src, dst):
 	
 
 if "__main__" == __name__:
-	assert(3 == len(sys.argv))
-	src = sys.argv[1]
-	dst = sys.argv[2]
-	calc(src, dst)
+	src = "/root/traces/CAIDA.equinix-nyc.dirA.20180315-130000.UTC.anon.json"
+	print AHashFlow.M_TABLE_1_SIZE
+	exit()
+	ahf = AHashFlow.AHashFlow(src, TYPE_JSON, n_pkts)
+
