@@ -46,6 +46,8 @@ push:
 	git push
 pull:
 	git pull
+update:
+	$(MAKE) -C ../ update
 register:
 	python ./$(P4_NAME)/ReadRegister.py
 dump:
