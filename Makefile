@@ -8,13 +8,11 @@ build:
 	make install
 run:
 	$(SDE)/run_switchd.sh -p $(APP)
-push:
-	git add -A
-	git commit -m "Automatic uploading. No comments!"
-	git push
-	$(MAKE) pull
-pull:
+update:
 	git pull
+	git add -A 
+	git commit -m "Automatic uploading. No comments!" || true
+	git push
 configure:
 	git config credential.helper store
 	git config --global user.email xinshengzzy@gmail.com

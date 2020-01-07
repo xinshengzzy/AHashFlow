@@ -1,8 +1,4 @@
-push:
-	git add -A
-	git commit -m "Automatic uploading. No comments!"
-	git push
-pull:
-	git pull
+update:
+	$(MAKE) -C ../../ update
 plot:
 	python plot.py
