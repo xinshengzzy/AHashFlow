@@ -24,7 +24,7 @@ header_type export_promotion_meta_t {
 		promotion_flag: 1;
 		export_flag: 1;
 		resubmit_flag: 1;
-		temp: 32;
+		temp: 16;
 	}
 }
 metadata export_promotion_meta_t export_promotion_meta;
@@ -102,7 +102,7 @@ table update_cntr2_t {
 
 action set_egr(egress_spec) {
 	modify_field(ig_intr_md_for_tm.ucast_egress_port, egress_spec);
-	modify_field_rng_uniform(export_promotion_meta.temp, 0, 5);
+	modify_field_rng_uniform(export_promotion_meta.temp, 0, 65535);
 }
 
 action nop() {}
