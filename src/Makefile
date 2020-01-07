@@ -40,12 +40,6 @@ run:
 	$(SDE)/run_switchd.sh -p $(P4_NAME) &
 configure:
 	bfshell -f $(SRC)/$(P4_NAME)/commands.txt
-push:
-	git add -A
-	git commit -m "Automatic uploading. No comments!"
-	git push
-pull:
-	git pull
 update:
 	$(MAKE) -C ../ update
 register:

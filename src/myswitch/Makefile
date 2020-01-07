@@ -1,4 +1,4 @@
 build:
 	$(MAKE) -C ../ build
 update:
-	$(MAKE) -C ../ update
+	$(MAKE) -C ../../ update
