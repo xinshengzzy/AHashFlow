@@ -101,3 +101,8 @@ if __name__ == "__main__":
 	plt.ylabel(r"Num. of Promotions($\times 10^{5}$)")
 	plt.savefig("npromotions.pdf", bbox_inches = "tight")
 	plt.savefig("npromotions.png", bbox_inches = "tight")
+
+	print "are:"
+	print are_10[3], are_20[3], are_30[3], are_40[3], are_50[3], are_60[3]
+	print "f1score:"
+	print f1score_10[3], f1score_20[3], f1score_30[3], f1score_40[3], f1score_50[3], f1score_60[3]
