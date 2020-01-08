@@ -10,6 +10,7 @@ matplotlib.rc('font', **font)
 src1 = "./caida.13000.dhf.json"
 src2 = "./caida.13000.ahf.n.2.json"
 src3 = "./caida.13000.ahf.n.4.json"
+src4 = "./caida.13000.ahf.n.8.json"
 
 def func(res, gamma):
 	thresh = [str(item) for item in range(10, 101, 10)]
@@ -30,8 +31,12 @@ if __name__ == "__main__":
 		res2 = json.load(f)
 	with open(src3, "r") as f:
 		res3 = json.load(f)
+	with open(src4, "r") as f:
+		res4 = json.load(f)
 
 	idx = 9
+	thresh = range(10, 101, 10)
+	print "thresh=", thresh[idx]
 	print "DHashFlow:"
 	for gamma in range(1, 11):
 		are, f1score, n = func(res1, str(gamma))
@@ -47,6 +52,10 @@ if __name__ == "__main__":
 		are, f1score, n = func(res3, str(gamma))
 		print "gamma:", gamma, ", n_promotions:", n, ", are:", are[idx], ", f1score:", f1score[idx]
 
+	print "AHashFlow (N=8):"
+	for gamma in range(8, 11):
+		are, f1score, n = func(res4, str(gamma))
+		print "gamma:", gamma, ", n_promotions:", n, ", are:", are[idx], ", f1score:", f1score[idx]
 	are0, f1score0, n0 = func(res1, "3")
 	are1, f1score1, n1 = func(res1, "4")
 	are2, f1score2, n2 = func(res1, "5")
