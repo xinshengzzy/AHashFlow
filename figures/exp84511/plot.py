@@ -34,7 +34,7 @@ if __name__ == "__main__":
 	with open(src4, "r") as f:
 		res4 = json.load(f)
 
-	idx = 0
+	idx = 9
 	thresh = range(10, 101, 10)
 	print "thresh=", thresh[idx]
 	print "DHashFlow:"
