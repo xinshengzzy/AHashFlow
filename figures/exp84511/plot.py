@@ -31,7 +31,7 @@ if __name__ == "__main__":
 	with open(src3, "r") as f:
 		res3 = json.load(f)
 
-	idx = 0
+	idx = 9
 	print "DHashFlow:"
 	for gamma in range(1, 11):
 		are, f1score, n = func(res1, str(gamma))
