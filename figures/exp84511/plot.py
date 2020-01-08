@@ -31,15 +31,21 @@ if __name__ == "__main__":
 	with open(src3, "r") as f:
 		res3 = json.load(f)
 
+	idx = 0
 	print "DHashFlow:"
 	for gamma in range(1, 11):
 		are, f1score, n = func(res1, str(gamma))
-		print "gamma:", gamma, ", n_promotions:", n
+		print "gamma:", gamma, ", n_promotions:", n, ", are:", are[idx], ", f1score:", f1score[idx]
+
+	print "AHashFlow (N=2):"
+	for gamma in range(2, 11):
+		are, f1score, n = func(res2, str(gamma))
+		print "gamma:", gamma, ", n_promotions:", n, ", are:", are[idx], ", f1score:", f1score[idx]
 
 	print "AHashFlow (N=4):"
 	for gamma in range(4, 11):
 		are, f1score, n = func(res3, str(gamma))
-		print "gamma:", gamma, ", n_promotions:", n
+		print "gamma:", gamma, ", n_promotions:", n, ", are:", are[idx], ", f1score:", f1score[idx]
 
 	are0, f1score0, n0 = func(res1, "3")
 	are1, f1score1, n1 = func(res1, "4")
@@ -47,6 +53,17 @@ if __name__ == "__main__":
 	are3, f1score3, n3 = func(res3, "5")
 	are4, f1score4, n4 = func(res3, "6")
 	are5, f1score5, n5 = func(res3, "7")
+
+#	print "are0:", are0, ", f1score0:", f1score0
+#	print "are3:", are3, ", f1score3:", f1score3
+	are_dhf = are2
+	f1score_dhf = f1score2
+	are_ahf = are5
+	f1score_ahf = f1score5
+	for i in range(10):
+		print "thresh:", (i+1)*10, ", are:", are_dhf[i] - are_ahf[i], ", f1score:", f1score_ahf[i] - f1score_dhf[i]
+	print "are:", are_dhf[9], are_ahf[9]
+	print "f1score:", f1score_dhf[9], f1score_ahf[9]
 
 	thresh = range(10, 101, 10)
 	plt.figure(1)
@@ -94,10 +111,10 @@ if __name__ == "__main__":
 		n_promotions[i] = n_promotions[i]/100000.0
 	ax = fig.add_axes([0,0,1,1])
 	ax.set_xlim([0,7])
-	ax.set_ylim([0,10])
+	ax.set_ylim([0,8])
 	plt.bar(np.arange(1, 7) - 0.25, n_promotions, color = 'r', width = 0.5)
 	plt.xlabel("Settings")
-	plt.ylabel(r"Num. of Promotions($\times 10^{5}$)")
+	plt.ylabel(r"Num. of Recirculationss($\times 10^{5}$)")
 	plt.xticks(range(1, 7), (r"DHF.$\gamma$.3", r"DHF.$\gamma$.4", r"DHF.$\gamma$.5", r"AHF.$\gamma$.5", r"AHF.$\gamma$.6", r"AHF.$\gamma$.7"))
 	rects = ax.patches
 	labels = [str(item) for item in n_promotions]
