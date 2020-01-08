@@ -50,7 +50,7 @@ def calc():
 		json.dump(results, f)
 
 	'''生成AHashFlow(N=2)的结果'''
-	print "AHashFlow"
+	print "AHashFlow(N=2)"
 	AHashFlow.set_n(2)
 	results = dict()
 	for gamma in range(2, 21):
@@ -63,7 +63,7 @@ def calc():
 		json.dump(results, f)
 
 	'''生成AHashFlow(N=4)的结果'''
-	print "AHashFlow"
+	print "AHashFlow(N=4)"
 	AHashFlow.set_n(4)
 	results = dict()
 	for gamma in range(4, 21):
@@ -76,7 +76,7 @@ def calc():
 		json.dump(results, f)
 
 	'''生成AHashFlow(N=8)的结果'''
-	print "AHashFlow"
+	print "AHashFlow(N=8)"
 	AHashFlow.set_n(8)
 	results = dict()
 	for gamma in range(8, 21):
@@ -89,7 +89,7 @@ def calc():
 		json.dump(results, f)
 
 	'''生成AHashFlow(N=16)的结果'''
-	print "AHashFlow"
+	print "AHashFlow(N=16)"
 	AHashFlow.set_n(16)
 	results = dict()
 	for gamma in range(16, 21):

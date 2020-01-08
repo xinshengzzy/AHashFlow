@@ -1,8 +1,4 @@
-import simulators.AHashFlow as AHashFlow
-from my_constants import *
-
-for n in [2, 4]:
-	for gamma in range(10):
-		AHashFlow.set_n(n)
-		AHashFlow.set_gamma(gamma)
-		ahf = AHashFlow.AHashFlow("./test.txt", TYPE_JSON, -1)
+a = 5
+if a >= 4 and a <= 10:
+	print "hello"
+if (hi_bound => 0 and cnt <= hi_bound) or hi_bound < 0:
