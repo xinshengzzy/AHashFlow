@@ -38,29 +38,29 @@ def calc():
 #	'''对数据包进行流归类'''
 	cls = FlowClassifier.FlowClassifier(src, TYPE_JSON, n_pkts)
 	'''生成DHashFlow的结果'''
-#	print "DHashFlow"
-#	results = dict()
-#	for gamma in range(1, 21):
-#		print "gamma:", gamma
-#		DHashFlow.set_gamma(gamma)
-#		dhf = DHashFlow.DHashFlow(src, TYPE_JSON, n_pkts)
-#		temp = func(cls, dhf)
-#		results[str(gamma)] = temp
-#	with open(dst1, "w") as f:
-#		json.dump(results, f)
-#
-#	'''生成AHashFlow(N=2)的结果'''
-#	print "AHashFlow(N=2)"
-#	AHashFlow.set_n(2)
-#	results = dict()
-#	for gamma in range(2, 21):
-#		print "gamma:", gamma
-#		AHashFlow.set_gamma(gamma)
-#		ahf = AHashFlow.AHashFlow(src, TYPE_JSON, n_pkts)
-#		temp = func(cls, ahf)
-#		results[str(gamma)] = temp
-#	with open(dst2, "w") as f:
-#		json.dump(results, f)
+	print "DHashFlow"
+	results = dict()
+	for gamma in range(1, 21):
+		print "gamma:", gamma
+		DHashFlow.set_gamma(gamma)
+		dhf = DHashFlow.DHashFlow(src, TYPE_JSON, n_pkts)
+		temp = func(cls, dhf)
+		results[str(gamma)] = temp
+	with open(dst1, "w") as f:
+		json.dump(results, f)
+
+	'''生成AHashFlow(N=2)的结果'''
+	print "AHashFlow(N=2)"
+	AHashFlow.set_n(2)
+	results = dict()
+	for gamma in range(2, 21):
+		print "gamma:", gamma
+		AHashFlow.set_gamma(gamma)
+		ahf = AHashFlow.AHashFlow(src, TYPE_JSON, n_pkts)
+		temp = func(cls, ahf)
+		results[str(gamma)] = temp
+	with open(dst2, "w") as f:
+		json.dump(results, f)
 
 	'''生成AHashFlow(N=4)的结果'''
 	print "AHashFlow(N=4)"
