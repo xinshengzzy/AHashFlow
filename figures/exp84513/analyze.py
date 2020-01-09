@@ -23,9 +23,18 @@ def func(cls, hf, dst):
 	results["n_promotions"] = len(hf.records)
 	results["n_exports"] = len(hf.ids)
 	results["hh_ae"] = dict()
+	results["banded_ae"] = dict()
 	for thresh in range(10, 101, 10):
 		ae = hh_ae_calc(cls.flows, hf.flows, thresh)
 		results["hh_ae"][thresh] = ae
+	for lo_bound in range(10, 101, 10):
+		if 100 == lo_bound:
+			hi_bound = -1
+		else:
+			hi_bound = lo_bound + 10
+		key = str(lo_bound) + str(hi_bound)
+		ae = banded_ae_calc(cls.flows, hf.flows, lo_bound, hi_bound)
+		results["banded_ae"][key] = ae
 	with open(dst, "w") as f:
 		json.dump(results, f)
 		
