@@ -7,7 +7,7 @@ import numpy as np
 font = {'size':18}
 matplotlib.rc('font', **font)
 
-src1 = "./res.caida.13000.json"
+src = "./res.caida.13000.json"
 
 if __name__ == "__main__":
 	with open(src, "r") as f:
@@ -19,6 +19,9 @@ if __name__ == "__main__":
 	for key in params:
 		n_promotions.append(res[key]["n_promotions"])
 		aes.append(res[key]["ae"])
+	for i in range(5):
+		print "param:", params[i], ", n_promotions:", n_promotions[i], ", ae:", aes[i]
+	exit()
 	ax = fig.add_axes([0,0,1,1])
 #	ax.set_xlim([0,7])
 #	ax.set_ylim([0,8])
