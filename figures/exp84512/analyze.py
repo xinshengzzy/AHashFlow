@@ -23,8 +23,10 @@ def func(param, flows):
 	results["n_exports"] = len(ahf.ids)
 	ae = banded_ae_calc(ahf.flows, flows, 0, -1)
 	results["ae"] = ae
-	f1score = banded_f1score_calc(ahf.flows, flows, param + 1, -1)
-	results["f1score"] = f1score
+	f1score1 = banded_f1score_calc(ahf.flows, flows, param + 1, -1)
+	f1score2 = banded_f1score_calc(ahf.flows, flows, 100, -1)
+	results["f1score1"] = f1score1
+	results["f1score2"] = f1score2
 	return results
 
 def calc():
