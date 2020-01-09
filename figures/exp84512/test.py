@@ -2,6 +2,7 @@ import json
 
 src10 = "./caida.13000.ahf.n.2.json"
 src11 = "./caida.13000.ahf.n.2.json.1"
+dst1 = "./caida.13000.ahf.n.2.json.2"
 
 def func(src1, src2, dst):
 	with open(src1, "r") as f:
@@ -18,4 +19,4 @@ def func(src1, src2, dst):
 	
 
 if "__main__" == __name__:
-	func(src10, src11)
+	func(src10, src11, dst1)
