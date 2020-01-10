@@ -16,11 +16,15 @@ if __name__ == "__main__":
 	params = ["2", "4", "8", "16", "32"]
 	n_promotions = []
 	aes = []
+	f1score1 = []
+	f1score2 = []
 	for key in params:
 		n_promotions.append(res[key]["n_promotions"])
 		aes.append(res[key]["ae"])
+		f1score1.append(res[key]["f1score1"])
+		f1score2.append(res[key]["f1score2"])
 	for i in range(5):
-		print "param:", params[i], ", n_promotions:", n_promotions[i], ", ae:", aes[i]
+		print "param:", params[i], ", n_promotions:", n_promotions[i], ", ae:", aes[i], "f1score1:", f1score1[i], ", f1score2:", f1score2[i]
 	exit()
 	ax = fig.add_axes([0,0,1,1])
 #	ax.set_xlim([0,7])
