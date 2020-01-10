@@ -38,7 +38,7 @@ def calc():
 	'''
 	gamma = 2
 	for n in range(gamma, 11):
-		temp = func(param, cls.flows)
+		temp = func(n, gamma, cls.flows)
 		print "n:", n, ", n_promotions:", temp["n_promotions"]
 	exit()
 	for param in [2, 4, 8, 16, 32]:
