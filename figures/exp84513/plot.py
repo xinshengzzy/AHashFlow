@@ -25,9 +25,17 @@ if __name__ == "__main__":
 	with open(src, "r") as f:
 		res = json.load(f)
 	Ns = ["8", "16", "32", "64", "128", "256"]
-	AEs = []
+	AE1 = []
+	AE2 = []
 	for key in Ns:
-		AEs.append(res[key]["ae"])
+		AE1.append(res[key]["ae1"])
+		AE2.append(res[key]["ae2"])
+
+	print "AE1:"
+	print AE1
+	print "AE2:"
+	print AE2
+	exit()
 
 	fig = plt.figure(1)
 	ax = fig.add_axes([0,0,1,1])
