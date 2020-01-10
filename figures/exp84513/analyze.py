@@ -21,7 +21,7 @@ def func(n, gamma, flows):
 	results = dict()
 	results["n_promotions"] = len(ahf.records)
 	results["n_exports"] = len(ahf.ids)
-	ae1 = banded_ae_calc(flows, ahf.flows, gamma + 1, n - 1)
+	ae1 = banded_ae_calc(flows, ahf.flows, gamma + 1, -1)
 	ae2 = banded_ae_calc(flows, ahf.flows, gamma + 1, 255)
 	results["ae1"] = ae1
 	results["ae2"] = ae2
