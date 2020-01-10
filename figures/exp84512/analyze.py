@@ -34,13 +34,13 @@ def calc():
 	cls = FlowClassifier.FlowClassifier(src, TYPE_JSON, n_pkts)
 	res = dict()
 	'''
-	n = 2
+	n = 2, gamma = 6, n_promotions = 208332
 	n = 4
 	n = 8
 	n = 16
 	n = 32, gamma = 32, n_promotions = 185980 
 	'''
-	n = 2
+	n = 4
 	for gamma in range(n, 21):
 		temp = func(n, gamma, cls.flows)
 		print "gamma:", gamma, ", n_promotions:", temp["n_promotions"]
