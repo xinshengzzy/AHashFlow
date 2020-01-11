@@ -41,7 +41,7 @@ def calc(n, gamma, flows):
 
 if "__main__" == __name__:
 	cls = FlowClassifier(src, TYPE_JSON, n_pkts)
-	for n in [8, 16, 32]:
-		for gamma in range(5, 16):
+	for n in [1, 2, 4]:
+		for gamma in range(11, 16):
 			print "gamma:", gamma, ", n:", n
 			calc(n, gamma, cls.flows)
