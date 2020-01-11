@@ -35,7 +35,7 @@ def calc():
 	res = dict()
 	'''
 	n = 2, gamma = 6, n_promotions = 208332
-	n = 4
+	n = 4, gamma = 8, n_promotions = 181305
 	n = 8
 	n = 16
 	n = 32, gamma = 32, n_promotions = 185980 
