@@ -16,7 +16,7 @@ def func(alg, n):
 	f1score = []
 	n_promotions = []
 	for gamma in range(4, 11):
-		filename = ".".join([alg, "n", str(n), "gamma", "caida.130000.json"])
+		filename = ".".join([alg, "n", str(n), "gamma", str(gamma), "caida.130000.json"])
 		with open(filename, "r") as f:
 			res = json.load(f)
 			n_promotions.append(res["n_promotions"])
@@ -28,41 +28,24 @@ def func(alg, n):
 
 if __name__ == "__main__":
 	are_ahf_n1, f1score_ahf_n1 = func("ahf", 1)
-	print "are:", are_ahf_n1
-	print "f1score:", f1score_ahf_n1
-	exit()
+	are_ahf_n2, f1score_ahf_n2 = func("ahf", 2)
+#	are_ahf_n4, f1score_ahf_n4 = func("ahf", 4)
+	
+	are_ehf_n1, f1score_ehf_n1 = func("ehf", 1)
+	are_ehf_n2, f1score_ehf_n2 = func("ehf", 2)
+#	are_ehf_n4, f1score_ehf_n4 = func("ehf", 4)
 
-	with open(src, "r") as f:
-		res = json.load(f)
-	Ns = ["8", "16", "32", "64", "128", "256"]
-	n_promotions = []
-	AE1 = []
-	AE2 = []
-	for key in Ns:
-		n_promotions.append(res[key]["n_promotions"])
-		AE1.append(res[key]["ae1"])
-		AE2.append(res[key]["ae2"])
-		print "n:", key, ", npromotions:", res[key]["n_promotions"], ", ae1:", res[key]["ae1"], ", ae2:", res[key]["ae2"]
-
-	fig = plt.figure(1)
-	ax = fig.add_axes([0,0,1,1])
-	ax.set_xlim([0,7])
-#	ax.set_ylim([0,8])
-	plt.bar(np.arange(1, 7) - 0.25, AE2, color = 'r', width = 0.5)
-	plt.xlabel("N")
-	plt.ylabel("AE")
-	plt.xticks(range(1, 7), Ns)
-	rects = ax.patches
-	labels = [str(int(item*100)/100.0) for item in AE2]
-	algs = ["DHF", "DHF", "DHF", "AHF", "AHF", "AHF"]
-	for rect, label in zip(rects, labels):
-		height = rect.get_height()
-		ax.text(rect.get_x() + rect.get_width() / 2, height + 0.1, label,
-				ha='center', va='bottom')
-#	for rect, label in zip(rects, algs):
-#		height = rect.get_height()
-#		ax.text(rect.get_x() + rect.get_width() / 2, height + 0.5, label,
-#				ha='center', va='bottom')
-	plt.savefig("AE.pdf", bbox_inches = "tight")
-	plt.savefig("AE.png", bbox_inches = "tight")
-
+	gamma = range(4, 11)
+	plt.figure(1)
+	plt.ylim(0, 1.0)
+	plt.plot(gamma, are_ahf_n1, label="AHF(N=1)", marker = "x", mfc="none")
+	plt.plot(gamma, are_ahf_n2, label="AHF(N=2)", marker = "s", mfc="none")
+#	plt.plot(gamma, are_ahf_n3, label="AHF(N=3)", marker = "o", mfc="none")
+	plt.plot(gamma, are_ehf_n1, label="EHF(N=1)", marker = "1", mfc="none")
+	plt.plot(gamma, are_ehf_n2, label="EHF(N=2)", marker = "p", mfc="none")
+#	plt.plot(gamma, are_ehf_n3, label="EHF(N=3)", marker = "d", mfc="none")
+	plt.legend(loc = 1)
+	plt.xlabel(r"$\gamma$")
+	plt.ylabel("ARE")
+	plt.savefig("are.pdf", bbox_inches="tight")
+	plt.savefig("are.png", bbox_inches="tight")
