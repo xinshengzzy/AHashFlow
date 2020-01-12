@@ -12,12 +12,12 @@ def func(src):
 		print("thresh:%d, ae:%.3f, are:%.3f, f1score:%.3f" % (thresh, ae, are, f1score))
 
 n = 2
-gamma = 4
+gamma = 5
 print("AHashFlow: n=%d, gamma=%d" % (n, gamma))
 filename = "./ahf.n.%d.gamma.%d.caida.130000.json" % (n, gamma)
 func(filename)
 
-gamma = 9
+gamma = 14
 print("EHashFlow: gamma=%d" % gamma)
 filename = "./ehf.n.1.gamma.%d.caida.130000.json" % gamma
 func(filename)

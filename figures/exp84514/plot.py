@@ -35,14 +35,14 @@ if __name__ == "__main__":
 	are_ehf_n2, f1score_ehf_n2, npromotions_ehf_n2 = func("ehf", 2)
 	are_ehf_n4, f1score_ehf_n4, npromotions_ehf_n4 = func("ehf", 4)
 
-	print "npromotions_ahf_n1:"
-	print npromotions_ahf_n1
-	print "npromotions_ahf_n2:"
-	print npromotions_ahf_n2
-	print "npromotions_ahf_n4:"
-	print npromotions_ahf_n4
-	print "npromotions_ehf_n1:"
-	print npromotions_ehf_n1
+	print("npromotions_ahf_n1:")
+	print(npromotions_ahf_n1)
+	print("npromotions_ahf_n2:")
+	print(npromotions_ahf_n2)
+	print("npromotions_ahf_n4:")
+	print(npromotions_ahf_n4)
+	print("npromotions_ehf_n1:")
+	print(npromotions_ehf_n1)
 
 	gamma = range(5, 11)
 	plt.figure(1)

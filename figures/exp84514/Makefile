@@ -1,7 +1,7 @@
 analyze:
-	python analyze.py
+	python3 analyze.py
 plot:
-	 python plot.py
+	 python3 plot.py
 update:
 	 $(MAKE) -C ../../ update
 test:
