@@ -5,7 +5,7 @@ plot:
 update:
 	 $(MAKE) -C ../../ update
 test:
-	 python test.py
+	 python3 test.py
 clean:
 	rm *.json || true
 	rm *.pdf || true
