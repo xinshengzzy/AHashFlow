@@ -7,40 +7,86 @@ import numpy as np
 font = {'size':18}
 matplotlib.rc('font', **font)
 
-src = "./res.caida.13000.json"
+are_30 = []
+are_40 = []
+are_50 = []
+are_60 = []
+are_70 = []
+are_80 = []
+f1score_30 = []
+f1score_40 = []
+f1score_50 = []
+f1score_60 = []
+f1score_70 = []
+f1score_80 = []
+n_promotions = []
+
+def 提取(文件名):
+	with open(文件名, "r") as f:
+		数据 = json.load(f)
+	n_promotions.append(数据["n_promotions"])
+	are_30.append(数据["are"]["30"])
+	are_40.append(数据["are"]["40"])
+	are_50.append(数据["are"]["50"])
+	are_60.append(数据["are"]["60"])
+	are_70.append(数据["are"]["70"])
+	are_80.append(数据["are"]["80"])
+	f1score_30.append(数据["f1score"]["30"])
+	f1score_40.append(数据["f1score"]["40"])
+	f1score_50.append(数据["f1score"]["50"])
+	f1score_60.append(数据["f1score"]["60"])
+	f1score_70.append(数据["f1score"]["70"])
+	f1score_80.append(数据["f1score"]["80"])
 
 if __name__ == "__main__":
-	with open(src, "r") as f:
-		res = json.load(f)
-	Ns = ["8", "16", "32", "64", "128", "256"]
-	n_promotions = []
-	AE1 = []
-	AE2 = []
-	for key in Ns:
-		n_promotions.append(res[key]["n_promotions"])
-		AE1.append(res[key]["ae1"])
-		AE2.append(res[key]["ae2"])
-		print "n:", key, ", npromotions:", res[key]["n_promotions"], ", ae1:", res[key]["ae1"], ", ae2:", res[key]["ae2"]
+	for gamma in range(4, 21):
+		文件名= "ehf.n.1.gamma.%d.caida.130000.json" % gamma
+		提取(文件名)
 
-	fig = plt.figure(1)
+	print("are_30:")
+	print(are_30)
+
+	gamma = range(4, 21)
+	plt.figure(1)
+	plt.ylim(0, 0.6)
+	plt.plot(gamma, are_30, label="thresh=30", marker = "x", mfc="none")
+	plt.plot(gamma, are_40, label="thresh=40", marker = "s", mfc="none")
+	plt.plot(gamma, are_50, label="thresh=50", marker = "o", mfc="none")
+	plt.plot(gamma, are_60, label="thresh=60", marker = "1", mfc="none")
+	plt.plot(gamma, are_70, label="thresh=70", marker = "p", mfc="none")
+	plt.plot(gamma, are_80, label="thresh=80", marker = "d", mfc="none")
+	plt.legend(loc = 1, ncol=2)
+	plt.xlabel(r"$\gamma$")
+	plt.ylabel("ARE")
+	plt.savefig("are.pdf", bbox_inches="tight")
+	plt.savefig("are.png", bbox_inches="tight")
+
+	plt.figure(2)
+	plt.ylim(0.5, 1.0)
+	plt.plot(gamma, f1score_30, label="thresh=30", marker = "x", mfc="none")
+	plt.plot(gamma, f1score_40, label="thresh=40", marker = "s", mfc="none")
+	plt.plot(gamma, f1score_50, label="thresh=50", marker = "o", mfc="none")
+	plt.plot(gamma, f1score_60, label="thresh=60", marker = "1", mfc="none")
+	plt.plot(gamma, f1score_70, label="thresh=70", marker = "p", mfc="none")
+	plt.plot(gamma, f1score_80, label="thresh=80", marker = "d", mfc="none")
+	plt.legend(loc = 4, ncol=2)
+	plt.xlabel(r"$\gamma$")
+	plt.ylabel("F1 Score")
+	plt.savefig("f1score.pdf", bbox_inches="tight")
+	plt.savefig("f1score.png", bbox_inches="tight")
+
+	n_promotions = [item/100000.0 for item in n_promotions]
+	fig = plt.figure(3)
 	ax = fig.add_axes([0,0,1,1])
-	ax.set_xlim([0,7])
-#	ax.set_ylim([0,8])
-	plt.bar(np.arange(1, 7) - 0.25, AE2, color = 'r', width = 0.5)
-	plt.xlabel("N")
-	plt.ylabel("AE")
-	plt.xticks(range(1, 7), Ns)
+	ax.set_xlim([3,20.5])
+	plt.bar(np.arange(4, 21), n_promotions, color = 'r', width = 0.5)
+	plt.xlabel(r"$\gamma$")
+	plt.ylabel(r"Num. of Packets($\times 10^{5}$)")
+	plt.xticks(range(4, 21, 2), [str(item) for item in range(4, 21, 2)])
 	rects = ax.patches
-	labels = [str(int(item*100)/100.0) for item in AE2]
-	algs = ["DHF", "DHF", "DHF", "AHF", "AHF", "AHF"]
+	labels = ["%.2f" % item for item in n_promotions]
 	for rect, label in zip(rects, labels):
 		height = rect.get_height()
-		ax.text(rect.get_x() + rect.get_width() / 2, height + 0.1, label,
-				ha='center', va='bottom')
-#	for rect, label in zip(rects, algs):
-#		height = rect.get_height()
-#		ax.text(rect.get_x() + rect.get_width() / 2, height + 0.5, label,
-#				ha='center', va='bottom')
-	plt.savefig("AE.pdf", bbox_inches = "tight")
-	plt.savefig("AE.png", bbox_inches = "tight")
+	plt.savefig("npromotions.pdf", bbox_inches = "tight")
+	plt.savefig("npromotions.png", bbox_inches = "tight")
 
