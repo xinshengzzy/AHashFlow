@@ -40,18 +40,18 @@ def calc(n, gamma, flows):
 	with open(filename, "w") as f:
 		json.dump(res, f)
 
-	print "EHashFlow:"
-	EHashFlow.set_n(n)
-	EHashFlow.set_gamma(gamma)
-	ehf = EHashFlow.EHashFlow(src, TYPE_JSON, n_pkts)
-	res = func(ehf, flows)
-	filename = ".".join(["ehf", "n", str(n), "gamma", str(gamma), "caida.130000.json"])
-	with open(filename, "w") as f:
-		json.dump(res, f)
+#	print "EHashFlow:"
+#	EHashFlow.set_n(n)
+#	EHashFlow.set_gamma(gamma)
+#	ehf = EHashFlow.EHashFlow(src, TYPE_JSON, n_pkts)
+#	res = func(ehf, flows)
+#	filename = ".".join(["ehf", "n", str(n), "gamma", str(gamma), "caida.130000.json"])
+#	with open(filename, "w") as f:
+#		json.dump(res, f)
 
 if "__main__" == __name__:
 	cls = FlowClassifier(src, TYPE_JSON, n_pkts)
-	for n in [1, 2, 4]:
-		for gamma in range(4, 11):
+	for n in [1, 2, 4, 8, 16]:
+		for gamma in range(n, 21):
 			print "gamma:", gamma, ", n:", n
 			calc(n, gamma, cls.flows)
