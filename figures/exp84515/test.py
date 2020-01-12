@@ -22,3 +22,15 @@ gamma = 9
 print("EHashFlow: n=%d, gamma=%d" % (n, gamma))
 filename = "./ehf.n.%d.gamma.%d.caida.130000.json" % (n, gamma)
 func(filename)
+
+n = 2
+gamma = 7
+print("EHashFlow: n=%d, gamma=%d" % (n, gamma))
+filename = "./ehf.n.%d.gamma.%d.caida.130000.json" % (n, gamma)
+func(filename)
+
+n = 4
+gamma = 5
+print("EHashFlow: n=%d, gamma=%d" % (n, gamma))
+filename = "./ehf.n.%d.gamma.%d.caida.130000.json" % (n, gamma)
+func(filename)
