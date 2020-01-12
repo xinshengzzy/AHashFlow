@@ -1,11 +1,11 @@
 analyze:
-	python analyze.py
+	python3 analyze.py
 plot:
-	 python plot.py
+	 python3 plot.py
 update:
 	 $(MAKE) -C ../../ update
 test:
-	 python test.py
+	 python3 test.py
 clean:
 	rm *.json || true
 	rm *.pdf || true
