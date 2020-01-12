@@ -18,19 +18,19 @@ def func(src):
 #func(filename)
 
 n = 1
-gamma = 9
+gamma = 4
 print("EHashFlow: n=%d, gamma=%d" % (n, gamma))
 filename = "./ehf.n.%d.gamma.%d.caida.130000.json" % (n, gamma)
 func(filename)
 
-n = 2
-gamma = 7
+n = 1
+gamma = 6
 print("EHashFlow: n=%d, gamma=%d" % (n, gamma))
 filename = "./ehf.n.%d.gamma.%d.caida.130000.json" % (n, gamma)
 func(filename)
 
-n = 4
-gamma = 5
+n = 1
+gamma = 8
 print("EHashFlow: n=%d, gamma=%d" % (n, gamma))
 filename = "./ehf.n.%d.gamma.%d.caida.130000.json" % (n, gamma)
 func(filename)
