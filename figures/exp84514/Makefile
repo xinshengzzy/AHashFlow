@@ -1,5 +1,5 @@
-analyze:
-	python3 analyze.py
+main:
+	python3 main.py
 plot:
 	 python3 plot.py
 update:

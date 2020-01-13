@@ -10,7 +10,6 @@ import json
 
 
 src = "/root/traces/CAIDA.equinix-nyc.dirA.20180315-130000.UTC.anon.json"
-n_pkts = -1
 
 def func(hf, flows):
 	res = dict()
@@ -30,22 +29,20 @@ def func(hf, flows):
 		print("thresh:%d, ae:%.3f, are:%.3f, f1score:%.3f" % (thresh, ae, are, f1score))
 	return res
 
-def calc(n, gamma, flows):
+def calc(n, gamma, flows, n_pkts):
 	EHashFlow.set_n(n)
 	EHashFlow.set_gamma(gamma)
 	ehf = EHashFlow.EHashFlow(src, TYPE_JSON, n_pkts)
 	res = func(ehf, flows)
-	filename = ".".join(["ehf", "n", str(n), "gamma", str(gamma), "caida.130000.json"])
+	filename = ".".join(["ehf", "n", str(n), "gamma", str(gamma), "npkts", str(n_pkts), "caida.130000.json"])
 	with open(filename, "w") as f:
 		json.dump(res, f)
 
 if "__main__" == __name__:
+	n = 1
 	for n_pkts in range(5, 26, 5):
 		n_pkts = n_pkts * (10**6)
-		print("n_pkts=%d" % n_pkts)
-		continue
 		cls = FlowClassifier(src, TYPE_JSON, n_pkts)
-		for n in [1, 2, 4]:
-			for gamma in range(11, 21):
-				print("gamma:", gamma, ", n:", n)
-				calc(n, gamma, cls.flows)
+		for gamma in range(4, 13, 2):
+			print("n_pkts=%d, gamma=%d" % (n_pkts, gamma))
+			calc(n, gamma, cls.flows, n_pkts)

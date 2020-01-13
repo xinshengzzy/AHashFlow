@@ -7,47 +7,44 @@ import numpy as np
 font = {'size':18}
 matplotlib.rc('font', **font)
 
-are_30 = []
-are_40 = []
-are_50 = []
-are_60 = []
-are_70 = []
-are_80 = []
-f1score_30 = []
-f1score_40 = []
-f1score_50 = []
-f1score_60 = []
-f1score_70 = []
-f1score_80 = []
-n_promotions = []
+are_4 = []
+are_6 = []
+are_8 = []
+are_10 = []
+are_12 = []
+are_14 = []
+f1score_4 = []
+f1score_6 = []
+f1score_8 = []
+f1score_10 = []
+f1score_12 = []
+f1score_14 = []
 
-def 提取(文件名):
+阈值 = "40"
+
+def 提取(gamma, 数据包数, 平均相对误差, f1score):
+	文件名 = ".".join(["ehf.n.1", "gamma", str(gamma), "npkts", str(数据包数), "caida.130000.json"])
 	with open(文件名, "r") as f:
 		数据 = json.load(f)
-	n_promotions.append(数据["n_promotions"])
-	are_30.append(数据["are"]["30"])
-	are_40.append(数据["are"]["40"])
-	are_50.append(数据["are"]["50"])
-	are_60.append(数据["are"]["60"])
-	are_70.append(数据["are"]["70"])
-	are_80.append(数据["are"]["80"])
-	f1score_30.append(数据["f1score"]["30"])
-	f1score_40.append(数据["f1score"]["40"])
-	f1score_50.append(数据["f1score"]["50"])
-	f1score_60.append(数据["f1score"]["60"])
-	f1score_70.append(数据["f1score"]["70"])
-	f1score_80.append(数据["f1score"]["80"])
+	平均相对误差.append(数据["are"][阈值])
+	f1score.append(数据["f1score"][阈值])
+	return 平均相对误差, f1score
 
 if __name__ == "__main__":
-	for gamma in range(4, 21):
-		文件名= "ehf.n.1.gamma.%d.caida.130000.json" % gamma
-		提取(文件名)
+	for 数据包数 in range(5, 26, 5):
+		数据包数 = 数据包数*(10**6)
+		are_4, f1score_4 = 提取(2, 数据包数, are_4, f1score_4)
+		are_6, f1score_6 = 提取(2, 数据包数, are_6, f1score_6)
+		are_8, f1score_8 = 提取(2, 数据包数, are_8, f1score_8)
+		are_10, f1score_10 = 提取(2, 数据包数, are_10, f1score_10)
+		are_12, f1score_12 = 提取(2, 数据包数, are_12, f1score_12)
+		are_14, f1score_14 = 提取(2, 数据包数, are_14, f1score_14)
 
-	for gamma in range(5, 21):
-		索引1 = gamma - 4
-		索引2 = gamma - 5
-		差值 = (n_promotions[索引2] - n_promotions[索引1])/100000.0
-		print("gamma=%d, 差值=%.2f" % (gamma, 差值))
+	print("are_4:")
+	print(are_4)
+	print("f1score_4:")
+	print(f1score_4)
+	exit()
 
 	print("thresh=30")
 	for gamma in range(4, 21):
