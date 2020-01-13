@@ -43,9 +43,20 @@ if __name__ == "__main__":
 		文件名= "ehf.n.1.gamma.%d.caida.130000.json" % gamma
 		提取(文件名)
 
-	print("are_30:")
-	print(are_30)
+	for gamma in range(5, 21):
+		索引1 = gamma - 4
+		索引2 = gamma - 5
+		差值 = (n_promotions[索引2] - n_promotions[索引1])/100000.0
+		print("gamma=%d, 差值=%.2f" % (gamma, 差值))
 
+	print("thresh=30")
+	for gamma in range(4, 21):
+		索引 = gamma - 4
+		print("gamma=%d, are=%.3f, f1score=%.3f, n_promotions=%d" % (gamma, are_30[索引], f1score_30[索引], n_promotions[索引]))
+	print("thresh=70")
+	for gamma in range(4, 21):
+		索引 = gamma - 4
+		print("gamma=%d, are=%.3f, f1score=%.3f" % (gamma, are_70[索引], f1score_70[索引]))
 	gamma = range(4, 21)
 	plt.figure(1)
 	plt.ylim(0, 0.6)
