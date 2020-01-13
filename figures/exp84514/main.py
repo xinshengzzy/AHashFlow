@@ -34,15 +34,15 @@ def calc(n, gamma, flows, n_pkts):
 	EHashFlow.set_gamma(gamma)
 	ehf = EHashFlow.EHashFlow(src, TYPE_JSON, n_pkts)
 	res = func(ehf, flows)
-	filename = ".".join(["ehf", "n", str(n), "gamma", str(gamma), "npkts", str(n_pkts), "caida.130000.json"])
+	filename = ".".join(["ehf", "gamma", str(gamma), "npkts", str(n_pkts), "caida.130000.json"])
 	with open(filename, "w") as f:
 		json.dump(res, f)
 
 if "__main__" == __name__:
 	n = 1
-	for n_pkts in range(5, 26, 5):
+	for n_pkts in range(5, 26, 2):
 		n_pkts = n_pkts * (10**6)
 		cls = FlowClassifier(src, TYPE_JSON, n_pkts)
-		for gamma in range(4, 13, 2):
+		for gamma in range(4, 15, 2):
 			print("n_pkts=%d, gamma=%d" % (n_pkts, gamma))
 			calc(n, gamma, cls.flows, n_pkts)
