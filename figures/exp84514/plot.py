@@ -20,10 +20,10 @@ f1score_10 = []
 f1score_12 = []
 f1score_14 = []
 
-阈值 = "40"
+阈值 = "60"
 
 def 提取(gamma, 数据包数, 平均相对误差, f1score):
-	文件名 = ".".join(["ehf.n.1", "gamma", str(gamma), "npkts", str(数据包数), "caida.130000.json"])
+	文件名 = ".".join(["ehf", "gamma", str(gamma), "npkts", str(数据包数), "caida.130000.json"])
 	with open(文件名, "r") as f:
 		数据 = json.load(f)
 	平均相对误差.append(数据["are"][阈值])
@@ -33,17 +33,19 @@ def 提取(gamma, 数据包数, 平均相对误差, f1score):
 if __name__ == "__main__":
 	for 数据包数 in range(5, 26, 5):
 		数据包数 = 数据包数*(10**6)
-		are_4, f1score_4 = 提取(2, 数据包数, are_4, f1score_4)
-		are_6, f1score_6 = 提取(2, 数据包数, are_6, f1score_6)
-		are_8, f1score_8 = 提取(2, 数据包数, are_8, f1score_8)
-		are_10, f1score_10 = 提取(2, 数据包数, are_10, f1score_10)
-		are_12, f1score_12 = 提取(2, 数据包数, are_12, f1score_12)
-		are_14, f1score_14 = 提取(2, 数据包数, are_14, f1score_14)
+		are_4, f1score_4 = 提取(4, 数据包数, are_4, f1score_4)
+		are_6, f1score_6 = 提取(6, 数据包数, are_6, f1score_6)
+		are_8, f1score_8 = 提取(8, 数据包数, are_8, f1score_8)
+		are_10, f1score_10 = 提取(10, 数据包数, are_10, f1score_10)
+		are_12, f1score_12 = 提取(12, 数据包数, are_12, f1score_12)
+#		are_14, f1score_14 = 提取(14, 数据包数, are_14, f1score_14)
 
 	print("are_4:")
-	print(are_4)
+	for 项 in are_4:
+		print("%.3f" % 项)
 	print("f1score_4:")
-	print(f1score_4)
+	for 项 in f1score_4:
+		print("%.3f" % 项)
 	exit()
 
 	print("thresh=30")
