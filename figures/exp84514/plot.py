@@ -20,7 +20,7 @@ f1score_10 = []
 f1score_12 = []
 f1score_14 = []
 
-阈值 = "70"
+阈值 = "100"
 
 def 提取(gamma, 数据包数, 平均相对误差, f1score):
 	文件名 = ".".join(["ehf", "gamma", str(gamma), "npkts", str(数据包数), "caida.130000.json"])
@@ -39,6 +39,12 @@ if __name__ == "__main__":
 		are_10, f1score_10 = 提取(10, 数据包数, are_10, f1score_10)
 		are_12, f1score_12 = 提取(12, 数据包数, are_12, f1score_12)
 		are_14, f1score_14 = 提取(14, 数据包数, are_14, f1score_14)
+	print("are_14:")
+	for 项 in are_14:
+		print("%.3f" % 项)
+	print("f1score_14:")
+	for 项 in f1score_14:
+		print("%.3f" % 项)
 
 	数据包数 = range(5, 26, 2)
 	plt.figure(1)
