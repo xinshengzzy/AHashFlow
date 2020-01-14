@@ -7,7 +7,7 @@ import simulators.EHashFlow as EHashFlow
 from simulators.FlowClassifier import FlowClassifier
 import my_constants as mc
 import json
-
+import sys
 
 src = "/root/traces/CAIDA.equinix-nyc.dirA.20180315-130000.UTC.anon.json"
 
@@ -29,8 +29,7 @@ def func(hf, flows):
 		print("thresh:%d, ae:%.3f, are:%.3f, f1score:%.3f" % (thresh, ae, are, f1score))
 	return res
 
-def calc(n, gamma, flows, n_pkts):
-	EHashFlow.set_n(n)
+def calc(gamma, flows, n_pkts):
 	EHashFlow.set_gamma(gamma)
 	ehf = EHashFlow.EHashFlow(src, TYPE_JSON, n_pkts)
 	res = func(ehf, flows)
@@ -39,10 +38,13 @@ def calc(n, gamma, flows, n_pkts):
 		json.dump(res, f)
 
 if "__main__" == __name__:
-	n = 1
+	assert(4 == len(sys.argv))
+	起点 = int(sys.argv[1])
+	终点 = int(sys.argv[2])
+	步长 = int(sys.argv[3])
 	for n_pkts in range(5, 26, 2):
 		n_pkts = n_pkts * (10**6)
 		cls = FlowClassifier(src, TYPE_JSON, n_pkts)
-		for gamma in range(4, 15, 2):
+		for gamma in range(起点, 终点, 步长):
 			print("n_pkts=%d, gamma=%d" % (n_pkts, gamma))
-			calc(n, gamma, cls.flows, n_pkts)
+			calc(gamma, cls.flows, n_pkts)
