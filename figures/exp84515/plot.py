@@ -35,22 +35,22 @@ def 提取(文件名):
 
 if __name__ == "__main__":
 	filename1 = ".".join(["hf", "npkts", str(n_pkts), "caida.130000.json"])
-	filename2 = ".".join(["fhf", "npkts", str(n_pkts), "caida.130000.json"])
+	filename2 = ".".join(["ghf", "npkts", str(n_pkts), "caida.130000.json"])
 	hf_are, hf_f1score = 提取(filename1)
-	fhf_are, fhf_f1score = 提取(filename2)
+	ghf_are, ghf_f1score = 提取(filename2)
 	thresh = range(10, 101, 10)
 	print("HashFlow:")
 	for 索引 in range(10):
 		print("阈值=%d, are=%.3f, f1score=%.3f" % (thresh[索引], hf_are[索引], hf_f1score[索引]))
-	print("FHashFlow:")
+	print("GHashFlow:")
 	for 索引 in range(10):
-		print("阈值=%d, are=%.3f, f1score=%.3f" % (thresh[索引], fhf_are[索引], fhf_f1score[索引]))
+		print("阈值=%d, are=%.3f, f1score=%.3f" % (thresh[索引], ghf_are[索引], ghf_f1score[索引]))
 	exit()
 
 	plt.figure(1)
 	plt.ylim(0, 0.6)
 	plt.plot(thresh, hf_are, label="HashFlow", marker = "x", mfc="none")
-	plt.plot(thresh, fhf_are, label="FHashFlow", marker = "s", mfc="none")
+	plt.plot(thresh, ghf_are, label="GHashFlow", marker = "s", mfc="none")
 #	plt.plot(gamma, are_50, label="thresh=50", marker = "o", mfc="none")
 #	plt.plot(gamma, are_60, label="thresh=60", marker = "1", mfc="none")
 #	plt.plot(gamma, are_70, label="thresh=70", marker = "p", mfc="none")
@@ -64,7 +64,7 @@ if __name__ == "__main__":
 	plt.figure(2)
 	plt.ylim(0.5, 1.0)
 	plt.plot(thresh, hf_f1score, label="HashFlow", marker = "x", mfc="none")
-	plt.plot(thresh, fhf_f1score, label="FHashFlow", marker = "s", mfc="none")
+	plt.plot(thresh, ghf_f1score, label="GHashFlow", marker = "s", mfc="none")
 #	plt.plot(gamma, f1score_50, label="thresh=50", marker = "o", mfc="none")
 #	plt.plot(gamma, f1score_60, label="thresh=60", marker = "1", mfc="none")
 #	plt.plot(gamma, f1score_70, label="thresh=70", marker = "p", mfc="none")
