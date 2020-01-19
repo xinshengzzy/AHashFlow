@@ -7,7 +7,7 @@ import numpy as np
 font = {'size':18}
 matplotlib.rc('font', **font)
 
-n_pkts = 8*(10**6)
+n_pkts = 9*(10**6)
 
 are_30 = []
 are_40 = []
