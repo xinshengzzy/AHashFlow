@@ -7,7 +7,7 @@ import numpy as np
 font = {'size':18}
 matplotlib.rc('font', **font)
 
-n_pkts = 5*(10**6)
+n_pkts = 6*(10**6)
 
 are_30 = []
 are_40 = []
@@ -45,7 +45,6 @@ if __name__ == "__main__":
 	print("GHashFlow:")
 	for 索引 in range(10):
 		print("阈值=%d, are=%.3f, f1score=%.3f" % (thresh[索引], ghf_are[索引], ghf_f1score[索引]))
-	exit()
 
 	plt.figure(1)
 	plt.ylim(0, 0.6)
@@ -74,7 +73,7 @@ if __name__ == "__main__":
 	plt.ylabel("F1 Score")
 	plt.savefig("f1score.pdf", bbox_inches="tight")
 	plt.savefig("f1score.png", bbox_inches="tight")
-
+	exit()
 	n_promotions = [item/100000.0 for item in n_promotions]
 	fig = plt.figure(3)
 	ax = fig.add_axes([0,0,1,1])
